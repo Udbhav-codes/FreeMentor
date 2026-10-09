@@ -13,6 +13,7 @@ import {
   currentEntitlement,
   hasDetailedAnalytics,
   showsAds,
+  showsWelcomeCard,
   type Entitlement,
 } from '../entitlement.ts';
 
@@ -89,6 +90,25 @@ describe('main notes and tests', () => {
 describe('practice links are free on every plan', () => {
   it.each(ALL)('opens on %s', (entitlement) => {
     expect(accessFor(res({ type: 'practice' }), entitlement).kind).toBe('open');
+  });
+});
+
+describe('the welcome card keeps showing until a plan is bought', () => {
+  it('shows for anyone who has not paid', () => {
+    expect(showsWelcomeCard('trial')).toBe(true);
+  });
+
+  it('stops the moment they buy either plan', () => {
+    expect(showsWelcomeCard('basic')).toBe(false);
+    expect(showsWelcomeCard('premium')).toBe(false);
+  });
+
+  it('is driven only by entitlement, so it returns on every open', () => {
+    // Nothing is persisted about dismissal: the same entitlement always
+    // gives the same answer, which is what makes it reappear on reload.
+    for (const entitlement of ALL) {
+      expect(showsWelcomeCard(entitlement)).toBe(showsWelcomeCard(entitlement));
+    }
   });
 });
 

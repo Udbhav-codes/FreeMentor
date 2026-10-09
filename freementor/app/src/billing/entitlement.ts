@@ -70,3 +70,23 @@ export function showsAds(entitlement: Entitlement): boolean {
 export function hasDetailedAnalytics(entitlement: Entitlement): boolean {
   return entitlement === 'premium';
 }
+
+/**
+ * Whether Home shows the welcome / value card.
+ *
+ * It shows on EVERY open and every reload for as long as the learner has not
+ * bought a plan, and stops the moment they do. It is the only place the app
+ * explains what it costs and why, so hiding it permanently after one tap left
+ * a learner with no way back to that explanation — which is also the opposite
+ * of helpful if they were still deciding.
+ *
+ * The ✕ hides it for the current session only. Nothing about the dismissal is
+ * persisted, deliberately.
+ *
+ * Note this is NOT nagging in the dark-patterns sense: it appears once per
+ * open, in place, never as an interstitial or a popup, and it never blocks
+ * the day's tasks.
+ */
+export function showsWelcomeCard(entitlement: Entitlement): boolean {
+  return entitlement === 'trial';
+}

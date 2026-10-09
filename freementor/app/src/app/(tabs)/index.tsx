@@ -14,9 +14,9 @@ import { ProgressRing } from '../../components/charts.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
-import { loadProfile, saveProfile } from '../../db/profile.ts';
+import { loadProfile } from '../../db/profile.ts';
 import { WelcomeCard } from '../../components/WelcomeCard.tsx';
-import { currentEntitlement } from '../../billing/entitlement.ts';
+import { currentEntitlement, showsWelcomeCard } from '../../billing/entitlement.ts';
 import { catalog } from '../../api/library.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
@@ -29,23 +29,18 @@ export default function RoadmapHome() {
   const { loading, goal, plan, toggleTask } = useEnrollment();
   const streak = useStreak();
   const [name, setName] = useState<string | null>(null);
-  const [showWelcome, setShowWelcome] = useState(false);
+  // Shown on every open and reload until a plan is bought. The ✕ hides it for
+  // this session only — nothing is persisted, so it comes back next time.
+  const [hiddenThisSession, setHiddenThisSession] = useState(false);
+  const showWelcome = showsWelcomeCard(currentEntitlement()) && !hiddenThisSession;
 
   useEffect(() => {
     loadProfile()
-      .then((p) => {
-        setName(p?.name ?? null);
-        // Only while they are still deciding — once bought, it is just noise
-        // in front of today's tasks.
-        setShowWelcome(!p?.welcomeDismissedAt && currentEntitlement() === 'trial');
-      })
+      .then((p) => setName(p?.name ?? null))
       .catch(() => setName(null));
   }, []);
 
-  const dismissWelcome = useCallback(() => {
-    setShowWelcome(false);
-    void saveProfile({ welcomeDismissedAt: new Date().toISOString() });
-  }, []);
+  const dismissWelcome = useCallback(() => setHiddenThisSession(true), []);
 
   const today = todayIso();
   const day = useMemo(() => plan?.days.find((d) => d.date === today) ?? null, [plan, today]);

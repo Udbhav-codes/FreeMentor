@@ -128,7 +128,9 @@ export const MIGRATIONS: { version: number; sql: string }[] = [
   {
     version: 3,
     sql: `
-      -- The Home welcome/value card is dismissible and stays dismissed.
+      -- DEPRECATED, kept only because SQLite cannot drop a column cleanly.
+      -- The welcome card now shows on every open until a plan is bought, and
+      -- its ✕ hides it for the session only, so no dismissal is stored.
       ALTER TABLE profile ADD COLUMN welcome_dismissed_at TEXT;
     `,
   },
