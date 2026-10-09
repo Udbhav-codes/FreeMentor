@@ -1,19 +1,22 @@
 /**
  * Home / Roadmap tab — product plan §8.2 and screen 3 of the preview.
  *
- * Greeting, goal, progress ring, streak, today's checklist, and exactly one
- * primary action. Everything on this screen comes from the scheduler, so it
- * works with no network at all once the goal file is cached.
+ * Greeting by name, goal, progress ring, streak, today's checklist, and
+ * exactly ONE primary action. Everything comes from the scheduler, so it
+ * works with no network once the goal file is cached.
  */
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Button, Card, Checkbox, Empty, Pill, ProgressBar, Screen, Txt } from '../../components/ui.tsx';
+import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
+import { ProgressRing } from '../../components/charts.tsx';
 import { RouteList } from '../../components/RouteList.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
+import { loadProfile } from '../../db/profile.ts';
+import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 import type { PlannedItem } from '../../scheduler/index.ts';
 
@@ -23,6 +26,13 @@ export default function RoadmapHome() {
   const insets = useSafeAreaInsets();
   const { loading, goal, plan, toggleTask } = useEnrollment();
   const streak = useStreak();
+  const [name, setName] = useState<string | null>(null);
+
+  useEffect(() => {
+    loadProfile()
+      .then((p) => setName(p?.name ?? null))
+      .catch(() => setName(null));
+  }, []);
 
   const today = todayIso();
   const day = useMemo(() => plan?.days.find((d) => d.date === today) ?? null, [plan, today]);
@@ -46,11 +56,15 @@ export default function RoadmapHome() {
   const doneMinutes = day?.items.filter((i) => i.done).reduce((s, i) => s + i.minutes, 0) ?? 0;
   const plannedMinutes = day?.plannedMinutes ?? 0;
   const toGo = Math.max(0, plannedMinutes - doneMinutes);
+  const overMinutes = Math.max(0, doneMinutes - plannedMinutes);
 
   const overallFraction =
     plan.totals.contentMinutes > 0
       ? plan.totals.completedMinutes / plan.totals.contentMinutes
       : 0;
+
+  const weekNumber = plan.days.filter((d) => d.date <= today).length;
+  const totalDays = plan.days.length;
 
   return (
     <Screen>
@@ -67,12 +81,12 @@ export default function RoadmapHome() {
             <Txt variant="small" color="secondary">
               {greeting()},
             </Txt>
-            <Txt variant="display">there</Txt>
+            <Txt variant="display">{name ?? 'there'}</Txt>
           </View>
           {streak.current > 0 ? (
-            <View style={{ alignItems: 'center' }}>
+            <View style={{ alignItems: 'flex-end', gap: 4 }}>
               <Pill tone="accent">{`🔥 ${streak.current}`}</Pill>
-              <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+              <Txt variant="caption" color="secondary">
                 {streak.habitDays}/{HABIT_TARGET_DAYS} days
               </Txt>
             </View>
@@ -81,26 +95,18 @@ export default function RoadmapHome() {
 
         <Card>
           <View style={{ flexDirection: 'row', gap: theme.spacing.lg, alignItems: 'center' }}>
-            <View style={{ flex: 1, gap: 4 }}>
+            <ProgressRing fraction={overallFraction} />
+            <View style={{ flex: 1, gap: 2 }}>
               <Txt variant="caption" color="secondary">
                 YOUR GOAL
               </Txt>
               <Txt variant="title">{goal.goal.name}</Txt>
               <Txt variant="caption" color="secondary">
-                {plan.totals.topicsCompleted} of {plan.totals.topicsTotal} topics ·{' '}
-                {Math.round(overallFraction * 100)}%
-              </Txt>
-            </View>
-          </View>
-
-          <View style={{ marginTop: theme.spacing.lg, gap: theme.spacing.sm }}>
-            <ProgressBar fraction={overallFraction} />
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-              <Txt variant="caption" color="secondary">
-                Syllabus by {plan.contentFinish ?? '—'}
+                Day {Math.max(1, weekNumber)} of {totalDays} ·{' '}
+                {plan.totals.topicsCompleted}/{plan.totals.topicsTotal} topics
               </Txt>
               <Txt variant="caption" color="secondary">
-                Ready by {plan.projectedFinish ?? '—'}
+                Projected finish: {plan.projectedFinish ?? '—'}
               </Txt>
             </View>
           </View>
@@ -116,11 +122,14 @@ export default function RoadmapHome() {
         ))}
 
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
-          <Txt variant="heading">Today</Txt>
-          {day ? <Pill tone="accent">{dayKindLabel(day.kind)}</Pill> : null}
+          <Txt variant="heading">Today · {formatMinutes(plannedMinutes)}</Txt>
           <View style={{ flex: 1 }} />
           <Txt variant="caption" color="secondary">
-            {toGo > 0 ? `${toGo} min to go` : 'all done'}
+            {overMinutes > 0
+              ? `${formatMinutes(overMinutes)} extra 🎉`
+              : toGo > 0
+                ? `${formatMinutes(doneMinutes)} done · ${formatMinutes(toGo)} to go`
+                : 'all done ✓'}
           </Txt>
         </View>
 
@@ -132,16 +141,19 @@ export default function RoadmapHome() {
             <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
               {day?.isRestDay
                 ? 'Your streak is protected.'
-                : 'Your next study day is coming up — check the roadmap.'}
+                : 'Your next study day is coming up — check your route below.'}
             </Txt>
           </Card>
         ) : (
-          <Card>
+          <Card onPress={() => router.push(`/day/${today}`)}>
             {day.items.map((item) => (
-              <TaskRow
+              <Checkbox
                 key={item.key}
-                item={item}
+                checked={item.done}
                 onToggle={() => void toggleTask(item.key, today, item.minutes, !item.done)}
+                label={item.title}
+                sublabel={sourceLabel(item) + (item.part ? ` · part ${item.part.index}/${item.part.of}` : '')}
+                minutes={item.minutes}
               />
             ))}
           </Card>
@@ -154,7 +166,12 @@ export default function RoadmapHome() {
         />
 
         <View style={{ marginTop: theme.spacing.lg, gap: theme.spacing.md }}>
-          <Txt variant="heading">Your route</Txt>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Txt variant="heading" style={{ flex: 1 }}>
+              Your route
+            </Txt>
+            <Pill>{goal.goal.name}</Pill>
+          </View>
           <RouteList
             days={plan.days}
             today={today}
@@ -163,19 +180,6 @@ export default function RoadmapHome() {
         </View>
       </ScrollView>
     </Screen>
-  );
-}
-
-function TaskRow({ item, onToggle }: { item: PlannedItem; onToggle: () => void }) {
-  const part = item.part ? ` · part ${item.part.index} of ${item.part.of}` : '';
-  return (
-    <Checkbox
-      checked={item.done}
-      onToggle={onToggle}
-      label={item.title}
-      sublabel={`${sourceLabel(item)}${part}`}
-      minutes={item.minutes}
-    />
   );
 }
 
@@ -195,21 +199,6 @@ function sourceLabel(item: PlannedItem): string {
       return 'Mock test';
     default:
       return item.subject || 'Task';
-  }
-}
-
-function dayKindLabel(kind: string): string {
-  switch (kind) {
-    case 'mixed_practice':
-      return 'Practice + test';
-    case 'light_revision':
-      return 'Light revision';
-    case 'final_revision':
-      return 'Final revision';
-    case 'rest':
-      return 'Rest day';
-    default:
-      return 'New content';
   }
 }
 

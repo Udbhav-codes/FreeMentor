@@ -11,9 +11,11 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { ConfidenceLevel } from '@freementor/shared';
 import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
+import { VideoCard } from '../../components/VideoCard.tsx';
 import { ConfidenceSheet } from '../../components/ConfidenceSheet.tsx';
 import { ResourceLink } from '../../components/ResourceLink.tsx';
-import { indexGoal, resolveItem, type PlannedItem } from '../../scheduler/index.ts';
+import { indexGoal, resolveItem } from '../../scheduler/index.ts';
+import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { restDayBlockedReason } from '../../progress/streak.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
@@ -44,6 +46,13 @@ export default function DayView() {
   }, [resolved]);
 
   const allDone = day != null && day.items.length > 0 && day.items.every((i) => i.done);
+
+  /** The lesson this day is built around — shown as a hero card up top. */
+  const heroVideo = resolved.find(
+    (r) => r.block?.type === 'learn' && r.resources.some((x) => x.type === 'video'),
+  );
+  const mainSubject = resolved.find((r) => r.item.source === 'topic')?.topic?.subject;
+  const hasHighWeightage = resolved.some((r) => r.topic?.weightage === 'H');
 
   const onRest = useCallback(() => {
     if (!day || !plan) return;
@@ -102,15 +111,31 @@ export default function DayView() {
         }}
       >
         <View style={{ gap: theme.spacing.xs }}>
+          <Button
+            label="← Back"
+            variant="ghost"
+            onPress={() => router.back()}
+            style={{ alignSelf: 'flex-start', paddingHorizontal: 0 }}
+          />
           <Txt variant="caption" color="secondary">
-            {day.date}
+            {day.date} · {dayKindLabel(day.kind)}
           </Txt>
           <Txt variant="display">{headline(resolved, day.kind)}</Txt>
-          <View style={{ flexDirection: 'row', gap: theme.spacing.sm, marginTop: 4 }}>
-            <Pill>{`${day.plannedMinutes} min`}</Pill>
-            {resolved[0]?.topic?.weightage === 'H' ? <Pill tone="accent">High weightage</Pill> : null}
+          <View
+            style={{
+              flexDirection: 'row',
+              gap: theme.spacing.sm,
+              marginTop: 4,
+              flexWrap: 'wrap',
+            }}
+          >
+            {mainSubject ? <Pill>{mainSubject}</Pill> : null}
+            {hasHighWeightage ? <Pill tone="accent">High weightage</Pill> : null}
+            <Pill>{formatMinutes(day.plannedMinutes)}</Pill>
           </View>
         </View>
+
+        {heroVideo ? <VideoCard resolved={heroVideo} /> : null}
 
         {resolved.map((r) => (
           <Card key={r.item.key}>
@@ -283,6 +308,21 @@ function subtitle(r: ReturnType<typeof resolveItem>): string {
   if (r.videoNote) bits.push(r.videoNote);
   if (r.item.part) bits.push(`part ${r.item.part.index} of ${r.item.part.of}`);
   return bits.join(' · ');
+}
+
+function dayKindLabel(kind: string): string {
+  switch (kind) {
+    case 'mixed_practice':
+      return 'Mixed practice + weekly test';
+    case 'light_revision':
+      return 'Light revision';
+    case 'final_revision':
+      return 'Final revision';
+    case 'rest':
+      return 'Rest day';
+    default:
+      return 'New content';
+  }
 }
 
 function headline(resolved: ReturnType<typeof resolveItem>[], kind: string): string {

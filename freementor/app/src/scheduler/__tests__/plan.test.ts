@@ -534,6 +534,42 @@ describe('rule 9 — the final 15% of the timeline is reserved for mocks and rev
   });
 });
 
+describe("a task ticked today stays on today's plan", () => {
+  it('shows it struck through instead of making it vanish', () => {
+    // Regression: completed items were only rendered on days BEFORE the
+    // replanning cursor, so anything ticked today disappeared from the
+    // checklist until tomorrow.
+    const plan0 = plan(python);
+    const first = plan0.days.find((d) => d.date === TODAY)!.items[0]!;
+    const after = plan(
+      python,
+      {},
+      progress({
+        completed: { [first.key]: { completedAt: TODAY, minutesCredited: first.minutes } },
+      }),
+    );
+    const today = after.days.find((d) => d.date === TODAY)!;
+    const entry = today.items.find((i) => i.key === first.key);
+    expect(entry, 'the ticked task left the plan').toBeDefined();
+    expect(entry!.done).toBe(true);
+  });
+
+  it('does not refill the freed time with extra new work', () => {
+    const plan0 = plan(python);
+    const first = plan0.days.find((d) => d.date === TODAY)!.items[0]!;
+    const after = plan(
+      python,
+      {},
+      progress({
+        completed: { [first.key]: { completedAt: TODAY, minutesCredited: first.minutes } },
+      }),
+    );
+    const today = after.days.find((d) => d.date === TODAY)!;
+    // Finishing work early must not cause the day to grow past the budget.
+    expect(today.plannedMinutes).toBeLessThanOrEqual(today.availableMinutes);
+  });
+});
+
 describe('determinism — the same input always gives the same plan', () => {
   it('is byte-identical across runs', () => {
     const a = plan(neet, { minutesByWeekday: everyDay(150) });

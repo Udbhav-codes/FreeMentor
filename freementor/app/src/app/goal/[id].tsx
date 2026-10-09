@@ -12,20 +12,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { GoalFile } from '@freementor/shared';
 import { catalog, getGoalFile, GoalDownloadError, isPlayable } from '../../api/library.ts';
 import { Button, Card, Pill, Screen, Txt } from '../../components/ui.tsx';
-import { buildPlan, WEEKDAYS, type MinutesByWeekday } from '../../scheduler/index.ts';
+import { WeeklyTime } from '../../components/WeeklyTime.tsx';
+import { formatMinutes } from '../../onboarding/deadline.ts';
+import { buildPlan, type MinutesByWeekday } from '../../scheduler/index.ts';
 import { todayIso, useEnrollment, EMPTY_PROGRESS } from '../../state/EnrollmentContext.tsx';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
-
-const PRESETS = [60, 90, 120, 180, 240, 360];
-const WEEKDAY_LABEL: Record<string, string> = {
-  mon: 'M',
-  tue: 'T',
-  wed: 'W',
-  thu: 'T',
-  fri: 'F',
-  sat: 'S',
-  sun: 'S',
-};
 
 export default function GoalDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -38,23 +29,15 @@ export default function GoalDetail() {
   const [file, setFile] = useState<GoalFile | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [weekdayMinutes, setWeekdayMinutes] = useState(120);
-  const [weekendMinutes, setWeekendMinutes] = useState(240);
-
-  const minutesByWeekday = useMemo<MinutesByWeekday>(
-    () => ({
-      mon: weekdayMinutes,
-      tue: weekdayMinutes,
-      wed: weekdayMinutes,
-      thu: weekdayMinutes,
-      fri: weekdayMinutes,
-      sat: weekendMinutes,
-      sun: weekendMinutes,
-    }),
-    [weekdayMinutes, weekendMinutes],
-  );
-
-  const weeklyMinutes = Object.values(minutesByWeekday).reduce((a, b) => a + b, 0);
+  const [minutesByWeekday, setMinutesByWeekday] = useState<MinutesByWeekday>({
+    mon: 120,
+    tue: 120,
+    wed: 120,
+    thu: 120,
+    fri: 120,
+    sat: 240,
+    sun: 240,
+  });
 
   // Preview the plan before committing, so the finish date is honest.
   const preview = useMemo(() => {
@@ -176,69 +159,13 @@ export default function GoalDetail() {
           </Card>
         ) : (
           <>
-            <Card>
-              <Txt variant="heading">How much time can you give?</Txt>
-              <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.xs }}>
-                Set it per day. You can change this anytime.
-              </Txt>
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  marginTop: theme.spacing.lg,
-                }}
-              >
-                {WEEKDAYS.map((day, i) => {
-                  const minutes = minutesByWeekday[day];
-                  const height = Math.max(8, Math.round((minutes / 360) * 56));
-                  return (
-                    <View key={`${day}-${i}`} style={{ alignItems: 'center', gap: 6 }}>
-                      <View style={{ height: 56, justifyContent: 'flex-end' }}>
-                        <View
-                          style={{
-                            width: 18,
-                            height,
-                            borderRadius: 4,
-                            backgroundColor: theme.colors.primary,
-                          }}
-                        />
-                      </View>
-                      <Txt variant="caption" color="secondary">
-                        {WEEKDAY_LABEL[day]}
-                      </Txt>
-                      <Txt variant="caption" color="secondary">
-                        {Math.round(minutes / 60)}h
-                      </Txt>
-                    </View>
-                  );
-                })}
-              </View>
-
-              <MinutePicker
-                label="Weekdays"
-                value={weekdayMinutes}
-                onChange={setWeekdayMinutes}
-              />
-              <MinutePicker
-                label="Weekends"
-                value={weekendMinutes}
-                onChange={setWeekendMinutes}
-              />
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  marginTop: theme.spacing.lg,
-                }}
-              >
-                <Txt variant="small" color="secondary">
-                  Total this week
-                </Txt>
-                <Txt variant="bodyStrong">{Math.round(weeklyMinutes / 60)} h / week</Txt>
-              </View>
-            </Card>
+            <WeeklyTime
+              value={minutesByWeekday}
+              onChange={setMinutesByWeekday}
+              goalName={entry.name}
+              estimatedHours={entry.estimated_hours}
+              today={todayIso()}
+            />
 
             {preview ? (
               <Card>
@@ -248,6 +175,17 @@ export default function GoalDetail() {
                 <Row
                   label="Study time"
                   value={`${Math.round(preview.totals.contentMinutes / 60)} h`}
+                />
+                <Row
+                  label="A typical day"
+                  value={formatMinutes(
+                    Math.round(
+                      preview.days
+                        .filter((d) => d.items.length > 0)
+                        .reduce((s2, d) => s2 + d.plannedMinutes, 0) /
+                        Math.max(1, preview.days.filter((d) => d.items.length > 0).length),
+                    ),
+                  )}
                 />
                 <Row label="Syllabus finished" value={preview.contentFinish ?? '—'} />
                 <Row label="Ready by" value={preview.projectedFinish ?? '—'} />
@@ -265,39 +203,6 @@ export default function GoalDetail() {
         )}
       </ScrollView>
     </Screen>
-  );
-}
-
-function MinutePicker({
-  label,
-  value,
-  onChange,
-}: {
-  label: string;
-  value: number;
-  onChange: (minutes: number) => void;
-}) {
-  const theme = useTheme();
-  return (
-    <View style={{ marginTop: theme.spacing.lg, gap: theme.spacing.sm }}>
-      <Txt variant="small" color="secondary">
-        {label}
-      </Txt>
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: theme.spacing.sm }}>
-        {PRESETS.map((minutes) => {
-          const selected = minutes === value;
-          return (
-            <Button
-              key={minutes}
-              label={minutes >= 60 ? `${minutes / 60} h` : `${minutes} m`}
-              variant={selected ? 'primary' : 'secondary'}
-              onPress={() => onChange(minutes)}
-              style={{ paddingHorizontal: theme.spacing.lg, minHeight: 44 }}
-            />
-          );
-        })}
-      </View>
-    </View>
   );
 }
 

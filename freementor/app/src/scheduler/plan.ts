@@ -372,7 +372,14 @@ export function buildPlan(input: SchedulerInput): Plan {
     const kind = dayKindFor(pos?.index ?? 0, pos?.count ?? 7);
     const items: PlannedItem[] = [];
     const placedKeys = new Set<string>();
-    let left = available;
+
+    // Work already ticked on this date (normally today) still occupies the
+    // day: it is shown struck through, and it eats into what is left to plan.
+    // Without this, finishing an hour this morning would silently add another
+    // hour of new work to the same day.
+    const alreadyDone = pastByDate.get(cursor) ?? [];
+    const alreadyDoneMinutes = alreadyDone.reduce((s, i) => s + i.minutes, 0);
+    let left = Math.max(0, available - alreadyDoneMinutes);
     topicThisDay = undefined;
 
     const place = (it: PendingItem, minutes: number, part?: PlannedItem['part']) => {
@@ -504,11 +511,13 @@ export function buildPlan(input: SchedulerInput): Plan {
 
     lastTopic = topicThisDay ?? lastTopic;
 
+    // Completed items first, so the day reads in the order it happened.
+    const dayItems = [...alreadyDone, ...items];
     days.push({
       date: cursor,
       kind: stage === 'reserve' ? 'final_revision' : kind,
-      items,
-      plannedMinutes: items.reduce((s, i) => s + i.minutes, 0),
+      items: dayItems,
+      plannedMinutes: dayItems.reduce((s, i) => s + i.minutes, 0),
       availableMinutes: available,
       isRestDay: false,
     });

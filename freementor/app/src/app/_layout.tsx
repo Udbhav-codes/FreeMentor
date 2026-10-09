@@ -15,7 +15,9 @@ import { DMSans_700Bold } from '@expo-google-fonts/dm-sans/700Bold';
 import { DMSans_700Bold_Italic } from '@expo-google-fonts/dm-sans/700Bold_Italic';
 import { ThemeProvider, useTheme } from '../theme/ThemeProvider.tsx';
 import { EnrollmentProvider } from '../state/EnrollmentContext.tsx';
+import { OpeningAnimation } from '../components/OpeningAnimation.tsx';
 import { getDb } from '../db/index.ts';
+import { hasOnboarded } from '../db/profile.ts';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -30,10 +32,16 @@ export default function RootLayout() {
   });
   const [dbReady, setDbReady] = useState(false);
   const [fatal, setFatal] = useState<string | null>(null);
+  const [introDone, setIntroDone] = useState(false);
+  // Full-length intro only for someone who has never onboarded.
+  const [firstLaunch, setFirstLaunch] = useState(true);
 
   useEffect(() => {
     getDb()
-      .then(() => setDbReady(true))
+      .then(async () => {
+        setFirstLaunch(!(await hasOnboarded().catch(() => false)));
+        setDbReady(true);
+      })
       .catch((e) => setFatal(String(e)));
   }, []);
 
@@ -55,6 +63,17 @@ export default function RootLayout() {
 
   if (!ready) return null;
 
+  if (!introDone) {
+    return (
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <StatusBar style="light" />
+          <OpeningAnimation firstLaunch={firstLaunch} onDone={() => setIntroDone(true)} />
+        </ThemeProvider>
+      </SafeAreaProvider>
+    );
+  }
+
   return (
     <SafeAreaProvider>
       <ThemeProvider>
@@ -65,6 +84,7 @@ export default function RootLayout() {
             <Stack.Screen name="onboarding" />
             <Stack.Screen name="choose" />
             <Stack.Screen name="day/[date]" />
+            <Stack.Screen name="plans" options={{ presentation: 'modal' }} />
             <Stack.Screen name="goal/[id]" />
           </Stack>
         </EnrollmentProvider>

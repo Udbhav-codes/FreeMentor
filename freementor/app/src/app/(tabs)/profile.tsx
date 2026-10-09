@@ -59,6 +59,20 @@ export default function Profile() {
         </Card>
 
         <Card>
+          <Txt variant="heading">Your plan</Txt>
+          <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+            You're on the 3-day free trial of Basic. YouTube lessons stay free to open on
+            every plan.
+          </Txt>
+          <Button
+            label="See plans"
+            variant="secondary"
+            onPress={() => router.push('/plans')}
+            style={{ marginTop: theme.spacing.lg }}
+          />
+        </Card>
+
+        <Card>
           <Txt variant="caption" color="secondary">
             Library source (dev)
           </Txt>
