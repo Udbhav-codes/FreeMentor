@@ -28,9 +28,12 @@ export default function Practice() {
     const blocks = new Map(
       goal.topics.flatMap((t) => t.blocks.map((b) => [b.id, b] as const)),
     );
-    return day.items
+    const found = day.items
       .filter((i) => i.blockId && blocks.get(i.blockId)?.type === 'practice')
       .flatMap((i) => blocks.get(i.blockId!)?.resources ?? []);
+    // The same practice link can appear on several blocks in one day, which
+    // would give two rows the same React key.
+    return [...new Map(found.map((r) => [r.url, r])).values()];
   }, [goal, plan, today]);
 
   /** De-duplicated practice and test links across the whole roadmap. */

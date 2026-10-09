@@ -62,6 +62,9 @@ const LABELS: Record<Resource['type'], string> = {
 
 export function ResourceLink({ resource }: { resource: Resource }) {
   const theme = useTheme();
+  // A library file could carry a resource type we do not know yet; a link
+  // with an odd label is far better than a crashed screen.
+  const label = LABELS[resource.type] ?? 'Open link';
 
   const onPress = useCallback(() => {
     openResource(resource).catch(() =>
@@ -74,7 +77,7 @@ export function ResourceLink({ resource }: { resource: Resource }) {
   return (
     <Pressable
       accessibilityRole="link"
-      accessibilityLabel={`${LABELS[resource.type]}: ${resource.title}`}
+      accessibilityLabel={`${label}: ${resource.title}`}
       disabled={broken}
       onPress={onPress}
       style={({ pressed }) => ({
@@ -93,12 +96,16 @@ export function ResourceLink({ resource }: { resource: Resource }) {
     >
       <View style={{ flex: 1 }}>
         <Txt variant="bodyStrong" color="primary" numberOfLines={2}>
-          {LABELS[resource.type]}
+          {label}
         </Txt>
         <Txt variant="caption" color="secondary" numberOfLines={2}>
-          {resource.channel ?? resource.provider}
-          {resource.lang === 'hi' ? ' · हिंदी' : ''}
-          {resource.role === 'alternative' ? ' · alternative' : ''}
+          {[
+            resource.channel ?? resource.provider,
+            resource.lang === 'hi' ? 'हिंदी' : null,
+            resource.role === 'alternative' ? 'alternative' : null,
+          ]
+            .filter(Boolean)
+            .join(' · ')}
         </Txt>
       </View>
       <Txt variant="caption" color="secondary">
