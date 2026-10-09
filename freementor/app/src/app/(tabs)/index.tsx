@@ -5,9 +5,9 @@
  * exactly ONE primary action. Everything comes from the scheduler, so it
  * works with no network once the goal file is cached.
  */
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { ScrollView, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
 import { ProgressRing } from '../../components/charts.tsx';
@@ -16,6 +16,7 @@ import { useStreak } from '../../state/useStreak.ts';
 import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
 import { loadProfile } from '../../db/profile.ts';
 import { WelcomeCard } from '../../components/WelcomeCard.tsx';
+import { Avatar } from '../../components/Avatar.tsx';
 import { currentEntitlement, showsWelcomeCard } from '../../billing/entitlement.ts';
 import { catalog } from '../../api/library.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
@@ -29,16 +30,25 @@ export default function RoadmapHome() {
   const { loading, goal, plan, toggleTask } = useEnrollment();
   const streak = useStreak();
   const [name, setName] = useState<string | null>(null);
+  const [photoUri, setPhotoUri] = useState<string | null>(null);
   // Shown on every open and reload until a plan is bought. The ✕ hides it for
   // this session only — nothing is persisted, so it comes back next time.
   const [hiddenThisSession, setHiddenThisSession] = useState(false);
   const showWelcome = showsWelcomeCard(currentEntitlement()) && !hiddenThisSession;
 
-  useEffect(() => {
-    loadProfile()
-      .then((p) => setName(p?.name ?? null))
-      .catch(() => setName(null));
-  }, []);
+  // Reloaded on focus, not just on mount: the tab stays mounted while the
+  // learner edits their name or photo in Profile, so a one-off read would
+  // leave a stale avatar beside the greeting.
+  useFocusEffect(
+    useCallback(() => {
+      loadProfile()
+        .then((p) => {
+          setName(p?.name ?? null);
+          setPhotoUri(p?.photoUri ?? null);
+        })
+        .catch(() => setName(null));
+    }, []),
+  );
 
   const dismissWelcome = useCallback(() => setHiddenThisSession(true), []);
 
@@ -91,12 +101,20 @@ export default function RoadmapHome() {
           gap: theme.spacing.lg,
         }}
       >
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.md }}>
+          <Avatar
+            uri={photoUri}
+            name={name}
+            size={48}
+            onPress={() => router.push('/(tabs)/profile')}
+          />
           <View style={{ flex: 1 }}>
             <Txt variant="small" color="secondary">
               {greeting()},
             </Txt>
-            <Txt variant="display">{name ?? 'there'}</Txt>
+            <Txt variant="display" numberOfLines={1}>
+              {name ?? 'there'}
+            </Txt>
           </View>
           {streak.current > 0 ? (
             <View style={{ alignItems: 'flex-end', gap: 4 }}>

@@ -134,6 +134,14 @@ export const MIGRATIONS: { version: number; sql: string }[] = [
       ALTER TABLE profile ADD COLUMN welcome_dismissed_at TEXT;
     `,
   },
+  {
+    version: 4,
+    sql: `
+      -- Optional profile photo (§8.9). Stored as a local file URI; §15 keeps
+      -- it on the device until the backend exists.
+      ALTER TABLE profile ADD COLUMN photo_uri TEXT;
+    `,
+  },
 ];
 
 export const LATEST_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

@@ -13,6 +13,10 @@ import { Alert, ScrollView, Switch, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, Row, Screen, Txt } from '../../components/ui.tsx';
+import { Avatar } from '../../components/Avatar.tsx';
+import { EditProfile } from '../../components/EditProfile.tsx';
+import { catalog } from '../../api/library.ts';
+import { deletePhotoFile } from '../../profile/photo.ts';
 import { loadProfile, saveProfile, type Profile } from '../../db/profile.ts';
 import { resetDatabase } from '../../db/index.ts';
 import { libraryBaseUrl } from '../../api/library.ts';
@@ -30,6 +34,7 @@ export default function ProfileScreen() {
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
+  const catalogEntry = goal ? (catalog.goals.find((g) => g.id === goal.goal.id) ?? null) : null;
   const [dailyOn, setDailyOn] = useState(true);
   const [weeklyOn, setWeeklyOn] = useState(true);
 
@@ -75,6 +80,8 @@ export default function ProfileScreen() {
           style: 'destructive',
           onPress: async () => {
             await resetDatabase();
+            // The photo is a file on disk, so clearing the row is not enough.
+            deletePhotoFile(profile?.photoUri);
             await saveProfile({
               name: null,
               birthYear: null,
@@ -82,6 +89,7 @@ export default function ProfileScreen() {
               onboardedAt: null,
               studyHour: null,
               studyPlace: null,
+              photoUri: null,
             });
             await cancelDailyReminder();
             await refresh();
@@ -101,15 +109,23 @@ export default function ProfileScreen() {
           gap: theme.spacing.lg,
         }}
       >
-        <Txt variant="display">{profile?.name ?? 'Profile'}</Txt>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.lg }}>
+          <Avatar uri={profile?.photoUri} name={profile?.name} size={56} />
+          <View style={{ flex: 1 }}>
+            <Txt variant="display">{profile?.name ?? 'Profile'}</Txt>
+            {goal ? (
+              <Txt variant="caption" color="secondary">
+                {goal.goal.name}
+              </Txt>
+            ) : null}
+          </View>
+        </View>
+
+        <EditProfile profile={profile} goal={catalogEntry} onChange={update} />
 
         <Card>
-          <Txt variant="heading">You</Txt>
+          <Txt variant="heading">Your numbers</Txt>
           {profile?.birthYear ? <Row label="Born" value={String(profile.birthYear)} /> : null}
-          {profile?.qualification ? (
-            <Row label="Currently" value={profile.qualification} />
-          ) : null}
-          <Row label="Language" value={languageLabel(profile?.language ?? 'en')} />
           <Row label="Hours studied" value={`${hoursStudied} h`} />
           <Row label="Current streak" value={`${streak.current} days`} />
           <Row label="Best streak" value={`${streak.best} days`} />
@@ -159,30 +175,6 @@ export default function ProfileScreen() {
               />
             ))}
           </View>
-        </Card>
-
-        <Card>
-          <Txt variant="heading">Language</Txt>
-          <View style={{ gap: theme.spacing.sm, marginTop: theme.spacing.md }}>
-            {(
-              [
-                ['en', 'English'],
-                ['hi', 'हिंदी'],
-                ['hi-en', 'Hinglish (both)'],
-              ] as const
-            ).map(([value, label]) => (
-              <Button
-                key={value}
-                label={label}
-                variant={(profile?.language ?? 'en') === value ? 'primary' : 'secondary'}
-                onPress={() => void update({ language: value })}
-              />
-            ))}
-          </View>
-          <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-            Picks your videos and notes where both exist. The app's own text is English for
-            now.
-          </Txt>
         </Card>
 
         <Card>
@@ -315,10 +307,6 @@ function Toggle({
       />
     </View>
   );
-}
-
-function languageLabel(code: string): string {
-  return { en: 'English', hi: 'हिंदी', 'hi-en': 'Hinglish' }[code] ?? 'English';
 }
 
 function formatHour(hour: number): string {

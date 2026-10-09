@@ -13,7 +13,10 @@
       "adaptiveIcon": {
         "backgroundColor": "#0A2463"
       },
-      "permissions": ["INTERNET", "POST_NOTIFICATIONS"]
+      "permissions": [
+        "INTERNET",
+        "POST_NOTIFICATIONS"
+      ]
     },
     "ios": {
       "supportsTablet": false,
@@ -29,6 +32,12 @@
         {
           "backgroundColor": "#0A2463",
           "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "FreeMentor uses your photos only to set your profile picture. It stays on your device."
         }
       ]
     ],

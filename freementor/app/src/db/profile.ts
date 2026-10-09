@@ -14,6 +14,7 @@ export interface Profile {
   studyHour: number | null;
   studyPlace: string | null;
   welcomeDismissedAt: string | null;
+  photoUri: string | null;
 }
 
 export async function loadProfile(): Promise<Profile | null> {
@@ -28,6 +29,7 @@ export async function loadProfile(): Promise<Profile | null> {
     study_hour: number | null;
     study_place: string | null;
     welcome_dismissed_at: string | null;
+    photo_uri: string | null;
   }>('SELECT * FROM profile WHERE id = 1');
   if (!row) return null;
   return {
@@ -40,6 +42,7 @@ export async function loadProfile(): Promise<Profile | null> {
     studyHour: row.study_hour,
     studyPlace: row.study_place,
     welcomeDismissedAt: row.welcome_dismissed_at,
+    photoUri: row.photo_uri,
   };
 }
 
@@ -56,14 +59,15 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
     studyHour: null,
     studyPlace: null,
     welcomeDismissedAt: null,
+    photoUri: null,
     ...current,
     ...patch,
   };
   await db.runAsync(
     `INSERT INTO profile
        (id, name, birth_year, qualification, language, appearance, onboarded_at,
-        study_hour, study_place, welcome_dismissed_at)
-     VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        study_hour, study_place, welcome_dismissed_at, photo_uri)
+     VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(id) DO UPDATE SET
        name = excluded.name,
        birth_year = excluded.birth_year,
@@ -73,7 +77,8 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
        onboarded_at = excluded.onboarded_at,
        study_hour = excluded.study_hour,
        study_place = excluded.study_place,
-       welcome_dismissed_at = excluded.welcome_dismissed_at`,
+       welcome_dismissed_at = excluded.welcome_dismissed_at,
+       photo_uri = excluded.photo_uri`,
     [
       next.name,
       next.birthYear,
@@ -84,6 +89,7 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
       next.studyHour,
       next.studyPlace,
       next.welcomeDismissedAt,
+      next.photoUri,
     ],
   );
 }
