@@ -5,7 +5,7 @@
  * exactly ONE primary action. Everything comes from the scheduler, so it
  * works with no network once the goal file is cached.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -14,7 +14,9 @@ import { ProgressRing } from '../../components/charts.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
-import { loadProfile } from '../../db/profile.ts';
+import { loadProfile, saveProfile } from '../../db/profile.ts';
+import { WelcomeCard } from '../../components/WelcomeCard.tsx';
+import { currentEntitlement } from '../../billing/entitlement.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 import { isoWeekKey, weekAndDay, type PlannedItem } from '../../scheduler/index.ts';
@@ -26,11 +28,22 @@ export default function RoadmapHome() {
   const { loading, goal, plan, toggleTask } = useEnrollment();
   const streak = useStreak();
   const [name, setName] = useState<string | null>(null);
+  const [showWelcome, setShowWelcome] = useState(false);
 
   useEffect(() => {
     loadProfile()
-      .then((p) => setName(p?.name ?? null))
+      .then((p) => {
+        setName(p?.name ?? null);
+        // Only while they are still deciding — once bought, it is just noise
+        // in front of today's tasks.
+        setShowWelcome(!p?.welcomeDismissedAt && currentEntitlement() === 'trial');
+      })
       .catch(() => setName(null));
+  }, []);
+
+  const dismissWelcome = useCallback(() => {
+    setShowWelcome(false);
+    void saveProfile({ welcomeDismissedAt: new Date().toISOString() });
   }, []);
 
   const today = todayIso();
@@ -93,6 +106,15 @@ export default function RoadmapHome() {
             </View>
           ) : null}
         </View>
+
+        {showWelcome ? (
+          <WelcomeCard
+            goalId={goal.goal.id}
+            goalName={goal.goal.name}
+            goalType={goal.goal.type}
+            onDismiss={dismissWelcome}
+          />
+        ) : null}
 
         <Card>
           <View style={{ flexDirection: 'row', gap: theme.spacing.lg, alignItems: 'center' }}>

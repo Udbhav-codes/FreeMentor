@@ -125,6 +125,13 @@ export const MIGRATIONS: { version: number; sql: string }[] = [
       ALTER TABLE profile ADD COLUMN quiet_to INTEGER;
     `,
   },
+  {
+    version: 3,
+    sql: `
+      -- The Home welcome/value card is dismissible and stays dismissed.
+      ALTER TABLE profile ADD COLUMN welcome_dismissed_at TEXT;
+    `,
+  },
 ];
 
 export const LATEST_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

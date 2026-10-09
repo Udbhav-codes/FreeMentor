@@ -17,17 +17,21 @@ import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, Screen, Txt } from '../components/ui.tsx';
 import { isValidCouponCode, normaliseCouponCode } from '../billing/coupons.ts';
+import {
+  FREE_DISCLOSURE,
+  PREVIOUS_PRICES,
+  PRICES,
+  rupees,
+  SHOW_PREVIOUS_PRICES,
+} from '../billing/pricing.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
-
-/** Flip on only once these were genuinely the previous prices. */
-const SHOW_WAS_PRICES = false;
 
 const PLANS = [
   {
     id: 'basic',
     name: 'Basic',
-    price: '₹599',
-    was: '₹1,299',
+    price: rupees(PRICES.basic),
+    was: rupees(PREVIOUS_PRICES.basic),
     features: [
       'Your full roadmap and daily plan',
       'All YouTube lessons — free to open, always',
@@ -38,8 +42,8 @@ const PLANS = [
   {
     id: 'premium',
     name: 'Premium',
-    price: '₹999',
-    was: '₹3,999',
+    price: rupees(PRICES.premium),
+    was: rupees(PREVIOUS_PRICES.premium),
     badge: 'Most complete',
     features: [
       'Everything in Basic, plus:',
@@ -85,8 +89,10 @@ export default function Plans() {
         <View style={{ gap: theme.spacing.xs }}>
           <Txt variant="display">Keep your roadmap going</Txt>
           <Txt variant="body" color="secondary">
-            Your free 3-day trial covers everything in Basic. YouTube lessons stay free to
-            open on every plan, before and after.
+            YouTube lessons stay free to open on every plan, before and after.
+          </Txt>
+          <Txt variant="caption" color="secondary">
+            {FREE_DISCLOSURE}
           </Txt>
         </View>
 
@@ -111,7 +117,7 @@ export default function Plans() {
                 <Txt variant="title" style={{ flex: 1 }}>
                   {option.name}
                 </Txt>
-                {SHOW_WAS_PRICES ? (
+                {SHOW_PREVIOUS_PRICES ? (
                   <Txt
                     variant="small"
                     color="secondary"

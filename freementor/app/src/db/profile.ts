@@ -13,6 +13,7 @@ export interface Profile {
   /** Hour of day (0-23) the learner said they would study. */
   studyHour: number | null;
   studyPlace: string | null;
+  welcomeDismissedAt: string | null;
 }
 
 export async function loadProfile(): Promise<Profile | null> {
@@ -26,6 +27,7 @@ export async function loadProfile(): Promise<Profile | null> {
     onboarded_at: string | null;
     study_hour: number | null;
     study_place: string | null;
+    welcome_dismissed_at: string | null;
   }>('SELECT * FROM profile WHERE id = 1');
   if (!row) return null;
   return {
@@ -37,6 +39,7 @@ export async function loadProfile(): Promise<Profile | null> {
     onboardedAt: row.onboarded_at,
     studyHour: row.study_hour,
     studyPlace: row.study_place,
+    welcomeDismissedAt: row.welcome_dismissed_at,
   };
 }
 
@@ -52,14 +55,15 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
     onboardedAt: null,
     studyHour: null,
     studyPlace: null,
+    welcomeDismissedAt: null,
     ...current,
     ...patch,
   };
   await db.runAsync(
     `INSERT INTO profile
        (id, name, birth_year, qualification, language, appearance, onboarded_at,
-        study_hour, study_place)
-     VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?)
+        study_hour, study_place, welcome_dismissed_at)
+     VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT(id) DO UPDATE SET
        name = excluded.name,
        birth_year = excluded.birth_year,
@@ -68,7 +72,8 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
        appearance = excluded.appearance,
        onboarded_at = excluded.onboarded_at,
        study_hour = excluded.study_hour,
-       study_place = excluded.study_place`,
+       study_place = excluded.study_place,
+       welcome_dismissed_at = excluded.welcome_dismissed_at`,
     [
       next.name,
       next.birthYear,
@@ -78,6 +83,7 @@ export async function saveProfile(patch: Partial<Profile>): Promise<void> {
       next.onboardedAt,
       next.studyHour,
       next.studyPlace,
+      next.welcomeDismissedAt,
     ],
   );
 }
