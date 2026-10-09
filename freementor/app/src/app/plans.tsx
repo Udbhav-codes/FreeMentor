@@ -76,7 +76,7 @@ export default function Plans() {
     <Screen>
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingTop: insets.top + theme.spacing.lg,
           paddingBottom: insets.bottom + theme.spacing.xxl,
           gap: theme.spacing.lg,
@@ -165,7 +165,7 @@ export default function Plans() {
               label="Apply"
               variant="secondary"
               onPress={applyCoupon}
-              style={{ paddingHorizontal: theme.spacing.lg }}
+              style={{ paddingHorizontal: theme.spacing.screen }}
             />
           </View>
         </Card>

@@ -12,10 +12,18 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, ProgressBar, Screen, Txt } from '../components/ui.tsx';
 import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onboarding/age.ts';
 import { saveProfile } from '../db/profile.ts';
-import { isExpoGo, scheduleDailyReminder } from '../notifications/daily.ts';
+import { isExpoGo, requestPermission, scheduleDailyReminder } from '../notifications/daily.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
-type Step = 'welcome' | 'age' | 'consent' | 'name' | 'language' | 'studytime' | 'done';
+type Step =
+  | 'welcome'
+  | 'age'
+  | 'consent'
+  | 'name'
+  | 'language'
+  | 'studytime'
+  | 'notifications'
+  | 'done';
 
 const ORDER: Step[] = [
   'welcome',
@@ -24,6 +32,7 @@ const ORDER: Step[] = [
   'name',
   'language',
   'studytime',
+  'notifications',
   'done',
 ];
 
@@ -58,6 +67,7 @@ export default function Onboarding() {
       if (from === 'consent') return setStep('name');
       if (from === 'name') return setStep('language');
       if (from === 'language') return setStep('studytime');
+      if (from === 'studytime') return setStep('notifications');
       return setStep('done');
     },
     [decision],
@@ -92,7 +102,7 @@ export default function Onboarding() {
 
   return (
     <Screen>
-      <View style={{ paddingTop: insets.top + theme.spacing.lg, paddingHorizontal: theme.spacing.lg }}>
+      <View style={{ paddingTop: insets.top + theme.spacing.lg, paddingHorizontal: theme.spacing.screen }}>
         <ProgressBar fraction={progress} />
         {step !== 'welcome' ? (
           <Button label="← Back" variant="ghost" onPress={back} style={{ alignSelf: 'flex-start' }} />
@@ -237,7 +247,7 @@ export default function Onboarding() {
                   borderRadius: theme.radius.md,
                   borderWidth: 1,
                   borderColor: theme.colors.border,
-                  backgroundColor: theme.colors.card,
+                  backgroundColor: theme.colors.surface,
                   color: theme.colors.text,
                 },
               ]}
@@ -323,6 +333,37 @@ export default function Onboarding() {
               label={studyHour == null ? 'Skip for now' : 'Continue'}
               onPress={() => next('studytime')}
             />
+          </>
+        ) : null}
+
+        {step === 'notifications' ? (
+          <>
+            <Txt variant="display">Can we nudge you?</Txt>
+            <Txt variant="body" color="secondary">
+              One reminder at {studyHour == null ? 'your study time' : formatHour(studyHour)},
+              and your weekly report on Sunday. That's it — never more than two a day, and
+              you can turn any of it off later.
+            </Txt>
+
+            <Card>
+              <Txt variant="caption" color="secondary">
+                WHAT YOU'LL GET
+              </Txt>
+              <View style={{ marginTop: theme.spacing.sm, gap: 4 }}>
+                <Txt variant="small">· "Your Day 12 roadmap is waiting." — once a day</Txt>
+                <Txt variant="small">· "Your weekly report just dropped." — Sundays</Txt>
+                <Txt variant="small">· Nothing during your quiet hours</Txt>
+              </View>
+            </Card>
+
+            <Button
+              label="Allow reminders"
+              onPress={() => {
+                // The OS prompt appears here; a refusal is final and fine.
+                void requestPermission().finally(() => next('notifications'));
+              }}
+            />
+            <Button label="Not now" variant="ghost" onPress={() => next('notifications')} />
           </>
         ) : null}
 

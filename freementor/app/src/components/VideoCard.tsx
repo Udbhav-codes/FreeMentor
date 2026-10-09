@@ -25,15 +25,15 @@ export function VideoCard({ resolved }: { resolved: ReturnType<typeof resolveIte
 
   return (
     <View
-      style={[
-        {
-          backgroundColor: theme.colors.card,
-          borderRadius: theme.radius.lg,
-          padding: theme.spacing.lg,
-          gap: theme.spacing.md,
-        },
-        theme.elevation,
-      ]}
+      style={{
+        backgroundColor: theme.colors.background,
+        borderRadius: theme.radius.lg,
+        padding: theme.spacing.lg,
+        gap: theme.spacing.md,
+        boxShadow: theme.shadows.raised,
+        borderWidth: theme.dark ? 1 : 0,
+        borderColor: theme.colors.border,
+      }}
     >
       <View style={{ flexDirection: 'row', gap: theme.spacing.md, alignItems: 'center' }}>
         <Pressable

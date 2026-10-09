@@ -104,7 +104,7 @@ export default function DayView() {
     <Screen>
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingTop: insets.top + theme.spacing.lg,
           paddingBottom: insets.bottom + theme.spacing.xxl,
           gap: theme.spacing.lg,
@@ -296,7 +296,7 @@ function ScoreEntry({ onSubmit }: { onSubmit: (score: number, max: number) => vo
           placeholderTextColor={theme.colors.muted}
           style={[theme.typography.body, field]}
         />
-        <Button label="Save" onPress={submit} style={{ paddingHorizontal: theme.spacing.lg }} />
+        <Button label="Save" onPress={submit} style={{ paddingHorizontal: theme.spacing.screen }} />
       </View>
     </View>
   );

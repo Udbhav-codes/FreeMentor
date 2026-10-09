@@ -1,7 +1,13 @@
 /**
- * Shared primitives. Every screen is built from these so the soft-minimal
- * look (product plan §11.1) stays consistent and the accessibility floors —
- * 48 dp targets, 14 sp minimum text — are enforced in one place.
+ * Shared primitives. Every screen is built from these, so the soft-minimal
+ * look (§11.1) stays consistent and the accessibility floors — 48 dp targets,
+ * 14 sp minimum text — are enforced in one place.
+ *
+ * Two card variants, because the mockup uses both and the difference IS the
+ * house style:
+ *   raised  — background-coloured with a two-sided neumorphic shadow, so it
+ *             looks pressed out of the screen. The default.
+ *   surface — a plain white panel for content sitting inside a raised card.
  */
 import type { ReactNode } from 'react';
 import {
@@ -14,7 +20,7 @@ import {
   type TextStyle,
   type ViewStyle,
 } from 'react-native';
-import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
+import { BUTTON_HEIGHT, CHECKBOX_SIZE, MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 type TextVariant = keyof ReturnType<typeof useTheme>['typography'];
@@ -28,7 +34,7 @@ export function Txt({
 }: {
   children: ReactNode;
   variant?: TextVariant;
-  color?: 'text' | 'secondary' | 'primary' | 'accent' | 'success' | 'onPrimary';
+  color?: 'text' | 'secondary' | 'primary' | 'accent' | 'success' | 'onPrimary' | 'danger';
   style?: StyleProp<TextStyle>;
   numberOfLines?: number;
 }) {
@@ -40,6 +46,7 @@ export function Txt({
     accent: theme.colors.accent,
     success: theme.colors.success,
     onPrimary: theme.colors.onPrimary,
+    danger: '#B3261E',
   };
   return (
     <Text
@@ -51,43 +58,50 @@ export function Txt({
   );
 }
 
-/** The soft card. Neumorphic shadow in light mode, flat elevation in dark. */
 export function Card({
   children,
   style,
   onPress,
+  variant = 'raised',
 }: {
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
   onPress?: () => void;
+  variant?: 'raised' | 'surface';
 }) {
   const theme = useTheme();
+  const raised = variant === 'raised';
+
   const body = (
     <View
       style={[
         {
-          backgroundColor: theme.colors.card,
+          backgroundColor: raised ? theme.colors.background : theme.colors.surface,
           borderRadius: theme.radius.lg,
           padding: theme.spacing.lg,
+          boxShadow: raised ? theme.shadows.raised : theme.shadows.soft,
+          // Dark mode has no neumorphism, so a hairline keeps cards readable.
+          borderWidth: theme.dark ? 1 : 0,
+          borderColor: theme.colors.border,
         },
-        theme.elevation,
         style,
       ]}
     >
       {children}
     </View>
   );
+
   if (!onPress) return body;
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => ({ opacity: pressed ? 0.85 : 1 })}>
+    <Pressable onPress={onPress} style={({ pressed }) => ({ opacity: pressed ? 0.9 : 1 })}>
       {body}
     </Pressable>
   );
 }
 
 /**
- * Primary action. Solid navy, never neumorphic — the product plan is explicit
- * that main buttons must always read as tappable (§11.1).
+ * Primary action: solid navy, 52 dp tall, never neumorphic. §11.1 is explicit
+ * that main buttons must always read as tappable.
  */
 export function Button({
   label,
@@ -96,6 +110,7 @@ export function Button({
   disabled,
   loading,
   style,
+  compact,
 }: {
   label: string;
   onPress: () => void;
@@ -103,14 +118,11 @@ export function Button({
   disabled?: boolean;
   loading?: boolean;
   style?: StyleProp<ViewStyle>;
+  /** Chip-sized, for option grids. Still 44 dp tall. */
+  compact?: boolean;
 }) {
   const theme = useTheme();
   const isPrimary = variant === 'primary';
-  const bg = isPrimary
-    ? theme.colors.primary
-    : variant === 'secondary'
-      ? theme.colors.card
-      : 'transparent';
 
   return (
     <Pressable
@@ -120,12 +132,16 @@ export function Button({
       onPress={onPress}
       style={({ pressed }) => [
         {
-          minHeight: MIN_TOUCH_TARGET,
-          paddingHorizontal: theme.spacing.xl,
+          minHeight: compact ? 44 : BUTTON_HEIGHT,
+          paddingHorizontal: compact ? theme.spacing.lg : theme.spacing.xl,
           borderRadius: theme.radius.md,
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: bg,
+          backgroundColor: isPrimary
+            ? theme.colors.primary
+            : variant === 'secondary'
+              ? theme.colors.surface
+              : 'transparent',
           borderWidth: variant === 'secondary' ? 1 : 0,
           borderColor: theme.colors.border,
           opacity: disabled ? 0.45 : pressed ? 0.88 : 1,
@@ -136,7 +152,7 @@ export function Button({
       {loading ? (
         <ActivityIndicator color={isPrimary ? theme.colors.onPrimary : theme.colors.primary} />
       ) : (
-        <Txt variant="bodyStrong" color={isPrimary ? 'onPrimary' : 'primary'}>
+        <Txt variant="bodyStrong" color={isPrimary ? 'onPrimary' : 'primary'} numberOfLines={1}>
           {label}
         </Txt>
       )}
@@ -144,7 +160,7 @@ export function Button({
   );
 }
 
-/** 48 dp tick target even though the box itself is 24 dp. */
+/** 22 dp box, carved in when unchecked, solid navy when done — inside a 48 dp row. */
 export function Checkbox({
   checked,
   onToggle,
@@ -179,25 +195,26 @@ export function Checkbox({
     >
       <View
         style={{
-          width: 24,
-          height: 24,
-          borderRadius: theme.radius.sm,
-          borderWidth: checked ? 0 : 2,
-          borderColor: theme.colors.muted,
-          backgroundColor: checked ? theme.colors.primary : 'transparent',
+          width: CHECKBOX_SIZE,
+          height: CHECKBOX_SIZE,
+          borderRadius: theme.radius.xs,
+          backgroundColor: checked ? theme.colors.primary : theme.colors.background,
+          boxShadow: checked ? 'none' : theme.shadows.inset,
+          borderWidth: theme.dark && !checked ? 1 : 0,
+          borderColor: theme.colors.border,
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
         {checked ? (
-          <Text style={{ color: theme.colors.onPrimary, fontSize: 15, lineHeight: 18 }}>✓</Text>
+          <Text style={{ color: theme.colors.onPrimary, fontSize: 13, lineHeight: 16 }}>✓</Text>
         ) : null}
       </View>
 
       <View style={{ flex: 1 }}>
         <Txt
           variant="body"
-          style={checked ? { textDecorationLine: 'line-through', opacity: 0.6 } : undefined}
+          style={checked ? { textDecorationLine: 'line-through', opacity: 0.55 } : undefined}
         >
           {label}
         </Txt>
@@ -226,35 +243,29 @@ export function Pill({
   tone?: 'neutral' | 'accent' | 'success' | 'primary';
 }) {
   const theme = useTheme();
-  const bg = {
-    neutral: theme.colors.background,
-    accent: theme.colors.accent,
-    success: theme.colors.success,
-    primary: theme.colors.primary,
-  }[tone];
-  const fg = {
-    neutral: theme.colors.textSecondary,
-    accent: theme.colors.onAccent,
-    success: '#FFFFFF',
-    primary: theme.colors.onPrimary,
-  }[tone];
+  const styles: Record<string, { bg: string; fg: string }> = {
+    neutral: { bg: theme.colors.chip, fg: theme.colors.onChip },
+    accent: { bg: theme.colors.accentSoft, fg: theme.colors.onAccent },
+    success: { bg: theme.dark ? '#13351F' : '#DCF3E6', fg: theme.colors.success },
+    primary: { bg: theme.colors.primary, fg: theme.colors.onPrimary },
+  };
+  const { bg, fg } = styles[tone]!;
 
   return (
     <View
       style={{
         backgroundColor: bg,
         borderRadius: theme.radius.pill,
-        paddingHorizontal: theme.spacing.md,
+        paddingHorizontal: 9,
         paddingVertical: 4,
         alignSelf: 'flex-start',
       }}
     >
-      <Text style={[theme.typography.caption, { color: fg }]}>{children}</Text>
+      <Text style={[theme.typography.caption, { color: fg, fontSize: 11 }]}>{children}</Text>
     </View>
   );
 }
 
-/** Plain horizontal progress bar — "████████░░ 72%" from product plan §8.6. */
 export function ProgressBar({ fraction }: { fraction: number }) {
   const theme = useTheme();
   const pct = Math.max(0, Math.min(1, Number.isFinite(fraction) ? fraction : 0));
@@ -265,7 +276,7 @@ export function ProgressBar({ fraction }: { fraction: number }) {
       style={{
         height: 8,
         borderRadius: theme.radius.pill,
-        backgroundColor: theme.colors.background,
+        backgroundColor: theme.colors.border,
         overflow: 'hidden',
       }}
     >
@@ -281,13 +292,7 @@ export function ProgressBar({ fraction }: { fraction: number }) {
   );
 }
 
-export function Screen({
-  children,
-  style,
-}: {
-  children?: ReactNode;
-  style?: StyleProp<ViewStyle>;
-}) {
+export function Screen({ children, style }: { children?: ReactNode; style?: StyleProp<ViewStyle> }) {
   const theme = useTheme();
   return (
     <View style={[{ flex: 1, backgroundColor: theme.colors.background }, style]}>{children}</View>
@@ -304,6 +309,29 @@ export function Empty({ title, body }: { title: string; body?: string }) {
           {body}
         </Txt>
       ) : null}
+    </View>
+  );
+}
+
+/** A labelled value row — used on every summary card. */
+export function Row({ label, value }: { label: string; value: string }) {
+  const theme = useTheme();
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: theme.spacing.sm,
+        gap: theme.spacing.md,
+      }}
+    >
+      <Txt variant="small" color="secondary">
+        {label}
+      </Txt>
+      <Txt variant="bodyStrong" style={{ flexShrink: 1, textAlign: 'right' }}>
+        {value}
+      </Txt>
     </View>
   );
 }

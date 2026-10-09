@@ -47,7 +47,7 @@ export default function Choose() {
 
   return (
     <Screen>
-      <View style={{ paddingTop: insets.top + theme.spacing.lg, paddingHorizontal: theme.spacing.lg }}>
+      <View style={{ paddingTop: insets.top + theme.spacing.lg, paddingHorizontal: theme.spacing.screen }}>
         <Txt variant="display">What do you want to learn?</Txt>
         <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.xs }}>
           One goal at a time. You can change it later.
@@ -66,7 +66,7 @@ export default function Choose() {
               minHeight: 48,
               paddingHorizontal: theme.spacing.lg,
               borderRadius: theme.radius.md,
-              backgroundColor: theme.colors.card,
+              backgroundColor: theme.colors.surface,
               color: theme.colors.text,
               borderWidth: 1,
               borderColor: theme.colors.border,

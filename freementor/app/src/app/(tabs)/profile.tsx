@@ -1,28 +1,149 @@
-import { ScrollView, View } from 'react-native';
+/**
+ * Profile & settings — product plan §8.9.
+ *
+ * Profile: name, birth year, qualification, goal, language, total hours, streak.
+ * Settings: appearance · language · notifications (+ quiet hours) · account
+ * (change goal, reset roadmap, export progress, delete account) · privacy · legal.
+ *
+ * Account deletion is in-app AND must also exist on the web before the Play
+ * listing goes live (§16) — it is a Play requirement, not a nicety.
+ */
+import { useCallback, useEffect, useState } from 'react';
+import { Alert, ScrollView, Switch, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Button, Card, Screen, Txt } from '../../components/ui.tsx';
-import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
-import { useEnrollment } from '../../state/EnrollmentContext.tsx';
+import { Button, Card, Pill, Row, Screen, Txt } from '../../components/ui.tsx';
+import { loadProfile, saveProfile, type Profile } from '../../db/profile.ts';
+import { resetDatabase } from '../../db/index.ts';
 import { libraryBaseUrl } from '../../api/library.ts';
+import { cancelDailyReminder, isExpoGo, scheduleDailyReminder } from '../../notifications/daily.ts';
+import { useEnrollment } from '../../state/EnrollmentContext.tsx';
+import { useStreak } from '../../state/useStreak.ts';
+import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
 
-export default function Profile() {
+export default function ProfileScreen() {
   const theme = useTheme();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { appearance, setAppearance } = useAppearance();
-  const { goal, plan } = useEnrollment();
+  const { goal, plan, refresh } = useEnrollment();
+  const streak = useStreak();
+
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [dailyOn, setDailyOn] = useState(true);
+  const [weeklyOn, setWeeklyOn] = useState(true);
+
+  useEffect(() => {
+    loadProfile()
+      .then(setProfile)
+      .catch(() => setProfile(null));
+  }, []);
+
+  const update = useCallback(async (patch: Partial<Profile>) => {
+    await saveProfile(patch);
+    setProfile(await loadProfile());
+  }, []);
+
+  const hoursStudied = plan ? Math.round((plan.totals.completedMinutes / 60) * 10) / 10 : 0;
+
+  const confirmReset = () =>
+    Alert.alert(
+      'Reset this roadmap?',
+      'Your ticks, ratings and scores for this goal are cleared and the plan starts from today. This cannot be undone.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Reset',
+          style: 'destructive',
+          onPress: async () => {
+            await resetDatabase();
+            await refresh();
+            router.replace('/choose');
+          },
+        },
+      ],
+    );
+
+  const confirmDelete = () =>
+    Alert.alert(
+      'Delete your account?',
+      'Everything on this device is erased. Once the backend is connected this will also delete your account on the server within 30 days.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete everything',
+          style: 'destructive',
+          onPress: async () => {
+            await resetDatabase();
+            await saveProfile({
+              name: null,
+              birthYear: null,
+              qualification: null,
+              onboardedAt: null,
+              studyHour: null,
+              studyPlace: null,
+            });
+            await cancelDailyReminder();
+            await refresh();
+            router.replace('/onboarding');
+          },
+        },
+      ],
+    );
 
   return (
     <Screen>
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingTop: insets.top + theme.spacing.lg,
+          paddingBottom: theme.spacing.xxl,
           gap: theme.spacing.lg,
         }}
       >
-        <Txt variant="display">Profile</Txt>
+        <Txt variant="display">{profile?.name ?? 'Profile'}</Txt>
+
+        <Card>
+          <Txt variant="heading">You</Txt>
+          {profile?.birthYear ? <Row label="Born" value={String(profile.birthYear)} /> : null}
+          {profile?.qualification ? (
+            <Row label="Currently" value={profile.qualification} />
+          ) : null}
+          <Row label="Language" value={languageLabel(profile?.language ?? 'en')} />
+          <Row label="Hours studied" value={`${hoursStudied} h`} />
+          <Row label="Current streak" value={`${streak.current} days`} />
+          <Row label="Best streak" value={`${streak.best} days`} />
+        </Card>
+
+        <Card>
+          <Txt variant="heading">Your goal</Txt>
+          <Txt variant="body" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+            {goal ? `${goal.goal.name} · version ${goal.goal.version}` : 'No goal selected yet.'}
+          </Txt>
+          {plan ? (
+            <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+              {plan.totals.contentDays} study days + {plan.totals.reserveDays} days of mocks
+              and revision
+            </Txt>
+          ) : null}
+          <Button
+            label={goal ? 'Change goal' : 'Choose a goal'}
+            variant="secondary"
+            onPress={() =>
+              goal
+                ? Alert.alert(
+                    'Change your goal?',
+                    'Your current roadmap is archived, not deleted — you can come back to it. A different goal is a separate purchase.',
+                    [
+                      { text: 'Cancel', style: 'cancel' },
+                      { text: 'Choose a new goal', onPress: () => router.push('/choose') },
+                    ],
+                  )
+                : router.push('/choose')
+            }
+            style={{ marginTop: theme.spacing.lg }}
+          />
+        </Card>
 
         <Card>
           <Txt variant="heading">Appearance</Txt>
@@ -30,6 +151,7 @@ export default function Profile() {
             {(['light', 'dark', 'system'] as const).map((option) => (
               <Button
                 key={option}
+                compact
                 label={option[0]!.toUpperCase() + option.slice(1)}
                 variant={appearance === option ? 'primary' : 'secondary'}
                 onPress={() => setAppearance(option)}
@@ -40,22 +162,60 @@ export default function Profile() {
         </Card>
 
         <Card>
-          <Txt variant="heading">Your goal</Txt>
-          <Txt variant="body" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-            {goal ? `${goal.goal.name} · version ${goal.goal.version}` : 'No goal selected yet.'}
+          <Txt variant="heading">Language</Txt>
+          <View style={{ gap: theme.spacing.sm, marginTop: theme.spacing.md }}>
+            {(
+              [
+                ['en', 'English'],
+                ['hi', 'हिंदी'],
+                ['hi-en', 'Hinglish (both)'],
+              ] as const
+            ).map(([value, label]) => (
+              <Button
+                key={value}
+                label={label}
+                variant={(profile?.language ?? 'en') === value ? 'primary' : 'secondary'}
+                onPress={() => void update({ language: value })}
+              />
+            ))}
+          </View>
+          <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+            Picks your videos and notes where both exist. The app's own text is English for
+            now.
           </Txt>
-          {plan ? (
-            <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
-              {plan.totals.contentDays} study days + {plan.totals.reserveDays} days of
-              mocks and revision
+        </Card>
+
+        <Card>
+          <Txt variant="heading">Notifications</Txt>
+          <Toggle
+            label="Daily study reminder"
+            hint={
+              profile?.studyHour != null ? `At ${formatHour(profile.studyHour)}` : 'No time set yet'
+            }
+            value={dailyOn}
+            onChange={(next) => {
+              setDailyOn(next);
+              if (next && profile?.studyHour != null) {
+                void scheduleDailyReminder({
+                  hour: profile.studyHour,
+                  language: profile.language,
+                });
+              } else {
+                void cancelDailyReminder();
+              }
+            }}
+          />
+          <Toggle
+            label="Weekly report"
+            hint="Sundays"
+            value={weeklyOn}
+            onChange={setWeeklyOn}
+          />
+          {isExpoGo ? (
+            <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              Reminders don't fire in Expo Go — they work in the installed app.
             </Txt>
           ) : null}
-          <Button
-            label={goal ? 'Change goal' : 'Choose a goal'}
-            variant="secondary"
-            onPress={() => router.push('/choose')}
-            style={{ marginTop: theme.spacing.lg }}
-          />
         </Card>
 
         <Card>
@@ -73,14 +233,96 @@ export default function Profile() {
         </Card>
 
         <Card>
+          <Txt variant="heading">Account</Txt>
+          <View style={{ gap: theme.spacing.sm, marginTop: theme.spacing.md }}>
+            <Button label="Reset this roadmap" variant="secondary" onPress={confirmReset} />
+            <Button
+              label="Export my progress"
+              variant="secondary"
+              onPress={() =>
+                Alert.alert('Coming with the backend', 'Export arrives with sync at M4.')
+              }
+            />
+            <Button label="Delete my account" variant="ghost" onPress={confirmDelete} />
+          </View>
+        </Card>
+
+        <Card>
+          <Txt variant="heading">About</Txt>
+          <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+            FreeMentor links to free, public resources. We never copy or re-host anyone's
+            content, and YouTube lessons are never put behind an ad or a paywall.
+          </Txt>
+          <View style={{ marginTop: theme.spacing.md, gap: 4 }}>
+            <Txt variant="caption" color="secondary">
+              Privacy policy · Terms · Refund policy · Content policy — added before the
+              store listing.
+            </Txt>
+          </View>
+        </Card>
+
+        <Card>
           <Txt variant="caption" color="secondary">
-            Library source (dev)
+            LIBRARY SOURCE (DEV)
           </Txt>
           <Txt variant="small" style={{ marginTop: 4 }}>
             {libraryBaseUrl}
           </Txt>
+          <View style={{ marginTop: theme.spacing.sm }}>
+            <Pill>{isExpoGo ? 'Expo Go' : 'Dev build'}</Pill>
+          </View>
         </Card>
       </ScrollView>
     </Screen>
   );
+}
+
+function Toggle({
+  label,
+  hint,
+  value,
+  onChange,
+}: {
+  label: string;
+  hint?: string;
+  value: boolean;
+  onChange: (next: boolean) => void;
+}) {
+  const theme = useTheme();
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        minHeight: 48,
+        gap: theme.spacing.md,
+        marginTop: theme.spacing.sm,
+      }}
+    >
+      <View style={{ flex: 1 }}>
+        <Txt variant="body">{label}</Txt>
+        {hint ? (
+          <Txt variant="caption" color="secondary">
+            {hint}
+          </Txt>
+        ) : null}
+      </View>
+      <Switch
+        value={value}
+        onValueChange={onChange}
+        trackColor={{ true: theme.colors.primary, false: theme.colors.border }}
+        thumbColor={theme.colors.surface}
+      />
+    </View>
+  );
+}
+
+function languageLabel(code: string): string {
+  return { en: 'English', hi: 'हिंदी', 'hi-en': 'Hinglish' }[code] ?? 'English';
+}
+
+function formatHour(hour: number): string {
+  const suffix = hour < 12 ? 'am' : 'pm';
+  const display = hour % 12 === 0 ? 12 : hour % 12;
+  return `${display} ${suffix}`;
 }

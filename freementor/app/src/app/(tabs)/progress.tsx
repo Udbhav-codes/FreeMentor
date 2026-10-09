@@ -6,10 +6,11 @@
 import { useMemo } from 'react';
 import { ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Card, Empty, Pill, ProgressBar, Screen, Txt } from '../../components/ui.tsx';
+import { Card, Empty, Pill, ProgressBar, Row, Screen, Txt } from '../../components/ui.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { consistency, HABIT_TARGET_DAYS, nextMilestone } from '../../progress/streak.ts';
+import { badgesFor } from '../../progress/badges.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 
 export default function Progress() {
@@ -23,6 +24,10 @@ export default function Progress() {
     [progress],
   );
   const week = consistency(studyDates, todayIso());
+  const badges = useMemo(
+    () => (plan && progress ? badgesFor(plan, progress, todayIso()) : []),
+    [plan, progress],
+  );
 
   if (!goal || !plan) {
     return (
@@ -44,7 +49,7 @@ export default function Progress() {
     <Screen>
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingTop: insets.top + theme.spacing.lg,
           gap: theme.spacing.lg,
         }}
@@ -94,6 +99,30 @@ export default function Progress() {
         </Card>
 
         <Card>
+          <Txt variant="heading">Achievements</Txt>
+          <Txt variant="caption" color="secondary" style={{ marginTop: 2 }}>
+            Earned for work finished and hours studied — never for videos watched.
+          </Txt>
+          <View style={{ marginTop: theme.spacing.md, gap: theme.spacing.md }}>
+            {badges.map((badge) => (
+              <View key={badge.id} style={{ gap: 4, opacity: badge.earned ? 1 : 0.6 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
+                  <Txt variant="bodyStrong" style={{ flex: 1 }}>
+                    {badge.earned ? '★ ' : '☆ '}
+                    {badge.name}
+                  </Txt>
+                  {badge.earned ? <Pill tone="success">Earned</Pill> : null}
+                </View>
+                <Txt variant="caption" color="secondary">
+                  {badge.description}
+                </Txt>
+                {!badge.earned ? <ProgressBar fraction={badge.progress} /> : null}
+              </View>
+            ))}
+          </View>
+        </Card>
+
+        <Card>
           <Txt variant="heading">Finishing</Txt>
           <Row label="Syllabus finished" value={plan.contentFinish ?? '—'} />
           <Row label="Ready by" value={plan.projectedFinish ?? '—'} />
@@ -124,20 +153,3 @@ function Stat({ label, value, suffix }: { label: string; value: string; suffix: 
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
-  const theme = useTheme();
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: theme.spacing.sm,
-      }}
-    >
-      <Txt variant="small" color="secondary">
-        {label}
-      </Txt>
-      <Txt variant="bodyStrong">{value}</Txt>
-    </View>
-  );
-}

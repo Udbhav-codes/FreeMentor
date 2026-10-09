@@ -107,7 +107,7 @@ export function RouteList({
               style={{
                 flex: 1,
                 minHeight: MIN_TOUCH_TARGET,
-                backgroundColor: theme.colors.card,
+                backgroundColor: theme.colors.surface,
                 borderRadius: theme.radius.md,
                 padding: theme.spacing.md,
                 opacity: isFuture ? 0.55 : 1,

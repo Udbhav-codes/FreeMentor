@@ -70,7 +70,7 @@ export default function RoadmapHome() {
     <Screen>
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingTop: insets.top + theme.spacing.lg,
           paddingBottom: theme.spacing.xxl,
           gap: theme.spacing.lg,

@@ -1,38 +1,49 @@
 /**
- * Bottom navigation — product plan §8.1.
- * Roadmap · Progress · Reports · Practice · Profile, current tab navy and bold.
+ * Bottom navigation — product plan §8.1, matching the mockup's .nav:
+ * 74 dp tall, white, hairline top border, inactive #8A93A6, active navy bold.
+ *
+ * Roadmap · Progress · Reports · Practice · Profile.
  */
 import { Tabs } from 'expo-router';
 import { Text } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { TAB_BAR_HEIGHT } from '../../theme/tokens.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 
+/**
+ * Glyph icons rather than an icon font: @expo/vector-icons would add ~1 MB of
+ * TTF for five symbols, and §11.4 caps the app at 25 MB.
+ */
 const ICONS: Record<string, string> = {
-  index: '⌁',
-  progress: '◴',
-  reports: '▥',
+  index: '◢',
+  progress: '◔',
+  reports: '▤',
   practice: '✎',
-  profile: '☺',
+  profile: '☻',
 };
 
 export default function TabsLayout() {
   const theme = useTheme();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarActiveTintColor: theme.colors.primary,
-        tabBarInactiveTintColor: theme.colors.textSecondary,
+        tabBarInactiveTintColor: theme.colors.navInactive,
         tabBarStyle: {
-          backgroundColor: theme.colors.card,
+          backgroundColor: theme.colors.surface,
           borderTopColor: theme.colors.border,
-          height: 64,
-          paddingBottom: 8,
-          paddingTop: 6,
+          borderTopWidth: 1,
+          height: TAB_BAR_HEIGHT + insets.bottom,
+          paddingBottom: insets.bottom + 8,
+          paddingTop: 10,
+          elevation: 0,
         },
-        tabBarLabelStyle: { ...theme.typography.caption },
+        tabBarLabelStyle: theme.typography.navLabel,
         tabBarIcon: ({ color, focused }) => (
-          <Text style={{ color, fontSize: 18, fontWeight: focused ? '700' : '400' }}>
+          <Text style={{ color, fontSize: 19, fontWeight: focused ? '700' : '400' }}>
             {ICONS[route.name] ?? '•'}
           </Text>
         ),
