@@ -4,6 +4,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { buildPlan } from '../plan.ts';
+import { blockMinutes } from '../time.ts';
 import { addDays, weekdayOf } from '../dates.ts';
 import { everyDay, loadGoal, progress, settings, weekdaysOnly } from './fixtures.ts';
 
@@ -107,19 +108,37 @@ describe('rule 4 — blocks are packed into days within the available minutes', 
     }
   });
 
-  it('splits a block that is longer than a whole study day, losing no minutes', () => {
-    const p = plan(python, { minutesByWeekday: everyDay(30) });
-    const parts = new Map<string, number>();
-    for (const day of p.days) {
-      for (const item of day.items) {
-        if (item.part) parts.set(item.key, (parts.get(item.key) ?? 0) + item.minutes);
+  it('splits a long block into parts that sum EXACTLY to its length', () => {
+    // Regression: place() decremented `left` before the remainder was read,
+    // so a split block was scheduled for its own length PLUS its first chunk.
+    // The old assertion used >=, which over-scheduling passes — hence exact.
+    for (const minutes of [15, 30, 45, 120]) {
+      const p = plan(python, { minutesByWeekday: everyDay(minutes) });
+      const placed = new Map<string, number>();
+      for (const day of p.days) {
+        for (const item of day.items) {
+          if (item.part) placed.set(item.key, (placed.get(item.key) ?? 0) + item.minutes);
+        }
+      }
+      for (const [key, total] of placed) {
+        const block = python.topics.flatMap((t) => t.blocks).find((b) => b.id === key);
+        if (!block) continue;
+        const expected = blockMinutes(block, python.scheduler_hints, 'en');
+        expect(total, `${key} at ${minutes} min/day`).toBe(expected);
       }
     }
-    for (const [key, total] of parts) {
-      const original = python.topics
-        .flatMap((t) => t.blocks)
-        .find((b) => b.id === key);
-      if (original) expect(total).toBeGreaterThanOrEqual(original.est_minutes);
+  });
+
+  it('never labels a part beyond its own total', () => {
+    for (const minutes of [15, 30, 120]) {
+      const p = plan(python, { minutesByWeekday: everyDay(minutes) });
+      for (const day of p.days) {
+        for (const item of day.items) {
+          if (item.part) {
+            expect(item.part.index, `${item.key} at ${minutes}`).toBeLessThanOrEqual(item.part.of);
+          }
+        }
+      }
     }
   });
 });
@@ -567,6 +586,52 @@ describe("a task ticked today stays on today's plan", () => {
     const today = after.days.find((d) => d.date === TODAY)!;
     // Finishing work early must not cause the day to grow past the budget.
     expect(today.plannedMinutes).toBeLessThanOrEqual(today.availableMinutes);
+  });
+});
+
+describe('custom daily times, not just the presets', () => {
+  it('plans correctly for an odd number of minutes', () => {
+    // 2 h 35 m — the kind of value the custom picker produces.
+    const p = plan(python, { minutesByWeekday: everyDay(155) });
+    expect(p.projectedFinish).not.toBeNull();
+    for (const day of p.days) {
+      if (day.isRestDay) continue;
+      expect(day.availableMinutes).toBe(155);
+      expect(day.plannedMinutes).toBeLessThanOrEqual(155);
+    }
+  });
+
+  it('gives a different finish date than the nearest preset', () => {
+    const custom = plan(python, { minutesByWeekday: everyDay(155) });
+    const preset = plan(python, { minutesByWeekday: everyDay(120) });
+    expect(custom.projectedFinish! < preset.projectedFinish!).toBe(true);
+  });
+
+  it('handles a different custom time on every day of the week', () => {
+    const p = plan(python, {
+      minutesByWeekday: {
+        mon: 45,
+        tue: 155,
+        wed: 0,
+        thu: 200,
+        fri: 75,
+        sat: 320,
+        sun: 15,
+      },
+    });
+    expect(p.projectedFinish).not.toBeNull();
+    // A zero day is never scheduled; every other day respects its own budget.
+    for (const day of p.days) {
+      expect(day.availableMinutes).toBeGreaterThan(0);
+      if (!day.isRestDay) expect(day.plannedMinutes).toBeLessThanOrEqual(day.availableMinutes);
+    }
+  });
+
+  it('still finishes when the daily time is very small', () => {
+    // 15 minutes a day is the floor the custom picker allows.
+    const p = plan(python, { minutesByWeekday: everyDay(15) });
+    expect(p.projectedFinish).not.toBeNull();
+    expect(p.totals.contentMinutes).toBeGreaterThan(0);
   });
 });
 

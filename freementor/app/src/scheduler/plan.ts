@@ -399,8 +399,11 @@ export function buildPlan(input: SchedulerInput): Plan {
       }
     };
 
-    // Warm-up recall of yesterday's topic (product plan §7.3).
-    if (kind === 'new_content' && lastTopic) {
+    // Warm-up recall of yesterday's topic (product plan §7.3). Skipped when
+    // it would eat the whole day: on a 15-minute budget a 10-minute warm-up
+    // leaves no room for content, and the plan would warm up forever without
+    // ever moving forward.
+    if (kind === 'new_content' && lastTopic && left >= hints.warmup_recall_minutes * 2) {
       const w = warmupItem(hints, lastTopic, cursor);
       if (w && w.minutes <= left && !progress.completed[w.key]) place(w, w.minutes);
     }
@@ -446,25 +449,45 @@ export function buildPlan(input: SchedulerInput): Plan {
     // Rule 4 — finish a block that was split across days first.
     if (carry && takesNewContent && left > 0) {
       const chunk = Math.min(carry.left, left);
-      place(carry.item, chunk, { index: carry.partIndex, of: carry.parts });
+      const isLast = carry.left - chunk <= 0;
+      // The up-front estimate assumes later days are free, but warm-ups,
+      // revisions and weekly tests take room, so a block can need more parts
+      // than predicted. Raise the total rather than print "part 10 of 9", and
+      // on the final chunk report the real count.
+      if (carry.partIndex > carry.parts) carry.parts = carry.partIndex;
+      place(carry.item, chunk, {
+        index: carry.partIndex,
+        of: isLast ? carry.partIndex : carry.parts,
+      });
       touch(carry.item.key);
       carry.left -= chunk;
       carry.partIndex += 1;
       if (carry.left <= 0) carry = null;
     }
 
+    let contentPlaced = carry !== null;
     while (takesNewContent && !carry && qi < pending.length && left > 0) {
       const item = pending[qi]!;
       if (item.minutes <= left) {
         place(item, item.minutes);
         touch(item.key);
+        contentPlaced = true;
         qi += 1;
-      } else if (left >= hints.focus_block_minutes) {
-        // A long block may span days, but only in chunks worth sitting down for.
-        const parts = Math.max(2, Math.ceil(item.minutes / Math.max(1, available)));
-        place(item, left, { index: 1, of: parts });
+      } else if (left >= hints.focus_block_minutes || !contentPlaced) {
+        // A long block may span days, but only in chunks worth sitting down
+        // for — UNLESS nothing has been placed today at all. A learner with
+        // 15 minutes a day cannot fit a whole focus block, and refusing to
+        // start would stall the plan forever and hand back an empty roadmap.
+        // Capture the chunk BEFORE placing it: place() decrements `left`, so
+        // reading `left` afterwards gave a remainder of the WHOLE block and
+        // every split block was over-scheduled by its first chunk.
+        const chunk = left;
+        const remaining = item.minutes - chunk;
+        const parts = 1 + Math.max(1, Math.ceil(remaining / Math.max(1, available)));
+        place(item, chunk, { index: 1, of: parts });
         touch(item.key);
-        carry = { item, left: item.minutes - left, partIndex: 2, parts };
+        contentPlaced = true;
+        carry = { item, left: remaining, partIndex: 2, parts };
         qi += 1;
       } else {
         break;
