@@ -12,7 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, ProgressBar, Screen, Txt } from '../components/ui.tsx';
 import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onboarding/age.ts';
 import { saveProfile } from '../db/profile.ts';
-import { scheduleDailyReminder } from '../notifications/daily.ts';
+import { isExpoGo, scheduleDailyReminder } from '../notifications/daily.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 type Step = 'welcome' | 'age' | 'consent' | 'name' | 'language' | 'studytime' | 'done';
@@ -311,6 +311,11 @@ export default function Onboarding() {
                 <Txt variant="bodyStrong">
                   If it's {formatHour(studyHour)}, I study {studyPlace.toLowerCase()}.
                 </Txt>
+                {isExpoGo ? (
+                  <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+                    Reminders need the installed app — they won't fire in Expo Go.
+                  </Txt>
+                ) : null}
               </Card>
             ) : null}
 
