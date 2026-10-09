@@ -11,10 +11,15 @@ admin/    React admin panel (not started)
 The library itself is **not** in here. It stays at `../library/FreeMentor_Library/` and is
 referenced by path, so there is one copy of the 2.7 MB of goal files.
 
+`app/src/catalog/catalog.json` is **generated** from the library by `app/scripts/sync-catalog.mjs`
+and is git-ignored. It is written by `npm install` (the `prepare` hook) and again before
+`npm start`, so the library stays the single source of truth and nothing is hand-edited
+in the app — see CLAUDE.md.
+
 ## Commands
 
 ```bash
-npm install                  # once, from this directory
+npm install                  # once, from this directory — also generates app/src/catalog/catalog.json
 npm run validate:library     # schema + product rules over all 12 goal files (CI gate)
 npm run types                # regenerate shared/src/generated/goal.ts from the schema
 npm test -w app              # the scheduler suite

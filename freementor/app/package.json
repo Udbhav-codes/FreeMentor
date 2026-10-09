@@ -11,7 +11,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "library:serve": "node scripts/serve-library.mjs",
-    "catalog:sync": "node scripts/sync-catalog.mjs"
+    "catalog:sync": "node scripts/sync-catalog.mjs",
+    "prepare": "node scripts/sync-catalog.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",
