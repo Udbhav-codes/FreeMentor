@@ -162,7 +162,6 @@ export default function Reports() {
 }
 
 function Stat({ label, value, of }: { label: string; value: string; of: string }) {
-  const theme = useTheme();
   return (
     <Card style={{ flex: 1 }}>
       <Txt variant="caption" color="secondary">

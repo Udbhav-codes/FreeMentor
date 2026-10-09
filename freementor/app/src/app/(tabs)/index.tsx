@@ -11,14 +11,13 @@ import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
 import { ProgressRing } from '../../components/charts.tsx';
-import { RouteList } from '../../components/RouteList.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
 import { loadProfile } from '../../db/profile.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
-import type { PlannedItem } from '../../scheduler/index.ts';
+import { isoWeekKey, weekAndDay, type PlannedItem } from '../../scheduler/index.ts';
 
 export default function RoadmapHome() {
   const theme = useTheme();
@@ -63,8 +62,10 @@ export default function RoadmapHome() {
       ? plan.totals.completedMinutes / plan.totals.contentMinutes
       : 0;
 
-  const weekNumber = plan.days.filter((d) => d.date <= today).length;
-  const totalDays = plan.days.length;
+  // The mockup's goal card reads "Week 9 of 44", which is how a learner
+  // thinks about a months-long plan — days would read in the hundreds.
+  const here = weekAndDay(plan.days, today);
+  const totalWeeks = new Set(plan.days.map((d) => isoWeekKey(d.date))).size;
 
   return (
     <Screen>
@@ -102,7 +103,7 @@ export default function RoadmapHome() {
               </Txt>
               <Txt variant="title">{goal.goal.name}</Txt>
               <Txt variant="caption" color="secondary">
-                Day {Math.max(1, weekNumber)} of {totalDays} ·{' '}
+                Week {here?.week ?? 1} of {totalWeeks} ·{' '}
                 {plan.totals.topicsCompleted}/{plan.totals.topicsTotal} topics
               </Txt>
               <Txt variant="caption" color="secondary">
@@ -165,19 +166,11 @@ export default function RoadmapHome() {
           disabled={!day || day.items.length === 0}
         />
 
-        <View style={{ marginTop: theme.spacing.lg, gap: theme.spacing.md }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Txt variant="heading" style={{ flex: 1 }}>
-              Your route
-            </Txt>
-            <Pill>{goal.goal.name}</Pill>
-          </View>
-          <RouteList
-            days={plan.days}
-            today={today}
-            onOpenDay={(date) => router.push(`/day/${date}`)}
-          />
-        </View>
+        <Button
+          label="See your whole route →"
+          variant="secondary"
+          onPress={() => router.push('/route')}
+        />
       </ScrollView>
     </Screen>
   );

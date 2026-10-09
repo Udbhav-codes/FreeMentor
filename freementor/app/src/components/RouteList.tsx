@@ -2,12 +2,17 @@
  * The GPS-style route — product plan §8.3, screen 4 of the preview.
  *
  * A vertical line of stops: done stops solid, today amber, future faded,
- * a milestone flag at each phase boundary. Weeks collapse and expand.
+ * weeks that expand to their days. Tapping a day opens it.
  *
- * The plan is a flat list of days, so weeks are derived here rather than
- * stored — the scheduler must not care about presentation.
+ * Exported as a single WeekCard rather than a whole list, so the route screen
+ * can put it in a FlatList. A long roadmap has a lot of weeks (JEE Advanced
+ * at 2 h/day is about 72) and a ScrollView would mount every one of them.
+ *
+ * Only the week HEADER is pressable. A card-wide Pressable wrapping the day
+ * rows put two touch targets on top of each other, so a tap meant to open a
+ * day could collapse the week instead.
  */
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { Pill, Txt } from './ui.tsx';
 import { useTheme } from '../theme/ThemeProvider.tsx';
@@ -20,6 +25,8 @@ export interface RouteWeek {
   days: PlannedDay[];
   doneFraction: number;
   containsToday: boolean;
+  /** Set when today falls inside this week, so the row can highlight it. */
+  todayDate: string | null;
   label: string;
 }
 
@@ -35,116 +42,133 @@ export function groupIntoWeeks(days: PlannedDay[], today: string): RouteWeek[] {
   return [...byWeek.entries()].map(([key, weekDays]) => {
     const items = weekDays.flatMap((d) => d.items);
     const done = items.filter((i) => i.done).length;
-    // The subjects this week covers, for the one-line summary.
     const subjects = [...new Set(items.map((i) => i.subject).filter(Boolean))];
+    const containsToday = weekDays.some((d) => d.date === today);
     return {
       key,
       startDate: startOfWeek(weekDays[0]!.date),
       days: weekDays,
       doneFraction: items.length > 0 ? done / items.length : 0,
-      containsToday: weekDays.some((d) => d.date === today),
+      containsToday,
+      todayDate: containsToday ? today : null,
       label: subjects.slice(0, 3).join(' · ') || 'Revision',
     };
   });
 }
 
-export function RouteList({
-  days,
-  today,
+export function WeekCard({
+  week,
+  isLast,
+  isFuture,
+  defaultOpen,
   onOpenDay,
 }: {
-  days: PlannedDay[];
-  today: string;
+  week: RouteWeek;
+  isLast: boolean;
+  isFuture: boolean;
+  defaultOpen: boolean;
   onOpenDay: (date: string) => void;
 }) {
   const theme = useTheme();
-  const weeks = useMemo(() => groupIntoWeeks(days, today), [days, today]);
-  const currentIndex = Math.max(
-    0,
-    weeks.findIndex((w) => w.containsToday),
-  );
-  const [expanded, setExpanded] = useState<string | null>(weeks[currentIndex]?.key ?? null);
+  const [open, setOpen] = useState(defaultOpen);
+  const isPast = week.doneFraction >= 1;
 
   return (
-    <View style={{ gap: theme.spacing.md }}>
-      {weeks.map((week, i) => {
-        const isPast = week.doneFraction >= 1;
-        const isFuture = !week.containsToday && week.doneFraction === 0 && i > currentIndex;
-        const open = expanded === week.key;
+    <View style={{ flexDirection: 'row', gap: theme.spacing.md }}>
+      {/* the route itself */}
+      <View style={{ alignItems: 'center', width: 20 }}>
+        <View
+          style={{
+            width: 14,
+            height: 14,
+            marginTop: 18,
+            borderRadius: 7,
+            backgroundColor: week.containsToday
+              ? theme.colors.accent
+              : isPast
+                ? theme.colors.primary
+                : 'transparent',
+            borderWidth: isFuture ? 2 : 0,
+            borderColor: theme.colors.muted,
+          }}
+        />
+        {!isLast ? (
+          <View
+            style={{
+              flex: 1,
+              width: 2,
+              marginTop: 4,
+              backgroundColor: isPast ? theme.colors.primary : theme.colors.border,
+            }}
+          />
+        ) : null}
+      </View>
 
-        return (
-          <View key={week.key} style={{ flexDirection: 'row', gap: theme.spacing.md }}>
-            {/* the route itself */}
-            <View style={{ alignItems: 'center', width: 20 }}>
-              <View
-                style={{
-                  width: 14,
-                  height: 14,
-                  borderRadius: 7,
-                  backgroundColor: week.containsToday
-                    ? theme.colors.accent
-                    : isPast
-                      ? theme.colors.primary
-                      : 'transparent',
-                  borderWidth: isFuture ? 2 : 0,
-                  borderColor: theme.colors.muted,
-                }}
-              />
-              {i < weeks.length - 1 ? (
-                <View
-                  style={{
-                    flex: 1,
-                    width: 2,
-                    marginTop: 4,
-                    backgroundColor: isPast ? theme.colors.primary : theme.colors.border,
-                  }}
-                />
-              ) : null}
-            </View>
-
-            <Pressable
-              onPress={() => setExpanded(open ? null : week.key)}
-              style={{
-                flex: 1,
-                minHeight: MIN_TOUCH_TARGET,
-                backgroundColor: theme.colors.surface,
-                borderRadius: theme.radius.md,
-                padding: theme.spacing.md,
-                opacity: isFuture ? 0.55 : 1,
-              }}
-            >
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <View style={{ flex: 1 }}>
-                  <Txt variant="bodyStrong">Week of {week.startDate}</Txt>
-                  <Txt variant="caption" color="secondary" numberOfLines={1}>
-                    {week.label}
-                  </Txt>
-                </View>
-                {week.containsToday ? (
-                  <Pill tone="accent">Today</Pill>
-                ) : (
-                  <Txt variant="caption" color={isPast ? 'success' : 'secondary'}>
-                    {Math.round(week.doneFraction * 100)}%
-                  </Txt>
-                )}
-              </View>
-
-              {open ? (
-                <View style={{ marginTop: theme.spacing.md, gap: 2 }}>
-                  {week.days.map((day) => (
-                    <DayRow
-                      key={day.date}
-                      day={day}
-                      isToday={day.date === today}
-                      onPress={() => onOpenDay(day.date)}
-                    />
-                  ))}
-                </View>
-              ) : null}
-            </Pressable>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: theme.colors.surface,
+          borderRadius: theme.radius.md,
+          borderWidth: 1,
+          borderColor: week.containsToday ? theme.colors.accent : theme.colors.border,
+          opacity: isFuture ? 0.6 : 1,
+          overflow: 'hidden',
+        }}
+      >
+        <Pressable
+          accessibilityRole="button"
+          accessibilityState={{ expanded: open }}
+          accessibilityLabel={`Week of ${week.startDate}, ${Math.round(
+            week.doneFraction * 100,
+          )} percent done`}
+          onPress={() => setOpen(!open)}
+          style={({ pressed }) => ({
+            minHeight: MIN_TOUCH_TARGET,
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: theme.spacing.sm,
+            padding: theme.spacing.md,
+            backgroundColor: pressed ? theme.colors.background : 'transparent',
+          })}
+        >
+          <View style={{ flex: 1 }}>
+            <Txt variant="bodyStrong">Week of {week.startDate}</Txt>
+            <Txt variant="caption" color="secondary" numberOfLines={1}>
+              {week.label}
+            </Txt>
           </View>
-        );
-      })}
+          {week.containsToday ? (
+            <Pill tone="accent">Today</Pill>
+          ) : (
+            <Txt variant="caption" color={isPast ? 'success' : 'secondary'}>
+              {Math.round(week.doneFraction * 100)}%
+            </Txt>
+          )}
+          <Txt variant="caption" color="secondary">
+            {open ? '▴' : '▾'}
+          </Txt>
+        </Pressable>
+
+        {open ? (
+          <View
+            style={{
+              paddingHorizontal: theme.spacing.md,
+              paddingBottom: theme.spacing.sm,
+              borderTopWidth: 1,
+              borderTopColor: theme.colors.border,
+            }}
+          >
+            {week.days.map((day) => (
+              <DayRow
+                key={day.date}
+                day={day}
+                isToday={day.date === week.todayDate}
+                onPress={() => onOpenDay(day.date)}
+              />
+            ))}
+          </View>
+        ) : null}
+      </View>
     </View>
   );
 }
@@ -160,37 +184,42 @@ function DayRow({
 }) {
   const theme = useTheme();
   const done = day.items.length > 0 && day.items.every((i) => i.done);
-  const title =
-    day.isRestDay
-      ? 'Rest day'
-      : day.kind === 'mixed_practice'
-        ? 'Mixed practice + weekly test'
-        : day.kind === 'light_revision'
-          ? 'Light revision'
-          : day.kind === 'final_revision'
-            ? 'Final revision'
-            : (day.items.find((i) => i.source === 'topic')?.subject ?? 'Study');
+  const title = day.isRestDay
+    ? 'Rest day'
+    : day.kind === 'mixed_practice'
+      ? 'Mixed practice + weekly test'
+      : day.kind === 'light_revision'
+        ? 'Light revision'
+        : day.kind === 'final_revision'
+          ? 'Final revision'
+          : (day.items.find((i) => i.source === 'topic')?.subject ?? 'Study');
 
   return (
     <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`${day.date}, ${title}`}
       onPress={onPress}
-      style={{
+      style={({ pressed }) => ({
         minHeight: MIN_TOUCH_TARGET,
         flexDirection: 'row',
         alignItems: 'center',
         gap: theme.spacing.sm,
-        paddingVertical: theme.spacing.xs,
+        paddingHorizontal: theme.spacing.sm,
+        marginTop: theme.spacing.xs,
         borderRadius: theme.radius.sm,
-        backgroundColor: isToday ? `${theme.colors.accent}22` : 'transparent',
-        paddingHorizontal: isToday ? theme.spacing.sm : 0,
-      }}
+        backgroundColor: pressed
+          ? theme.colors.background
+          : isToday
+            ? theme.colors.accentSoft
+            : 'transparent',
+      })}
     >
       <Txt variant="caption" color={done ? 'success' : 'secondary'}>
         {done ? '✓' : isToday ? '→' : '○'}
       </Txt>
       <Txt
         variant="small"
-        color={isToday ? 'text' : done ? 'secondary' : 'secondary'}
+        color={isToday ? 'text' : 'secondary'}
         numberOfLines={1}
         style={{ flex: 1 }}
       >
@@ -198,6 +227,9 @@ function DayRow({
       </Txt>
       <Txt variant="caption" color="secondary">
         {day.plannedMinutes} m
+      </Txt>
+      <Txt variant="caption" color="secondary">
+        ›
       </Txt>
     </Pressable>
   );

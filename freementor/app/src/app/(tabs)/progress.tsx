@@ -137,7 +137,6 @@ export default function Progress() {
 }
 
 function Stat({ label, value, suffix }: { label: string; value: string; suffix: string }) {
-  const theme = useTheme();
   return (
     <Card style={{ flex: 1 }}>
       <Txt variant="caption" color="secondary">

@@ -5,7 +5,7 @@
  * copy. Google sign-in slots in at step 2 when the backend lands (M4); the
  * age gate deliberately comes before anything else is stored.
  */
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

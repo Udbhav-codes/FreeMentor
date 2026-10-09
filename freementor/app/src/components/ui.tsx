@@ -133,7 +133,8 @@ export function Button({
       style={({ pressed }) => [
         {
           minHeight: compact ? 44 : BUTTON_HEIGHT,
-          paddingHorizontal: compact ? theme.spacing.lg : theme.spacing.xl,
+          paddingVertical: compact ? 0 : theme.spacing.sm,
+          paddingHorizontal: compact ? theme.spacing.lg : theme.spacing.lg,
           borderRadius: theme.radius.md,
           alignItems: 'center',
           justifyContent: 'center',
@@ -152,7 +153,15 @@ export function Button({
       {loading ? (
         <ActivityIndicator color={isPrimary ? theme.colors.onPrimary : theme.colors.primary} />
       ) : (
-        <Txt variant="bodyStrong" color={isPrimary ? 'onPrimary' : 'primary'} numberOfLines={1}>
+        <Txt
+          variant="bodyStrong"
+          color={isPrimary ? 'onPrimary' : 'primary'}
+          // A full-width button wraps; only chips are held to one line. The
+          // longest qualification option is 43 characters and 68 of the 73
+          // goals use it, so one line silently ellipsised it.
+          numberOfLines={compact ? 1 : 2}
+          style={{ textAlign: 'center' }}
+        >
           {label}
         </Txt>
       )}

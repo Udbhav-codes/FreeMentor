@@ -263,7 +263,7 @@ function TaskRow({
               </Txt>
               <Txt variant="small">
                 {focus
-                  .map((seg, i) =>
+                  .map((seg) =>
                     seg.breakAfter > 0
                       ? `${seg.focus} min, ${seg.breakAfter} min break`
                       : `${seg.focus} min`,
