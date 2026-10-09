@@ -17,6 +17,7 @@ import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
 import { loadProfile, saveProfile } from '../../db/profile.ts';
 import { WelcomeCard } from '../../components/WelcomeCard.tsx';
 import { currentEntitlement } from '../../billing/entitlement.ts';
+import { catalog } from '../../api/library.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 import { isoWeekKey, weekAndDay, type PlannedItem } from '../../scheduler/index.ts';
@@ -48,6 +49,11 @@ export default function RoadmapHome() {
 
   const today = todayIso();
   const day = useMemo(() => plan?.days.find((d) => d.date === today) ?? null, [plan, today]);
+  // The welcome copy is built from catalog facts (phases, hours, outcomes).
+  const catalogEntry = useMemo(
+    () => catalog.goals.find((g) => g.id === goal?.goal.id) ?? null,
+    [goal],
+  );
 
   if (loading) return <Screen />;
 
@@ -107,13 +113,8 @@ export default function RoadmapHome() {
           ) : null}
         </View>
 
-        {showWelcome ? (
-          <WelcomeCard
-            goalId={goal.goal.id}
-            goalName={goal.goal.name}
-            goalType={goal.goal.type}
-            onDismiss={dismissWelcome}
-          />
+        {showWelcome && catalogEntry ? (
+          <WelcomeCard goal={catalogEntry} onDismiss={dismissWelcome} />
         ) : null}
 
         <Card>

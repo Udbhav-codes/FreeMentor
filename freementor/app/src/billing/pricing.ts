@@ -36,7 +36,8 @@ export function rupees(amount: number): string {
 export const FREE_DISCLOSURE =
   `All study resources are free to open. Your personal roadmap and tracking are ` +
   `free for 3 days, then Basic ${rupees(PRICES.basic)} or Premium ` +
-  `${rupees(PRICES.premium)} (one-time).`;
+  `${rupees(PRICES.premium)} — a one-time payment, inclusive of taxes, with lifetime ` +
+  `access to that roadmap. No subscription, no renewal.`;
 
 /**
  * What a paid course for this kind of goal typically costs, used for the
@@ -53,5 +54,14 @@ export const COMPARISON = {
   skill: { low: 10_000, high: 50_000, label: 'bootcamps' },
   language: { low: 3_000, high: 15_000, label: 'paid courses' },
 } as const;
+
+/**
+ * "₹6,000 to ₹40,000+". The trailing plus matters: the upper end of these
+ * ranges has no real ceiling, and quoting a flat maximum would understate it
+ * — a claim we would then have to defend.
+ */
+export function comparisonRange(c: { low: number; high: number }): string {
+  return `${rupees(c.low)} to ${rupees(c.high)}+`;
+}
 
 export type GoalKind = keyof typeof COMPARISON;

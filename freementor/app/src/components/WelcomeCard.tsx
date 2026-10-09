@@ -11,26 +11,22 @@
  */
 import { Pressable, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import type { GoalType } from '@freementor/shared';
+import type { CatalogGoal } from '@freementor/shared';
 import { Button, Txt } from './ui.tsx';
 import { welcomeCopy } from '../marketing/welcome.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 
 export function WelcomeCard({
-  goalId,
-  goalName,
-  goalType,
+  goal,
   onDismiss,
 }: {
-  goalId: string;
-  goalName: string;
-  goalType: GoalType;
+  goal: CatalogGoal;
   onDismiss: () => void;
 }) {
   const theme = useTheme();
   const router = useRouter();
-  const copy = welcomeCopy({ goalId, goalName, goalType });
+  const copy = welcomeCopy(goal);
 
   return (
     <View
@@ -71,6 +67,9 @@ export function WelcomeCard({
       </View>
 
       <Txt variant="body">{copy.promise}</Txt>
+      <Txt variant="small" color="secondary">
+        {copy.facts}
+      </Txt>
 
       <View
         style={{
@@ -86,6 +85,9 @@ export function WelcomeCard({
         </Txt>
       </View>
 
+      <Txt variant="caption" color="secondary">
+        {copy.trust}
+      </Txt>
       <Txt variant="caption" color="secondary">
         {copy.disclosure}
       </Txt>
