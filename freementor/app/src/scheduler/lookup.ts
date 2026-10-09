@@ -1,0 +1,94 @@
+/**
+ * Resolving a PlannedItem back to the library content behind it.
+ *
+ * The scheduler deliberately carries only ids and minutes so it stays cheap
+ * and serialisable; the Day view needs the actual block, its resources and
+ * its topic, which is what these do.
+ */
+import type { Block, GoalFile, Milestone, Resource, Topic } from '@freementor/shared';
+import { primaryResource, videoMinutes } from './time.ts';
+import type { PlannedItem } from './types.ts';
+
+export interface GoalIndex {
+  topics: Map<string, Topic>;
+  blocks: Map<string, { block: Block; topic: Topic }>;
+  milestones: Map<string, Milestone>;
+  phases: Map<number, string>;
+}
+
+/** Built once per goal and reused; O(n) over a file that can hold 700 blocks. */
+export function indexGoal(goal: GoalFile): GoalIndex {
+  const topics = new Map<string, Topic>();
+  const blocks = new Map<string, { block: Block; topic: Topic }>();
+  for (const topic of goal.topics) {
+    topics.set(topic.id, topic);
+    for (const block of topic.blocks) blocks.set(block.id, { block, topic });
+  }
+  return {
+    topics,
+    blocks,
+    milestones: new Map(goal.milestones.map((m) => [m.id, m])),
+    phases: new Map(goal.phases.map((p) => [p.order, p.name])),
+  };
+}
+
+export interface ResolvedItem {
+  item: PlannedItem;
+  topic?: Topic;
+  block?: Block;
+  milestone?: Milestone;
+  resources: Resource[];
+  /** "52 min video -> shown as 60 min", when we know the real duration. */
+  videoNote?: string;
+}
+
+export function resolveItem(
+  item: PlannedItem,
+  goal: GoalFile,
+  index: GoalIndex,
+  lang: 'en' | 'hi' | 'hi-en' = 'en',
+): ResolvedItem {
+  if (item.milestoneId) {
+    const milestone = index.milestones.get(item.milestoneId);
+    return { item, milestone, resources: milestone?.resources ?? [] };
+  }
+
+  // Reviews, warm-ups and the weekly test have no block of their own; they
+  // point at a topic, whose own resources are the right thing to reopen.
+  const found = item.blockId ? index.blocks.get(item.blockId) : undefined;
+  const topic = found?.topic ?? (item.topicId ? index.topics.get(item.topicId) : undefined);
+
+  if (!found) {
+    return { item, topic, resources: revisionResources(topic, lang) };
+  }
+
+  const { block } = found;
+  let videoNote: string | undefined;
+  if (block.type === 'learn') {
+    const video = primaryResource(block, lang);
+    if (video?.type === 'video' && video.duration_seconds) {
+      const real = Math.round(video.duration_seconds / 60);
+      const shown = videoMinutes(video, goal.scheduler_hints);
+      videoNote = `${real} min video · shown as ${shown} min`;
+    }
+  }
+
+  return { item, topic, block, resources: block.resources, videoNote };
+}
+
+/**
+ * For a revision visit, surface the topic's notes and practice rather than
+ * the full lecture — the learner has already watched it once.
+ */
+function revisionResources(topic: Topic | undefined, lang: string): Resource[] {
+  if (!topic) return [];
+  const all = topic.blocks.flatMap((b) => b.resources);
+  const preferred = all.filter((r) => r.type === 'notes' || r.type === 'practice');
+  const list = preferred.length > 0 ? preferred : all;
+  return list.filter((r) => r.lang === lang || r.lang === 'en').slice(0, 3);
+}
+
+/** The three recall questions for a topic (product plan decision #17). */
+export function recallFor(topicId: string | undefined, index: GoalIndex) {
+  return topicId ? (index.topics.get(topicId)?.recall ?? []) : [];
+}

@@ -1,0 +1,37 @@
+# dependencies
+node_modules/
+
+# Expo / React Native build output
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.jsbundle
+android/
+ios/
+
+# generated from the library at build time (see app/scripts/sync-catalog.mjs)
+freementor/app/src/catalog/catalog.json
+
+# secrets — never commit these (CLAUDE.md: keys live only on the server)
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# logs and caches
+*.log
+npm-debug.log*
+.cache/
+coverage/

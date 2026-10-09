@@ -1,0 +1,4105 @@
+{
+ "schema_version": "1.0",
+ "goal": {
+  "id": "backend",
+  "name": "Backend Development",
+  "category": "Skills",
+  "group": "Technology & Development",
+  "type": "skill",
+  "version": "2026.1",
+  "valid_for": "Node.js 24 LTS, Express 5, PostgreSQL 17/18, TypeScript 5",
+  "last_updated": "2026-10-08",
+  "official_url": "https://nodejs.org/en/learn",
+  "languages": [
+   "en",
+   "hi"
+  ],
+  "video_language_note": "English: topic videos from Traversy Media, Web Dev Simplified, Fireship, TechWorld with Nana, freeCodeCamp and others. Hindi: Chai aur Code's backend course and Thapa Technical.",
+  "career_outcomes": [
+   "Design and build REST APIs with Node.js, Express and TypeScript",
+   "Model data in PostgreSQL and use an ORM safely",
+   "Implement secure authentication and follow OWASP guidance",
+   "Test, containerise, deploy and document services with CI/CD",
+   "Explain basic system-design trade-offs in interviews"
+  ],
+  "resource_policy": "Links only to free, legal sources (official docs, open-licence books, reputable free platforms, public YouTube videos). No copyrighted material re-hosted. YouTube videos are never paywalled or ad-gated.",
+  "estimated_hours": {
+   "content": 366,
+   "mocks_and_milestones": 0,
+   "spaced_revision_allowance": 44,
+   "total": 410,
+   "note": "Beginner to job-ready planning estimate. Video minutes are estimates until the link checker fills real durations (+15% rule applied in-app)."
+  },
+  "reviewed_by": null,
+  "prerequisite_note": "Basic JavaScript helps (FreeMentor Frontend roadmap, Phase 3). The FreeMentor SQL roadmap goes deeper on databases."
+ },
+ "scheduler_hints": {
+  "video_time_multiplier": 1.15,
+  "round_up_to_minutes": 5,
+  "warmup_recall_minutes": 10,
+  "focus_block_minutes": 25,
+  "break_minutes": 5,
+  "spaced_review_offsets_days": [
+   1,
+   3,
+   7,
+   21,
+   45
+  ],
+  "confidence_to_next_review_days": {
+   "need_revision": 1,
+   "little_afraid": 2,
+   "confident": 4,
+   "all_cleared": 7,
+   "mastered": 21
+  },
+  "weekly_pattern": {
+   "new_content_days": 5,
+   "mixed_practice_and_weekly_test_days": 1,
+   "light_revision_or_rest_days": 1
+  },
+  "rest_day_limits": {
+   "per_week": 1,
+   "per_month": 4
+  },
+  "interleave_by": "subject",
+  "reserve_final_fraction_for_mocks_and_revision": 0.15,
+  "mastery_gate": {
+   "weekly_test_min_score_pct": 60,
+   "remediation_block_minutes": 45
+  },
+  "missed_day_policy": "shift_forward",
+  "recalculate_from": "next_incomplete_task"
+ },
+ "phases": [
+  {
+   "id": "backend-p1",
+   "order": 1,
+   "name": "Foundations: HTTP, Linux, Git & Node.js",
+   "topic_ids": [
+    "be-http",
+    "be-linux-cli",
+    "be-git",
+    "be-js-refresher",
+    "be-node-core",
+    "be-npm",
+    "proj-be-cli"
+   ]
+  },
+  {
+   "id": "backend-p2",
+   "order": 2,
+   "name": "Building APIs with Express",
+   "topic_ids": [
+    "be-express",
+    "be-rest-design",
+    "be-middleware-validation",
+    "be-errors-logging",
+    "be-typescript-node",
+    "proj-be-rest-api"
+   ]
+  },
+  {
+   "id": "backend-p3",
+   "order": 3,
+   "name": "Databases & Caching",
+   "topic_ids": [
+    "be-sql-postgres",
+    "be-data-modelling",
+    "be-node-postgres",
+    "be-mongodb",
+    "be-redis-caching",
+    "proj-be-db-api"
+   ]
+  },
+  {
+   "id": "backend-p4",
+   "order": 4,
+   "name": "Auth, Security & Testing",
+   "topic_ids": [
+    "be-authentication",
+    "be-authorization-oauth",
+    "be-api-security",
+    "be-testing",
+    "proj-be-auth"
+   ]
+  },
+  {
+   "id": "backend-p5",
+   "order": 5,
+   "name": "Production & System Design",
+   "topic_ids": [
+    "be-docker",
+    "be-ci-cd",
+    "be-deploy",
+    "be-queues-realtime",
+    "be-api-docs",
+    "be-system-design",
+    "proj-be-final"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": "be-http",
+   "subject": "Backend",
+   "title": "How the Internet & HTTP Work (Requests, Status Codes, Headers, DNS)",
+   "phase": 1,
+   "order": 1,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 260,
+   "blocks": [
+    {
+     "id": "be-http-learn",
+     "type": "learn",
+     "title": "Watch: How the Internet & HTTP Work (Requests, Status Codes, Headers, DNS)",
+     "est_minutes": 40,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "HTTP Crash Course & Exploration",
+       "url": "https://www.youtube.com/watch?v=iYM2zFP3Zn0",
+       "youtube_id": "iYM2zFP3Zn0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Traversy Media",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Javascript Backend Roadmap | chai aur backend",
+       "url": "https://www.youtube.com/watch?v=EH3vGeqeIAo",
+       "youtube_id": "EH3vGeqeIAo",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi learners: start with Chai aur Code's backend roadmap for the big picture."
+    },
+    {
+     "id": "be-http-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "MDN – An overview of HTTP",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+       "lang": "en",
+       "provider": "developer.mozilla.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "MDN – HTTP response status codes",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+       "lang": "en",
+       "provider": "developer.mozilla.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Cloudflare Learning – What is DNS?",
+       "url": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+       "lang": "en",
+       "provider": "www.cloudflare.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-http-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Chrome DevTools – Inspect network activity on 3 websites",
+       "url": "https://developer.chrome.com/docs/devtools/network",
+       "lang": "en",
+       "provider": "developer.chrome.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-http-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Status code meaning 'not found'?",
+     "a": "404"
+    },
+    {
+     "q": "GET vs POST?",
+     "a": "GET reads data; POST sends data to create something"
+    },
+    {
+     "q": "What does a 5xx code mean?",
+     "a": "The server failed"
+    }
+   ]
+  },
+  {
+   "id": "be-linux-cli",
+   "subject": "Backend",
+   "title": "Command Line & Linux Basics",
+   "phase": 1,
+   "order": 2,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "be-linux-cli-learn",
+     "type": "learn",
+     "title": "Watch: Command Line & Linux Basics",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners",
+       "url": "https://www.youtube.com/watch?v=ZtqBQ68cfJc",
+       "youtube_id": "ZtqBQ68cfJc",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-linux-cli-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Linux Journey – Command line & filesystem lessons",
+       "url": "https://linuxjourney.com/",
+       "lang": "en",
+       "provider": "linuxjourney.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Ubuntu – The Linux command line for beginners",
+       "url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+       "lang": "en",
+       "provider": "ubuntu.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-linux-cli-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "OverTheWire Bandit – levels 0–10 (legal practice)",
+       "url": "https://overthewire.org/wargames/bandit/",
+       "lang": "en",
+       "provider": "overthewire.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-linux-cli-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Show the current folder?",
+     "a": "pwd"
+    },
+    {
+     "q": "Make a file executable?",
+     "a": "chmod +x file"
+    },
+    {
+     "q": "Search text inside files?",
+     "a": "grep 'word' file"
+    }
+   ]
+  },
+  {
+   "id": "be-git",
+   "subject": "Backend",
+   "title": "Git & GitHub",
+   "phase": 1,
+   "order": 3,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "be-git-learn",
+     "type": "learn",
+     "title": "Watch: Git & GitHub",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Git and GitHub for Beginners - Crash Course",
+       "url": "https://www.youtube.com/watch?v=RGOj5yH7evk",
+       "youtube_id": "RGOj5yH7evk",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-git-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Pro Git – About Version Control",
+       "url": "https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control",
+       "lang": "en",
+       "provider": "git-scm.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GitHub Docs – Hello World",
+       "url": "https://docs.github.com/en/get-started/start-your-journey/hello-world",
+       "lang": "en",
+       "provider": "docs.github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-git-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "GitHub Skills – free interactive courses",
+       "url": "https://skills.github.com/",
+       "lang": "en",
+       "provider": "skills.github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-git-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Undo staged changes to a file?",
+     "a": "git restore --staged file"
+    },
+    {
+     "q": "Why use branches?",
+     "a": "To work on features without breaking main"
+    },
+    {
+     "q": "File to keep secrets and node_modules out of Git?",
+     "a": ".gitignore"
+    }
+   ]
+  },
+  {
+   "id": "be-js-refresher",
+   "subject": "Backend",
+   "title": "JavaScript for the Backend: Async, Promises & Modules",
+   "phase": 1,
+   "order": 4,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "be-js-refresher-learn",
+     "type": "learn",
+     "title": "Watch: JavaScript for the Backend: Async, Promises & Modules",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Callbacks, Promises, Async Await | JavaScript Fetch API Explained",
+       "url": "https://www.youtube.com/watch?v=VmQ6dHvnKIM",
+       "youtube_id": "VmQ6dHvnKIM",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Dave Gray",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-js-refresher-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Asynchronous programming and callbacks",
+       "url": "https://nodejs.org/en/learn/asynchronous-work/javascript-asynchronous-programming-and-callbacks",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "javascript.info – Async/await",
+       "url": "https://javascript.info/async-await",
+       "lang": "en",
+       "provider": "javascript.info",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "javascript.info – Modules",
+       "url": "https://javascript.info/modules-intro",
+       "lang": "en",
+       "provider": "javascript.info",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-js-refresher-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "javascript.info – Async tasks",
+       "url": "https://javascript.info/async-await",
+       "lang": "en",
+       "provider": "javascript.info",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism – JavaScript track (free, with mentoring)",
+       "url": "https://exercism.org/tracks/javascript",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-js-refresher-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Is JavaScript single-threaded?",
+     "a": "Yes — the event loop handles async work without blocking"
+    },
+    {
+     "q": "Promise.all does what?",
+     "a": "Waits for many promises and fails fast if one rejects"
+    },
+    {
+     "q": "ES module import syntax?",
+     "a": "import x from './file.js'"
+    }
+   ],
+   "prerequisite_note": "Need JavaScript basics first? Do Phase 3 of the FreeMentor Frontend roadmap."
+  },
+  {
+   "id": "be-node-core",
+   "subject": "Backend",
+   "title": "Node.js Core: Modules, fs, path, events & process",
+   "phase": 1,
+   "order": 5,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "be-node-core-learn",
+     "type": "learn",
+     "title": "Watch: Node.js Core: Modules, fs, path, events & process",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Node.js Tutorial for Beginners: Learn Node in 1 Hour",
+       "url": "https://www.youtube.com/watch?v=TlB_eWDSMt4",
+       "youtube_id": "TlB_eWDSMt4",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Programming with Mosh",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Node.JS in One Video in Hindi with One Mini Project",
+       "url": "https://www.youtube.com/watch?v=ipnWAKoiBtY",
+       "youtube_id": "ipnWAKoiBtY",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Thapa Technical",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-node-core-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Introduction to Node.js",
+       "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Reading files",
+       "url": "https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – The event emitter",
+       "url": "https://nodejs.org/en/learn/asynchronous-work/the-nodejs-event-emitter",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js API – path",
+       "url": "https://nodejs.org/docs/latest-v24.x/api/path.html",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Fireship – Node.js Ultimate Beginner's Guide in 7 Easy Steps (extra video)",
+       "url": "https://www.youtube.com/watch?v=ENrzD9HAZK4",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-node-core-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism JavaScript – solve 3 exercises locally with Node",
+       "url": "https://exercism.org/tracks/javascript",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-node-core-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Read a file with promises?",
+     "a": "await fs.promises.readFile(path, 'utf8') (or node:fs/promises)"
+    },
+    {
+     "q": "Why use path.join?",
+     "a": "Builds file paths safely on every OS"
+    },
+    {
+     "q": "Where are command-line arguments?",
+     "a": "process.argv"
+    }
+   ]
+  },
+  {
+   "id": "be-npm",
+   "subject": "Backend",
+   "title": "npm, package.json, Scripts & Environment Variables",
+   "phase": 1,
+   "order": 6,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 245,
+   "blocks": [
+    {
+     "id": "be-npm-learn",
+     "type": "learn",
+     "title": "Watch: npm, package.json, Scripts & Environment Variables",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Node.js NPM Tutorial for Beginners | Package.json, Dependencies, npm init Explained",
+       "url": "https://www.youtube.com/watch?v=DnM_h6YRKv8",
+       "youtube_id": "DnM_h6YRKv8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "JDCodebase",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-npm-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Introduction to npm",
+       "url": "https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Environment variables",
+       "url": "https://nodejs.org/en/learn/command-line/how-to-read-environment-variables-from-nodejs",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "npm Docs – package.json",
+       "url": "https://docs.npmjs.com/cli/configuring-npm/package-json",
+       "lang": "en",
+       "provider": "docs.npmjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-npm-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "npm Docs – add dev/start/test scripts to a project",
+       "url": "https://docs.npmjs.com/cli/using-npm/scripts",
+       "lang": "en",
+       "provider": "docs.npmjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-npm-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does ^1.4.0 allow?",
+     "a": "Any 1.x.x version at or above 1.4.0"
+    },
+    {
+     "q": "Why commit package-lock.json?",
+     "a": "Everyone installs the exact same versions"
+    },
+    {
+     "q": "Where should secrets go?",
+     "a": "Environment variables / .env (never committed)"
+    }
+   ]
+  },
+  {
+   "id": "proj-be-cli",
+   "subject": "Backend",
+   "title": "Project 1: Node.js CLI Tool (File Organiser or Notes CLI)",
+   "phase": 1,
+   "order": 7,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1000,
+   "blocks": [
+    {
+     "id": "proj-be-cli-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js API – fs (reference)",
+       "url": "https://nodejs.org/docs/latest-v24.x/api/fs.html",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-cli-build",
+     "type": "build",
+     "title": "A command-line tool: either sort a folder's files into sub-folders by type/date, or a notes app (add/list/search/delete) saving to a JSON file. Uses process.argv, fs/promises, path and clear error messages.",
+     "est_minutes": 960,
+     "done_when": [
+      "Runs with `node index.js <command>` and shows help text",
+      "Handles missing files and bad input without crashing",
+      "Published on GitHub with a README and usage examples"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-be-cli-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "How to show usage help?",
+     "a": "Print it when no command or --help is given"
+    },
+    {
+     "q": "Sync or async fs for a CLI?",
+     "a": "Async (promises) keeps habits right for servers"
+    },
+    {
+     "q": "Make a CLI runnable as a command?",
+     "a": "Add a \"bin\" field in package.json and a #!/usr/bin/env node line"
+    }
+   ]
+  },
+  {
+   "id": "be-express",
+   "subject": "Backend",
+   "title": "HTTP Servers & Express Basics",
+   "phase": 2,
+   "order": 8,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 355,
+   "blocks": [
+    {
+     "id": "be-express-learn",
+     "type": "learn",
+     "title": "Watch: HTTP Servers & Express Basics",
+     "est_minutes": 75,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Express Crash Course",
+       "url": "https://www.youtube.com/watch?v=CnH3kAXSrmU",
+       "youtube_id": "CnH3kAXSrmU",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Traversy Media",
+       "duration_seconds": null,
+       "est_minutes": 75,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 75,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-express-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Hello world",
+       "url": "https://expressjs.com/en/starter/hello-world.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Routing",
+       "url": "https://expressjs.com/en/guide/routing.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Full Stack Open – Node.js and Express",
+       "url": "https://fullstackopen.com/en/part3/node_js_and_express",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-express-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Full Stack Open – Part 3a exercises (phonebook backend)",
+       "url": "https://fullstackopen.com/en/part3/node_js_and_express",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-express-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Read a URL parameter /users/:id?",
+     "a": "req.params.id"
+    },
+    {
+     "q": "Read ?page=2?",
+     "a": "req.query.page"
+    },
+    {
+     "q": "Send JSON with a status?",
+     "a": "res.status(201).json(data)"
+    }
+   ]
+  },
+  {
+   "id": "be-rest-design",
+   "subject": "Backend",
+   "title": "REST API Design (Resources, Verbs, Status Codes, Pagination)",
+   "phase": 2,
+   "order": 9,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 235,
+   "blocks": [
+    {
+     "id": "be-rest-design-learn",
+     "type": "learn",
+     "title": "Watch: REST API Design (Resources, Verbs, Status Codes, Pagination)",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express",
+       "url": "https://www.youtube.com/watch?v=-MTSQjw5DrM",
+       "youtube_id": "-MTSQjw5DrM",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Fireship",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-rest-design-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "MDN – REST",
+       "url": "https://developer.mozilla.org/en-US/docs/Glossary/REST",
+       "lang": "en",
+       "provider": "developer.mozilla.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – REST Security Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Microsoft – RESTful web API design",
+       "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+       "lang": "en",
+       "provider": "learn.microsoft.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-rest-design-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Postman (free) – design and test 10 requests for a 'books' API",
+       "url": "https://www.postman.com/",
+       "lang": "en",
+       "provider": "www.postman.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-rest-design-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Verb to update part of a resource?",
+     "a": "PATCH"
+    },
+    {
+     "q": "Status for a successful create?",
+     "a": "201 Created"
+    },
+    {
+     "q": "Plural or singular resource names?",
+     "a": "Plural nouns, e.g. /books/42"
+    }
+   ]
+  },
+  {
+   "id": "be-middleware-validation",
+   "subject": "Backend",
+   "title": "Middleware & Input Validation (Zod)",
+   "phase": 2,
+   "order": 10,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 235,
+   "blocks": [
+    {
+     "id": "be-middleware-validation-learn",
+     "type": "learn",
+     "title": "Watch: Middleware & Input Validation (Zod)",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Zod Input Validation in Node.js (Beginner Tutorial)",
+       "url": "https://www.youtube.com/watch?v=O0OkcpfkflQ",
+       "youtube_id": "O0OkcpfkflQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Ben Swordfire",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Zod Validation Tutorial for Beginners [FULL COURSE in 40 Minutes!]",
+       "url": "https://www.youtube.com/watch?v=IcyjtsAdKRs",
+       "youtube_id": "IcyjtsAdKRs",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Patel MernStack",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-middleware-validation-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Using middleware",
+       "url": "https://expressjs.com/en/guide/using-middleware.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Writing middleware",
+       "url": "https://expressjs.com/en/guide/writing-middleware.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Zod – Documentation",
+       "url": "https://zod.dev/",
+       "lang": "en",
+       "provider": "zod.dev",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-middleware-validation-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Add validation middleware to your Part 3 phonebook API",
+       "url": "https://fullstackopen.com/en/part3/node_js_and_express",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-middleware-validation-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What must middleware call to continue?",
+     "a": "next()"
+    },
+    {
+     "q": "Why validate on the server even if the frontend does?",
+     "a": "Anyone can send requests directly — never trust input"
+    },
+    {
+     "q": "Status for invalid input?",
+     "a": "400 Bad Request (or 422)"
+    }
+   ]
+  },
+  {
+   "id": "be-errors-logging",
+   "subject": "Backend",
+   "title": "Error Handling & Logging",
+   "phase": 2,
+   "order": 11,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 235,
+   "blocks": [
+    {
+     "id": "be-errors-logging-learn",
+     "type": "learn",
+     "title": "Watch: Error Handling & Logging",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "REST API Tutorial (Node, Express & Mongo) #10 - Error Handling",
+       "url": "https://www.youtube.com/watch?v=w1V2SdzdQBs",
+       "youtube_id": "w1V2SdzdQBs",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Net Ninja",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Express JS Logging Made Easy with Winston and Morgan!",
+       "url": "https://www.youtube.com/watch?v=RxraE2rylMI",
+       "youtube_id": "RxraE2rylMI",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Remote Dev",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: error handling, then logging."
+    },
+    {
+     "id": "be-errors-logging-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Error handling",
+       "url": "https://expressjs.com/en/guide/error-handling.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Logging Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Pino – fast JSON logger",
+       "url": "https://getpino.io/",
+       "lang": "en",
+       "provider": "getpino.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-errors-logging-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Add a central error handler and request logging to your API",
+       "url": "https://fullstackopen.com/en/part3/node_js_and_express",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-errors-logging-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Express error handler signature?",
+     "a": "(err, req, res, next) — four arguments"
+    },
+    {
+     "q": "Never log what?",
+     "a": "Passwords, tokens or full card/ID numbers"
+    },
+    {
+     "q": "Why structured (JSON) logs?",
+     "a": "Easy to search and filter in log tools"
+    }
+   ]
+  },
+  {
+   "id": "be-typescript-node",
+   "subject": "Backend",
+   "title": "TypeScript for Node.js APIs",
+   "phase": 2,
+   "order": 12,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 270,
+   "blocks": [
+    {
+     "id": "be-typescript-node-learn",
+     "type": "learn",
+     "title": "Watch: TypeScript for Node.js APIs",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "The Easiest Way to Setup TypeScript in Node.js & Express",
+       "url": "https://www.youtube.com/watch?v=uk68aWxMPns",
+       "youtube_id": "uk68aWxMPns",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "JeronDev",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "TypeScript Tutorial for Beginners",
+       "url": "https://www.youtube.com/watch?v=d56mG7DezGs",
+       "youtube_id": "d56mG7DezGs",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Programming with Mosh",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "New to TypeScript? Watch Mosh's beginner tutorial (alternative) first."
+    },
+    {
+     "id": "be-typescript-node-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Node.js Learn – Introduction to TypeScript",
+       "url": "https://nodejs.org/en/learn/typescript/introduction",
+       "lang": "en",
+       "provider": "nodejs.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "TS Handbook – Everyday Types",
+       "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html",
+       "lang": "en",
+       "provider": "www.typescriptlang.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-typescript-node-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism – TypeScript track",
+       "url": "https://exercism.org/tracks/typescript",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Full Stack Open – Part 9 TypeScript exercises",
+       "url": "https://fullstackopen.com/en/part9",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-typescript-node-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why TypeScript on the server?",
+     "a": "Catches type mistakes before running and documents data shapes"
+    },
+    {
+     "q": "Type for Express handlers?",
+     "a": "Request and Response from express"
+    },
+    {
+     "q": "Can Node run .ts files directly now?",
+     "a": "Recent Node versions can strip types; tsx or tsc are common for full TS"
+    }
+   ]
+  },
+  {
+   "id": "proj-be-rest-api",
+   "subject": "Backend",
+   "title": "Project 2: REST API with Validation (JSON-file storage)",
+   "phase": 2,
+   "order": 13,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1870,
+   "blocks": [
+    {
+     "id": "proj-be-rest-api-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Routing (reference)",
+       "url": "https://expressjs.com/en/guide/routing.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-rest-api-build",
+     "type": "build",
+     "title": "A TypeScript Express API for a 'library' or 'tasks' resource: full CRUD, filtering, pagination, Zod validation, central error handler, logging; data stored in a JSON file.",
+     "est_minutes": 1800,
+     "done_when": [
+      "All CRUD routes return correct status codes",
+      "Invalid input returns 400 with clear messages",
+      "README with example requests (curl or Postman collection)"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-be-rest-api-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-be-rest-api-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "freeCodeCamp – Back End Development and APIs projects",
+       "url": "https://www.freecodecamp.org/learn",
+       "lang": "en",
+       "provider": "www.freecodecamp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Pagination parameters?",
+     "a": "?page=2&limit=20 (or cursor-based)"
+    },
+    {
+     "q": "Why a central error handler?",
+     "a": "One place to format errors consistently"
+    },
+    {
+     "q": "Problem with JSON-file storage?",
+     "a": "No concurrency safety — databases solve this next"
+    }
+   ]
+  },
+  {
+   "id": "be-sql-postgres",
+   "subject": "Backend",
+   "title": "SQL & PostgreSQL Basics",
+   "phase": 3,
+   "order": 14,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 520,
+   "blocks": [
+    {
+     "id": "be-sql-postgres-learn",
+     "type": "learn",
+     "title": "Watch: SQL & PostgreSQL Basics",
+     "est_minutes": 240,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn PostgreSQL Tutorial - Full Course for Beginners",
+       "url": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+       "youtube_id": "qw--VYLpxG4",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 240,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 240,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Long course — split it across days. For a deeper path, do the FreeMentor SQL roadmap."
+    },
+    {
+     "id": "be-sql-postgres-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Tutorial",
+       "url": "https://www.postgresql.org/docs/current/tutorial.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – interactive lessons",
+       "url": "https://sqlbolt.com/",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-sql-postgres-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 240,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Basic, Joins, Aggregates",
+       "url": "https://pgexercises.com/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-sql-postgres-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Clause to filter groups?",
+     "a": "HAVING"
+    },
+    {
+     "q": "INNER vs LEFT JOIN?",
+     "a": "LEFT keeps all rows from the left table"
+    },
+    {
+     "q": "What is a primary key?",
+     "a": "A unique, non-null id for each row"
+    }
+   ]
+  },
+  {
+   "id": "be-data-modelling",
+   "subject": "Backend",
+   "title": "Data Modelling, Relationships & Normalisation",
+   "phase": 3,
+   "order": 15,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 250,
+   "blocks": [
+    {
+     "id": "be-data-modelling-learn",
+     "type": "learn",
+     "title": "Watch: Data Modelling, Relationships & Normalisation",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF",
+       "url": "https://www.youtube.com/watch?v=GFQaEYEc8_8",
+       "youtube_id": "GFQaEYEc8_8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Decomplexify",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Database Normalization Explained: 1NF, 2NF & 3NF With SQL Examples",
+       "url": "https://www.youtube.com/watch?v=suKHq3ZLPmU",
+       "youtube_id": "suKHq3ZLPmU",
+       "lang": "hi-en",
+       "provider": "YouTube",
+       "channel": "Engineering Digest",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-data-modelling-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Constraints",
+       "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Prisma Data Guide – Data modeling",
+       "url": "https://www.prisma.io/dataguide/datamodeling",
+       "lang": "en",
+       "provider": "www.prisma.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-data-modelling-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "dbdiagram.io – draw the ER diagram for a shop (users, products, orders, order_items)",
+       "url": "https://dbdiagram.io/",
+       "lang": "en",
+       "provider": "dbdiagram.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-data-modelling-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "How is many-to-many stored?",
+     "a": "A join table with two foreign keys"
+    },
+    {
+     "q": "What does a foreign key enforce?",
+     "a": "The referenced row must exist"
+    },
+    {
+     "q": "Goal of normalisation?",
+     "a": "Remove duplicated data and update anomalies"
+    }
+   ]
+  },
+  {
+   "id": "be-node-postgres",
+   "subject": "Backend",
+   "title": "Using PostgreSQL from Node (pg & Prisma ORM)",
+   "phase": 3,
+   "order": 16,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 340,
+   "blocks": [
+    {
+     "id": "be-node-postgres-learn",
+     "type": "learn",
+     "title": "Watch: Using PostgreSQL from Node (pg & Prisma ORM)",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn Prisma In 60 Minutes",
+       "url": "https://www.youtube.com/watch?v=RebA5J-rlwg",
+       "youtube_id": "RebA5J-rlwg",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Web Dev Simplified",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Connect Node to Postgres",
+       "url": "https://www.youtube.com/watch?v=O4bNwkC1ZxA",
+       "youtube_id": "O4bNwkC1ZxA",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "WittCode",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-node-postgres-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "node-postgres – Documentation",
+       "url": "https://node-postgres.com/",
+       "lang": "en",
+       "provider": "node-postgres.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Prisma – Getting started",
+       "url": "https://www.prisma.io/docs/getting-started",
+       "lang": "en",
+       "provider": "www.prisma.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "WittCode – node-postgres Connection Pool (extra video)",
+       "url": "https://www.youtube.com/watch?v=tS264hwZn0Y",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-node-postgres-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 240,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Move your Project 2 storage to PostgreSQL with Prisma",
+       "url": "https://www.prisma.io/docs/getting-started",
+       "lang": "en",
+       "provider": "www.prisma.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-node-postgres-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why parameterised queries ($1, $2)?",
+     "a": "They prevent SQL injection"
+    },
+    {
+     "q": "What is a connection pool?",
+     "a": "Reusable open DB connections shared by requests"
+    },
+    {
+     "q": "What does a migration do?",
+     "a": "Applies versioned schema changes to the database"
+    }
+   ]
+  },
+  {
+   "id": "be-mongodb",
+   "subject": "Backend",
+   "title": "NoSQL with MongoDB (Intro)",
+   "phase": 3,
+   "order": 17,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 250,
+   "blocks": [
+    {
+     "id": "be-mongodb-learn",
+     "type": "learn",
+     "title": "Watch: NoSQL with MongoDB (Intro)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "MongoDB Crash Course",
+       "url": "https://www.youtube.com/watch?v=ofme2o29ngU",
+       "youtube_id": "ofme2o29ngU",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Web Dev Simplified",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-mongodb-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "MongoDB – Introduction",
+       "url": "https://www.mongodb.com/docs/manual/introduction/",
+       "lang": "en",
+       "provider": "www.mongodb.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Mongoose – Quick start",
+       "url": "https://mongoosejs.com/docs/index.html",
+       "lang": "en",
+       "provider": "mongoosejs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Full Stack Open – Saving data to MongoDB",
+       "url": "https://fullstackopen.com/en/part3/saving_data_to_mongo_db",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-mongodb-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Full Stack Open – Part 3c exercises",
+       "url": "https://fullstackopen.com/en/part3/saving_data_to_mongo_db",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-mongodb-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "MongoDB stores data as?",
+     "a": "Documents (JSON-like BSON) in collections"
+    },
+    {
+     "q": "When is a document DB a good fit?",
+     "a": "Flexible, nested data read together"
+    },
+    {
+     "q": "SQL table ≈ which MongoDB term?",
+     "a": "Collection"
+    }
+   ]
+  },
+  {
+   "id": "be-redis-caching",
+   "subject": "Backend",
+   "title": "Caching with Redis",
+   "phase": 3,
+   "order": 18,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 250,
+   "blocks": [
+    {
+     "id": "be-redis-caching-learn",
+     "type": "learn",
+     "title": "Watch: Caching with Redis",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Redis Crash Course",
+       "url": "https://www.youtube.com/watch?v=jgpVdJB2sKQ",
+       "youtube_id": "jgpVdJB2sKQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Web Dev Simplified",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-redis-caching-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Redis – Get started",
+       "url": "https://redis.io/docs/latest/develop/get-started/",
+       "lang": "en",
+       "provider": "redis.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Redis – Node.js client",
+       "url": "https://redis.io/docs/latest/develop/clients/nodejs/",
+       "lang": "en",
+       "provider": "redis.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-redis-caching-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Redis free tier or local Docker – cache one slow API route for 60 s",
+       "url": "https://redis.io/try-free/",
+       "lang": "en",
+       "provider": "redis.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-redis-caching-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Cache-aside pattern?",
+     "a": "Check cache → on miss read DB → store in cache with a TTL"
+    },
+    {
+     "q": "What is TTL?",
+     "a": "Time-to-live after which a key expires"
+    },
+    {
+     "q": "Hardest part of caching?",
+     "a": "Invalidation — keeping cached data fresh"
+    }
+   ]
+  },
+  {
+   "id": "proj-be-db-api",
+   "subject": "Backend",
+   "title": "Project 3: API + PostgreSQL (e.g. Expense Tracker or Mini Shop)",
+   "phase": 3,
+   "order": 19,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 3070,
+   "blocks": [
+    {
+     "id": "proj-be-db-api-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Prisma – Getting started (reference)",
+       "url": "https://www.prisma.io/docs/getting-started",
+       "lang": "en",
+       "provider": "www.prisma.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-db-api-build",
+     "type": "build",
+     "title": "Rebuild your API on PostgreSQL with Prisma: at least 3 related tables (one many-to-many), migrations, seed script, filtered/paginated list endpoints and a Redis cache on one expensive route.",
+     "est_minutes": 3000,
+     "done_when": [
+      "Schema has a one-to-many and a many-to-many relation",
+      "Migrations + seed run from a clean database",
+      "Cached route shows faster repeat responses (measured in README)"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-be-db-api-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-be-db-api-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "HackerRank SQL (Basic) certification — free",
+       "url": "https://www.hackerrank.com/skills-verification/sql_basic",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why a seed script?",
+     "a": "Anyone can recreate realistic test data quickly"
+    },
+    {
+     "q": "Avoid N+1 queries how?",
+     "a": "Use joins / include related data in one query"
+    },
+    {
+     "q": "When should the cache be cleared?",
+     "a": "When the underlying data changes"
+    }
+   ]
+  },
+  {
+   "id": "be-authentication",
+   "subject": "Backend",
+   "title": "Authentication: Sessions, Cookies, JWT & Password Hashing",
+   "phase": 4,
+   "order": 20,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "be-authentication-learn",
+     "type": "learn",
+     "title": "Watch: Authentication: Sessions, Cookies, JWT & Password Hashing",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "JWT Authentication Tutorial - Node.js",
+       "url": "https://www.youtube.com/watch?v=mbsmsi7l3r4",
+       "youtube_id": "mbsmsi7l3r4",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Web Dev Simplified",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Session vs Token Authentication in 100 Seconds",
+       "url": "https://www.youtube.com/watch?v=UBUNrFtufWo",
+       "youtube_id": "UBUNrFtufWo",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Fireship",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both. Then see the extra password-hashing video."
+    },
+    {
+     "id": "be-authentication-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Password Storage Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Session Management Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "jwt.io – Introduction to JSON Web Tokens",
+       "url": "https://jwt.io/introduction",
+       "lang": "en",
+       "provider": "jwt.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Full Stack Open – Token authentication",
+       "url": "https://fullstackopen.com/en/part4/token_authentication",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Net Ninja – Node Auth Tutorial (JWT) #7, Hashing Passwords (extra video)",
+       "url": "https://www.youtube.com/watch?v=DmrjFKTLOYo",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-authentication-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Full Stack Open – Part 4d exercises",
+       "url": "https://fullstackopen.com/en/part4/token_authentication",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-authentication-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why hash passwords with bcrypt/argon2, not SHA-256?",
+     "a": "They are slow and salted, resisting brute force"
+    },
+    {
+     "q": "Where to store a session cookie safely?",
+     "a": "HttpOnly, Secure, SameSite cookie"
+    },
+    {
+     "q": "Can a JWT be revoked easily?",
+     "a": "Not by itself — use short expiry plus refresh tokens or a deny-list"
+    }
+   ]
+  },
+  {
+   "id": "be-authorization-oauth",
+   "subject": "Backend",
+   "title": "Authorization (Roles) & OAuth 2.0 / Social Login",
+   "phase": 4,
+   "order": 21,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 230,
+   "blocks": [
+    {
+     "id": "be-authorization-oauth-learn",
+     "type": "learn",
+     "title": "Watch: Authorization (Roles) & OAuth 2.0 / Social Login",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "OAuth 2 Explained In Simple Terms",
+       "url": "https://www.youtube.com/watch?v=ZV5yTm4pT8g",
+       "youtube_id": "ZV5yTm4pT8g",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "ByteByteGo",
+       "duration_seconds": null,
+       "est_minutes": 10,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "What Is JWT and Why Should You Use JWT",
+       "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM",
+       "youtube_id": "7Q17ubqLfaM",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Web Dev Simplified",
+       "duration_seconds": null,
+       "est_minutes": 10,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-authorization-oauth-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Authorization Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OAuth 2.0 – Overview",
+       "url": "https://oauth.net/2/",
+       "lang": "en",
+       "provider": "oauth.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-authorization-oauth-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Add an 'admin' role and protect delete routes in your API",
+       "url": "https://fullstackopen.com/en/part4/token_authentication",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-authorization-oauth-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Authentication vs authorization?",
+     "a": "Who you are vs what you're allowed to do"
+    },
+    {
+     "q": "Status for logged-in but not allowed?",
+     "a": "403 Forbidden"
+    },
+    {
+     "q": "OAuth lets an app do what?",
+     "a": "Get limited access to a user's account without their password"
+    }
+   ]
+  },
+  {
+   "id": "be-api-security",
+   "subject": "Backend",
+   "title": "OWASP Top 10 & API Security (CORS, Rate Limiting, Helmet)",
+   "phase": 4,
+   "order": 22,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 265,
+   "blocks": [
+    {
+     "id": "be-api-security-learn",
+     "type": "learn",
+     "title": "Watch: OWASP Top 10 & API Security (CORS, Rate Limiting, Helmet)",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "An Introduction to the OWASP Top 10 (Web Application Security Risks)",
+       "url": "https://www.youtube.com/watch?v=zNC2gUJHy-M",
+       "youtube_id": "zNC2gUJHy-M",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Predatech",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-api-security-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP Top 10",
+       "url": "https://owasp.org/Top10/",
+       "lang": "en",
+       "provider": "owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP API Security Top 10",
+       "url": "https://owasp.org/API-Security/",
+       "lang": "en",
+       "provider": "owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Node.js Security Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Express – Security best practices",
+       "url": "https://expressjs.com/en/advanced/best-practice-security.html",
+       "lang": "en",
+       "provider": "expressjs.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-api-security-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PortSwigger Web Security Academy – SQL injection labs (free, legal)",
+       "url": "https://portswigger.net/web-security/sql-injection",
+       "lang": "en",
+       "provider": "portswigger.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-api-security-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does CORS control?",
+     "a": "Which other origins' browsers may call your API"
+    },
+    {
+     "q": "Why rate-limit login?",
+     "a": "Slows brute-force password guessing"
+    },
+    {
+     "q": "Most common API flaw per OWASP?",
+     "a": "Broken object-level authorization (accessing others' data by id)"
+    }
+   ],
+   "safety_note": "Practise attacks only on PortSwigger's labs or your own local apps — never on sites you don't own."
+  },
+  {
+   "id": "be-testing",
+   "subject": "Backend",
+   "title": "Automated Testing (Vitest/Jest + Supertest)",
+   "phase": 4,
+   "order": 23,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 310,
+   "blocks": [
+    {
+     "id": "be-testing-learn",
+     "type": "learn",
+     "title": "Watch: Automated Testing (Vitest/Jest + Supertest)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Testing Express REST API With Jest & Supertest",
+       "url": "https://www.youtube.com/watch?v=r5L1XRZaCR0",
+       "youtube_id": "r5L1XRZaCR0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "TomDoesTech",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Testing NodeJS API using Jest and Supertest",
+       "url": "https://www.youtube.com/watch?v=UfX-QNCOFrE",
+       "youtube_id": "UfX-QNCOFrE",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Coding Owls",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-testing-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Vitest – Getting Started",
+       "url": "https://vitest.dev/guide/",
+       "lang": "en",
+       "provider": "vitest.dev",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Jest – Getting Started",
+       "url": "https://jestjs.io/docs/getting-started",
+       "lang": "en",
+       "provider": "jestjs.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Supertest – README",
+       "url": "https://github.com/ladjs/supertest",
+       "lang": "en",
+       "provider": "github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Full Stack Open – Testing the backend",
+       "url": "https://fullstackopen.com/en/part4/testing_the_backend",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-testing-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 240,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Full Stack Open – Part 4b exercises",
+       "url": "https://fullstackopen.com/en/part4/testing_the_backend",
+       "lang": "en",
+       "provider": "fullstackopen.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-testing-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Unit vs integration test?",
+     "a": "Unit tests one function; integration tests pieces together (e.g. route + DB)"
+    },
+    {
+     "q": "Why a separate test database?",
+     "a": "Tests can reset data safely"
+    },
+    {
+     "q": "What does Supertest do?",
+     "a": "Sends HTTP requests to your app without starting a real server"
+    }
+   ]
+  },
+  {
+   "id": "proj-be-auth",
+   "subject": "Backend",
+   "title": "Project 4: Secure Auth Service with Tests",
+   "phase": 4,
+   "order": 24,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 3070,
+   "blocks": [
+    {
+     "id": "proj-be-auth-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – Authentication Cheat Sheet (reference)",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-auth-build",
+     "type": "build",
+     "title": "Add to your Project 3 API: register/login with argon2 or bcrypt, access + refresh tokens (or secure sessions), roles, rate-limited login, helmet + CORS config, and a Vitest/Jest + Supertest suite covering auth and protected routes.",
+     "est_minutes": 3000,
+     "done_when": [
+      "Passwords are never stored or logged in plain text",
+      "20+ automated tests pass in one command",
+      "Unauthorised requests get 401/403 and users can't read others' data"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-be-auth-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-be-auth-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "PortSwigger – Authentication labs (try 3 apprentice labs)",
+       "url": "https://portswigger.net/web-security/authentication",
+       "lang": "en",
+       "provider": "portswigger.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Where should refresh tokens live?",
+     "a": "HttpOnly cookie, rotated on use"
+    },
+    {
+     "q": "Generic login error message why?",
+     "a": "Doesn't reveal whether the email exists"
+    },
+    {
+     "q": "Test that a user can't edit another's item?",
+     "a": "Log in as user B, request user A's item, expect 403/404"
+    }
+   ]
+  },
+  {
+   "id": "be-docker",
+   "subject": "Backend",
+   "title": "Docker & Docker Compose",
+   "phase": 5,
+   "order": 25,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 355,
+   "blocks": [
+    {
+     "id": "be-docker-learn",
+     "type": "learn",
+     "title": "Watch: Docker & Docker Compose",
+     "est_minutes": 75,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Docker Crash Course for Absolute Beginners [NEW]",
+       "url": "https://www.youtube.com/watch?v=pg19Z8LL06w",
+       "youtube_id": "pg19Z8LL06w",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "TechWorld with Nana",
+       "duration_seconds": null,
+       "est_minutes": 75,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Docker in 100 Seconds",
+       "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ",
+       "youtube_id": "Gjnup-PuquQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Fireship",
+       "duration_seconds": null,
+       "est_minutes": 75,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-docker-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Docker – Get started",
+       "url": "https://docs.docker.com/get-started/",
+       "lang": "en",
+       "provider": "docs.docker.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Docker – Node.js language guide",
+       "url": "https://docs.docker.com/guides/nodejs/",
+       "lang": "en",
+       "provider": "docs.docker.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Docker Compose – Overview",
+       "url": "https://docs.docker.com/compose/",
+       "lang": "en",
+       "provider": "docs.docker.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-docker-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 240,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Containerise your API + PostgreSQL + Redis with docker compose",
+       "url": "https://docs.docker.com/guides/nodejs/",
+       "lang": "en",
+       "provider": "docs.docker.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-docker-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Image vs container?",
+     "a": "An image is the blueprint; a container is a running instance"
+    },
+    {
+     "q": "Why .dockerignore?",
+     "a": "Keeps node_modules and secrets out of the image"
+    },
+    {
+     "q": "What does docker compose up do?",
+     "a": "Starts all services defined in compose.yaml"
+    }
+   ]
+  },
+  {
+   "id": "be-ci-cd",
+   "subject": "Backend",
+   "title": "CI/CD with GitHub Actions",
+   "phase": 5,
+   "order": 26,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 255,
+   "blocks": [
+    {
+     "id": "be-ci-cd-learn",
+     "type": "learn",
+     "title": "Watch: CI/CD with GitHub Actions",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker",
+       "url": "https://www.youtube.com/watch?v=R8_veQiYBjI",
+       "youtube_id": "R8_veQiYBjI",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "TechWorld with Nana",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "GitHub Actions Tutorial - Deploy Node.js Application with CI CD and GitHub Actions",
+       "url": "https://www.youtube.com/watch?v=y7S2oSjJ8PA",
+       "youtube_id": "y7S2oSjJ8PA",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Piyush Garg",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-ci-cd-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GitHub Actions – Documentation",
+       "url": "https://docs.github.com/en/actions",
+       "lang": "en",
+       "provider": "docs.github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GitHub Actions – Building and testing Node.js",
+       "url": "https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-nodejs",
+       "lang": "en",
+       "provider": "docs.github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-ci-cd-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "GitHub Skills – Hello GitHub Actions",
+       "url": "https://skills.github.com/",
+       "lang": "en",
+       "provider": "skills.github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-ci-cd-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Where do workflow files live?",
+     "a": ".github/workflows/*.yml"
+    },
+    {
+     "q": "CI vs CD?",
+     "a": "CI tests every change; CD automatically releases passing changes"
+    },
+    {
+     "q": "Where to keep deploy keys?",
+     "a": "GitHub encrypted secrets, never in the YAML"
+    }
+   ]
+  },
+  {
+   "id": "be-deploy",
+   "subject": "Backend",
+   "title": "Deploying to the Cloud (Render / Railway / Fly.io) & Config",
+   "phase": 5,
+   "order": 27,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 235,
+   "blocks": [
+    {
+     "id": "be-deploy-learn",
+     "type": "learn",
+     "title": "Watch: Deploying to the Cloud (Render / Railway / Fly.io) & Config",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "How to Deploy Node.js Express App on Render for FREE in 2026 | Step-by-Step Tutorial",
+       "url": "https://www.youtube.com/watch?v=GJn6jVgf5UQ",
+       "youtube_id": "GJn6jVgf5UQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Programming with Kumaresan",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "How to Deploy Backend for free | Render | Node.js, Express.js | Under 2 minutes",
+       "url": "https://www.youtube.com/watch?v=A2VoUyZZMCw",
+       "youtube_id": "A2VoUyZZMCw",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "The Adiga",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-deploy-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Render – Deploy a Node Express app",
+       "url": "https://render.com/docs/deploy-node-express-app",
+       "lang": "en",
+       "provider": "render.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "The Twelve-Factor App",
+       "url": "https://12factor.net/",
+       "lang": "en",
+       "provider": "12factor.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-deploy-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Deploy your API with a managed PostgreSQL database",
+       "url": "https://render.com/docs/deploy-node-express-app",
+       "lang": "en",
+       "provider": "render.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-deploy-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which port should a cloud app listen on?",
+     "a": "The one in process.env.PORT"
+    },
+    {
+     "q": "Twelve-factor rule for config?",
+     "a": "Store config in environment variables"
+    },
+    {
+     "q": "What is a health-check endpoint for?",
+     "a": "Lets the platform know the app is alive (e.g. GET /health → 200)"
+    }
+   ]
+  },
+  {
+   "id": "be-queues-realtime",
+   "subject": "Backend",
+   "title": "Background Jobs, Message Queues & WebSockets",
+   "phase": 5,
+   "order": 28,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 270,
+   "blocks": [
+    {
+     "id": "be-queues-realtime-learn",
+     "type": "learn",
+     "title": "Watch: Background Jobs, Message Queues & WebSockets",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Bull Queue - Redis - Nodejs Javascript - A gentle introduction to Bull Queues",
+       "url": "https://www.youtube.com/watch?v=FFrPE0vr4Dw",
+       "youtube_id": "FFrPE0vr4Dw",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "DeKay",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "WebSockets in 100 Seconds & Beyond with Socket.io",
+       "url": "https://www.youtube.com/watch?v=1BfCnjr_Vjg",
+       "youtube_id": "1BfCnjr_Vjg",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Fireship",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: job queues, then WebSockets."
+    },
+    {
+     "id": "be-queues-realtime-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "BullMQ – Documentation",
+       "url": "https://docs.bullmq.io/",
+       "lang": "en",
+       "provider": "docs.bullmq.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "RabbitMQ – Tutorials",
+       "url": "https://www.rabbitmq.com/tutorials",
+       "lang": "en",
+       "provider": "www.rabbitmq.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Socket.IO – Tutorial",
+       "url": "https://socket.io/docs/v4/tutorial/introduction",
+       "lang": "en",
+       "provider": "socket.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Message Queues & Event-Driven Architecture Explained (extra video)",
+       "url": "https://www.youtube.com/watch?v=4090Y2im_bg",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-queues-realtime-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Socket.IO tutorial – build the chat app",
+       "url": "https://socket.io/docs/v4/tutorial/introduction",
+       "lang": "en",
+       "provider": "socket.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Send welcome emails from a BullMQ worker",
+       "url": "https://docs.bullmq.io/",
+       "lang": "en",
+       "provider": "docs.bullmq.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-queues-realtime-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why move email sending to a queue?",
+     "a": "The request returns fast and failures can be retried"
+    },
+    {
+     "q": "WebSocket vs HTTP polling?",
+     "a": "One open two-way connection instead of repeated requests"
+    },
+    {
+     "q": "What is a worker?",
+     "a": "A separate process that takes jobs from the queue"
+    }
+   ]
+  },
+  {
+   "id": "be-api-docs",
+   "subject": "Backend",
+   "title": "API Documentation with OpenAPI / Swagger",
+   "phase": 5,
+   "order": 29,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 240,
+   "blocks": [
+    {
+     "id": "be-api-docs-learn",
+     "type": "learn",
+     "title": "Watch: API Documentation with OpenAPI / Swagger",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Swagger for NodeJs Express REST API - Document your API like a professional",
+       "url": "https://www.youtube.com/watch?v=BOahFNoIrPk",
+       "youtube_id": "BOahFNoIrPk",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Tomek in Tech",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete Backend Developer course | Part 1",
+       "url": "https://www.youtube.com/watch?v=7fjOw8ApZ1I",
+       "youtube_id": "7fjOw8ApZ1I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Chai aur Code",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the matching part of Chai aur Code's backend course."
+    },
+    {
+     "id": "be-api-docs-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OpenAPI Initiative – Learn OpenAPI",
+       "url": "https://learn.openapis.org/",
+       "lang": "en",
+       "provider": "learn.openapis.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Swagger – OpenAPI 3 specification guide",
+       "url": "https://swagger.io/docs/specification/v3_0/about/",
+       "lang": "en",
+       "provider": "swagger.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-api-docs-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Swagger Editor – write the spec for your API",
+       "url": "https://editor.swagger.io/",
+       "lang": "en",
+       "provider": "editor.swagger.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-api-docs-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What is an OpenAPI spec?",
+     "a": "A machine-readable description of endpoints, inputs and responses"
+    },
+    {
+     "q": "What does Swagger UI give users?",
+     "a": "Interactive docs where they can try requests"
+    },
+    {
+     "q": "Spec format?",
+     "a": "YAML or JSON"
+    }
+   ]
+  },
+  {
+   "id": "be-system-design",
+   "subject": "Backend",
+   "title": "System Design Basics: Scaling, Load Balancers, Caching & CAP",
+   "phase": 5,
+   "order": 30,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 460,
+   "blocks": [
+    {
+     "id": "be-system-design-learn",
+     "type": "learn",
+     "title": "Watch: System Design Basics: Scaling, Load Balancers, Caching & CAP",
+     "est_minutes": 150,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "System Design for Beginners Course",
+       "url": "https://www.youtube.com/watch?v=m8Icp_Cid5o",
+       "youtube_id": "m8Icp_Cid5o",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 150,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "The Ultimate Guide to Load Balancers (System Design Fundamentals)",
+       "url": "https://www.youtube.com/watch?v=xg7Dj2AXLyk",
+       "youtube_id": "xg7Dj2AXLyk",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Software Developer Diaries",
+       "duration_seconds": null,
+       "est_minutes": 150,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "be-system-design-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "The System Design Primer (free, open source)",
+       "url": "https://github.com/donnemartin/system-design-primer",
+       "lang": "en",
+       "provider": "github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "roadmap.sh – Backend roadmap",
+       "url": "https://roadmap.sh/backend",
+       "lang": "en",
+       "provider": "roadmap.sh",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Monis Yousuf – CAP Theorem Explained in 6 Minutes (extra video)",
+       "url": "https://www.youtube.com/watch?v=DpzMkfhV4Tg",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-system-design-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 210,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Design a URL shortener on paper: API, DB, cache, scaling",
+       "url": "https://github.com/donnemartin/system-design-primer",
+       "lang": "en",
+       "provider": "github.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "be-system-design-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Vertical vs horizontal scaling?",
+     "a": "Bigger machine vs more machines"
+    },
+    {
+     "q": "What does a load balancer do?",
+     "a": "Spreads requests across servers and skips unhealthy ones"
+    },
+    {
+     "q": "CAP theorem in one line?",
+     "a": "During a network partition you must choose consistency or availability"
+    }
+   ]
+  },
+  {
+   "id": "proj-be-final",
+   "subject": "Backend",
+   "title": "Final Project: Production-style API — Auth, Postgres, Tests, Docker, CI & Docs",
+   "phase": 5,
+   "order": 31,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 5500,
+   "blocks": [
+    {
+     "id": "proj-be-final-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "The Twelve-Factor App (reference)",
+       "url": "https://12factor.net/",
+       "lang": "en",
+       "provider": "12factor.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-final-build",
+     "type": "build",
+     "title": "Ship a complete backend (e.g. event booking, URL shortener or job board): TypeScript + Express, PostgreSQL via Prisma, auth with roles, validation, Redis cache, one background job, tests, Dockerfile + compose, GitHub Actions CI, deployed with OpenAPI docs.",
+     "est_minutes": 5400,
+     "done_when": [
+      "Live URL with /health and Swagger docs",
+      "CI runs lint + tests on every push and they pass",
+      "README covers architecture diagram, setup with docker compose, and env variables"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-be-final-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "roadmap.sh – check the backend roadmap for gaps",
+       "url": "https://roadmap.sh/backend",
+       "lang": "en",
+       "provider": "roadmap.sh",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-be-final-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-be-final-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "HackerRank Node.js (Basic) certification — free",
+       "url": "https://www.hackerrank.com/skills-verification/nodejs_basic",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "How do you explain this project in an interview?",
+     "a": "Problem, architecture, key trade-offs, what you'd scale next"
+    },
+    {
+     "q": "What to learn next?",
+     "a": "Cloud (AWS/GCP), Kubernetes basics, or the FreeMentor Full Stack roadmap"
+    },
+    {
+     "q": "Why include an architecture diagram?",
+     "a": "Reviewers understand the system in seconds"
+    }
+   ]
+  }
+ ],
+ "milestones": []
+}

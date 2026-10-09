@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "FreeMentor",
+    "slug": "freementor",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "freementor",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.freementor.app",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "backgroundColor": "#0A2463"
+      },
+      "permissions": ["INTERNET", "POST_NOTIFICATIONS"]
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.freementor.app"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0A2463",
+          "resizeMode": "contain"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

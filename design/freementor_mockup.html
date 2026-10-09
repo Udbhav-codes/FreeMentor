@@ -1,0 +1,355 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+:root{
+  --navy:#0A2463; --navy-2:#3E5C9A; --bg:#EEF1F7; --card:#FFFFFF; --ink:#0B1220; --muted:#5B6475;
+  --amber:#F2A900; --green:#127A45; --line:#DCE1EC;
+  --neu: 6px 6px 14px rgba(10,36,99,.10), -6px -6px 14px rgba(255,255,255,.95);
+  --neu-in: inset 3px 3px 7px rgba(10,36,99,.10), inset -3px -3px 7px rgba(255,255,255,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:2480px;background:#E4E8F1;font-family:Inter, sans-serif;color:var(--ink);padding:70px 80px 80px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:46px}
+.brand{display:flex;align-items:center;gap:18px}
+.brand h1{font-family:"Inter Display",Inter;font-weight:700;font-size:56px;letter-spacing:-1.5px;color:var(--navy)}
+.brand p{font-size:20px;color:var(--muted);margin-top:4px}
+.brand em{font-family:"Inter Display";font-style:italic;font-weight:500}
+.legend{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--muted)}
+.sw{display:flex;align-items:center;gap:8px}.sw i{width:26px;height:26px;border-radius:8px;display:block;border:1px solid rgba(0,0,0,.06)}
+.row{display:flex;gap:48px;justify-content:space-between;margin-bottom:56px}
+.col{display:flex;flex-direction:column;align-items:center;gap:18px}
+.cap{font-size:17px;color:var(--muted);text-align:center;max-width:380px;line-height:1.45}
+.cap b{color:var(--ink);font-weight:600;display:block;font-size:19px;margin-bottom:2px}
+.phone{width:380px;height:800px;border-radius:52px;background:#101828;padding:12px;box-shadow:0 30px 60px rgba(10,36,99,.25)}
+.screen{width:100%;height:100%;border-radius:42px;background:var(--bg);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.status{height:40px;display:flex;justify-content:space-between;align-items:center;padding:0 26px;font-size:13px;font-weight:600}
+.content{flex:1;padding:6px 20px 0;overflow:hidden}
+.nav{height:74px;background:var(--card);display:flex;justify-content:space-around;align-items:center;border-top:1px solid var(--line);padding-bottom:8px}
+.nav div{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10.5px;color:#8A93A6;font-weight:500}
+.nav div.on{color:var(--navy);font-weight:700}
+.nav div.on svg{stroke:var(--navy)}
+.nav svg{width:22px;height:22px;stroke:#8A93A6;fill:none;stroke-width:1.8}
+.card{background:var(--bg);border-radius:22px;box-shadow:var(--neu);padding:16px}
+.white{background:var(--card);box-shadow:0 1px 2px rgba(10,36,99,.06), 0 6px 18px rgba(10,36,99,.06)}
+.btn{background:var(--navy);color:#fff;border-radius:16px;height:52px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px}
+.small{font-size:12px;color:var(--muted)}
+h2{font-family:"Inter Display";font-weight:700;font-size:25px;letter-spacing:-.4px;line-height:1.15}
+h3{font-size:15px;font-weight:650}
+.chk{width:22px;height:22px;border-radius:7px;box-shadow:var(--neu-in);flex:none;display:flex;align-items:center;justify-content:center}
+.chk.done{background:var(--navy);box-shadow:none}
+.chk.done:after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.pill{font-size:11px;font-weight:600;padding:4px 9px;border-radius:999px;background:#E2E8F5;color:var(--navy)}
+.amberpill{background:#FFF1C7;color:#6B4A00}
+</style></head>
+<body>
+<div class="head">
+  <div class="brand">
+    <svg width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#0A2463"/><path d="M16 46 C 24 46, 22 32, 32 32 S 40 18, 48 18" stroke="#fff" stroke-width="3.2" fill="none" stroke-dasharray="1 6.5" stroke-linecap="round"/><circle cx="16" cy="46" r="4.5" fill="#fff"/><path d="M46 10 v16" stroke="#F2A900" stroke-width="3" stroke-linecap="round"/><path d="M46 10 l9 4 -9 4z" fill="#F2A900"/></svg>
+    <div><h1>FreeMentor</h1><p>App preview — free resources, a clear <em>roadmap</em>, one day at a time</p></div>
+  </div>
+  <div class="legend">
+    <div class="sw"><i style="background:#0A2463"></i>Navy #0A2463</div>
+    <div class="sw"><i style="background:#EEF1F7"></i>Soft base #EEF1F7</div>
+    <div class="sw"><i style="background:#FFFFFF"></i>Card #FFFFFF</div>
+    <div class="sw"><i style="background:#F2A900"></i>Amber #F2A900</div>
+    <div class="sw"><i style="background:#127A45"></i>Done #127A45</div>
+    <div class="sw" style="margin-left:10px">Type: Inter (UI) · DM Sans <em style="font-family:'Inter Display';font-style:italic">italic</em> (headings)</div>
+  </div>
+</div>
+
+<!-- ROW 1 -->
+<div class="row">
+  <!-- 1 SPLASH -->
+  <div class="col">
+    <div class="phone"><div class="screen" style="background:#0A2463;color:#fff">
+      <div class="status" style="color:#fff"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 34px;text-align:center">
+        <svg width="260" height="230" viewBox="0 0 260 230">
+          <path d="M30 200 C 80 200, 60 130, 130 128 S 190 50, 226 46" stroke="#fff" stroke-opacity=".9" stroke-width="4" fill="none" stroke-dasharray="1 11" stroke-linecap="round"/>
+          <circle cx="30" cy="200" r="9" fill="#fff"/><circle cx="30" cy="200" r="18" fill="#fff" fill-opacity=".15"/>
+          <circle cx="130" cy="128" r="6" fill="#8FB3FF"/>
+          <path d="M224 14 v40" stroke="#F2A900" stroke-width="4" stroke-linecap="round"/><path d="M224 14 l26 10 -26 10z" fill="#F2A900"/>
+        </svg>
+        <div style="font-family:'Inter Display';font-weight:700;font-size:42px;letter-spacing:-1px;margin-top:18px">FreeMentor</div>
+        <div style="font-size:16px;opacity:.82;margin-top:10px;line-height:1.5">Free resources. Clear roadmap.<br>Every day.</div>
+      </div>
+      <div style="padding:0 34px 40px;text-align:center;font-size:12px;opacity:.6">Building your path…</div>
+    </div></div>
+    <div class="cap"><b>1 · Opening animation</b>After Android's system splash, a dotted route draws itself to the flag (1.2 s, first launch only).</div>
+  </div>
+
+  <!-- 2 ONBOARDING: WEEKLY TIME + CALCULATOR -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <div style="display:flex;align-items:center;gap:10px;margin:6px 0 18px">
+          <span style="font-size:20px;color:var(--muted)">‹</span>
+          <div style="flex:1;height:6px;border-radius:6px;background:#DCE1EC"><div style="width:62%;height:100%;border-radius:6px;background:var(--navy)"></div></div>
+          <span class="small">5 of 8</span>
+        </div>
+        <h2>How much time can you give, Anubhav?</h2>
+        <p class="small" style="margin:8px 0 16px;font-size:13px">Set it per day. You can change this anytime.</p>
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <div class="pill" style="background:var(--navy);color:#fff;padding:7px 12px">Each day</div><div class="pill" style="padding:7px 12px;background:transparent;box-shadow:var(--neu-in)">Same every day</div>
+        </div>
+        <div class="card" style="padding:10px 14px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center">
+            <div class="small">M</div><div class="small">T</div><div class="small">W</div><div class="small">T</div><div class="small">F</div><div class="small">S</div><div class="small">S</div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:40px;border-radius:7px;background:var(--navy-2)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:40px;border-radius:7px;background:var(--navy-2)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:40px;border-radius:7px;background:var(--navy-2)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:40px;border-radius:7px;background:var(--navy-2)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:40px;border-radius:7px;background:var(--navy-2)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:80px;border-radius:7px;background:var(--navy)"></div></div>
+            <div style="height:86px;display:flex;align-items:flex-end;justify-content:center"><div style="width:22px;height:80px;border-radius:7px;background:var(--navy)"></div></div>
+            <div style="font-size:12px;font-weight:600">2h</div><div style="font-size:12px;font-weight:600">2h</div><div style="font-size:12px;font-weight:600">2h</div><div style="font-size:12px;font-weight:600">2h</div><div style="font-size:12px;font-weight:600">2h</div><div style="font-size:12px;font-weight:600">4h</div><div style="font-size:12px;font-weight:600">4h</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)"><span class="small">Total this week</span><b style="font-size:15px">18 h / week</b></div>
+        </div>
+        <div class="card white" style="margin-top:16px;border:1.5px solid #FFE08A">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3>Deadline calculator</h3><span class="pill amberpill">Optional</span></div>
+          <p class="small" style="margin:8px 0 10px;font-size:13px;line-height:1.45">NEET UG in <b style="color:var(--ink)">10 months</b> needs about</p>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:'Inter Display';font-weight:700;font-size:34px;color:var(--navy)">2 h 25 m</span><span class="small">per day</span></div>
+          <p class="small" style="margin-top:6px">Your plan: 2 h 34 m/day avg — you're on track ✓</p>
+        </div>
+      </div>
+      <div style="padding:16px 20px 30px"><div class="btn">Continue</div></div>
+    </div></div>
+    <div class="cap"><b>2 · Onboarding: weekly time</b>One question per screen. The calculator only advises; the user picks their own hours.</div>
+  </div>
+
+  <!-- 3 HOME -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 14px">
+          <div><div class="small" style="font-size:13px">Good morning,</div><h2 style="font-size:24px">Anubhav</h2></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#FFF1C7;padding:8px 12px;border-radius:14px;font-weight:700;font-size:14px;color:#6B4A00">
+            <svg width="16" height="18" viewBox="0 0 16 18"><path d="M8 1c1 3 6 5 6 10a6 6 0 0 1-12 0c0-3 2-4 3-6 0 2 1 3 2 3 0-3 0-5 1-7z" fill="#F2A900"/></svg>6</div>
+        </div>
+        <div class="card" style="display:flex;gap:16px;align-items:center">
+          <svg width="96" height="96" viewBox="0 0 96 96"><circle cx="48" cy="48" r="38" stroke="#DCE1EC" stroke-width="10" fill="none"/><circle cx="48" cy="48" r="38" stroke="#0A2463" stroke-width="10" fill="none" stroke-dasharray="100 239" stroke-linecap="round" transform="rotate(-90 48 48)"/><text x="48" y="54" text-anchor="middle" font-family="Inter Display" font-weight="700" font-size="21" fill="#0B1220">42%</text></svg>
+          <div><div class="small">Your goal</div><h3 style="font-size:18px;margin:2px 0 4px">NEET UG 2027</h3><div class="small">Week 9 of 44 · on track</div><div class="small" style="margin-top:4px">Projected finish: 18 Apr 2027</div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin:18px 2px 10px"><h3>Today · 2 h</h3><span class="small">1 h 10 m done · 50 m to go</span></div>
+        <div class="card white" style="padding:6px 14px">
+          <div style="display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)"><div class="chk done"></div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:var(--muted);text-decoration:line-through">Warm-up recall</div><div class="small">Yesterday · Motion in a Plane</div></div><span class="small">10 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)"><div class="chk done"></div><div style="flex:1"><div style="font-size:14px;font-weight:600;color:var(--muted);text-decoration:line-through">Watch: Laws of Motion · Part 1</div><div class="small">Video</div></div><span class="small">60 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)"><div class="chk"></div><div style="flex:1"><div style="font-size:14px;font-weight:600">Read NCERT Class 11, Ch 4</div><div class="small">Notes · English / Hindi</div></div><span class="small">20 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:11px 0"><div class="chk"></div><div style="flex:1"><div style="font-size:14px;font-weight:600">Practice 15 PYQs + revision</div><div class="small">Practice · Spaced revision</div></div><span class="small">30 m</span></div>
+        </div>
+        <div class="btn" style="margin-top:16px">Continue today's task →</div>
+      </div>
+      <div class="nav">
+        <div class="on"><svg viewBox="0 0 24 24"><path d="M5 20c3 0 2-6 7-6s4-6 7-8"/><circle cx="5" cy="20" r="1.6"/><path d="M19 3v5"/></svg>Roadmap</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8h-8z"/></svg>Progress</div>
+        <div><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V5M19 20v-7"/></svg>Reports</div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 10h8M8 14h5"/></svg>Practice</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profile</div>
+      </div>
+    </div></div>
+    <div class="cap"><b>3 · Home dashboard</b>One main action. Streak, progress and "50 m to go" at a glance.</div>
+  </div>
+
+  <!-- 4 ROADMAP ROUTE -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 6px"><h2>Your route</h2><span class="pill">NEET UG</span></div>
+        <div class="small" style="margin-bottom:14px">Phase 1 · Class 11 Foundation</div>
+        <div style="position:relative;padding-left:44px">
+          <div style="position:absolute;left:17px;top:10px;bottom:0;border-left:3px dotted #9AA9C9"></div>
+          <div style="position:absolute;left:17px;top:10px;height:170px;border-left:3px solid var(--navy)"></div>
+          <!-- week 8 done -->
+          <div style="position:relative;margin-bottom:14px">
+            <div style="position:absolute;left:-37px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--navy)"></div>
+            <div class="card" style="padding:12px 14px;display:flex;justify-content:space-between"><div><h3>Week 8</h3><div class="small">Units · Motion in a Straight Line</div></div><span style="color:var(--green);font-weight:700;font-size:13px">100%</span></div>
+          </div>
+          <!-- week 9 open -->
+          <div style="position:relative;margin-bottom:14px">
+            <div style="position:absolute;left:-41px;top:8px;width:28px;height:28px;border-radius:50%;background:#FFF1C7;display:flex;align-items:center;justify-content:center"><div style="width:16px;height:16px;border-radius:50%;background:var(--amber)"></div></div>
+            <div class="card white" style="padding:12px 14px">
+              <div style="display:flex;justify-content:space-between;align-items:center"><h3>Week 9</h3><span class="small" style="font-weight:600;color:var(--ink)">42%</span></div>
+              <div style="height:6px;border-radius:6px;background:#E2E6EF;margin:8px 0 6px"><div style="width:42%;height:100%;background:var(--navy);border-radius:6px"></div></div>
+              <div style="font-size:13px">
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0"><div class="chk done" style="width:20px;height:20px"></div><span>Day 1 · Motion in a Plane</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0"><div class="chk done" style="width:20px;height:20px"></div><span>Day 2 · Motion in a Plane (cont.)</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 8px;margin:0 -8px;background:#FFF6DB;border-radius:10px"><div class="chk" style="width:20px;height:20px;background:#fff"></div><b>Day 3 · Laws of Motion</b><span style="margin-left:auto;color:#6B4A00;font-weight:600;font-size:12px">Today</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0;color:#8A93A6"><div class="chk" style="width:20px;height:20px"></div><span>Day 4 · Laws of Motion (cont.)</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0;color:#8A93A6"><div class="chk" style="width:20px;height:20px"></div><span>Day 5 · Biological Classification</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0;color:#8A93A6"><div class="chk" style="width:20px;height:20px"></div><span>Day 6 · Mixed practice + weekly test</span></div>
+                <div style="display:flex;gap:10px;align-items:center;padding:7px 0;color:#8A93A6"><div class="chk" style="width:20px;height:20px"></div><span>Day 7 · Light revision / rest</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- week 10 future -->
+          <div style="position:relative;opacity:.55">
+            <div style="position:absolute;left:-35px;top:10px;width:16px;height:16px;border-radius:50%;border:3px solid #9AA9C9;background:var(--bg)"></div>
+            <div class="card" style="padding:12px 14px"><h3>Week 10</h3><div class="small">Work, Energy & Power · Plant Kingdom</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="on"><svg viewBox="0 0 24 24"><path d="M5 20c3 0 2-6 7-6s4-6 7-8"/><circle cx="5" cy="20" r="1.6"/><path d="M19 3v5"/></svg>Roadmap</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8h-8z"/></svg>Progress</div>
+        <div><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V5M19 20v-7"/></svg>Reports</div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 10h8M8 14h5"/></svg>Practice</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profile</div>
+      </div>
+    </div></div>
+    <div class="cap"><b>4 · Roadmap (GPS route)</b>Done stops are solid, today glows amber, future stops fade. Tap a week to expand its days.</div>
+  </div>
+</div>
+
+<!-- ROW 2 -->
+<div class="row">
+  <!-- 5 DAY VIEW -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <div style="display:flex;align-items:center;gap:10px;margin:4px 0 10px"><span style="font-size:20px;color:var(--muted)">‹</span><span class="small">Week 9 · Day 3</span></div>
+        <h2>Laws of Motion &amp; Friction</h2>
+        <div style="display:flex;gap:8px;margin:10px 0 14px"><span class="pill">Physics</span><span class="pill amberpill">High weightage</span><span class="pill">2 h</span></div>
+        <div class="card white" style="padding:14px;margin-bottom:12px">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div style="width:96px;height:60px;border-radius:12px;background:linear-gradient(135deg,#1B3A80,#0A2463);flex:none;display:flex;align-items:center;justify-content:center"><div style="width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px"></div></div>
+            <div style="flex:1"><div style="font-size:13.5px;font-weight:650;line-height:1.3">Watch lesson · Part 1</div><div class="small" style="margin-top:3px">NEWTON'S LAWS OF MOTION &amp; FRICTION in ONE SHOT · 0:00–0:52</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px"><span class="small">52 min video → shown as <b style="color:var(--ink)">60 min</b></span><span style="font-size:12px;font-weight:600;color:var(--navy)">Open in YouTube ↗</span></div>
+        </div>
+        <div class="card white" style="padding:4px 14px">
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div class="chk done"></div><div style="flex:1;font-size:14px">Warm-up recall (3 questions)</div><span class="small">10 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div class="chk done"></div><div style="flex:1;font-size:14px">Watch lesson · Part 1</div><span class="small">60 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div class="chk"></div><div style="flex:1;font-size:14px">Read NCERT Ch 4 · self-explain</div><span class="small">20 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)"><div class="chk"></div><div style="flex:1;font-size:14px">Practice 15 PYQs</div><span class="small">20 m</span></div>
+          <div style="display:flex;gap:12px;align-items:center;padding:12px 0"><div class="chk"></div><div style="flex:1;font-size:14px">Spaced revision · Units</div><span class="small">10 m</span></div>
+        </div>
+        <div style="margin-top:14px"><div class="small" style="margin-bottom:8px;font-weight:600;color:var(--ink)">How well do you know this?</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span class="pill" style="background:transparent;box-shadow:var(--neu-in);padding:6px 9px">Need revision</span>
+            <span class="pill" style="background:transparent;box-shadow:var(--neu-in);padding:6px 9px">A little afraid</span>
+            <span class="pill" style="background:var(--navy);color:#fff;padding:6px 9px">Confident</span>
+            <span class="pill" style="background:transparent;box-shadow:var(--neu-in);padding:6px 9px">All cleared</span>
+            <span class="pill" style="background:transparent;box-shadow:var(--neu-in);padding:6px 9px">Mastered</span>
+          </div>
+          <div class="small" style="margin-top:8px">Comes back for revision in 4 days.</div>
+        </div>
+      </div>
+      <div style="padding:12px 20px 26px"><div class="btn" style="background:#C9D1E3;color:#56607A">Mark day complete</div></div>
+    </div></div>
+    <div class="cap"><b>5 · Day view</b>Exactly what to do, in order. Video time is the YouTube duration + 15%, rounded up to 5 min.</div>
+  </div>
+
+  <!-- 6 REPORTS -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <h2 style="margin:4px 0 4px">This week</h2>
+        <div class="small" style="margin-bottom:14px">29 Sep – 5 Oct</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+          <div class="card" style="padding:14px"><div class="small">Study time</div><div style="font-family:'Inter Display';font-weight:700;font-size:26px;margin-top:4px">16.5<span style="font-size:14px;color:var(--muted);font-weight:500"> / 18 h</span></div></div>
+          <div class="card" style="padding:14px"><div class="small">Tasks done</div><div style="font-family:'Inter Display';font-weight:700;font-size:26px;margin-top:4px">24<span style="font-size:14px;color:var(--muted);font-weight:500"> / 28</span></div></div>
+        </div>
+        <div class="card white" style="padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between"><h3>Daily study hours</h3><span class="small">— target</span></div>
+          <svg width="100%" height="150" viewBox="0 0 300 150" style="margin-top:6px">
+            <line x1="0" x2="300" y1="125" y2="125" stroke="#DCE1EC"/>
+            <line x1="0" x2="214" y1="81" y2="81" stroke="#5B6475" stroke-dasharray="4 4" stroke-width="1"/>
+            <line x1="214" x2="300" y1="37" y2="37" stroke="#5B6475" stroke-dasharray="4 4" stroke-width="1"/>
+            <g fill="#0A2463">
+              <path d="M14 125 V85 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M57 125 V96 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M100 125 V63 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M143 125 V85 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M186 125 V107 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M229 125 V41 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+              <path d="M272 125 V63 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 V125z"/>
+            </g>
+            <text x="112" y="53" text-anchor="middle" font-size="10" font-family="Inter" fill="#0B1220" font-weight="600">3 h</text>
+            <g font-size="10" font-family="Inter" fill="#5B6475" text-anchor="middle"><text x="26" y="142">M</text><text x="69" y="142">T</text><text x="112" y="142">W</text><text x="155" y="142">T</text><text x="198" y="142">F</text><text x="241" y="142">S</text><text x="284" y="142">S</text></g>
+          </svg>
+        </div>
+        <div class="card" style="padding:12px 14px;margin-top:12px;display:flex;gap:10px;align-items:center;background:#E7F4EC;box-shadow:none">
+          <span style="width:26px;height:26px;border-radius:50%;background:#127A45;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none">✓</span>
+          <span style="font-size:13px;line-height:1.35">Wednesday: you studied <b>1 h extra</b> than planned. Nice!</span>
+        </div>
+        <div class="card white" style="padding:14px;margin-top:12px">
+          <h3 style="margin-bottom:10px">Topic test scores</h3>
+          <div style="font-size:13px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:70px">Biology</span><div style="flex:1;height:8px;background:#E2E6EF;border-radius:4px"><div style="width:84%;height:100%;background:var(--navy);border-radius:4px"></div></div><b style="width:34px;text-align:right">84%</b></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:70px">Chemistry</span><div style="flex:1;height:8px;background:#E2E6EF;border-radius:4px"><div style="width:72%;height:100%;background:var(--navy);border-radius:4px"></div></div><b style="width:34px;text-align:right">72%</b></div>
+            <div style="display:flex;align-items:center;gap:10px"><span style="width:70px">Physics</span><div style="flex:1;height:8px;background:#E2E6EF;border-radius:4px"><div style="width:58%;height:100%;background:var(--navy);border-radius:4px"></div></div><b style="width:34px;text-align:right">58%</b></div>
+          </div>
+          <div class="small" style="margin-top:12px;line-height:1.45;color:var(--ink)">Next week: add 30 min to Physics practice.</div>
+        </div>
+      </div>
+      <div class="nav">
+        <div><svg viewBox="0 0 24 24"><path d="M5 20c3 0 2-6 7-6s4-6 7-8"/><circle cx="5" cy="20" r="1.6"/><path d="M19 3v5"/></svg>Roadmap</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8h-8z"/></svg>Progress</div>
+        <div class="on"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V5M19 20v-7"/></svg>Reports</div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 10h8M8 14h5"/></svg>Practice</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profile</div>
+      </div>
+    </div></div>
+    <div class="cap"><b>6 · Weekly report</b>Hours come from ticked tasks; scores are entered after each test.</div>
+  </div>
+
+  <!-- 7 PAYWALL -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span>●●● 5G ▮</span></div>
+      <div class="content">
+        <div style="text-align:right;color:var(--muted);font-size:20px;margin:0 0 4px">×</div>
+        <h2>Keep your roadmap going</h2>
+        <p class="small" style="font-size:13px;margin:8px 0 16px;line-height:1.5">Your free 3-day trial ends tomorrow. YouTube lessons stay free to open on every plan.</p>
+        <div class="card" style="padding:16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="font-size:17px">Basic</h3><div><span class="small" style="text-decoration:line-through">₹1,299</span> <b style="font-size:20px">₹599</b></div></div>
+          <div class="small" style="margin-top:8px;line-height:1.6;font-size:12.5px">Full roadmap · notes &amp; tests · progress tracking · light ads</div>
+        </div>
+        <div class="card white" style="padding:16px;border:2px solid var(--navy);position:relative">
+          <span class="pill amberpill" style="position:absolute;top:-11px;left:16px">Most complete</span>
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="font-size:17px">Premium</h3><div><span class="small" style="text-decoration:line-through">₹3,999</span> <b style="font-size:20px">₹999</b></div></div>
+          <div class="small" style="margin-top:8px;line-height:1.6;font-size:12.5px;color:var(--ink)">Everything in Basic, plus:<br>No ads · extra notes · detailed analytics · smart recalculation · all mock-test links</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px">
+          <div style="flex:1;height:46px;border-radius:14px;box-shadow:var(--neu-in);display:flex;align-items:center;padding:0 14px;font-size:13px;color:#8A93A6;letter-spacing:1px">Coupon code</div>
+          <div style="width:84px;height:46px;border-radius:14px;box-shadow:var(--neu);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;color:var(--navy)">Apply</div>
+        </div>
+        <div class="small" style="margin-top:10px">One-time payment for this roadmap · via Google Play</div>
+      </div>
+      <div style="padding:14px 20px 30px"><div class="btn">Get Premium · ₹999</div><div class="small" style="text-align:center;margin-top:10px">Restore purchase</div></div>
+    </div></div>
+    <div class="cap"><b>7 · Plans (after the 3-day trial)</b>Clear prices, nothing hidden. The coupon is checked against the admin panel, then billed through Google Play.</div>
+  </div>
+
+  <!-- STYLE NOTES -->
+  <div class="col" style="justify-content:flex-start">
+    <div style="width:380px;height:800px;border-radius:40px;background:#fff;padding:36px 32px;box-shadow:0 30px 60px rgba(10,36,99,.12);display:flex;flex-direction:column;gap:22px">
+      <h2 style="font-size:26px">How it's built</h2>
+      <div><h3 style="margin-bottom:6px">Soft minimal + light neumorphism</h3><p class="small" style="font-size:13.5px;line-height:1.55">Soft shadows only on cards, the progress ring and checkboxes. Main buttons are solid navy so they always read as tappable.</p></div>
+      <div style="display:flex;gap:14px">
+        <div style="width:90px;height:64px;border-radius:18px;background:#EEF1F7;box-shadow:var(--neu)"></div>
+        <div style="width:90px;height:64px;border-radius:18px;background:#EEF1F7;box-shadow:var(--neu-in)"></div>
+        <div style="width:90px;height:64px;border-radius:18px;background:var(--navy)"></div>
+      </div>
+      <div><h3 style="margin-bottom:6px">Type</h3>
+        <div style="font-family:'Inter Display';font-weight:700;font-size:28px;letter-spacing:-.5px">Your <span style="font-style:italic;font-weight:500">roadmap</span> is ready</div>
+        <p class="small" style="font-size:13.5px;line-height:1.55;margin-top:6px">Headings: DM Sans (italic for warm moments). UI: Inter. Hindi: Noto Sans Devanagari. Shown here in Inter Display.</p></div>
+      <div><h3 style="margin-bottom:6px">Colour roles</h3>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:13px;align-items:center">
+          <i style="width:18px;height:18px;border-radius:6px;background:#0A2463;display:block"></i><span>Navy: brand, buttons, progress</span>
+          <i style="width:18px;height:18px;border-radius:6px;background:#F2A900;display:block"></i><span>Amber: streak and "today" only</span>
+          <i style="width:18px;height:18px;border-radius:6px;background:#127A45;display:block"></i><span>Green: completed / good news</span>
+          <i style="width:18px;height:18px;border-radius:6px;background:#EEF1F7;border:1px solid #DCE1EC;display:block"></i><span>Soft base: every screen</span>
+        </div></div>
+      <div><h3 style="margin-bottom:6px">Bottom navigation</h3><p class="small" style="font-size:13.5px;line-height:1.55">Roadmap · Progress · Reports · Practice · Profile. The current tab is navy and bold.</p></div>
+      <div style="margin-top:auto"><p class="small" style="font-size:12px;line-height:1.5">Content shown is real library data (NEET UG pilot). Dark mode: #0B1020 base, #141B2D cards, sky #8FB3FF as primary.</p></div>
+    </div>
+  </div>
+</div>
+</body></html>

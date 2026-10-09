@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FreeMentor goal library file",
+  "description": "Schema 1.0. One file per goal, downloaded only when the user selects that goal. Files contain no fixed days: the on-device scheduler packs blocks into days using scheduler_hints. Required keys are enforced; optional keys below are documented so any AI or tool building the library knows what they mean.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "goal",
+    "scheduler_hints",
+    "phases",
+    "topics",
+    "milestones"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "goal": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "category",
+        "type",
+        "version",
+        "valid_for",
+        "last_updated",
+        "languages",
+        "estimated_hours"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "exam",
+            "skill",
+            "language"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "valid_for": {
+          "type": "string"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date"
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "en",
+              "hi",
+              "hi-en"
+            ]
+          }
+        },
+        "estimated_hours": {
+          "type": "object"
+        },
+        "official_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "syllabus_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "subjects": {
+          "type": "array"
+        },
+        "video_language_note": {
+          "type": "string"
+        },
+        "career_outcomes": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "resource_policy": {
+          "type": "string"
+        },
+        "reviewed_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prerequisite_note": {
+          "type": "string"
+        },
+        "safety_policy": {
+          "type": "string"
+        },
+        "eligibility_note": {
+          "type": "string"
+        },
+        "qualification_options": {
+          "type": "array"
+        },
+        "weightage_note": {
+          "type": "string"
+        },
+        "exam_note": {
+          "type": "string"
+        },
+        "track_policy": {
+          "type": "string"
+        },
+        "estimate_basis": {
+          "type": "string"
+        },
+        "build_status": {
+          "type": "string"
+        },
+        "verification_note": {
+          "type": "string"
+        },
+        "domain_subjects_full_roadmap": {
+          "type": "array"
+        },
+        "domain_note": {
+          "type": "string"
+        },
+        "language_papers": {
+          "type": [
+            "array",
+            "object"
+          ]
+        },
+        "domain_papers": {
+          "type": [
+            "array",
+            "object"
+          ]
+        },
+        "general_aptitude_paper": {
+          "type": [
+            "array",
+            "object"
+          ]
+        }
+      }
+    },
+    "scheduler_hints": {
+      "type": "object"
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "order",
+          "name",
+          "topic_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "topic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/topic"
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "after_phase",
+          "type",
+          "title",
+          "est_minutes",
+          "resources"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "topic": {
+      "type": "object",
+      "required": [
+        "id",
+        "subject",
+        "title",
+        "phase",
+        "order",
+        "weightage",
+        "est_minutes_total",
+        "blocks",
+        "recall"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "phase": {
+          "type": "integer"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "learn",
+            "project"
+          ]
+        },
+        "weightage": {
+          "enum": [
+            "H",
+            "M",
+            "L",
+            "core"
+          ]
+        },
+        "est_minutes_total": {
+          "type": "integer"
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          }
+        },
+        "recall": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "q",
+              "a"
+            ]
+          }
+        },
+        "domain_subject": {
+          "type": "string",
+          "description": "For CUET/multi-subject goals: which domain subject this topic belongs to."
+        },
+        "track_gate": {
+          "type": [
+            "string",
+            "object"
+          ],
+          "description": "Either a track key string (e.g. 'domain:physics') or a rule object describing when to schedule this topic. The app downloads a topic only when its track/rule matches the user's chosen subjects."
+        },
+        "source_topic_id": {
+          "type": "string",
+          "description": "Id of the topic this one was reused/derived from in another goal."
+        },
+        "coverage_note": {
+          "type": "string"
+        },
+        "source_note": {
+          "type": "string"
+        },
+        "safety_note": {
+          "type": "string",
+          "description": "Legal/ethical caution shown with the topic (used in Cybersecurity)."
+        },
+        "prerequisite_note": {
+          "type": "string"
+        },
+        "instructions": {
+          "type": "string"
+        },
+        "deprecated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "title",
+        "est_minutes",
+        "resources"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "learn",
+            "read",
+            "practice",
+            "recall",
+            "test",
+            "build"
+          ]
+        },
+        "score_entry": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string",
+          "description": "Guidance shown with the block, e.g. 'Watch both videos' or which section of a one-shot to watch."
+        },
+        "done_when": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Checkable completion criteria for a 'build' (project) block."
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resource"
+          }
+        }
+      }
+    },
+    "resource": {
+      "type": "object",
+      "required": [
+        "type",
+        "title",
+        "url",
+        "lang",
+        "provider",
+        "access",
+        "status"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "video",
+            "notes",
+            "practice",
+            "test"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "description": "e.g. main, alternative, extra."
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "lang": {
+          "enum": [
+            "en",
+            "hi",
+            "hi-en"
+          ]
+        },
+        "provider": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string",
+          "description": "YouTube channel name for video resources."
+        },
+        "access": {
+          "enum": [
+            "all",
+            "premium"
+          ]
+        },
+        "ad_gate_allowed": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "unverified",
+            "active",
+            "broken",
+            "replaced"
+          ]
+        },
+        "last_checked": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verified_via": {
+          "type": "string",
+          "description": "How a resource reached 'active', e.g. 'youtube_oembed'."
+        },
+        "youtube_id": {
+          "type": "string"
+        },
+        "duration_seconds": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "est_minutes": {
+          "type": "integer"
+        },
+        "duration_source": {
+          "enum": [
+            "estimate",
+            "youtube_api"
+          ]
+        },
+        "segments": {
+          "type": "array",
+          "description": "Optional per-video segments/timestamps."
+        }
+      }
+    }
+  }
+}

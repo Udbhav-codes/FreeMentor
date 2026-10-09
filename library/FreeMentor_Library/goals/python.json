@@ -1,0 +1,4346 @@
+{
+ "schema_version": "1.0",
+ "goal": {
+  "id": "python",
+  "name": "Python",
+  "category": "Programming Languages",
+  "group": "Languages",
+  "type": "language",
+  "version": "2026.1",
+  "valid_for": "Python 3.12+",
+  "last_updated": "2026-10-06",
+  "official_url": "https://docs.python.org/3/",
+  "languages": [
+   "en",
+   "hi"
+  ],
+  "video_language_note": "Every topic has an English video; Hindi videos are available for Phases 1–3. Phases 4–5 are English-only (tagged).",
+  "career_outcomes": [
+   "Write scripts and automate tasks",
+   "Build CLI apps, scrapers and simple APIs",
+   "Analyse data with Pandas and plot charts",
+   "Use Git/GitHub and write tests",
+   "Next roadmaps: Backend, Data Science, AI/ML"
+  ],
+  "resource_policy": "Links only to free, legal sources (official bodies, open-licence textbooks, reputable free platforms, public YouTube videos). No copyrighted PDFs re-hosted. YouTube videos are never paywalled or ad-gated.",
+  "estimated_hours": {
+   "content": 103,
+   "mocks_and_milestones": 2,
+   "spaced_revision_allowance": 12,
+   "total": 117,
+   "note": "Planning estimate. Video minutes are estimates until the link checker fills real durations (+15% rule applied in-app)."
+  }
+ },
+ "scheduler_hints": {
+  "video_time_multiplier": 1.15,
+  "round_up_to_minutes": 5,
+  "warmup_recall_minutes": 10,
+  "focus_block_minutes": 25,
+  "break_minutes": 5,
+  "spaced_review_offsets_days": [
+   1,
+   3,
+   7,
+   21,
+   45
+  ],
+  "confidence_to_next_review_days": {
+   "need_revision": 1,
+   "little_afraid": 2,
+   "confident": 4,
+   "all_cleared": 7,
+   "mastered": 21
+  },
+  "weekly_pattern": {
+   "new_content_days": 5,
+   "mixed_practice_and_weekly_test_days": 1,
+   "light_revision_or_rest_days": 1
+  },
+  "rest_day_limits": {
+   "per_week": 1,
+   "per_month": 4
+  },
+  "interleave_by": "subject",
+  "reserve_final_fraction_for_mocks_and_revision": 0.15,
+  "mastery_gate": {
+   "weekly_test_min_score_pct": 60,
+   "remediation_block_minutes": 45
+  },
+  "missed_day_policy": "shift_forward",
+  "recalculate_from": "next_incomplete_task"
+ },
+ "phases": [
+  {
+   "id": "python-p1",
+   "order": 1,
+   "name": "Python Fundamentals",
+   "topic_ids": [
+    "py-setup",
+    "py-variables",
+    "py-io-operators",
+    "py-strings",
+    "py-conditionals",
+    "py-loops",
+    "py-functions",
+    "py-lists",
+    "py-tuples-sets",
+    "py-dicts",
+    "proj-calculator"
+   ]
+  },
+  {
+   "id": "python-p2",
+   "order": 2,
+   "name": "Intermediate Python",
+   "topic_ids": [
+    "py-comprehensions",
+    "py-scope-lambda",
+    "py-modules-pip",
+    "py-files",
+    "py-exceptions",
+    "py-recursion",
+    "proj-todo"
+   ]
+  },
+  {
+   "id": "python-p3",
+   "order": 3,
+   "name": "Object-Oriented Programming",
+   "topic_ids": [
+    "py-classes",
+    "py-inheritance",
+    "py-dunder",
+    "py-iterators-generators",
+    "py-decorators"
+   ]
+  },
+  {
+   "id": "python-p4",
+   "order": 4,
+   "name": "Libraries & Real-world Python",
+   "topic_ids": [
+    "py-venv",
+    "py-stdlib",
+    "py-requests-apis",
+    "proj-scraper",
+    "py-numpy",
+    "py-pandas",
+    "py-matplotlib",
+    "proj-api"
+   ]
+  },
+  {
+   "id": "python-p5",
+   "order": 5,
+   "name": "Professional Skills & Final Project",
+   "topic_ids": [
+    "py-git",
+    "py-testing",
+    "proj-final"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": "py-setup",
+   "subject": "Python",
+   "title": "Setup: Install Python & VS Code, run your first program",
+   "phase": 1,
+   "order": 1,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "py-setup-learn",
+     "type": "learn",
+     "title": "Watch: Setup: Install Python & VS Code, run your first program",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 1: Install and Setup for Mac and Windows (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=YYXdXT2l-Gg",
+       "youtube_id": "YYXdXT2l-Gg",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Introduction to Programming & Python (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=7wnove7K-ZQ",
+       "youtube_id": "7wnove7K-ZQ",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-setup-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "interpreter.html",
+       "url": "https://docs.python.org/3/tutorial/interpreter.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_getstarted.asp",
+       "url": "https://www.w3schools.com/python/python_getstarted.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap01.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap01.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-setup-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Hello World",
+       "url": "https://exercism.org/tracks/python/exercises/hello-world",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-setup-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Command to check the installed Python version?",
+     "a": "python --version (or python3 --version)"
+    },
+    {
+     "q": "What does print() do?",
+     "a": "Writes text/values to the console"
+    },
+    {
+     "q": "File extension for Python scripts?",
+     "a": ".py"
+    }
+   ]
+  },
+  {
+   "id": "py-variables",
+   "subject": "Python",
+   "title": "Variables, Data Types & Numbers",
+   "phase": 1,
+   "order": 2,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 125,
+   "blocks": [
+    {
+     "id": "py-variables-learn",
+     "type": "learn",
+     "title": "Watch: Variables, Data Types & Numbers",
+     "est_minutes": 40,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn Python - Full Course for Beginners [Tutorial] (freeCodeCamp.org)",
+       "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+       "youtube_id": "rfscVS0vtbw",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Data Types in Python (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=NQ0JI5IKggI",
+       "youtube_id": "NQ0JI5IKggI",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-variables-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_variables.asp",
+       "url": "https://www.w3schools.com/python/python_variables.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_datatypes.asp",
+       "url": "https://www.w3schools.com/python/python_datatypes.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_numbers.asp",
+       "url": "https://www.w3schools.com/python/python_numbers.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "introduction.html",
+       "url": "https://docs.python.org/3/tutorial/introduction.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap02.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap02.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-variables-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Guidos Gorgeous Lasagna",
+       "url": "https://exercism.org/tracks/python/exercises/guidos-gorgeous-lasagna",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Currency Exchange",
+       "url": "https://exercism.org/tracks/python/exercises/currency-exchange",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-variables-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Function that returns the type of a value?",
+     "a": "type()"
+    },
+    {
+     "q": "Result of 7 // 2 and 7 % 2?",
+     "a": "3 and 1"
+    },
+    {
+     "q": "Are Python variable names case-sensitive?",
+     "a": "Yes — age and Age are different"
+    }
+   ]
+  },
+  {
+   "id": "py-io-operators",
+   "subject": "Python",
+   "title": "Input/Output, Type Casting & Operators",
+   "phase": 1,
+   "order": 3,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 125,
+   "blocks": [
+    {
+     "id": "py-io-operators-learn",
+     "type": "learn",
+     "title": "Watch: Input/Output, Type Casting & Operators",
+     "est_minutes": 40,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn Python - Full Course for Beginners [Tutorial] (freeCodeCamp.org)",
+       "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+       "youtube_id": "rfscVS0vtbw",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-io-operators-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_user_input.asp",
+       "url": "https://www.w3schools.com/python/python_user_input.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_casting.asp",
+       "url": "https://www.w3schools.com/python/python_casting.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_operators.asp",
+       "url": "https://www.w3schools.com/python/python_operators.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap02.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap02.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-io-operators-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Ghost Gobble Arcade Game",
+       "url": "https://exercism.org/tracks/python/exercises/ghost-gobble-arcade-game",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-io-operators-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What type does input() return?",
+     "a": "str (string)"
+    },
+    {
+     "q": "Convert the string '42' to an integer?",
+     "a": "int('42')"
+    },
+    {
+     "q": "What does ** do?",
+     "a": "Exponentiation, e.g. 2**3 = 8"
+    }
+   ]
+  },
+  {
+   "id": "py-strings",
+   "subject": "Python",
+   "title": "Strings",
+   "phase": 1,
+   "order": 4,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "py-strings-learn",
+     "type": "learn",
+     "title": "Watch: Strings",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 2: Strings - Working with Textual Data (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=k9TUPpGqYTo",
+       "youtube_id": "k9TUPpGqYTo",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Strings in Python (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=kMNFQYArrLg",
+       "youtube_id": "kMNFQYArrLg",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-strings-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_strings.asp",
+       "url": "https://www.w3schools.com/python/python_strings.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "introduction.html#text",
+       "url": "https://docs.python.org/3/tutorial/introduction.html#text",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap08.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap08.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-strings-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Little Sisters Vocab",
+       "url": "https://exercism.org/tracks/python/exercises/little-sisters-vocab",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Little Sisters Essay",
+       "url": "https://exercism.org/tracks/python/exercises/little-sisters-essay",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-strings-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Are strings mutable?",
+     "a": "No, strings are immutable"
+    },
+    {
+     "q": "What does 'hello'[1:4] return?",
+     "a": "'ell'"
+    },
+    {
+     "q": "Insert a variable name into text with an f-string?",
+     "a": "f'Hi {name}'"
+    }
+   ]
+  },
+  {
+   "id": "py-conditionals",
+   "subject": "Python",
+   "title": "Conditionals: if / elif / else",
+   "phase": 1,
+   "order": 5,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-conditionals-learn",
+     "type": "learn",
+     "title": "Watch: Conditionals: if / elif / else",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 6: Conditionals and Booleans - If, Else, and Elif Statements (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=DZwmZ8Usvnk",
+       "youtube_id": "DZwmZ8Usvnk",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-conditionals-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_conditions.asp",
+       "url": "https://www.w3schools.com/python/python_conditions.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "controlflow.html#if-statements",
+       "url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap05.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap05.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-conditionals-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Meltdown Mitigation",
+       "url": "https://exercism.org/tracks/python/exercises/meltdown-mitigation",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Black Jack",
+       "url": "https://exercism.org/tracks/python/exercises/black-jack",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-conditionals-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Keyword for 'else if' in Python?",
+     "a": "elif"
+    },
+    {
+     "q": "Values of bool(0), bool('') and bool([])?",
+     "a": "All False"
+    },
+    {
+     "q": "Difference between == and is?",
+     "a": "== compares values; is compares identity (same object)"
+    }
+   ]
+  },
+  {
+   "id": "py-loops",
+   "subject": "Python",
+   "title": "Loops: for, while, range, break & continue",
+   "phase": 1,
+   "order": 6,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 120,
+   "blocks": [
+    {
+     "id": "py-loops-learn",
+     "type": "learn",
+     "title": "Watch: Loops: for, while, range, break & continue",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 7: Loops and Iterations - For/While Loops (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=6iF8Xb7Z3wQ",
+       "youtube_id": "6iF8Xb7Z3wQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "For Loops In Python (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=sSyCRQx5WM0",
+       "youtube_id": "sSyCRQx5WM0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-loops-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_for_loops.asp",
+       "url": "https://www.w3schools.com/python/python_for_loops.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_while_loops.asp",
+       "url": "https://www.w3schools.com/python/python_while_loops.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "controlflow.html#for-statements",
+       "url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap07.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap07.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-loops-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Making The Grade",
+       "url": "https://exercism.org/tracks/python/exercises/making-the-grade",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-loops-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does range(2, 10, 3) produce?",
+     "a": "2, 5, 8"
+    },
+    {
+     "q": "break vs continue?",
+     "a": "break exits the loop; continue skips to the next iteration"
+    },
+    {
+     "q": "When does a loop's else block run?",
+     "a": "When the loop finishes without hitting break"
+    }
+   ]
+  },
+  {
+   "id": "py-functions",
+   "subject": "Python",
+   "title": "Functions",
+   "phase": 1,
+   "order": 7,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "py-functions-learn",
+     "type": "learn",
+     "title": "Watch: Functions",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 8: Functions (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=9Os0o3wzS_I",
+       "youtube_id": "9Os0o3wzS_I",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-functions-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_functions.asp",
+       "url": "https://www.w3schools.com/python/python_functions.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "controlflow.html#defining-functions",
+       "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap03.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap03.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap06.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap06.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-functions-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-functions-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does a function return with no return statement?",
+     "a": "None"
+    },
+    {
+     "q": "What are *args and **kwargs?",
+     "a": "Variable positional and keyword arguments"
+    },
+    {
+     "q": "Can a default argument be followed by a non-default one?",
+     "a": "No — non-default parameters must come first"
+    }
+   ]
+  },
+  {
+   "id": "py-lists",
+   "subject": "Python",
+   "title": "Lists",
+   "phase": 1,
+   "order": 8,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "py-lists-learn",
+     "type": "learn",
+     "title": "Watch: Lists",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 4: Lists, Tuples, and Sets (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=W8KRzm-HUcc",
+       "youtube_id": "W8KRzm-HUcc",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-lists-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_lists.asp",
+       "url": "https://www.w3schools.com/python/python_lists.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "datastructures.html#more-on-lists",
+       "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap09.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap09.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-lists-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Card Games",
+       "url": "https://exercism.org/tracks/python/exercises/card-games",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Chaitanas Colossal Coaster",
+       "url": "https://exercism.org/tracks/python/exercises/chaitanas-colossal-coaster",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-lists-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Add an item to the end of a list?",
+     "a": "list.append(x)"
+    },
+    {
+     "q": "Index of the last element?",
+     "a": "-1"
+    },
+    {
+     "q": "sorted(lst) vs lst.sort()?",
+     "a": "sorted returns a new list; .sort() sorts in place and returns None"
+    }
+   ]
+  },
+  {
+   "id": "py-tuples-sets",
+   "subject": "Python",
+   "title": "Tuples & Sets",
+   "phase": 1,
+   "order": 9,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-tuples-sets-learn",
+     "type": "learn",
+     "title": "Watch: Tuples & Sets",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 4: Lists, Tuples, and Sets (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=W8KRzm-HUcc",
+       "youtube_id": "W8KRzm-HUcc",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-tuples-sets-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_tuples.asp",
+       "url": "https://www.w3schools.com/python/python_tuples.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_sets.asp",
+       "url": "https://www.w3schools.com/python/python_sets.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "datastructures.html#tuples-and-sequences",
+       "url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap11.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap11.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-tuples-sets-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Tisbury Treasure Hunt",
+       "url": "https://exercism.org/tracks/python/exercises/tisbury-treasure-hunt",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Cater Waiter",
+       "url": "https://exercism.org/tracks/python/exercises/cater-waiter",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-tuples-sets-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Main difference between a tuple and a list?",
+     "a": "Tuples are immutable"
+    },
+    {
+     "q": "Does a set keep duplicates?",
+     "a": "No — sets store unique items"
+    },
+    {
+     "q": "Create an empty set?",
+     "a": "set() — {} creates an empty dict"
+    }
+   ]
+  },
+  {
+   "id": "py-dicts",
+   "subject": "Python",
+   "title": "Dictionaries",
+   "phase": 1,
+   "order": 10,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 135,
+   "blocks": [
+    {
+     "id": "py-dicts-learn",
+     "type": "learn",
+     "title": "Watch: Dictionaries",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=daefaLgNkw0",
+       "youtube_id": "daefaLgNkw0",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-dicts-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_dictionaries.asp",
+       "url": "https://www.w3schools.com/python/python_dictionaries.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "datastructures.html#dictionaries",
+       "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap10.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap10.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-dicts-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Inventory Management",
+       "url": "https://exercism.org/tracks/python/exercises/inventory-management",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "title": "Mecha Munch Management",
+       "url": "https://exercism.org/tracks/python/exercises/mecha-munch-management",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-dicts-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "py-dicts-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 20,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "title": "W3Schools Python Quiz",
+       "url": "https://www.w3schools.com/python/python_quiz.asp",
+       "lang": "en",
+       "provider": "W3Schools (free)",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Get a value safely with a default?",
+     "a": "d.get(key, default)"
+    },
+    {
+     "q": "Loop over keys and values together?",
+     "a": "for k, v in d.items():"
+    },
+    {
+     "q": "Can a list be a dictionary key?",
+     "a": "No — keys must be hashable (immutable)"
+    }
+   ]
+  },
+  {
+   "id": "proj-calculator",
+   "subject": "Python",
+   "title": "Project 1: Command-line Calculator",
+   "phase": 1,
+   "order": 11,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 280,
+   "blocks": [
+    {
+     "id": "proj-calculator-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_functions.asp",
+       "url": "https://www.w3schools.com/python/python_functions.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "proj-calculator-build",
+     "type": "build",
+     "title": "Menu-driven CLI calculator: +, −, ×, ÷, power, % ; keeps running until the user quits; handles bad input and division by zero.",
+     "est_minutes": 240,
+     "done_when": [
+      "All 6 operations work",
+      "Invalid input shows a friendly message",
+      "Code split into functions"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-calculator-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which statement handles division by zero?",
+     "a": "try/except ZeroDivisionError"
+    },
+    {
+     "q": "How do you keep the menu running?",
+     "a": "A while loop until the user chooses to quit"
+    },
+    {
+     "q": "Why split the logic into functions?",
+     "a": "Reuse, readability and easier testing"
+    }
+   ]
+  },
+  {
+   "id": "py-comprehensions",
+   "subject": "Python",
+   "title": "List, Dict & Set Comprehensions",
+   "phase": 2,
+   "order": 12,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "py-comprehensions-learn",
+     "type": "learn",
+     "title": "Watch: List, Dict & Set Comprehensions",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Comprehensions - How they work and why you should be using them (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=3dt4OGnU5sM",
+       "youtube_id": "3dt4OGnU5sM",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-comprehensions-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "datastructures.html#list-comprehensions",
+       "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_lists_comprehension.asp",
+       "url": "https://www.w3schools.com/python/python_lists_comprehension.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap18.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap18.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-comprehensions-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Problem",
+       "url": "https://www.hackerrank.com/challenges/list-comprehensions/problem",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-comprehensions-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Squares of 0–9 as a list comprehension?",
+     "a": "[x*x for x in range(10)]"
+    },
+    {
+     "q": "Add a filter to a comprehension?",
+     "a": "[x for x in nums if x > 0]"
+    },
+    {
+     "q": "Dict comprehension syntax?",
+     "a": "{k: v for k, v in pairs}"
+    }
+   ]
+  },
+  {
+   "id": "py-scope-lambda",
+   "subject": "Python",
+   "title": "Scope (LEGB), Lambda, map & filter",
+   "phase": 2,
+   "order": 13,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 120,
+   "blocks": [
+    {
+     "id": "py-scope-lambda-learn",
+     "type": "learn",
+     "title": "Watch: Scope (LEGB), Lambda, map & filter",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Variable Scope - Understanding the LEGB rule and global/nonlocal statements (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=QVdf0LgmICw",
+       "youtube_id": "QVdf0LgmICw",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-scope-lambda-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "python_scope.asp",
+       "url": "https://www.w3schools.com/python/python_scope.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_lambda.asp",
+       "url": "https://www.w3schools.com/python/python_lambda.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "controlflow.html#lambda-expressions",
+       "url": "https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-scope-lambda-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Locomotive Engineer",
+       "url": "https://exercism.org/tracks/python/exercises/locomotive-engineer",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-scope-lambda-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does LEGB stand for?",
+     "a": "Local, Enclosing, Global, Built-in"
+    },
+    {
+     "q": "Write a lambda that doubles x.",
+     "a": "lambda x: x * 2"
+    },
+    {
+     "q": "What does filter() return in Python 3?",
+     "a": "An iterator (wrap in list() to see items)"
+    }
+   ]
+  },
+  {
+   "id": "py-modules-pip",
+   "subject": "Python",
+   "title": "Modules, Packages & pip",
+   "phase": 2,
+   "order": 14,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-modules-pip-learn",
+     "type": "learn",
+     "title": "Watch: Modules, Packages & pip",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial for Beginners 9: Import Modules and Exploring The Standard Library (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=CqvZ3vGoGs0",
+       "youtube_id": "CqvZ3vGoGs0",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-modules-pip-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "modules.html",
+       "url": "https://docs.python.org/3/tutorial/modules.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_modules.asp",
+       "url": "https://www.w3schools.com/python/python_modules.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_pip.asp",
+       "url": "https://www.w3schools.com/python/python_pip.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-modules-pip-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-modules-pip-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Purpose of if __name__ == '__main__':?",
+     "a": "Run code only when the file is executed directly, not imported"
+    },
+    {
+     "q": "Install a package from PyPI?",
+     "a": "pip install package-name"
+    },
+    {
+     "q": "Import one function from a module?",
+     "a": "from math import sqrt"
+    }
+   ]
+  },
+  {
+   "id": "py-files",
+   "subject": "Python",
+   "title": "File Handling",
+   "phase": 2,
+   "order": 15,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-files-learn",
+     "type": "learn",
+     "title": "Watch: File Handling",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: File Objects - Reading and Writing to Files (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=Uh2ebFW8OYM",
+       "youtube_id": "Uh2ebFW8OYM",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-files-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "inputoutput.html#reading-and-writing-files",
+       "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_file_handling.asp",
+       "url": "https://www.w3schools.com/python/python_file_handling.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap13.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap13.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-files-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-files-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why use 'with open(...) as f'?",
+     "a": "It closes the file automatically"
+    },
+    {
+     "q": "Mode to append to a file?",
+     "a": "'a'"
+    },
+    {
+     "q": "Read all lines into a list?",
+     "a": "f.readlines()"
+    }
+   ]
+  },
+  {
+   "id": "py-exceptions",
+   "subject": "Python",
+   "title": "Exceptions & Error Handling",
+   "phase": 2,
+   "order": 16,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "py-exceptions-learn",
+     "type": "learn",
+     "title": "Watch: Exceptions & Error Handling",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Using Try/Except Blocks for Error Handling (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8",
+       "youtube_id": "NIWwJbo-9_8",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-exceptions-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "errors.html",
+       "url": "https://docs.python.org/3/tutorial/errors.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_try_except.asp",
+       "url": "https://www.w3schools.com/python/python_try_except.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-exceptions-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-exceptions-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "When does a finally block run?",
+     "a": "Always — with or without an exception"
+    },
+    {
+     "q": "Raise your own error?",
+     "a": "raise ValueError('message')"
+    },
+    {
+     "q": "When does try's else block run?",
+     "a": "When no exception occurred"
+    }
+   ]
+  },
+  {
+   "id": "py-recursion",
+   "subject": "Python",
+   "title": "Recursion",
+   "phase": 2,
+   "order": 17,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 125,
+   "blocks": [
+    {
+     "id": "py-recursion-learn",
+     "type": "learn",
+     "title": "Watch: Recursion",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python: RECURSION Explained",
+       "url": "https://www.youtube.com/watch?v=wMNrSM5RFMc",
+       "youtube_id": "wMNrSM5RFMc",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-recursion-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "chap05.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap05.html",
+       "lang": "en",
+       "provider": "allendowney.github.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap06.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap06.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-recursion-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-recursion-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "py-recursion-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 20,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "title": "W3Schools Python Quiz",
+       "url": "https://www.w3schools.com/python/python_quiz.asp",
+       "lang": "en",
+       "provider": "W3Schools (free)",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Two parts every recursive function needs?",
+     "a": "A base case and a recursive case"
+    },
+    {
+     "q": "Error when recursion never stops?",
+     "a": "RecursionError (maximum recursion depth exceeded)"
+    },
+    {
+     "q": "Recursive factorial formula?",
+     "a": "n! = n × (n − 1)!, with 0! = 1"
+    }
+   ]
+  },
+  {
+   "id": "proj-todo",
+   "subject": "Python",
+   "title": "Project 2: To-Do App that saves to a file (JSON)",
+   "phase": 2,
+   "order": 18,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 400,
+   "blocks": [
+    {
+     "id": "proj-todo-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "inputoutput.html#saving-structured-data-with-json",
+       "url": "https://docs.python.org/3/tutorial/inputoutput.html#saving-structured-data-with-json",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "proj-todo-build",
+     "type": "build",
+     "title": "CLI to-do list: add, list, complete and delete tasks; tasks are saved to tasks.json and reloaded on start.",
+     "est_minutes": 360,
+     "done_when": [
+      "Tasks survive restarting the app",
+      "Each task has title + done flag",
+      "Errors handled with try/except"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-todo-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which module saves Python data as JSON?",
+     "a": "json (json.dump / json.load)"
+    },
+    {
+     "q": "How do you avoid losing tasks when the app closes?",
+     "a": "Write tasks to a file and load them at start"
+    },
+    {
+     "q": "Which data structure fits one task?",
+     "a": "A dictionary, e.g. {'title': ..., 'done': False}"
+    }
+   ]
+  },
+  {
+   "id": "py-classes",
+   "subject": "Python",
+   "title": "Classes & Objects",
+   "phase": 3,
+   "order": 19,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 120,
+   "blocks": [
+    {
+     "id": "py-classes-learn",
+     "type": "learn",
+     "title": "Watch: Classes & Objects",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python OOP Tutorial 1: Classes and Instances (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM",
+       "youtube_id": "ZDa-Z5JzLYM",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Classes & Objects (OOPS) (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=o6zPAzl4ZtM",
+       "youtube_id": "o6zPAzl4ZtM",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-classes-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "classes.html",
+       "url": "https://docs.python.org/3/tutorial/classes.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_classes.asp",
+       "url": "https://www.w3schools.com/python/python_classes.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap14.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap14.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap15.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap15.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap16.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap16.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-classes-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-classes-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What is __init__?",
+     "a": "The initialiser that sets up a new object's attributes"
+    },
+    {
+     "q": "What does self refer to?",
+     "a": "The current instance"
+    },
+    {
+     "q": "Class variable vs instance variable?",
+     "a": "Class variables are shared by all instances; instance variables belong to one object"
+    }
+   ]
+  },
+  {
+   "id": "py-inheritance",
+   "subject": "Python",
+   "title": "Inheritance & Polymorphism",
+   "phase": 3,
+   "order": 20,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-inheritance-learn",
+     "type": "learn",
+     "title": "Watch: Inheritance & Polymorphism",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python OOP Tutorial 4: Inheritance - Creating Subclasses (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=RSl87lqOXDE",
+       "youtube_id": "RSl87lqOXDE",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Oops Inheritance (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=dtZ9vCV2oUA",
+       "youtube_id": "dtZ9vCV2oUA",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-inheritance-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "classes.html#inheritance",
+       "url": "https://docs.python.org/3/tutorial/classes.html#inheritance",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_inheritance.asp",
+       "url": "https://www.w3schools.com/python/python_inheritance.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap17.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap17.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-inheritance-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-inheritance-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Call the parent class's __init__?",
+     "a": "super().__init__(...)"
+    },
+    {
+     "q": "Check if an object is an instance of a class?",
+     "a": "isinstance(obj, Class)"
+    },
+    {
+     "q": "What is method overriding?",
+     "a": "A subclass redefining a method from its parent"
+    }
+   ]
+  },
+  {
+   "id": "py-dunder",
+   "subject": "Python",
+   "title": "Special (Dunder) Methods & Class Methods",
+   "phase": 3,
+   "order": 21,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-dunder-learn",
+     "type": "learn",
+     "title": "Watch: Special (Dunder) Methods & Class Methods",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python OOP Tutorial 5: Special (Magic/Dunder) Methods (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=3ohzBxoFHAY",
+       "youtube_id": "3ohzBxoFHAY",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "main_hi",
+       "title": "Class Methods In Python (CodeWithHarry, 100 Days of Code)",
+       "url": "https://www.youtube.com/watch?v=16K7DvU5Bvw",
+       "youtube_id": "16K7DvU5Bvw",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-dunder-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "datamodel.html#special-method-names",
+       "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "Think Python 3e – chap15.html",
+       "url": "https://allendowney.github.io/ThinkPython/chap15.html",
+       "lang": "en",
+       "provider": "Think Python 3e (CC BY-NC)",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "extra"
+      }
+     ]
+    },
+    {
+     "id": "py-dunder-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-dunder-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which method controls print(obj)?",
+     "a": "__str__"
+    },
+    {
+     "q": "Which method makes len(obj) work?",
+     "a": "__len__"
+    },
+    {
+     "q": "Decorator for a method that receives the class?",
+     "a": "@classmethod"
+    }
+   ]
+  },
+  {
+   "id": "py-iterators-generators",
+   "subject": "Python",
+   "title": "Iterators & Generators",
+   "phase": 3,
+   "order": 22,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "py-iterators-generators-learn",
+     "type": "learn",
+     "title": "Watch: Iterators & Generators",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial - 22. Generators",
+       "url": "https://www.youtube.com/watch?v=lJUZc3OhU7A",
+       "youtube_id": "lJUZc3OhU7A",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-iterators-generators-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "classes.html#iterators",
+       "url": "https://docs.python.org/3/tutorial/classes.html#iterators",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "classes.html#generators",
+       "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_iterators.asp",
+       "url": "https://www.w3schools.com/python/python_iterators.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-iterators-generators-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-iterators-generators-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Keyword that makes a function a generator?",
+     "a": "yield"
+    },
+    {
+     "q": "Get the next value from an iterator?",
+     "a": "next(it)"
+    },
+    {
+     "q": "Why use generators?",
+     "a": "They produce values lazily and save memory"
+    }
+   ]
+  },
+  {
+   "id": "py-decorators",
+   "subject": "Python",
+   "title": "Decorators",
+   "phase": 3,
+   "order": 23,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 135,
+   "blocks": [
+    {
+     "id": "py-decorators-learn",
+     "type": "learn",
+     "title": "Watch: Decorators",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Decorators - Dynamically Alter The Functionality Of Your Functions (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=FsAPt_9Bf3U",
+       "youtube_id": "FsAPt_9Bf3U",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "hi_full_course_section",
+       "title": "Python Tutorial For Beginners in Hindi (CodeWithHarry, full course)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ],
+     "note": "Hindi: open the matching section of the full course (timestamps in the video description)."
+    },
+    {
+     "id": "py-decorators-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "glossary.html#term-decorator",
+       "url": "https://docs.python.org/3/glossary.html#term-decorator",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-decorators-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-decorators-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "py-decorators-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 20,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "title": "W3Schools Python Quiz",
+       "url": "https://www.w3schools.com/python/python_quiz.asp",
+       "lang": "en",
+       "provider": "W3Schools (free)",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "What is a decorator?",
+     "a": "A function that takes a function and returns a modified function"
+    },
+    {
+     "q": "What does @my_decorator above def f() mean?",
+     "a": "f = my_decorator(f)"
+    },
+    {
+     "q": "Why use functools.wraps?",
+     "a": "To keep the original function's name and docstring"
+    }
+   ]
+  },
+  {
+   "id": "py-venv",
+   "subject": "Python",
+   "title": "Virtual Environments",
+   "phase": 4,
+   "order": 24,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 55,
+   "blocks": [
+    {
+     "id": "py-venv-learn",
+     "type": "learn",
+     "title": "Watch: Virtual Environments",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: VENV (Mac & Linux) - How to Use Virtual Environments with the Built-In venv Module (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=Kg1Yvry_Ydk",
+       "youtube_id": "Kg1Yvry_Ydk",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "How to create virtual environment in VS Code in Python in Hindi (Coding Crane)",
+       "url": "https://www.youtube.com/watch?v=dK2juwzTXhk",
+       "youtube_id": "dK2juwzTXhk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Coding Crane",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-venv-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "venv.html",
+       "url": "https://docs.python.org/3/tutorial/venv.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-venv-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Create a virtual environment named .venv?",
+     "a": "python -m venv .venv"
+    },
+    {
+     "q": "Save installed packages to a file?",
+     "a": "pip freeze > requirements.txt"
+    },
+    {
+     "q": "Why use a virtual environment?",
+     "a": "To isolate each project's dependencies"
+    }
+   ]
+  },
+  {
+   "id": "py-stdlib",
+   "subject": "Python",
+   "title": "Standard Library: datetime, os, json",
+   "phase": 4,
+   "order": 25,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 110,
+   "blocks": [
+    {
+     "id": "py-stdlib-learn",
+     "type": "learn",
+     "title": "Watch: Standard Library: datetime, os, json",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Working with JSON Data using the json Module (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=9N6a-VLBa2I",
+       "youtube_id": "9N6a-VLBa2I",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Python Tutorial For Beginners in Hindi | Complete Python Course (jump to the relevant section) (CodeWithHarry)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-stdlib-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "stdlib.html",
+       "url": "https://docs.python.org/3/tutorial/stdlib.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_datetime.asp",
+       "url": "https://www.w3schools.com/python/python_datetime.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "python_json.asp",
+       "url": "https://www.w3schools.com/python/python_json.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-stdlib-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-stdlib-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Convert a Python dict to a JSON string?",
+     "a": "json.dumps(d)"
+    },
+    {
+     "q": "Get the current date and time?",
+     "a": "datetime.now() (from datetime import datetime)"
+    },
+    {
+     "q": "List files in a folder?",
+     "a": "os.listdir(path)"
+    }
+   ]
+  },
+  {
+   "id": "py-requests-apis",
+   "subject": "Python",
+   "title": "HTTP Requests & APIs",
+   "phase": 4,
+   "order": 26,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 85,
+   "blocks": [
+    {
+     "id": "py-requests-apis-learn",
+     "type": "learn",
+     "title": "Watch: HTTP Requests & APIs",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Requests Tutorial: Request Web Pages, Download Images, POST Data, Read JSON, and More (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=tb8gHvYlCFs",
+       "youtube_id": "tb8gHvYlCFs",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Python Tutorial For Beginners in Hindi | Complete Python Course (jump to the requests/API section) (CodeWithHarry)",
+       "url": "https://www.youtube.com/watch?v=UrsmFxEIp5k",
+       "youtube_id": "UrsmFxEIp5k",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-requests-apis-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "https://requests.readthedocs.io/en/latest/user/quickstart/",
+       "url": "https://requests.readthedocs.io/en/latest/user/quickstart/",
+       "lang": "en",
+       "provider": "requests.readthedocs.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-requests-apis-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Send a GET request?",
+     "a": "requests.get(url)"
+    },
+    {
+     "q": "Read a JSON response?",
+     "a": "response.json()"
+    },
+    {
+     "q": "What does status code 200 mean?",
+     "a": "OK — the request succeeded"
+    }
+   ]
+  },
+  {
+   "id": "proj-scraper",
+   "subject": "Python",
+   "title": "Project 3: Web Scraper (requests + BeautifulSoup)",
+   "phase": 4,
+   "order": 27,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 445,
+   "blocks": [
+    {
+     "id": "proj-scraper-learn",
+     "type": "learn",
+     "title": "Watch: Project 3: Web Scraper (requests + BeautifulSoup)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Web Scraping with BeautifulSoup and Requests (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=ng2o98k983k",
+       "youtube_id": "ng2o98k983k",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-scraper-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+       "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+       "lang": "en",
+       "provider": "www.crummy.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "proj-scraper-build",
+     "type": "build",
+     "title": "Scrape a practice site (e.g. https://books.toscrape.com) for titles and prices, save to CSV.",
+     "est_minutes": 360,
+     "done_when": [
+      "Collects at least 50 rows",
+      "Saves a clean CSV",
+      "Respects robots.txt / practice site only"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-scraper-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Find all <a> tags with BeautifulSoup?",
+     "a": "soup.find_all('a')"
+    },
+    {
+     "q": "What should you check before scraping a site?",
+     "a": "Its robots.txt and terms of use"
+    },
+    {
+     "q": "Save scraped rows to a spreadsheet-friendly file?",
+     "a": "Write a CSV with the csv module"
+    }
+   ]
+  },
+  {
+   "id": "py-numpy",
+   "subject": "Python",
+   "title": "NumPy Basics",
+   "phase": 4,
+   "order": 28,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "py-numpy-learn",
+     "type": "learn",
+     "title": "Watch: NumPy Basics",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Complete Python NumPy Tutorial (Creating Arrays, Indexing, Math, Statistics, Reshaping) (Keith Galli)",
+       "url": "https://www.youtube.com/watch?v=GB9ByFAIAH4",
+       "youtube_id": "GB9ByFAIAH4",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Python Numpy Introduction - In Hindi (codeitup)",
+       "url": "https://www.youtube.com/watch?v=6puhu5ulFSE",
+       "youtube_id": "6puhu5ulFSE",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "codeitup",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-numpy-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "absolute_beginners.html",
+       "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+       "lang": "en",
+       "provider": "numpy.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-numpy-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python",
+       "url": "https://www.hackerrank.com/domains/python",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-numpy-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Create an array from a list?",
+     "a": "np.array([1, 2, 3])"
+    },
+    {
+     "q": "Shape of a 2 × 3 array?",
+     "a": "(2, 3)"
+    },
+    {
+     "q": "Why is NumPy faster than lists for maths?",
+     "a": "Vectorised operations on contiguous typed arrays"
+    }
+   ]
+  },
+  {
+   "id": "py-pandas",
+   "subject": "Python",
+   "title": "Pandas Basics",
+   "phase": 4,
+   "order": 29,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 130,
+   "blocks": [
+    {
+     "id": "py-pandas-learn",
+     "type": "learn",
+     "title": "Watch: Pandas Basics",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Pandas Tutorial (Part 1): Getting Started with Data Analysis - Installation and Loading Data (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+       "youtube_id": "ZyhVh-qRZPA",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Python Pandas Tutorial in Hindi (CodeWithHarry)",
+       "url": "https://www.youtube.com/watch?v=RhEjmHeDNoA",
+       "youtube_id": "RhEjmHeDNoA",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-pandas-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "10min.html",
+       "url": "https://pandas.pydata.org/docs/user_guide/10min.html",
+       "lang": "en",
+       "provider": "pandas.pydata.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-pandas-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Pandas",
+       "url": "https://www.kaggle.com/learn/pandas",
+       "lang": "en",
+       "provider": "www.kaggle.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-pandas-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Read a CSV into a DataFrame?",
+     "a": "pd.read_csv('file.csv')"
+    },
+    {
+     "q": "See the first 5 rows?",
+     "a": "df.head()"
+    },
+    {
+     "q": "Filter rows where age > 30?",
+     "a": "df[df['age'] > 30]"
+    }
+   ]
+  },
+  {
+   "id": "py-matplotlib",
+   "subject": "Python",
+   "title": "Data Visualisation with Matplotlib",
+   "phase": 4,
+   "order": 30,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 120,
+   "blocks": [
+    {
+     "id": "py-matplotlib-learn",
+     "type": "learn",
+     "title": "Watch: Data Visualisation with Matplotlib",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Matplotlib Tutorial (Part 1): Creating and Customizing Our First Plots (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=UO98lJQ3QGI",
+       "youtube_id": "UO98lJQ3QGI",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Python Matplotlib Tutorial in Hindi | Learn in 2 hours | Matplotlib for Data Science (Amit Thinks)",
+       "url": "https://www.youtube.com/watch?v=vBCXsAd_swk",
+       "youtube_id": "vBCXsAd_swk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Amit Thinks",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-matplotlib-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "quick_start.html",
+       "url": "https://matplotlib.org/stable/users/explain/quick_start.html",
+       "lang": "en",
+       "provider": "matplotlib.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-matplotlib-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Data Visualization",
+       "url": "https://www.kaggle.com/learn/data-visualization",
+       "lang": "en",
+       "provider": "www.kaggle.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "py-matplotlib-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Draw a line chart?",
+     "a": "plt.plot(x, y)"
+    },
+    {
+     "q": "Add a title?",
+     "a": "plt.title('...')"
+    },
+    {
+     "q": "Save a chart to a file?",
+     "a": "plt.savefig('chart.png')"
+    }
+   ]
+  },
+  {
+   "id": "proj-api",
+   "subject": "Python",
+   "title": "Project 4: API App with Flask",
+   "phase": 4,
+   "order": 31,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 565,
+   "blocks": [
+    {
+     "id": "proj-api-learn",
+     "type": "learn",
+     "title": "Watch: Project 4: API App with Flask",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Flask Tutorial: Full-Featured Web App Part 1 - Getting Started (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=MwZwr5Tvyxo",
+       "youtube_id": "MwZwr5Tvyxo",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-api-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "https://flask.palletsprojects.com/en/stable/quickstart/",
+       "url": "https://flask.palletsprojects.com/en/stable/quickstart/",
+       "lang": "en",
+       "provider": "flask.palletsprojects.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "proj-api-build",
+     "type": "build",
+     "title": "Small REST API in Flask for the to-do list: GET/POST/PATCH/DELETE /tasks returning JSON.",
+     "est_minutes": 480,
+     "done_when": [
+      "All 4 endpoints work",
+      "Data persists to a file or SQLite",
+      "Tested with a few unittest/pytest tests"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-api-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Define a route in Flask?",
+     "a": "@app.route('/path')"
+    },
+    {
+     "q": "Return JSON from a Flask view?",
+     "a": "return jsonify(data) (or return a dict)"
+    },
+    {
+     "q": "Default Flask development port?",
+     "a": "5000"
+    }
+   ]
+  },
+  {
+   "id": "py-git",
+   "subject": "Python",
+   "title": "Git & GitHub Basics",
+   "phase": 5,
+   "order": 32,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 70,
+   "blocks": [
+    {
+     "id": "py-git-learn",
+     "type": "learn",
+     "title": "Watch: Git & GitHub Basics",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Git Tutorial for Beginners: Command-Line Fundamentals (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=HVsySz-h9r4",
+       "youtube_id": "HVsySz-h9r4",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Git & GitHub Tutorial For Beginners In Hindi (CodeWithHarry)",
+       "url": "https://www.youtube.com/watch?v=gwWKnnCMQ5c",
+       "youtube_id": "gwWKnnCMQ5c",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": null,
+       "est_minutes": 60,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-git-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "v2",
+       "url": "https://git-scm.com/book/en/v2",
+       "lang": "en",
+       "provider": "git-scm.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-git-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Stage all changes?",
+     "a": "git add ."
+    },
+    {
+     "q": "Save a snapshot with a message?",
+     "a": "git commit -m \"message\""
+    },
+    {
+     "q": "Upload commits to GitHub?",
+     "a": "git push"
+    }
+   ]
+  },
+  {
+   "id": "py-testing",
+   "subject": "Python",
+   "title": "Testing Your Code (unittest / pytest)",
+   "phase": 5,
+   "order": 33,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 80,
+   "blocks": [
+    {
+     "id": "py-testing-learn",
+     "type": "learn",
+     "title": "Watch: Testing Your Code (unittest / pytest)",
+     "est_minutes": 40,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python Tutorial: Unit Testing Your Code with the unittest Module (Corey Schafer)",
+       "url": "https://www.youtube.com/watch?v=6tNS--WetLI",
+       "youtube_id": "6tNS--WetLI",
+       "lang": "en",
+       "provider": "YouTube",
+       "duration_seconds": null,
+       "est_minutes": 40,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "How to Test Python Code with pytest: A Step-by-Step Guide [ HINDI ] (Kritim Yantra)",
+       "url": "https://www.youtube.com/watch?v=leQOmxftqF8",
+       "youtube_id": "leQOmxftqF8",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Kritim Yantra",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "py-testing-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "unittest.html",
+       "url": "https://docs.python.org/3/library/unittest.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      },
+      {
+       "type": "notes",
+       "title": "getting-started.html",
+       "url": "https://docs.pytest.org/en/stable/getting-started.html",
+       "lang": "en",
+       "provider": "docs.pytest.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "py-testing-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "unittest assertion for equality?",
+     "a": "self.assertEqual(a, b)"
+    },
+    {
+     "q": "pytest finds tests in files named?",
+     "a": "test_*.py or *_test.py"
+    },
+    {
+     "q": "Why write tests?",
+     "a": "To catch bugs early and refactor safely"
+    }
+   ]
+  },
+  {
+   "id": "proj-final",
+   "subject": "Python",
+   "title": "Final Project: Portfolio-ready Python app",
+   "phase": 5,
+   "order": 34,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1285,
+   "blocks": [
+    {
+     "id": "proj-final-read",
+     "type": "read",
+     "title": "Read the notes and type out every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "title": "index.html",
+       "url": "https://docs.python.org/3/tutorial/index.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "role": "main"
+      }
+     ]
+    },
+    {
+     "id": "proj-final-build",
+     "type": "build",
+     "title": "Pick one: expense tracker with charts, news scraper + API, or data-analysis report on a public dataset. Publish on GitHub with a README.",
+     "est_minutes": 1200,
+     "done_when": [
+      "Public GitHub repo with README",
+      "Uses at least 3 skills from this roadmap",
+      "Includes tests or a demo screenshot"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-final-practice",
+     "type": "practice",
+     "title": "Practice exercises (free account may be needed)",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "title": "Python_Basic",
+       "url": "https://www.hackerrank.com/skills-verification/python_basic",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-final-recall",
+     "type": "recall",
+     "title": "Recall check",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What should a project README contain?",
+     "a": "What it does, how to install and run it, and screenshots/examples"
+    },
+    {
+     "q": "How do you share your project?",
+     "a": "Push it to a public GitHub repository"
+    },
+    {
+     "q": "Free way to certify basic Python skills?",
+     "a": "HackerRank Python (Basic) skills certification"
+    }
+   ]
+  }
+ ],
+ "milestones": [
+  {
+   "id": "python-cert",
+   "after_phase": 5,
+   "type": "certification",
+   "title": "Optional: HackerRank Python (Basic) skills certificate",
+   "est_minutes": 90,
+   "score_entry": true,
+   "resources": [
+    {
+     "type": "test",
+     "title": "HackerRank Python (Basic) certification",
+     "url": "https://www.hackerrank.com/skills-verification/python_basic",
+     "lang": "en",
+     "provider": "HackerRank (free)",
+     "access": "all",
+     "status": "unverified",
+     "last_checked": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4909 @@
+{
+ "schema_version": "1.0",
+ "app": "FreeMentor",
+ "generated": "2026-10-08",
+ "goal_count": 73,
+ "categories": [
+  {
+   "name": "Entrance Exams",
+   "groups": [
+    "Banking",
+    "Defence",
+    "Engineering",
+    "Engineering PG",
+    "Government",
+    "Law",
+    "Management",
+    "Medical",
+    "Teaching",
+    "Teaching/Research",
+    "University Admission"
+   ]
+  },
+  {
+   "name": "Skills",
+   "groups": [
+    "Technology & Development",
+    "Data & AI",
+    "Design & Creative",
+    "Business & Professional"
+   ]
+  },
+  {
+   "name": "Programming Languages",
+   "groups": [
+    "Languages"
+   ]
+  }
+ ],
+ "goals": [
+  {
+   "id": "jee-main",
+   "name": "JEE Main",
+   "category": "Entrance Exams",
+   "group": "Engineering",
+   "type": "exam",
+   "status": "full",
+   "estimated_hours": 677,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://jeemain.nta.nic.in/",
+   "eligibility_note": "Class 12 (PCM) appearing/passed.",
+   "qualification_options": [
+    "Class 10",
+    "Class 11",
+    "Class 12",
+    "Dropper",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Class 11 Foundation",
+     "modules": [
+      "Units & Kinematics",
+      "Laws of Motion & Energy",
+      "Mole Concept, Atom, Bonding",
+      "Sets, Trigonometry, Quadratics, Sequences"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Class 11 Advanced",
+     "modules": [
+      "Rotation, Gravitation, Matter, Thermo, SHM, Waves",
+      "Equilibrium, Thermodynamics, Redox, GOC, Hydrocarbons",
+      "P&C, Binomial, Conics, Statistics, Limits"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Class 12 Core",
+     "modules": [
+      "Electrostatics, Current, Magnetism, EMI, AC",
+      "Solutions, Electrochem, Kinetics, d/f-block, Coordination",
+      "Matrices, Calculus, Differential Equations"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Class 12 Advanced",
+     "modules": [
+      "Optics, Modern Physics, Semiconductors",
+      "Carbonyls, Amines, Biomolecules, p-block",
+      "Vectors, 3D, Probability"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "PYQs & Mock Tests",
+     "modules": [
+      "Chapter-wise PYQs",
+      "Full-length mocks (official papers)"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Final Revision",
+     "modules": [
+      "Formula sheets",
+      "Weak-topic revision"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": "goals/jee-main.json",
+   "file_size_kb": 339.2
+  },
+  {
+   "id": "jee-advanced",
+   "name": "JEE Advanced",
+   "category": "Entrance Exams",
+   "group": "Engineering",
+   "type": "exam",
+   "status": "full",
+   "estimated_hours": 1008,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://jeeadv.ac.in/",
+   "eligibility_note": "For Indian nationals/OCI-PIO(I), qualifying JEE Main is only one requirement; age, attempt limits, first Class XII appearance with PCM, and prior IIT admission conditions also apply. Foreign/OCI-PIO(F) routes differ. Check the target-year official rules; this library uses 2026 as its confirmed baseline.",
+   "qualification_options": [
+    "Class 11",
+    "Class 12",
+    "Dropper",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Shared Foundation: Physics, Chemistry & Mathematics",
+     "modules": [
+      "Physics foundations",
+      "Chemistry foundations",
+      "Mathematics foundations"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Advanced Syllabus Additions & Depth",
+     "modules": [
+      "Advanced-specific Physics",
+      "Physical, inorganic and organic Chemistry additions",
+      "Calculus and spatial/vector geometry depth"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Advanced PYQs & Mixed Problem Solving",
+     "modules": [
+      "Multi-concept Physics",
+      "Integrated Chemistry",
+      "Integrated Mathematics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Full Two-paper Mocks & Final Revision",
+     "modules": [
+      "10 official paired-paper simulations (2016–2025)",
+      "Paper-specific scoring, analysis and weak-topic revision"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": "goals/jee-advanced.json",
+   "file_size_kb": 565.8
+  },
+  {
+   "id": "neet-ug",
+   "name": "NEET UG",
+   "category": "Entrance Exams",
+   "group": "Medical",
+   "type": "exam",
+   "status": "full",
+   "estimated_hours": 740,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://neet.nta.nic.in/",
+   "eligibility_note": "Class 12 (PCB) appearing/passed; minimum age 17 by 31 Dec of admission year.",
+   "qualification_options": [
+    "Class 10",
+    "Class 11",
+    "Class 12",
+    "Dropper",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Class 11 Foundation",
+     "modules": [
+      "Kinematics & Laws of Motion",
+      "Mole concept, Atom, Bonding",
+      "Diversity of Living World, Plant & Animal Kingdom"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Class 11 Advanced",
+     "modules": [
+      "Rotation to Waves",
+      "Equilibrium, GOC, Hydrocarbons",
+      "Cell, Plant & Human Physiology"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Class 12 Core",
+     "modules": [
+      "Electrostatics to EM Waves",
+      "Solutions to Coordination",
+      "Reproduction, Genetics, Evolution"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Class 12 Advanced",
+     "modules": [
+      "Optics, Modern Physics, Semiconductors",
+      "Organic Class 12, p-block",
+      "Human Welfare, Biotechnology, Ecology"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "PYQs & Mock Tests",
+     "modules": [
+      "Chapter-wise PYQs",
+      "Full-length mocks"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Final Revision",
+     "modules": [
+      "NCERT line-by-line Biology",
+      "Formula & reaction sheets"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": "goals/neet-ug.json",
+   "file_size_kb": 379.4
+  },
+  {
+   "id": "cat",
+   "name": "CAT",
+   "category": "Entrance Exams",
+   "group": "Management",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 450,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://iimcat.ac.in/",
+   "eligibility_note": "Graduation with 50% (45% SC/ST/PwD); final-year students eligible.",
+   "qualification_options": [
+    "Final-year student",
+    "Graduate",
+    "Working professional",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Arithmetic basics",
+      "Grammar & reading habit",
+      "Basic puzzles"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Quantitative Aptitude",
+     "modules": [
+      "Arithmetic",
+      "Algebra",
+      "Geometry & Mensuration",
+      "Number System",
+      "Modern Maths"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "VARC",
+     "modules": [
+      "Reading Comprehension",
+      "Para-jumbles & summaries",
+      "Odd sentence out"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "DILR",
+     "modules": [
+      "Tables & charts",
+      "Arrangements",
+      "Games & tournaments"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Mocks & Analysis",
+     "modules": [
+      "Sectional tests",
+      "Full mocks + analysis"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "upsc-cse",
+   "name": "UPSC Civil Services",
+   "category": "Entrance Exams",
+   "group": "Government",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 2500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://upsc.gov.in/",
+   "eligibility_note": "Graduate; age 21–32 (General) with category relaxations.",
+   "qualification_options": [
+    "Final-year student",
+    "Graduate",
+    "Working professional",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "NCERT Foundation",
+     "modules": [
+      "History, Geography, Polity, Economy NCERTs (6–12)"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "GS Prelims Core",
+     "modules": [
+      "Polity",
+      "Modern & Ancient History",
+      "Geography",
+      "Economy",
+      "Environment",
+      "Science & Tech",
+      "Current Affairs"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "CSAT",
+     "modules": [
+      "Comprehension",
+      "Quant & Reasoning"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Mains GS I–IV",
+     "modules": [
+      "Answer writing",
+      "Ethics case studies",
+      "Essay"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Optional Subject",
+     "modules": [
+      "Choose and complete optional"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Tests & Revision",
+     "modules": [
+      "Prelims mocks",
+      "Mains answer-writing tests"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "gate",
+   "name": "GATE",
+   "category": "Entrance Exams",
+   "group": "Engineering PG",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 900,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Bachelor's in engineering/science (3rd year onwards eligible). Official site changes yearly with the organising IIT.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Engineering Mathematics",
+     "modules": [
+      "Linear Algebra",
+      "Calculus",
+      "Probability"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "General Aptitude",
+     "modules": [
+      "Verbal",
+      "Quantitative",
+      "Analytical"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Core Subjects (branch-wise)",
+     "modules": [
+      "Branch syllabus units"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "PYQs & Mocks",
+     "modules": [
+      "Subject-wise PYQs",
+      "Full mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "clat",
+   "name": "CLAT",
+   "category": "Entrance Exams",
+   "group": "Law",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://consortiumofnlus.ac.in/",
+   "eligibility_note": "Class 12 with 45% (40% SC/ST) for UG.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Reading Foundation",
+     "modules": [
+      "Daily editorial reading"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "English Language",
+     "modules": [
+      "Passages & inference"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Current Affairs & GK",
+     "modules": [
+      "Monthly compilations"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Legal Reasoning",
+     "modules": [
+      "Principles & facts"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Logical Reasoning",
+     "modules": [
+      "Arguments & assumptions"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Quantitative Techniques",
+     "modules": [
+      "Data interpretation"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Mocks",
+     "modules": [
+      "Full CLAT mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "cuet-ug",
+   "name": "CUET UG",
+   "category": "Entrance Exams",
+   "group": "University Admission",
+   "type": "exam",
+   "status": "full",
+   "estimated_hours": 690,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://cuet.nta.nic.in/",
+   "eligibility_note": "Class 12 passed/appearing; admission eligibility and required CUET paper combination are set by each participating university and programme.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Language Test",
+     "modules": [
+      "Passage mapping",
+      "Factual RC",
+      "Narrative RC",
+      "Literary RC",
+      "Verbal ability",
+      "Vocabulary"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Domain Subjects",
+     "modules": [
+      "Programme-paper selection",
+      "Science domains",
+      "Commerce domains",
+      "Humanities domains",
+      "Applied/creative domains"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "General Aptitude Test",
+     "modules": [
+      "GK & current affairs",
+      "Numerical ability",
+      "Quantitative reasoning",
+      "Logical reasoning",
+      "Analytical reasoning"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "CBT Mocks & Final Revision",
+     "modules": [
+      "Language sectionals",
+      "Selected-domain sectionals",
+      "GAT sectionals",
+      "Selected-paper combination simulations"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": "goals/cuet-ug.json",
+   "file_size_kb": 508.1
+  },
+  {
+   "id": "ugc-net",
+   "name": "UGC NET",
+   "category": "Entrance Exams",
+   "group": "Teaching/Research",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 450,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://ugcnet.nta.nic.in/",
+   "eligibility_note": "Master's with 55% (50% reserved).",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Paper 1",
+     "modules": [
+      "Teaching & Research Aptitude",
+      "Comprehension",
+      "Reasoning & DI",
+      "ICT, Environment, Higher Education"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Paper 2",
+     "modules": [
+      "Subject syllabus units"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "PYQs & Mocks",
+     "modules": [
+      "Previous papers"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ssc-cgl",
+   "name": "SSC CGL",
+   "category": "Entrance Exams",
+   "group": "Government",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 600,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://ssc.gov.in/",
+   "eligibility_note": "Graduate; age typically 18–32 depending on post.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Quantitative Aptitude",
+     "modules": [
+      "Arithmetic",
+      "Algebra, Geometry, Trigonometry",
+      "DI"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Verbal & non-verbal"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "Grammar",
+      "Vocabulary",
+      "Comprehension"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "General Awareness",
+     "modules": [
+      "Static GK",
+      "Current affairs"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Tier 2 & Mocks",
+     "modules": [
+      "Computer knowledge",
+      "Full mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ssc-chsl",
+   "name": "SSC CHSL",
+   "category": "Entrance Exams",
+   "group": "Government",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 400,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://ssc.gov.in/",
+   "eligibility_note": "Class 12 passed; age 18–27.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Quantitative Aptitude",
+     "modules": [
+      "Arithmetic",
+      "Basic Algebra & Geometry"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Verbal & non-verbal"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "Grammar & vocabulary"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "General Awareness",
+     "modules": [
+      "Static GK",
+      "Current affairs"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Skill Test & Mocks",
+     "modules": [
+      "Typing practice",
+      "Full mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ibps-po",
+   "name": "IBPS PO",
+   "category": "Entrance Exams",
+   "group": "Banking",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://www.ibps.in/",
+   "eligibility_note": "Graduate; age 20–30.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Quant & DI",
+     "modules": [
+      "Arithmetic",
+      "Data Interpretation"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Puzzles & seating",
+      "Inequalities, syllogism"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "RC",
+      "Cloze & error spotting"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Banking & Economy Awareness",
+     "modules": [
+      "Banking terms",
+      "Current affairs"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Mains & Interview",
+     "modules": [
+      "Descriptive writing",
+      "Mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ibps-clerk",
+   "name": "IBPS Clerk",
+   "category": "Entrance Exams",
+   "group": "Banking",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 350,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://www.ibps.in/",
+   "eligibility_note": "Graduate; age 20–28.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Numerical Ability",
+     "modules": [
+      "Simplification",
+      "Arithmetic"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Puzzles",
+      "Coding-decoding"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "RC & grammar"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "General/Financial Awareness",
+     "modules": [
+      "Banking basics"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Mocks",
+     "modules": [
+      "Prelims + Mains mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "sbi-po",
+   "name": "SBI PO",
+   "category": "Entrance Exams",
+   "group": "Banking",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://sbi.co.in/web/careers",
+   "eligibility_note": "Graduate; age 21–30.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Quant & DI",
+     "modules": [
+      "Arithmetic",
+      "High-level DI"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Puzzles",
+      "Logical reasoning"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "RC",
+      "Descriptive"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "General & Economy Awareness",
+     "modules": [
+      "Banking & economy"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Mains, GE & Interview",
+     "modules": [
+      "Mocks",
+      "Group exercise prep"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "sbi-clerk",
+   "name": "SBI Clerk",
+   "category": "Entrance Exams",
+   "group": "Banking",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 350,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://sbi.co.in/web/careers",
+   "eligibility_note": "Graduate; age 20–28.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Numerical Ability",
+     "modules": [
+      "Arithmetic"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Reasoning",
+     "modules": [
+      "Puzzles"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "English",
+     "modules": [
+      "Grammar & RC"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "General Awareness",
+     "modules": [
+      "Banking"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Mocks",
+     "modules": [
+      "Prelims + Mains mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "nda",
+   "name": "NDA",
+   "category": "Entrance Exams",
+   "group": "Defence",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 600,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://upsc.gov.in/",
+   "eligibility_note": "Class 12 (PCM for Air Force/Navy); unmarried; age 16.5–19.5.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Mathematics",
+     "modules": [
+      "Algebra",
+      "Trigonometry",
+      "Calculus",
+      "Statistics & Probability"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "GAT – English",
+     "modules": [
+      "Grammar & vocabulary"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "GAT – General Knowledge",
+     "modules": [
+      "Physics, Chemistry, History, Geography, Current events"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "SSB Preparation",
+     "modules": [
+      "Psychology tests",
+      "GTO tasks",
+      "Interview"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "cds",
+   "name": "CDS",
+   "category": "Entrance Exams",
+   "group": "Defence",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://upsc.gov.in/",
+   "eligibility_note": "Graduate (engineering for some academies); age ~19–25 depending on academy.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "English",
+     "modules": [
+      "Grammar",
+      "RC"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "General Knowledge",
+     "modules": [
+      "Static & current"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Elementary Mathematics",
+     "modules": [
+      "Arithmetic",
+      "Algebra",
+      "Geometry"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "SSB Preparation",
+     "modules": [
+      "Interview stages"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "rrb-ntpc",
+   "name": "RRB NTPC",
+   "category": "Entrance Exams",
+   "group": "Government",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 400,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://indianrailways.gov.in/",
+   "eligibility_note": "Class 12 / Graduate depending on post.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Mathematics",
+     "modules": [
+      "Arithmetic",
+      "Basic algebra & geometry"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "General Intelligence & Reasoning",
+     "modules": [
+      "Analogies",
+      "Puzzles"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "General Awareness",
+     "modules": [
+      "Static GK",
+      "Railways & current affairs"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "CBT 2 & Mocks",
+     "modules": [
+      "Typing / CBAT where applicable",
+      "Full mocks"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ctet",
+   "name": "CTET",
+   "category": "Entrance Exams",
+   "group": "Teaching",
+   "type": "exam",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": "https://ctet.nic.in/",
+   "eligibility_note": "D.El.Ed/B.Ed (pursuing/completed) as per paper level.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Child Development & Pedagogy",
+     "modules": [
+      "Learning theories",
+      "Inclusive education"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Language I & II",
+     "modules": [
+      "Comprehension",
+      "Language pedagogy"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Maths/EVS or Subject Paper",
+     "modules": [
+      "Content & pedagogy"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "PYQs & Mocks",
+     "modules": [
+      "Previous papers"
+     ]
+    }
+   ],
+   "career_outcomes": null,
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "full-stack",
+   "name": "Full Stack Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "full",
+   "estimated_hours": 481,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Web Fundamentals",
+     "modules": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Frontend",
+     "modules": [
+      "Git & GitHub",
+      "React"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Backend",
+     "modules": [
+      "Node.js & Express",
+      "REST APIs",
+      "Auth"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Databases",
+     "modules": [
+      "SQL (PostgreSQL)",
+      "MongoDB"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Deployment",
+     "modules": [
+      "Hosting & CI/CD"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Projects",
+     "modules": [
+      "Portfolio",
+      "Blog",
+      "Auth System",
+      "E-commerce",
+      "Production full-stack app"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Build responsive, accessible frontends with React and TypeScript",
+    "Build secure REST APIs with Node, Express and PostgreSQL",
+    "Connect frontend and backend into a full product",
+    "Test, containerise, deploy and document a full-stack app with CI/CD",
+    "Portfolio of 5 projects for Full Stack Developer roles"
+   ],
+   "file": "goals/full-stack.json",
+   "file_size_kb": 211.2
+  },
+  {
+   "id": "frontend",
+   "name": "Frontend Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "full",
+   "estimated_hours": 335,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Web Platform & HTML",
+     "modules": [
+      "Web, Browsers, HTTP, DNS & DevTools",
+      "Semantic HTML & Document Structure",
+      "Forms, Validation & User Input",
+      "Accessibility Foundations & Keyboard Navigation",
+      "Images, Audio, Video & Responsive Media",
+      "Metadata, Structured Content & Basic SEO",
+      "Phase Project: Accessible Multi-page Website"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "CSS, Responsive Design & Visual Systems",
+     "modules": [
+      "CSS Cascade, Specificity, Inheritance & Layers",
+      "Box Model, Flow, Positioning & Stacking",
+      "Flexbox, Grid, Container Queries & Subgrid",
+      "Responsive Design, Typography & Fluid Sizing",
+      "Transitions, Animations, Transforms & Visual Polish",
+      "Phase Project: Responsive Marketing Interface"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "JavaScript from Fundamentals to Advanced",
+     "modules": [
+      "JavaScript Values, Types, Operators & Control Flow",
+      "Functions, Scope, Closures & Modules",
+      "Arrays, Objects, Maps, Sets & Immutability",
+      "DOM, Events, Forms & Browser APIs",
+      "Promises, Async/Await, Fetch & Error Handling",
+      "Prototypes, Classes, Iterators & Functional Patterns",
+      "Phase Project: Vanilla JavaScript Data Application"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Professional Tooling & TypeScript",
+     "modules": [
+      "Git, GitHub, Collaboration & Code Review",
+      "Node.js, npm, Package Metadata & Scripts",
+      "Vite 8.1, Modules, Bundling & Environment Variables",
+      "TypeScript 7: Types, Narrowing, Generics & Modules",
+      "Linting, Formatting, Debugging & Source Maps",
+      "Phase Project: Typed Component Utility Library"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "React 19.3 & Application State",
+     "modules": [
+      "React 19.3 Mental Model, JSX & Components",
+      "State, Events, Forms & State Structure",
+      "Effects, Refs, Data Fetching & Custom Hooks",
+      "Routing, Layouts, Navigation & URL State",
+      "Context, Reducers & External State Management",
+      "Server State, Caching, Mutations & Optimistic UI",
+      "React Compiler, View Transitions & Advanced Composition",
+      "Phase Project: Production-style React Dashboard"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Quality, Accessibility, Performance & Security",
+     "modules": [
+      "Unit, Component, Integration & End-to-end Testing",
+      "WCAG 2.2, ARIA, Screen Readers & Accessibility Audits",
+      "Core Web Vitals, Profiling, Loading & Rendering Performance",
+      "Frontend Security, CSP, XSS, Dependencies & Trusted Types",
+      "Error Boundaries, Monitoring, Analytics & Privacy",
+      "Phase Project: Tested, Accessible and Fast Release"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Advanced Architecture, Frameworks & Design Systems",
+     "modules": [
+      "Design Systems, Tokens, Components & Documentation",
+      "Frontend Architecture, Feature Boundaries & Monorepos",
+      "Next.js 16.3, Rendering, Data, Caching & Security",
+      "Progressive Web Apps, Service Workers & Offline UX",
+      "Phase Project: Documented Design System"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: Developer Portfolio & Case Studies",
+      "Mastery Project: Accessible Commerce Frontend",
+      "Mastery Project: Real-time Collaborative Interface",
+      "Mastery Project: Offline-capable PWA",
+      "Master Capstone: Production Frontend Application"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Build accessible, responsive websites with HTML and CSS",
+    "Write modern JavaScript and work with APIs",
+    "Build, test and deploy React + TypeScript apps",
+    "Use Git, npm, Vite and Tailwind like a professional",
+    "Portfolio of 4 deployed projects for Frontend / UI Developer roles"
+   ],
+   "file": "goals/frontend.json",
+   "file_size_kb": 129.2
+  },
+  {
+   "id": "backend",
+   "name": "Backend Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "full",
+   "estimated_hours": 410,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://nodejs.org/en/learn",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Backend Foundations & TypeScript",
+     "modules": [
+      "Internet, HTTP, DNS, TLS & Client–Server Systems",
+      "Linux CLI, Processes, Permissions & Services",
+      "Git, GitHub, Branching & Review",
+      "Modern JavaScript for Backend Development",
+      "TypeScript 7: Types, Generics & Domain Models",
+      "Command-line Programs, Configuration & Environment",
+      "Phase Project: Typed CLI and File-backed Service"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Node.js Runtime & Engineering",
+     "modules": [
+      "Node.js 24 LTS Runtime, Modules & Event Loop",
+      "Promises, Streams, Buffers & Backpressure",
+      "Errors, Validation, Logging & Graceful Shutdown",
+      "Files, Child Processes, Workers & Scheduled Jobs",
+      "Node Test Runner, Unit Tests & Test Design",
+      "Phase Project: Tested Node.js Service"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "HTTP APIs, Express & Contracts",
+     "modules": [
+      "Express 5 Routing, Middleware & Controllers",
+      "REST, Resources, Methods, Status Codes & Idempotency",
+      "Request Validation, Error Contracts & Problem Details",
+      "OpenAPI 3.1, Documentation & Contract-first Design",
+      "GraphQL Schemas, Resolvers, Errors & Limits",
+      "WebSockets, Server-Sent Events & Real-time APIs",
+      "Phase Project: Versioned REST API with OpenAPI"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Data Modeling, PostgreSQL, MongoDB & Redis",
+     "modules": [
+      "Relational Modeling, Normalization & Constraints",
+      "SQL Queries, Joins, Aggregates & Window Functions",
+      "PostgreSQL 18 Transactions, Indexes & Query Plans",
+      "Parameterized Queries, Pools, ORMs & Migrations",
+      "MongoDB Documents and Redis 8.10 Caching",
+      "Phase Project: Transactional Data API"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Identity, Authorization & Security",
+     "modules": [
+      "Passwords, Sessions, Cookies, Tokens & MFA",
+      "Authorization, RBAC, ABAC & Tenant Isolation",
+      "OWASP API Security, Rate Limits & Abuse Controls",
+      "Secrets, Key Rotation, Encryption & Data Protection",
+      "Dependencies, SBOM, Vulnerability Management & Secure Builds",
+      "Phase Project: Secure Identity and Authorization Service"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Testing, Messaging & Resilience",
+     "modules": [
+      "Integration, Contract & End-to-end API Tests",
+      "Queues, Pub/Sub, Streams & Background Workers",
+      "Timeouts, Retries, Circuit Breakers & Idempotency",
+      "Email, File Uploads, Object Storage & Media Jobs",
+      "Webhooks, Signing, Delivery & Replay Protection",
+      "Phase Project: Event-driven Order Workflow"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Architecture, Scale, Delivery & Observability",
+     "modules": [
+      "Modular Monoliths, Services, DDD & Boundaries",
+      "Caching, Load Balancing, Replication & Scaling",
+      "Docker, Compose, Containers & Runtime Configuration",
+      "OpenTelemetry, Logs, Metrics, Traces & SLOs",
+      "CI/CD, Migrations, Deployment Strategies & Rollback",
+      "Phase Project: Observable Production Backend"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: Content Platform API",
+      "Mastery Project: E-commerce and Payments Backend",
+      "Mastery Project: Real-time Collaboration Backend",
+      "Mastery Project: Multi-tenant SaaS Backend",
+      "Mastery Project: Event-driven Processing Platform",
+      "Master Capstone: Production Backend System"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Design and build REST APIs with Node.js, Express and TypeScript",
+    "Model data in PostgreSQL and use an ORM safely",
+    "Implement secure authentication and follow OWASP guidance",
+    "Test, containerise, deploy and document services with CI/CD",
+    "Explain basic system-design trade-offs in interviews"
+   ],
+   "file": "goals/backend.json",
+   "file_size_kb": 111.0
+  },
+  {
+   "id": "mobile-dev",
+   "name": "Mobile App Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 450,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Programming",
+     "modules": [
+      "Dart or Kotlin"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Framework",
+     "modules": [
+      "Flutter or Android (Jetpack Compose)"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Data & APIs",
+     "modules": [
+      "Local storage",
+      "REST"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Publishing",
+     "modules": [
+      "Play Store release"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Projects",
+     "modules": [
+      "To-do app",
+      "API app",
+      "Published app"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Android Developer",
+    "Flutter Developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "web-dev",
+   "name": "Web Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 300,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "HTML & CSS",
+     "modules": [
+      "Semantic HTML",
+      "Flexbox & Grid"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "JavaScript",
+     "modules": [
+      "Basics",
+      "DOM"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Projects",
+     "modules": [
+      "Landing page",
+      "Multi-page site"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Web Developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "game-dev",
+   "name": "Game Development",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Programming",
+     "modules": [
+      "C# basics"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Engine",
+     "modules": [
+      "Unity fundamentals"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Game Systems",
+     "modules": [
+      "Physics",
+      "UI",
+      "Audio"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "2D game",
+      "3D game"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Game Developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "iot",
+   "name": "IoT",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 300,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Electronics Basics",
+     "modules": [
+      "Circuits",
+      "Sensors"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Microcontrollers",
+     "modules": [
+      "Arduino",
+      "ESP32"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Connectivity",
+     "modules": [
+      "Wi-Fi/MQTT",
+      "Cloud dashboards"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Smart home sensor"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "IoT Developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "devops",
+   "name": "DevOps",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 350,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Linux & Networking",
+     "modules": [
+      "Shell",
+      "Networking basics"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Version Control & CI/CD",
+     "modules": [
+      "Git",
+      "GitHub Actions"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Containers",
+     "modules": [
+      "Docker",
+      "Kubernetes basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Cloud & IaC",
+     "modules": [
+      "AWS basics",
+      "Terraform"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Monitoring",
+     "modules": [
+      "Logs & metrics"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "DevOps Engineer",
+    "SRE (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "cloud",
+   "name": "Cloud Computing",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 300,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Cloud concepts",
+      "Networking"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Core Services",
+     "modules": [
+      "Compute",
+      "Storage",
+      "Databases"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Security & IAM",
+     "modules": [
+      "Identity",
+      "Policies"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Certification Prep",
+     "modules": [
+      "Associate-level exam topics"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Cloud Engineer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "cybersecurity",
+   "name": "Cybersecurity",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "full",
+   "estimated_hours": 428,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://www.nist.gov/cyberframework",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "IT & Network Foundations",
+     "modules": [
+      "Ethics, Law, Authorization & Lab Safety",
+      "Computer Hardware, Processes, Memory & Virtualization",
+      "TCP/IP, OSI, Addressing, Routing & Common Protocols",
+      "DNS, HTTP, TLS & Packet Analysis",
+      "Linux CLI, Files, Permissions & Services",
+      "Windows, PowerShell, Registry & Active Directory Basics",
+      "Phase Project: Isolated Cybersecurity Home Lab"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Security Principles, Cryptography & Governance",
+     "modules": [
+      "CIA Triad, Threats, Vulnerabilities, Risk & Controls",
+      "Cryptography, Hashing, Signatures, PKI & TLS",
+      "Identity, MFA, SSO, Federation & Least Privilege",
+      "Zero Trust, Defense in Depth & Security Models",
+      "NIST CSF 2.0, CIS Controls & Security Governance",
+      "Data Classification, Privacy & Security Awareness",
+      "Phase Project: Security Risk Register & CSF Profile"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Secure Systems, Networks, Applications & Cloud",
+     "modules": [
+      "Endpoint Hardening, Patching & Configuration Baselines",
+      "Firewalls, Segmentation, IDS/IPS, VPNs & Wireless Security",
+      "Asset Inventory, CVE/CVSS, Scanning & Remediation",
+      "Secure SDLC, Threat Modeling & OWASP Top 10:2025",
+      "Cloud Shared Responsibility, IAM, Logging & Workload Security",
+      "Phase Project: Hardened Endpoint and Segmented Network"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "SOC, SIEM & Detection Engineering",
+     "modules": [
+      "Security Logs, Telemetry, Time Sync & Normalization",
+      "SIEM Search, Dashboards, Correlation & Alert Triage",
+      "MITRE ATT&CK v19.2 & Detection Mapping",
+      "Detection Engineering, Sigma & Validation",
+      "Threat Intelligence, OSINT & Indicator Handling",
+      "Phase Project: SOC Alert Investigation & Detection Pack"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Incident Response, DFIR & Malware Triage",
+     "modules": [
+      "NIST SP 800-61r3 Incident Response",
+      "Triage, Scoping, Containment, Eradication & Recovery",
+      "Forensic Acquisition, Integrity, Timeline & Chain of Custody",
+      "Windows and Linux Endpoint Forensics",
+      "Static and Dynamic Malware Triage",
+      "Phase Project: Incident Response Case File"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Authorized Security Testing",
+     "modules": [
+      "Authorized Pentest Methodology, Scoping & Rules of Engagement",
+      "Passive Reconnaissance, Discovery & Enumeration",
+      "Web and API Testing in Deliberately Vulnerable Labs",
+      "Host, Service and Active Directory Assessment Labs",
+      "Finding Validation, Severity, Remediation & Retesting",
+      "Phase Project: Authorized Lab Penetration Test & Report"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Advanced Architecture, Purple Teaming & GRC",
+     "modules": [
+      "Security Architecture, Threat Modeling & Resilience",
+      "Purple Teaming, Adversary Emulation & Control Validation",
+      "Software Supply Chain, SBOM & DevSecOps",
+      "Enterprise Risk, Audit, Third Parties & Security Metrics",
+      "Phase Project: Purple-Team Control Assessment"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: SOC Investigation Portfolio",
+      "Mastery Project: DFIR Investigation Portfolio",
+      "Mastery Project: Secure Application Review",
+      "Mastery Project: Small-Organization Security Program",
+      "Master Capstone: Defend, Investigate and Improve a Legal Lab"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Understand networks, Linux, Windows and core security concepts",
+    "Monitor logs and investigate incidents with a SIEM",
+    "Use a vulnerability scanner and manage findings with CVSS",
+    "Practise ethical hacking legally in an isolated lab",
+    "Build a portfolio and prepare for ISC2 CC / CompTIA Security+ and a SOC Analyst role"
+   ],
+   "file": "goals/cybersecurity.json",
+   "file_size_kb": 108.2
+  },
+  {
+   "id": "ethical-hacking",
+   "name": "Ethical Hacking",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 400,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Networking",
+      "Linux"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Web Security",
+     "modules": [
+      "OWASP Top 10"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Pentesting Methodology",
+     "modules": [
+      "Recon",
+      "Exploitation (legal labs only)",
+      "Reporting"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Practice",
+     "modules": [
+      "Legal CTFs & labs"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Penetration Tester (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "robotics",
+   "name": "Robotics",
+   "category": "Skills",
+   "group": "Technology & Development",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 450,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Maths & Physics",
+     "modules": [
+      "Kinematics",
+      "Linear algebra"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Electronics",
+     "modules": [
+      "Motors",
+      "Sensors"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Programming",
+     "modules": [
+      "Python/C++",
+      "ROS basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Line follower",
+      "Robot arm"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Robotics Engineer (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "data-science",
+   "name": "Data Science",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Python & Stats",
+     "modules": [
+      "Python",
+      "Statistics"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Wrangling",
+     "modules": [
+      "Pandas",
+      "SQL"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Visualisation",
+     "modules": [
+      "Matplotlib",
+      "Dashboards"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Machine Learning",
+     "modules": [
+      "Scikit-learn"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Projects",
+     "modules": [
+      "EDA report",
+      "ML model"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Data Scientist (junior)",
+    "Data Analyst"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "data-analytics",
+   "name": "Data Analytics",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 300,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Excel",
+     "modules": [
+      "Formulas",
+      "Pivot tables"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "SQL",
+     "modules": [
+      "Queries",
+      "Joins"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "BI Tools",
+     "modules": [
+      "Power BI or Tableau"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Sales dashboard"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Data Analyst"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "business-analytics",
+   "name": "Business Analytics",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Business Basics",
+     "modules": [
+      "KPIs",
+      "Requirements"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Tools",
+     "modules": [
+      "Excel",
+      "SQL",
+      "BI"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Storytelling",
+     "modules": [
+      "Reports & presentations"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Business Analyst"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ai",
+   "name": "Artificial Intelligence",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 500,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Python",
+      "Maths for AI"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Machine Learning",
+     "modules": [
+      "Supervised & unsupervised"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Deep Learning",
+     "modules": [
+      "Neural networks",
+      "CNN/RNN/Transformers"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Generative AI",
+     "modules": [
+      "LLM basics",
+      "Prompting & RAG"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Projects",
+     "modules": [
+      "AI app"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "AI/ML Engineer (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ml",
+   "name": "Machine Learning",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 400,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Python",
+      "Linear algebra",
+      "Probability"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Classical ML",
+     "modules": [
+      "Regression",
+      "Classification",
+      "Clustering"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Model Evaluation",
+     "modules": [
+      "Metrics",
+      "Validation"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Kaggle-style project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "ML Engineer (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "financial-analysis",
+   "name": "Financial Analysis",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Accounting Basics",
+     "modules": [
+      "Statements"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Ratio Analysis",
+     "modules": [
+      "Profitability",
+      "Liquidity"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Excel for Finance",
+     "modules": [
+      "Modelling basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Case Studies",
+     "modules": [
+      "Company analysis"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Financial Analyst (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "fintech",
+   "name": "FinTech",
+   "category": "Skills",
+   "group": "Data & AI",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Finance Basics",
+     "modules": [
+      "Banking & payments"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Payments & UPI",
+     "modules": [
+      "How digital payments work"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Regulation",
+     "modules": [
+      "RBI basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Tech",
+     "modules": [
+      "APIs",
+      "Data"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "FinTech Analyst"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ui-ux",
+   "name": "UI/UX Design",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 300,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Design Basics",
+     "modules": [
+      "Typography",
+      "Colour",
+      "Layout"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "UX Process",
+     "modules": [
+      "Research",
+      "Personas",
+      "User flows"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Figma",
+     "modules": [
+      "Wireframes",
+      "Prototypes",
+      "Design systems"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Portfolio",
+     "modules": [
+      "3 case studies"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "UI/UX Designer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "video-editing",
+   "name": "Video Editing",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Basics",
+     "modules": [
+      "Cuts & timeline"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Software",
+     "modules": [
+      "DaVinci Resolve (free)"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Colour & Audio",
+     "modules": [
+      "Grading",
+      "Sound"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "YouTube video",
+      "Reel"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Video Editor"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "motion-design",
+   "name": "Motion Design",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 200,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Principles",
+     "modules": [
+      "Animation principles"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Tools",
+     "modules": [
+      "After Effects/Blender basics"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Projects",
+     "modules": [
+      "Logo animation",
+      "Explainer"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Motion Designer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "multimedia",
+   "name": "Multimedia",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 200,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Graphics",
+     "modules": [
+      "Image editing"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Audio & Video",
+     "modules": [
+      "Editing basics"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Projects",
+     "modules": [
+      "Multimedia presentation"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Multimedia Artist"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "animation",
+   "name": "Animation",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 350,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Drawing & Principles",
+     "modules": [
+      "12 principles"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "2D Animation",
+     "modules": [
+      "Free tools"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "3D Basics",
+     "modules": [
+      "Blender"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Short animation"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Animator"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "vfx",
+   "name": "VFX",
+   "category": "Skills",
+   "group": "Design & Creative",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 400,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Compositing basics"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Tools",
+     "modules": [
+      "Blender / Fusion"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Techniques",
+     "modules": [
+      "Keying",
+      "Tracking",
+      "Particles"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "VFX shot"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "VFX Artist (junior)"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "crm-sales",
+   "name": "CRM & Sales",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 120,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Sales Basics",
+     "modules": [
+      "Funnel",
+      "Prospecting"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "CRM Tools",
+     "modules": [
+      "HubSpot free CRM"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Communication",
+     "modules": [
+      "Calls & email"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Sales Executive",
+    "CRM Executive"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "digital-marketing",
+   "name": "Digital Marketing",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 200,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations",
+     "modules": [
+      "Marketing funnel"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "SEO & Content",
+     "modules": [
+      "SEO basics"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Social & Ads",
+     "modules": [
+      "Meta & Google Ads basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Analytics",
+     "modules": [
+      "Google Analytics"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Certifications",
+     "modules": [
+      "Free platform certificates"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Digital Marketing Executive"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "seo",
+   "name": "SEO",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 120,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "How Search Works",
+     "modules": [
+      "Crawling & indexing"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "On-page & Technical",
+     "modules": [
+      "Keywords",
+      "Site speed"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Off-page",
+     "modules": [
+      "Links"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Tools",
+     "modules": [
+      "Search Console"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "SEO Executive"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "content-writing",
+   "name": "Content Writing",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 100,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Writing Basics",
+     "modules": [
+      "Grammar & clarity"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Formats",
+     "modules": [
+      "Blogs",
+      "Social posts"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "SEO Writing",
+     "modules": [
+      "Keywords"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Portfolio",
+     "modules": [
+      "5 samples"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Content Writer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "copywriting",
+   "name": "Copywriting",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 100,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Principles",
+     "modules": [
+      "AIDA",
+      "PAS"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Formats",
+     "modules": [
+      "Ads",
+      "Landing pages",
+      "Emails"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Portfolio",
+     "modules": [
+      "Spec ads"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Copywriter"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "accounting-taxation",
+   "name": "Accounting & Taxation",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Accounting Basics",
+     "modules": [
+      "Journal, ledger",
+      "Final accounts"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "GST",
+     "modules": [
+      "Registration & returns"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Income Tax",
+     "modules": [
+      "Basics & ITR"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Tools",
+     "modules": [
+      "Tally / Excel"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Accounts Executive",
+    "Tax Assistant"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "finance-modeling",
+   "name": "Financial Modelling",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Excel Skills",
+     "modules": [
+      "Formulas",
+      "Shortcuts"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "3-Statement Model",
+     "modules": [
+      "Linking statements"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Valuation",
+     "modules": [
+      "DCF basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Company model"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Financial Analyst"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "stock-market",
+   "name": "Stock Market",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Basics",
+     "modules": [
+      "How markets work",
+      "Instruments"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Fundamental Analysis",
+     "modules": [
+      "Statements & ratios"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Technical Analysis",
+     "modules": [
+      "Charts basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Risk",
+     "modules": [
+      "Risk management",
+      "Investor protection (SEBI)"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Informed retail investor"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "equity-research",
+   "name": "Equity Research",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 250,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Accounting & Finance",
+     "modules": [
+      "Statements"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Industry Analysis",
+     "modules": [
+      "Sector research"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Valuation",
+     "modules": [
+      "DCF",
+      "Relative valuation"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Report Writing",
+     "modules": [
+      "Initiation report"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Equity Research Associate"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "advanced-excel",
+   "name": "Advanced Excel",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 80,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Core Formulas",
+     "modules": [
+      "Lookup functions",
+      "IF family"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Tools",
+     "modules": [
+      "Pivot tables",
+      "Power Query"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Dashboards",
+     "modules": [
+      "Charts & slicers"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "MIS / Data Executive"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "mis-reporting",
+   "name": "MIS Reporting",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 100,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Excel for MIS",
+     "modules": [
+      "Formulas",
+      "Pivots"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Automation",
+     "modules": [
+      "Power Query",
+      "Macros basics"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Reporting",
+     "modules": [
+      "Dashboards"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "MIS Executive"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "tally-gst",
+   "name": "Tally Prime with GST",
+   "category": "Skills",
+   "group": "Business & Professional",
+   "type": "skill",
+   "status": "outline",
+   "estimated_hours": 80,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Tally Basics",
+     "modules": [
+      "Company creation",
+      "Ledgers & vouchers"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Inventory",
+     "modules": [
+      "Stock items"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "GST in Tally",
+     "modules": [
+      "GST invoices",
+      "Returns"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Reports",
+     "modules": [
+      "Balance sheet, P&L"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Accounts Assistant"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "python",
+   "name": "Python",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "full",
+   "estimated_hours": 117,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://docs.python.org/3/",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Python Fundamentals",
+     "modules": [
+      "Setup",
+      "Variables & types",
+      "Strings",
+      "Conditionals & loops",
+      "Functions",
+      "Lists, tuples, sets, dicts",
+      "Project: Calculator"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Intermediate Python",
+     "modules": [
+      "Comprehensions",
+      "Scope & lambda",
+      "Modules & pip",
+      "Files",
+      "Exceptions",
+      "Recursion",
+      "Project: To-Do App"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Object-Oriented Programming",
+     "modules": [
+      "Classes",
+      "Inheritance",
+      "Dunder methods",
+      "Iterators & generators",
+      "Decorators"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Libraries",
+     "modules": [
+      "venv",
+      "Standard library",
+      "Requests & APIs",
+      "Project: Web Scraper",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Project: Flask API"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Professional Skills & Final Project",
+     "modules": [
+      "Git & GitHub",
+      "Testing",
+      "Final Project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Write scripts and automate tasks",
+    "Build CLI apps, scrapers and simple APIs",
+    "Analyse data with Pandas and plot charts",
+    "Use Git/GitHub and write tests",
+    "Next roadmaps: Backend, Data Science, AI/ML"
+   ],
+   "file": "goals/python.json",
+   "file_size_kb": 113.9
+  },
+  {
+   "id": "javascript",
+   "name": "JavaScript",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 200,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "DOM & events",
+      "Async/await & fetch",
+      "Modules"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior JavaScript developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "java",
+   "name": "Java Programming",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "full",
+   "estimated_hours": 197,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://dev.java/",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations, Tools & Problem Solving",
+     "modules": [
+      "JDK 25, JShell, IDE, Terminal & First Program",
+      "Source Files, Packages, Compilation & Execution",
+      "Variables, Primitive Types, References & Conversions",
+      "Operators, Expressions, Strings & Text Blocks",
+      "Conditions, switch, Loops & Pattern Basics",
+      "Methods, Parameters, Overloading, varargs & Recursion",
+      "Compiler Diagnostics, Debugger & Defensive Input",
+      "Phase Project: Tested Command-Line Toolkit"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Object-Oriented Java & Type Design",
+     "modules": [
+      "Classes, Objects, Constructors & Initialization",
+      "Encapsulation, Immutability, Access & Value Objects",
+      "Inheritance, Composition & Object Contracts",
+      "Interfaces, Abstract Classes & Polymorphism",
+      "Records, Enums, Sealed Types & Pattern Matching",
+      "Generics, Bounds, Wildcards & Type Erasure",
+      "Nested Classes, Local Classes, Lambdas & Method References",
+      "Phase Project: Domain Model & Rule Engine"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Core APIs, Collections, Streams & I/O",
+     "modules": [
+      "Exceptions, Resource Management & Error Design",
+      "Collections, Maps, Sets, Queues & Contracts",
+      "Lambdas, Streams, Collectors & Parallel Semantics",
+      "Date-Time, Locale, Formatting & Regular Expressions",
+      "Files, NIO.2, Buffers, Channels & Character Sets",
+      "Data Formats, Serialization Risks & Versioning",
+      "Phase Project: Streaming Data Import & Report Engine"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Builds, Testing, Documentation & Delivery",
+     "modules": [
+      "Maven, Gradle, Dependencies & Reproducible Builds",
+      "JUnit 5, Test Design, Fakes & Property Testing",
+      "Static Analysis, Formatting, Logging & Observability Basics",
+      "Javadoc, API Design, Git & Release Discipline",
+      "JPMS, jlink, jpackage & Runtime Images",
+      "Phase Project: Published Modular Java Library"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Concurrency, JVM Internals & Performance",
+     "modules": [
+      "JVM Architecture, Bytecode, Class Loading & Verification",
+      "Heap, Stack, Reachability, References & Memory Model",
+      "Threads, Executors, Futures & Task Design",
+      "Locks, Atomics, Concurrent Collections & Data Races",
+      "Virtual Threads, Blocking I/O & Structured Task Design",
+      "Structured Concurrency & Scoped Values (Preview-aware)",
+      "Garbage Collection, JFR, JDK Mission Control & Diagnostics",
+      "Phase Project: Concurrent Job Processing Service"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Data, Networking, Security & Services",
+     "modules": [
+      "JDBC, SQL, Transactions, Pools & Migrations",
+      "HTTP Client, Sockets, Protocol Framing & Timeouts",
+      "RESTful Services, JSON, Validation & OpenAPI",
+      "Secure Coding, Cryptography, TLS & Secrets",
+      "Caching, Retries, Idempotency & Resilience",
+      "Phase Project: Secure Database-backed HTTP Service"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Advanced Java SE 25 & Extensible Systems",
+     "modules": [
+      "Annotations, Reflection, Proxies & Metaprogramming",
+      "Method Handles, Var Handles & Class-File API",
+      "ServiceLoader, Plugins & Extensible Architecture",
+      "Foreign Function & Memory API and Native Interoperation",
+      "Java 25 Language Features & Preview Feature Governance",
+      "Compatibility, LTS Migration, Deprecation & Portability",
+      "Phase Project: Secure Modular Plugin Runtime"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: Transactional Embedded Data Store",
+      "Mastery Project: Incremental Build or Dependency Tool",
+      "Mastery Project: High-throughput Network Server",
+      "Mastery Project: Accessible Packaged Desktop Application",
+      "Mastery Project: JVM Diagnostics & Performance Lab",
+      "Master Capstone: Production-grade Java System"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Write clean object-oriented Java",
+    "Use collections, generics, lambdas and streams",
+    "Build, test and version projects with Maven, JUnit and Git",
+    "Solve basic DSA problems for interviews",
+    "Build a Spring Boot REST API backed by a database"
+   ],
+   "file": "goals/java.json",
+   "file_size_kb": 107.5
+  },
+  {
+   "id": "typescript",
+   "name": "TypeScript",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 120,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Types & interfaces",
+      "Generics",
+      "TS with React/Node"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior TypeScript developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "csharp",
+   "name": "C#",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 200,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "OOP",
+      "LINQ",
+      ".NET basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior C# developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "cpp",
+   "name": "C++",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 220,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "OOP",
+      "STL",
+      "Memory & pointers"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior C++ developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "c",
+   "name": "C Programming",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "full",
+   "estimated_hours": 150,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://open-std.org/jtc1/sc22/wg14/",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Foundations & Toolchain",
+     "modules": [
+      "Compiler, Editor, Terminal & First C23 Program",
+      "Tokens, Declarations, Statements & Program Structure",
+      "Integer, Floating, Character & Boolean Types",
+      "Formatted Input, Output & Defensive Parsing",
+      "Operators, Decisions, Loops & Sequencing",
+      "Warnings, Debugger Basics & Assertions",
+      "Phase Project: Command-line Calculator"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Functions, Arrays, Strings & Modular Programs",
+     "modules": [
+      "Functions, Prototypes, Parameters & Return Values",
+      "Scope, Linkage, Storage Duration & Recursion",
+      "Arrays, Multidimensional Arrays & Array Parameters",
+      "Null-terminated Strings & Character Handling",
+      "Structures, Unions, Enumerations & Bit-fields",
+      "Headers, Macros, Conditional Compilation & Include Guards",
+      "Phase Project: Modular Record Manager"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Pointers, Memory & Data Representation",
+     "modules": [
+      "Pointers, Addresses, Indirection & Null Pointers",
+      "Pointer Arithmetic, Arrays & Bounds",
+      "Dynamic Allocation, Ownership & Lifetime",
+      "Object Representation, Alignment, Padding & Endianness",
+      "Function Pointers, Callbacks & Generic Interfaces",
+      "Undefined, Unspecified & Implementation-defined Behavior",
+      "Phase Project: Memory-safe Dynamic Collection"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Data Structures & Algorithms",
+     "modules": [
+      "Algorithmic Complexity & Measurement",
+      "Linked Lists, Stacks & Queues",
+      "Trees, Heaps & Priority Queues",
+      "Hash Tables, Hashing & Collision Handling",
+      "Searching, Sorting & Standard Library Algorithms",
+      "Phase Project: Reusable Data-structure Library"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Files, Libraries, Build Systems & Testing",
+     "modules": [
+      "Text, Binary Files, Streams & Error Handling",
+      "Binary Formats, Parsing & Serialization",
+      "Static and Shared Libraries, ABI & Symbol Visibility",
+      "Make, Dependency Tracking & Reproducible Builds",
+      "Unit, Integration, Property & Fuzz Testing",
+      "GDB, Sanitizers, Valgrind & Static Analysis",
+      "Phase Project: Tested Configuration Parser Library"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Systems Programming, Concurrency & Networking",
+     "modules": [
+      "ISO C versus POSIX, Processes & Signals",
+      "Processes, Pipes, Redirection & IPC",
+      "C Threads, Atomics, Mutexes & Data Races",
+      "Sockets, TCP, UDP & Network Byte Order",
+      "Nonblocking I/O, Event Loops & Backpressure",
+      "Phase Project: Concurrent TCP Service"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Advanced C23, Security, Performance & Portability",
+     "modules": [
+      "C23 Features, Attributes, nullptr, typeof & Checked Arithmetic",
+      "Secure C, Integer Safety, Bounds & CERT Rules",
+      "Profiling, Cache Locality, Vectorization & Optimization",
+      "Portability, Feature Tests, Compilers & Continuous Integration",
+      "Freestanding C, Embedded Constraints & Hardware Interfaces",
+      "Phase Project: Portable Cross-platform C Library"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: Embedded Key–Value Database",
+      "Mastery Project: Unix-style Command Shell",
+      "Mastery Project: HTTP Server",
+      "Mastery Project: Binary Inspection Tool",
+      "Mastery Project: Allocator or Bytecode VM",
+      "Master Capstone: Production-grade C System"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Write, compile and debug C programs",
+    "Use pointers, dynamic memory, structs and files safely",
+    "Build linked lists, stacks and queues",
+    "Organise multi-file projects with make",
+    "Foundation for C++, DSA, embedded and systems roles"
+   ],
+   "file": "goals/c.json",
+   "file_size_kb": 81.3
+  },
+  {
+   "id": "sql",
+   "name": "SQL",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "full",
+   "estimated_hours": 92,
+   "estimate_basis": "bottom-up from built library blocks",
+   "official_url": "https://www.postgresql.org/docs/18/",
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Relational Foundations & Essential SQL",
+     "modules": [
+      "PostgreSQL 18, psql, GUI Tools & Sample Databases",
+      "Relations, Rows, Columns, Keys & Relational Thinking",
+      "SQL Syntax, Identifiers, Literals, Comments & Statements",
+      "Numeric, Text, Boolean, Date-Time, UUID & NULL",
+      "CREATE, ALTER, DROP, Schemas & Object Ownership",
+      "INSERT, SELECT, UPDATE, DELETE & RETURNING",
+      "Expressions, WHERE, CASE, Sorting, Pagination & Parameters",
+      "Phase Project: Inventory Database & Query Workbook"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Querying, Joins, Aggregation & Analytical Logic",
+     "modules": [
+      "INNER, OUTER, CROSS, SELF & LATERAL Joins",
+      "GROUP BY, Aggregates, HAVING, FILTER & Grouping Sets",
+      "Scalar, Row, Table & Correlated Subqueries",
+      "UNION, INTERSECT, EXCEPT, DISTINCT & Duplicate Semantics",
+      "Common Table Expressions, Recursion & Query Decomposition",
+      "Window Functions, Frames, Ranking & Running Metrics",
+      "Scalar Functions, Conditional Logic, Arrays & JSON Queries",
+      "Phase Project: Business Analytics Query Pack"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Data Modeling, Integrity & Schema Design",
+     "modules": [
+      "Requirements, Entities, Relationships & ER Modeling",
+      "Functional Dependencies & Normalization through BCNF",
+      "Primary, Candidate, Natural, Surrogate & Foreign Keys",
+      "CHECK, UNIQUE, Referential Actions, Domains & Assertions",
+      "Views, Materialized Views & Security Barriers",
+      "Identity, Sequences, Generated Columns & Temporal Data",
+      "Phase Project: Normalized Commerce Schema"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Transactions, Concurrency & Database Programming",
+     "modules": [
+      "ACID, Transactions, Savepoints & Failure Atomicity",
+      "Isolation Levels, MVCC, Anomalies & Serializable Execution",
+      "Locks, Deadlocks, Advisory Locks & Contention",
+      "SQL Functions, Procedures, Variables & Control Flow",
+      "Triggers, Auditing, Event Logic & Change Capture",
+      "Phase Project: Concurrent Order Processing System"
+     ]
+    },
+    {
+     "order": 5,
+     "name": "Indexes, Query Plans & Performance Engineering",
+     "modules": [
+      "B-tree Indexes, Composite Keys, Selectivity & Coverage",
+      "Hash, GIN, GiST, BRIN, Partial & Expression Indexes",
+      "EXPLAIN ANALYZE, Buffers, Timings & Plan Reading",
+      "Statistics, Cardinality Estimation & Planner Decisions",
+      "Query Rewriting, Sargability, Join Strategy & Memory",
+      "Partitioning, Pruning, Retention & Physical Design",
+      "Workload Design, Benchmarking & Regression Budgets",
+      "Phase Project: Diagnose and Tune a Slow Workload"
+     ]
+    },
+    {
+     "order": 6,
+     "name": "Advanced Analytics, Data Integration & Warehousing",
+     "modules": [
+      "Bulk Load, COPY, Staging, Validation & ETL",
+      "JSON, Arrays, Composite Types & Semi-structured Data",
+      "Recursive Queries, Hierarchies, Graph Traversal & Cycles",
+      "Advanced Windows, Ordered Sets, Percentiles & Cohorts",
+      "Dimensional Modeling, Facts, Dimensions, SCDs & OLAP",
+      "Phase Project: Analytics Warehouse & Executive Dashboard Queries"
+     ]
+    },
+    {
+     "order": 7,
+     "name": "Security, Reliability, Operations & Portability",
+     "modules": [
+      "Roles, Privileges, Row-Level Security & Least Privilege",
+      "SQL Injection, Parameterization, Dynamic SQL & Secrets",
+      "Backup, Restore, WAL, PITR & Disaster Recovery",
+      "Replication, High Availability, Consistency & Failover",
+      "Monitoring, Vacuum, Statistics, Bloat & Capacity",
+      "SQL:2023, Dialects, Migrations & Cross-database Portability",
+      "Phase Project: Secure, Recoverable Production Database"
+     ]
+    },
+    {
+     "order": 8,
+     "name": "Mastery Portfolio & Capstones",
+     "modules": [
+      "Mastery Project: Auditable Financial Ledger",
+      "Mastery Project: Concurrent Reservation Platform",
+      "Mastery Project: Marketplace Data Platform",
+      "Mastery Project: Query Performance Observatory",
+      "Mastery Project: Zero-downtime Schema Migration",
+      "Master Capstone: Production-grade SQL Data System"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Write queries to answer business questions",
+    "Design normalized databases with keys and constraints",
+    "Use joins, CTEs and window functions confidently",
+    "Use SQL safely from code",
+    "Roles: Data Analyst, SQL Developer (junior), path into Backend & Data Engineering"
+   ],
+   "file": "goals/sql.json",
+   "file_size_kb": 78.9
+  },
+  {
+   "id": "php",
+   "name": "PHP",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Forms & sessions",
+      "MySQL",
+      "Laravel basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior PHP developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "ruby",
+   "name": "Ruby",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Blocks & iterators",
+      "Gems",
+      "Rails basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Ruby developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "swift",
+   "name": "Swift",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 180,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Optionals",
+      "Protocols",
+      "SwiftUI basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Swift developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "r",
+   "name": "R",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Data frames",
+      "dplyr & ggplot2",
+      "Statistics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior R developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "kotlin",
+   "name": "Kotlin",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 180,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Null safety",
+      "Coroutines",
+      "Android basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Kotlin developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "go",
+   "name": "Go",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 150,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Structs & interfaces",
+      "Goroutines",
+      "Web servers"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Go developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "rust",
+   "name": "Rust",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 220,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Ownership & borrowing",
+      "Traits",
+      "Error handling"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Rust developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "dart",
+   "name": "Dart",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 120,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Async",
+      "Classes",
+      "Flutter basics"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Dart developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  },
+  {
+   "id": "perl",
+   "name": "Perl",
+   "category": "Programming Languages",
+   "group": "Languages",
+   "type": "language",
+   "status": "outline",
+   "estimated_hours": 120,
+   "estimate_basis": "planning estimate for a complete beginner (refine when links are built)",
+   "official_url": null,
+   "eligibility_note": "Open to everyone — starts from zero.",
+   "qualification_options": [
+    "Currently in higher secondary (Class 11/12)",
+    "Completed Class 12",
+    "Currently in college/university",
+    "Graduated",
+    "Not graduated",
+    "Other"
+   ],
+   "phases": [
+    {
+     "order": 1,
+     "name": "Fundamentals",
+     "modules": [
+      "Setup",
+      "Syntax, variables, types",
+      "Control flow",
+      "Functions"
+     ]
+    },
+    {
+     "order": 2,
+     "name": "Data Structures",
+     "modules": [
+      "Collections",
+      "Strings"
+     ]
+    },
+    {
+     "order": 3,
+     "name": "Intermediate",
+     "modules": [
+      "Regex",
+      "File processing",
+      "Modules"
+     ]
+    },
+    {
+     "order": 4,
+     "name": "Projects",
+     "modules": [
+      "Mini project 1",
+      "Mini project 2",
+      "Final project"
+     ]
+    }
+   ],
+   "career_outcomes": [
+    "Junior Perl developer"
+   ],
+   "file": null,
+   "file_size_kb": null
+  }
+ ],
+ "counts": {
+  "total": 73,
+  "full": 12,
+  "outline": 61
+ }
+}

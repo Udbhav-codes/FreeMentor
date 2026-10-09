@@ -1,0 +1,23 @@
+{
+  "name": "freementor",
+  "private": true,
+  "version": "0.1.0",
+  "description": "FreeMentor — personal day-by-day learning roadmaps from free, trusted resources.",
+  "workspaces": [
+    "shared",
+    "app",
+    "admin"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "types": "npm run types -w shared",
+    "validate:library": "npm run validate -w shared",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "start": "npm run start -w app",
+    "android": "npm run android -w app",
+    "library:serve": "npm run library:serve -w app"
+  }
+}

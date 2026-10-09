@@ -1,0 +1,2942 @@
+{
+ "schema_version": "1.0",
+ "goal": {
+  "id": "sql",
+  "name": "SQL",
+  "category": "Programming Languages",
+  "group": "Languages",
+  "type": "language",
+  "version": "2026.1",
+  "valid_for": "Standard SQL with PostgreSQL as the free hands-on database (concepts also apply to MySQL/SQL Server)",
+  "last_updated": "2026-10-08",
+  "official_url": "https://www.postgresql.org/docs/current/tutorial.html",
+  "languages": [
+   "en",
+   "hi"
+  ],
+  "video_language_note": "English videos for every topic (Alex The Analyst, techTFQ, Data with Baraa and others); Hindi alternatives from Rishabh Mishra and Data Prodigy (full-course sections where a topic video is not available).",
+  "career_outcomes": [
+   "Write queries to answer business questions",
+   "Design normalized databases with keys and constraints",
+   "Use joins, CTEs and window functions confidently",
+   "Use SQL safely from code",
+   "Roles: Data Analyst, SQL Developer (junior), path into Backend & Data Engineering"
+  ],
+  "resource_policy": "Links only to free, legal sources (official docs, open-licence books, reputable free platforms, public YouTube videos). No copyrighted material re-hosted. YouTube videos are never paywalled or ad-gated.",
+  "estimated_hours": {
+   "content": 80,
+   "mocks_and_milestones": 2,
+   "spaced_revision_allowance": 10,
+   "total": 92,
+   "note": "Beginner to job-ready planning estimate. Video minutes are estimates until the link checker fills real durations (+15% rule applied in-app)."
+  },
+  "reviewed_by": null
+ },
+ "scheduler_hints": {
+  "video_time_multiplier": 1.15,
+  "round_up_to_minutes": 5,
+  "warmup_recall_minutes": 10,
+  "focus_block_minutes": 25,
+  "break_minutes": 5,
+  "spaced_review_offsets_days": [
+   1,
+   3,
+   7,
+   21,
+   45
+  ],
+  "confidence_to_next_review_days": {
+   "need_revision": 1,
+   "little_afraid": 2,
+   "confident": 4,
+   "all_cleared": 7,
+   "mastered": 21
+  },
+  "weekly_pattern": {
+   "new_content_days": 5,
+   "mixed_practice_and_weekly_test_days": 1,
+   "light_revision_or_rest_days": 1
+  },
+  "rest_day_limits": {
+   "per_week": 1,
+   "per_month": 4
+  },
+  "interleave_by": "subject",
+  "reserve_final_fraction_for_mocks_and_revision": 0.15,
+  "mastery_gate": {
+   "weekly_test_min_score_pct": 60,
+   "remediation_block_minutes": 45
+  },
+  "missed_day_policy": "shift_forward",
+  "recalculate_from": "next_incomplete_task"
+ },
+ "phases": [
+  {
+   "id": "sql-p1",
+   "order": 1,
+   "name": "SQL Fundamentals: One Table",
+   "topic_ids": [
+    "sql-intro",
+    "sql-select",
+    "sql-where",
+    "sql-sort-aggregate",
+    "sql-case",
+    "sql-functions",
+    "proj-sql-explore"
+   ]
+  },
+  {
+   "id": "sql-p2",
+   "order": 2,
+   "name": "Combining Data",
+   "topic_ids": [
+    "sql-joins",
+    "sql-unions",
+    "sql-subqueries",
+    "sql-cte",
+    "sql-window",
+    "proj-sql-analytics"
+   ]
+  },
+  {
+   "id": "sql-p3",
+   "order": 3,
+   "name": "Designing & Changing Databases",
+   "topic_ids": [
+    "sql-ddl",
+    "sql-constraints",
+    "sql-dml",
+    "sql-normalization",
+    "sql-transactions",
+    "sql-indexes-views",
+    "proj-sql-schema"
+   ]
+  },
+  {
+   "id": "sql-p4",
+   "order": 4,
+   "name": "SQL on the Job & Final Project",
+   "topic_ids": [
+    "sql-security",
+    "sql-in-code",
+    "proj-sql-capstone"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": "sql-intro",
+   "subject": "SQL",
+   "title": "Databases, Tables & SQL — Setup",
+   "phase": 1,
+   "order": 1,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "sql-intro-learn",
+     "type": "learn",
+     "title": "Watch: Databases, Tables & SQL — Setup",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Tutorial - Full Database Course for Beginners",
+       "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+       "youtube_id": "HXV3zeQKqGY",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "What Is SQL ? | Database in SQL | SQL Introduction | SQL Tutorial In Hindi 1",
+       "url": "https://www.youtube.com/watch?v=yH1zCq-iaeU",
+       "youtube_id": "yH1zCq-iaeU",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 45,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "English: watch the introduction and installation sections of the full course."
+    },
+    {
+     "id": "sql-intro-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Introduction to SQL",
+       "url": "https://sqlbolt.com/lesson/introduction",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL Tutorial – Concepts",
+       "url": "https://www.postgresql.org/docs/current/tutorial-concepts.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-intro-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Install PostgreSQL (or use SQLBolt in the browser)",
+       "url": "https://www.postgresql.org/download/",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-intro-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What is a relational database?",
+     "a": "Data stored in tables of rows and columns that can be linked by keys"
+    },
+    {
+     "q": "What does SQL stand for?",
+     "a": "Structured Query Language"
+    },
+    {
+     "q": "Name one free relational database you can install.",
+     "a": "PostgreSQL (also MySQL or SQLite)"
+    }
+   ]
+  },
+  {
+   "id": "sql-select",
+   "subject": "SQL",
+   "title": "SELECT, FROM, DISTINCT & Aliases",
+   "phase": 1,
+   "order": 2,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "sql-select-learn",
+     "type": "learn",
+     "title": "Watch: SELECT, FROM, DISTINCT & Aliases",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Basics Tutorial For Beginners | Select + From Statements | 2/4",
+       "url": "https://www.youtube.com/watch?v=PyYgERKq25I",
+       "youtube_id": "PyYgERKq25I",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: open the SELECT section of the full course."
+    },
+    {
+     "id": "sql-select-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – SELECT queries 101",
+       "url": "https://sqlbolt.com/lesson/select_queries_introduction",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Querying a Table",
+       "url": "https://www.postgresql.org/docs/current/tutorial-select.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-select-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Basic",
+       "url": "https://pgexercises.com/questions/basic/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-select-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which clause chooses the columns to return?",
+     "a": "SELECT"
+    },
+    {
+     "q": "How do you return unique values only?",
+     "a": "SELECT DISTINCT column"
+    },
+    {
+     "q": "Give a column a temporary name.",
+     "a": "SELECT price AS cost (an alias)"
+    }
+   ]
+  },
+  {
+   "id": "sql-where",
+   "subject": "SQL",
+   "title": "Filtering: WHERE, AND/OR, IN, BETWEEN, LIKE & NULL",
+   "phase": 1,
+   "order": 3,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "sql-where-learn",
+     "type": "learn",
+     "title": "Watch: Filtering: WHERE, AND/OR, IN, BETWEEN, LIKE & NULL",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Basics Tutorial For Beginners | Where Statement | 3/4",
+       "url": "https://www.youtube.com/watch?v=A9TOuDZTPDU",
+       "youtube_id": "A9TOuDZTPDU",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-where-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Queries with constraints (Pt. 1)",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_constraints",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Queries with constraints (Pt. 2)",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_constraints_pt_2",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – A short note on NULLs",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_nulls",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-where-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Basic (filtering)",
+       "url": "https://pgexercises.com/questions/basic/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-where-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "How do you test for a missing value?",
+     "a": "IS NULL (not = NULL)"
+    },
+    {
+     "q": "What does LIKE 'A%' match?",
+     "a": "Text starting with A"
+    },
+    {
+     "q": "Is BETWEEN 1 AND 10 inclusive?",
+     "a": "Yes, both ends are included"
+    }
+   ]
+  },
+  {
+   "id": "sql-sort-aggregate",
+   "subject": "SQL",
+   "title": "ORDER BY, LIMIT, Aggregates, GROUP BY & HAVING",
+   "phase": 1,
+   "order": 4,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 125,
+   "blocks": [
+    {
+     "id": "sql-sort-aggregate-learn",
+     "type": "learn",
+     "title": "Watch: ORDER BY, LIMIT, Aggregates, GROUP BY & HAVING",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Basics Tutorial For Beginners | Group By + Order By Statements | 4/4",
+       "url": "https://www.youtube.com/watch?v=LXwfzIRD-Ds",
+       "youtube_id": "LXwfzIRD-Ds",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-sort-aggregate-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Filtering and sorting",
+       "url": "https://sqlbolt.com/lesson/filtering_sorting_query_results",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Aggregates (Pt. 1)",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_aggregates",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Aggregates (Pt. 2: HAVING)",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Order of execution",
+       "url": "https://sqlbolt.com/lesson/select_queries_order_of_execution",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Aggregate Functions",
+       "url": "https://www.postgresql.org/docs/current/tutorial-agg.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-sort-aggregate-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Aggregates",
+       "url": "https://pgexercises.com/questions/aggregates/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-sort-aggregate-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "WHERE vs HAVING?",
+     "a": "WHERE filters rows before grouping; HAVING filters groups after aggregation"
+    },
+    {
+     "q": "Name three aggregate functions.",
+     "a": "COUNT, SUM, AVG (also MIN, MAX)"
+    },
+    {
+     "q": "Default sort order of ORDER BY?",
+     "a": "Ascending (ASC)"
+    }
+   ]
+  },
+  {
+   "id": "sql-case",
+   "subject": "SQL",
+   "title": "CASE Expressions & Calculated Columns",
+   "phase": 1,
+   "order": 5,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "sql-case-learn",
+     "type": "learn",
+     "title": "Watch: CASE Expressions & Calculated Columns",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Intermediate SQL Tutorial | Case Statement | Use Cases",
+       "url": "https://www.youtube.com/watch?v=Twusw__OzA8",
+       "youtube_id": "Twusw__OzA8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-case-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Queries with expressions",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_expressions",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Conditional Expressions",
+       "url": "https://www.postgresql.org/docs/current/functions-conditional.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-case-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Basic (CASE questions)",
+       "url": "https://pgexercises.com/questions/basic/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-case-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does CASE return if no WHEN matches and there is no ELSE?",
+     "a": "NULL"
+    },
+    {
+     "q": "Which keyword ends a CASE expression?",
+     "a": "END"
+    },
+    {
+     "q": "Can CASE be used inside ORDER BY or GROUP BY?",
+     "a": "Yes, anywhere an expression is allowed"
+    }
+   ]
+  },
+  {
+   "id": "sql-functions",
+   "subject": "SQL",
+   "title": "String, Number & Date Functions",
+   "phase": 1,
+   "order": 6,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 125,
+   "blocks": [
+    {
+     "id": "sql-functions-learn",
+     "type": "learn",
+     "title": "Watch: String, Number & Date Functions",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Advanced SQL Tutorial | String Functions + Use Cases",
+       "url": "https://www.youtube.com/watch?v=GQj6_6V_jVA",
+       "youtube_id": "GQj6_6V_jVA",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-functions-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – String Functions",
+       "url": "https://www.postgresql.org/docs/current/functions-string.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Date/Time Functions",
+       "url": "https://www.postgresql.org/docs/current/functions-datetime.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-functions-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – String",
+       "url": "https://pgexercises.com/questions/string/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Date",
+       "url": "https://pgexercises.com/questions/date/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-functions-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Function to change text to upper case?",
+     "a": "UPPER()"
+    },
+    {
+     "q": "How do you join two strings in standard SQL?",
+     "a": "With || or CONCAT()"
+    },
+    {
+     "q": "Function to get today's date in PostgreSQL?",
+     "a": "CURRENT_DATE"
+    }
+   ]
+  },
+  {
+   "id": "proj-sql-explore",
+   "subject": "SQL",
+   "title": "Project 1: Query Workbook on a Sample Database",
+   "phase": 1,
+   "order": 7,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 420,
+   "blocks": [
+    {
+     "id": "proj-sql-explore-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Getting started (club database)",
+       "url": "https://pgexercises.com/gettingstarted.html",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-sql-explore-build",
+     "type": "build",
+     "title": "Load the free 'club' sample database and write 25 queries answering business questions: filters, sorting, aggregates and CASE. Save them in one commented .sql file.",
+     "est_minutes": 360,
+     "done_when": [
+      "25 queries run without errors",
+      "Every query has a one-line comment explaining the question",
+      "At least 5 use GROUP BY with HAVING"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-sql-explore-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-sql-explore-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "W3Schools SQL Quiz",
+       "url": "https://www.w3schools.com/sql/sql_quiz.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why comment each query?",
+     "a": "So you (and reviewers) know which question it answers"
+    },
+    {
+     "q": "What should you check first in a new database?",
+     "a": "Its tables, columns and how they relate"
+    },
+    {
+     "q": "Where do you save your work for a portfolio?",
+     "a": "In a GitHub repository"
+    }
+   ]
+  },
+  {
+   "id": "sql-joins",
+   "subject": "SQL",
+   "title": "JOINs: INNER, LEFT, RIGHT, FULL & Self Joins",
+   "phase": 2,
+   "order": 8,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "sql-joins-learn",
+     "type": "learn",
+     "title": "Watch: JOINs: INNER, LEFT, RIGHT, FULL & Self Joins",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Intermediate SQL Tutorial | Inner/Outer Joins | Use Cases",
+       "url": "https://www.youtube.com/watch?v=9URM1_2S0ho",
+       "youtube_id": "9URM1_2S0ho",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 25,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-joins-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Multi-table queries with JOINs",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_joins",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – OUTER JOINs",
+       "url": "https://sqlbolt.com/lesson/select_queries_with_outer_joins",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Joins Between Tables",
+       "url": "https://www.postgresql.org/docs/current/tutorial-join.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-joins-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 75,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Joins and Subqueries",
+       "url": "https://pgexercises.com/questions/joins/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-joins-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does a LEFT JOIN keep?",
+     "a": "All rows from the left table, with NULLs where no match exists"
+    },
+    {
+     "q": "INNER JOIN returns?",
+     "a": "Only rows that match in both tables"
+    },
+    {
+     "q": "What is a self join?",
+     "a": "Joining a table to itself, using two aliases"
+    }
+   ]
+  },
+  {
+   "id": "sql-unions",
+   "subject": "SQL",
+   "title": "UNION, INTERSECT & EXCEPT",
+   "phase": 2,
+   "order": 9,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 100,
+   "blocks": [
+    {
+     "id": "sql-unions-learn",
+     "type": "learn",
+     "title": "Watch: UNION, INTERSECT & EXCEPT",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Intermediate SQL Tutorial | Unions | Union Operator",
+       "url": "https://www.youtube.com/watch?v=lYKkro6rKm0",
+       "youtube_id": "lYKkro6rKm0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-unions-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Combining Queries",
+       "url": "https://www.postgresql.org/docs/current/queries-union.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-unions-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – SQL practice",
+       "url": "https://www.hackerrank.com/domains/sql",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-unions-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "UNION vs UNION ALL?",
+     "a": "UNION removes duplicates; UNION ALL keeps them"
+    },
+    {
+     "q": "What must match in queries combined with UNION?",
+     "a": "Number of columns and compatible types"
+    },
+    {
+     "q": "What does EXCEPT return?",
+     "a": "Rows in the first query that are not in the second"
+    }
+   ]
+  },
+  {
+   "id": "sql-subqueries",
+   "subject": "SQL",
+   "title": "Subqueries",
+   "phase": 2,
+   "order": 10,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 120,
+   "blocks": [
+    {
+     "id": "sql-subqueries-learn",
+     "type": "learn",
+     "title": "Watch: Subqueries",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Advanced SQL Tutorial | Subqueries",
+       "url": "https://www.youtube.com/watch?v=m1KcNV-Zhmc",
+       "youtube_id": "m1KcNV-Zhmc",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-subqueries-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Subquery Expressions",
+       "url": "https://www.postgresql.org/docs/current/functions-subquery.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-subqueries-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Joins and Subqueries",
+       "url": "https://pgexercises.com/questions/joins/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-subqueries-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Where can a subquery appear?",
+     "a": "In SELECT, FROM or WHERE"
+    },
+    {
+     "q": "What is a correlated subquery?",
+     "a": "One that uses a column from the outer query, so it runs per row"
+    },
+    {
+     "q": "What does EXISTS check?",
+     "a": "Whether the subquery returns at least one row"
+    }
+   ]
+  },
+  {
+   "id": "sql-cte",
+   "subject": "SQL",
+   "title": "Common Table Expressions (WITH) & Temp Tables",
+   "phase": 2,
+   "order": 11,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 105,
+   "blocks": [
+    {
+     "id": "sql-cte-learn",
+     "type": "learn",
+     "title": "Watch: Common Table Expressions (WITH) & Temp Tables",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Advanced SQL Tutorial | CTE (Common Table Expression)",
+       "url": "https://www.youtube.com/watch?v=K1WeoKxLZ5o",
+       "youtube_id": "K1WeoKxLZ5o",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Recursive CTE (Common Table Expression) | Advance SQL Tutorial in Hindi",
+       "url": "https://www.youtube.com/watch?v=gn7qLNR-wkg",
+       "youtube_id": "gn7qLNR-wkg",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-cte-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – WITH Queries (CTEs)",
+       "url": "https://www.postgresql.org/docs/current/queries-with.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-cte-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Recursive",
+       "url": "https://pgexercises.com/questions/recursive/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-cte-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which keyword starts a CTE?",
+     "a": "WITH"
+    },
+    {
+     "q": "Why use a CTE?",
+     "a": "To break a complex query into readable named steps"
+    },
+    {
+     "q": "What extra keyword makes a CTE recursive?",
+     "a": "RECURSIVE (WITH RECURSIVE)"
+    }
+   ]
+  },
+  {
+   "id": "sql-window",
+   "subject": "SQL",
+   "title": "Window Functions: ROW_NUMBER, RANK, LEAD/LAG & Running Totals",
+   "phase": 2,
+   "order": 12,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 135,
+   "blocks": [
+    {
+     "id": "sql-window-learn",
+     "type": "learn",
+     "title": "Watch: Window Functions: ROW_NUMBER, RANK, LEAD/LAG & Running Totals",
+     "est_minutes": 35,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Window Function | How to write SQL Query using RANK, DENSE RANK, LEAD/LAG | SQL Queries Tutorial",
+       "url": "https://www.youtube.com/watch?v=Ww71knvhQ-s",
+       "youtube_id": "Ww71knvhQ-s",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "techTFQ",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Complete SQL Window Functions Tutorial in Hindi",
+       "url": "https://www.youtube.com/watch?v=E8ZDobnpQJ4",
+       "youtube_id": "E8ZDobnpQJ4",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Data Prodigy",
+       "duration_seconds": null,
+       "est_minutes": 35,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-window-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Window Functions",
+       "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Mode – SQL Window Functions",
+       "url": "https://mode.com/sql-tutorial/sql-window-functions",
+       "lang": "en",
+       "provider": "mode.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-window-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "LeetCode – Top SQL 50",
+       "url": "https://leetcode.com/studyplan/top-sql-50/",
+       "lang": "en",
+       "provider": "leetcode.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-window-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "RANK vs DENSE_RANK?",
+     "a": "RANK leaves gaps after ties; DENSE_RANK does not"
+    },
+    {
+     "q": "What does PARTITION BY do?",
+     "a": "Restarts the window calculation for each group"
+    },
+    {
+     "q": "Which function reads the previous row's value?",
+     "a": "LAG()"
+    }
+   ]
+  },
+  {
+   "id": "proj-sql-analytics",
+   "subject": "SQL",
+   "title": "Project 2: Sales Analytics Report",
+   "phase": 2,
+   "order": 13,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 540,
+   "blocks": [
+    {
+     "id": "proj-sql-analytics-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Mode SQL Tutorial (reference)",
+       "url": "https://mode.com/sql-tutorial/",
+       "lang": "en",
+       "provider": "mode.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-sql-analytics-build",
+     "type": "build",
+     "title": "Using a free sample sales database (e.g. Chinook or the club DB), answer 10 business questions with joins, CTEs and window functions; present results as a short report with tables.",
+     "est_minutes": 480,
+     "done_when": [
+      "Uses at least 3 JOIN types, 2 CTEs and 2 window functions",
+      "Each answer has the query and a one-sentence insight",
+      "Published as a README on GitHub"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-sql-analytics-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-sql-analytics-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "HackerRank SQL (Basic) certification test",
+       "url": "https://www.hackerrank.com/skills-verification/sql_basic",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which tool finds 'top 3 per category'?",
+     "a": "A window function like ROW_NUMBER() with PARTITION BY"
+    },
+    {
+     "q": "Why write the insight, not just the query?",
+     "a": "Employers want the business meaning of the numbers"
+    },
+    {
+     "q": "How do you show month-over-month change?",
+     "a": "LAG() over months ordered by date"
+    }
+   ]
+  },
+  {
+   "id": "sql-ddl",
+   "subject": "SQL",
+   "title": "Creating Tables & Data Types (CREATE, ALTER, DROP)",
+   "phase": 3,
+   "order": 14,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "sql-ddl-learn",
+     "type": "learn",
+     "title": "Watch: Creating Tables & Data Types (CREATE, ALTER, DROP)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Tutorial - Full Database Course for Beginners",
+       "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+       "youtube_id": "HXV3zeQKqGY",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "freeCodeCamp.org",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Create Table In SQL & Create Database | SQL Tutorial In Hindi 3",
+       "url": "https://www.youtube.com/watch?v=v-2cIUgx_jw",
+       "youtube_id": "v-2cIUgx_jw",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "English: watch the 'Creating Tables' and 'Data Types' sections of the full course."
+    },
+    {
+     "id": "sql-ddl-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Creating tables",
+       "url": "https://sqlbolt.com/lesson/creating_tables",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Altering tables",
+       "url": "https://sqlbolt.com/lesson/altering_tables",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Data Types",
+       "url": "https://www.postgresql.org/docs/current/datatype.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-ddl-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "SQLBolt – Dropping tables (exercise)",
+       "url": "https://sqlbolt.com/lesson/dropping_tables",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-ddl-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Command to add a column to a table?",
+     "a": "ALTER TABLE ... ADD COLUMN"
+    },
+    {
+     "q": "Which type stores exact money values?",
+     "a": "NUMERIC/DECIMAL (not FLOAT)"
+    },
+    {
+     "q": "Difference between DROP and TRUNCATE?",
+     "a": "DROP removes the table; TRUNCATE removes all rows but keeps it"
+    }
+   ]
+  },
+  {
+   "id": "sql-constraints",
+   "subject": "SQL",
+   "title": "Keys & Constraints: PRIMARY, FOREIGN, UNIQUE, CHECK, NOT NULL",
+   "phase": 3,
+   "order": 15,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 100,
+   "blocks": [
+    {
+     "id": "sql-constraints-learn",
+     "type": "learn",
+     "title": "Watch: Keys & Constraints: PRIMARY, FOREIGN, UNIQUE, CHECK, NOT NULL",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Primary Key and Foreign Key Constraints in SQL",
+       "url": "https://www.youtube.com/watch?v=MR0PK0qkCD8",
+       "youtube_id": "MR0PK0qkCD8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Neso Academy",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Data Types, Primary-Foreign Keys & Constraints in SQL | SQL Tutorial In Hindi 2",
+       "url": "https://www.youtube.com/watch?v=HmH-76_2Ak8",
+       "youtube_id": "HmH-76_2Ak8",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-constraints-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Constraints",
+       "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Foreign Keys",
+       "url": "https://www.postgresql.org/docs/current/tutorial-fk.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-constraints-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – SQL practice",
+       "url": "https://www.hackerrank.com/domains/sql",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-constraints-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does a primary key guarantee?",
+     "a": "Each row is unique and the value is not NULL"
+    },
+    {
+     "q": "What does a foreign key enforce?",
+     "a": "Values must exist in the referenced table (referential integrity)"
+    },
+    {
+     "q": "Constraint that restricts allowed values, e.g. age > 0?",
+     "a": "CHECK"
+    }
+   ]
+  },
+  {
+   "id": "sql-dml",
+   "subject": "SQL",
+   "title": "Changing Data: INSERT, UPDATE, DELETE",
+   "phase": 3,
+   "order": 16,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 100,
+   "blocks": [
+    {
+     "id": "sql-dml-learn",
+     "type": "learn",
+     "title": "Watch: Changing Data: INSERT, UPDATE, DELETE",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Intermediate SQL Tutorial | Updating/Deleting Data",
+       "url": "https://www.youtube.com/watch?v=bhnrIforc7s",
+       "youtube_id": "bhnrIforc7s",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Alex The Analyst",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-dml-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Inserting rows",
+       "url": "https://sqlbolt.com/lesson/inserting_rows",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Updating rows",
+       "url": "https://sqlbolt.com/lesson/updating_rows",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "SQLBolt – Deleting rows",
+       "url": "https://sqlbolt.com/lesson/deleting_rows",
+       "lang": "en",
+       "provider": "sqlbolt.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-dml-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Modifying data",
+       "url": "https://pgexercises.com/questions/updates/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-dml-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What happens to UPDATE without WHERE?",
+     "a": "Every row in the table is changed"
+    },
+    {
+     "q": "How do you insert several rows at once?",
+     "a": "INSERT ... VALUES (...), (...), (...)"
+    },
+    {
+     "q": "Safe habit before DELETE?",
+     "a": "Run the same WHERE as a SELECT first (and use a transaction)"
+    }
+   ]
+  },
+  {
+   "id": "sql-normalization",
+   "subject": "SQL",
+   "title": "Data Modelling & Normalization (1NF–3NF)",
+   "phase": 3,
+   "order": 17,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "sql-normalization-learn",
+     "type": "learn",
+     "title": "Watch: Data Modelling & Normalization (1NF–3NF)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF",
+       "url": "https://www.youtube.com/watch?v=GFQaEYEc8_8",
+       "youtube_id": "GFQaEYEc8_8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Decomplexify",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Database Normalization Explained: 1NF, 2NF & 3NF With SQL Examples",
+       "url": "https://www.youtube.com/watch?v=suKHq3ZLPmU",
+       "youtube_id": "suKHq3ZLPmU",
+       "lang": "hi-en",
+       "provider": "YouTube",
+       "channel": "Engineering Digest",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-normalization-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Microsoft Learn – Database normalization description",
+       "url": "https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description",
+       "lang": "en",
+       "provider": "learn.microsoft.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-normalization-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "dbdiagram.io – draw an ER diagram (free)",
+       "url": "https://dbdiagram.io/",
+       "lang": "en",
+       "provider": "dbdiagram.io",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-normalization-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does 1NF require?",
+     "a": "Atomic values: no repeating groups or lists in a column"
+    },
+    {
+     "q": "What does normalization reduce?",
+     "a": "Duplicate data and update anomalies"
+    },
+    {
+     "q": "In 3NF, non-key columns depend on?",
+     "a": "The key, the whole key and nothing but the key"
+    }
+   ]
+  },
+  {
+   "id": "sql-transactions",
+   "subject": "SQL",
+   "title": "Transactions & ACID (BEGIN, COMMIT, ROLLBACK)",
+   "phase": 3,
+   "order": 18,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 90,
+   "blocks": [
+    {
+     "id": "sql-transactions-learn",
+     "type": "learn",
+     "title": "Watch: Transactions & ACID (BEGIN, COMMIT, ROLLBACK)",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Relational Database ACID Transactions (Explained by Example)",
+       "url": "https://www.youtube.com/watch?v=pomxJOFVcQs",
+       "youtube_id": "pomxJOFVcQs",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Hussein Nasser",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Transactions Explained: ACID Properties & Transaction Control for Beginners",
+       "url": "https://www.youtube.com/watch?v=t6haLYqfaJQ",
+       "youtube_id": "t6haLYqfaJQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "CodeLucky",
+       "duration_seconds": null,
+       "est_minutes": 20,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-transactions-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Transactions",
+       "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-transactions-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PostgreSQL Exercises – Modifying data (wrap in transactions)",
+       "url": "https://pgexercises.com/questions/updates/",
+       "lang": "en",
+       "provider": "pgexercises.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-transactions-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does ACID stand for?",
+     "a": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+     "q": "What does ROLLBACK do?",
+     "a": "Undoes all changes since the transaction began"
+    },
+    {
+     "q": "Classic example needing a transaction?",
+     "a": "A bank transfer: debit one account and credit another together"
+    }
+   ]
+  },
+  {
+   "id": "sql-indexes-views",
+   "subject": "SQL",
+   "title": "Indexes, EXPLAIN & Views",
+   "phase": 3,
+   "order": 19,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "sql-indexes-views-learn",
+     "type": "learn",
+     "title": "Watch: Indexes, EXPLAIN & Views",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "SQL Indexes (Visually Explained) | Clustered vs Nonclustered | #SQL Course 35",
+       "url": "https://www.youtube.com/watch?v=BxAj3bl00-o",
+       "youtube_id": "BxAj3bl00-o",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Data with Baraa",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Views (Visually Explained) | 6 Top Use Cases | #SQL Course 29",
+       "url": "https://www.youtube.com/watch?v=n17RCiV5xpA",
+       "youtube_id": "n17RCiV5xpA",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Data with Baraa",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: the main video covers indexes, the second covers views."
+    },
+    {
+     "id": "sql-indexes-views-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Indexes",
+       "url": "https://www.postgresql.org/docs/current/indexes.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Using EXPLAIN",
+       "url": "https://www.postgresql.org/docs/current/using-explain.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Views",
+       "url": "https://www.postgresql.org/docs/current/tutorial-views.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Use The Index, Luke! (free book on SQL performance)",
+       "url": "https://use-the-index-luke.com/",
+       "lang": "en",
+       "provider": "use-the-index-luke.com",
+       "access": "premium",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-indexes-views-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "LeetCode – Top SQL 50",
+       "url": "https://leetcode.com/studyplan/top-sql-50/",
+       "lang": "en",
+       "provider": "leetcode.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-indexes-views-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why add an index?",
+     "a": "To find rows faster without scanning the whole table"
+    },
+    {
+     "q": "Cost of too many indexes?",
+     "a": "Slower inserts/updates and more storage"
+    },
+    {
+     "q": "What is a view?",
+     "a": "A saved query you can select from like a table"
+    }
+   ]
+  },
+  {
+   "id": "proj-sql-schema",
+   "subject": "SQL",
+   "title": "Project 3: Design & Build a Library Management Database",
+   "phase": 3,
+   "order": 20,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 660,
+   "blocks": [
+    {
+     "id": "proj-sql-schema-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Data Definition (reference)",
+       "url": "https://www.postgresql.org/docs/current/ddl.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-sql-schema-build",
+     "type": "build",
+     "title": "Design an ER diagram for a library (members, books, copies, loans, fines), normalize to 3NF, create it with constraints and indexes, load sample data and write 10 queries.",
+     "est_minutes": 600,
+     "done_when": [
+      "ER diagram + CREATE script with PK/FK/CHECK constraints",
+      "Sample data loaded; 10 queries including a view and a transaction",
+      "README explains design choices"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-sql-schema-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-sql-schema-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "W3Schools SQL Quiz",
+       "url": "https://www.w3schools.com/sql/sql_quiz.asp",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which table links members and books for borrowing?",
+     "a": "A loans table with foreign keys to both"
+    },
+    {
+     "q": "Where should you add indexes first?",
+     "a": "On foreign keys and columns used often in WHERE/JOIN"
+    },
+    {
+     "q": "Why use a transaction when issuing a book?",
+     "a": "Creating the loan and updating availability must succeed or fail together"
+    }
+   ]
+  },
+  {
+   "id": "sql-security",
+   "subject": "SQL",
+   "title": "Users, Privileges & SQL Injection Safety",
+   "phase": 4,
+   "order": 21,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 100,
+   "blocks": [
+    {
+     "id": "sql-security-learn",
+     "type": "learn",
+     "title": "Watch: Users, Privileges & SQL Injection Safety",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Running an SQL Injection Attack - Computerphile",
+       "url": "https://www.youtube.com/watch?v=ciNHn38EyRc",
+       "youtube_id": "ciNHn38EyRc",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Computerphile",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "SQL Tutorial for Beginners | Full SQL Course In Hindi",
+       "url": "https://www.youtube.com/watch?v=On9eSN3F8w0",
+       "youtube_id": "On9eSN3F8w0",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "Rishabh Mishra",
+       "duration_seconds": null,
+       "est_minutes": 15,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-security-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "PostgreSQL – Privileges",
+       "url": "https://www.postgresql.org/docs/current/ddl-priv.html",
+       "lang": "en",
+       "provider": "www.postgresql.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "OWASP – SQL Injection Prevention Cheat Sheet",
+       "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+       "lang": "en",
+       "provider": "cheatsheetseries.owasp.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-security-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "PortSwigger Web Security Academy – SQL injection labs (legal practice)",
+       "url": "https://portswigger.net/web-security/sql-injection",
+       "lang": "en",
+       "provider": "portswigger.net",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-security-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Best defence against SQL injection?",
+     "a": "Parameterized queries / prepared statements"
+    },
+    {
+     "q": "Principle for database permissions?",
+     "a": "Least privilege: grant only what each user needs"
+    },
+    {
+     "q": "Command to give a user read access?",
+     "a": "GRANT SELECT ON table TO user"
+    }
+   ],
+   "safety_note": "Practise injection only on the linked training labs — never on real websites."
+  },
+  {
+   "id": "sql-in-code",
+   "subject": "SQL",
+   "title": "Using SQL from Code (Python + SQLite/PostgreSQL)",
+   "phase": 4,
+   "order": 22,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 115,
+   "blocks": [
+    {
+     "id": "sql-in-code-learn",
+     "type": "learn",
+     "title": "Watch: Using SQL from Code (Python + SQLite/PostgreSQL)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Python SQLite Tutorial: Complete Overview - Creating a Database, Table, and Running Queries",
+       "url": "https://www.youtube.com/watch?v=pd-0G0MigUA",
+       "youtube_id": "pd-0G0MigUA",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Corey Schafer",
+       "duration_seconds": null,
+       "est_minutes": 30,
+       "duration_source": "estimate",
+       "access": "all",
+       "ad_gate_allowed": false,
+       "status": "active",
+       "last_checked": "2026-10-08",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "sql-in-code-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Python docs – sqlite3",
+       "url": "https://docs.python.org/3/library/sqlite3.html",
+       "lang": "en",
+       "provider": "docs.python.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Psycopg 3 – Basic usage",
+       "url": "https://www.psycopg.org/psycopg3/docs/basic/usage.html",
+       "lang": "en",
+       "provider": "www.psycopg.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-in-code-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 45,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Kaggle Learn – Intro to SQL (free)",
+       "url": "https://www.kaggle.com/learn/intro-to-sql",
+       "lang": "en",
+       "provider": "www.kaggle.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "sql-in-code-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why use placeholders (?) instead of f-strings in queries?",
+     "a": "They prevent SQL injection and handle quoting"
+    },
+    {
+     "q": "What must you call to save changes in sqlite3?",
+     "a": "connection.commit()"
+    },
+    {
+     "q": "Which Python library connects to PostgreSQL?",
+     "a": "psycopg (psycopg 3)"
+    }
+   ]
+  },
+  {
+   "id": "proj-sql-capstone",
+   "subject": "SQL",
+   "title": "Final Project: End-to-end Data Analysis with SQL",
+   "phase": 4,
+   "order": 23,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1080,
+   "blocks": [
+    {
+     "id": "proj-sql-capstone-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 20,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Kaggle Datasets (free public data)",
+       "url": "https://www.kaggle.com/datasets",
+       "lang": "en",
+       "provider": "www.kaggle.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-sql-capstone-build",
+     "type": "build",
+     "title": "Pick a public dataset, design tables, import it, answer 12 real questions with joins, CTEs and window functions, and publish a GitHub README with queries, results and insights.",
+     "est_minutes": 900,
+     "done_when": [
+      "Clean schema with constraints and indexes",
+      "12 questions answered with at least 4 window functions/CTEs",
+      "Public GitHub repo with README and insights"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-sql-capstone-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "LeetCode – Top SQL 50 (finish the study plan)",
+       "url": "https://leetcode.com/studyplan/top-sql-50/",
+       "lang": "en",
+       "provider": "leetcode.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    },
+    {
+     "id": "proj-sql-capstone-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-sql-capstone-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "HackerRank SQL (Intermediate) certification test",
+       "url": "https://www.hackerrank.com/skills-verification/sql_intermediate",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "What makes a strong SQL portfolio project?",
+     "a": "Real data, clear questions, clean queries and written insights"
+    },
+    {
+     "q": "How do you prove skills to employers for free?",
+     "a": "Public GitHub projects plus free certifications"
+    },
+    {
+     "q": "Next roadmaps after SQL?",
+     "a": "Data Analytics, Backend Development or Data Science"
+    }
+   ]
+  }
+ ],
+ "milestones": [
+  {
+   "id": "sql-cert",
+   "after_phase": 4,
+   "type": "certification",
+   "title": "Optional: HackerRank SQL (Basic & Intermediate) certificates",
+   "est_minutes": 120,
+   "score_entry": true,
+   "resources": [
+    {
+     "type": "test",
+     "role": "main",
+     "title": "HackerRank SQL (Basic)",
+     "url": "https://www.hackerrank.com/skills-verification/sql_basic",
+     "lang": "en",
+     "provider": "www.hackerrank.com",
+     "access": "all",
+     "status": "unverified",
+     "last_checked": null
+    }
+   ]
+  }
+ ]
+}
