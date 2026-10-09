@@ -12,7 +12,7 @@
  *
  * Pure, like the scheduler: dates in, numbers out, no clock.
  */
-import { addDays, daysBetween, isoWeekKey, monthKey, type IsoDate } from '../scheduler/dates.ts';
+import { addDays, isoWeekKey, monthKey, type IsoDate } from '../scheduler/dates.ts';
 
 export interface StreakState {
   current: number;
@@ -116,12 +116,6 @@ export function nextMilestone(current: number): number | null {
   return STREAK_MILESTONES.find((m) => m > current) ?? null;
 }
 
-export function reachedMilestone(current: number): number | null {
-  return STREAK_MILESTONES.includes(current as (typeof STREAK_MILESTONES)[number])
-    ? current
-    : null;
-}
-
 /**
  * Rest days are capped at 1 per week and 4 per month (decision #15). Returns
  * why a date cannot be taken off, or null when it can.
@@ -160,7 +154,3 @@ export function consistency(
   return { studied: count, of: windowDays };
 }
 
-/** Days since the learner last studied — drives the nudge notifications. */
-export function daysSinceLastStudy(state: StreakState, today: IsoDate): number | null {
-  return state.lastStudyDate ? daysBetween(state.lastStudyDate, today) : null;
-}

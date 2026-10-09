@@ -16,7 +16,7 @@ import { Alert, ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, Screen, Txt } from '../components/ui.tsx';
-import { isValidCouponCode } from '../billing/coupons.ts';
+import { isValidCouponCode, normaliseCouponCode } from '../billing/coupons.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 /** Flip on only once these were genuinely the previous prices. */
@@ -59,7 +59,7 @@ export default function Plans() {
   const [coupon, setCoupon] = useState('');
 
   const applyCoupon = () => {
-    const code = coupon.trim().toUpperCase();
+    const code = normaliseCouponCode(coupon);
     if (!isValidCouponCode(code)) {
       Alert.alert(
         'Check the code',

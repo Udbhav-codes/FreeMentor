@@ -6,6 +6,7 @@
  * its topic, which is what these do.
  */
 import type { Block, GoalFile, Milestone, Resource, Topic } from '@freementor/shared';
+import { isoWeekKey } from './dates.ts';
 import { primaryResource, videoMinutes } from './time.ts';
 import type { PlannedItem } from './types.ts';
 
@@ -88,7 +89,39 @@ function revisionResources(topic: Topic | undefined, lang: string): Resource[] {
   return list.filter((r) => r.lang === lang || r.lang === 'en').slice(0, 3);
 }
 
-/** The three recall questions for a topic (product plan decision #17). */
-export function recallFor(topicId: string | undefined, index: GoalIndex) {
-  return topicId ? (index.topics.get(topicId)?.recall ?? []) : [];
+
+/**
+ * "Week 9 · Day 3" — the Day view's breadcrumb. Weeks are counted from the
+ * first day of the plan, and the day number is its position inside that week,
+ * which is how a learner talks about their own schedule.
+ */
+export function weekAndDay(
+  days: { date: string }[],
+  date: string,
+): { week: number; day: number } | null {
+  const sorted = [...days].map((d) => d.date).sort();
+  if (!sorted.includes(date)) return null;
+
+  const weeks: string[] = [];
+  let week = 0;
+  let day = 0;
+
+  for (const d of sorted) {
+    const key = isoWeekKeyOf(d);
+    if (weeks[weeks.length - 1] !== key) {
+      weeks.push(key);
+      day = 0;
+    }
+    day += 1;
+    if (d === date) {
+      week = weeks.length;
+      break;
+    }
+  }
+  return { week, day };
+}
+
+function isoWeekKeyOf(date: string): string {
+  // Re-exported from dates.ts; kept local so lookup.ts has no cycle.
+  return isoWeekKey(date);
 }

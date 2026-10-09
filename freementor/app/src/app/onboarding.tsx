@@ -111,7 +111,7 @@ export default function Onboarding() {
 
       <ScrollView
         contentContainerStyle={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing.screen,
           paddingBottom: insets.bottom + theme.spacing.xxl,
           gap: theme.spacing.lg,
         }}

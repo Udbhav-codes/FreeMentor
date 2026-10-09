@@ -3,13 +3,16 @@
  *
  * Detailed analytics are a Premium feature (§10.1); the weekly report itself
  * is free on every plan, because it is the thing that actually changes
- * behaviour. The Premium lock lands with billing at M5.
+ * behaviour. Real purchases land at M5; the gate itself is live now, driven
+ * by billing/entitlement.ts, so there is one place that decides access.
  */
 import { useMemo } from 'react';
 import { ScrollView, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BarChart, ScoreBars } from '../../components/charts.tsx';
-import { Card, Empty, Screen, Txt } from '../../components/ui.tsx';
+import { Button, Card, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
+import { currentEntitlement, hasDetailedAnalytics } from '../../billing/entitlement.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { weeklyReport } from '../../progress/weekly.ts';
 import { consistency } from '../../progress/streak.ts';
@@ -18,9 +21,13 @@ import { useTheme } from '../../theme/ThemeProvider.tsx';
 
 export default function Reports() {
   const theme = useTheme();
+  const router = useRouter();
   const insets = useSafeAreaInsets();
   const { plan, progress } = useEnrollment();
   const today = todayIso();
+  // §10.1 — the weekly report is free on every plan; the per-subject
+  // breakdown and consistency detail are "detailed analytics" (Premium).
+  const detailed = hasDetailedAnalytics(currentEntitlement());
 
   const report = useMemo(
     () => (plan && progress ? weeklyReport(plan, progress, today) : null),
@@ -96,7 +103,26 @@ export default function Reports() {
           </Card>
         ) : null}
 
-        {report.subjectScores.length > 0 ? (
+        {!detailed ? (
+          <Card>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
+              <Txt variant="heading" style={{ flex: 1 }}>
+                Detailed analytics
+              </Txt>
+              <Pill tone="accent">Premium</Pill>
+            </View>
+            <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              Per-subject scores, weak-topic analysis and consistency trends. Your weekly
+              summary above stays free on every plan.
+            </Txt>
+            <Button
+              label="See plans"
+              variant="secondary"
+              onPress={() => router.push('/plans')}
+              style={{ marginTop: theme.spacing.lg }}
+            />
+          </Card>
+        ) : report.subjectScores.length > 0 ? (
           <Card>
             <Txt variant="heading">Test scores</Txt>
             <View style={{ marginTop: theme.spacing.md }}>
