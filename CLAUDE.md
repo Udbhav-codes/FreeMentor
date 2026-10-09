@@ -94,13 +94,19 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       entry, confidence sheet), GPS roadmap route, **streak** (pure, tested: 1-day grace,
       rest-day protection, 66-day habit counter), Progress tab, local daily reminders.
       **112 tests.**
-- [ ] M4 Backend (Supabase + FastAPI, Google sign-in, sync) · [ ] M5 Billing · [ ] M6 Ads/Reports/Admin.
+- [x] **UI build-out** — all eight screens of `design/FreeMentor_App_Preview.png` exist:
+      opening animation, weekly-time picker + deadline calculator, Home with the progress
+      ring, GPS route, Day view with the video hero card, weekly report, Plans. **149 tests.**
+- [ ] M4 Backend (Supabase + FastAPI, Google sign-in, sync) · [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
-- Reports and Practice tabs are still placeholders.
+- **Plans is UI only** — no Play Billing, no purchase verification, no coupon redemption,
+  no trial countdown and nothing actually locks after 3 days. All of that is M5.
 - Parent consent records the claim but does not yet **verify** it (OTP needs the backend).
 - No Google sign-in, no server sync — the sync queue fills up but nothing drains it.
-- Qualification and the deadline calculator (onboarding steps 6 and 7a) are not collected.
+- Qualification (onboarding step 6) is not collected.
+- No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
+- Hindi UI strings are not translated; only the library's Hindi resources are used.
 
 ### Working notes
 - Run from `freementor/`: `npm test -w app` · `npm run validate:library` · `npm run types`.
