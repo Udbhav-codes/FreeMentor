@@ -30,7 +30,12 @@ export const palette = {
   /** Neutral chip background — the mockup's .pill. */
   chip: '#E2E8F5',
   green: '#127A45',
-  navInactive: '#8A93A6',
+  /**
+   * Inactive tab labels. The mockup's #8A93A6 is only 3.1:1 on the white tab
+   * bar and these are 11 sp labels, so it failed text contrast; darkened to
+   * reach 5.0:1 while still reading as clearly unselected next to navy.
+   */
+  navInactive: '#667085',
   darkBase: '#0B1020',
   darkCard: '#141B2D',
   darkInk: '#E8ECF4',
@@ -59,9 +64,12 @@ export interface Colors {
   chip: string;
   onChip: string;
   success: string;
+  /** Error text and destructive affordances. */
+  danger: string;
+  /** Background for a success chip. */
+  successSoft: string;
   muted: string;
   navInactive: string;
-  overlay: string;
 }
 
 export const lightColors: Colors = {
@@ -79,9 +87,10 @@ export const lightColors: Colors = {
   chip: palette.chip,
   onChip: palette.navy,
   success: palette.green,
+  danger: '#B3261E', // 5.8:1 on base, 6.5:1 on card
+  successSoft: '#DCF3E6',
   muted: '#A8B0C0',
   navInactive: palette.navInactive,
-  overlay: 'rgba(11, 18, 32, 0.45)',
 };
 
 export const darkColors: Colors = {
@@ -100,9 +109,10 @@ export const darkColors: Colors = {
   chip: '#1E2940',
   onChip: palette.sky,
   success: palette.darkGreen,
+  danger: '#FF6B6B',
+  successSoft: '#13351F',
   muted: '#4A566F',
   navInactive: '#6B778F',
-  overlay: 'rgba(0, 0, 0, 0.6)',
 };
 
 /** 4 pt scale. Screen gutter is 20, matching the mockup's .content padding. */

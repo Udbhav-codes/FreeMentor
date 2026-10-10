@@ -1,6 +1,6 @@
 /**
  * Bottom navigation — product plan §8.1, matching the mockup's .nav:
- * 74 dp tall, white, hairline top border, inactive #8A93A6, active navy bold.
+ * 74 dp tall, white, hairline top border, inactive #667085, active navy bold.
  *
  * Roadmap · Progress · Reports · Practice · Profile.
  */

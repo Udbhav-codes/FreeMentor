@@ -373,15 +373,65 @@ Premium courses, mock-test packages, certificates, partner/affiliate courses, ca
 **Soft minimal + light neumorphism.** Neumorphic shadows only on large cards, progress ring and checkboxes. Primary buttons are **solid navy** (clear tap affordance). Dark mode uses soft elevation, not neumorphic shadows.
 
 ### 11.2 Colour tokens (contrast checked)
+
+Ratios are measured against the surface each token actually sits on — the light
+`#EEF1F7` background or the white `#FFFFFF` card. Implemented in
+`freementor/app/src/theme/tokens.ts`; that file and this table must agree.
+
 | Role | Light | Dark |
 |---|---|---|
-| Primary / brand | Navy `#0A2463` (14.5:1 on white) | Sky `#8FB3FF` |
+| Primary / brand | Navy `#0A2463` (12.8:1 on base, 14.5:1 on card) | Sky `#8FB3FF` (9.1:1) |
+| On primary | `#FFFFFF` | `#0B1020` |
 | Background | `#EEF1F7` | `#0B1020` |
 | Card / surface | `#FFFFFF` | `#141B2D` |
-| Text | Ink `#0B1220` | `#E8ECF4` |
-| Secondary text | `#5B6475` (5.3:1) | `#9AA4B8` |
-| Accent (streak, "today" only) | Amber `#F2A900` (navy text on amber 7.2:1) | same |
-| Success / done | Green `#127A45` | `#4ADE80` |
+| Text | Ink `#0B1220` (16.5:1) | `#E8ECF4` (16.0:1) |
+| Secondary text | `#5B6475` (5.3:1) | `#9AA4B8` (7.6:1) |
+| Border / hairline | `#DCE1EC` | `#243049` |
+| Success / done | Green `#127A45` (4.8:1) | `#4ADE80` (10.9:1) |
+| Success chip | bg `#DCF3E6`, text `#127A45` (4.6:1) | bg `#13351F`, text `#4ADE80` (7.7:1) |
+| Error | `#B3261E` (5.8:1) | `#FF6B6B` (6.8:1) |
+| Neutral chip | bg `#E2E8F5`, text `#0A2463` (11.8:1) | bg `#1E2940`, text `#8FB3FF` (7.0:1) |
+| Inactive tab label | `#667085` (5.0:1 on the card) | `#6B778F` |
+| Muted / placeholder | `#A8B0C0` *(non-text only)* | `#4A566F` |
+
+#### Amber is a fill colour, not a text colour
+
+The brand amber `#F2A900` measures **1.8:1 on `#EEF1F7`** and **2.0:1 on white**.
+That fails text contrast outright, and falls below even the 3:1 floor for
+meaningful UI elements. It is therefore split into three tokens:
+
+| Role | Light | Dark | Ratio |
+|---|---|---|---|
+| `accent` — **fills only**, never words | Amber `#F2A900` | same | decorative |
+| `accentSoft` + `onAccent` — chips | bg `#FFF1C7`, text `#6B4A00` | bg `#3A2E12`, text `#FFD98A` | 7.2:1 / 9.8:1 |
+| `accentInk` — amber **text** | `#7A5600` | `#FFC861` | 5.9:1 / 12.3:1 |
+
+Dark ink on a solid amber fill is 9.3:1, so amber may be used as a button or
+badge background with `#0B1220` text.
+
+#### Where amber is allowed
+
+Amber marks **"this is the live one"**. It appears in eight places and nowhere
+else; adding a ninth is a deliberate decision, not a styling choice:
+
+1. The streak counter
+2. "Today" — on the route, and today's stop marker
+3. The active tab (a 3 dp bar above the icon)
+4. An earned achievement (the ★ and its chip)
+5. A mock-test day (the ⚑ chip)
+6. A short rule before a section heading
+7. The ✓ on the trust line in the welcome card
+8. The weekly report's single recommendation
+
+**Every amber element is paired with a non-colour cue.** The active tab is also
+navy and bold; an earned badge also reads "Earned"; a mock day also reads "Mock
+test". Nothing in the app is conveyed by amber alone — which is what makes a
+2:1 decorative fill acceptable where 2:1 text would not be.
+
+> *Amended from the original "Accent (streak, 'today' only)". The widening was
+> deliberate; the fill-versus-text split was forced by the measurement above,
+> which found amber being used for the wordmark and for Cybersecurity safety
+> warnings at 1.8:1.*
 
 ### 11.3 Typography
 Inter (UI, body) · DM Sans (headings; *italic* for warm moments like "Your *roadmap* is ready") · Noto Sans Devanagari (Hindi). Minimum 14 sp body; supports system font scaling.

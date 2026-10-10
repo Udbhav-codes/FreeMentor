@@ -48,7 +48,7 @@ export function Txt({
     accent: theme.colors.accentInk,
     success: theme.colors.success,
     onPrimary: theme.colors.onPrimary,
-    danger: '#B3261E',
+    danger: theme.colors.danger,
   };
   return (
     <Text
@@ -257,7 +257,7 @@ export function Pill({
   const styles: Record<string, { bg: string; fg: string }> = {
     neutral: { bg: theme.colors.chip, fg: theme.colors.onChip },
     accent: { bg: theme.colors.accentSoft, fg: theme.colors.onAccent },
-    success: { bg: theme.dark ? '#13351F' : '#DCF3E6', fg: theme.colors.success },
+    success: { bg: theme.colors.successSoft, fg: theme.colors.success },
     primary: { bg: theme.colors.primary, fg: theme.colors.onPrimary },
   };
   const { bg, fg } = styles[tone]!;
