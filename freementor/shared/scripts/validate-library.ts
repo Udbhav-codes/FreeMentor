@@ -19,6 +19,17 @@ const fail = (file: string, rule: string, detail: string) =>
 const warn = (file: string, rule: string, detail: string) =>
   warnings.push({ file, rule, detail });
 
+/** Any youtube.com / youtu.be link, whatever `type` claims it is. */
+function isYouTubeUrl(url: unknown): boolean {
+  if (typeof url !== 'string') return false;
+  try {
+    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+    return host === 'youtube.com' || host === 'youtu.be' || host.endsWith('.youtube.com');
+  } catch {
+    return false;
+  }
+}
+
 const schema = JSON.parse(await readFile(SCHEMA_FILE, 'utf8'));
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);
@@ -112,12 +123,69 @@ for (const file of goalFiles) {
 
       for (const r of block.resources ?? []) {
         // --- the non-negotiable YouTube rule (CLAUDE.md) -----------------
-        if (r.type === 'video') {
+        // Keyed on the URL, NOT on the declared type. Checking
+        // `type === 'video'` let 21 YouTube links typed as `notes` sit at
+        // access="premium" — paywalled YouTube videos, the one thing this
+        // rule exists to prevent. The policy follows the link, so the check
+        // has to as well.
+        const youtube = isYouTubeUrl(r.url);
+        if (youtube) {
           if (r.ad_gate_allowed !== false)
-            fail(file, 'youtube-policy', `video "${r.url}" has ad_gate_allowed=${r.ad_gate_allowed}`);
+            fail(
+              file,
+              'youtube-policy',
+              `YouTube link "${r.url}" (type=${r.type}) has ` +
+                `ad_gate_allowed=${r.ad_gate_allowed} — must be false`,
+            );
           if (r.access !== 'all')
-            fail(file, 'youtube-policy', `video "${r.url}" has access="${r.access}" (must be "all")`);
+            fail(
+              file,
+              'youtube-policy',
+              `YouTube link "${r.url}" (type=${r.type}) has access="${r.access}" — ` +
+                `YouTube is never paywalled`,
+            );
         }
+        // --- the §10.1 tier table, as data ------------------------------
+        // accessFor() has an `ad_gated` branch that fires only on
+        // ad_gate_allowed === true. For a long time NOTHING in the library
+        // set it, so Basic's "main notes and tests after a rewarded ad" tier
+        // could never fire and the branch was unreachable code. These rules
+        // keep the data and §10.1 in step, in both directions.
+        if (r.access === 'premium') {
+          // Gated by plan, not by an ad. Both at once is contradictory even
+          // though accessFor() resolves premium first.
+          if (r.ad_gate_allowed === true)
+            fail(
+              file,
+              'tier-policy',
+              `premium resource "${r.url}" is also ad_gate_allowed — premium is a ` +
+                `plan gate, not an ad gate`,
+            );
+        } else if (youtube) {
+          // Settled above: access "all", never gated. The notes/test rule
+          // below would otherwise demand ad_gate_allowed=true and contradict
+          // the YouTube policy.
+        } else if (r.type === 'notes' || r.type === 'test') {
+          // §10.1: Basic opens these after a rewarded ad.
+          if (r.ad_gate_allowed !== true)
+            fail(
+              file,
+              'tier-policy',
+              `${r.type} "${r.url}" has ad_gate_allowed=${r.ad_gate_allowed} — §10.1 gives ` +
+                `Basic these after a rewarded ad, so an unflagged one is free by accident`,
+            );
+        } else if (r.type === 'practice') {
+          // §10.1: free on every tier. Stated explicitly so an absent field
+          // is never read as "not decided yet".
+          if (r.ad_gate_allowed !== false)
+            fail(
+              file,
+              'tier-policy',
+              `practice "${r.url}" has ad_gate_allowed=${r.ad_gate_allowed} — practice is ` +
+                `free on every tier (§10.1)`,
+            );
+        }
+
         if (typeof r.url !== 'string' || !r.url.startsWith('https://'))
           fail(file, 'links', `non-https resource url: ${r.url}`);
         if (r.status === 'broken')
