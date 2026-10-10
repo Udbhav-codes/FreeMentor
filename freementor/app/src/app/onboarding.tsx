@@ -2,14 +2,23 @@
  * Onboarding — product plan §5.
  *
  * One question per screen, a progress bar, a back button, Hinglish-friendly
- * copy. Google sign-in slots in at step 2 when the backend lands (M4); the
- * age gate deliberately comes before anything else is stored.
+ * copy. Sign-in happens before this (src/app/sign-in.tsx), so every answer
+ * here lands on a known account; the age gate deliberately comes before
+ * anything else is stored.
+ *
+ * Qualification is NOT asked here. Its options come from the catalog and
+ * differ by goal — JEE asks Class 10/11/12/Dropper, a programming track asks
+ * college/graduated — so it cannot be answered before a goal is picked. It is
+ * step 2 of goal/[id].tsx instead, which is also where weekly time and the
+ * roadmap build happen.
  */
 import { useCallback, useState } from 'react';
-import { ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Alert, ScrollView, TextInput, View } from 'react-native';
 import { Button, Card, Pill, ProgressBar, Screen, Txt } from '../components/ui.tsx';
+import { Avatar } from '../components/Avatar.tsx';
+import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
 import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onboarding/age.ts';
 import { saveProfile } from '../db/profile.ts';
 import { isExpoGo, requestPermission, scheduleDailyReminder } from '../notifications/daily.ts';
@@ -51,11 +60,36 @@ export default function Onboarding() {
   const [consentGiven, setConsentGiven] = useState(false);
   const [parentContact, setParentContact] = useState('');
   const [name, setName] = useState('');
+  const [photoUri, setPhotoUri] = useState<string | null>(null);
+  const [pickingPhoto, setPickingPhoto] = useState(false);
   const [language, setLanguage] = useState<'en' | 'hi' | 'hi-en'>('en');
   const [studyHour, setStudyHour] = useState<number | null>(null);
   const [studyPlace, setStudyPlace] = useState<string | null>(null);
 
   const progress = (ORDER.indexOf(step) + 1) / ORDER.length;
+
+  const choosePhoto = useCallback(async () => {
+    setPickingPhoto(true);
+    try {
+      // Passing the current uri lets the picker replace that file rather than
+      // leaving an orphan behind on a second attempt.
+      const result = await pickProfilePhoto(photoUri);
+      if (result.ok) {
+        setPhotoUri(result.uri);
+        return;
+      }
+      if (result.reason === 'permission_denied') {
+        Alert.alert(
+          'Photo access is off',
+          'FreeMentor needs permission to open your gallery. You can turn it on in Android settings — or skip it, the photo is optional.',
+        );
+      } else if (result.reason === 'failed') {
+        Alert.alert('Could not use that photo', 'Try another image.');
+      }
+    } finally {
+      setPickingPhoto(false);
+    }
+  }, [photoUri]);
 
   const next = useCallback(
     (from: Step) => {
@@ -87,6 +121,7 @@ export default function Onboarding() {
   const finish = useCallback(async () => {
     await saveProfile({
       name: name.trim() || null,
+      photoUri,
       birthYear,
       language,
       studyHour,
@@ -231,9 +266,9 @@ export default function Onboarding() {
 
         {step === 'name' ? (
           <>
-            <Txt variant="display">What should we call you?</Txt>
+            <Txt variant="display">Tell us about you</Txt>
             <Txt variant="small" color="secondary">
-              We'll use it to greet you each morning.
+              Your name greets you each morning. A photo is optional.
             </Txt>
             <TextInput
               value={name}
@@ -253,6 +288,47 @@ export default function Onboarding() {
                 },
               ]}
             />
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: theme.spacing.lg,
+                marginTop: theme.spacing.sm,
+              }}
+            >
+              <Avatar
+                uri={photoUri}
+                name={name}
+                size={64}
+                onPress={pickingPhoto ? undefined : () => void choosePhoto()}
+              />
+              <View style={{ flex: 1, gap: theme.spacing.sm }}>
+                <Button
+                  compact
+                  label={
+                    pickingPhoto ? 'Opening…' : photoUri ? 'Change photo' : 'Add a photo'
+                  }
+                  variant="secondary"
+                  onPress={() => void choosePhoto()}
+                  disabled={pickingPhoto}
+                />
+                {photoUri ? (
+                  <Button
+                    compact
+                    label="Remove"
+                    variant="ghost"
+                    onPress={() => {
+                      deletePhotoFile(photoUri);
+                      setPhotoUri(null);
+                    }}
+                  />
+                ) : (
+                  <Txt variant="caption" color="secondary">
+                    Optional. Stays on your device.
+                  </Txt>
+                )}
+              </View>
+            </View>
             <Button label="Continue" onPress={() => next('name')} />
           </>
         ) : null}

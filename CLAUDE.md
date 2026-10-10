@@ -136,9 +136,24 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - Avatar upload is local-file only — `/media/avatar*` exists, unreached.
 - A **downloadable export** of progress does not exist (the server has no export
   endpoint); sync itself does.
-- Qualification (onboarding step 6) is not collected.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
 - Hindi UI strings are not translated; only the library's Hindi resources are used.
+
+### The new-user flow (verified end to end)
+```
+OpeningAnimation  (_layout.tsx)
+  -> sign-in       Google OAuth; nothing personal is asked before it (§15)
+  -> onboarding    age gate (16+) -> parent consent if 16/17 -> name + optional
+                   photo -> language -> daily study hour & place -> reminders
+  -> choose        the 73-goal catalog
+  -> goal/[id]     about -> QUALIFICATION -> weekly time + deadline -> build
+  -> (tabs)        dashboard
+```
+Qualification sits in `goal/[id]`, not in onboarding, because
+`catalog.json` gives each goal its own `qualification_options` — 4 distinct
+sets across the 73 goals (JEE/NEET ask Class 10/11/12/Dropper; the
+programming tracks ask college/graduated; two ask Working professional). It
+cannot be answered before a goal exists.
 
 ### Working notes
 - Run from `freementor/`: `npm test -w app` · `npm run validate:library` · `npm run types`.
