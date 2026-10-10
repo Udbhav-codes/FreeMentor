@@ -41,12 +41,28 @@ def test_production_with_a_database_but_no_jwt_secret_still_refuses():
         settings.assert_safe()
 
 
+def test_production_refuses_to_echo_consent_codes():
+    # OTP_ECHO returns the parental-consent code in the API response so the
+    # flow can be exercised without an SMS subscription. In production that
+    # would let a learner read their own parent's code and approve themselves.
+    settings = Settings(
+        environment="production",
+        database_url="postgresql://user:pw@host/db",
+        supabase_url="https://x.supabase.co",
+        supabase_jwt_secret="secret",
+        otp_echo=True,
+    )
+    with pytest.raises(RuntimeError, match="OTP_ECHO"):
+        settings.assert_safe()
+
+
 def test_production_with_everything_set_is_fine():
     settings = Settings(
         environment="production",
         database_url="postgresql://user:pw@host/db",
         supabase_url="https://x.supabase.co",
         supabase_jwt_secret="secret",
+        otp_echo=False,
     )
     settings.assert_safe()
     assert not settings.uses_sqlite

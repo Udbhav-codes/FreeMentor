@@ -30,6 +30,11 @@ class Settings(BaseSettings):
     youtube_api_key: str = ""
     google_play_service_account_json: str = ""
 
+    # Demo delivery for consent codes: the API echoes the code back so the
+    # flow can be exercised without an email or SMS subscription. Ignored
+    # outside local/development, and assert_safe() refuses production.
+    otp_echo: bool = True
+
     @property
     def is_production(self) -> bool:
         return self.environment.lower() == "production"
@@ -67,6 +72,12 @@ class Settings(BaseSettings):
                 "ENVIRONMENT=production but these are unset: "
                 + ", ".join(missing)
                 + ". Refusing to start with the local stubs guarding real data."
+            )
+        if self.otp_echo:
+            raise RuntimeError(
+                "OTP_ECHO is on in production. That returns the consent code "
+                "in the API response, so anyone could approve themselves. "
+                "Set OTP_ECHO=false and configure a real sender."
             )
 
 

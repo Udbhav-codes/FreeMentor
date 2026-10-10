@@ -12,7 +12,7 @@ from fastapi import FastAPI
 
 from app.config import get_settings
 from app.db import create_all
-from app.routers import account, catalog, enrollments, progress
+from app.routers import account, catalog, enrollments, media, progress
 
 settings = get_settings()
 
@@ -35,6 +35,7 @@ app = FastAPI(
 app.include_router(account.router)
 app.include_router(catalog.router)
 app.include_router(enrollments.router)
+app.include_router(media.router)
 app.include_router(progress.router)
 
 
@@ -50,4 +51,7 @@ async def health() -> dict[str, object]:
         "environment": settings.environment,
         "database": "sqlite" if settings.uses_sqlite else "postgres",
         "verifies_real_tokens": settings.verifies_real_tokens,
+        # Visible on purpose: a server still echoing consent codes is not one
+        # that should be in front of learners.
+        "otp_echo": settings.otp_echo,
     }

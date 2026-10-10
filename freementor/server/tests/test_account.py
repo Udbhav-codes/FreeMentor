@@ -82,13 +82,15 @@ class TestParentConsent:
 
     async def test_confirming_grants_consent(self, client: AsyncClient):
         await client.patch("/account/me", json={"birth_year": THIS_YEAR - 17}, headers=auth())
-        await client.post(
+        requested = await client.post(
             "/account/consent/request",
             json={"parent_contact": "parent@example.com"},
             headers=auth(),
         )
+        # The code is real now, so the test has to use the one that was sent.
+        code = requested.json()["demo_code"]
         response = await client.post(
-            "/account/consent/confirm", json={"code": "123456"}, headers=auth()
+            "/account/consent/confirm", json={"code": code}, headers=auth()
         )
         assert response.status_code == 200
         assert response.json()["consent_given"] is True

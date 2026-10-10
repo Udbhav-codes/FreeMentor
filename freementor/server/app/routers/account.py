@@ -9,7 +9,9 @@ from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import otp
 from app.auth import current_user
+from app.config import Settings, get_settings
 from app.db import get_session
 from app.models import ParentConsent, User
 
@@ -112,34 +114,76 @@ class ConsentRequest(BaseModel):
     method: str = "email"
 
 
-@router.post("/consent/request", status_code=status.HTTP_202_ACCEPTED)
+class ConsentRequestOut(BaseModel):
+    status: str
+    expires_in_seconds: int
+    # Demo delivery only. Never populated outside local/development, and
+    # config.assert_safe() refuses to start production with echo on.
+    demo_code: str | None = None
+
+
+@router.post("/consent/request", response_model=ConsentRequestOut, status_code=202)
 async def request_consent(
     payload: ConsentRequest,
     user: User = Depends(current_user),
     session: AsyncSession = Depends(get_session),
-) -> dict[str, str]:
+    settings: Settings = Depends(get_settings),
+) -> ConsentRequestOut:
     """Start verifiable parental consent for a 16-17 year old (§15).
 
-    The row is created WITHOUT consented_at. Consent is the confirmation, not
-    the request — a learner typing a parent's address is not a parent agreeing.
-    Sending the OTP is wired up with the mail/SMS provider at deploy time.
+    The row is created WITHOUT consented_at: consent is the confirmation, not
+    the request. A learner typing their parent's address is not a parent
+    agreeing — which is exactly the gap this endpoint exists to close.
     """
     if not user.is_minor:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "This account does not need consent.")
     if payload.method not in {"email", "sms"}:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown method.")
-    if len(payload.parent_contact.strip()) < 5:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Contact looks incomplete.")
 
-    session.add(
-        ParentConsent(
-            user_id=user.id,
-            parent_contact=payload.parent_contact.strip(),
-            method=payload.method,
+    contact = payload.parent_contact.strip()
+    if len(contact) < 5:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Contact looks incomplete.")
+    if payload.method == "email" and "@" not in contact:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "That is not an email address.")
+
+    existing = await _consent(session, user)
+
+    # Rate limit so a parent cannot be spammed with codes through us.
+    if existing and not otp.may_resend(existing.last_sent_at):
+        raise HTTPException(
+            status.HTTP_429_TOO_MANY_REQUESTS,
+            "A code was just sent. Wait a minute before asking for another.",
         )
-    )
+
+    code = otp.generate_code()
+    now = datetime.now(timezone.utc)
+
+    if existing and existing.consented_at is None:
+        consent = existing
+        consent.parent_contact = contact
+        consent.method = payload.method
+        # A fresh code resets the attempt counter; the previous code dies.
+        consent.attempts = 0
+    else:
+        consent = ParentConsent(
+            user_id=user.id, parent_contact=contact, method=payload.method
+        )
+        session.add(consent)
+        await session.flush()
+
+    consent.code_hash = otp.hash_code(code, salt=consent.id)
+    consent.expires_at = otp.expiry_from(now)
+    consent.last_sent_at = now
     await session.commit()
-    return {"status": "sent"}
+
+    await otp.get_sender(settings.environment).send(contact, code, payload.method)
+
+    echo = settings.otp_echo and not settings.is_production
+    return ConsentRequestOut(
+        status="sent",
+        expires_in_seconds=int(otp.TTL.total_seconds()),
+        demo_code=code if echo else None,
+    )
 
 
 class ConsentConfirm(BaseModel):
@@ -155,10 +199,28 @@ async def confirm_consent(
     consent = await _consent(session, user)
     if consent is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "No consent request to confirm.")
-    if not payload.code.strip():
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "No code supplied.")
+    if consent.consented_at is not None:
+        return await _profile_out(session, user)
+
+    result = otp.check(
+        supplied=payload.code,
+        stored_hash=consent.code_hash,
+        salt=consent.id,
+        expires_at=consent.expires_at,
+        attempts=consent.attempts,
+    )
+
+    if not result.ok:
+        # Count the attempt whatever went wrong, so a wrong code cannot be
+        # guessed indefinitely.
+        consent.attempts += 1
+        await session.commit()
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, result.reason)
 
     consent.consented_at = datetime.now(timezone.utc)
+    # The code has done its job; it must not remain usable.
+    consent.code_hash = None
+    consent.expires_at = None
     await session.commit()
     return await _profile_out(session, user)
 
