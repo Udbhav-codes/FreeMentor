@@ -57,7 +57,10 @@ message.
 
 - Application type: **Web application**
 - Name: `FreeMentor web (Supabase)`
-- **Authorised JavaScript origins** — leave **empty**. That field is for
+- **Authorised JavaScript origins** — leave **empty**, and do not click
+  *+ ADD URI* here. Clicking it creates a blank row that the form then
+  refuses to save with *"Invalid Origin: URI must not be empty"* — the fix is
+  to delete the row with the bin icon, not to fill it in. That field is for
   browser flows where Google's JS SDK runs on a page you host and the token
   never leaves the browser. This is a server-side code exchange: Google
   redirects to Supabase, which swaps the code for a session using the client
