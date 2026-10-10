@@ -57,6 +57,13 @@ message.
 
 - Application type: **Web application**
 - Name: `FreeMentor web (Supabase)`
+- **Authorised JavaScript origins** — leave **empty**. That field is for
+  browser flows where Google's JS SDK runs on a page you host and the token
+  never leaves the browser. This is a server-side code exchange: Google
+  redirects to Supabase, which swaps the code for a session using the client
+  secret. No page of ours loads Google's JS, so there is no origin to
+  authorise. *(The admin panel at M6 will need one if it ever signs in with
+  Google — add its origin then, not now.)*
 - **Authorised redirect URIs** — exactly this, no trailing slash:
 
 ```
