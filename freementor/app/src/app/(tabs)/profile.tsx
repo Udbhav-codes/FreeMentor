@@ -23,6 +23,7 @@ import { resetDatabase } from '../../db/index.ts';
 import { libraryBaseUrl } from '../../api/library.ts';
 import { cancelDailyReminder, isExpoGo, scheduleDailyReminder } from '../../notifications/daily.ts';
 import { useEnrollment } from '../../state/EnrollmentContext.tsx';
+import { describeSync, useSync } from '../../state/SyncContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
 
@@ -33,6 +34,7 @@ export default function ProfileScreen() {
   const { appearance, setAppearance } = useAppearance();
   const { goal, plan, refresh } = useEnrollment();
   const { session, signOut } = useAuth();
+  const { syncing, last, sync } = useSync();
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -233,7 +235,16 @@ export default function ProfileScreen() {
               Signed in as {session.user.email}
             </Txt>
           ) : null}
+          <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+            {describeSync(last)}
+          </Txt>
           <View style={{ gap: theme.spacing.sm, marginTop: theme.spacing.md }}>
+            <Button
+              label={syncing ? 'Syncing…' : 'Sync now'}
+              variant="secondary"
+              loading={syncing}
+              onPress={() => void sync()}
+            />
             <Button
               label="Sign out"
               variant="secondary"

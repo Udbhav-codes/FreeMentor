@@ -16,6 +16,7 @@ import { DMSans_700Bold_Italic } from '@expo-google-fonts/dm-sans/700Bold_Italic
 import { ThemeProvider, useTheme } from '../theme/ThemeProvider.tsx';
 import { EnrollmentProvider } from '../state/EnrollmentContext.tsx';
 import { AuthProvider } from '../auth/AuthContext.tsx';
+import { SyncProvider } from '../state/SyncContext.tsx';
 import { OpeningAnimation } from '../components/OpeningAnimation.tsx';
 import { getDb } from '../db/index.ts';
 import { hasOnboarded } from '../db/profile.ts';
@@ -79,6 +80,7 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <ThemeProvider>
         <AuthProvider>
+        <SyncProvider>
         <EnrollmentProvider>
           <StatusBar style="auto" />
           <Stack screenOptions={{ headerShown: false }}>
@@ -92,6 +94,7 @@ export default function RootLayout() {
             <Stack.Screen name="goal/[id]" />
           </Stack>
         </EnrollmentProvider>
+        </SyncProvider>
         </AuthProvider>
       </ThemeProvider>
     </SafeAreaProvider>
