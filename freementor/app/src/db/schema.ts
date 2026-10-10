@@ -142,6 +142,16 @@ export const MIGRATIONS: { version: number; sql: string }[] = [
       ALTER TABLE profile ADD COLUMN photo_uri TEXT;
     `,
   },
+  {
+    version: 5,
+    sql: `
+      -- The device mints its own enrollment id when a goal starts, because
+      -- there may be no network for days. The server mints a UUID. This holds
+      -- the server's id once the two have been introduced, so queued rows can
+      -- be translated on the way out (see api/sync.ts).
+      ALTER TABLE enrollment ADD COLUMN server_id TEXT;
+    `,
+  },
 ];
 
 export const LATEST_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

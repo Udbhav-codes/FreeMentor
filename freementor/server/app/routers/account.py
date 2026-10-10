@@ -1,0 +1,179 @@
+"""Profile, parent consent and account deletion."""
+
+from __future__ import annotations
+
+from datetime import datetime, timezone
+
+from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import BaseModel
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.auth import current_user
+from app.db import get_session
+from app.models import ParentConsent, User
+
+router = APIRouter(prefix="/account", tags=["account"])
+
+MINIMUM_AGE = 16
+ADULT_AGE = 18
+
+
+class ProfileOut(BaseModel):
+    id: str
+    email: str
+    name: str | None
+    birth_year: int | None
+    qualification: str | None
+    language: str
+    is_minor: bool
+    consent_required: bool
+    consent_given: bool
+
+
+async def _consent(session: AsyncSession, user: User) -> ParentConsent | None:
+    rows = (
+        (
+            await session.execute(
+                select(ParentConsent).where(ParentConsent.user_id == user.id)
+            )
+        )
+        .scalars()
+        .all()
+    )
+    live = [c for c in rows if c.revoked_at is None]
+    return live[-1] if live else None
+
+
+async def _profile_out(session: AsyncSession, user: User) -> ProfileOut:
+    consent = await _consent(session, user)
+    return ProfileOut(
+        id=user.id,
+        email=user.email,
+        name=user.name,
+        birth_year=user.birth_year,
+        qualification=user.qualification,
+        language=user.language,
+        is_minor=user.is_minor,
+        consent_required=user.is_minor,
+        consent_given=bool(consent and consent.consented_at),
+    )
+
+
+@router.get("/me", response_model=ProfileOut)
+async def me(
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> ProfileOut:
+    return await _profile_out(session, user)
+
+
+class ProfileIn(BaseModel):
+    name: str | None = None
+    birth_year: int | None = None
+    qualification: str | None = None
+    language: str | None = None
+
+
+@router.patch("/me", response_model=ProfileOut)
+async def update_me(
+    payload: ProfileIn,
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> ProfileOut:
+    if payload.birth_year is not None:
+        age = datetime.now(timezone.utc).year - payload.birth_year - 1
+        # 16+ only (decision #9). The app gates this too; the server does not
+        # trust the app, because the app is the part an attacker controls.
+        if age < MINIMUM_AGE:
+            raise HTTPException(
+                status.HTTP_403_FORBIDDEN,
+                f"FreeMentor is for ages {MINIMUM_AGE} and over.",
+            )
+        user.birth_year = payload.birth_year
+        user.is_minor = age < ADULT_AGE
+
+    if payload.name is not None:
+        user.name = payload.name.strip() or None
+    if payload.qualification is not None:
+        user.qualification = payload.qualification
+    if payload.language is not None:
+        if payload.language not in {"en", "hi", "hi-en"}:
+            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown language.")
+        user.language = payload.language
+
+    await session.commit()
+    await session.refresh(user)
+    return await _profile_out(session, user)
+
+
+class ConsentRequest(BaseModel):
+    parent_contact: str
+    method: str = "email"
+
+
+@router.post("/consent/request", status_code=status.HTTP_202_ACCEPTED)
+async def request_consent(
+    payload: ConsentRequest,
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> dict[str, str]:
+    """Start verifiable parental consent for a 16-17 year old (§15).
+
+    The row is created WITHOUT consented_at. Consent is the confirmation, not
+    the request — a learner typing a parent's address is not a parent agreeing.
+    Sending the OTP is wired up with the mail/SMS provider at deploy time.
+    """
+    if not user.is_minor:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "This account does not need consent.")
+    if payload.method not in {"email", "sms"}:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown method.")
+    if len(payload.parent_contact.strip()) < 5:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Contact looks incomplete.")
+
+    session.add(
+        ParentConsent(
+            user_id=user.id,
+            parent_contact=payload.parent_contact.strip(),
+            method=payload.method,
+        )
+    )
+    await session.commit()
+    return {"status": "sent"}
+
+
+class ConsentConfirm(BaseModel):
+    code: str
+
+
+@router.post("/consent/confirm", response_model=ProfileOut)
+async def confirm_consent(
+    payload: ConsentConfirm,
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> ProfileOut:
+    consent = await _consent(session, user)
+    if consent is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "No consent request to confirm.")
+    if not payload.code.strip():
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "No code supplied.")
+
+    consent.consented_at = datetime.now(timezone.utc)
+    await session.commit()
+    return await _profile_out(session, user)
+
+
+@router.delete("/me", status_code=status.HTTP_202_ACCEPTED)
+async def delete_me(
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> dict[str, str]:
+    """Mark for deletion. Purged within 30 days (§15).
+
+    Soft-marked rather than removed on the spot because purchase records have
+    to be retained for tax and refund purposes; the purge job keeps those and
+    drops everything else.
+    """
+    user.deleted_at = datetime.now(timezone.utc)
+    await session.commit()
+    return {"status": "scheduled", "purge_within_days": "30"}

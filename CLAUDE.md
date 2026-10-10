@@ -97,7 +97,14 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - [x] **UI build-out** — all eight screens of `design/FreeMentor_App_Preview.png` exist:
       opening animation, weekly-time picker + deadline calculator, Home with the progress
       ring, GPS route, Day view with the video hero card, weekly report, Plans. **149 tests.**
-- [ ] M4 Backend (Supabase + FastAPI, Google sign-in, sync) · [ ] M5 Billing · [ ] M6 Ads/Admin.
+- [~] **M4 in progress** — `server/` FastAPI: Postgres schema with row-level security,
+      auth, account + 16/18 age gate, parent-consent request/confirm, enrollments,
+      **idempotent progress sync**, catalog/download. **38 server tests.** Runs in a
+      *local mode* (SQLite + stub tokens) so the whole API works before any cloud
+      account exists; `ENVIRONMENT=production` refuses to start without real secrets.
+      **Still to do in M4:** a real Supabase project, Google sign-in, Storage upload for
+      goal files and photos, the OTP send, FCM.
+- [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
 - **Plans is UI only** — no Play Billing, no purchase verification, no coupon redemption,
@@ -110,6 +117,11 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 
 ### Working notes
 - Run from `freementor/`: `npm test -w app` · `npm run validate:library` · `npm run types`.
+- **Server**: `cd server && .venv/Scripts/activate && pytest` · run it with
+  `uvicorn app.main:app --reload --port 8000`. With no `.env` it uses SQLite and a stub
+  token (`Authorization: Bearer local:<id>:<email>`), so the API is usable immediately.
+  Postgres must be migrated with `migrations/0001_initial.sql`, never from the models —
+  the SQL carries the RLS policies that SQLAlchemy knows nothing about.
 - **To run the app on a phone** (two terminals, same Wi-Fi):
   `npm run library:serve` then
   `EXPO_PUBLIC_LIBRARY_URL=http://<your-lan-ip>:8787 npm start` and scan the QR in Expo Go.
