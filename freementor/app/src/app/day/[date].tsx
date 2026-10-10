@@ -146,6 +146,9 @@ export default function DayView() {
               flexWrap: 'wrap',
             }}
           >
+            {resolved.some((r) => r.item.source === 'milestone') ? (
+              <Pill tone="accent">⚑ Mock test</Pill>
+            ) : null}
             {mainSubject ? <Pill>{mainSubject}</Pill> : null}
             {hasHighWeightage ? <Pill tone="accent">High weightage</Pill> : null}
             <Pill>{formatMinutes(day.plannedMinutes)}</Pill>
@@ -274,7 +277,7 @@ function TaskRow({
           ) : null}
 
           {r.topic?.safety_note ? (
-            <Txt variant="small" style={{ color: theme.colors.accent }}>
+            <Txt variant="small" color="accent">
               ⚠ {r.topic.safety_note}
             </Txt>
           ) : null}

@@ -107,11 +107,17 @@ export default function Progress() {
             {badges.map((badge) => (
               <View key={badge.id} style={{ gap: 4, opacity: badge.earned ? 1 : 0.6 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
+                  <Txt
+                    variant="bodyStrong"
+                    color={badge.earned ? 'accent' : 'secondary'}
+                    style={{ width: 18 }}
+                  >
+                    {badge.earned ? '★' : '☆'}
+                  </Txt>
                   <Txt variant="bodyStrong" style={{ flex: 1 }}>
-                    {badge.earned ? '★ ' : '☆ '}
                     {badge.name}
                   </Txt>
-                  {badge.earned ? <Pill tone="success">Earned</Pill> : null}
+                  {badge.earned ? <Pill tone="accent">Earned</Pill> : null}
                 </View>
                 <Txt variant="caption" color="secondary">
                   {badge.description}

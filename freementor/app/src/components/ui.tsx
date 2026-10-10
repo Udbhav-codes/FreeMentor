@@ -43,7 +43,9 @@ export function Txt({
     text: theme.colors.text,
     secondary: theme.colors.textSecondary,
     primary: theme.colors.primary,
-    accent: theme.colors.accent,
+    // Amber text uses the darker ink; the bright amber is a fill colour and
+    // is only 1.78:1 on our background.
+    accent: theme.colors.accentInk,
     success: theme.colors.success,
     onPrimary: theme.colors.onPrimary,
     danger: '#B3261E',
@@ -318,6 +320,40 @@ export function Empty({ title, body }: { title: string; body?: string }) {
           {body}
         </Txt>
       ) : null}
+    </View>
+  );
+}
+
+/**
+ * A section heading with a short amber rule before it.
+ *
+ * Amber's job across the app is to say "this is the live one" — today, the
+ * current tab, an earned badge. Here it marks where a section begins, which
+ * gives the long scrolling screens structure without another font weight or
+ * a heavier divider. It is decorative, so nothing legible depends on it.
+ */
+export function SectionTitle({
+  children,
+  right,
+}: {
+  children: ReactNode;
+  right?: ReactNode;
+}) {
+  const theme = useTheme();
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
+      <View
+        style={{
+          width: 3,
+          height: 16,
+          borderRadius: 2,
+          backgroundColor: theme.colors.accent,
+        }}
+      />
+      <Txt variant="heading" style={{ flex: 1 }}>
+        {children}
+      </Txt>
+      {right}
     </View>
   );
 }

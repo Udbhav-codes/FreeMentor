@@ -114,6 +114,12 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   `npm run library:serve` then
   `EXPO_PUBLIC_LIBRARY_URL=http://<your-lan-ip>:8787 npm start` and scan the QR in Expo Go.
   The serve script prints the LAN IP to use.
+- **Amber (`#F2A900`) is a FILL, never text.** It is only 1.78:1 on our background,
+  which fails text contrast and even the 3:1 floor for UI elements. Amber-coloured
+  *words* use `colors.accentInk` (`#7A5600`, 5.9:1). Product plan §11.2 originally
+  reserved amber for "streak and today"; it now also marks the active tab, an earned
+  badge, a mock-test day, section rules and the weekly takeaway — always alongside a
+  non-colour cue, so nothing is conveyed by amber alone.
 - Routes live in `app/src/app/` (expo-router). Fonts are imported **per weight**
   (`@expo-google-fonts/inter/400Regular`) — importing the package root pulls in all 18
   weights and ~6 MB of unused TTFs.

@@ -43,7 +43,7 @@ export function WelcomeCard({
       <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
         <Txt variant="title" style={{ flex: 1 }}>
           {copy.brandLead}
-          <Txt variant="title" style={{ color: theme.colors.accent }}>
+          <Txt variant="title" color="accent">
             {copy.brandAccent}
           </Txt>
         </Txt>
@@ -85,9 +85,14 @@ export function WelcomeCard({
         </Txt>
       </View>
 
-      <Txt variant="caption" color="secondary">
-        {copy.trust}
-      </Txt>
+      <View style={{ flexDirection: 'row', gap: theme.spacing.sm }}>
+        <Txt variant="caption" color="accent">
+          ✓
+        </Txt>
+        <Txt variant="caption" color="secondary" style={{ flex: 1 }}>
+          {copy.trust}
+        </Txt>
+      </View>
       <Txt variant="caption" color="secondary">
         {copy.disclosure}
       </Txt>

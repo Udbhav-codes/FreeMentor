@@ -9,7 +9,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
+import { Button, Card, Checkbox, Empty, Pill, Screen, SectionTitle, Txt } from '../../components/ui.tsx';
 import { ProgressRing } from '../../components/charts.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
@@ -158,17 +158,19 @@ export default function RoadmapHome() {
           </Card>
         ))}
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
-          <Txt variant="heading">Today · {formatMinutes(plannedMinutes)}</Txt>
-          <View style={{ flex: 1 }} />
-          <Txt variant="caption" color="secondary">
-            {overMinutes > 0
-              ? `${formatMinutes(overMinutes)} extra 🎉`
-              : toGo > 0
-                ? `${formatMinutes(doneMinutes)} done · ${formatMinutes(toGo)} to go`
-                : 'all done ✓'}
-          </Txt>
-        </View>
+        <SectionTitle
+          right={
+            <Txt variant="caption" color="secondary">
+              {overMinutes > 0
+                ? `${formatMinutes(overMinutes)} extra 🎉`
+                : toGo > 0
+                  ? `${formatMinutes(doneMinutes)} done · ${formatMinutes(toGo)} to go`
+                  : 'all done ✓'}
+            </Txt>
+          }
+        >
+          Today · {formatMinutes(plannedMinutes)}
+        </SectionTitle>
 
         {!day || day.items.length === 0 ? (
           <Card>

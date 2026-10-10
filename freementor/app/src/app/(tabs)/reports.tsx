@@ -148,8 +148,8 @@ export default function Reports() {
           </Txt>
         </Card>
 
-        <Card style={{ borderLeftWidth: 4, borderLeftColor: theme.colors.primary }}>
-          <Txt variant="caption" color="secondary">
+        <Card style={{ borderLeftWidth: 4, borderLeftColor: theme.colors.accent }}>
+          <Txt variant="caption" color="accent">
             THIS WEEK'S ONE THING
           </Txt>
           <Txt variant="bodyStrong" style={{ marginTop: theme.spacing.xs }}>

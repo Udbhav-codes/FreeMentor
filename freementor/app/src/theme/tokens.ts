@@ -19,7 +19,14 @@ export const palette = {
   amber: '#F2A900',
   /** Light amber chip background — the mockup's .amberpill. */
   amberSoft: '#FFF1C7',
-  amberInk: '#6B4A00',
+  /** Text ON a soft-amber chip. 7.2:1. */
+  amberOnSoft: '#6B4A00',
+  /**
+   * Amber TEXT on a light background. The brand amber is only 1.78:1 there —
+   * unreadable, and below even the 3:1 floor for non-text UI — so anything
+   * amber-coloured that carries words uses this instead (5.9:1).
+   */
+  amberInk: '#7A5600',
   /** Neutral chip background — the mockup's .pill. */
   chip: '#E2E8F5',
   green: '#127A45',
@@ -42,9 +49,13 @@ export interface Colors {
   textSecondary: string;
   border: string;
   /** Streak and "today" ONLY — never decorative (product plan §11.2). */
+  /** Amber FILLS only: dots, flags, bars, chips, indicators. Never text. */
   accent: string;
   accentSoft: string;
+  /** Text ON a soft-amber chip. */
   onAccent: string;
+  /** Amber-coloured TEXT on a normal background. Readable. */
+  accentInk: string;
   chip: string;
   onChip: string;
   success: string;
@@ -63,7 +74,8 @@ export const lightColors: Colors = {
   border: palette.line,
   accent: palette.amber,
   accentSoft: palette.amberSoft,
-  onAccent: palette.amberInk, // dark brown on soft amber, not navy on solid
+  onAccent: palette.amberOnSoft, // dark brown on soft amber, not navy on solid
+  accentInk: palette.amberInk,
   chip: palette.chip,
   onChip: palette.navy,
   success: palette.green,
@@ -83,6 +95,8 @@ export const darkColors: Colors = {
   accent: palette.amber,
   accentSoft: '#3A2E12',
   onAccent: '#FFD98A',
+  // On a dark surface a bright amber is readable, so text can be warmer.
+  accentInk: '#FFC861',
   chip: '#1E2940',
   onChip: palette.sky,
   success: palette.darkGreen,
