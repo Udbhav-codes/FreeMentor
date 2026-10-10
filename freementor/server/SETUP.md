@@ -10,13 +10,27 @@ Four steps. Only the first needs the Supabase dashboard.
 Supabase dashboard → **SQL Editor** → New query → paste the whole of
 `migrations/0001_initial.sql` → **Run**.
 
+The editor will warn that the query "creates tables without enabling Row
+Level Security". That warning fires on the `create table` statements and does
+not look ahead: this file enables RLS on **all 17 tables** at the bottom, in
+the same transaction. **Run it as written — do not let the editor add its own
+RLS statements.** Its version would enable RLS without creating the policies,
+which locks the server out of its own tables.
+
 Use this file, not the SQLAlchemy models. The SQL carries the row-level
 security policies that keep one learner from reading another's rows, and
 `app/db.py` deliberately refuses to create tables against Postgres for that
 reason.
 
-It should report success and create 17 tables. Verify in **Table Editor**, and
-check **Advisors → Security** shows no "RLS disabled" warnings.
+It should report success and create 17 tables. Verify in **Table Editor**,
+then check **Advisors → Security** — it should show no "RLS disabled"
+warnings. That is an independent check on the policies, so it is worth doing
+rather than taking the migration's word for it.
+
+Four tables — `coupons`, `resources`, `link_reports`, `audit_log` — have RLS
+enabled with **no policy at all**. That is deliberate: it denies every anon
+and authenticated client while the service key, which bypasses RLS, still
+works for the server and the admin panel.
 
 ## 2. Collect the secrets
 

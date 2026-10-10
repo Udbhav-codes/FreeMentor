@@ -272,6 +272,18 @@ alter table notification_prefs  enable row level security;
 alter table goals             enable row level security;
 alter table library_versions  enable row level security;
 
+-- Back-office tables. RLS on, and deliberately NO policy: that denies every
+-- anon and authenticated client outright, while the service key (which
+-- bypasses RLS) still works for the server and the admin panel.
+--
+-- coupons is the one that matters. The publishable key ships inside the app
+-- bundle by design, so without this anyone could read every active discount
+-- code — including the 90% tier — straight out of the database.
+alter table coupons      enable row level security;
+alter table resources    enable row level security;
+alter table link_reports enable row level security;
+alter table audit_log    enable row level security;
+
 create policy users_self on users
   for all using (auth_id = auth.uid()) with check (auth_id = auth.uid());
 
