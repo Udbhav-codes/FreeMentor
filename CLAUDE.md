@@ -102,7 +102,10 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       **idempotent progress sync**, catalog/download. **38 server tests.** Runs in a
       *local mode* (SQLite + stub tokens) so the whole API works before any cloud
       account exists; `ENVIRONMENT=production` refuses to start without real secrets.
-      **Still to do in M4:** a real Supabase project, Google sign-in, Storage upload for
+      **Supabase project is live**: `demkvsslqfkreicbjjmm` (ap-south-1, Postgres 17).
+      All 17 tables created with RLS enabled and verified enforcing — an anonymous
+      write returns 42501, not a constraint error. See `server/SETUP.md`.
+      **Still to do in M4:** `.env` on the server, Google sign-in, Storage upload for
       goal files and photos, the OTP send, FCM.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 

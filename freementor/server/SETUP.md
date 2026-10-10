@@ -92,3 +92,32 @@ its own.
 - **Storage** — create a `library` bucket for `goals/<id>.json`, and one for
   profile photos.
 - **Consent OTP** — the send side of `/account/consent/request`.
+
+## Verifying RLS actually works
+
+Configuration is not proof. An empty table returns `[]` to a blocked client
+and to an allowed one alike, so a read test tells you nothing until there is
+data. Attempt a **write** instead, with a value that would fail a CHECK
+constraint anyway — then nothing can persist whichever way it goes:
+
+```bash
+U=https://demkvsslqfkreicbjjmm.supabase.co/rest/v1
+K=sb_publishable_npXHgnLqTnC2LyEfH3UxoQ_5m9u8S66
+
+curl -s -X POST -H "apikey: $K" -H "Authorization: Bearer $K" \
+  -H "Content-Type: application/json" \
+  -d '{"code":"bad","discount_tier":90}' "$U/coupons"
+```
+
+Expected:
+
+```
+{"code":"42501","message":"new row violates row-level security policy for table \"coupons\""}
+```
+
+`42501` is the proof. A **400 constraint violation** instead would mean RLS
+let the write through and only the CHECK stopped it — the table would be
+writable by anyone holding the publishable key, which ships in the app.
+
+Worth re-running after any schema change. Last verified: all 17 tables RLS
+enabled, `coupons` and `users` both rejecting anonymous writes.
