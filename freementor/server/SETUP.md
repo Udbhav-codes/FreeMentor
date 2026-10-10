@@ -44,6 +44,29 @@ works for the server and the admin panel.
 The connection string contains your database password — if you have not set
 one, the dashboard will offer to generate it.
 
+### Use the pooler, not the direct host
+
+The dashboard's **direct** connection string points at
+`db.<ref>.supabase.co`, which Supabase now resolves to an **IPv6 address
+only**. On a network without IPv6 — which includes most Indian home and
+office connections — that fails with `getaddrinfo failed`, and the error says
+nothing about IPv6.
+
+Use the **Connection pooling** string instead. It is IPv4:
+
+```
+postgresql://postgres.<ref>:<password>@aws-0-ap-south-1.pooler.supabase.com:5432/postgres
+```
+
+Note the username is `postgres.<ref>`, not `postgres`.
+
+Port **5432 is session mode** and is what this server wants: one backend per
+connection, so prepared statements work normally. Port **6543 is transaction
+mode**, where a connection can move between backends mid-session — asyncpg's
+prepared-statement cache then fails under load with "prepared statement does
+not exist". `app/db.py` detects port 6543 and disables that cache, so either
+port works, but session mode is the better default for a long-lived server.
+
 ## 3. Write `.env`
 
 `.env` is git-ignored. Never commit it, and never put any of these in the app

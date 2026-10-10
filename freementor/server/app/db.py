@@ -11,11 +11,29 @@ from app.models import Base
 
 _settings = get_settings()
 
+def _connect_args() -> dict:
+    """asyncpg options that depend on how we are reaching Postgres.
+
+    Supabase's direct host (db.<ref>.supabase.co) is IPv6-only, so anywhere
+    without IPv6 has to go through the Supavisor pooler. In TRANSACTION mode
+    (port 6543) a connection is handed to a different backend between
+    statements, so asyncpg's prepared-statement cache produces
+    'prepared statement does not exist' under load. Session mode (5432) keeps
+    one backend and is fine.
+    """
+    url = _settings.sqlalchemy_url
+    if 'asyncpg' not in url:
+        return {}
+    if ':6543' in url:
+        return {'statement_cache_size': 0, 'prepared_statement_cache_size': 0}
+    return {}
+
+
 engine = create_async_engine(
     _settings.sqlalchemy_url,
     echo=False,
-    # asyncpg does not take SQLite's connect args, and vice versa.
     future=True,
+    connect_args=_connect_args(),
 )
 
 SessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
