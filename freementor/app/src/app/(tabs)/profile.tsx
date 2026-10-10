@@ -17,6 +17,7 @@ import { Avatar } from '../../components/Avatar.tsx';
 import { EditProfile } from '../../components/EditProfile.tsx';
 import { catalog } from '../../api/library.ts';
 import { deletePhotoFile } from '../../profile/photo.ts';
+import { useAuth } from '../../auth/AuthContext.tsx';
 import { loadProfile, saveProfile, type Profile } from '../../db/profile.ts';
 import { resetDatabase } from '../../db/index.ts';
 import { libraryBaseUrl } from '../../api/library.ts';
@@ -31,6 +32,7 @@ export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const { appearance, setAppearance } = useAppearance();
   const { goal, plan, refresh } = useEnrollment();
+  const { session, signOut } = useAuth();
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -226,7 +228,32 @@ export default function ProfileScreen() {
 
         <Card>
           <Txt variant="heading">Account</Txt>
+          {session?.user?.email ? (
+            <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              Signed in as {session.user.email}
+            </Txt>
+          ) : null}
           <View style={{ gap: theme.spacing.sm, marginTop: theme.spacing.md }}>
+            <Button
+              label="Sign out"
+              variant="secondary"
+              onPress={() =>
+                Alert.alert(
+                  'Sign out?',
+                  'Your roadmap and progress stay on this phone. Sign back in to sync them.',
+                  [
+                    { text: 'Cancel', style: 'cancel' },
+                    {
+                      text: 'Sign out',
+                      onPress: async () => {
+                        await signOut();
+                        router.replace('/sign-in');
+                      },
+                    },
+                  ],
+                )
+              }
+            />
             <Button label="Reset this roadmap" variant="secondary" onPress={confirmReset} />
             <Button
               label="Export my progress"

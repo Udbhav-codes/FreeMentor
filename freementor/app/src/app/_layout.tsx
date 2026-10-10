@@ -15,6 +15,7 @@ import { DMSans_700Bold } from '@expo-google-fonts/dm-sans/700Bold';
 import { DMSans_700Bold_Italic } from '@expo-google-fonts/dm-sans/700Bold_Italic';
 import { ThemeProvider, useTheme } from '../theme/ThemeProvider.tsx';
 import { EnrollmentProvider } from '../state/EnrollmentContext.tsx';
+import { AuthProvider } from '../auth/AuthContext.tsx';
 import { OpeningAnimation } from '../components/OpeningAnimation.tsx';
 import { getDb } from '../db/index.ts';
 import { hasOnboarded } from '../db/profile.ts';
@@ -77,10 +78,12 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
+        <AuthProvider>
         <EnrollmentProvider>
           <StatusBar style="auto" />
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="(tabs)" />
+            <Stack.Screen name="sign-in" />
             <Stack.Screen name="onboarding" />
             <Stack.Screen name="choose" />
             <Stack.Screen name="day/[date]" />
@@ -89,6 +92,7 @@ export default function RootLayout() {
             <Stack.Screen name="goal/[id]" />
           </Stack>
         </EnrollmentProvider>
+        </AuthProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

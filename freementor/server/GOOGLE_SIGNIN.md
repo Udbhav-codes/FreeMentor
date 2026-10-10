@@ -132,15 +132,34 @@ Dashboard → **Authentication → Providers → Google**:
 - **Client Secret**: the Web client secret
 - Save
 
-Then **Authentication → URL Configuration → Redirect URLs**, add:
+Then **Authentication → URL Configuration → Redirect URLs**, add all three:
 
 ```
 freementor://auth/callback
 com.freementor.app://auth/callback
+exp://**
 ```
 
-Without these, Supabase refuses to hand the session back to the app and the
-browser just sits on a blank page.
+Without these, Supabase refuses to hand the session back and the browser sits
+on a blank page after you choose your Google account.
+
+### Why `exp://**` is needed
+
+The app builds its redirect with `Linking.createURL()`, which returns the
+scheme the app is *actually running under*. In a real build that is
+`freementor://auth/callback`. **In Expo Go it is not** — Expo Go has its own
+scheme, so it comes out as something like:
+
+```
+exp://192.168.1.101:8081/--/auth/callback
+```
+
+That address contains your machine's LAN IP and port, which change. `exp://**`
+covers them all.
+
+**Remove `exp://**` before the production launch.** It is a development
+convenience: it lets any `exp://` address receive a session, which is fine on
+your own network and not something to ship.
 
 ## 5. Check it
 

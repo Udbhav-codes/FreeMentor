@@ -15,6 +15,7 @@
  * Nothing here ever throws at the caller. A failed sync is normal — the queue
  * simply stays put and is retried.
  */
+import { accessToken } from '../auth/supabase.ts';
 import {
   activeEnrollment,
   clearWrites,
@@ -34,10 +35,15 @@ export type SyncOutcome =
   | { status: 'offline' }
   | { status: 'failed'; reason: string };
 
-/** M4 uses the Supabase session token; until sign-in exists, a local stub. */
+/**
+ * The signed-in learner's access token.
+ *
+ * Falls back to EXPO_PUBLIC_DEV_TOKEN so the sync path can still be exercised
+ * against a server running in local mode, but a real session always wins.
+ */
 async function authToken(): Promise<string | null> {
-  // Replaced by the Supabase session when Google sign-in lands.
-  return process.env.EXPO_PUBLIC_DEV_TOKEN ?? null;
+  const token = await accessToken().catch(() => null);
+  return token ?? process.env.EXPO_PUBLIC_DEV_TOKEN ?? null;
 }
 
 async function api(path: string, init: RequestInit = {}): Promise<Response> {

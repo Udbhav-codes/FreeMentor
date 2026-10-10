@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Redirect } from 'expo-router';
 import { ActivityIndicator, View } from 'react-native';
 import { useEnrollment } from '../state/EnrollmentContext.tsx';
+import { useAuth } from '../auth/AuthContext.tsx';
 import { hasOnboarded } from '../db/profile.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
@@ -12,6 +13,7 @@ import { useTheme } from '../theme/ThemeProvider.tsx';
  */
 export default function Index() {
   const { loading, enrollment } = useEnrollment();
+  const { loading: authLoading, signedIn } = useAuth();
   const theme = useTheme();
   const [onboarded, setOnboarded] = useState<boolean | null>(null);
 
@@ -21,7 +23,7 @@ export default function Index() {
       .catch(() => setOnboarded(false));
   }, []);
 
-  if (loading || onboarded === null) {
+  if (loading || authLoading || onboarded === null) {
     return (
       <View
         style={{
@@ -36,6 +38,9 @@ export default function Index() {
     );
   }
 
+  // §5: sign-in comes before anything personal is asked, so the age gate and
+  // everything after it happen on a known account.
+  if (!signedIn) return <Redirect href="/sign-in" />;
   if (!onboarded) return <Redirect href="/onboarding" />;
   return <Redirect href={enrollment ? '/(tabs)' : '/choose'} />;
 }
