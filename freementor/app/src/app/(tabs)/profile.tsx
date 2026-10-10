@@ -27,6 +27,9 @@ import { describeSync, useSync } from '../../state/SyncContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
 
+/** Common study times — one tap rather than a clock dial. */
+const REMINDER_HOURS = [6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22];
+
 export default function ProfileScreen() {
   const theme = useTheme();
   const router = useRouter();
@@ -186,9 +189,11 @@ export default function ProfileScreen() {
           <Toggle
             label="Daily study reminder"
             hint={
-              profile?.studyHour != null ? `At ${formatHour(profile.studyHour)}` : 'No time set yet'
+              profile?.studyHour != null
+                ? `At ${formatHour(profile.studyHour)}`
+                : 'Pick a time below'
             }
-            value={dailyOn}
+            value={dailyOn && profile?.studyHour != null}
             onChange={(next) => {
               setDailyOn(next);
               if (next && profile?.studyHour != null) {
@@ -201,6 +206,33 @@ export default function ProfileScreen() {
               }
             }}
           />
+          {/* The reminder time is set here rather than during onboarding.
+              Without a picker somewhere the toggle above could never do
+              anything: scheduleDailyReminder needs an hour, and nothing else
+              in the app sets one. */}
+          <View
+            style={{ flexDirection: 'row', flexWrap: 'wrap', gap: theme.spacing.sm, marginTop: theme.spacing.sm }}
+          >
+            {REMINDER_HOURS.map((hour) => (
+              <Button
+                key={hour}
+                compact
+                label={formatHour(hour)}
+                variant={profile?.studyHour === hour ? 'primary' : 'secondary'}
+                onPress={() => {
+                  void (async () => {
+                    await update({ studyHour: hour });
+                    setDailyOn(true);
+                    await scheduleDailyReminder({
+                      hour,
+                      language: profile?.language ?? 'en',
+                    }).catch(() => null);
+                  })();
+                }}
+                style={{ paddingHorizontal: theme.spacing.md }}
+              />
+            ))}
+          </View>
           <Toggle
             label="Weekly report"
             hint="Sundays"

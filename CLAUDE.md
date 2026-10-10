@@ -144,7 +144,7 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 OpeningAnimation  (_layout.tsx)
   -> sign-in       Google OAuth; nothing personal is asked before it (§15)
   -> onboarding    age gate (16+) -> parent consent if 16/17 -> name + optional
-                   photo -> language -> daily study hour & place -> reminders
+                   photo -> language -> reminders
   -> choose        the 73-goal catalog
   -> goal/[id]     about -> QUALIFICATION -> weekly time + deadline -> build
   -> (tabs)        dashboard

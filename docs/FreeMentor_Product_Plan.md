@@ -145,7 +145,7 @@ App open → System splash → Opening animation (first launch only)
 | 6 | **Qualification** | Dynamic per goal. Default: Currently in Class 11/12 · Completed Class 12 · In college/university · Graduated · Not graduated · Other. JEE/NEET: Class 10 · Class 11 · Class 12 · Dropper · Other. CAT/UPSC: Final-year · Graduate · Working professional · Other. |
 | 7 | **Weekly time** | Toggle "Each day" / "Same every day". Per-day hours (e.g. Mon–Fri 2 h, Sat–Sun 4 h → 18 h/week) or one value (e.g. 2 h 30 m daily). |
 | 7a | **Deadline calculator** *(optional card on the same screen)* | User enters a deadline (1/3/6/12 months, exam date or custom date). Calculator shows the **average daily time needed** = library hours ÷ days left. Advice only; user then sets their own hours. Example: NEET UG in 10 months → ~2 h 25 m/day with the current library estimate. |
-| 8 | **When & where** *(new — proven "if-then plan")* | "When will you usually study?" (time) and "Where?" (desk/library/other). Sets the daily reminder time. |
+| 8 | ~~**When & where**~~ **— removed from onboarding (Oct 2026)** | Was "When will you usually study?" + "Where?". Cut on the product owner's decision to keep onboarding to the essentials. The **reminder time moved to Profile → Notifications**, where the daily-reminder toggle lives; the "where" part is gone entirely. Trade-off accepted knowingly: this was the if-then plan below, the one evidence-backed habit mechanism in onboarding, and asking later means fewer learners set it. |
 | 9 | **Language** | English · Hindi · Bilingual (Hindi + English). Affects UI text where available, roadmap descriptions, notes choice, notifications. |
 | 10 | **Notifications** | Explain value first, then Android 13+ permission prompt. |
 | 11 | **Generating** | "Building your personalised roadmap…" → Analysing your goal → Calculating your available time → Planning your learning sequence → Selecting resources → Creating your roadmap. (Library file downloads here.) |
@@ -171,7 +171,7 @@ Other evidence used:
 - **Spacing timing** — best review gap ≈ 20 % of how long you need to remember (Cepeda et al., 2008).
 - **Short segments** — engagement drops sharply after ~6 minutes of video (Guo, Kim & Rubin, 2014) → long lectures split into ≤ 45–60-min parts with recall pauses.
 - **Fixed breaks** — 25 min focus / 5 min break reduced fatigue vs self-chosen breaks (Biwer et al., 2023).
-- **If-then plans** — "If it's 8 pm, I study at my desk" (d = 0.65, Gollwitzer & Sheeran, 2006) → onboarding step 8 + reminder.
+- **If-then plans** — "If it's 8 pm, I study at my desk" (d = 0.65, Gollwitzer & Sheeran, 2006) → **no longer in onboarding** (step 8 was removed). Only the time survives, as the reminder picker in Profile → Notifications, and the learner has to go looking for it. The effect this cites depends on committing to *when and where* up front, so treat it as not currently implemented rather than merely moved.
 - **Habits** — median 66 days to form; one missed day doesn't hurt (Lally et al., 2010) → forgiving streak; "Your study habit: 23/66 days".
 - **Mastery learning** — weekly test < 60 % → catch-up block before moving on.
 - **Self-rating** — 5-level confidence sheet controls when a topic returns for revision.
@@ -548,7 +548,7 @@ Recall questions and block definitions live inside the versioned library files (
 
 ## 17. Release scope: MVP, v2, v3
 
-**MVP (v1):** onboarding (incl. Google sign-in, age/consent, calculator, if-then time), goal selection (73 goals visible; JEE Main, NEET UG, Python fully playable — others marked "Coming soon / notify me"), personalised roadmap & scheduler, week/day views, videos/notes/practice/test links, recall checks, daily checklist, confidence sheet, progress & basic graphs, weekly report, streak, rest days, notifications, profile/settings, offline roadmap, trial + Basic/Premium + coupons, ads, admin panel, link checker.
+**MVP (v1):** onboarding (incl. Google sign-in, age/consent, calculator), goal selection (73 goals visible; JEE Main, NEET UG, Python fully playable — others marked "Coming soon / notify me"), personalised roadmap & scheduler, week/day views, videos/notes/practice/test links, recall checks, daily checklist, confidence sheet, progress & basic graphs, weekly report, streak, rest days, notifications, profile/settings, offline roadmap, trial + Basic/Premium + coupons, ads, admin panel, link checker.
 
 **v2:** AI tutor (roadmap-aware, Hindi/English), AI-generated practice, adaptive roadmap advisor, mistake book, smart revision recommendations, full gamification (XP, levels, challenges), multiple goals, projects showcase, certificates, advanced analytics, leaderboard (personal milestones first), iOS release.
 

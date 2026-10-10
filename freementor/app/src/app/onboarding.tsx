@@ -6,6 +6,11 @@
  * here lands on a known account; the age gate deliberately comes before
  * anything else is stored.
  *
+ * The "when & where will you study" step (plan §5 step 8) was removed on the
+ * product owner's decision. The reminder time now lives in Profile →
+ * Notifications; there is no "where" any more. Do not re-add it here without
+ * checking §5, which records the trade-off.
+ *
  * Qualification is NOT asked here. Its options come from the catalog and
  * differ by goal — JEE asks Class 10/11/12/Dropper, a programming track asks
  * college/graduated — so it cannot be answered before a goal is picked. It is
@@ -21,7 +26,7 @@ import { Avatar } from '../components/Avatar.tsx';
 import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
 import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onboarding/age.ts';
 import { saveProfile } from '../db/profile.ts';
-import { isExpoGo, requestPermission, scheduleDailyReminder } from '../notifications/daily.ts';
+import { requestPermission } from '../notifications/daily.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 type Step =
@@ -30,7 +35,6 @@ type Step =
   | 'consent'
   | 'name'
   | 'language'
-  | 'studytime'
   | 'notifications'
   | 'done';
 
@@ -40,14 +44,9 @@ const ORDER: Step[] = [
   'consent',
   'name',
   'language',
-  'studytime',
   'notifications',
   'done',
 ];
-
-/** Common study times; the picker stays one tap rather than a clock dial. */
-const HOURS = [6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22];
-const PLACES = ['At my desk', 'In the library', 'Somewhere else'];
 
 export default function Onboarding() {
   const theme = useTheme();
@@ -63,8 +62,6 @@ export default function Onboarding() {
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [pickingPhoto, setPickingPhoto] = useState(false);
   const [language, setLanguage] = useState<'en' | 'hi' | 'hi-en'>('en');
-  const [studyHour, setStudyHour] = useState<number | null>(null);
-  const [studyPlace, setStudyPlace] = useState<string | null>(null);
 
   const progress = (ORDER.indexOf(step) + 1) / ORDER.length;
 
@@ -100,8 +97,7 @@ export default function Onboarding() {
       }
       if (from === 'consent') return setStep('name');
       if (from === 'name') return setStep('language');
-      if (from === 'language') return setStep('studytime');
-      if (from === 'studytime') return setStep('notifications');
+      if (from === 'language') return setStep('notifications');
       return setStep('done');
     },
     [decision],
@@ -124,16 +120,10 @@ export default function Onboarding() {
       photoUri,
       birthYear,
       language,
-      studyHour,
-      studyPlace,
       onboardedAt: new Date().toISOString(),
     });
-    // A refused permission is not an error — the app works fine without it.
-    if (studyHour != null) {
-      await scheduleDailyReminder({ hour: studyHour, language }).catch(() => null);
-    }
     router.replace('/choose');
-  }, [name, birthYear, language, studyHour, studyPlace, router]);
+  }, [name, photoUri, birthYear, language, router]);
 
   return (
     <Screen>
@@ -359,67 +349,13 @@ export default function Onboarding() {
           </>
         ) : null}
 
-        {step === 'studytime' ? (
-          <>
-            <Txt variant="display">When will you usually study?</Txt>
-            <Txt variant="small" color="secondary">
-              Deciding this in advance roughly doubles the odds you actually do it. We'll
-              remind you at that time.
-            </Txt>
-
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: theme.spacing.sm }}>
-              {HOURS.map((hour) => (
-                <Button
-                  key={hour}
-                  label={formatHour(hour)}
-                  variant={studyHour === hour ? 'primary' : 'secondary'}
-                  onPress={() => setStudyHour(hour)}
-                  style={{ paddingHorizontal: theme.spacing.lg, minHeight: 44 }}
-                />
-              ))}
-            </View>
-
-            <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-              And where?
-            </Txt>
-            <View style={{ gap: theme.spacing.sm }}>
-              {PLACES.map((place) => (
-                <Button
-                  key={place}
-                  label={place}
-                  variant={studyPlace === place ? 'primary' : 'secondary'}
-                  onPress={() => setStudyPlace(place)}
-                />
-              ))}
-            </View>
-
-            {studyHour != null && studyPlace ? (
-              <Card>
-                <Txt variant="bodyStrong">
-                  If it's {formatHour(studyHour)}, I study {studyPlace.toLowerCase()}.
-                </Txt>
-                {isExpoGo ? (
-                  <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
-                    Reminders need the installed app — they won't fire in Expo Go.
-                  </Txt>
-                ) : null}
-              </Card>
-            ) : null}
-
-            <Button
-              label={studyHour == null ? 'Skip for now' : 'Continue'}
-              onPress={() => next('studytime')}
-            />
-          </>
-        ) : null}
-
         {step === 'notifications' ? (
           <>
             <Txt variant="display">Can we nudge you?</Txt>
             <Txt variant="body" color="secondary">
-              One reminder at {studyHour == null ? 'your study time' : formatHour(studyHour)},
-              and your weekly report on Sunday. That's it — never more than two a day, and
-              you can turn any of it off later.
+              One reminder a day and your weekly report on Sunday. That's it — never
+              more than two a day, and you can turn any of it off later. You pick the
+              daily time in Profile → Notifications.
             </Txt>
 
             <Card>
@@ -427,7 +363,7 @@ export default function Onboarding() {
                 WHAT YOU'LL GET
               </Txt>
               <View style={{ marginTop: theme.spacing.sm, gap: 4 }}>
-                <Txt variant="small">· "Your Day 12 roadmap is waiting." — once a day</Txt>
+                <Txt variant="small">· "Your Day 12 roadmap is waiting." — once a day, at a time you choose</Txt>
                 <Txt variant="small">· "Your weekly report just dropped." — Sundays</Txt>
                 <Txt variant="small">· Nothing during your quiet hours</Txt>
               </View>
@@ -467,8 +403,3 @@ export default function Onboarding() {
   );
 }
 
-function formatHour(hour: number): string {
-  const suffix = hour < 12 ? 'am' : 'pm';
-  const display = hour % 12 === 0 ? 12 : hour % 12;
-  return `${display} ${suffix}`;
-}
