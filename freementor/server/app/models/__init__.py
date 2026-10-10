@@ -20,6 +20,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    Uuid,
     func,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -33,11 +34,20 @@ def _uuid() -> str:
     return str(uuid.uuid4())
 
 
+# The Postgres schema declares these columns as `uuid`. Modelling them as
+# String(36) worked on SQLite and failed on Postgres with "column is of type
+# uuid but expression is of type character varying" — a mismatch the test
+# suite could never catch, because it runs on SQLite. SQLAlchemy's Uuid type
+# renders native `uuid` on Postgres and CHAR(32) elsewhere, so one model is
+# correct on both; as_uuid=False keeps the Python side as plain strings.
+UUIDCol = Uuid(as_uuid=False)
+
+
 class User(Base):
     __tablename__ = "users"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
-    auth_id: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
+    auth_id: Mapped[str] = mapped_column(UUIDCol, unique=True, index=True)
     email: Mapped[str] = mapped_column(Text)
     name: Mapped[str | None] = mapped_column(Text, nullable=True)
     photo_url: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -53,8 +63,9 @@ class User(Base):
 class ParentConsent(Base):
     __tablename__ = "parent_consents"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
-    user_id: Mapped[str] = mapped_column(String(36), ForeignKey("users.id", ondelete="CASCADE"))
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"))
     parent_contact: Mapped[str] = mapped_column(Text)
     method: Mapped[str] = mapped_column(String(8))
     # Null until the OTP is confirmed. A row is not consent.
@@ -81,7 +92,7 @@ class LibraryVersion(Base):
     __tablename__ = "library_versions"
     __table_args__ = (UniqueConstraint("goal_id", "version"),)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
     goal_id: Mapped[str] = mapped_column(String(64), ForeignKey("goals.id"))
     version: Mapped[str] = mapped_column(String(32))
     valid_for: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -95,25 +106,27 @@ class LibraryVersion(Base):
 class Enrollment(Base):
     __tablename__ = "enrollments"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
     user_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("users.id", ondelete="CASCADE"), index=True
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     goal_id: Mapped[str] = mapped_column(String(64), ForeignKey("goals.id"))
-    library_version_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    library_version_id: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     start_date: Mapped[date] = mapped_column(Date)
     target_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     status: Mapped[str] = mapped_column(String(16), default="trial")
-    purchase_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    purchase_id: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
 class Schedule(Base):
     __tablename__ = "schedules"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
     enrollment_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("enrollments.id", ondelete="CASCADE"), index=True
+        UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), index=True
     )
     mode: Mapped[str] = mapped_column(String(16), default="each_day")
     # JSON text rather than a JSONB column so the same model works on SQLite.
@@ -129,7 +142,7 @@ class TaskProgress(Base):
     __tablename__ = "task_progress"
 
     enrollment_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
     )
     # PlannedItem.key — a block id, or a synthetic review/warm-up/test key.
     block_id: Mapped[str] = mapped_column(Text, primary_key=True)
@@ -145,7 +158,7 @@ class ConfidenceRating(Base):
     __tablename__ = "confidence_ratings"
 
     enrollment_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
     )
     topic_id: Mapped[str] = mapped_column(Text, primary_key=True)
     level: Mapped[str] = mapped_column(String(24))
@@ -160,7 +173,7 @@ class TestScore(Base):
     __tablename__ = "test_scores"
 
     enrollment_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
     )
     block_or_milestone_id: Mapped[str] = mapped_column(Text, primary_key=True)
     score: Mapped[float] = mapped_column(Numeric)
@@ -175,7 +188,7 @@ class RestDay(Base):
     __tablename__ = "rest_days"
 
     enrollment_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), primary_key=True
     )
     date: Mapped[date] = mapped_column(Date, primary_key=True)
 
@@ -184,7 +197,7 @@ class Streak(Base):
     __tablename__ = "streaks"
 
     user_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
     )
     current: Mapped[int] = mapped_column(Integer, default=0)
     best: Mapped[int] = mapped_column(Integer, default=0)
@@ -195,7 +208,7 @@ class Streak(Base):
 class Coupon(Base):
     __tablename__ = "coupons"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
     code: Mapped[str] = mapped_column(String(9), unique=True)
     discount_tier: Mapped[int] = mapped_column(Integer)
     max_uses: Mapped[int | None] = mapped_column(Integer, nullable=True)
@@ -203,22 +216,25 @@ class Coupon(Base):
     valid_from: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     valid_to: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     status: Mapped[str] = mapped_column(String(16), default="active")
-    created_by: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    created_by: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
 class Purchase(Base):
     __tablename__ = "purchases"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
     user_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("users.id", ondelete="CASCADE"), index=True
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    enrollment_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    enrollment_id: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     play_order_id: Mapped[str | None] = mapped_column(Text, unique=True, nullable=True)
     product_id: Mapped[str] = mapped_column(Text)
     plan: Mapped[str] = mapped_column(String(16))
-    coupon_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    coupon_id: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     price_paid: Mapped[float | None] = mapped_column(Numeric, nullable=True)
     purchase_state: Mapped[str] = mapped_column(String(16), default="pending")
     acknowledged_at: Mapped[datetime | None] = mapped_column(
@@ -231,7 +247,7 @@ class NotificationPrefs(Base):
     __tablename__ = "notification_prefs"
 
     user_id: Mapped[str] = mapped_column(
-        String(36), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
     )
     daily: Mapped[bool] = mapped_column(Boolean, default=True)
     study: Mapped[bool] = mapped_column(Boolean, default=True)
@@ -245,8 +261,9 @@ class NotificationPrefs(Base):
 class AuditLog(Base):
     __tablename__ = "audit_log"
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
-    actor_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
+    actor_id: Mapped[str | None] = mapped_column(
+        UUIDCol, nullable=True)
     action: Mapped[str] = mapped_column(Text)
     target: Mapped[str | None] = mapped_column(Text, nullable=True)
     detail: Mapped[str | None] = mapped_column(Text, nullable=True)

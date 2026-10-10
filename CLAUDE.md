@@ -105,8 +105,10 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       **Supabase project is live**: `demkvsslqfkreicbjjmm` (ap-south-1, Postgres 17).
       All 17 tables created with RLS enabled and verified enforcing — an anonymous
       write returns 42501, not a constraint error. See `server/SETUP.md`.
-      **Still to do in M4:** `.env` on the server, Google sign-in, Storage upload for
-      goal files and photos, the OTP send, FCM.
+      **Catalog seeded** (73 goals) and **library published** to Supabase Storage —
+      the app now downloads roadmaps from a CDN, not from a laptop. Jobs:
+      `python -m app.jobs.seed_catalog` · `python -m app.jobs.publish_library`.
+      **Still to do in M4:** Google sign-in, profile-photo upload, the OTP send, FCM.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
@@ -138,8 +140,13 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - Routes live in `app/src/app/` (expo-router). Fonts are imported **per weight**
   (`@expo-google-fonts/inter/400Regular`) — importing the package root pulls in all 18
   weights and ~6 MB of unused TTFs.
-- Goal files are fetched over HTTP from the dev server standing in for Supabase Storage;
-  at M4 only `libraryBaseUrl` in `app/src/api/library.ts` changes.
+- Goal files come from Supabase Storage (public bucket, CDN). `EXPO_PUBLIC_LIBRARY_URL`
+  still overrides it, so `npm run library:serve` works offline and for library edits.
+- **Supabase's direct host `db.<ref>.supabase.co` is IPv6-only.** On an IPv4-only network
+  it fails with `getaddrinfo failed`, which looks like a bad hostname. Use the Supavisor
+  pooler (`aws-0-<region>.pooler.supabase.com`, user `postgres.<ref>`). See server/SETUP.md.
+- Server models use `Uuid(as_uuid=False)` for id columns, not `String(36)`: SQLite accepts
+  the latter and Postgres rejects it, so the test suite cannot catch the difference.
 - Every video in the library still has `duration_seconds: null`, so the scheduler uses
   `est_minutes`. `tools/check_links.py` must run before store launch or every shown
   video time is a planning estimate rather than the +15% rule.

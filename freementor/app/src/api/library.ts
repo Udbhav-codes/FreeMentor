@@ -5,9 +5,14 @@
  * when the learner picks that goal (product plan decision #18) and is then
  * cached in SQLite forever.
  *
- * Until the backend exists (M4) this points at a plain static server on the
- * dev machine. At M4 only `libraryBaseUrl` changes — to a signed Supabase
- * Storage URL from `GET /goals/{id}/download`. Nothing else here moves.
+ * Goal files now come from Supabase Storage over a CDN. The dev file server
+ * remains the fallback so the app still runs on a laptop with no network, and
+ * so a contributor can work on the library without publishing it.
+ *
+ * The bucket is public by design: these files hold only links to material
+ * that is already public, no learner data, and the app must be able to fetch
+ * one before anybody has paid. What is paid for is the scheduling and the
+ * tracking, not secrecy over a list of URLs.
  */
 import type { Catalog, CatalogGoal, GoalFile } from '@freementor/shared';
 import { parseHints } from '@freementor/shared';
@@ -54,8 +59,10 @@ export function searchGoals(query: string): CatalogGoal[] {
  * `npm run library:serve`; set EXPO_PUBLIC_LIBRARY_URL to your machine's LAN
  * address so the phone can reach it (localhost means the phone itself).
  */
-export const libraryBaseUrl =
-  process.env.EXPO_PUBLIC_LIBRARY_URL ?? 'http://localhost:8787';
+const SUPABASE_LIBRARY =
+  'https://demkvsslqfkreicbjjmm.supabase.co/storage/v1/object/public/library';
+
+export const libraryBaseUrl = process.env.EXPO_PUBLIC_LIBRARY_URL ?? SUPABASE_LIBRARY;
 
 export class GoalDownloadError extends Error {
   constructor(

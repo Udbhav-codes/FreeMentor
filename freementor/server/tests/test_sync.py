@@ -180,7 +180,7 @@ class TestIsolation:
     async def test_one_learner_cannot_write_to_another_enrollment(
         self, client: AsyncClient, enrollment: str
     ):
-        other = {"Authorization": "Bearer local:learner-2:two@example.com"}
+        other = auth("learner-2", "two@example.com")
         response = await client.post(
             "/progress",
             json={"operations": [task(enrollment, "b1")]},
@@ -194,7 +194,7 @@ class TestIsolation:
     async def test_one_learner_cannot_read_another_snapshot(
         self, client: AsyncClient, enrollment: str
     ):
-        other = {"Authorization": "Bearer local:learner-2:two@example.com"}
+        other = auth("learner-2", "two@example.com")
         response = await client.get(f"/progress/{enrollment}", headers=other)
         assert response.status_code == 404
 

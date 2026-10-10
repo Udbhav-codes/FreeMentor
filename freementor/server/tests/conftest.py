@@ -8,6 +8,7 @@ uses before any Supabase project exists.
 from __future__ import annotations
 
 import os
+import uuid
 from collections.abc import AsyncIterator
 
 import pytest
@@ -15,8 +16,20 @@ import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-# Must be set before app.config is imported anywhere.
-os.environ.setdefault("ENVIRONMENT", "test")
+# The suite must be hermetic: it has to behave the same on a machine with a
+# fully configured .env as on a fresh clone with none. Without this, adding
+# real Supabase credentials to .env made every test fail, because the app
+# started verifying real JWTs and rejecting the local stub token — a failure
+# about the developer's environment, not the code.
+#
+# Environment variables win over the .env file in pydantic-settings, so
+# blanking them here pins the suite to local mode. Must happen before
+# app.config is imported anywhere.
+os.environ["ENVIRONMENT"] = "test"
+os.environ["DATABASE_URL"] = ""
+os.environ["SUPABASE_JWT_SECRET"] = ""
+os.environ["SUPABASE_SERVICE_KEY"] = ""
+os.environ["SUPABASE_URL"] = ""
 
 from app.db import get_session  # noqa: E402
 from app.main import app  # noqa: E402
@@ -45,9 +58,16 @@ async def client(session_factory) -> AsyncIterator[AsyncClient]:
     app.dependency_overrides.clear()
 
 
-def auth(user_id: str = "learner-1", email: str = "learner@example.com") -> dict[str, str]:
+# Supabase auth ids are UUIDs, and users.auth_id is a uuid column, so the
+# fixtures use real ones. Derived from a name so they stay readable and
+# stable across runs.
+def auth_id(name: str) -> str:
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, f"freementor-test/{name}"))
+
+
+def auth(user: str = "learner-1", email: str = "learner@example.com") -> dict[str, str]:
     """Local-mode bearer token for a given identity."""
-    return {"Authorization": f"Bearer local:{user_id}:{email}"}
+    return {"Authorization": f"Bearer local:{auth_id(user)}:{email}"}
 
 
 @pytest_asyncio.fixture
