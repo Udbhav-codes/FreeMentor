@@ -209,14 +209,15 @@ export default function Onboarding() {
                 ]}
               />
               <Button
-                label={consentGiven ? 'Consent recorded ✓' : 'I have my parent’s permission'}
+                label={consentGiven ? 'Declared ✓' : 'I have my parent’s permission'}
                 variant={consentGiven ? 'primary' : 'secondary'}
                 onPress={() => setConsentGiven(true)}
                 style={{ marginTop: theme.spacing.md }}
               />
               <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-                Verified consent by OTP arrives with the backend. You'll also only ever see
-                non-personalised, G-rated ads.
+                This records what you told us, not your parent's agreement — a code sent
+                to them is what verifies it, and that arrives in a coming update. Either
+                way you'll only ever see non-personalised, G-rated ads.
               </Txt>
             </Card>
 

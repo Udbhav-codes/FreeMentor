@@ -270,7 +270,10 @@ export default function ProfileScreen() {
               label="Export my progress"
               variant="secondary"
               onPress={() =>
-                Alert.alert('Coming with the backend', 'Export arrives with sync at M4.')
+                Alert.alert(
+                  'Not built yet',
+                  'Sync is live, but a downloadable export of your progress is still to come.',
+                )
               }
             />
             <Button label="Delete my account" variant="ghost" onPress={confirmDelete} />

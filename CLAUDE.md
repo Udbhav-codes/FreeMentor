@@ -99,7 +99,7 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       ring, GPS route, Day view with the video hero card, weekly report, Plans. **149 tests.**
 - [~] **M4 in progress** — `server/` FastAPI: Postgres schema with row-level security,
       auth, account + 16/18 age gate, parent-consent request/confirm, enrollments,
-      **idempotent progress sync**, catalog/download. **38 server tests.** Runs in a
+      **idempotent progress sync**, catalog/download. **88 server tests.** Runs in a
       *local mode* (SQLite + stub tokens) so the whole API works before any cloud
       account exists; `ENVIRONMENT=production` refuses to start without real secrets.
       **Supabase project is live**: `demkvsslqfkreicbjjmm` (ap-south-1, Postgres 17).
@@ -118,14 +118,24 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       `exp://**` in Supabase Redirect URLs to complete in Expo Go, and still needs
       verifying on a device. Native one-tap waits for a dev build. See
       `server/GOOGLE_SIGNIN.md`.
-      **Still to do in M4:** FCM.
+      **Sync is wired** (`SyncProvider`): the queue drains on sign-in and on
+      app foreground, with a 30s floor and no overlapping runs. Profile shows the
+      last outcome and a Sync now button. Inert until `EXPO_PUBLIC_API_URL` is
+      set — there is no deployed server yet.
+      **Still to do in M4:** FCM; wire parent-consent OTP and avatar upload to
+      the endpoints that already exist and are verified.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
 - **Plans is UI only** — no Play Billing, no purchase verification, no coupon redemption,
   no trial countdown and nothing actually locks after 3 days. All of that is M5.
-- Parent consent records the claim but does not yet **verify** it (OTP needs the backend).
-- No Google sign-in, no server sync — the sync queue fills up but nothing drains it.
+- Parent consent records the claim but does not yet **verify** it. The OTP backend
+  is built and verified against Supabase; the app's consent step is still a
+  self-declaration and now says so in as many words ("This records what you told
+  us, not your parent's agreement").
+- Avatar upload is local-file only — `/media/avatar*` exists, unreached.
+- A **downloadable export** of progress does not exist (the server has no export
+  endpoint); sync itself does.
 - Qualification (onboarding step 6) is not collected.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
 - Hindi UI strings are not translated; only the library's Hindi resources are used.
@@ -155,8 +165,12 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - **Supabase's direct host `db.<ref>.supabase.co` is IPv6-only.** On an IPv4-only network
   it fails with `getaddrinfo failed`, which looks like a bad hostname. Use the Supavisor
   pooler (`aws-0-<region>.pooler.supabase.com`, user `postgres.<ref>`). See server/SETUP.md.
-- Server models use `Uuid(as_uuid=False)` for id columns, not `String(36)`: SQLite accepts
-  the latter and Postgres rejects it, so the test suite cannot catch the difference.
+- Server models use `Uuid(as_uuid=False)` for id columns, not `String(36)`, and
+  `JSONCol` for jsonb columns, not `Text`: SQLite accepts the wrong one and Postgres
+  rejects it, so a SQLite suite structurally cannot catch the difference. Both have
+  shipped as bugs. `tests/test_schema_matches_migration.py` now compares the models'
+  compiled Postgres DDL against the migration SQL by type family, with no database
+  needed — add a model column and it is checked automatically.
 - Every video in the library still has `duration_seconds: null`, so the scheduler uses
   `est_minutes`. `tools/check_links.py` must run before store launch or every shown
   video time is a planning estimate rather than the +15% rule.

@@ -11,28 +11,35 @@
  * with no resources at all, yet asked the learner to enter a score. In
  * Cybersecurity that meant being asked to grade a test that did not exist.
  */
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { buildPlan } from '../plan.ts';
 import { indexGoal, resolveItem } from '../lookup.ts';
 import { everyDay, loadGoal, progress, settings } from './fixtures.ts';
 import type { PlannedItem } from '../types.ts';
 
-const GOAL_IDS = [
-  'jee-main',
-  'jee-advanced',
-  'neet-ug',
-  'cuet-ug',
-  'full-stack',
-  'frontend',
-  'backend',
-  'cybersecurity',
-  'python',
-  'java',
-  'c',
-  'sql',
-];
+// Read from the catalog rather than hardcoded: a 13th goal promoted to
+// "full" must be covered by this rule automatically, not silently skipped
+// because nobody remembered to extend a list here.
+const CATALOG = JSON.parse(
+  readFileSync(
+    resolve(__dirname, '../../../../../library/FreeMentor_Library/catalog.json'),
+    'utf8',
+  ),
+) as { goals: { id: string; status: string }[] };
+
+const GOAL_IDS = CATALOG.goals.filter((g) => g.status === 'full').map((g) => g.id);
 
 const TODAY = '2026-10-08';
+
+describe('coverage', () => {
+  it('found the full goals in the catalog at all', () => {
+    // it.each([]) silently runs nothing, so an empty list would turn this
+    // whole file into a no-op that still reports as passing.
+    expect(GOAL_IDS.length).toBeGreaterThanOrEqual(12);
+  });
+});
 
 /** Revision is allowed to have no link; everything else is not. */
 const SELF_DIRECTED: PlannedItem['source'][] = ['spaced_review', 'final_revision', 'warmup'];
