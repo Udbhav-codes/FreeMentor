@@ -11,6 +11,7 @@ import uuid
 from datetime import date, datetime
 
 from sqlalchemy import (
+    JSON,
     Boolean,
     Date,
     DateTime,
@@ -23,6 +24,7 @@ from sqlalchemy import (
     Uuid,
     func,
 )
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -41,6 +43,15 @@ def _uuid() -> str:
 # renders native `uuid` on Postgres and CHAR(32) elsewhere, so one model is
 # correct on both; as_uuid=False keeps the Python side as plain strings.
 UUIDCol = Uuid(as_uuid=False)
+
+
+# Same trap, second flavour. The Postgres schema declares these columns as
+# `jsonb`; modelling them as Text and hand-rolling json.dumps() worked on
+# SQLite and failed on Postgres with "column is of type jsonb but expression
+# is of type character varying". SQLAlchemy's JSON type serialises for us on
+# both — native jsonb on Postgres, TEXT on SQLite — so the Python side is a
+# dict or list and nothing calls json.dumps() on the way in.
+JSONCol = JSON().with_variant(JSONB, "postgresql")
 
 
 class User(Base):
@@ -136,12 +147,11 @@ class Schedule(Base):
         UUIDCol, ForeignKey("enrollments.id", ondelete="CASCADE"), index=True
     )
     mode: Mapped[str] = mapped_column(String(16), default="each_day")
-    # JSON text rather than a JSONB column so the same model works on SQLite.
-    minutes_by_weekday: Mapped[str] = mapped_column(Text)
+    minutes_by_weekday: Mapped[dict[str, int]] = mapped_column(JSONCol)
     study_time: Mapped[str | None] = mapped_column(Text, nullable=True)
     study_place: Mapped[str | None] = mapped_column(Text, nullable=True)
     language: Mapped[str] = mapped_column(String(8), default="en")
-    selected_subjects: Mapped[str | None] = mapped_column(Text, nullable=True)
+    selected_subjects: Mapped[list[str] | None] = mapped_column(JSONCol, nullable=True)
     effective_from: Mapped[date] = mapped_column(Date)
 
 
@@ -273,5 +283,5 @@ class AuditLog(Base):
         UUIDCol, nullable=True)
     action: Mapped[str] = mapped_column(Text)
     target: Mapped[str | None] = mapped_column(Text, nullable=True)
-    detail: Mapped[str | None] = mapped_column(Text, nullable=True)
+    detail: Mapped[dict | None] = mapped_column(JSONCol, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

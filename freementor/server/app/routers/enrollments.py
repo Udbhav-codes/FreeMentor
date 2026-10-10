@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -94,9 +93,9 @@ async def start(
     session.add(
         Schedule(
             enrollment_id=enrollment.id,
-            minutes_by_weekday=json.dumps(payload.minutes_by_weekday),
+            minutes_by_weekday=payload.minutes_by_weekday,
             language=payload.language,
-            selected_subjects=json.dumps(payload.selected_subjects),
+            selected_subjects=payload.selected_subjects,
             effective_from=payload.start_date,
         )
     )
