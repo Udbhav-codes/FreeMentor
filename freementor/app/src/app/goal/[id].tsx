@@ -89,7 +89,7 @@ export default function GoalSetup() {
     try {
       if (qualification) await saveProfile({ qualification });
       await start(file, settings);
-      router.replace('/(tabs)');
+      router.replace('/roadmap');
     } finally {
       setBusy(false);
     }

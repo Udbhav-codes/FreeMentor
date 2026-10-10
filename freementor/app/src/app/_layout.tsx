@@ -84,6 +84,12 @@ export default function RootLayout() {
         <EnrollmentProvider>
           <StatusBar style="auto" />
           <Stack screenOptions={{ headerShown: false }}>
+            {/* index must come first: it is the gate that decides whether a
+                learner goes to sign-in, onboarding, goal choice or the
+                roadmap. Declaring (tabs) first made the tab group the initial
+                route, so the gate never ran and a brand-new user landed
+                straight on an empty roadmap. */}
+            <Stack.Screen name="index" />
             <Stack.Screen name="(tabs)" />
             <Stack.Screen name="sign-in" />
             <Stack.Screen name="onboarding" />

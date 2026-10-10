@@ -7,9 +7,16 @@ import { hasOnboarded } from '../db/profile.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 /**
- * Entry point: straight to the roadmap if a goal is already running,
- * otherwise to goal selection. (Full onboarding — age gate, consent, name,
- * weekly time, if-then plan — arrives at M3.)
+ * The gate every launch passes through, in the order of product plan §5:
+ *
+ *   animation (_layout) -> sign-in -> onboarding -> choose -> goal/[id] -> roadmap
+ *
+ * This file owns the route "/" and nothing else may: the tab group's home is
+ * `(tabs)/roadmap.tsx`, deliberately not `(tabs)/index.tsx`. A group adds no
+ * path segment, so an index inside it would also be "/" and the two would
+ * compete — which is exactly what happened: the tab group won, the gate never
+ * ran, and a brand-new user went from the animation straight to an empty
+ * roadmap with no sign-in, no name and no goal.
  */
 export default function Index() {
   const { loading, enrollment } = useEnrollment();
@@ -42,5 +49,5 @@ export default function Index() {
   // everything after it happen on a known account.
   if (!signedIn) return <Redirect href="/sign-in" />;
   if (!onboarded) return <Redirect href="/onboarding" />;
-  return <Redirect href={enrollment ? '/(tabs)' : '/choose'} />;
+  return <Redirect href={enrollment ? '/roadmap' : '/choose'} />;
 }

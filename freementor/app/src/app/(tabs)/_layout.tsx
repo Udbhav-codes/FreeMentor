@@ -15,7 +15,7 @@ import { useTheme } from '../../theme/ThemeProvider.tsx';
  * TTF for five symbols, and §11.4 caps the app at 25 MB.
  */
 const ICONS: Record<string, string> = {
-  index: '◢',
+  roadmap: '◢',
   progress: '◔',
   reports: '▤',
   practice: '✎',
@@ -61,7 +61,7 @@ export default function TabsLayout() {
         ),
       })}
     >
-      <Tabs.Screen name="index" options={{ title: 'Roadmap' }} />
+      <Tabs.Screen name="roadmap" options={{ title: 'Roadmap' }} />
       <Tabs.Screen name="progress" options={{ title: 'Progress' }} />
       <Tabs.Screen name="reports" options={{ title: 'Reports' }} />
       <Tabs.Screen name="practice" options={{ title: 'Practice' }} />
