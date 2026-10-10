@@ -37,7 +37,7 @@ export default function ProfileScreen() {
   const { appearance, setAppearance } = useAppearance();
   const { goal, plan, refresh } = useEnrollment();
   const { session, signOut, usingDevBypass } = useAuth();
-  const { syncing, last, sync } = useSync();
+  const { syncing, last, sync, refreshedGoals } = useSync();
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -339,6 +339,16 @@ export default function ProfileScreen() {
           <Txt variant="small" style={{ marginTop: 4 }}>
             {libraryBaseUrl}
           </Txt>
+          {goal ? (
+            <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+              {goal.goal.id} · version {goal.goal.version}
+            </Txt>
+          ) : null}
+          {refreshedGoals.length > 0 ? (
+            <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+              Updated from the CDN this session: {refreshedGoals.join(', ')}
+            </Txt>
+          ) : null}
           <View style={{ marginTop: theme.spacing.sm }}>
             <Pill>{isExpoGo ? 'Expo Go' : 'Dev build'}</Pill>
           </View>

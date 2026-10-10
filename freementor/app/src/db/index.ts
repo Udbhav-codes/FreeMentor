@@ -86,6 +86,30 @@ export async function loadGoalFile(goalId: string): Promise<GoalFile | null> {
   return { ...parsed, scheduler_hints: parseHints(parsed.scheduler_hints) } as GoalFile;
 }
 
+/** goal id -> the version currently cached on this device. */
+export async function cachedGoalVersions(): Promise<Record<string, string>> {
+  const db = await getDb();
+  const rows = await db.getAllAsync<{ goal_id: string; version: string }>(
+    'SELECT goal_id, version FROM cached_goal',
+  );
+  return Object.fromEntries(rows.map((r) => [r.goal_id, r.version]));
+}
+
+/**
+ * Point an enrollment at a newer version of its goal file.
+ *
+ * The enrollment records which version its plan was built from, so a
+ * refreshed roadmap has to be recorded here too or the row keeps claiming a
+ * version the device no longer holds.
+ */
+export async function setEnrollmentVersion(
+  enrollmentId: string,
+  version: string,
+): Promise<void> {
+  const db = await getDb();
+  await db.runAsync('UPDATE enrollment SET version = ? WHERE id = ?', [version, enrollmentId]);
+}
+
 export async function cachedGoalIds(): Promise<string[]> {
   const db = await getDb();
   const rows = await db.getAllAsync<{ goal_id: string }>('SELECT goal_id FROM cached_goal');

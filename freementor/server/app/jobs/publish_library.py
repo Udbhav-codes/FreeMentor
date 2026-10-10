@@ -28,6 +28,7 @@ import argparse
 import asyncio
 import hashlib
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
@@ -158,9 +159,28 @@ async def publish(force: bool = False) -> None:
 
             await session.commit()
 
+        # The version manifest, always written last so it can never advertise
+        # a version whose goal file has not finished uploading.
+        #
+        # This is what lets a device notice its cached roadmap is stale.
+        # catalog.json is 112 KB and ships inside the app bundle, so it can
+        # neither be polled cheaply nor updated without a release; this file
+        # is a couple of KB and lives on the CDN, so a library fix reaches
+        # existing installs with no app update at all.
+        manifest = {
+            "generated": datetime.now(timezone.utc).isoformat(),
+            "goals": {
+                path.stem: json.loads(path.read_bytes())["goal"]["version"]
+                for path in files
+            },
+        }
+        body = json.dumps(manifest, indent=2, sort_keys=True).encode("utf-8")
+        await upload(client, base, bucket, "versions.json", body)
+        print(f"  {'versions.json':<16} {'manifest':<10} {len(body) // 1024:>4} KB  published")
+
+
     print(f"\n{uploaded} uploaded, {skipped} unchanged")
-    if uploaded:
-        print(f"public base: {base}/storage/v1/object/public/{bucket}/goals/")
+    print(f"public base: {base}/storage/v1/object/public/{bucket}/")
 
 
 def main() -> None:

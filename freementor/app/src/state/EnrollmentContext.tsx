@@ -16,6 +16,7 @@ import {
   type ReactNode,
 } from 'react';
 import type { ConfidenceLevel, GoalFile } from '@freementor/shared';
+import { useSync } from './SyncContext.tsx';
 import {
   activeEnrollment,
   completeTask,
@@ -64,6 +65,8 @@ interface EnrollmentState {
 const Ctx = createContext<EnrollmentState | null>(null);
 
 export function EnrollmentProvider({ children }: { children: ReactNode }) {
+  // Nested inside SyncProvider, so it can see when a roadmap was re-downloaded.
+  const { refreshedGoals } = useSync();
   const [loading, setLoading] = useState(true);
   const [enrollment, setEnrollment] = useState<EnrollmentRow | null>(null);
   const [goal, setGoal] = useState<GoalFile | null>(null);
@@ -106,6 +109,18 @@ export function EnrollmentProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     void refresh();
   }, [refresh]);
+
+  // A roadmap re-downloaded from the CDN leaves this provider holding the old
+  // parsed file, so the plan on screen would stay built from content the
+  // device no longer has. Reload when the goal in hand is one that changed.
+  useEffect(() => {
+    if (!enrollment) return;
+    if (!refreshedGoals.includes(enrollment.goal_id)) return;
+    void refresh();
+    // enrollment is deliberately not a dependency: refresh() replaces it, and
+    // including it would re-run this every time the row object is recreated.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [refreshedGoals, refresh]);
 
   const start = useCallback(
     async (file: GoalFile, cfg: StudySettings) => {

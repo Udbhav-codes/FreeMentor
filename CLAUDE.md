@@ -133,10 +133,6 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   high-water mark) drives `entitlementFor()`, and after 3 days everything but
   YouTube returns `needs_plan` and routes to Plans. Ads themselves are M6, so an
   `ad_gated` resource currently opens after a confirm dialog rather than an ad.
-- **No library refresh mechanism.** `catalog.json` carries no version and nothing
-  ever passes `force` to `getGoalFile`, so a device that has cached a goal never
-  picks up a newer one. Launch blocker: the `check_links.py` duration backfill
-  could never reach an existing install.
 - Parent consent records the claim but does not yet **verify** it. The OTP backend
   is built and verified against Supabase; the app's consent step is still a
   self-declaration and now says so in as many words ("This records what you told
@@ -198,6 +194,13 @@ Profile says so. Remove `exp://**` before the production launch.
   weights and ~6 MB of unused TTFs.
 - Goal files come from Supabase Storage (public bucket, CDN). `EXPO_PUBLIC_LIBRARY_URL`
   still overrides it, so `npm run library:serve` works offline and for library edits.
+- **Library refresh**: `publish_library` writes `versions.json` (goal id -> version)
+  beside the goal files, always last so it cannot advertise a file still uploading.
+  The app checks it at startup and on foreground, at most every 6 h, and
+  re-downloads only cached goals whose version differs — it never pre-fetches the
+  other 72. A failed check is a no-op: the cached roadmap stays. When a goal is
+  re-downloaded, `EnrollmentContext` reloads so the plan is rebuilt from the new
+  file. `catalog.json` cannot do this job: it is 112 KB and ships in the bundle.
 - **Supabase's direct host `db.<ref>.supabase.co` is IPv6-only.** On an IPv4-only network
   it fails with `getaddrinfo failed`, which looks like a bad hostname. Use the Supavisor
   pooler (`aws-0-<region>.pooler.supabase.com`, user `postgres.<ref>`). See server/SETUP.md.
