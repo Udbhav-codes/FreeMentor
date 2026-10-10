@@ -41,6 +41,13 @@ export const devBypassAllowed = bypassAllowed(
   process.env.EXPO_PUBLIC_DEV_SKIP_AUTH,
 );
 
+/**
+ * The same gate, for other development-only controls (e.g. replaying the
+ * trial clock). Named separately so a reader does not have to know that
+ * "bypass" means auth specifically.
+ */
+export const devToolsAllowed = devBypassAllowed;
+
 /** Whether the learner has actually turned it on, on this device. */
 export async function devBypassActive(): Promise<boolean> {
   // Checked first and returned unconditionally: a stale stored value must

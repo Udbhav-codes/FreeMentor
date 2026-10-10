@@ -18,6 +18,10 @@ import { EditProfile } from '../../components/EditProfile.tsx';
 import { catalog } from '../../api/library.ts';
 import { deletePhotoFile } from '../../profile/photo.ts';
 import { useAuth } from '../../auth/AuthContext.tsx';
+import { devToolsAllowed } from '../../auth/devBypass.ts';
+import { clearTrialStarts } from '../../billing/trialStart.ts';
+import { describeTrial } from '../../billing/trial.ts';
+import { useEntitlement } from '../../billing/useEntitlement.ts';
 import { loadProfile, saveProfile, type Profile } from '../../db/profile.ts';
 import { resetDatabase } from '../../db/index.ts';
 import { libraryBaseUrl } from '../../api/library.ts';
@@ -38,6 +42,7 @@ export default function ProfileScreen() {
   const { goal, plan, refresh } = useEnrollment();
   const { session, signOut, usingDevBypass } = useAuth();
   const { syncing, last, sync, refreshedGoals } = useSync();
+  const { entitlement, trial } = useEntitlement();
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -249,8 +254,12 @@ export default function ProfileScreen() {
         <Card>
           <Txt variant="heading">Your plan</Txt>
           <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-            You're on the 3-day free trial of Basic. YouTube lessons stay free to open on
-            every plan.
+            {trial ? describeTrial(trial) : 'No goal started yet'}
+            {'. '}
+            YouTube lessons stay free to open on every plan.
+          </Txt>
+          <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+            Current access: {entitlement}
           </Txt>
           <Button
             label="See plans"
@@ -331,6 +340,44 @@ export default function ProfileScreen() {
             </Txt>
           </View>
         </Card>
+
+        {devToolsAllowed ? (
+          <Card>
+            <Txt variant="caption" color="danger">
+              DEV ONLY — NOT IN A RELEASE BUILD
+            </Txt>
+            <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              The trial start is remembered per goal outside the database, so resetting
+              the roadmap no longer grants a fresh trial. This forgets it, so the trial
+              can be replayed while testing.
+            </Txt>
+            <Button
+              label="Restart the trial clock"
+              variant="secondary"
+              onPress={() =>
+                Alert.alert(
+                  'Restart the trial clock?',
+                  'Forgets when this goal’s trial began. Development only.',
+                  [
+                    { text: 'Cancel', style: 'cancel' },
+                    {
+                      text: 'Restart',
+                      onPress: async () => {
+                        await clearTrialStarts();
+                        await refresh();
+                        Alert.alert(
+                          'Trial clock restarted',
+                          'Reset this roadmap and pick a goal to start a fresh 3 days.',
+                        );
+                      },
+                    },
+                  ],
+                )
+              }
+              style={{ marginTop: theme.spacing.md }}
+            />
+          </Card>
+        ) : null}
 
         <Card>
           <Txt variant="caption" color="secondary">

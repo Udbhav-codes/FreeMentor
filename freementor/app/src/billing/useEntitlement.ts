@@ -16,6 +16,7 @@ import { useEffect, useMemo, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { entitlementFor, type Entitlement } from './entitlement.ts';
 import { trialStatus, type TrialStatus } from './trial.ts';
+import { trialStartFor } from './trialStart.ts';
 import { useEnrollment } from '../state/EnrollmentContext.tsx';
 
 const HWM_KEY = 'freementor.trialHighWater';
@@ -54,6 +55,7 @@ export interface EntitlementState {
 export function useEntitlement(): EntitlementState {
   const { enrollment } = useEnrollment();
   const [highWater, setHighWater] = useState<string | null>(cachedHighWater);
+  const [startedAt, setStartedAt] = useState<string | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -67,13 +69,35 @@ export function useEntitlement(): EntitlementState {
     };
   }, []);
 
+  // The remembered start for this goal, which survives a roadmap reset.
+  useEffect(() => {
+    let alive = true;
+    if (!enrollment) {
+      setStartedAt(null);
+      return;
+    }
+    void trialStartFor(enrollment.goal_id, enrollment.created_at)
+      .then((iso) => {
+        if (alive) setStartedAt(iso);
+      })
+      .catch(() => {
+        if (alive) setStartedAt(enrollment.created_at);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [enrollment]);
+
   return useMemo<EntitlementState>(() => {
     if (!enrollment) {
       // No goal yet: nothing to gate, and no trial has started.
       return { entitlement: 'trial', trial: null };
     }
     const trial = trialStatus({
-      startedAt: enrollment.created_at,
+      // Until the remembered start has loaded, use the enrollment's own date:
+      // it is never LATER than the remembered one, so the worst case is a
+      // brief over-estimate of time left rather than a wrongly locked app.
+      startedAt: startedAt ?? enrollment.created_at,
       now: new Date(),
       highWaterMark: highWater,
     });
@@ -83,5 +107,5 @@ export function useEntitlement(): EntitlementState {
       entitlement: entitlementFor({ trialPhase: trial.phase, purchase: null }),
       trial,
     };
-  }, [enrollment, highWater]);
+  }, [enrollment, highWater, startedAt]);
 }
