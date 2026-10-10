@@ -108,7 +108,12 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       **Catalog seeded** (73 goals) and **library published** to Supabase Storage —
       the app now downloads roadmaps from a CDN, not from a laptop. Jobs:
       `python -m app.jobs.seed_catalog` · `python -m app.jobs.publish_library`.
-      **Still to do in M4:** Google sign-in, profile-photo upload, the OTP send, FCM.
+      **Parental-consent OTP** (hashed, 10-min expiry, 5-attempt cap, resend limit) and
+      **profile photos** (signed upload straight to a private `avatars` bucket) are live
+      and verified against Supabase. Delivery is a console sender until there is an
+      email/SMS subscription; `OTP_ECHO` returns the code for testing and **production
+      refuses to start with it on**.
+      **Still to do in M4:** Google sign-in, FCM.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
