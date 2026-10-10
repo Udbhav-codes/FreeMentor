@@ -331,6 +331,16 @@ Run checker → human review of every video → fill channels/durations → add 
 |---|---|---|---|
 | Price | 3 days free | ~~₹1,299~~ **₹599** | ~~₹3,999~~ **₹999** |
 | After trial | Everything locks until a plan is bought | — | — |
+
+> **How "everything locks" is implemented (Oct 2026).** Taken literally it
+> would paywall YouTube, which **YouTube API Services policy forbids** — that
+> is not ours to trade against a pricing table, so the video branch wins and
+> `accessFor()` checks it first. On expiry: notes, extra notes, practice and
+> test links lock; **every YouTube link stays open**, including the 21 that are
+> typed as `notes`. The roadmap, the day plan and the learner's own ticks also
+> stay visible: the table does not say which it meant, and taking away the
+> record of work somebody already did is a different thing from locking the
+> resources. Detailed analytics stay Premium throughout.
 | Roadmap, day plan, checklist, recall | ✅ | ✅ | ✅ |
 | Main & alternative YouTube videos | ✅ (never ad-gated) | ✅ (never ad-gated) | ✅ |
 | Main notes | ✅ | ✅ after rewarded ad | ✅ |

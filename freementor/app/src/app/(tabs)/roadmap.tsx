@@ -17,7 +17,8 @@ import { HABIT_TARGET_DAYS } from '../../progress/streak.ts';
 import { loadProfile } from '../../db/profile.ts';
 import { WelcomeCard } from '../../components/WelcomeCard.tsx';
 import { Avatar } from '../../components/Avatar.tsx';
-import { currentEntitlement, showsWelcomeCard } from '../../billing/entitlement.ts';
+import { showsWelcomeCard } from '../../billing/entitlement.ts';
+import { useEntitlement } from '../../billing/useEntitlement.ts';
 import { catalog } from '../../api/library.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
@@ -34,7 +35,8 @@ export default function RoadmapHome() {
   // Shown on every open and reload until a plan is bought. The ✕ hides it for
   // this session only — nothing is persisted, so it comes back next time.
   const [hiddenThisSession, setHiddenThisSession] = useState(false);
-  const showWelcome = showsWelcomeCard(currentEntitlement()) && !hiddenThisSession;
+  const { entitlement } = useEntitlement();
+  const showWelcome = showsWelcomeCard(entitlement) && !hiddenThisSession;
 
   // Reloaded on focus, not just on mount: the tab stays mounted while the
   // learner edits their name or photo in Profile, so a one-off read would

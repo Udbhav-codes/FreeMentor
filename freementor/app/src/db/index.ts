@@ -101,6 +101,13 @@ export interface EnrollmentRow {
   start_date: string;
   target_date: string | null;
   status: 'trial' | 'active' | 'archived';
+  /**
+   * When the learner started this goal, ISO. The trial clock is anchored to
+   * this and NOT to start_date, which the learner may set in the future and
+   * which would hand them a longer trial. `SELECT *` already returned it;
+   * only the type was missing.
+   */
+  created_at: string;
 }
 
 export async function activeEnrollment(): Promise<EnrollmentRow | null> {
@@ -150,6 +157,7 @@ export async function createEnrollment(
     start_date: settings.startDate,
     target_date: settings.targetDate ?? null,
     status: 'trial',
+    created_at: now,
   };
 }
 

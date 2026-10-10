@@ -10,14 +10,17 @@ import { describe, expect, it } from 'vitest';
 import type { Resource } from '@freementor/shared';
 import {
   accessFor,
-  currentEntitlement,
+  entitlementFor,
   hasDetailedAnalytics,
   showsAds,
   showsWelcomeCard,
   type Entitlement,
 } from '../entitlement.ts';
 
-const ALL: Entitlement[] = ['trial', 'basic', 'premium'];
+/** Every state, including the one where nothing is bought and the trial is over. */
+const ALL: Entitlement[] = ['trial', 'expired', 'basic', 'premium'];
+/** The states that still have access at all — "expired" locks everything but video. */
+const WITH_ACCESS: Entitlement[] = ['trial', 'basic', 'premium'];
 
 const res = (over: Partial<Resource>): Resource => ({
   type: 'notes',
@@ -43,6 +46,42 @@ describe('a video is never gated, on any plan', () => {
     for (const entitlement of ALL) {
       expect(accessFor(video, entitlement).kind).toBe('open');
     }
+  });
+
+  it('stays open when a YouTube link is typed as something else', () => {
+    // The library holds 21 YouTube links typed as `notes`. Keying the rule on
+    // type === 'video' locked them the moment the trial expired, i.e.
+    // paywalled YouTube — the exact thing the rule forbids.
+    for (const entitlement of ALL) {
+      const mistyped = res({
+        type: 'notes',
+        url: 'https://www.youtube.com/watch?v=ENrzD9HAZK4',
+        access: 'all',
+        ad_gate_allowed: false,
+      });
+      expect(accessFor(mistyped, entitlement).kind, entitlement).toBe('open');
+    }
+  });
+
+  it('stays open for youtu.be short links and for premium-marked ones', () => {
+    for (const entitlement of ALL) {
+      expect(accessFor(res({ type: 'notes', url: 'https://youtu.be/abc123' }), entitlement).kind).toBe('open');
+      expect(
+        accessFor(
+          res({ type: 'notes', url: 'https://www.youtube.com/watch?v=x', access: 'premium' }),
+          entitlement,
+        ).kind,
+      ).toBe('open');
+    }
+  });
+
+  it('does not mistake a lookalike host for YouTube', () => {
+    // notyoutube.com must still be gated normally, or the escape hatch is a
+    // hole anybody could drive a premium resource through.
+    expect(
+      accessFor(res({ type: 'notes', url: 'https://notyoutube.com/x', access: 'premium' }), 'basic')
+        .kind,
+    ).toBe('premium_only');
   });
 
   it('stays open even if a library file wrongly allows ad-gating it', () => {
@@ -87,15 +126,38 @@ describe('main notes and tests', () => {
   });
 });
 
-describe('practice links are free on every plan', () => {
-  it.each(ALL)('opens on %s', (entitlement) => {
+describe('practice links are free on every plan that has access', () => {
+  it.each(WITH_ACCESS)('opens on %s', (entitlement) => {
     expect(accessFor(res({ type: 'practice' }), entitlement).kind).toBe('open');
   });
 });
 
+describe('when the trial has ended', () => {
+  it('locks notes, tests and practice behind buying a plan', () => {
+    for (const type of ['notes', 'test', 'practice'] as const) {
+      expect(accessFor(res({ type }), 'expired').kind, type).toBe('needs_plan');
+    }
+  });
+
+  it('still opens every video — §10.1 "everything locks" cannot reach YouTube', () => {
+    // The YouTube API Services policy forbids paywalling a video, and that
+    // is not ours to trade away against a pricing table. This is the
+    // assertion that keeps the two in the right order.
+    expect(accessFor(res({ type: 'video', ad_gate_allowed: false }), 'expired').kind).toBe('open');
+  });
+
+  it('reports a premium resource as premium, not as a trial problem', () => {
+    // Buying Basic would not open this, so "needs_plan" would misdirect them.
+    expect(accessFor(res({ type: 'notes', access: 'premium' }), 'expired').kind).toBe(
+      'needs_plan',
+    );
+  });
+});
+
 describe('the welcome card keeps showing until a plan is bought', () => {
-  it('shows for anyone who has not paid', () => {
+  it('shows for anyone who has not paid, during the trial and after it', () => {
     expect(showsWelcomeCard('trial')).toBe(true);
+    expect(showsWelcomeCard('expired')).toBe(true);
   });
 
   it('stops the moment they buy either plan', () => {
@@ -125,7 +187,23 @@ describe('plan-level entitlements', () => {
     expect(hasDetailedAnalytics('premium')).toBe(true);
   });
 
-  it('still reports the trial until billing is wired up', () => {
-    expect(currentEntitlement()).toBe('trial');
+  it('reserves detailed analytics from an expired trial too', () => {
+    expect(hasDetailedAnalytics('expired')).toBe(false);
+  });
+
+  it('resolves the entitlement from the trial clock and the purchase', () => {
+    // No purchase: the clock decides, and an ended trial is "expired" rather
+    // than a trial that silently never ends.
+    expect(entitlementFor({ trialPhase: 'active', purchase: null })).toBe('trial');
+    expect(entitlementFor({ trialPhase: 'last_day', purchase: null })).toBe('trial');
+    expect(entitlementFor({ trialPhase: 'expired', purchase: null })).toBe('expired');
+  });
+
+  it('lets a purchase outrank the clock, in both directions', () => {
+    // Buying on day 2 must not leave someone on the trial...
+    expect(entitlementFor({ trialPhase: 'active', purchase: 'basic' })).toBe('basic');
+    // ...and buying after expiry must lift the lock at once.
+    expect(entitlementFor({ trialPhase: 'expired', purchase: 'basic' })).toBe('basic');
+    expect(entitlementFor({ trialPhase: 'expired', purchase: 'premium' })).toBe('premium');
   });
 });

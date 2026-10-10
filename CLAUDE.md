@@ -127,8 +127,16 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
-- **Plans is UI only** — no Play Billing, no purchase verification, no coupon redemption,
-  no trial countdown and nothing actually locks after 3 days. All of that is M5.
+- **Plans is UI only** — no Play Billing, no purchase verification and no coupon
+  redemption; that is M5. The **trial clock and the lock system now work**:
+  `billing/trial.ts` (pure, 16 tests, clock-rewind resistant via a persisted
+  high-water mark) drives `entitlementFor()`, and after 3 days everything but
+  YouTube returns `needs_plan` and routes to Plans. Ads themselves are M6, so an
+  `ad_gated` resource currently opens after a confirm dialog rather than an ad.
+- **No library refresh mechanism.** `catalog.json` carries no version and nothing
+  ever passes `force` to `getGoalFile`, so a device that has cached a goal never
+  picks up a newer one. Launch blocker: the `check_links.py` duration backfill
+  could never reach an existing install.
 - Parent consent records the claim but does not yet **verify** it. The OTP backend
   is built and verified against Supabase; the app's consent step is still a
   self-declaration and now says so in as many words ("This records what you told

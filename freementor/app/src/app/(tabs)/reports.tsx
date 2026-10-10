@@ -12,7 +12,8 @@ import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BarChart, ScoreBars } from '../../components/charts.tsx';
 import { Button, Card, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
-import { currentEntitlement, hasDetailedAnalytics } from '../../billing/entitlement.ts';
+import { hasDetailedAnalytics } from '../../billing/entitlement.ts';
+import { useEntitlement } from '../../billing/useEntitlement.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { weeklyReport } from '../../progress/weekly.ts';
 import { consistency } from '../../progress/streak.ts';
@@ -27,7 +28,8 @@ export default function Reports() {
   const today = todayIso();
   // §10.1 — the weekly report is free on every plan; the per-subject
   // breakdown and consistency detail are "detailed analytics" (Premium).
-  const detailed = hasDetailedAnalytics(currentEntitlement());
+  const { entitlement } = useEntitlement();
+  const detailed = hasDetailedAnalytics(entitlement);
 
   const report = useMemo(
     () => (plan && progress ? weeklyReport(plan, progress, today) : null),

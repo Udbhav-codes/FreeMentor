@@ -15,7 +15,8 @@ import * as WebBrowser from 'expo-web-browser';
 import { useRouter } from 'expo-router';
 import type { Resource } from '@freementor/shared';
 import { Pill, Txt } from './ui.tsx';
-import { accessFor, currentEntitlement } from '../billing/entitlement.ts';
+import { accessFor } from '../billing/entitlement.ts';
+import { useEntitlement } from '../billing/useEntitlement.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 
@@ -53,11 +54,15 @@ export function ResourceLink({ resource }: { resource: Resource }) {
   // A library file could carry a resource type we do not know yet; a link
   // with an odd label is far better than a crashed screen.
   const label = LABELS[resource.type] ?? 'Open link';
-  const access = accessFor(resource, currentEntitlement());
+  const { entitlement } = useEntitlement();
+  const access = accessFor(resource, entitlement);
   const broken = resource.status === 'broken';
 
+  // Both of these are "you cannot open this yet, here is where to fix that".
+  const locked = access.kind === 'premium_only' || access.kind === 'needs_plan';
+
   const onPress = useCallback(() => {
-    if (access.kind === 'premium_only') {
+    if (access.kind === 'premium_only' || access.kind === 'needs_plan') {
       router.push('/plans');
       return;
     }
@@ -81,7 +86,11 @@ export function ResourceLink({ resource }: { resource: Resource }) {
     <Pressable
       accessibilityRole="link"
       accessibilityLabel={
-        access.kind === 'premium_only' ? `${resource.title}. Premium only.` : `${label}: ${resource.title}`
+        access.kind === 'premium_only'
+          ? `${resource.title}. Premium only.`
+          : access.kind === 'needs_plan'
+            ? `${resource.title}. Locked — your free trial has ended.`
+            : `${label}: ${resource.title}`
       }
       disabled={broken}
       onPress={onPress}
@@ -102,10 +111,10 @@ export function ResourceLink({ resource }: { resource: Resource }) {
       <View style={{ flex: 1, gap: 2 }}>
         <Txt
           variant="bodyStrong"
-          color={access.kind === 'premium_only' ? 'secondary' : 'primary'}
+          color={locked ? 'secondary' : 'primary'}
           numberOfLines={2}
         >
-          {access.kind === 'premium_only' ? resource.title : label}
+          {locked ? resource.title : label}
         </Txt>
         <Txt variant="caption" color="secondary" numberOfLines={2}>
           {[
@@ -121,6 +130,8 @@ export function ResourceLink({ resource }: { resource: Resource }) {
 
       {access.kind === 'premium_only' ? (
         <Pill tone="accent">Premium</Pill>
+      ) : access.kind === 'needs_plan' ? (
+        <Pill tone="accent">Locked</Pill>
       ) : access.kind === 'ad_gated' ? (
         <Pill>Watch an ad</Pill>
       ) : (

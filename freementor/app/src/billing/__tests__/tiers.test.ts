@@ -37,7 +37,7 @@ function resourcesOf(goalId: string): Resource[] {
     if (Array.isArray(node)) return node.forEach(walk);
     if (node && typeof node === 'object') {
       const o = node as Record<string, unknown>;
-      if (typeof o.url === 'string' && typeof o.type === 'string') out.push(o as Resource);
+      if (typeof o.url === 'string' && typeof o.type === 'string') out.push(o as unknown as Resource);
       Object.values(o).forEach(walk);
     }
   };
@@ -54,7 +54,10 @@ const isYouTube = (url: string): boolean => {
   }
 };
 
-const ALL: Entitlement[] = ['trial', 'basic', 'premium'];
+/** Every state. "expired" matters most for the YouTube rule below. */
+const ALL: Entitlement[] = ['trial', 'expired', 'basic', 'premium'];
+/** States that still have access — "expired" locks everything but video. */
+const WITH_ACCESS: Entitlement[] = ['trial', 'basic', 'premium'];
 const every = FULL.flatMap((id) => resourcesOf(id).map((r) => ({ id, r })));
 
 describe('the library actually has resources to gate', () => {
@@ -97,14 +100,35 @@ describe('YouTube is never gated, on any plan', () => {
   });
 });
 
-describe('practice stays free on every plan (§10.1)', () => {
-  it.each(ALL)('%s opens all practice links', (entitlement) => {
+describe('practice stays free on every plan that has access (§10.1)', () => {
+  it.each(WITH_ACCESS)('%s opens all practice links', (entitlement) => {
     const offenders = every
       .filter(({ r }) => r.type === 'practice')
       .filter(({ r }) => accessFor(r, entitlement).kind !== 'open')
       .map(({ id, r }) => `${id}: ${r.url}`);
 
     expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+});
+
+describe('an expired trial still cannot touch YouTube', () => {
+  it('opens every YouTube link in the whole library', () => {
+    // §10.1 says everything locks after the trial; the YouTube API Services
+    // policy says a video is never paywalled. Checked across all 12 goals
+    // because this is the conflict most likely to be "simplified" later.
+    const offenders = every
+      .filter(({ r }) => isYouTube(r.url))
+      .filter(({ r }) => accessFor(r, 'expired').kind !== 'open')
+      .map(({ id, r }) => `${id}: ${r.type} ${r.url}`);
+
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it('does lock the rest, or the trial would mean nothing', () => {
+    const locked = every
+      .filter(({ r }) => !isYouTube(r.url) && r.type !== 'video')
+      .every(({ r }) => accessFor(r, 'expired').kind === 'needs_plan');
+    expect(locked).toBe(true);
   });
 });
 
