@@ -113,7 +113,12 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       and verified against Supabase. Delivery is a console sender until there is an
       email/SMS subscription; `OTP_ECHO` returns the code for testing and **production
       refuses to start with it on**.
-      **Still to do in M4:** Google sign-in, FCM.
+      **Google sign-in** is wired (web OAuth flow, works in Expo Go): sign-in screen
+      before the age gate, real session token on sync, sign-out in Profile. Needs
+      `exp://**` in Supabase Redirect URLs to complete in Expo Go, and still needs
+      verifying on a device. Native one-tap waits for a dev build. See
+      `server/GOOGLE_SIGNIN.md`.
+      **Still to do in M4:** FCM.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
