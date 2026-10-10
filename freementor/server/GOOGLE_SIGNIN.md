@@ -4,6 +4,11 @@ Everything here is done in two consoles: **Google Cloud** and **Supabase**.
 No code changes are needed to complete these steps; the app side is wired up
 afterwards and is noted at the end.
 
+**Do now:** steps 1, 2 and 4 — that is the Web client and the Supabase
+provider, which is everything the web OAuth flow needs.
+**Do later:** step 3, the Android client, once a build exists to take a SHA-1
+from.
+
 Values you will need, already fixed by this project:
 
 | | |
@@ -75,7 +80,18 @@ https://demkvsslqfkreicbjjmm.supabase.co/auth/v1/callback
 
 Keep the **Client ID** and **Client secret**. Both go to Supabase.
 
-## 3. Google Cloud — the Android client
+## 3. Google Cloud — the Android client *(later — you cannot do this yet)*
+
+**Skip this section for now.** A SHA-1 fingerprint comes from the certificate
+a build is signed with, and no such certificate exists until you make your
+first EAS build. There is nothing to paste in.
+
+Nothing is blocked by skipping it. The Android client is only needed for
+**native** Google sign-in, which does not run in Expo Go anyway. With steps 1,
+2 and 4 done, the **web OAuth flow works today** — including in Expo Go.
+
+Come back here when you make the first development build, which you will need
+for billing at M5 regardless. At that point:
 
 **Create credentials → OAuth client ID → Android**
 
@@ -127,6 +143,9 @@ Without these, Supabase refuses to hand the session back to the app and the
 browser just sits on a blank page.
 
 ## 5. Check it
+
+> Steps 1, 2 and 4 are all that is needed right now. Step 3 waits for your
+> first build.
 
 ```bash
 curl -s https://demkvsslqfkreicbjjmm.supabase.co/auth/v1/settings \
