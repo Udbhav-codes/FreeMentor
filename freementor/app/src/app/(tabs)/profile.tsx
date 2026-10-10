@@ -33,7 +33,7 @@ export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const { appearance, setAppearance } = useAppearance();
   const { goal, plan, refresh } = useEnrollment();
-  const { session, signOut } = useAuth();
+  const { session, signOut, usingDevBypass } = useAuth();
   const { syncing, last, sync } = useSync();
   const streak = useStreak();
 
@@ -233,6 +233,12 @@ export default function ProfileScreen() {
           {session?.user?.email ? (
             <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
               Signed in as {session.user.email}
+            </Txt>
+          ) : null}
+          {usingDevBypass ? (
+            <Txt variant="caption" color="danger" style={{ marginTop: theme.spacing.sm }}>
+              DEV: no account — sign-in was skipped, so nothing syncs and progress
+              stays on this phone only.
             </Txt>
           ) : null}
           <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>

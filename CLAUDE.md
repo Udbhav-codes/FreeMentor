@@ -155,6 +155,19 @@ sets across the 73 goals (JEE/NEET ask Class 10/11/12/Dropper; the
 programming tracks ask college/graduated; two ask Working professional). It
 cannot be answered before a goal exists.
 
+### Testing the flow without Google sign-in
+Google's web OAuth needs `exp://**` in Supabase -> Authentication -> URL
+Configuration -> Redirect URLs. Until that is added the browser returns
+"This site can't be reached". To test everything after sign-in:
+```bash
+EXPO_PUBLIC_DEV_SKIP_AUTH=1 npm start
+```
+A "Skip sign-in and continue" card then appears on the sign-in screen.
+It is gated on `__DEV__` **and** that flag, re-checked whenever the stored
+value is read, so a phone that enabled it in development cannot carry it into
+a release build. Nothing syncs while it is active (there is no token) and
+Profile says so. Remove `exp://**` before the production launch.
+
 ### Working notes
 - Run from `freementor/`: `npm test -w app` · `npm run validate:library` · `npm run types`.
 - **Server**: `cd server && .venv/Scripts/activate && pytest` · run it with

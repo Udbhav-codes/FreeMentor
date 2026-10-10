@@ -25,6 +25,7 @@ import * as Linking from 'expo-linking';
 import * as WebBrowser from 'expo-web-browser';
 import type { Session } from '@supabase/supabase-js';
 import { bindTokenRefreshToAppState, supabase } from './supabase.ts';
+import { clearDevBypass, devBypassActive, devBypassAllowed, setDevBypass } from './devBypass.ts';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -35,8 +36,13 @@ export type SignInResult =
 interface AuthState {
   loading: boolean;
   session: Session | null;
+  /** True for a real session, or for the dev bypass in a dev build. */
   signedIn: boolean;
+  /** True when signed in only because of the bypass — no real account. */
+  usingDevBypass: boolean;
   signInWithGoogle: () => Promise<SignInResult>;
+  /** No-op unless this build is allowed the bypass. */
+  skipSignInForDev: () => Promise<void>;
   signOut: () => Promise<void>;
 }
 
@@ -48,14 +54,24 @@ const redirectTo = Linking.createURL('auth/callback');
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [bypass, setBypass] = useState(false);
 
   useEffect(() => {
     bindTokenRefreshToAppState();
 
-    supabase.auth
-      .getSession()
-      .then(({ data }) => setSession(data.session))
-      .catch(() => setSession(null))
+    // Both are resolved before `loading` drops, so the entry gate never sees
+    // a half-known state and bounces the learner to sign-in by mistake.
+    Promise.all([
+      supabase.auth
+        .getSession()
+        .then(({ data }) => data.session)
+        .catch(() => null),
+      devBypassActive().catch(() => false),
+    ])
+      .then(([current, bypassOn]) => {
+        setSession(current);
+        setBypass(bypassOn);
+      })
       .finally(() => setLoading(false));
 
     const { data: subscription } = supabase.auth.onAuthStateChange((_event, next) => {
@@ -105,20 +121,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  const skipSignInForDev = useCallback(async () => {
+    if (!devBypassAllowed) return;
+    await setDevBypass(true);
+    setBypass(true);
+  }, []);
+
   const signOut = useCallback(async () => {
     await supabase.auth.signOut().catch(() => undefined);
+    // Clear the bypass too, or "Sign out" would leave the learner still in.
+    await clearDevBypass();
     setSession(null);
+    setBypass(false);
   }, []);
 
   const value = useMemo<AuthState>(
     () => ({
       loading,
       session,
-      signedIn: Boolean(session),
+      signedIn: Boolean(session) || bypass,
+      usingDevBypass: bypass && !session,
       signInWithGoogle,
+      skipSignInForDev,
       signOut,
     }),
-    [loading, session, signInWithGoogle, signOut],
+    [loading, session, bypass, signInWithGoogle, skipSignInForDev, signOut],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

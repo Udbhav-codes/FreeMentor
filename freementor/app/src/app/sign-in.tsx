@@ -13,6 +13,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Screen, Txt } from '../components/ui.tsx';
 import { useAuth } from '../auth/AuthContext.tsx';
+import { devBypassAllowed } from '../auth/devBypass.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 
 const PRIVACY_URL = 'https://freementor.app/privacy';
@@ -22,7 +23,7 @@ export default function SignIn() {
   const theme = useTheme();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, skipSignInForDev } = useAuth();
 
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -84,6 +85,36 @@ export default function SignIn() {
             <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
               {error}
             </Txt>
+            {devBypassAllowed ? (
+              <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+                "This site can't be reached" usually means `exp://**` is missing from
+                Supabase → Authentication → URL Configuration → Redirect URLs.
+              </Txt>
+            ) : null}
+          </Card>
+        ) : null}
+
+        {/* Development only. devBypassAllowed is __DEV__ AND an explicit
+            EXPO_PUBLIC_DEV_SKIP_AUTH=1, so this cannot render in a release
+            build even if the env var is left set somewhere. */}
+        {devBypassAllowed ? (
+          <Card>
+            <Txt variant="caption" color="danger">
+              DEV ONLY — NOT IN A RELEASE BUILD
+            </Txt>
+            <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              Skips Google and continues with no account. Nothing syncs — progress
+              stays on this phone — and this button does not exist in a release
+              build.
+            </Txt>
+            <Button
+              label="Skip sign-in and continue"
+              variant="secondary"
+              onPress={() => {
+                void skipSignInForDev().then(() => router.replace('/onboarding'));
+              }}
+              style={{ marginTop: theme.spacing.md }}
+            />
           </Card>
         ) : null}
 
