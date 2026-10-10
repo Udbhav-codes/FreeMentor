@@ -35,3 +35,8 @@ Thumbs.db
 npm-debug.log*
 .cache/
 coverage/
+
+# python build artefacts
+*.egg-info/
+build/
+dist/
