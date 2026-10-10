@@ -85,6 +85,31 @@ for (const file of goalFiles) {
       if (!Number.isInteger(block.est_minutes) || block.est_minutes <= 0)
         fail(file, 'time', `block "${block.id}" has est_minutes ${block.est_minutes}`);
 
+      // --- nothing on a plan may be a dead end ---------------------------
+      // A task the learner is shown must be actionable: a link, recall
+      // questions, or project criteria. Asking for a score with nothing to
+      // sit is the worst version of this — it asks them to invent a number.
+      const resourceCount = (block.resources ?? []).length;
+      if (block.score_entry === true && resourceCount === 0) {
+        fail(
+          file,
+          'actionable',
+          `block "${block.id}" asks for a score but has no test or practice link`,
+        );
+      }
+      if (resourceCount === 0) {
+        const hasQuestions = block.type === 'recall' && (topic.recall ?? []).length > 0;
+        const hasCriteria = (block.done_when ?? []).length > 0;
+        if (!hasQuestions && !hasCriteria) {
+          fail(
+            file,
+            'actionable',
+            `block "${block.id}" (${block.type}) has no link, no recall questions and no done_when — ` +
+              `a learner would see an empty task`,
+          );
+        }
+      }
+
       for (const r of block.resources ?? []) {
         // --- the non-negotiable YouTube rule (CLAUDE.md) -----------------
         if (r.type === 'video') {
@@ -115,6 +140,8 @@ for (const file of goalFiles) {
   for (const m of doc.milestones ?? []) {
     if (!phaseOrders.has(m.after_phase))
       fail(file, 'milestones', `milestone "${m.id}" is after_phase ${m.after_phase}, which does not exist`);
+    if ((m.resources ?? []).length === 0)
+      fail(file, 'actionable', `milestone "${m.id}" has no link — a mock with nothing to open`);
   }
 
   // --- data readiness (warn only; check_links.py fills these) ------------

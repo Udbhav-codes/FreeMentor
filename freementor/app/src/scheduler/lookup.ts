@@ -49,6 +49,17 @@ export function resolveItem(
   index: GoalIndex,
   lang: 'en' | 'hi' | 'hi-en' = 'en',
 ): ResolvedItem {
+  // A weekly test draws on the topics the learner covered that week.
+  if (item.source === 'weekly_test') {
+    const resources = (item.coversTopicIds ?? [])
+      .map((id) => index.topics.get(id))
+      .filter((t): t is Topic => Boolean(t))
+      .flatMap((t) => t.blocks.flatMap((b) => b.resources))
+      .filter((r) => r.type === 'test' || r.type === 'practice');
+    // De-duplicate: the same PYQ set often serves several topics.
+    return { item, resources: [...new Map(resources.map((r) => [r.url, r])).values()].slice(0, 6) };
+  }
+
   if (item.milestoneId) {
     const milestone = index.milestones.get(item.milestoneId);
     return { item, milestone, resources: milestone?.resources ?? [] };

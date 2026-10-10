@@ -100,6 +100,14 @@ function completedTopics(
   return out;
 }
 
+/** Does this topic offer anything a learner could actually sit and be scored on? */
+function hasTestableResource(topic: Topic | undefined): boolean {
+  if (!topic) return false;
+  return topic.blocks.some((b) =>
+    (b.resources ?? []).some((r) => r.type === 'test' || r.type === 'practice'),
+  );
+}
+
 /** A review/remediation key is `<kind>:<topicId>:<dueDate>`. */
 const dueDateOf = (key: string): IsoDate => key.slice(key.lastIndexOf(':') + 1);
 
@@ -254,6 +262,7 @@ export function buildPlan(input: SchedulerInput): Plan {
   }
 
   const allItems = new Map(queue.map((i) => [i.key, i]));
+  const topicsById = new Map(goal.topics.map((t) => [t.id, t]));
   const finished = completedTopics(goal, itemsByTopic, progress.completed);
 
   // --- the past: completed ticks, rendered where they actually happened --
@@ -300,6 +309,8 @@ export function buildPlan(input: SchedulerInput): Plan {
   const recentTopics: Topic[] = [];
   let currentWeek = isoWeekKey(cursor);
   let weekIndexes = studyDayIndexes(cursor, settings.minutesByWeekday);
+  /** Topics studied so far in the current week — what the weekly test covers. */
+  let weekTopicIds: string[] = [];
   let guard = 0;
 
   const contentLeft = () =>
@@ -346,6 +357,7 @@ export function buildPlan(input: SchedulerInput): Plan {
     if (isoWeekKey(cursor) !== currentWeek) {
       currentWeek = isoWeekKey(cursor);
       weekIndexes = studyDayIndexes(cursor, settings.minutesByWeekday);
+      weekTopicIds = [];
     }
 
     const available = settings.minutesByWeekday[weekdayOf(cursor)] ?? 0;
@@ -393,6 +405,7 @@ export function buildPlan(input: SchedulerInput): Plan {
       const t = topicOfItem.get(key);
       if (!t) return;
       topicThisDay = t;
+      if (!weekTopicIds.includes(t.id)) weekTopicIds.push(t.id);
       if (recentTopics[0]?.id !== t.id) {
         recentTopics.unshift(t);
         if (recentTopics.length > 12) recentTopics.pop();
@@ -426,17 +439,26 @@ export function buildPlan(input: SchedulerInput): Plan {
     }
 
     // Rule 5 — the weekly test slot.
+    //
+    // It only asks for a score when it can actually point at something to sit:
+    // a test or practice link from the topics covered this week. Putting a
+    // scored test on the plan with nothing to open asked the learner to invent
+    // a number, which is worse than having no test at all.
     if (kind === 'mixed_practice' && left >= WEEKLY_TEST_MINUTES) {
       const key = `weekly-test:${cursor}`;
-      if (!progress.completed[key]) {
+      if (!progress.completed[key] && weekTopicIds.length > 0) {
+        const scorable = weekTopicIds.some((id) => hasTestableResource(topicsById.get(id)));
         place(
           {
             key,
             source: 'weekly_test',
-            subject: 'Mixed practice',
-            title: "Weekly test · mixed practice on this week's topics",
+            subject: scorable ? 'Mixed practice' : 'Self-revision',
+            title: scorable
+              ? "Weekly test · mixed practice on this week's topics"
+              : "Self-revision · go back over this week's topics",
             minutes: WEEKLY_TEST_MINUTES,
-            scoreEntry: true,
+            scoreEntry: scorable,
+            coversTopicIds: [...weekTopicIds],
           },
           WEEKLY_TEST_MINUTES,
         );

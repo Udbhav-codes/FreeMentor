@@ -88,6 +88,13 @@ export interface PlannedItem {
   done: boolean;
   /** The learner enters a score after this one. */
   scoreEntry?: boolean;
+  /**
+   * Topics a synthesised item draws its material from — the weekly test
+   * covers whatever the learner studied that week. resolveItem() uses these
+   * to find real links, because an item with no link is not something we are
+   * allowed to put on a plan.
+   */
+  coversTopicIds?: string[];
 }
 
 export type DayKind =
