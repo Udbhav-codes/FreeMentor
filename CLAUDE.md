@@ -130,7 +130,16 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       resend, wrong code rejected, correct code sets `consent_given`, replay
       idempotent. On a build with no server or no session it falls back to the
       declaration and says so.
-      **Still to do in M4:** FCM; wire avatar upload to `/media/avatar*`.
+      **Avatar upload is wired** (`api/avatar.ts`): the local file stays the
+      display source and the upload is a *backup* — the server's read URL is
+      signed with a 1 h TTL, so a stored URL would be a broken image by
+      tomorrow; the path is stored and a URL minted on demand. Bytes go straight
+      to Storage via a signed ticket, never through the API process. Restores
+      only when there is no local file (reinstall, new phone) and never
+      overwrites a photo already on screen. Verified against real Storage:
+      ticket, PUT with `?token=`, 403 on another user's path, signed URL serving
+      the bytes back, replacement deleting the old object, 204 on delete.
+      **Still to do in M4:** FCM.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
@@ -145,7 +154,6 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   degrades to the declaration, which says so plainly. Nothing records consent
   locally — the server is authoritative — so clearing app data re-asks, and the
   `alreadyConsented()` check then short-circuits it.
-- Avatar upload is local-file only — `/media/avatar*` exists, unreached.
 - A **downloadable export** of progress does not exist (the server has no export
   endpoint); sync itself does.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.

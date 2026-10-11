@@ -18,6 +18,7 @@ import type { CatalogGoal } from '@freementor/shared';
 import { Avatar } from './Avatar.tsx';
 import { Button, Card, Pill, Txt } from './ui.tsx';
 import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
+import { deleteRemoteAvatar, restoreAvatar, uploadAvatar } from '../api/avatar.ts';
 import type { Profile } from '../db/profile.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
@@ -44,6 +45,11 @@ export function EditProfile({
 
   // --- the photo, confirmed separately with Done ------------------------
   const [pendingPhoto, setPendingPhoto] = useState<string | null>(null);
+  /** Where the photo lives, as far as the learner needs to know. */
+  const [backup, setBackup] = useState<
+    'idle' | 'uploading' | 'backed_up' | 'local_only' | 'failed'
+  >('idle');
+  const [backupDetail, setBackupDetail] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   // Kept in a ref so the unmount cleanup sees the latest value.
   const pendingRef = useRef<string | null>(null);
@@ -100,13 +106,37 @@ export function EditProfile({
     }
   }, [pendingPhoto]);
 
+  // A reinstall or a new phone leaves the profile row empty while the server
+  // still holds the photo. Tried once, and only when there is nothing local
+  // to show — it must never overwrite a photo the learner can already see.
+  const restored = useRef(false);
+  useEffect(() => {
+    if (restored.current || profile == null || profile.photoUri) return;
+    restored.current = true;
+    void (async () => {
+      const uri = await restoreAvatar();
+      if (uri) await onChange({ photoUri: uri });
+    })();
+  }, [profile, onChange]);
+
   const confirmPhoto = useCallback(async () => {
     if (!pendingPhoto) return;
     const previous = profile?.photoUri;
+    // Local first, always. The photo is the learner's and must survive a
+    // failed upload, a flight-mode phone and a server that does not exist
+    // yet; the backup is a bonus, not a precondition.
     await onChange({ photoUri: pendingPhoto });
     setPendingPhoto(null);
-    // Only now is the old one safe to remove.
     deletePhotoFile(previous);
+
+    setBackup('uploading');
+    const result = await uploadAvatar(pendingPhoto);
+    // 'unavailable' is the ordinary state today — no deployed server, and the
+    // development sign-in bypass has no token. Saying "backed up" would be a
+    // lie and saying "failed" would read as losing the photo, so it says
+    // neither: the photo is on this phone, and that is the honest summary.
+    setBackup(result.ok ? 'backed_up' : result.reason === 'unavailable' ? 'local_only' : 'failed');
+    if (!result.ok && result.reason !== 'unavailable') setBackupDetail(result.detail);
   }, [pendingPhoto, profile?.photoUri, onChange]);
 
   const cancelPhoto = useCallback(() => {
@@ -124,6 +154,11 @@ export function EditProfile({
           const previous = profile?.photoUri;
           await onChange({ photoUri: null });
           deletePhotoFile(previous);
+          // Removing it here has to remove it there, or the next reinstall
+          // would quietly restore a photo the learner deleted.
+          await deleteRemoteAvatar();
+          setBackup('idle');
+          setBackupDetail(null);
         },
       },
     ]);
@@ -178,6 +213,17 @@ export function EditProfile({
                 onPress={() => void pickPhoto()}
                 disabled={busy}
               />
+              {backup !== 'idle' ? (
+                <Txt variant="caption" color={backup === 'failed' ? 'danger' : 'secondary'}>
+                  {backup === 'uploading'
+                    ? 'Backing up…'
+                    : backup === 'backed_up'
+                      ? 'Backed up — it will follow you to a new phone'
+                      : backup === 'local_only'
+                        ? 'Saved on this phone'
+                        : (backupDetail ?? 'Saved here, but the backup failed')}
+                </Txt>
+              ) : null}
               {profile?.photoUri ? (
                 <Button compact label="Remove photo" variant="ghost" onPress={removePhoto} />
               ) : (
