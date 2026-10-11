@@ -31,6 +31,7 @@ import { Avatar } from '../../components/Avatar.tsx';
 import { showsWelcomeCard } from '../../billing/entitlement.ts';
 import { useEntitlement } from '../../billing/useEntitlement.ts';
 import { catalog } from '../../api/library.ts';
+import { formatMinutes } from '../../onboarding/deadline.ts';
 import { groupIntoWeeks, WeekCard } from '../../components/RouteList.tsx';
 import { weekLock } from '../../progress/weekLock.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
@@ -68,6 +69,7 @@ export default function RoadmapHome() {
 
   const today = todayIso();
   const weeks = useMemo(() => (plan ? groupIntoWeeks(plan.days, today) : []), [plan, today]);
+  const day = useMemo(() => plan?.days.find((d) => d.date === today) ?? null, [plan, today]);
   const listRef = useRef<FlatList>(null);
   // The welcome copy is built from catalog facts (phases, hours, outcomes).
   const catalogEntry = useMemo(
@@ -101,6 +103,21 @@ export default function RoadmapHome() {
   const here = weekAndDay(plan.days, today);
   const totalWeeks = new Set(plan.days.map((d) => isoWeekKey(d.date))).size;
   const currentIndex = Math.max(0, weeks.findIndex((w) => w.containsToday));
+
+  // Today's figures drive the one primary action (§8.2). The checklist they
+  // used to sit above is gone, so the button has to say enough on its own:
+  // a disabled button with no explanation is worse than no button.
+  const doneMinutes = day?.items.filter((i) => i.done).reduce((sum, i) => sum + i.minutes, 0) ?? 0;
+  const plannedMinutes = day?.plannedMinutes ?? 0;
+  const toGo = Math.max(0, plannedMinutes - doneMinutes);
+  const nothingToday = !day || day.items.length === 0;
+  const todayLabel = nothingToday
+    ? day?.isRestDay
+      ? 'Rest day — enjoy it'
+      : 'Nothing scheduled today'
+    : toGo > 0
+      ? "Continue today's task →"
+      : 'Review today ✓';
 
   return (
     <Screen>
@@ -173,6 +190,21 @@ export default function RoadmapHome() {
                 </Txt>
               </Card>
             ))}
+
+            <View style={{ gap: 6 }}>
+              <Button
+                label={todayLabel}
+                onPress={() => router.push(`/day/${today}`)}
+                disabled={nothingToday}
+              />
+              {nothingToday ? null : (
+                <Txt variant="caption" color="secondary" style={{ textAlign: 'center' }}>
+                  {toGo > 0
+                    ? `${formatMinutes(doneMinutes)} done · ${formatMinutes(toGo)} to go`
+                    : `${formatMinutes(plannedMinutes)} done — all of today's plan`}
+                </Txt>
+              )}
+            </View>
 
             <SectionTitle
               right={
