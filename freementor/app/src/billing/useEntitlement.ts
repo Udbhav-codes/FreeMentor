@@ -12,11 +12,12 @@
  * expired trial must not come back to life because somebody reset their
  * roadmap.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { entitlementFor, type Entitlement } from './entitlement.ts';
 import { trialStatus, type TrialStatus } from './trial.ts';
 import { trialStartFor } from './trialStart.ts';
+import { fetchEntitlement } from '../api/billing.ts';
 import { useEnrollment } from '../state/EnrollmentContext.tsx';
 
 const HWM_KEY = 'freementor.trialHighWater';
@@ -50,12 +51,17 @@ export interface EntitlementState {
   entitlement: Entitlement;
   /** null when no goal is enrolled yet, so there is no trial running. */
   trial: TrialStatus | null;
+  /** The verified plan, or null if nothing is bought / nothing known yet. */
+  purchased: 'basic' | 'premium' | null;
+  /** Re-reads the server, for right after a purchase completes. */
+  refresh: () => Promise<void>;
 }
 
 export function useEntitlement(): EntitlementState {
   const { enrollment } = useEnrollment();
   const [highWater, setHighWater] = useState<string | null>(cachedHighWater);
   const [startedAt, setStartedAt] = useState<string | null>(null);
+  const [purchased, setPurchased] = useState<'basic' | 'premium' | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -88,10 +94,29 @@ export function useEntitlement(): EntitlementState {
     };
   }, [enrollment]);
 
+  // The server is authoritative about what was bought: a purchase lives on
+  // the account, not on the device, so it has to survive a reinstall and a
+  // new phone. A null answer means "not known", not "nothing bought", so an
+  // unreachable server never revokes a plan somebody paid for.
+  const loadPurchase = useCallback(async () => {
+    const result = await fetchEntitlement(enrollment?.id ?? null).catch(() => null);
+    if (result) setPurchased(result.plan);
+  }, [enrollment?.id]);
+
+  useEffect(() => {
+    void loadPurchase();
+  }, [loadPurchase]);
+
   return useMemo<EntitlementState>(() => {
     if (!enrollment) {
-      // No goal yet: nothing to gate, and no trial has started.
-      return { entitlement: 'trial', trial: null };
+      // No goal yet: nothing to gate, and no trial has started. A purchase
+      // made before picking a goal still counts.
+      return {
+        entitlement: purchased ?? 'trial',
+        trial: null,
+        purchased,
+        refresh: loadPurchase,
+      };
     }
     const trial = trialStatus({
       // Until the remembered start has loaded, use the enrollment's own date:
@@ -102,10 +127,10 @@ export function useEntitlement(): EntitlementState {
       highWaterMark: highWater,
     });
     return {
-      // M5 passes the verified Play purchase here. Until then nothing is
-      // bought, so the clock alone decides.
-      entitlement: entitlementFor({ trialPhase: trial.phase, purchase: null }),
+      entitlement: entitlementFor({ trialPhase: trial.phase, purchase: purchased }),
       trial,
+      purchased,
+      refresh: loadPurchase,
     };
-  }, [enrollment, highWater, startedAt]);
+  }, [enrollment, highWater, startedAt, purchased, loadPurchase]);
 }

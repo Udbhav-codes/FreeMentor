@@ -25,6 +25,9 @@ import {
   SHOW_PREVIOUS_PRICES,
 } from '../billing/pricing.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { validateCoupon } from '../api/billing.ts';
+import { describeTrial } from '../billing/trial.ts';
+import { useEntitlement } from '../billing/useEntitlement.ts';
 
 const PLANS = [
   {
@@ -61,17 +64,44 @@ export default function Plans() {
   const insets = useSafeAreaInsets();
   const [selected, setSelected] = useState<'basic' | 'premium'>('premium');
   const [coupon, setCoupon] = useState('');
+  const [checking, setChecking] = useState(false);
+  /** The validated discount, as the server resolved it. */
+  const [applied, setApplied] = useState<{
+    code: string;
+    discountPercent: number;
+    productId: string;
+  } | null>(null);
+  const [couponError, setCouponError] = useState<string | null>(null);
 
-  const applyCoupon = () => {
+  const { trial, purchased } = useEntitlement();
+
+  const applyCoupon = async () => {
     const code = normaliseCouponCode(coupon);
+    // Checked locally first so an obvious typo does not need a round trip.
     if (!isValidCouponCode(code)) {
-      Alert.alert(
-        'Check the code',
-        'Coupon codes are six letters then three digits, like TOPPER426.',
-      );
+      setApplied(null);
+      setCouponError('Coupon codes are six letters then three digits, like TOPPER426.');
       return;
     }
-    Alert.alert('Not yet connected', 'Coupon checking needs the backend — coming at M5.');
+
+    setChecking(true);
+    setCouponError(null);
+    const result = await validateCoupon(code, selected);
+    setChecking(false);
+
+    if (!result.ok) {
+      setApplied(null);
+      setCouponError(result.detail);
+      return;
+    }
+    // The server decides the discount AND which Play product to launch. The
+    // app never computes a price — that is what stops a tampered client
+    // buying Premium at 90% off it was never given.
+    setApplied({
+      code: result.code,
+      discountPercent: result.discountPercent,
+      productId: result.productId,
+    });
   };
 
   const plan = PLANS.find((p) => p.id === selected)!;
@@ -88,6 +118,17 @@ export default function Plans() {
       >
         <View style={{ gap: theme.spacing.xs }}>
           <Txt variant="display">Keep your roadmap going</Txt>
+          {/* §10.4 asks for clear disclosure of when the trial ends and what
+              locks. Stating it here, where the money is, rather than only in
+              Profile. */}
+          {trial && !purchased ? (
+            <Txt variant="small" color={trial.phase === 'expired' ? 'danger' : 'secondary'}>
+              {describeTrial(trial)}
+              {trial.phase === 'expired'
+                ? ' — your notes, tests and practice links are locked until you pick a plan. Your roadmap, your ticks and every YouTube lesson stay open.'
+                : '. After that, notes, tests and practice links lock until you pick a plan — your roadmap and every YouTube lesson stay open.'}
+            </Txt>
+          ) : null}
           <Txt variant="body" color="secondary">
             YouTube lessons stay free to open on every plan, before and after.
           </Txt>
@@ -168,29 +209,65 @@ export default function Plans() {
               ]}
             />
             <Button
-              label="Apply"
+              label={checking ? 'Checking…' : 'Apply'}
               variant="secondary"
-              onPress={applyCoupon}
+              loading={checking}
+              disabled={checking || coupon.trim().length === 0}
+              onPress={() => void applyCoupon()}
               style={{ paddingHorizontal: theme.spacing.screen }}
             />
           </View>
+          {applied ? (
+            <View style={{ marginTop: theme.spacing.sm }}>
+              <Pill tone="success">
+                {applied.code} · {applied.discountPercent}% off {selected}
+              </Pill>
+              <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
+                Applied at checkout. Google Play shows the final price before you pay.
+              </Txt>
+            </View>
+          ) : couponError ? (
+            <Txt variant="small" color="danger" style={{ marginTop: theme.spacing.sm }}>
+              {couponError}
+            </Txt>
+          ) : null}
         </Card>
 
         <View style={{ gap: theme.spacing.sm }}>
-          <Button
-            label={`Get ${plan.name} · ${plan.price}`}
-            onPress={() =>
-              Alert.alert(
-                'Not yet connected',
-                'Google Play Billing arrives at M5. Nothing is charged and nothing is unlocked yet.',
-              )
-            }
-          />
+          {purchased ? (
+            <Card>
+              <Pill tone="success">You have {purchased}</Pill>
+              <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+                Lifetime access to this roadmap. Nothing further to pay.
+              </Txt>
+            </Card>
+          ) : (
+            <Button
+              label={`Get ${plan.name} · ${plan.price}`}
+              onPress={() =>
+                Alert.alert(
+                  'Payment is not connected yet',
+                  // Specific about what is missing, rather than "coming
+                  // soon": the server side is done and verified, and it is
+                  // Google Play Billing that needs a Play Console account and
+                  // a development build.
+                  applied
+                    ? `Everything is ready except Google Play itself. Your code ${applied.code} would launch the ${applied.productId} product. Nothing is charged.`
+                    : 'Everything is ready except Google Play itself, which needs a Play Console account. Nothing is charged.',
+                )
+              }
+            />
+          )}
           <Button
             label="Restore purchase"
             variant="ghost"
             onPress={() =>
-              Alert.alert('Not yet connected', 'Restoring purchases needs Play Billing (M5).')
+              Alert.alert(
+                purchased ? 'Already restored' : 'Nothing to restore',
+                purchased
+                  ? `Your ${purchased} plan is active on this account.`
+                  : 'We found no purchase on this account. If you paid on another phone, sign in with the same Google account.',
+              )
             }
           />
           <Button label="Not now" variant="ghost" onPress={() => router.back()} />

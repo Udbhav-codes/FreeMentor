@@ -140,11 +140,24 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       ticket, PUT with `?token=`, 403 on another user's path, signed URL serving
       the bytes back, replacement deleting the old object, 204 on delete.
       **Still to do in M4:** FCM.
-- [ ] M5 Billing · [ ] M6 Ads/Admin.
+- [~] **M5 in progress** — everything except Google Play itself. Server:
+      `/billing/coupons/validate`, `/billing/purchases` (verified, idempotent on
+      the Play order id), `/billing/entitlement` (scoped per enrollment).
+      Rules are pure in `app/billing.py`; the Play verifier is pluggable
+      (`app/play.py`) with `GooglePlayVerifier` deliberately raising rather than
+      pretending, and `LocalVerifier` accepting only a `test:` token. A
+      production server with no Play credentials returns 503 for a purchase but
+      still boots. App: `api/billing.ts`, real coupon validation on Plans,
+      trial disclosure per §10.4, and `useEntitlement` now reads the verified
+      plan from the server. **Blocked on a Play Console account** for
+      `react-native-iap` and the real verifier — that is the remaining work.
+- [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
-- **Plans is UI only** — no Play Billing, no purchase verification and no coupon
-  redemption; that is M5. The **trial clock and the lock system now work**:
+- **Plans cannot take money yet.** Coupon validation, purchase recording and
+  entitlement are built, tested and verified against Postgres; what is missing
+  is Google Play Billing itself, which needs a Play Console account and a dev
+  build. The buy button says exactly that rather than "coming soon". The **trial clock and the lock system now work**:
   `billing/trial.ts` (pure, 16 tests, clock-rewind resistant via a persisted
   high-water mark) drives `entitlementFor()`, and after 3 days everything but
   YouTube returns `needs_plan` and routes to Plans. Ads themselves are M6, so an
