@@ -212,7 +212,22 @@ GOAL → PHASE → MONTH → WEEK → DAY → TASK (block) → RESOURCE
 Every item has its own **checkbox**; the user ticks manually. "Mark day complete" is enabled when all tasks are ticked (or the user chooses "finish tomorrow").
 
 ### 7.4 Weekly rhythm
-Days 1–5 new content · Day 6 mixed practice + weekly test · Day 7 light revision or rest day. Week view shows progress % and each day with a tick box (✓ done, → today, faded future); tapping a week expands it.
+Days 1–5 new content · Day 6 mixed practice + weekly test · Day 7 **leads with**
+light revision, then continues with new content.
+
+> **Changed Oct 2026 on the product owner's instruction.** Day 7 used to be
+> revision and nothing else. Reported from the app: *"in every course in the
+> first week it is showing Light Revision and do not have anything as planned"*
+> — and it was also throwing away most of the day's committed time (60 of 120
+> minutes on Python, 30 of 120 on JEE Main, every week). Day 7 now opens with a
+> spaced-revision pass capped at **half** the day, so revision still sets the
+> tone, and then takes new content for the rest. The rule is now: **no day is
+> revision and nothing else**, except the reserved tail at the end of the plan,
+> where the syllabus is finished and revision IS the plan (rule 9). A lighter
+> day means less new content on it, not no progress on it. The cost: the weekly
+> timeline is slightly shorter and there is no longer a true rest-style day in
+> the rhythm — a learner wanting one takes a rest day, which is a separate
+> feature (§7.4, 1/week). Week view shows progress % and each day with a tick box (✓ done, → today, faded future); tapping a week expands it.
 
 ### 7.5 Confidence sheet → next revision
 | Rating | Returns in |

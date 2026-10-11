@@ -465,8 +465,34 @@ export function buildPlan(input: SchedulerInput): Plan {
       }
     }
 
-    // A light-revision day never takes on new content.
-    const takesNewContent = kind === 'new_content' || kind === 'mixed_practice';
+    // A light day LEADS with a short pass over what the learner saw recently
+    // (§7.4's "light revision or rest"), capped at half the day so revision
+    // sets the tone — and then carries on with new content below.
+    //
+    // It used to be revision and nothing else, which read as a day with
+    // nothing planned and left most of the learner's committed time unused:
+    // 60 of 120 minutes on Python, 30 of 120 on JEE Main, every single week.
+    // A lighter day is a day with less new content on it, not a day with no
+    // progress on it.
+    if (stage === 'content' && kind === 'light_revision' && recentTopics.length > 0) {
+      const reviewMinutes = Math.max(10, Math.round(hints.warmup_recall_minutes * 1.5));
+      const cap = Math.min(left, Math.floor(available / 2));
+      let used = 0;
+      for (const topic of recentTopics) {
+        if (used + reviewMinutes > cap) break;
+        const item = reviewItem(topic, cursor, reviewMinutes);
+        if (placedKeys.has(item.key) || progress.completed[item.key]) continue;
+        place(item, reviewMinutes);
+        used += reviewMinutes;
+      }
+    }
+
+    // Every day of the content stage now moves the syllabus forward. Written
+    // as the union of the kinds rather than `true` so the reserve stage, whose
+    // days carry a content `kind` but have no pending content left, behaves
+    // exactly as it did before.
+    const takesNewContent =
+      kind === 'new_content' || kind === 'mixed_practice' || kind === 'light_revision';
 
     // Rule 4 — finish a block that was split across days first.
     if (carry && takesNewContent && left > 0) {
@@ -535,22 +561,6 @@ export function buildPlan(input: SchedulerInput): Plan {
         }
         nextRevision = null;
         next = takeRevision();
-      }
-    }
-
-    // A light day with nothing due would otherwise be blank. Fill it with a
-    // light pass over what the learner saw this week — "light revision OR
-    // rest" (product plan §7.4) — capped at half the day so it stays light.
-    if (stage === 'content' && kind === 'light_revision' && items.length === 0 && recentTopics.length > 0) {
-      const reviewMinutes = Math.max(10, Math.round(hints.warmup_recall_minutes * 1.5));
-      const cap = Math.floor(available / 2);
-      let used = 0;
-      for (const topic of recentTopics) {
-        if (used + reviewMinutes > cap) break;
-        const item = reviewItem(topic, cursor, reviewMinutes);
-        if (placedKeys.has(item.key) || progress.completed[item.key]) continue;
-        place(item, reviewMinutes);
-        used += reviewMinutes;
       }
     }
 

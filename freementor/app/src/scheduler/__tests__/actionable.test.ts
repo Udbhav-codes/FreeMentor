@@ -108,6 +108,66 @@ describe('every task is actionable, or says it is self-directed', () => {
   });
 });
 
+describe('no day is revision and nothing else', () => {
+  // Reported from the app: "in every course in the first week it is showing
+  // Light Revision and do not have anything as planned". The light day was
+  // revision-only by design, which read as a day with nothing planned and
+  // left most of the learner's committed time unused.
+  //
+  // The reserved tail is exempt: by then the syllabus is finished and
+  // revision IS the plan, which is rule 9.
+  it.each(GOAL_IDS)('%s never plans a revision-only day', (id) => {
+    const offenders: string[] = [];
+
+    for (const { minutes, plan } of plansFor(id)) {
+      for (const day of plan.days) {
+        if (day.kind === 'final_revision' || day.isRestDay || day.items.length === 0) continue;
+        if (day.items.every((i) => i.source === 'spaced_review')) {
+          offenders.push(`${minutes}min/day ${day.date} [${day.kind}]`);
+        }
+      }
+    }
+
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it.each(GOAL_IDS)('%s never wastes a light day', (id) => {
+    // The waste that mattered was systematic: a revision-only light day used
+    // half its time or less, once a week, for the whole plan.
+    //
+    // Scoped to light days on purpose. Every goal also has ONE short day
+    // where the syllabus runs out just before the reserved tail begins — a
+    // warm-up plus the last mock, say — and that is a stage boundary, not
+    // wasted capacity.
+    const offenders: string[] = [];
+
+    for (const { minutes, plan } of plansFor(id)) {
+      for (const day of plan.days) {
+        if (day.kind !== 'light_revision' || day.isRestDay || day.items.length === 0) continue;
+        if (day.plannedMinutes < day.availableMinutes * 0.6) {
+          offenders.push(
+            `${minutes}min/day ${day.date} ${day.plannedMinutes}/${day.availableMinutes}`,
+          );
+        }
+      }
+    }
+
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it.each(GOAL_IDS)('%s plans something real in the first week', (id) => {
+    // The exact report was about week 1, so it gets its own assertion.
+    for (const { minutes, plan } of plansFor(id)) {
+      const week1 = plan.days.slice(0, 7);
+      for (const day of week1) {
+        expect(day.items.length, `${id} ${minutes}min ${day.date} is empty`).toBeGreaterThan(0);
+        const hasRealWork = day.items.some((i) => i.source !== 'spaced_review');
+        expect(hasRealWork, `${id} ${minutes}min ${day.date} is revision only`).toBe(true);
+      }
+    }
+  });
+});
+
 describe('the weekly test specifically', () => {
   it('carries the week\'s own practice and test links', () => {
     const { goal, index, plan } = plansFor('jee-main')[1]!;

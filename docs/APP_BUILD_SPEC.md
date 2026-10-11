@@ -53,7 +53,7 @@ Rules (from product plan §7 and `scheduler_hints` in each file):
 2. Expand each topic into its blocks in order: learn → read → practice → recall → (test). A `project` topic has a `build` block (hours) + recall.
 3. **Video time** shown = `duration × 1.15` rounded **up** to 5 min (use `est_minutes` until `check_links.py` fills real `duration_seconds`).
 4. Pack blocks into days using `minutes_by_weekday`. Render focus blocks of `focus_block_minutes` (25) + `break_minutes` (5). A block may span days.
-5. **Weekly pattern:** 5 new-content days, 1 mixed-practice + weekly-test day, 1 light-revision/rest day (`weekly_pattern`).
+5. **Weekly pattern:** 5 new-content days, 1 mixed-practice + weekly-test day, 1 light-revision day (`weekly_pattern`). The light day **leads with** revision, capped at half the day, then takes new content — it is never revision-only. See the note in product plan §7.4.
 6. **Spaced revision:** after a topic is done, schedule review blocks at `spaced_review_offsets_days` [1,3,7,21,45], overridden by the learner's confidence rating → `confidence_to_next_review_days` (need_revision 1 / little_afraid 2 / confident 4 / all_cleared 7 / mastered 21).
 7. **Milestones (mocks):** insert after the phase in `milestones[].after_phase`.
 8. **Mastery gate:** weekly test < `weekly_test_min_score_pct` (60) → insert a `remediation_block_minutes` (45) review.

@@ -183,23 +183,38 @@ describe('rule 5 — weekly rhythm', () => {
     expect(weekly.every((d) => d.kind === 'new_content' || d.isRestDay)).toBe(true);
   });
 
-  it('does not waste the light day when there is something to revise', () => {
-    // Regression: light-revision days used to come back completely empty,
-    // throwing away one day of capacity every single week.
+  it('does not waste the light day', () => {
+    // Regression, twice over: light days first came back completely empty,
+    // and then came back as revision only — which read to the learner as a
+    // day with nothing planned and still left most of their committed time
+    // unused (60 of 120 min on Python, 30 of 120 on JEE Main, every week).
     const p = plan(python, { minutesByWeekday: everyDay(120) });
     const light = p.days.filter((d) => d.kind === 'light_revision');
     expect(light.length).toBeGreaterThan(3);
-    // The very first one may legitimately be empty (nothing seen yet).
-    for (const day of light.slice(1)) {
+    for (const day of light) {
       expect(day.items.length, `${day.date} is empty`).toBeGreaterThan(0);
-      expect(day.items.every((i) => i.source === 'spaced_review')).toBe(true);
+      // Including the FIRST one. "Nothing seen yet" was the excuse for an
+      // empty first light day, and it is the one the learner hits in week 1.
+      expect(day.plannedMinutes, `${day.date} wastes most of the day`).toBeGreaterThan(
+        day.availableMinutes * 0.6,
+      );
     }
   });
 
-  it('keeps the light day light — at most half the available time', () => {
+  it('leads the light day with revision, then moves forward', () => {
     const p = plan(python, { minutesByWeekday: everyDay(120) });
     for (const day of p.days.filter((d) => d.kind === 'light_revision')) {
-      expect(day.plannedMinutes).toBeLessThanOrEqual(day.availableMinutes / 2);
+      const reviewMinutes = day.items
+        .filter((i) => i.source === 'spaced_review')
+        .reduce((sum, i) => sum + i.minutes, 0);
+      // Revision sets the tone but never takes the whole day: it is capped at
+      // half, so what is left is real progress rather than more revision.
+      expect(reviewMinutes, `${day.date}`).toBeLessThanOrEqual(
+        Math.floor(day.availableMinutes / 2),
+      );
+      expect(day.items[0]?.source, `${day.date} should open with revision`).toBe(
+        'spaced_review',
+      );
     }
   });
 
@@ -218,10 +233,18 @@ describe('rule 5 — weekly rhythm', () => {
     }
   });
 
-  it('a light-revision day never carries new content', () => {
-    const p = plan(python, { minutesByWeekday: everyDay(120) });
-    for (const day of p.days.filter((d) => d.kind === 'light_revision')) {
-      expect(day.items.every((i) => i.source !== 'topic')).toBe(true);
+  it('no day anywhere is revision and nothing else', () => {
+    // The product owner's rule: a day of pure revision reads as a day with
+    // nothing planned. Revision may lead a day; it may not be the whole of
+    // one. The reserved tail at the end of the plan is exempt — by then there
+    // is no syllabus left, which is the entire point of rule 9.
+    for (const minutes of [60, 120, 180]) {
+      const p = plan(python, { minutesByWeekday: everyDay(minutes) });
+      const offenders = p.days
+        .filter((d) => d.kind !== 'final_revision' && !d.isRestDay && d.items.length > 0)
+        .filter((d) => d.items.every((i) => i.source === 'spaced_review'))
+        .map((d) => `${d.date} [${d.kind}]`);
+      expect(offenders, `${minutes}min/day: ${offenders.slice(0, 5).join(', ')}`).toEqual([]);
     }
   });
 });
