@@ -143,6 +143,22 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
 - Hindi UI strings are not translated; only the library's Hindi resources are used.
 
+### Roadmap tab and week locking
+The Roadmap tab is a **FlatList**, not a ScrollView: the dashboard is its
+header and the route's weeks are its data. The route is inline there now (no
+separate `/route` screen — it was deleted, not left unreachable), and the
+today-only checklist was removed on the owner's instruction. A ScrollView
+would mount all ~72 weeks of a long plan eagerly, which is what put the route
+on its own screen in the first place.
+
+`progress/weekLock.ts` is pure and date-driven: week 1 is always open, every
+later week opens on the **Saturday of the week before it** (ISO weeks, so the
+Monday minus two days). Nothing is persisted, so there is no unlock state to
+drift when a missed day shifts the plan. `progress/routeWeeks.ts` holds
+`groupIntoWeeks`, moved out of RouteList.tsx so the ISO-week assumption the
+lock depends on is testable. The padlock is drawn from two Views in theme
+colours — not the emoji (colour) and not an icon font (~1 MB of TTF).
+
 ### The new-user flow (verified end to end)
 ```
 OpeningAnimation  (_layout.tsx)

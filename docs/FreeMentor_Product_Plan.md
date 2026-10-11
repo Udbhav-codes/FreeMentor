@@ -212,6 +212,14 @@ GOAL → PHASE → MONTH → WEEK → DAY → TASK (block) → RESOURCE
 Every item has its own **checkbox**; the user ticks manually. "Mark day complete" is enabled when all tasks are ticked (or the user chooses "finish tomorrow").
 
 ### 7.4 Weekly rhythm
+**Week visibility (added Oct 2026).** The route shows **this week only**; every
+later week carries a lock. Each week unlocks on the **Saturday of the week
+before it**, so next week's plan appears as this one finishes. Weeks are ISO
+weeks, so the unlock date is a week's Monday minus two days — nothing is
+stored, so a shifted plan cannot leave stale unlock state behind, and a learner
+returning after a gap finds everything up to now already open. Tapping a locked
+week says when it opens rather than doing nothing.
+
 Days 1–5 new content · Day 6 mixed practice + weekly test · Day 7 **leads with**
 light revision, then continues with new content.
 

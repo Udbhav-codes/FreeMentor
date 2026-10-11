@@ -95,7 +95,6 @@ export default function RootLayout() {
             <Stack.Screen name="onboarding" />
             <Stack.Screen name="choose" />
             <Stack.Screen name="day/[date]" />
-            <Stack.Screen name="route" />
             <Stack.Screen name="plans" options={{ presentation: 'modal' }} />
             <Stack.Screen name="goal/[id]" />
           </Stack>

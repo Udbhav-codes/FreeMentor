@@ -15,45 +15,54 @@
 import { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { Pill, Txt } from './ui.tsx';
+import { describeUnlock } from '../progress/weekLock.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
-import { isoWeekKey, startOfWeek, type PlannedDay } from '../scheduler/index.ts';
+import type { PlannedDay } from '../scheduler/index.ts';
+import type { RouteWeek } from '../progress/routeWeeks.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 
-export interface RouteWeek {
-  key: string;
-  startDate: string;
-  days: PlannedDay[];
-  doneFraction: number;
-  containsToday: boolean;
-  /** Set when today falls inside this week, so the row can highlight it. */
-  todayDate: string | null;
-  label: string;
-}
+export { groupIntoWeeks, type RouteWeek } from '../progress/routeWeeks.ts';
 
-export function groupIntoWeeks(days: PlannedDay[], today: string): RouteWeek[] {
-  const byWeek = new Map<string, PlannedDay[]>();
-  for (const day of days) {
-    const key = isoWeekKey(day.date);
-    const list = byWeek.get(key);
-    if (list) list.push(day);
-    else byWeek.set(key, [day]);
-  }
-
-  return [...byWeek.entries()].map(([key, weekDays]) => {
-    const items = weekDays.flatMap((d) => d.items);
-    const done = items.filter((i) => i.done).length;
-    const subjects = [...new Set(items.map((i) => i.subject).filter(Boolean))];
-    const containsToday = weekDays.some((d) => d.date === today);
-    return {
-      key,
-      startDate: startOfWeek(weekDays[0]!.date),
-      days: weekDays,
-      doneFraction: items.length > 0 ? done / items.length : 0,
-      containsToday,
-      todayDate: containsToday ? today : null,
-      label: subjects.slice(0, 3).join(' · ') || 'Revision',
-    };
-  });
+/**
+ * A padlock drawn from two Views.
+ *
+ * Not the 🔒 emoji: that renders in full colour and would be the only
+ * coloured thing on a screen of navy-and-amber tokens. Not an icon font
+ * either — @expo/vector-icons is ~1 MB of TTF and §11.4 caps the app at
+ * 25 MB. Two rounded rectangles cost nothing, take the theme's colour, and
+ * scale with the row.
+ */
+function LockGlyph({ size = 13, color }: { size?: number; color: string }) {
+  const bodyH = Math.round(size * 0.62);
+  const shackleW = Math.round(size * 0.6);
+  const shackleH = Math.round(size * 0.46);
+  return (
+    <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'flex-end' }}>
+      {/* the shackle: a bordered box with its bottom edge removed */}
+      <View
+        style={{
+          width: shackleW,
+          height: shackleH,
+          borderColor: color,
+          borderTopWidth: 1.5,
+          borderLeftWidth: 1.5,
+          borderRightWidth: 1.5,
+          borderBottomWidth: 0,
+          borderTopLeftRadius: shackleW / 2,
+          borderTopRightRadius: shackleW / 2,
+          marginBottom: -1,
+        }}
+      />
+      <View
+        style={{
+          width: size,
+          height: bodyH,
+          borderRadius: 2,
+          backgroundColor: color,
+        }}
+      />
+    </View>
+  );
 }
 
 export function WeekCard({
@@ -62,15 +71,23 @@ export function WeekCard({
   isFuture,
   defaultOpen,
   onOpenDay,
+  locked = false,
+  unlocksOn = null,
 }: {
   week: RouteWeek;
   isLast: boolean;
   isFuture: boolean;
   defaultOpen: boolean;
   onOpenDay: (date: string) => void;
+  /** A week further ahead than the learner has reached (see progress/weekLock). */
+  locked?: boolean;
+  /** The date it opens, shown on the lock row. */
+  unlocksOn?: string | null;
 }) {
   const theme = useTheme();
-  const [open, setOpen] = useState(defaultOpen);
+  // A locked week can never be open, whatever defaultOpen says.
+  const [open, setOpen] = useState(defaultOpen && !locked);
+  const [showWhy, setShowWhy] = useState(false);
   const isPast = week.doneFraction >= 1;
 
   return (
@@ -88,7 +105,7 @@ export function WeekCard({
               : isPast
                 ? theme.colors.primary
                 : 'transparent',
-            borderWidth: isFuture ? 2 : 0,
+            borderWidth: isFuture || locked ? 2 : 0,
             borderColor: theme.colors.muted,
           }}
         />
@@ -111,17 +128,23 @@ export function WeekCard({
           borderRadius: theme.radius.md,
           borderWidth: 1,
           borderColor: week.containsToday ? theme.colors.accent : theme.colors.border,
-          opacity: isFuture ? 0.6 : 1,
+          opacity: locked ? 0.55 : isFuture ? 0.6 : 1,
           overflow: 'hidden',
         }}
       >
         <Pressable
           accessibilityRole="button"
-          accessibilityState={{ expanded: open }}
-          accessibilityLabel={`Week of ${week.startDate}, ${Math.round(
-            week.doneFraction * 100,
-          )} percent done`}
-          onPress={() => setOpen(!open)}
+          accessibilityState={{ expanded: open, disabled: locked }}
+          accessibilityLabel={
+            locked
+              ? `Week of ${week.startDate}, locked. ${
+                  unlocksOn ? describeUnlock(unlocksOn) : 'Opens later'
+                }.`
+              : `Week of ${week.startDate}, ${Math.round(week.doneFraction * 100)} percent done`
+          }
+          // A locked week still responds to a tap so the learner is told WHEN
+          // it opens, rather than pressing a dead card and learning nothing.
+          onPress={() => (locked ? setShowWhy((v) => !v) : setOpen(!open))}
           style={({ pressed }) => ({
             minHeight: MIN_TOUCH_TARGET,
             flexDirection: 'row',
@@ -137,19 +160,39 @@ export function WeekCard({
               {week.label}
             </Txt>
           </View>
-          {week.containsToday ? (
+          {locked ? null : week.containsToday ? (
             <Pill tone="accent">Today</Pill>
           ) : (
             <Txt variant="caption" color={isPast ? 'success' : 'secondary'}>
               {Math.round(week.doneFraction * 100)}%
             </Txt>
           )}
-          <Txt variant="caption" color="secondary">
-            {open ? '▴' : '▾'}
-          </Txt>
+          {locked ? (
+            <LockGlyph color={theme.colors.muted} />
+          ) : (
+            <Txt variant="caption" color="secondary">
+              {open ? '▴' : '▾'}
+            </Txt>
+          )}
         </Pressable>
 
-        {open ? (
+        {locked && showWhy ? (
+          <View
+            style={{
+              paddingHorizontal: theme.spacing.md,
+              paddingBottom: theme.spacing.md,
+              borderTopWidth: 1,
+              borderTopColor: theme.colors.border,
+            }}
+          >
+            <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
+              One week at a time, so the plan stays something you can act on rather
+              than a wall of dates. {unlocksOn ? describeUnlock(unlocksOn) : 'Opens later'}.
+            </Txt>
+          </View>
+        ) : null}
+
+        {open && !locked ? (
           <View
             style={{
               paddingHorizontal: theme.spacing.md,
