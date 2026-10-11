@@ -29,6 +29,7 @@ class Settings(BaseSettings):
 
     youtube_api_key: str = ""
     google_play_service_account_json: str = ""
+    android_package_name: str = "com.freementor.app"
 
     # Demo delivery for consent codes: the API echoes the code back so the
     # flow can be exercised without an email or SMS subscription. Ignored

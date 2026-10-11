@@ -12,7 +12,7 @@ from fastapi import FastAPI
 
 from app.config import get_settings
 from app.db import create_all
-from app.routers import account, catalog, enrollments, media, progress
+from app.routers import account, billing, catalog, enrollments, media, progress
 
 settings = get_settings()
 
@@ -33,6 +33,7 @@ app = FastAPI(
 )
 
 app.include_router(account.router)
+app.include_router(billing.router)
 app.include_router(catalog.router)
 app.include_router(enrollments.router)
 app.include_router(media.router)
