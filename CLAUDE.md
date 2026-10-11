@@ -122,8 +122,15 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       app foreground, with a 30s floor and no overlapping runs. Profile shows the
       last outcome and a Sync now button. Inert until `EXPO_PUBLIC_API_URL` is
       set — there is no deployed server yet.
-      **Still to do in M4:** FCM; wire parent-consent OTP and avatar upload to
-      the endpoints that already exist and are verified.
+      **Parent-consent OTP is wired** (`api/consent.ts` + `components/ParentConsent.tsx`):
+      birth year -> code to the parent -> confirm, with a 60s resend cooldown
+      mirroring the server, an already-consented check so a reinstall does not
+      replace a confirmed row with a fresh request, and the server's own wording
+      shown on failure. Verified end to end against Postgres: 429 on instant
+      resend, wrong code rejected, correct code sets `consent_given`, replay
+      idempotent. On a build with no server or no session it falls back to the
+      declaration and says so.
+      **Still to do in M4:** FCM; wire avatar upload to `/media/avatar*`.
 - [ ] M5 Billing · [ ] M6 Ads/Admin.
 
 ### Not yet built (known gaps)
@@ -133,10 +140,11 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   high-water mark) drives `entitlementFor()`, and after 3 days everything but
   YouTube returns `needs_plan` and routes to Plans. Ads themselves are M6, so an
   `ad_gated` resource currently opens after a confirm dialog rather than an ad.
-- Parent consent records the claim but does not yet **verify** it. The OTP backend
-  is built and verified against Supabase; the app's consent step is still a
-  self-declaration and now says so in as many words ("This records what you told
-  us, not your parent's agreement").
+- Parent consent is **verified by OTP** when a server is reachable. With no
+  `EXPO_PUBLIC_API_URL` or no session (including under the dev sign-in bypass) it
+  degrades to the declaration, which says so plainly. Nothing records consent
+  locally — the server is authoritative — so clearing app data re-asks, and the
+  `alreadyConsented()` check then short-circuits it.
 - Avatar upload is local-file only — `/media/avatar*` exists, unreached.
 - A **downloadable export** of progress does not exist (the server has no export
   endpoint); sync itself does.

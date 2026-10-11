@@ -15,7 +15,7 @@
  * Nothing here ever throws at the caller. A failed sync is normal — the queue
  * simply stays put and is retried.
  */
-import { accessToken } from '../auth/supabase.ts';
+import { api, apiBaseUrl } from './client.ts';
 import {
   activeEnrollment,
   clearWrites,
@@ -25,8 +25,7 @@ import {
   type EnrollmentRow,
 } from '../db/index.ts';
 
-/** Where the API lives. Set per build; empty means "not configured yet". */
-export const apiBaseUrl = process.env.EXPO_PUBLIC_API_URL ?? '';
+export { apiBaseUrl } from './client.ts';
 
 export type SyncOutcome =
   | { status: 'synced'; applied: number; rejected: string[] }
@@ -34,29 +33,6 @@ export type SyncOutcome =
   | { status: 'not_configured' }
   | { status: 'offline' }
   | { status: 'failed'; reason: string };
-
-/**
- * The signed-in learner's access token.
- *
- * Falls back to EXPO_PUBLIC_DEV_TOKEN so the sync path can still be exercised
- * against a server running in local mode, but a real session always wins.
- */
-async function authToken(): Promise<string | null> {
-  const token = await accessToken().catch(() => null);
-  return token ?? process.env.EXPO_PUBLIC_DEV_TOKEN ?? null;
-}
-
-async function api(path: string, init: RequestInit = {}): Promise<Response> {
-  const token = await authToken();
-  return fetch(`${apiBaseUrl}${path}`, {
-    ...init,
-    headers: {
-      'Content-Type': 'application/json',
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...(init.headers ?? {}),
-    },
-  });
-}
 
 /**
  * Makes sure the server knows about this enrollment, and returns its id

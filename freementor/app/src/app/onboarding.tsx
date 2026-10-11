@@ -23,6 +23,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Alert, ScrollView, TextInput, View } from 'react-native';
 import { Button, Card, Pill, ProgressBar, Screen, Txt } from '../components/ui.tsx';
 import { Avatar } from '../components/Avatar.tsx';
+import { ParentConsent } from '../components/ParentConsent.tsx';
 import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
 import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onboarding/age.ts';
 import { saveProfile } from '../db/profile.ts';
@@ -56,8 +57,9 @@ export default function Onboarding() {
   const [step, setStep] = useState<Step>('welcome');
   const [birthYear, setBirthYear] = useState<number | null>(null);
   const [decision, setDecision] = useState<AgeDecision | null>(null);
-  const [consentGiven, setConsentGiven] = useState(false);
-  const [parentContact, setParentContact] = useState('');
+  // null until resolved. 'verified' = the parent entered the code we sent;
+  // 'declared' = the fallback on a build with no server to send it through.
+  const [consent, setConsent] = useState<'verified' | 'declared' | null>(null);
   const [name, setName] = useState('');
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [pickingPhoto, setPickingPhoto] = useState(false);
@@ -205,51 +207,16 @@ export default function Onboarding() {
           <>
             <Txt variant="display">A parent needs to agree</Txt>
             <Txt variant="body" color="secondary">
-              We'll send your parent or guardian a note explaining what FreeMentor stores
-              and why. Until they agree, we keep only your sign-in.
+              We send your parent or guardian a short code. Entering it is how they
+              agree — until then we keep only your sign-in.
             </Txt>
 
-            <Card>
-              <Txt variant="caption" color="secondary">
-                PARENT'S EMAIL OR PHONE
-              </Txt>
-              <TextInput
-                value={parentContact}
-                onChangeText={setParentContact}
-                autoCapitalize="none"
-                keyboardType="email-address"
-                placeholder="parent@example.com"
-                placeholderTextColor={theme.colors.muted}
-                style={[
-                  theme.typography.body,
-                  {
-                    marginTop: theme.spacing.sm,
-                    minHeight: 48,
-                    paddingHorizontal: theme.spacing.md,
-                    borderRadius: theme.radius.md,
-                    borderWidth: 1,
-                    borderColor: theme.colors.border,
-                    color: theme.colors.text,
-                  },
-                ]}
-              />
-              <Button
-                label={consentGiven ? 'Declared ✓' : 'I have my parent’s permission'}
-                variant={consentGiven ? 'primary' : 'secondary'}
-                onPress={() => setConsentGiven(true)}
-                style={{ marginTop: theme.spacing.md }}
-              />
-              <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-                This records what you told us, not your parent's agreement — a code sent
-                to them is what verifies it, and that arrives in a coming update. Either
-                way you'll only ever see non-personalised, G-rated ads.
-              </Txt>
-            </Card>
+            <ParentConsent birthYear={birthYear} onResolved={setConsent} />
 
             <Button
               label="Continue"
               onPress={() => next('consent')}
-              disabled={!consentGiven || parentContact.trim().length < 5}
+              disabled={consent === null}
             />
           </>
         ) : null}
