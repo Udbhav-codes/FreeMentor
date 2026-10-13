@@ -43,3 +43,6 @@ dist/
 
 # QR codes generated to point a phone at the dev server
 expo-qr.png
+
+# QR for the public tunnel — a fresh random URL each start
+expo-tunnel-qr.png
