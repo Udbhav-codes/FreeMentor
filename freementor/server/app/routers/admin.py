@@ -321,25 +321,35 @@ async def list_library(
     admin: Principal = Depends(current_admin),
     session: AsyncSession = Depends(get_session),
 ) -> list[LibraryRow]:
-    """What has actually been published, which is not the same as what is on
-    someone's laptop — the whole point of looking."""
+    """The CURRENT published version of each goal.
+
+    library_versions keeps every version ever published, so a plain listing
+    showed each goal once per version — twelve goals appearing twenty-four
+    times, under a heading claiming to show what the CDN serves. The CDN
+    serves one file per goal, so this returns the newest row per goal and the
+    heading is true again. The history stays in the table.
+    """
     rows = (
         await session.execute(
             select(LibraryVersion, Goal.name)
             .outerjoin(Goal, Goal.id == LibraryVersion.goal_id)
-            .order_by(LibraryVersion.goal_id)
+            .order_by(LibraryVersion.goal_id, LibraryVersion.published_at.desc())
         )
     ).all()
-    return [
-        LibraryRow(
+
+    newest: dict[str, LibraryRow] = {}
+    for version, name in rows:
+        # Ordered newest-first per goal, so the first one wins.
+        if version.goal_id in newest:
+            continue
+        newest[version.goal_id] = LibraryRow(
             goal_id=version.goal_id,
             goal_name=name,
             version=version.version,
             checksum=version.checksum,
             published_at=version.published_at,
         )
-        for version, name in rows
-    ]
+    return list(newest.values())
 
 
 # --- dashboard --------------------------------------------------------------
@@ -370,6 +380,15 @@ async def stats(
         enrollments=await count(Enrollment),
         purchases=await count(Purchase, Purchase.purchase_state == "confirmed"),
         active_coupons=await count(Coupon, Coupon.status == "active"),
-        goals_published=await count(LibraryVersion),
+        # DISTINCT: library_versions holds every version ever published, so a
+        # plain count said 24 for the 12 goals that exist.
+        goals_published=int(
+            (
+                await session.execute(
+                    select(func.count(func.distinct(LibraryVersion.goal_id)))
+                )
+            ).scalar()
+            or 0
+        ),
         generated_at=datetime.now(timezone.utc),
     )

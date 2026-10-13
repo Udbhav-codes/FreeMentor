@@ -393,3 +393,39 @@ class TestStats:
         with Override(as_admin()):
             rows = (await client.get("/admin/library", headers=admin_headers())).json()
         assert rows == []
+
+
+class TestLibraryListing:
+    @pytest.mark.asyncio
+    async def test_shows_one_row_per_goal_not_one_per_version(
+        self, client: AsyncClient, session_factory
+    ) -> None:
+        # library_versions keeps history, so a plain listing showed each goal
+        # once per version — 24 rows for 12 goals, under a heading claiming to
+        # show what the CDN serves. The CDN serves one file per goal.
+        from datetime import datetime, timezone
+
+        from app.models import Goal, LibraryVersion
+
+        async with session_factory() as session:
+            session.add(Goal(id="python", name="Python", category="x", type="language"))
+            await session.flush()
+            for version, day in (("2026.1", 10), ("2026.2", 12)):
+                session.add(
+                    LibraryVersion(
+                        goal_id="python",
+                        version=version,
+                        file_url=f"https://cdn/{version}",
+                        checksum=f"sum-{version}",
+                        published_at=datetime(2026, 10, day, tzinfo=timezone.utc),
+                    )
+                )
+            await session.commit()
+
+        with Override(as_admin()):
+            rows = (await client.get("/admin/library", headers=admin_headers())).json()
+            stats = (await client.get("/admin/stats", headers=admin_headers())).json()
+
+        assert len(rows) == 1, "one row per goal"
+        assert rows[0]["version"] == "2026.2", "the newest, not the first"
+        assert stats["goals_published"] == 1, "goals, not versions"
