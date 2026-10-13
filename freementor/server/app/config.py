@@ -27,6 +27,11 @@ class Settings(BaseSettings):
     supabase_service_key: str = ""
     supabase_storage_bucket: str = "library"
 
+    # Who may use the admin panel: a comma-separated list of email addresses,
+    # matched against the verified JWT. Empty means nobody, deliberately —
+    # a missing setting must never mean "everyone".
+    admin_emails: str = ""
+
     youtube_api_key: str = ""
     google_play_service_account_json: str = ""
     android_package_name: str = "com.freementor.app"
@@ -50,6 +55,13 @@ class Settings(BaseSettings):
             # SQLAlchemy's async driver name differs from the one Supabase prints.
             return self.database_url.replace("postgresql://", "postgresql+asyncpg://", 1)
         return "sqlite+aiosqlite:///./freementor-local.db"
+
+    @property
+    def admin_email_set(self) -> frozenset[str]:
+        """Lower-cased, blanks dropped. Fails closed: no setting, no admins."""
+        return frozenset(
+            part.strip().lower() for part in self.admin_emails.split(",") if part.strip()
+        )
 
     @property
     def verifies_real_tokens(self) -> bool:
