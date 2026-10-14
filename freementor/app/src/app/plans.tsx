@@ -132,7 +132,7 @@ export default function Plans() {
             </Txt>
           ) : null}
           <Txt variant="body" color="secondary">
-            YouTube lessons stay free to open on every plan, before and after.
+            {t('plans.youtubeAlways')}
           </Txt>
           <Txt variant="caption" color="secondary">
             {FREE_DISCLOSURE}
@@ -229,7 +229,7 @@ export default function Plans() {
                 })}
               </Pill>
               <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
-                Applied at checkout. Google Play shows the final price before you pay.
+                {t('plans.appliedAtCheckout')}
               </Txt>
             </View>
           ) : couponError ? (

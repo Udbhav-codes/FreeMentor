@@ -81,11 +81,11 @@ export default function Onboarding() {
       }
       if (result.reason === 'permission_denied') {
         Alert.alert(
-          'Photo access is off',
-          'FreeMentor needs permission to open your gallery. You can turn it on in Android settings — or skip it, the photo is optional.',
+          t('dialog.photoPermissionTitle'),
+          t('dialog.photoPermissionBody'),
         );
       } else if (result.reason === 'failed') {
-        Alert.alert('Could not use that photo', 'Try another image.');
+        Alert.alert(t('dialog.photoFailedTitle'), t('dialog.photoFailedBody'));
       }
     } finally {
       setPickingPhoto(false);
@@ -149,9 +149,7 @@ export default function Onboarding() {
           <>
             <Txt variant="display">Welcome to FreeMentor.</Txt>
             <Txt variant="body" color="secondary">
-              Let's build your roadmap with free, trusted resources. You tell us where you
-              want to get to and how much time you have — we'll tell you exactly what to do
-              each day.
+              {t('onboarding.welcome.body')}
             </Txt>
             <Button label="Get started" onPress={() => next('welcome')} />
           </>

@@ -21,6 +21,7 @@ import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
 import { deleteRemoteAvatar, restoreAvatar, uploadAvatar } from '../api/avatar.ts';
 import type { Profile } from '../db/profile.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 import { useLanguage } from '../i18n/LanguageProvider.tsx';
 import { isLanguage } from '../i18n/translate.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
@@ -44,6 +45,7 @@ export function EditProfile({
   onChange: (patch: Partial<Profile>) => Promise<void>;
 }) {
   const theme = useTheme();
+  const t = useT();
   const { setLanguage: applyLanguage } = useLanguage();
 
   // --- the photo, confirmed separately with Done ------------------------
@@ -98,11 +100,11 @@ export function EditProfile({
       }
       if (result.reason === 'permission_denied') {
         Alert.alert(
-          'Photo access is off',
-          'FreeMentor needs permission to open your gallery. You can turn it on in Android settings — or skip the photo, it is optional.',
+          t('dialog.photoPermissionTitle'),
+          t('dialog.photoPermissionBody'),
         );
       } else if (result.reason === 'failed') {
-        Alert.alert('Could not set that photo', 'Try another image.');
+        Alert.alert(t('dialog.photoFailedTitle'), t('dialog.photoFailedBody'));
       }
     } finally {
       setBusy(false);
@@ -148,10 +150,10 @@ export function EditProfile({
   }, [pendingPhoto]);
 
   const removePhoto = useCallback(() => {
-    Alert.alert('Remove your photo?', 'Your initials will show instead.', [
-      { text: 'Cancel', style: 'cancel' },
+    Alert.alert(t('dialog.removePhotoTitle'), t('dialog.removePhotoBody'), [
+      { text: t('common.cancel'), style: 'cancel' },
       {
-        text: 'Remove',
+        text: t('dialog.remove'),
         style: 'destructive',
         onPress: async () => {
           const previous = profile?.photoUri;

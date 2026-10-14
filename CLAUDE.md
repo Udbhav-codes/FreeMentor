@@ -170,13 +170,12 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - A **downloadable export** of progress does not exist (the server has no export
   endpoint); sync itself does.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
-- **Hindi UI strings exist but are not finished.** `src/i18n/` has all three
-  catalogues (en, Devanagari hi, Latin-script Hinglish) and `LanguageProvider`
-  re-renders the app when the language changes. Converted so far: sign-in,
-  onboarding, Roadmap/home, the route week cards and Plans. **Still English:**
-  Profile, Progress, Reports, Practice, the Day view and goal selection. A
-  learner on Hindi therefore sees a mixed app — the first run is translated,
-  the deeper tabs are not.
+- **Hindi and Hinglish UI are done.** `src/i18n/` holds three catalogues of
+  195 keys each (en, Devanagari hi, Latin-script Hinglish). Every screen and
+  every learner-facing dialog is translated. English remains only where it
+  must: the `__DEV__` cards (sign-in bypass, trial-clock reset) and the fatal
+  "could not start" screen, which renders before `LanguageProvider` mounts and
+  so cannot use the hook.
 - **No Devanagari font is bundled.** Inter and DM Sans have no Devanagari
   glyphs, so Hindi falls back to Android's system Noto and renders in a
   different typeface from the rest of the UI. It is legible, not consistent.

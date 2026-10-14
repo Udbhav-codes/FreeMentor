@@ -18,6 +18,7 @@ import { Pill, Txt } from './ui.tsx';
 import { accessFor } from '../billing/entitlement.ts';
 import { useEntitlement } from '../billing/useEntitlement.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 
 export async function openResource(resource: Resource): Promise<void> {
@@ -50,6 +51,7 @@ const LABELS: Record<Resource['type'], string> = {
 
 export function ResourceLink({ resource }: { resource: Resource }) {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   // A library file could carry a resource type we do not know yet; a link
   // with an odd label is far better than a crashed screen.
@@ -70,16 +72,24 @@ export function ResourceLink({ resource }: { resource: Resource }) {
       // M6 shows a user-initiated rewarded ad here. Never auto-playing, never
       // during a video, a test or the checklist itself (§10.2).
       Alert.alert(
-        'Watch a short ad to open this?',
+        t('dialog.adGateTitle'),
         'Ads arrive with the next milestone. For now this opens directly.',
         [
-          { text: 'Cancel', style: 'cancel' },
-          { text: 'Open', onPress: () => void openResource(resource).catch(reportFailure) },
+          { text: t('common.cancel'), style: 'cancel' },
+          {
+            text: t('day.openLink'),
+            onPress: () =>
+              void openResource(resource).catch(() =>
+                reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
+              ),
+          },
         ],
       );
       return;
     }
-    openResource(resource).catch(reportFailure);
+    openResource(resource).catch(() =>
+      reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
+    );
   }, [access.kind, resource, router]);
 
   return (
@@ -143,6 +153,6 @@ export function ResourceLink({ resource }: { resource: Resource }) {
   );
 }
 
-function reportFailure() {
-  Alert.alert('Could not open this link', 'Check your connection and try again.');
+function reportFailure(title: string, body: string) {
+  Alert.alert(title, body);
 }

@@ -30,12 +30,14 @@ import { useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { describeSync, useSync } from '../../state/SyncContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 
 /** Common study times — one tap rather than a clock dial. */
 const REMINDER_HOURS = [6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22];
 
 export default function ProfileScreen() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { appearance, setAppearance } = useAppearance();
@@ -65,12 +67,12 @@ export default function ProfileScreen() {
 
   const confirmReset = () =>
     Alert.alert(
-      'Reset this roadmap?',
-      'Your ticks, ratings and scores for this goal are cleared and the plan starts from today. This cannot be undone.',
+      t('dialog.resetTitle'),
+      t('dialog.resetBody'),
       [
-        { text: 'Cancel', style: 'cancel' },
+        { text: t('common.cancel'), style: 'cancel' },
         {
-          text: 'Reset',
+          text: t('dialog.reset'),
           style: 'destructive',
           onPress: async () => {
             await resetDatabase();
@@ -83,12 +85,12 @@ export default function ProfileScreen() {
 
   const confirmDelete = () =>
     Alert.alert(
-      'Delete your account?',
+      t('dialog.deleteTitle'),
       'Everything on this device is erased. Once the backend is connected this will also delete your account on the server within 30 days.',
       [
         { text: 'Cancel', style: 'cancel' },
         {
-          text: 'Delete everything',
+          text: t('dialog.deleteConfirm'),
           style: 'destructive',
           onPress: async () => {
             await resetDatabase();
@@ -137,10 +139,10 @@ export default function ProfileScreen() {
 
         <Card>
           <Txt variant="heading">Your numbers</Txt>
-          {profile?.birthYear ? <Row label="Born" value={String(profile.birthYear)} /> : null}
-          <Row label="Hours studied" value={`${hoursStudied} h`} />
-          <Row label="Current streak" value={`${streak.current} days`} />
-          <Row label="Best streak" value={`${streak.best} days`} />
+          {profile?.birthYear ? <Row label={t('profile.born')} value={String(profile.birthYear)} /> : null}
+          <Row label={t('profile.hoursStudied')} value={`${hoursStudied} h`} />
+          <Row label={t('profile.currentStreak')} value={`${streak.current} days`} />
+          <Row label={t('profile.bestStreak')} value={`${streak.best} days`} />
         </Card>
 
         <Card>
@@ -160,11 +162,11 @@ export default function ProfileScreen() {
             onPress={() =>
               goal
                 ? Alert.alert(
-                    'Change your goal?',
+                    t('dialog.changeGoalTitle'),
                     'Your current roadmap is archived, not deleted — you can come back to it. A different goal is a separate purchase.',
                     [
                       { text: 'Cancel', style: 'cancel' },
-                      { text: 'Choose a new goal', onPress: () => router.push('/choose') },
+                      { text: t('dialog.changeGoalConfirm'), onPress: () => router.push('/choose') },
                     ],
                   )
                 : router.push('/choose')
@@ -192,7 +194,7 @@ export default function ProfileScreen() {
         <Card>
           <Txt variant="heading">Notifications</Txt>
           <Toggle
-            label="Daily study reminder"
+            label={t('profile.dailyReminder')}
             hint={
               profile?.studyHour != null
                 ? `At ${formatHour(profile.studyHour)}`
@@ -239,14 +241,14 @@ export default function ProfileScreen() {
             ))}
           </View>
           <Toggle
-            label="Weekly report"
+            label={t('profile.weeklyReport')}
             hint="Sundays"
             value={weeklyOn}
             onChange={setWeeklyOn}
           />
           {isExpoGo ? (
             <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-              Reminders don't fire in Expo Go — they work in the installed app.
+              {t('profile.remindersExpoGo')}
             </Txt>
           ) : null}
         </Card>
@@ -256,13 +258,13 @@ export default function ProfileScreen() {
           <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
             {trial ? describeTrial(trial) : 'No goal started yet'}
             {'. '}
-            YouTube lessons stay free to open on every plan.
+            {t('profile.youtubeFree')}
           </Txt>
           <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
             Current access: {entitlement}
           </Txt>
           <Button
-            label="See plans"
+            label={t('profile.seePlans')}
             variant="secondary"
             onPress={() => router.push('/plans')}
             style={{ marginTop: theme.spacing.lg }}
@@ -293,16 +295,16 @@ export default function ProfileScreen() {
               onPress={() => void sync()}
             />
             <Button
-              label="Sign out"
+              label={t('profile.signOut')}
               variant="secondary"
               onPress={() =>
                 Alert.alert(
-                  'Sign out?',
-                  'Your roadmap and progress stay on this phone. Sign back in to sync them.',
+                  t('dialog.signOutTitle'),
+                  t('dialog.signOutBody'),
                   [
                     { text: 'Cancel', style: 'cancel' },
                     {
-                      text: 'Sign out',
+                      text: t('profile.signOut'),
                       onPress: async () => {
                         await signOut();
                         router.replace('/sign-in');
@@ -312,9 +314,9 @@ export default function ProfileScreen() {
                 )
               }
             />
-            <Button label="Reset this roadmap" variant="secondary" onPress={confirmReset} />
+            <Button label={t('profile.resetRoadmap')} variant="secondary" onPress={confirmReset} />
             <Button
-              label="Export my progress"
+              label={t('profile.exportProgress')}
               variant="secondary"
               onPress={() =>
                 Alert.alert(
@@ -323,20 +325,18 @@ export default function ProfileScreen() {
                 )
               }
             />
-            <Button label="Delete my account" variant="ghost" onPress={confirmDelete} />
+            <Button label={t('profile.deleteAccount')} variant="ghost" onPress={confirmDelete} />
           </View>
         </Card>
 
         <Card>
           <Txt variant="heading">About</Txt>
           <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-            FreeMentor links to free, public resources. We never copy or re-host anyone's
-            content, and YouTube lessons are never put behind an ad or a paywall.
+            {t('profile.aboutBody')}
           </Txt>
           <View style={{ marginTop: theme.spacing.md, gap: 4 }}>
             <Txt variant="caption" color="secondary">
-              Privacy policy · Terms · Refund policy · Content policy — added before the
-              store listing.
+              {t('profile.policies')}
             </Txt>
           </View>
         </Card>

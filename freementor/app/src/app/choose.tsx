@@ -18,11 +18,13 @@ import { catalog, isPlayable, searchGoals } from '../api/library.ts';
 import { Pill, Screen, Txt } from '../components/ui.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 
 const CATEGORY_ORDER = ['Entrance Exams', 'Skills', 'Programming Languages'];
 
 export default function Choose() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [query, setQuery] = useState('');
@@ -70,7 +72,7 @@ export default function Choose() {
         <TextInput
           value={query}
           onChangeText={setQuery}
-          placeholder="Search exams, skills and languages"
+          placeholder={t('choose.searchLong')}
           placeholderTextColor={theme.colors.muted}
           returnKeyType="search"
           style={[
@@ -98,7 +100,7 @@ export default function Choose() {
         ListEmptyComponent={
           <View style={{ padding: theme.spacing.xl }}>
             <Txt variant="small" color="secondary">
-              Nothing matched that. Try a shorter word.
+              {t('choose.nothingMatched')}
             </Txt>
           </View>
         }

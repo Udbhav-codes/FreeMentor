@@ -24,12 +24,14 @@ import { formatMinutes } from '../../onboarding/deadline.ts';
 import { restDayBlockedReason } from '../../progress/streak.ts';
 import { useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 
 type Resolved = ReturnType<typeof resolveItem>;
 
 export default function DayView() {
   const { date } = useLocalSearchParams<{ date: string }>();
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { goal, plan, settings, progress, toggleTask, rate, score, markRestDay } =
@@ -72,10 +74,10 @@ export default function DayView() {
     const restDays = plan.days.filter((d) => d.isRestDay).map((d) => d.date);
     const blocked = restDayBlockedReason(day.date, restDays);
     if (blocked) {
-      Alert.alert('Rest day not available', blocked);
+      Alert.alert(t('dialog.restUnavailable'), blocked);
       return;
     }
-    Alert.alert('Take a rest day?', 'Your plan shifts forward and your streak is protected.', [
+    Alert.alert(t('dialog.takeRestTitle'), t('dialog.takeRestBody'), [
       { text: 'Cancel', style: 'cancel' },
       { text: 'Rest today', onPress: () => void markRestDay(day.date, true) },
     ]);
@@ -85,7 +87,7 @@ export default function DayView() {
     return (
       <Screen>
         <View style={{ flex: 1, paddingTop: insets.top + theme.spacing.xl }}>
-          <Empty title="Nothing scheduled" body="This day is not part of your plan." />
+          <Empty title={t('day.nothingScheduled')} body={t('day.notInPlan')} />
           <Button
             label="Back"
             variant="secondary"
@@ -101,10 +103,10 @@ export default function DayView() {
     return (
       <Screen>
         <View style={{ flex: 1, paddingTop: insets.top + theme.spacing.xl }}>
-          <Empty title="Rest day" body="Your streak is protected. See you tomorrow." />
+          <Empty title={t('day.restDayTitle')} body={t('day.restDayBody')} />
           <View style={{ padding: theme.spacing.screen, gap: theme.spacing.sm }}>
             <Button
-              label="Cancel rest day"
+              label={t('day.cancelRestDay')}
               variant="secondary"
               onPress={() => void markRestDay(day.date, false)}
             />
@@ -189,7 +191,7 @@ export default function DayView() {
           onPress={() => router.back()}
           disabled={!allDone}
         />
-        <Button label="I need a rest day" variant="ghost" onPress={onRest} />
+        <Button label={t('day.needRestDay')} variant="ghost" onPress={onRest} />
       </ScrollView>
     </Screen>
   );
@@ -310,6 +312,7 @@ function TaskRow({
 
 function RecallBlock({ questions }: { questions: { q: string; a: string }[] }) {
   const theme = useTheme();
+  const t = useT();
   const [revealed, setRevealed] = useState(false);
   if (questions.length === 0) return null;
 
@@ -329,7 +332,7 @@ function RecallBlock({ questions }: { questions: { q: string; a: string }[] }) {
       ))}
       {!revealed ? (
         <Button
-          label="Answer from memory, then reveal"
+          label={t('day.answerFromMemory')}
           variant="secondary"
           onPress={() => setRevealed(true)}
         />
@@ -340,6 +343,7 @@ function RecallBlock({ questions }: { questions: { q: string; a: string }[] }) {
 
 function ScoreEntry({ onSubmit }: { onSubmit: (score: number, max: number) => void }) {
   const theme = useTheme();
+  const t = useT();
   const [value, setValue] = useState('');
   const [max, setMax] = useState('');
 
@@ -347,7 +351,7 @@ function ScoreEntry({ onSubmit }: { onSubmit: (score: number, max: number) => vo
     const s = Number(value);
     const m = Number(max);
     if (!Number.isFinite(s) || !Number.isFinite(m) || m <= 0 || s < 0 || s > m) {
-      Alert.alert('Check your score', 'Enter your score and the total it was out of.');
+      Alert.alert(t('dialog.checkScoreTitle'), t('dialog.checkScoreBody'));
       return;
     }
     onSubmit(s, m);
@@ -375,7 +379,7 @@ function ScoreEntry({ onSubmit }: { onSubmit: (score: number, max: number) => vo
           value={value}
           onChangeText={setValue}
           keyboardType="number-pad"
-          placeholder="Score"
+          placeholder={t('day.score')}
           placeholderTextColor={theme.colors.muted}
           style={[theme.typography.body, field]}
         />
@@ -384,7 +388,7 @@ function ScoreEntry({ onSubmit }: { onSubmit: (score: number, max: number) => vo
           value={max}
           onChangeText={setMax}
           keyboardType="number-pad"
-          placeholder="Out of"
+          placeholder={t('day.outOf')}
           placeholderTextColor={theme.colors.muted}
           style={[theme.typography.body, field]}
         />

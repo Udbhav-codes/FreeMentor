@@ -12,9 +12,11 @@ import { useStreak } from '../../state/useStreak.ts';
 import { consistency, HABIT_TARGET_DAYS, nextMilestone } from '../../progress/streak.ts';
 import { badgesFor } from '../../progress/badges.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 
 export default function Progress() {
   const theme = useTheme();
+  const t = useT();
   const insets = useSafeAreaInsets();
   const { goal, plan, progress } = useEnrollment();
   const streak = useStreak();
@@ -32,7 +34,7 @@ export default function Progress() {
   if (!goal || !plan) {
     return (
       <Screen>
-        <Empty title="No progress yet" body="Pick a goal to start tracking." />
+        <Empty title={t('progress.none')} body={t('progress.noneBody')} />
       </Screen>
     );
   }
@@ -68,8 +70,8 @@ export default function Progress() {
         </Card>
 
         <View style={{ flexDirection: 'row', gap: theme.spacing.md }}>
-          <Stat label="Current streak" value={`${streak.current}`} suffix="days" />
-          <Stat label="Best streak" value={`${streak.best}`} suffix="days" />
+          <Stat label={t('profile.currentStreak')} value={`${streak.current}`} suffix="days" />
+          <Stat label={t('profile.bestStreak')} value={`${streak.best}`} suffix="days" />
         </View>
 
         <Card>
@@ -101,7 +103,7 @@ export default function Progress() {
         <Card>
           <Txt variant="heading">Achievements</Txt>
           <Txt variant="caption" color="secondary" style={{ marginTop: 2 }}>
-            Earned for work finished and hours studied — never for videos watched.
+            {t('progress.badgesNote')}
           </Txt>
           <View style={{ marginTop: theme.spacing.md, gap: theme.spacing.md }}>
             {badges.map((badge) => (
@@ -130,10 +132,10 @@ export default function Progress() {
 
         <Card>
           <Txt variant="heading">Finishing</Txt>
-          <Row label="Syllabus finished" value={plan.contentFinish ?? '—'} />
-          <Row label="Ready by" value={plan.projectedFinish ?? '—'} />
+          <Row label={t('progress.syllabusFinished')} value={plan.contentFinish ?? '—'} />
+          <Row label={t('progress.readyBy')} value={plan.projectedFinish ?? '—'} />
           <Row
-            label="Mocks & revision reserved"
+            label={t('progress.reserved')}
             value={`${Math.round(plan.totals.reservedMinutes / 60)} h`}
           />
         </Card>

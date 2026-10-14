@@ -13,9 +13,11 @@ import { Button, Card, Empty, Pill, Screen, Txt } from '../../components/ui.tsx'
 import { ResourceLink } from '../../components/ResourceLink.tsx';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 
 export default function Practice() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { goal, plan } = useEnrollment();
@@ -60,7 +62,7 @@ export default function Practice() {
   if (!goal || !plan) {
     return (
       <Screen>
-        <Empty title="No practice yet" body="Pick a goal to get practice and past papers." />
+        <Empty title={t('practice.none')} body={t('practice.noneBody')} />
       </Screen>
     );
   }
@@ -80,14 +82,14 @@ export default function Practice() {
         <Card>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Txt variant="heading" style={{ flex: 1 }}>
-              Today's practice
+              {t('practice.today')}
             </Txt>
             <Pill tone="accent">Today</Pill>
           </View>
 
           {todaysPractice.length === 0 ? (
             <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-              No practice scheduled today. Anything below is yours to dip into.
+              {t('practice.nothingToday')}
             </Txt>
           ) : (
             <View style={{ marginTop: theme.spacing.md, gap: theme.spacing.sm }}>
@@ -98,7 +100,7 @@ export default function Practice() {
           )}
 
           <Button
-            label="Open today's plan →"
+            label={t('practice.openToday')}
             variant="secondary"
             onPress={() => router.push(`/day/${today}`)}
             style={{ marginTop: theme.spacing.md }}
@@ -118,8 +120,7 @@ export default function Practice() {
         />
 
         <Txt variant="caption" color="secondary">
-          Every link opens the original free source. FreeMentor never copies or re-hosts
-          anyone's content.
+          {t('practice.sourceNote')}
         </Txt>
       </ScrollView>
     </Screen>

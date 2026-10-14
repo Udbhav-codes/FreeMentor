@@ -175,6 +175,104 @@ export const en = {
   'choose.searchPlaceholder': 'Search goals',
   'choose.comingSoon': 'Coming soon',
   'choose.noResults': 'No goals match that.',
+
+  // --- progress ---
+  'progress.none': 'No progress yet',
+  'progress.noneBody': 'Pick a goal to start tracking.',
+  'progress.syllabusFinished': 'Syllabus finished',
+  'progress.readyBy': 'Ready by',
+  'progress.reserved': 'Mocks & revision reserved',
+  'progress.badges': 'Badges',
+  'progress.badgesNote':
+    'Earned for work finished and hours studied — never for videos watched.',
+
+  // --- reports ---
+  'reports.title': 'Reports',
+  'reports.none': 'No reports yet',
+  'reports.noneBody': 'Pick a goal and your weekly report starts here.',
+  'reports.studyTime': 'Study time',
+  'reports.tasksDone': 'Tasks done',
+  'reports.detailed': 'Detailed analytics',
+  'reports.detailedBody':
+    'Per-subject scores, weak-topic analysis and consistency trends. Your weekly summary above stays free on every plan.',
+  'reports.seePlans': 'See plans',
+  'reports.catchUp': 'Anything under 60% triggers a catch-up block before new content.',
+  'reports.noScores': 'Enter your score after a test and it shows up here.',
+
+  // --- practice ---
+  'practice.title': 'Practice',
+  'practice.none': 'No practice yet',
+  'practice.noneBody': 'Pick a goal to get practice and past papers.',
+  'practice.today': 'Today’s practice',
+  'practice.openToday': 'Open today’s plan →',
+  'practice.nothingToday': 'No practice scheduled today. Anything below is yours to dip into.',
+  'practice.sourceNote':
+    'Every link opens the original free source. FreeMentor never copies or re-hosts anyone’s content.',
+
+  // --- choose a goal ---
+  'choose.searchLong': 'Search exams, skills and languages',
+  'choose.nothingMatched': 'Nothing matched that. Try a shorter word.',
+
+  // --- day view ---
+  'day.nothingScheduled': 'Nothing scheduled',
+  'day.notInPlan': 'This day is not part of your plan.',
+  'day.restDayTitle': 'Rest day',
+  'day.restDayBody': 'Your streak is protected. See you tomorrow.',
+  'day.cancelRestDay': 'Cancel rest day',
+  'day.needRestDay': 'I need a rest day',
+  'day.answerFromMemory': 'Answer from memory, then reveal',
+  'day.score': 'Score',
+  'day.outOf': 'Out of',
+
+  // --- profile, the rest ---
+  'profile.born': 'Born',
+  'profile.exportProgress': 'Export my progress',
+  'profile.seePlans': 'See plans',
+  'profile.remindersExpoGo':
+    'Reminders don’t fire in Expo Go — they work in the installed app.',
+  'profile.youtubeFree': 'YouTube lessons stay free to open on every plan.',
+  'profile.policies':
+    'Privacy policy · Terms · Refund policy · Content policy — added before the store listing.',
+
+  // --- dialogs a learner meets in normal use ---
+  'dialog.resetTitle': 'Reset this roadmap?',
+  'dialog.resetBody':
+    'Your ticks, ratings and scores for this goal are cleared and the plan starts from today. This cannot be undone.',
+  'dialog.reset': 'Reset',
+  'dialog.deleteTitle': 'Delete your account?',
+  'dialog.deleteBody':
+    'Everything on this device is erased, and your account on the server is deleted within 30 days.',
+  'dialog.deleteConfirm': 'Delete everything',
+  'dialog.signOutTitle': 'Sign out?',
+  'dialog.signOutBody': 'Your roadmap and progress stay on this phone. Sign back in to sync them.',
+  'dialog.changeGoalTitle': 'Change your goal?',
+  'dialog.changeGoalBody':
+    'Your current roadmap is archived, not deleted \u2014 you can come back to it. A different goal is a separate purchase.',
+  'dialog.changeGoalConfirm': 'Choose a new goal',
+  'dialog.removePhotoTitle': 'Remove your photo?',
+  'dialog.removePhotoBody': 'Your initials will show instead.',
+  'dialog.remove': 'Remove',
+  'dialog.photoPermissionTitle': 'Photo access is off',
+  'dialog.photoPermissionBody':
+    'FreeMentor needs permission to open your gallery. You can turn it on in Android settings \u2014 or skip it, the photo is optional.',
+  'dialog.photoFailedTitle': 'Could not use that photo',
+  'dialog.photoFailedBody': 'Try another image.',
+  'dialog.restUnavailable': 'Rest day not available',
+  'dialog.checkScoreTitle': 'Check your score',
+  'dialog.checkScoreBody': 'Enter your score and the total it was out of.',
+  'dialog.adGateTitle': 'Watch a short ad to open this?',
+  'dialog.linkBrokenTitle': 'That link is reported broken',
+  'dialog.linkBrokenBody': 'We are checking it. Try another resource for now.',
+
+  // --- a few lines missed earlier ---
+  'onboarding.welcome.body':
+    'Let\u2019s build your roadmap with free, trusted resources. You tell us where you are and how much time you have.',
+  'plans.youtubeAlways': 'YouTube lessons stay free to open on every plan, before and after.',
+  'plans.appliedAtCheckout': 'Applied at checkout. Google Play shows the final price before you pay.',
+  'dialog.takeRestTitle': 'Take a rest day?',
+  'dialog.takeRestBody': 'Your plan shifts forward and your streak is protected.',
+  'dialog.linkFailedTitle': 'Could not open this link',
+  'dialog.linkFailedBody': 'Check your connection and try again.',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -326,6 +424,96 @@ export const hi: Record<StringKey, string> = {
   'choose.searchPlaceholder': 'लक्ष्य खोजें',
   'choose.comingSoon': 'जल्द आ रहा है',
   'choose.noResults': 'उससे कोई लक्ष्य नहीं मिला।',
+
+  'progress.none': 'अभी कोई प्रगति नहीं',
+  'progress.noneBody': 'ट्रैकिंग शुरू करने के लिए एक लक्ष्य चुनें।',
+  'progress.syllabusFinished': 'सिलेबस पूरा',
+  'progress.readyBy': 'तैयारी पूरी',
+  'progress.reserved': 'मॉक और दोहराव के लिए रखा',
+  'progress.badges': 'बैज',
+  'progress.badgesNote':
+    'पूरे किए काम और पढ़ाई के घंटों पर मिलते हैं — कभी भी वीडियो देखने पर नहीं।',
+
+  'reports.title': 'रिपोर्ट',
+  'reports.none': 'अभी कोई रिपोर्ट नहीं',
+  'reports.noneBody': 'एक लक्ष्य चुनिए और आपकी साप्ताहिक रिपोर्ट यहीं से शुरू होगी।',
+  'reports.studyTime': 'पढ़ाई का समय',
+  'reports.tasksDone': 'पूरे किए काम',
+  'reports.detailed': 'विस्तृत विश्लेषण',
+  'reports.detailedBody':
+    'विषयवार स्कोर, कमज़ोर विषयों का विश्लेषण और निरंतरता के रुझान। आपकी साप्ताहिक रिपोर्ट हर प्लान पर मुफ़्त रहती है।',
+  'reports.seePlans': 'प्लान देखें',
+  'reports.catchUp': '60% से कम आने पर नई पढ़ाई से पहले एक कैच-अप ब्लॉक जुड़ जाता है।',
+  'reports.noScores': 'टेस्ट के बाद अपना स्कोर डालिए, वह यहाँ दिखने लगेगा।',
+
+  'practice.title': 'अभ्यास',
+  'practice.none': 'अभी कोई अभ्यास नहीं',
+  'practice.noneBody': 'अभ्यास और पुराने पेपर पाने के लिए एक लक्ष्य चुनें।',
+  'practice.today': 'आज का अभ्यास',
+  'practice.openToday': 'आज का प्लान खोलें →',
+  'practice.nothingToday': 'आज कोई अभ्यास तय नहीं है। नीचे जो है वह आप कभी भी कर सकते हैं।',
+  'practice.sourceNote':
+    'हर लिंक मूल मुफ़्त स्रोत खोलता है। FreeMentor किसी की सामग्री कॉपी या री-होस्ट नहीं करता।',
+
+  'choose.searchLong': 'परीक्षा, कौशल और भाषाएँ खोजें',
+  'choose.nothingMatched': 'उससे कुछ नहीं मिला। छोटा शब्द आज़माएँ।',
+
+  'day.nothingScheduled': 'कुछ तय नहीं है',
+  'day.notInPlan': 'यह दिन आपके प्लान का हिस्सा नहीं है।',
+  'day.restDayTitle': 'आराम का दिन',
+  'day.restDayBody': 'आपकी स्ट्रीक सुरक्षित है। कल मिलते हैं।',
+  'day.cancelRestDay': 'आराम का दिन रद्द करें',
+  'day.needRestDay': 'मुझे आराम चाहिए',
+  'day.answerFromMemory': 'याद से उत्तर दें, फिर देखें',
+  'day.score': 'स्कोर',
+  'day.outOf': 'में से',
+
+  'profile.born': 'जन्म',
+  'profile.exportProgress': 'मेरी प्रगति एक्सपोर्ट करें',
+  'profile.seePlans': 'प्लान देखें',
+  'profile.remindersExpoGo':
+    'Expo Go में रिमाइंडर नहीं आते — इंस्टॉल किए ऐप में आते हैं।',
+  'profile.youtubeFree': 'YouTube पाठ हर प्लान पर मुफ़्त खुलते रहते हैं।',
+  'profile.policies':
+    'प्राइवेसी पॉलिसी · शर्तें · रिफ़ंड पॉलिसी · कंटेंट पॉलिसी — स्टोर लिस्टिंग से पहले जोड़ी जाएँगी।',
+  'dialog.resetTitle': 'यह रोडमैप रीसेट करें?',
+  'dialog.resetBody':
+    'इस लक्ष्य के आपके टिक, रेटिंग और स्कोर मिट जाएंगे और प्लान आज से शुरू होगा। यह वापस नहीं हो सकता।',
+  'dialog.reset': 'रीसेट',
+  'dialog.deleteTitle': 'अपना खाता मिटाएं?',
+  'dialog.deleteBody':
+    'इस फ़ोन का सब कुछ मिट जाएगा, और सर्वर पर आपका खाता 30 दिन में मिटा दिया जाएगा।',
+  'dialog.deleteConfirm': 'सब कुछ मिटाएँ',
+  'dialog.signOutTitle': 'साइन आउट करें?',
+  'dialog.signOutBody': 'आपका रोडमैप और प्रगति इस फ़ोन में रहेंगे। सिंक के लिए फिर साइन इन करें।',
+  'dialog.changeGoalTitle': 'अपना लक्ष्य बदलें?',
+  'dialog.changeGoalBody':
+    'आपका मौजूदा रोडमैप आर्काइव होगा, मिटेगा नहीं — आप उस पर लौट सकते हैं। दूसरा लक्ष्य एक अलग ख़रीद है।',
+  'dialog.changeGoalConfirm': 'नया लक्ष्य चुनें',
+  'dialog.removePhotoTitle': 'अपनी फ़ोटो हटाएं?',
+  'dialog.removePhotoBody': 'उसकी जगह आपके आद्याक्षर दिखेंगे।',
+  'dialog.remove': 'हटाएँ',
+  'dialog.photoPermissionTitle': 'फ़ोटो की अनुमति बंद है',
+  'dialog.photoPermissionBody':
+    'FreeMentor को आपकी गैलरी खोलने की अनुमति चाहिए। आप इसे Android सेटिंग्स में चालू कर सकते हैं — या छोड़ दें, फ़ोटो ज़रूरी नहीं है।',
+  'dialog.photoFailedTitle': 'वह फ़ोटो नहीं लग पाई',
+  'dialog.photoFailedBody': 'कोई और तस्वीर आज़माएँ।',
+  'dialog.restUnavailable': 'आराम का दिन उपलब्ध नहीं',
+  'dialog.checkScoreTitle': 'अपना स्कोर जाँचें',
+  'dialog.checkScoreBody': 'अपना स्कोर और कुल अंक दोनों डालें।',
+  'dialog.adGateTitle': 'इसे खोलने के लिए एक छोटा विज्ञापन देखें?',
+  'dialog.linkBrokenTitle': 'यह लिंक टूटा बताया गया है',
+  'dialog.linkBrokenBody': 'हम जाँच रहे हैं। अभी कोई और संसाधन आज़माएँ।',
+
+  'onboarding.welcome.body':
+    'चलिए मुफ़्त, भरोसेमंद संसाधनों से आपका रोडमैप बनाते हैं। आप बस बताइए कि आप कहाँ हैं और कितना समय दे सकते हैं।',
+  'plans.youtubeAlways': 'YouTube पाठ हर प्लान पर, पहले और बाद में, मुफ़्त खुलते हैं।',
+  'plans.appliedAtCheckout': 'चेकआउट पर लगेगा। भुगतान से पहले Google Play आख़िरी कीमत दिखाएगा।',
+
+  'dialog.takeRestTitle': 'आज आराम करें?',
+  'dialog.takeRestBody': 'आपका प्लान आगे खिसक जाएगा और स्ट्रीक सुरक्षित रहेगी।',
+  'dialog.linkFailedTitle': 'यह लिंक नहीं खुल पाया',
+  'dialog.linkFailedBody': 'अपना इंटरनेट जाँचकर फिर कोशिश करें।',
 };
 
 /**
@@ -477,6 +665,97 @@ export const hinglish: Record<StringKey, string> = {
   'choose.searchPlaceholder': 'Goals khojein',
   'choose.comingSoon': 'Jald aa raha hai',
   'choose.noResults': 'Usse koi goal nahin mila.',
+
+  'progress.none': 'Abhi koi progress nahin',
+  'progress.noneBody': 'Tracking shuru karne ke liye ek goal chunein.',
+  'progress.syllabusFinished': 'Syllabus poora',
+  'progress.readyBy': 'Taiyaari poori',
+  'progress.reserved': 'Mocks aur revision ke liye rakha',
+  'progress.badges': 'Badges',
+  'progress.badgesNote':
+    'Poore kiye kaam aur padhai ke ghanton par milte hain — kabhi bhi videos dekhne par nahin.',
+
+  'reports.title': 'Reports',
+  'reports.none': 'Abhi koi report nahin',
+  'reports.noneBody': 'Ek goal chuniye aur aapki weekly report yahin se shuru hogi.',
+  'reports.studyTime': 'Padhai ka samay',
+  'reports.tasksDone': 'Poore kiye tasks',
+  'reports.detailed': 'Detailed analytics',
+  'reports.detailedBody':
+    'Subject-wise scores, weak-topic analysis aur consistency trends. Aapki weekly report har plan par free rehti hai.',
+  'reports.seePlans': 'Plans dekhein',
+  'reports.catchUp': '60% se kam aane par nayi padhai se pehle ek catch-up block jud jaata hai.',
+  'reports.noScores': 'Test ke baad apna score daaliye, wo yahan dikhne lagega.',
+
+  'practice.title': 'Practice',
+  'practice.none': 'Abhi koi practice nahin',
+  'practice.noneBody': 'Practice aur purane papers paane ke liye ek goal chunein.',
+  'practice.today': 'Aaj ki practice',
+  'practice.openToday': 'Aaj ka plan kholein →',
+  'practice.nothingToday':
+    'Aaj koi practice plan mein nahin hai. Neeche jo hai wo aap kabhi bhi kar sakte hain.',
+  'practice.sourceNote':
+    'Har link mool free source kholta hai. FreeMentor kisi ka content copy ya re-host nahin karta.',
+
+  'choose.searchLong': 'Exams, skills aur languages khojein',
+  'choose.nothingMatched': 'Usse kuch nahin mila. Chhota shabd try karein.',
+
+  'day.nothingScheduled': 'Kuch plan nahin hai',
+  'day.notInPlan': 'Yeh din aapke plan ka hissa nahin hai.',
+  'day.restDayTitle': 'Rest day',
+  'day.restDayBody': 'Aapki streak safe hai. Kal milte hain.',
+  'day.cancelRestDay': 'Rest day cancel karein',
+  'day.needRestDay': 'Mujhe aaram chahiye',
+  'day.answerFromMemory': 'Yaad se answer dein, phir dekhein',
+  'day.score': 'Score',
+  'day.outOf': 'Mein se',
+
+  'profile.born': 'Janm',
+  'profile.exportProgress': 'Meri progress export karein',
+  'profile.seePlans': 'Plans dekhein',
+  'profile.remindersExpoGo':
+    'Expo Go mein reminders nahin aate — install kiye app mein aate hain.',
+  'profile.youtubeFree': 'YouTube lessons har plan par free khulte rehte hain.',
+  'profile.policies':
+    'Privacy policy · Terms · Refund policy · Content policy — store listing se pehle jodi jaayengi.',
+  'dialog.resetTitle': 'Yeh roadmap reset karein?',
+  'dialog.resetBody':
+    'Is goal ke aapke ticks, ratings aur scores mit jaayenge aur plan aaj se shuru hoga. Yeh wapas nahin ho sakta.',
+  'dialog.reset': 'Reset',
+  'dialog.deleteTitle': 'Apna account delete karein?',
+  'dialog.deleteBody':
+    'Is phone ka sab kuch mit jaayega, aur server par aapka account 30 din mein delete kar diya jaayega.',
+  'dialog.deleteConfirm': 'Sab kuch mitayein',
+  'dialog.signOutTitle': 'Sign out karein?',
+  'dialog.signOutBody': 'Aapka roadmap aur progress is phone mein rahenge. Sync ke liye phir sign in karein.',
+  'dialog.changeGoalTitle': 'Apna goal badlein?',
+  'dialog.changeGoalBody':
+    'Aapka maujooda roadmap archive hoga, mitega nahin — aap us par laut sakte hain. Doosra goal ek alag purchase hai.',
+  'dialog.changeGoalConfirm': 'Naya goal chunein',
+  'dialog.removePhotoTitle': 'Apni photo hatayein?',
+  'dialog.removePhotoBody': 'Uski jagah aapke initials dikhenge.',
+  'dialog.remove': 'Hatayein',
+  'dialog.photoPermissionTitle': 'Photo ki permission band hai',
+  'dialog.photoPermissionBody':
+    'FreeMentor ko aapki gallery kholne ki permission chahiye. Aap ise Android settings mein chalu kar sakte hain — ya chhod dein, photo zaroori nahin hai.',
+  'dialog.photoFailedTitle': 'Wo photo nahin lag paayi',
+  'dialog.photoFailedBody': 'Koi aur tasveer try karein.',
+  'dialog.restUnavailable': 'Rest day available nahin',
+  'dialog.checkScoreTitle': 'Apna score jaanchein',
+  'dialog.checkScoreBody': 'Apna score aur kul ank dono daalein.',
+  'dialog.adGateTitle': 'Ise kholne ke liye ek chhota ad dekhein?',
+  'dialog.linkBrokenTitle': 'Yeh link toota bataya gaya hai',
+  'dialog.linkBrokenBody': 'Hum jaanch rahe hain. Abhi koi aur resource try karein.',
+
+  'onboarding.welcome.body':
+    'Chaliye free, bharosemand resources se aapka roadmap banate hain. Aap bas bataiye ki aap kahan hain aur kitna samay de sakte hain.',
+  'plans.youtubeAlways': 'YouTube lessons har plan par, pehle aur baad mein, free khulte hain.',
+  'plans.appliedAtCheckout': 'Checkout par lagega. Payment se pehle Google Play aakhri keemat dikhayega.',
+
+  'dialog.takeRestTitle': 'Aaj aaram karein?',
+  'dialog.takeRestBody': 'Aapka plan aage khisak jaayega aur streak safe rahegi.',
+  'dialog.linkFailedTitle': 'Yeh link nahin khul paaya',
+  'dialog.linkFailedBody': 'Apna internet jaanchkar phir koshish karein.',
 };
 
 export const catalogues = { en, hi, 'hi-en': hinglish } as const;

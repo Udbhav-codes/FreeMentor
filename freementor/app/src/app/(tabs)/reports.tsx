@@ -19,9 +19,11 @@ import { weeklyReport } from '../../progress/weekly.ts';
 import { consistency } from '../../progress/streak.ts';
 import { todayIso, useEnrollment } from '../../state/EnrollmentContext.tsx';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 
 export default function Reports() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { plan, progress } = useEnrollment();
@@ -48,7 +50,7 @@ export default function Reports() {
   if (!report) {
     return (
       <Screen>
-        <Empty title="No reports yet" body="Pick a goal and your weekly report starts here." />
+        <Empty title={t('reports.none')} body={t('reports.noneBody')} />
       </Screen>
     );
   }
@@ -72,12 +74,12 @@ export default function Reports() {
 
         <View style={{ flexDirection: 'row', gap: theme.spacing.md }}>
           <Stat
-            label="Study time"
+            label={t('reports.studyTime')}
             value={formatMinutes(report.studiedMinutes)}
             of={formatMinutes(report.plannedMinutes)}
           />
           <Stat
-            label="Tasks done"
+            label={t('reports.tasksDone')}
             value={String(report.tasksDone)}
             of={String(report.tasksPlanned)}
           />
@@ -109,16 +111,15 @@ export default function Reports() {
           <Card>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.sm }}>
               <Txt variant="heading" style={{ flex: 1 }}>
-                Detailed analytics
+                {t('reports.detailed')}
               </Txt>
               <Pill tone="accent">Premium</Pill>
             </View>
             <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-              Per-subject scores, weak-topic analysis and consistency trends. Your weekly
-              summary above stays free on every plan.
+              {t('reports.detailedBody')}
             </Txt>
             <Button
-              label="See plans"
+              label={t('reports.seePlans')}
               variant="secondary"
               onPress={() => router.push('/plans')}
               style={{ marginTop: theme.spacing.lg }}
@@ -131,14 +132,14 @@ export default function Reports() {
               <ScoreBars rows={report.subjectScores} />
             </View>
             <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.md }}>
-              Anything under 60% triggers a catch-up block before new content.
+              {t('reports.catchUp')}
             </Txt>
           </Card>
         ) : (
           <Card>
             <Txt variant="heading">Test scores</Txt>
             <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
-              Enter your score after a test and it shows up here.
+              {t('reports.noScores')}
             </Txt>
           </Card>
         )}
