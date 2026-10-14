@@ -156,6 +156,23 @@ export default function RoadmapHome() {
               ) : null}
             </View>
 
+            {/* The trial has ended and nothing is bought. Said plainly, where
+                the learner lands, with a route to fix it — a lock they cannot
+                act on is the worst version of this. */}
+            {entitlement === 'expired' ? (
+              <Card style={{ borderLeftWidth: 4, borderLeftColor: theme.colors.accent }}>
+                <Txt variant="bodyStrong">{t('trialOver.title')}</Txt>
+                <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
+                  {t('trialOver.body')}
+                </Txt>
+                <Button
+                  label={t('trialOver.cta')}
+                  onPress={() => router.push('/plans')}
+                  style={{ marginTop: theme.spacing.md }}
+                />
+              </Card>
+            ) : null}
+
             {showWelcome && catalogEntry ? (
               <WelcomeCard goal={catalogEntry} onDismiss={dismissWelcome} />
             ) : null}

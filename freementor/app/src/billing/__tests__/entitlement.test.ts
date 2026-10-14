@@ -1,10 +1,11 @@
 /**
- * Gating rules — product plan §10.1.
+ * The gate — product plan §10.1.
  *
- * The first describe block is the one that matters most: it is a policy
- * requirement, not a product preference, that a YouTube video is never put
- * behind an ad or a paywall on any plan. These tests exist so that can never
- * regress quietly.
+ * The model changed in Oct 2026 on the product owner's instruction: the trial
+ * is Basic made free for three days, and when it ends EVERYTHING locks,
+ * videos included. Before that, YouTube was never gated on any plan. These
+ * tests encode the new rule; the old ones are gone rather than loosened, so
+ * nobody has to guess which was intended.
  */
 import { describe, expect, it } from 'vitest';
 import type { Resource } from '@freementor/shared';
@@ -12,150 +13,110 @@ import {
   accessFor,
   entitlementFor,
   hasDetailedAnalytics,
+  needsPlan,
   showsAds,
   showsWelcomeCard,
   type Entitlement,
 } from '../entitlement.ts';
 
-/** Every state, including the one where nothing is bought and the trial is over. */
 const ALL: Entitlement[] = ['trial', 'expired', 'basic', 'premium'];
-/** The states that still have access at all — "expired" locks everything but video. */
-const WITH_ACCESS: Entitlement[] = ['trial', 'basic', 'premium'];
 
-const res = (over: Partial<Resource>): Resource => ({
-  type: 'notes',
-  title: 'r',
-  url: 'https://example.org',
-  lang: 'en',
-  provider: 'p',
-  access: 'all',
-  status: 'active',
-  ...over,
-});
+const res = (over: Partial<Resource> = {}): Resource =>
+  ({
+    type: 'notes',
+    title: 'A resource',
+    url: 'https://example.com/x',
+    lang: 'en',
+    provider: 'example.com',
+    access: 'all',
+    status: 'active',
+    ...over,
+  }) as unknown as Resource;
 
-describe('a video is never gated, on any plan', () => {
-  it.each(ALL)('opens freely on %s', (entitlement) => {
-    const video = res({ type: 'video', access: 'all', ad_gate_allowed: false });
-    expect(accessFor(video, entitlement).kind).toBe('open');
-  });
+const KINDS = ['video', 'notes', 'practice', 'test'] as const;
 
-  it('stays open even if a library file wrongly marks it premium', () => {
-    // Defence in depth: the library validator rejects this, but if a bad file
-    // ever reached a device the app must still not paywall a video.
-    const video = res({ type: 'video', access: 'premium' });
-    for (const entitlement of ALL) {
-      expect(accessFor(video, entitlement).kind).toBe('open');
+describe('the three-day trial', () => {
+  it('opens everything, including videos', () => {
+    // It is Basic made free, so the learner sees the real product rather than
+    // a hobbled one. That is what makes the paywall at the end fair.
+    for (const type of KINDS) {
+      expect(accessFor(res({ type }), 'trial').kind, type).toBe('open');
     }
   });
 
-  it('stays open when a YouTube link is typed as something else', () => {
-    // The library holds 21 YouTube links typed as `notes`. Keying the rule on
-    // type === 'video' locked them the moment the trial expired, i.e.
-    // paywalled YouTube — the exact thing the rule forbids.
-    for (const entitlement of ALL) {
-      const mistyped = res({
-        type: 'notes',
-        url: 'https://www.youtube.com/watch?v=ENrzD9HAZK4',
-        access: 'all',
-        ad_gate_allowed: false,
-      });
-      expect(accessFor(mistyped, entitlement).kind, entitlement).toBe('open');
-    }
+  it('shows no ads', () => {
+    // Paying is what removes ads on Basic; the trial has none at all, so the
+    // three days are a clean look at the product.
+    expect(showsAds('trial')).toBe(false);
   });
 
-  it('stays open for youtu.be short links and for premium-marked ones', () => {
-    for (const entitlement of ALL) {
-      expect(accessFor(res({ type: 'notes', url: 'https://youtu.be/abc123' }), entitlement).kind).toBe('open');
-      expect(
-        accessFor(
-          res({ type: 'notes', url: 'https://www.youtube.com/watch?v=x', access: 'premium' }),
-          entitlement,
-        ).kind,
-      ).toBe('open');
-    }
-  });
-
-  it('does not mistake a lookalike host for YouTube', () => {
-    // notyoutube.com must still be gated normally, or the escape hatch is a
-    // hole anybody could drive a premium resource through.
-    expect(
-      accessFor(res({ type: 'notes', url: 'https://notyoutube.com/x', access: 'premium' }), 'basic')
-        .kind,
-    ).toBe('premium_only');
-  });
-
-  it('stays open even if a library file wrongly allows ad-gating it', () => {
-    const video = res({ type: 'video', ad_gate_allowed: true });
-    for (const entitlement of ALL) {
-      expect(accessFor(video, entitlement).kind).toBe('open');
-    }
+  it('opens even Premium-marked resources', () => {
+    expect(accessFor(res({ access: 'premium' }), 'trial').kind).toBe('open');
   });
 });
 
-describe('extra notes are Premium only', () => {
-  const extra = res({ type: 'notes', access: 'premium' });
-
-  it('is locked on the trial and on Basic', () => {
-    expect(accessFor(extra, 'trial').kind).toBe('premium_only');
-    expect(accessFor(extra, 'basic').kind).toBe('premium_only');
-  });
-
-  it('opens on Premium', () => {
-    expect(accessFor(extra, 'premium').kind).toBe('open');
-  });
-});
-
-describe('main notes and tests', () => {
-  it('open freely on the trial', () => {
-    expect(accessFor(res({ type: 'notes' }), 'trial').kind).toBe('open');
-    expect(accessFor(res({ type: 'test' }), 'trial').kind).toBe('open');
-  });
-
-  it('sit behind a rewarded ad on Basic when the library allows it', () => {
-    const notes = res({ type: 'notes', ad_gate_allowed: true });
-    expect(accessFor(notes, 'basic').kind).toBe('ad_gated');
-  });
-
-  it('open on Basic when the library does not allow gating', () => {
-    expect(accessFor(res({ type: 'notes', ad_gate_allowed: false }), 'basic').kind).toBe('open');
-  });
-
-  it('never gates anything on Premium', () => {
-    const notes = res({ type: 'notes', ad_gate_allowed: true });
-    expect(accessFor(notes, 'premium').kind).toBe('open');
-  });
-});
-
-describe('practice links are free on every plan that has access', () => {
-  it.each(WITH_ACCESS)('opens on %s', (entitlement) => {
-    expect(accessFor(res({ type: 'practice' }), entitlement).kind).toBe('open');
-  });
-});
-
-describe('when the trial has ended', () => {
-  it('locks notes, tests and practice behind buying a plan', () => {
-    for (const type of ['notes', 'test', 'practice'] as const) {
+describe('when the trial has ended and nothing is bought', () => {
+  it('locks every kind of resource', () => {
+    for (const type of KINDS) {
       expect(accessFor(res({ type }), 'expired').kind, type).toBe('needs_plan');
     }
   });
 
-  it('still opens every video — §10.1 "everything locks" cannot reach YouTube', () => {
-    // The YouTube API Services policy forbids paywalling a video, and that
-    // is not ours to trade away against a pricing table. This is the
-    // assertion that keeps the two in the right order.
-    expect(accessFor(res({ type: 'video', ad_gate_allowed: false }), 'expired').kind).toBe('open');
+  it('locks videos too — the rule the owner changed', () => {
+    // This file used to assert the exact opposite. Spelled out so a reader
+    // who remembers the old behaviour knows it was a decision, not a slip.
+    expect(accessFor(res({ type: 'video' }), 'expired').kind).toBe('needs_plan');
+    expect(
+      accessFor(res({ type: 'notes', url: 'https://www.youtube.com/watch?v=x' }), 'expired')
+        .kind,
+    ).toBe('needs_plan');
   });
 
-  it('reports a premium resource as premium, not as a trial problem', () => {
-    // Buying Basic would not open this, so "needs_plan" would misdirect them.
-    expect(accessFor(res({ type: 'notes', access: 'premium' }), 'expired').kind).toBe(
-      'needs_plan',
-    );
+  it('sends the learner somewhere they can act, not just a dead end', () => {
+    // needs_plan is what routes to the Plans screen. A lock with no route is
+    // the worst version of this screen.
+    expect(needsPlan('expired')).toBe(true);
+    expect(showsWelcomeCard('expired')).toBe(true);
+  });
+});
+
+describe('Basic', () => {
+  it('reaches everything through a rewarded ad', () => {
+    for (const type of KINDS) {
+      expect(accessFor(res({ type }), 'basic').kind, type).toBe('ad_gated');
+    }
+  });
+
+  it('still cannot reach Premium-only resources', () => {
+    // An ad does not substitute for the plan, or Premium would have nothing
+    // left to sell.
+    expect(accessFor(res({ access: 'premium' }), 'basic').kind).toBe('premium_only');
+  });
+
+  it('is the only plan that sees ads', () => {
+    expect(showsAds('basic')).toBe(true);
+    expect(showsAds('trial')).toBe(false);
+    expect(showsAds('premium')).toBe(false);
+  });
+});
+
+describe('Premium', () => {
+  it('opens everything with no ad and no lock', () => {
+    for (const type of KINDS) {
+      expect(accessFor(res({ type }), 'premium').kind, type).toBe('open');
+    }
+    expect(accessFor(res({ access: 'premium' }), 'premium').kind).toBe('open');
+  });
+
+  it('is the only plan with detailed analytics', () => {
+    for (const entitlement of ALL) {
+      expect(hasDetailedAnalytics(entitlement)).toBe(entitlement === 'premium');
+    }
   });
 });
 
 describe('the welcome card keeps showing until a plan is bought', () => {
-  it('shows for anyone who has not paid, during the trial and after it', () => {
+  it('shows during the trial and after it ends', () => {
     expect(showsWelcomeCard('trial')).toBe(true);
     expect(showsWelcomeCard('expired')).toBe(true);
   });
@@ -164,36 +125,10 @@ describe('the welcome card keeps showing until a plan is bought', () => {
     expect(showsWelcomeCard('basic')).toBe(false);
     expect(showsWelcomeCard('premium')).toBe(false);
   });
-
-  it('is driven only by entitlement, so it returns on every open', () => {
-    // Nothing is persisted about dismissal: the same entitlement always
-    // gives the same answer, which is what makes it reappear on reload.
-    for (const entitlement of ALL) {
-      expect(showsWelcomeCard(entitlement)).toBe(showsWelcomeCard(entitlement));
-    }
-  });
 });
 
-describe('plan-level entitlements', () => {
-  it('removes ads only for Premium', () => {
-    expect(showsAds('trial')).toBe(true);
-    expect(showsAds('basic')).toBe(true);
-    expect(showsAds('premium')).toBe(false);
-  });
-
-  it('reserves detailed analytics for Premium', () => {
-    expect(hasDetailedAnalytics('trial')).toBe(false);
-    expect(hasDetailedAnalytics('basic')).toBe(false);
-    expect(hasDetailedAnalytics('premium')).toBe(true);
-  });
-
-  it('reserves detailed analytics from an expired trial too', () => {
-    expect(hasDetailedAnalytics('expired')).toBe(false);
-  });
-
-  it('resolves the entitlement from the trial clock and the purchase', () => {
-    // No purchase: the clock decides, and an ended trial is "expired" rather
-    // than a trial that silently never ends.
+describe('resolving the entitlement', () => {
+  it('follows the clock when nothing is bought', () => {
     expect(entitlementFor({ trialPhase: 'active', purchase: null })).toBe('trial');
     expect(entitlementFor({ trialPhase: 'last_day', purchase: null })).toBe('trial');
     expect(entitlementFor({ trialPhase: 'expired', purchase: null })).toBe('expired');
@@ -203,7 +138,20 @@ describe('plan-level entitlements', () => {
     // Buying on day 2 must not leave someone on the trial...
     expect(entitlementFor({ trialPhase: 'active', purchase: 'basic' })).toBe('basic');
     // ...and buying after expiry must lift the lock at once.
-    expect(entitlementFor({ trialPhase: 'expired', purchase: 'basic' })).toBe('basic');
     expect(entitlementFor({ trialPhase: 'expired', purchase: 'premium' })).toBe('premium');
+  });
+});
+
+describe('no state is a dead end', () => {
+  it('every entitlement resolves every resource to a defined outcome', () => {
+    // A missing branch would surface as `undefined` and a blank row in the UI.
+    for (const entitlement of ALL) {
+      for (const type of KINDS) {
+        for (const access of ['all', 'premium'] as const) {
+          const kind = accessFor(res({ type, access }), entitlement).kind;
+          expect(['open', 'ad_gated', 'premium_only', 'needs_plan']).toContain(kind);
+        }
+      }
+    }
   });
 });

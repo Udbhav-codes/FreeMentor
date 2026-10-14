@@ -126,9 +126,9 @@ export const en = {
   'plans.trialLastDay': 'Last day of your free trial',
   'plans.trialEnded': 'Your free trial has ended',
   'plans.whatLocks':
-    'After that, notes, tests and practice links lock until you pick a plan — your roadmap and every YouTube lesson stay open.',
+    'After that everything locks — videos, notes, practice and tests — until you pick a plan. One payment unlocks this roadmap for life.',
   'plans.whatLockedNow':
-    '— your notes, tests and practice links are locked until you pick a plan. Your roadmap, your ticks and every YouTube lesson stay open.',
+    '— everything is locked until you pick a plan. One payment unlocks this roadmap for life. Your progress is safe and waiting.',
   'plans.couponLabel': 'Have a coupon?',
   'plans.couponApply': 'Apply',
   'plans.couponChecking': 'Checking…',
@@ -267,12 +267,16 @@ export const en = {
   // --- a few lines missed earlier ---
   'onboarding.welcome.body':
     'Let\u2019s build your roadmap with free, trusted resources. You tell us where you are and how much time you have.',
-  'plans.youtubeAlways': 'YouTube lessons stay free to open on every plan, before and after.',
+  'plans.youtubeAlways': 'Your roadmap and your progress stay visible. One payment unlocks every resource for life.',
   'plans.appliedAtCheckout': 'Applied at checkout. Google Play shows the final price before you pay.',
   'dialog.takeRestTitle': 'Take a rest day?',
   'dialog.takeRestBody': 'Your plan shifts forward and your streak is protected.',
   'dialog.linkFailedTitle': 'Could not open this link',
   'dialog.linkFailedBody': 'Check your connection and try again.',
+  'trialOver.title': 'Your 3-day free trial is over',
+  'trialOver.body':
+    'One payment unlocks this roadmap — every video, note, practice and test — for life. No subscription.',
+  'trialOver.cta': 'Unlock my roadmap',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -378,9 +382,9 @@ export const hi: Record<StringKey, string> = {
   'plans.trialLastDay': 'मुफ़्त ट्रायल का आख़िरी दिन',
   'plans.trialEnded': 'आपका मुफ़्त ट्रायल ख़त्म हो गया',
   'plans.whatLocks':
-    'उसके बाद नोट्स, टेस्ट और अभ्यास के लिंक तब तक बंद रहेंगे जब तक आप कोई प्लान नहीं लेते — आपका रोडमैप और हर YouTube पाठ खुला रहेगा।',
+    'उसके बाद सब कुछ बंद हो जाएगा — वीडियो, नोट्स, अभ्यास और टेस्ट — जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है।',
   'plans.whatLockedNow':
-    '— आपके नोट्स, टेस्ट और अभ्यास के लिंक तब तक बंद हैं जब तक आप कोई प्लान नहीं लेते। आपका रोडमैप, आपकी प्रगति और हर YouTube पाठ खुला है।',
+    '— सब कुछ बंद है जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है। आपकी प्रगति सुरक्षित है।',
   'plans.couponLabel': 'कोई कूपन है?',
   'plans.couponApply': 'लगाएँ',
   'plans.couponChecking': 'जाँच हो रही है…',
@@ -507,13 +511,17 @@ export const hi: Record<StringKey, string> = {
 
   'onboarding.welcome.body':
     'चलिए मुफ़्त, भरोसेमंद संसाधनों से आपका रोडमैप बनाते हैं। आप बस बताइए कि आप कहाँ हैं और कितना समय दे सकते हैं।',
-  'plans.youtubeAlways': 'YouTube पाठ हर प्लान पर, पहले और बाद में, मुफ़्त खुलते हैं।',
+  'plans.youtubeAlways': 'आपका रोडमैप और प्रगति दिखती रहती है। एक बार का भुगतान हर संसाधन को आजीवन खोल देता है।',
   'plans.appliedAtCheckout': 'चेकआउट पर लगेगा। भुगतान से पहले Google Play आख़िरी कीमत दिखाएगा।',
 
   'dialog.takeRestTitle': 'आज आराम करें?',
   'dialog.takeRestBody': 'आपका प्लान आगे खिसक जाएगा और स्ट्रीक सुरक्षित रहेगी।',
   'dialog.linkFailedTitle': 'यह लिंक नहीं खुल पाया',
   'dialog.linkFailedBody': 'अपना इंटरनेट जाँचकर फिर कोशिश करें।',
+  'trialOver.title': 'आपका 3 दिन का मुफ़्त ट्रायल पूरा हुआ',
+  'trialOver.body':
+    'एक बार का भुगतान इस रोडमैप को — हर वीडियो, नोट, अभ्यास और टेस्ट — आजीवन खोल देता है। कोई सब्सक्रिप्शन नहीं।',
+  'trialOver.cta': 'मेरा रोडमैप खोलें',
 };
 
 /**
@@ -619,9 +627,9 @@ export const hinglish: Record<StringKey, string> = {
   'plans.trialLastDay': 'Free trial ka aakhri din',
   'plans.trialEnded': 'Aapka free trial khatam ho gaya',
   'plans.whatLocks':
-    'Uske baad notes, tests aur practice links tab tak lock rahenge jab tak aap koi plan nahin lete — aapka roadmap aur har YouTube lesson khula rahega.',
+    'Uske baad sab kuch lock ho jaayega — videos, notes, practice aur tests — jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai.',
   'plans.whatLockedNow':
-    '— aapke notes, tests aur practice links tab tak lock hain jab tak aap koi plan nahin lete. Aapka roadmap, aapki progress aur har YouTube lesson khula hai.',
+    '— sab kuch lock hai jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai. Aapki progress safe hai.',
   'plans.couponLabel': 'Koi coupon hai?',
   'plans.couponApply': 'Apply karein',
   'plans.couponChecking': 'Check ho raha hai…',
@@ -749,13 +757,17 @@ export const hinglish: Record<StringKey, string> = {
 
   'onboarding.welcome.body':
     'Chaliye free, bharosemand resources se aapka roadmap banate hain. Aap bas bataiye ki aap kahan hain aur kitna samay de sakte hain.',
-  'plans.youtubeAlways': 'YouTube lessons har plan par, pehle aur baad mein, free khulte hain.',
+  'plans.youtubeAlways': 'Aapka roadmap aur progress dikhti rehti hai. Ek baar ka payment har resource ko lifetime khol deta hai.',
   'plans.appliedAtCheckout': 'Checkout par lagega. Payment se pehle Google Play aakhri keemat dikhayega.',
 
   'dialog.takeRestTitle': 'Aaj aaram karein?',
   'dialog.takeRestBody': 'Aapka plan aage khisak jaayega aur streak safe rahegi.',
   'dialog.linkFailedTitle': 'Yeh link nahin khul paaya',
   'dialog.linkFailedBody': 'Apna internet jaanchkar phir koshish karein.',
+  'trialOver.title': 'Aapka 3 din ka free trial poora hua',
+  'trialOver.body':
+    'Ek baar ka payment is roadmap ko — har video, note, practice aur test — lifetime khol deta hai. Koi subscription nahin.',
+  'trialOver.cta': 'Mera roadmap kholein',
 };
 
 export const catalogues = { en, hi, 'hi-en': hinglish } as const;

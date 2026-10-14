@@ -53,7 +53,16 @@ freementor/
 Do **not** hand-edit goal JSON in the app repo. The library is authored/validated separately and published to Supabase Storage; the app only downloads and caches it.
 
 ## Non-negotiable product rules (enforce in code)
-- **YouTube is never ad-gated or paywalled** (`ad_gate_allowed: false`, `access: "all"` on every video). Premium's value is an ad-free UI + premium *notes*, never blocking a video.
+- **Trial = Basic, free, 3 days, no ads.** Then EVERYTHING locks — videos
+  included — until a one-time payment unlocks that roadmap for life. Basic
+  reaches everything through a user-initiated rewarded ad; Premium has no ads
+  and adds the premium notes and detailed analytics.
+  *(Changed Oct 2026. This file previously stated "YouTube is never ad-gated or
+  paywalled" as a hard rule, enforced in the validator, the gate and ~15 tests.
+  The owner reversed it. Two things to keep in view: the YouTube Data API's
+  terms restrict charging for access to YouTube content — what is sold is the
+  roadmap, and the videos remain free on YouTube itself — and marketing copy
+  must no longer call the resources free "for lifetime" without qualification.)*
 - **3-day free trial of Basic**, then one-time **Basic ₹599 / Premium ₹999** per roadmap, **lifetime** access. Switching goal = a new purchase.
 - **16+ only**; users under 18 need parent consent and get **non-personalised, G-rated** ads.
 - **Missed day → plan shifts forward**; recalculation starts from the next incomplete task; completed ticks are never changed.

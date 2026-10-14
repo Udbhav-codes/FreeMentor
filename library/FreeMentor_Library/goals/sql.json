@@ -6,7 +6,7 @@
     "category": "Programming Languages",
     "group": "Languages",
     "type": "language",
-    "version": "2026.2",
+    "version": "2026.3",
     "valid_for": "Standard SQL with PostgreSQL as the free hands-on database (concepts also apply to MySQL/SQL Server)",
     "last_updated": "2026-10-08",
     "official_url": "https://www.postgresql.org/docs/current/tutorial.html",
@@ -153,7 +153,7 @@
               "est_minutes": 45,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -171,7 +171,7 @@
               "est_minutes": 45,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -227,7 +227,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -283,7 +283,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -301,7 +301,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -357,7 +357,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -413,7 +413,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -431,7 +431,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -498,7 +498,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -554,7 +554,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -572,7 +572,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -663,7 +663,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -719,7 +719,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -737,7 +737,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -792,7 +792,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -848,7 +848,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -866,7 +866,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -921,7 +921,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -933,7 +933,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1075,7 +1075,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1093,7 +1093,7 @@
               "est_minutes": 25,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1160,7 +1160,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1216,7 +1216,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1234,7 +1234,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1277,7 +1277,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1333,7 +1333,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1351,7 +1351,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1394,7 +1394,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1450,7 +1450,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1468,7 +1468,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1511,7 +1511,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1567,7 +1567,7 @@
               "est_minutes": 35,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1585,7 +1585,7 @@
               "est_minutes": 35,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1640,7 +1640,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1782,7 +1782,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1800,7 +1800,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1868,7 +1868,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1924,7 +1924,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1942,7 +1942,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -1997,7 +1997,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2053,7 +2053,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2071,7 +2071,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2138,7 +2138,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2194,7 +2194,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2212,7 +2212,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2255,7 +2255,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2311,7 +2311,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2329,7 +2329,7 @@
               "est_minutes": 20,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2372,7 +2372,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2428,7 +2428,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2446,7 +2446,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2525,7 +2525,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2667,7 +2667,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2685,7 +2685,7 @@
               "est_minutes": 15,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2740,7 +2740,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2797,7 +2797,7 @@
               "est_minutes": 30,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "active",
               "last_checked": "2026-10-08",
               "verified_via": "youtube_oembed"
@@ -2852,7 +2852,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2937,7 +2937,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },

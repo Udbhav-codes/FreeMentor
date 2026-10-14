@@ -6,7 +6,7 @@
     "category": "Entrance Exams",
     "group": "Engineering",
     "type": "exam",
-    "version": "2027.2",
+    "version": "2027.3",
     "valid_for": "JEE Advanced preparation for 2027 using the official 2026 syllabus as the confirmed baseline; recheck when the 2027 syllabus is published.",
     "last_updated": "2026-10-07",
     "official_url": "https://jeeadv.ac.in/",
@@ -232,7 +232,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -249,7 +249,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -318,7 +318,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -395,7 +395,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -412,7 +412,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -481,7 +481,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -558,7 +558,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -575,7 +575,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -656,7 +656,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -733,7 +733,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -750,7 +750,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -831,7 +831,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -908,7 +908,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -925,7 +925,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1006,7 +1006,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1083,7 +1083,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1100,7 +1100,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1181,7 +1181,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1258,7 +1258,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1275,7 +1275,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1344,7 +1344,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1421,7 +1421,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1438,7 +1438,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1507,7 +1507,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1584,7 +1584,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1601,7 +1601,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1682,7 +1682,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1759,7 +1759,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1776,7 +1776,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1897,7 +1897,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1974,7 +1974,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -1991,7 +1991,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2072,7 +2072,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2149,7 +2149,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2166,7 +2166,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2235,7 +2235,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2312,7 +2312,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2329,7 +2329,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2410,7 +2410,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2487,7 +2487,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2504,7 +2504,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2573,7 +2573,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2650,7 +2650,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2667,7 +2667,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2736,7 +2736,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2813,7 +2813,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2830,7 +2830,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -2925,7 +2925,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3002,7 +3002,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3019,7 +3019,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3088,7 +3088,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3165,7 +3165,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3182,7 +3182,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3263,7 +3263,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3340,7 +3340,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3357,7 +3357,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3426,7 +3426,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3503,7 +3503,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3520,7 +3520,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3627,7 +3627,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3704,7 +3704,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3721,7 +3721,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3790,7 +3790,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3867,7 +3867,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3884,7 +3884,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -3965,7 +3965,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4042,7 +4042,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4059,7 +4059,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4128,7 +4128,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4205,7 +4205,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4222,7 +4222,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4291,7 +4291,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4368,7 +4368,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4385,7 +4385,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4466,7 +4466,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4543,7 +4543,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4560,7 +4560,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4641,7 +4641,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4718,7 +4718,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4735,7 +4735,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4804,7 +4804,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4881,7 +4881,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4898,7 +4898,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -4979,7 +4979,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5056,7 +5056,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5073,7 +5073,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5142,7 +5142,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5219,7 +5219,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5236,7 +5236,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5317,7 +5317,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5394,7 +5394,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5411,7 +5411,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5516,7 +5516,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5593,7 +5593,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5610,7 +5610,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5679,7 +5679,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5756,7 +5756,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5773,7 +5773,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5842,7 +5842,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5919,7 +5919,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -5936,7 +5936,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6005,7 +6005,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6082,7 +6082,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6099,7 +6099,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6168,7 +6168,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -6180,7 +6180,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -6192,7 +6192,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6293,7 +6293,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6310,7 +6310,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6379,7 +6379,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6456,7 +6456,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6473,7 +6473,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6580,7 +6580,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -6592,7 +6592,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6681,7 +6681,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6698,7 +6698,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6779,7 +6779,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6856,7 +6856,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6873,7 +6873,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -6954,7 +6954,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7031,7 +7031,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7048,7 +7048,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7129,7 +7129,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7206,7 +7206,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7223,7 +7223,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7304,7 +7304,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7381,7 +7381,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7398,7 +7398,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7479,7 +7479,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7556,7 +7556,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7573,7 +7573,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7642,7 +7642,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7719,7 +7719,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7736,7 +7736,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7805,7 +7805,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7882,7 +7882,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7899,7 +7899,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -7968,7 +7968,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8045,7 +8045,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8062,7 +8062,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8131,7 +8131,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8208,7 +8208,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8225,7 +8225,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8294,7 +8294,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8371,7 +8371,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8388,7 +8388,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8457,7 +8457,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8534,7 +8534,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8551,7 +8551,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8620,7 +8620,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8697,7 +8697,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8714,7 +8714,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8795,7 +8795,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8872,7 +8872,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8889,7 +8889,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -8970,7 +8970,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9047,7 +9047,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9064,7 +9064,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9159,7 +9159,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9236,7 +9236,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9253,7 +9253,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9322,7 +9322,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9399,7 +9399,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9416,7 +9416,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9485,7 +9485,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9562,7 +9562,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9579,7 +9579,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9660,7 +9660,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9737,7 +9737,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9754,7 +9754,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9861,7 +9861,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -9873,7 +9873,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9962,7 +9962,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -9979,7 +9979,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10048,7 +10048,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10125,7 +10125,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10142,7 +10142,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10223,7 +10223,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10300,7 +10300,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10317,7 +10317,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10398,7 +10398,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10475,7 +10475,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10492,7 +10492,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10561,7 +10561,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10638,7 +10638,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10655,7 +10655,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10774,7 +10774,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10851,7 +10851,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10868,7 +10868,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -10937,7 +10937,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11014,7 +11014,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11031,7 +11031,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11112,7 +11112,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11189,7 +11189,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11206,7 +11206,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11275,7 +11275,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11352,7 +11352,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11369,7 +11369,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11450,7 +11450,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11527,7 +11527,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11544,7 +11544,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11613,7 +11613,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11690,7 +11690,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11707,7 +11707,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11776,7 +11776,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11853,7 +11853,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11870,7 +11870,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -11965,7 +11965,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12042,7 +12042,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -12059,7 +12059,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -12154,7 +12154,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12233,7 +12233,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12249,7 +12249,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12289,7 +12289,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12367,7 +12367,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12383,7 +12383,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12423,7 +12423,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12501,7 +12501,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12517,7 +12517,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12557,7 +12557,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12635,7 +12635,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12651,7 +12651,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12691,7 +12691,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12769,7 +12769,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12785,7 +12785,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12825,7 +12825,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12903,7 +12903,7 @@
               "duration_seconds": null,
               "est_minutes": 420,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -12919,7 +12919,7 @@
               "duration_seconds": null,
               "est_minutes": 420,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -12959,7 +12959,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13037,7 +13037,7 @@
               "duration_seconds": null,
               "est_minutes": 420,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13053,7 +13053,7 @@
               "duration_seconds": null,
               "est_minutes": 420,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13093,7 +13093,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13171,7 +13171,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13187,7 +13187,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13227,7 +13227,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13305,7 +13305,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13321,7 +13321,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13361,7 +13361,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13439,7 +13439,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13455,7 +13455,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13495,7 +13495,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13573,7 +13573,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13589,7 +13589,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13641,7 +13641,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13719,7 +13719,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13735,7 +13735,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13775,7 +13775,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13853,7 +13853,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -13869,7 +13869,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13909,7 +13909,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -13987,7 +13987,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14003,7 +14003,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14067,7 +14067,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14145,7 +14145,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14161,7 +14161,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14225,7 +14225,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -14237,7 +14237,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -14249,7 +14249,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14351,7 +14351,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14367,7 +14367,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14419,7 +14419,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14497,7 +14497,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14513,7 +14513,7 @@
               "duration_seconds": null,
               "est_minutes": 330,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14553,7 +14553,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14631,7 +14631,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14647,7 +14647,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14687,7 +14687,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14765,7 +14765,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14781,7 +14781,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14833,7 +14833,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -14845,7 +14845,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14935,7 +14935,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -14951,7 +14951,7 @@
               "duration_seconds": null,
               "est_minutes": 150,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -14991,7 +14991,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -15069,7 +15069,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "video",
@@ -15085,7 +15085,7 @@
               "duration_seconds": null,
               "est_minutes": 240,
               "duration_source": "estimate",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -15125,7 +15125,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -15201,7 +15201,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15218,7 +15218,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15299,7 +15299,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15311,7 +15311,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15323,7 +15323,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15335,7 +15335,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -15448,7 +15448,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15465,7 +15465,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15546,7 +15546,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15558,7 +15558,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15570,7 +15570,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15582,7 +15582,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -15695,7 +15695,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15712,7 +15712,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null,
               "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
@@ -15819,7 +15819,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15831,7 +15831,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15843,7 +15843,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15855,7 +15855,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15867,7 +15867,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -15879,7 +15879,7 @@
               "status": "unverified",
               "last_checked": null,
               "role": "main",
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },

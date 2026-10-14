@@ -353,7 +353,21 @@ Run checker → human review of every video → fill channels/durations → add 
 | | Free trial | Basic | Premium |
 |---|---|---|---|
 | Price | 3 days free | ~~₹1,299~~ **₹599** | ~~₹3,999~~ **₹999** |
-| After trial | Everything locks until a plan is bought | — | — |
+| After trial | **Everything locks**, videos included, until a plan is bought | — | — |
+
+> **Changed Oct 2026 on the product owner's instruction.** The trial is Basic
+> made free for three days with no ads, so a learner sees the real product.
+> When it ends every resource locks — including YouTube videos, which this
+> table previously exempted. Basic then reaches everything through a rewarded
+> ad; Premium has no ads. The roadmap, the day plan and the learner's own
+> ticks stay visible either way: removing the record of work somebody already
+> did is a different thing from locking what they have not paid for.
+>
+> Two consequences to track: the YouTube Data API's terms restrict charging
+> for access to YouTube content (the defence is that what is sold is the
+> roadmap, and every video stays free on YouTube), and §13's marketing copy
+> can no longer describe the resources as free "for lifetime" without
+> qualification.
 
 > **How "everything locks" is implemented (Oct 2026).** Taken literally it
 > would paywall YouTube, which **YouTube API Services policy forbids** — that

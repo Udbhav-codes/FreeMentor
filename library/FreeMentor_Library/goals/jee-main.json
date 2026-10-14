@@ -6,7 +6,7 @@
     "category": "Entrance Exams",
     "group": "Engineering",
     "type": "exam",
-    "version": "2027.2",
+    "version": "2027.3",
     "valid_for": "JEE Main 2027 (built on the 2026 NTA syllabus; re-check when NTA publishes the 2027 syllabus)",
     "last_updated": "2026-10-06",
     "official_url": "https://jeemain.nta.nic.in/",
@@ -210,7 +210,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -226,7 +226,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -290,7 +290,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -364,7 +364,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -380,7 +380,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -444,7 +444,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -518,7 +518,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -534,7 +534,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -609,7 +609,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -620,7 +620,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -694,7 +694,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -710,7 +710,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -798,7 +798,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -872,7 +872,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -888,7 +888,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -963,7 +963,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1037,7 +1037,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1053,7 +1053,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1128,7 +1128,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1202,7 +1202,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1218,7 +1218,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1282,7 +1282,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1356,7 +1356,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1372,7 +1372,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1447,7 +1447,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1521,7 +1521,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1537,7 +1537,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1601,7 +1601,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1675,7 +1675,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1691,7 +1691,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1790,7 +1790,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -1864,7 +1864,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -1880,7 +1880,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -1944,7 +1944,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2018,7 +2018,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2034,7 +2034,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2109,7 +2109,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2183,7 +2183,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2199,7 +2199,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2263,7 +2263,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2337,7 +2337,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2353,7 +2353,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2417,7 +2417,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2491,7 +2491,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2507,7 +2507,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2582,7 +2582,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2656,7 +2656,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2672,7 +2672,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2747,7 +2747,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2821,7 +2821,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -2837,7 +2837,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -2912,7 +2912,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -2923,7 +2923,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -2997,7 +2997,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3013,7 +3013,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3088,7 +3088,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3162,7 +3162,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3178,7 +3178,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3253,7 +3253,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3327,7 +3327,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3343,7 +3343,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3407,7 +3407,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3481,7 +3481,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3497,7 +3497,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3572,7 +3572,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3646,7 +3646,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3662,7 +3662,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3726,7 +3726,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3800,7 +3800,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3816,7 +3816,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -3880,7 +3880,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -3954,7 +3954,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -3970,7 +3970,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4045,7 +4045,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4119,7 +4119,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4135,7 +4135,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4210,7 +4210,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4284,7 +4284,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4300,7 +4300,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4364,7 +4364,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4438,7 +4438,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4454,7 +4454,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4553,7 +4553,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4627,7 +4627,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4643,7 +4643,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4707,7 +4707,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4781,7 +4781,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4797,7 +4797,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -4861,7 +4861,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -4935,7 +4935,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -4951,7 +4951,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5026,7 +5026,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5100,7 +5100,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5116,7 +5116,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5180,7 +5180,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5254,7 +5254,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5270,7 +5270,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5334,7 +5334,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5408,7 +5408,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5424,7 +5424,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5499,7 +5499,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5573,7 +5573,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5589,7 +5589,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5664,7 +5664,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5738,7 +5738,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5754,7 +5754,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5818,7 +5818,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -5892,7 +5892,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -5908,7 +5908,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -5983,7 +5983,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6057,7 +6057,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6073,7 +6073,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6137,7 +6137,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6211,7 +6211,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6227,7 +6227,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6291,7 +6291,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6365,7 +6365,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6381,7 +6381,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6445,7 +6445,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6519,7 +6519,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6535,7 +6535,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6599,7 +6599,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6673,7 +6673,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6689,7 +6689,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6753,7 +6753,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6827,7 +6827,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6843,7 +6843,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -6907,7 +6907,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -6981,7 +6981,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -6997,7 +6997,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7061,7 +7061,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7135,7 +7135,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7151,7 +7151,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7226,7 +7226,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7300,7 +7300,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7316,7 +7316,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7413,7 +7413,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7487,7 +7487,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7503,7 +7503,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7578,7 +7578,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7652,7 +7652,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7668,7 +7668,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7743,7 +7743,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7817,7 +7817,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7833,7 +7833,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -7908,7 +7908,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -7982,7 +7982,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -7998,7 +7998,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8062,7 +8062,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8136,7 +8136,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -8152,7 +8152,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8227,7 +8227,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8301,7 +8301,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -8317,7 +8317,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8381,7 +8381,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -8392,7 +8392,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8466,7 +8466,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -8482,7 +8482,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8594,7 +8594,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -8605,7 +8605,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8679,7 +8679,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -8695,7 +8695,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8770,7 +8770,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -8781,7 +8781,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -8855,7 +8855,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -8871,7 +8871,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -8935,7 +8935,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9009,7 +9009,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9025,7 +9025,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9100,7 +9100,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9174,7 +9174,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9190,7 +9190,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9254,7 +9254,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9328,7 +9328,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9344,7 +9344,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9408,7 +9408,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9482,7 +9482,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9498,7 +9498,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9562,7 +9562,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9636,7 +9636,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9652,7 +9652,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9716,7 +9716,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9790,7 +9790,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9806,7 +9806,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -9870,7 +9870,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -9944,7 +9944,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -9960,7 +9960,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10024,7 +10024,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -10035,7 +10035,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -10046,7 +10046,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10120,7 +10120,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10136,7 +10136,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10200,7 +10200,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10274,7 +10274,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10290,7 +10290,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10389,7 +10389,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -10400,7 +10400,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10474,7 +10474,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10490,7 +10490,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10578,7 +10578,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10652,7 +10652,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10668,7 +10668,7 @@
               "est_minutes": 150,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10732,7 +10732,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10806,7 +10806,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10822,7 +10822,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -10886,7 +10886,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -10960,7 +10960,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -10976,7 +10976,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11051,7 +11051,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11125,7 +11125,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -11141,7 +11141,7 @@
               "est_minutes": 330,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11240,7 +11240,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             },
             {
               "type": "practice",
@@ -11251,7 +11251,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11325,7 +11325,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -11341,7 +11341,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11405,7 +11405,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11479,7 +11479,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -11495,7 +11495,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11559,7 +11559,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11633,7 +11633,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -11649,7 +11649,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11737,7 +11737,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },
@@ -11811,7 +11811,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             },
@@ -11827,7 +11827,7 @@
               "est_minutes": 240,
               "duration_source": "estimate",
               "access": "all",
-              "ad_gate_allowed": false,
+              "ad_gate_allowed": true,
               "status": "unverified",
               "last_checked": null
             }
@@ -11915,7 +11915,7 @@
               "access": "all",
               "status": "unverified",
               "last_checked": null,
-              "ad_gate_allowed": false
+              "ad_gate_allowed": true
             }
           ]
         },

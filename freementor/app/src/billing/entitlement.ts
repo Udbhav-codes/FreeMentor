@@ -1,63 +1,66 @@
 /**
  * What the learner is currently entitled to — product plan §10.1.
  *
- * One place decides this, so the gating rules live in one place too. Until
- * Play Billing lands at M5 there is no purchase to read, so everyone is on
- * the trial; `currentEntitlement` is the single function M5 replaces.
+ * One place decides this, so the gating rules live in one place too.
  *
- * The rules, from §10.1:
+ * ## The model (changed Oct 2026 on the product owner's instruction)
  *
- *                            trial   expired   basic              premium
- *   roadmap, day plan, recall  yes     yes       yes                yes
- *   YouTube videos             yes     yes       yes                yes   (never gated)
- *   main notes                 yes     LOCKED    after rewarded ad  yes
- *   extra notes                NO      LOCKED    NO                 yes
- *   practice links             yes     LOCKED    yes                yes
- *   test & mock links          yes     LOCKED    after rewarded ad  yes
- *   detailed analytics         NO      NO        NO                 yes
- *   ads                        yes     yes       yes                none
+ *                              trial     expired   basic              premium
+ *   roadmap, day plan, ticks    yes       yes       yes                yes
+ *   YouTube videos              yes       LOCKED    after rewarded ad  yes
+ *   main notes                  yes       LOCKED    after rewarded ad  yes
+ *   extra notes                 yes       LOCKED    after rewarded ad  yes
+ *   practice links              yes       LOCKED    after rewarded ad  yes
+ *   test & mock links           yes       LOCKED    after rewarded ad  yes
+ *   detailed analytics          NO        NO        NO                 yes
+ *   ads                         none      —         yes                none
  *
- * "expired" is the state §10.1 describes as "everything locks until a plan is
- * bought". Note the roadmap, the day plan and the learner's own ticks are NOT
- * locked here: taking away the record of work somebody already did is a
- * different thing from locking the resources, and §10.1's table does not
- * actually say which it meant. That reading is recorded in the plan.
+ * **The trial is Basic, free, for three days** — everything open and no ads,
+ * so a learner sees the real product before paying. When it ends, every
+ * resource locks until they buy; one payment then unlocks that roadmap for
+ * life.
+ *
+ * The roadmap, the day plan and the learner's own ticks stay visible when the
+ * trial expires. Only the *resources* lock. Taking away the record of work
+ * somebody already did is a different thing from locking what they have not
+ * paid for, and it is the kind of thing that draws refund requests.
+ *
+ * ## What changed, and what it cost
+ *
+ * This file used to open every YouTube link on every plan, unconditionally,
+ * and said so in the first branch. That was a deliberate rule in CLAUDE.md
+ * and §10.1, and the owner has since decided the opposite: paying unlocks
+ * everything, including videos.
+ *
+ * Two things to keep in view, recorded here because the code is where they
+ * will be rediscovered:
+ *
+ *  1. The YouTube Data API's terms restrict charging for access to YouTube
+ *     content. Linking is ordinarily fine; putting the links behind a paywall
+ *     is greyer. What is sold is the roadmap — the sequence, the schedule,
+ *     the tracking — and every video remains free on YouTube itself. That is
+ *     the defensible reading, and it is the one the Terms of Service state.
+ *  2. Marketing copy may no longer describe the resources as free "for
+ *     lifetime" without qualification. src/marketing/ is checked against the
+ *     CCPA advertising rules by its own tests.
  */
 import type { Resource } from '@freementor/shared';
 import type { TrialPhase } from './trial.ts';
 
-/**
- * Any youtube.com / youtu.be link, whatever `type` claims it is.
- *
- * Checking `type === 'video'` is not enough. The library holds 21 YouTube
- * links typed as `notes`, and keying on type let them be treated as ordinary
- * notes — which paywalled them the moment the trial expired. The policy
- * attaches to the link, so the check has to as well.
- */
-function isYouTube(url: string): boolean {
-  try {
-    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
-    return host === 'youtube.com' || host === 'youtu.be' || host.endsWith('.youtube.com');
-  } catch {
-    return false;
-  }
-}
-
 export type Entitlement =
-  /** Inside the 3-day free trial: full Basic, ad-free because ads do not exist yet. */
+  /** Inside the 3-day free trial: everything open, no ads. */
   | 'trial'
-  /** Trial over, nothing bought. Everything but YouTube locks (§10.1). */
+  /** Trial over, nothing bought. Every resource locks. */
   | 'expired'
+  /** Paid Basic: everything, after a user-initiated rewarded ad. */
   | 'basic'
+  /** Paid Premium: everything, no ads. */
   | 'premium';
 
 /**
  * The entitlement for an enrollment, from its trial clock and its purchase.
  *
- * Pure, so the whole state machine is testable. M5 supplies `purchase` from a
- * server-verified Play purchase; until then it is always null and a learner
- * moves trial -> expired, which is the honest state rather than a permanent
- * trial that never ends.
+ * Pure, so the whole state machine is testable.
  */
 export function entitlementFor(input: {
   trialPhase: TrialPhase;
@@ -83,40 +86,30 @@ export type Access =
 /**
  * The ONLY place that decides whether a resource is gated.
  *
- * A video is always `open`, whatever the library file says and whatever plan
- * the learner is on. That is a YouTube API Services policy requirement, not a
- * product preference, so it is the first branch and it has no escape hatch.
+ * Order matters and is deliberate:
  *
- * "A video" means anything pointing at YouTube, not just `type: "video"`.
- * Keying on the type alone let 21 YouTube links typed as `notes` be locked
- * once the trial expired.
+ *  1. `expired` first — the trial is over and nothing is bought, so nothing
+ *     opens. This is the state that sends a learner to the plans screen.
+ *  2. `premium` opens everything, with no ads. That is what it is for.
+ *  3. `trial` opens everything too, with no ads. It is Basic made free for
+ *     three days so the learner sees the real product, not a hobbled one.
+ *  4. `basic` reaches everything through a rewarded ad.
  */
 export function accessFor(resource: Resource, entitlement: Entitlement): Access {
-  if (resource.type === 'video' || isYouTube(resource.url)) return { kind: 'open' };
-
-  // §10.1 says "everything locks" after the trial, which taken literally
-  // would paywall YouTube — and that is forbidden by YouTube API Services
-  // policy, not merely discouraged by us. The policy wins, so "everything"
-  // means everything the rule permits us to lock. The video branch above
-  // runs first precisely so this cannot be got wrong by reordering.
   if (entitlement === 'expired') return { kind: 'needs_plan' };
+  if (entitlement === 'premium') return { kind: 'open' };
+  if (entitlement === 'trial') return { kind: 'open' };
 
-  if (resource.access === 'premium') {
-    return entitlement === 'premium' ? { kind: 'open' } : { kind: 'premium_only' };
-  }
-
-  // Premium removes ads entirely; the trial runs as full Basic but ad-free
-  // gating only starts once ads exist (M6), so the trial opens freely.
-  if (entitlement === 'basic' && resource.ad_gate_allowed === true) {
-    return { kind: 'ad_gated' };
-  }
-
-  return { kind: 'open' };
+  // Basic. Everything is reachable, and an ad is the price of reaching it.
+  // Resources the library marks `access: "premium"` are the one exception —
+  // they are what Premium is for, so an ad does not substitute for the plan.
+  if (resource.access === 'premium') return { kind: 'premium_only' };
+  return { kind: 'ad_gated' };
 }
 
-/** Premium removes every ad (§10.1). Everyone else sees them. */
+/** Premium removes every ad (§10.1). The trial has none either. */
 export function showsAds(entitlement: Entitlement): boolean {
-  return entitlement !== 'premium';
+  return entitlement === 'basic';
 }
 
 /** Whether a plan still needs buying — drives the paywall and the lock UI. */
@@ -135,15 +128,10 @@ export function hasDetailedAnalytics(entitlement: Entitlement): boolean {
  * It shows on EVERY open and every reload for as long as the learner has not
  * bought a plan, and stops the moment they do. It is the only place the app
  * explains what it costs and why, so hiding it permanently after one tap left
- * a learner with no way back to that explanation — which is also the opposite
- * of helpful if they were still deciding.
+ * a learner with no way back to that explanation.
  *
  * The ✕ hides it for the current session only. Nothing about the dismissal is
  * persisted, deliberately.
- *
- * Note this is NOT nagging in the dark-patterns sense: it appears once per
- * open, in place, never as an interstitial or a popup, and it never blocks
- * the day's tasks.
  */
 export function showsWelcomeCard(entitlement: Entitlement): boolean {
   return needsPlan(entitlement);

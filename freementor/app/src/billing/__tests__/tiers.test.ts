@@ -1,20 +1,13 @@
 /**
  * The §10.1 tier table, checked against the real library.
  *
- * Two regressions this pins:
+ * The rules are unit-tested next door; this runs them over every resource of
+ * all 12 full goals, so a library file that drifts from the model shows up
+ * here rather than on somebody's phone.
  *
- *  1. `accessFor()`'s `ad_gated` branch was unreachable. Nothing in the
- *     library set ad_gate_allowed=true, so Basic's "main notes and tests
- *     after a rewarded ad" tier could never fire — a code path with no data
- *     able to trigger it.
- *
- *  2. 21 YouTube links were typed as `notes` with access="premium", i.e.
- *     paywalled YouTube videos. The validator missed them because its
- *     YouTube rule keyed on type==='video', so typing a YouTube URL as notes
- *     bypassed the one rule meant to prevent exactly that.
- *
- * The validator enforces both on the library files; this enforces them where
- * the decision is actually made, on every resource of every full goal.
+ * The model changed in Oct 2026: the trial is Basic made free for three days,
+ * and when it ends everything locks — videos included. This file previously
+ * asserted the opposite for YouTube.
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -37,7 +30,8 @@ function resourcesOf(goalId: string): Resource[] {
     if (Array.isArray(node)) return node.forEach(walk);
     if (node && typeof node === 'object') {
       const o = node as Record<string, unknown>;
-      if (typeof o.url === 'string' && typeof o.type === 'string') out.push(o as unknown as Resource);
+      if (typeof o.url === 'string' && typeof o.type === 'string')
+        out.push(o as unknown as Resource);
       Object.values(o).forEach(walk);
     }
   };
@@ -45,99 +39,74 @@ function resourcesOf(goalId: string): Resource[] {
   return out;
 }
 
-const isYouTube = (url: string): boolean => {
-  try {
-    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
-    return host === 'youtube.com' || host === 'youtu.be' || host.endsWith('.youtube.com');
-  } catch {
-    return false;
-  }
-};
-
-/** Every state. "expired" matters most for the YouTube rule below. */
 const ALL: Entitlement[] = ['trial', 'expired', 'basic', 'premium'];
-/** States that still have access — "expired" locks everything but video. */
-const WITH_ACCESS: Entitlement[] = ['trial', 'basic', 'premium'];
 const every = FULL.flatMap((id) => resourcesOf(id).map((r) => ({ id, r })));
 
-describe('the library actually has resources to gate', () => {
-  it('found resources at all', () => {
+const offendersFor = (
+  entitlement: Entitlement,
+  want: string,
+  filter: (r: Resource) => boolean = () => true,
+) =>
+  every
+    .filter(({ r }) => filter(r))
+    .filter(({ r }) => accessFor(r, entitlement).kind !== want)
+    .map(({ id, r }) => `${id}: ${r.type} ${r.url}`);
+
+describe('the library has resources to gate at all', () => {
+  it('found them', () => {
     // Guards everything below: an empty list would pass vacuously.
     expect(every.length).toBeGreaterThan(3000);
     expect(FULL.length).toBeGreaterThanOrEqual(12);
   });
+});
 
-  it('Basic really does meet an ad gate — the branch is reachable', () => {
-    const gated = every.filter(({ r }) => accessFor(r, 'basic').kind === 'ad_gated');
-    expect(gated.length).toBeGreaterThan(1000);
+describe('the trial opens the whole library', () => {
+  it('every resource, including videos and Premium notes', () => {
+    const offenders = offendersFor('trial', 'open');
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+});
+
+describe('an expired trial locks the whole library', () => {
+  it('every resource, videos included', () => {
+    // The change the owner asked for, asserted across all 12 goals rather
+    // than on a synthetic resource.
+    const offenders = offendersFor('expired', 'needs_plan');
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+});
+
+describe('Basic reaches everything through an ad', () => {
+  it('ad-gates every non-Premium resource', () => {
+    const offenders = offendersFor('basic', 'ad_gated', (r) => r.access !== 'premium');
+    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
   });
 
-  it('Premium really does meet a lock — that branch is reachable too', () => {
-    const locked = every.filter(({ r }) => accessFor(r, 'trial').kind === 'premium_only');
+  it('still meets the Premium lock on Premium resources', () => {
+    const locked = every.filter(
+      ({ r }) => r.access === 'premium' && accessFor(r, 'basic').kind === 'premium_only',
+    );
+    // The library has 429 of them; if that branch ever stops being reachable
+    // Premium has nothing left to sell.
     expect(locked.length).toBeGreaterThan(100);
   });
 });
 
-describe('YouTube is never gated, on any plan', () => {
-  it.each(ALL)('%s opens every YouTube link freely', (entitlement) => {
-    const offenders = every
-      .filter(({ r }) => isYouTube(r.url))
-      .filter(({ r }) => accessFor(r, entitlement).kind !== 'open')
-      .map(({ id, r }) => `${id}: ${r.type} ${r.url}`);
-
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
-  });
-
-  it('no YouTube link is marked premium or ad-gated in the data', () => {
-    // accessFor() would open them regardless, but wrong data is still wrong:
-    // it is what the paywall bug looked like before it was fixed.
-    const offenders = every
-      .filter(({ r }) => isYouTube(r.url))
-      .filter(({ r }) => r.access !== 'all' || r.ad_gate_allowed !== false)
-      .map(({ id, r }) => `${id}: ${r.type} access=${r.access} gate=${r.ad_gate_allowed}`);
-
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
-  });
-});
-
-describe('practice stays free on every plan that has access (§10.1)', () => {
-  it.each(WITH_ACCESS)('%s opens all practice links', (entitlement) => {
-    const offenders = every
-      .filter(({ r }) => r.type === 'practice')
-      .filter(({ r }) => accessFor(r, entitlement).kind !== 'open')
-      .map(({ id, r }) => `${id}: ${r.url}`);
-
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
-  });
-});
-
-describe('an expired trial still cannot touch YouTube', () => {
-  it('opens every YouTube link in the whole library', () => {
-    // §10.1 says everything locks after the trial; the YouTube API Services
-    // policy says a video is never paywalled. Checked across all 12 goals
-    // because this is the conflict most likely to be "simplified" later.
-    const offenders = every
-      .filter(({ r }) => isYouTube(r.url))
-      .filter(({ r }) => accessFor(r, 'expired').kind !== 'open')
-      .map(({ id, r }) => `${id}: ${r.type} ${r.url}`);
-
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
-  });
-
-  it('does lock the rest, or the trial would mean nothing', () => {
-    const locked = every
-      .filter(({ r }) => !isYouTube(r.url) && r.type !== 'video')
-      .every(({ r }) => accessFor(r, 'expired').kind === 'needs_plan');
-    expect(locked).toBe(true);
-  });
-});
-
 describe('Premium opens everything', () => {
-  it('never sees a lock or an ad gate', () => {
-    const offenders = every
-      .filter(({ r }) => accessFor(r, 'premium').kind !== 'open')
-      .map(({ id, r }) => `${id}: ${r.type} ${r.url}`);
-
+  it('never meets a lock or an ad gate', () => {
+    const offenders = offendersFor('premium', 'open');
     expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+  });
+});
+
+describe('no resource falls through', () => {
+  it('every plan resolves every resource to a known outcome', () => {
+    const known = ['open', 'ad_gated', 'premium_only', 'needs_plan'];
+    for (const entitlement of ALL) {
+      const bad = every.filter(
+        ({ r }) => !known.includes(accessFor(r, entitlement).kind),
+      );
+      expect(bad.length, `${entitlement} has unresolved resources`).toBe(0);
+    }
   });
 });
