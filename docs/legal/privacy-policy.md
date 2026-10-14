@@ -147,15 +147,11 @@ safety.
 
 ## 7. Advertising
 
-**YouTube videos in FreeMentor are never put behind an advert or a paywall**,
-on any plan. That is a rule we hold ourselves to and a condition of using
-YouTube's services.
-
 Where ads appear:
 
-- **Free trial and Basic:** you may be offered a short rewarded ad to open
-  certain notes or test links. It is always your choice and never interrupts a
-  video, a test or your daily checklist.
+- **Free trial:** none at all. The three days are a clean look at the product.
+- **Basic:** a short rewarded advertisement, which you choose to start, opens
+  a resource. It never interrupts a video, a test or your daily checklist.
 - **Premium:** no ads at all.
 - **Under 18:** non-personalised ads only, maximum content rating **G**,
   tagged for users under the age of consent.

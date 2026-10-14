@@ -141,7 +141,7 @@ class TestPolicyPages:
         "path,marker",
         [
             ("/privacy-policy", "Privacy Policy"),
-            ("/terms", "Terms of Service"),
+            ("/terms", "Terms and Conditions"),
             ("/refund-policy", "Refund Policy"),
             ("/content-policy", "Content & Copyright Policy"),
         ],

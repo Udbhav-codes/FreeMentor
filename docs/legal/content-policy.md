@@ -58,20 +58,19 @@ YouTube videos are opened in the **YouTube app or website**, where the creator
 gets their view, their watch time and their ad revenue exactly as if you had
 found the video yourself.
 
-We hold ourselves to three rules, which are also conditions of using YouTube's
-services:
+We hold ourselves to these rules:
 
-1. **A YouTube video is never put behind a paywall.** Not on the free trial,
-   not after it ends, not on any plan. If you stop paying, every video stays
-   open.
-2. **A YouTube video is never put behind an advert.** We never ask you to
-   watch our ad to reach someone else's video.
-3. **We never download, re-upload, embed-to-replace, or strip ads from**
-   anyone's video.
+1. **We never download, re-upload, mirror, embed-to-replace, or strip ads
+   from** anyone's video. Every view happens on YouTube.
+2. **We never charge for the video itself.** Every video we link to is free on
+   YouTube and stays free there, for anyone, with or without FreeMentor. What
+   a FreeMentor plan pays for is the roadmap — which video to watch, in what
+   order, on which day, and what to do after it.
+3. **We never claim or imply ownership** of anyone's content.
 
-These are enforced in our code, not just stated here: the one function that
-decides whether anything is locked opens YouTube links first, for every plan,
-with no exception path.
+A paid plan unlocks the roadmap, and the roadmap contains links. If you would
+rather not pay, every one of those videos remains free to find and watch on
+YouTube directly — nothing we do removes or restricts that.
 
 ---
 

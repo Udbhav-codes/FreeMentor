@@ -5,7 +5,17 @@ against **what the app actually does** rather than from a template. Every
 claim here was checked against the code, the database schema and the product
 plan; where the app's behaviour changes, these have to change with it.
 
-> **These are drafts for a qualified Indian lawyer to review.** I am not one,
+> **Written to be usable, not as legal advice.** The Terms and Conditions are
+> drafted against Indian statute — the IT Act 2000 and the Intermediary
+> Guidelines 2021, the Consumer Protection Act 2019 and the E-Commerce Rules
+> 2020, the DPDP Act 2023, the Contract Act 1872 for the 16–17 capacity point,
+> and the Arbitration and Conciliation Act 1996 — and each clause is written
+> to match what the app actually does. I am not a lawyer. If you can have one
+> read these before launch, do; if not, they are a far better starting point
+> than a template, and the risk sits with the claims in clause 3.4 and the
+> pricing in clause 6, which are the ones a complaint would target.
+>
+> **Originally noted:** I am not one,
 > and nothing here is legal advice. They are meant to save your lawyer the
 > hours it takes to learn what the product does — not to replace them. The
 > DPDP Act's penalties reach ₹250 crore, and a review is cheap against that.
@@ -85,9 +95,16 @@ publishing a weaker policy you keep to.
 
 ## Also still outstanding
 
-- No ads are live yet, so the AdMob sections describe intended behaviour. If
-  you launch before M6, cut those paragraphs rather than describe something
-  that is not happening.
+- No ads are live yet, so the advertising sections describe intended
+  behaviour. If you launch before M6, cut those paragraphs rather than
+  describe something that is not happening — and note that Basic currently
+  opens resources after a confirmation dialog, not an advertisement, so the
+  Terms would overstate what happens.
+- The documents now describe the **Oct 2026 locking model**: the trial is
+  Basic free for 3 days with no ads, and afterwards everything locks including
+  videos. If that changes again, clause 5 and 6.4 of the Terms, the Privacy
+  Policy's advertising section and the Content Policy's YouTube section all
+  have to change together.
 - Firebase Analytics and Crashlytics are named in the privacy policy because
   the product plan commits to them. If they are not in the first build, remove
   them — naming a processor you do not use is its own problem.

@@ -31,7 +31,7 @@ DIST = ROOT / "dist"
 
 PAGES = [
     ("privacy-policy.md", "privacy-policy.html", "Privacy Policy"),
-    ("terms-of-service.md", "terms.html", "Terms of Service"),
+    ("terms-of-service.md", "terms.html", "Terms and Conditions"),
     ("refund-policy.md", "refund-policy.html", "Refund Policy"),
     ("content-policy.md", "content-policy.html", "Content & Copyright Policy"),
 ]

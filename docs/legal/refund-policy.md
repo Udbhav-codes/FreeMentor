@@ -52,7 +52,7 @@ We will support a refund request where:
 | **You were charged twice** for the same roadmap | Refund the duplicate |
 | **You bought the wrong goal** and have not meaningfully started it | Full refund within 7 days |
 | **A paid feature is substantially missing** or broken | Full refund |
-| **We discontinue the service** | Fair proportion, per Terms §9 |
+| **We discontinue the service** | Fair proportion, per Terms clause 11.3 |
 | **You were charged after asking us to delete your account** | Full refund |
 
 We read these generously. If something has clearly gone wrong, we would rather
