@@ -49,3 +49,6 @@ expo-tunnel-qr.png
 
 # Admin panel build output
 freementor/admin/dist/
+
+# Built static site — regenerate with: python web/build.py
+web/dist/

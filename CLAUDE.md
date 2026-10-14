@@ -181,6 +181,26 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   different typeface from the rest of the UI. It is legible, not consistent.
   Hinglish avoids the problem entirely, which is part of why it exists.
 
+### Public web pages (no server needed)
+`web/` builds a **static site** from `docs/legal/*.md` — the four policies plus
+the account-deletion page Google Play requires. `python web/build.py` -> `web/dist/`,
+deployable free on Cloudflare Pages, Netlify or GitHub Pages. The app links to
+`/privacy`, which the build produces as an alias.
+
+Deletion needs no backend: the page signs in with Supabase and sets `deleted_at`
+on the learner's **own** row, which RLS (`users_self`) confines to them. The
+erasure is `purge_deleted_accounts()`, a **pg_cron job** scheduled daily at 03:15
+UTC by `migrations/0004_account_purge.sql`.
+
+That migration fixed a real bug: `purchases.user_id` is `on delete cascade`, so
+deleting a user would have destroyed the tax records the privacy policy promises
+to keep for 8 years. The purge **anonymises** the row instead, and detaches
+`purchases.enrollment_id` first because that FK has no cascade and otherwise
+blocks the enrollment delete. Verified against real Postgres: person erased,
+purchase kept with its order id and amount, idempotent.
+
+The API still serves the same pages (`routers/web.py`) for local development.
+
 ### Roadmap tab and week locking
 The Roadmap tab is a **FlatList**, not a ScrollView: the dashboard is its
 header and the route's weeks are its data. The route is inline there now (no

@@ -1,0 +1,7 @@
+# Cloudflare Pages / Netlify read this. Modest hardening for pages that carry
+# a sign-in: no framing, no MIME sniffing, no referrer leakage.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
