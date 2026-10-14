@@ -21,6 +21,8 @@ import { deletePhotoFile, pickProfilePhoto } from '../profile/photo.ts';
 import { deleteRemoteAvatar, restoreAvatar, uploadAvatar } from '../api/avatar.ts';
 import type { Profile } from '../db/profile.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useLanguage } from '../i18n/LanguageProvider.tsx';
+import { isLanguage } from '../i18n/translate.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 
 const LANGUAGES = [
@@ -42,6 +44,7 @@ export function EditProfile({
   onChange: (patch: Partial<Profile>) => Promise<void>;
 }) {
   const theme = useTheme();
+  const { setLanguage: applyLanguage } = useLanguage();
 
   // --- the photo, confirmed separately with Done ------------------------
   const [pendingPhoto, setPendingPhoto] = useState<string | null>(null);
@@ -170,9 +173,13 @@ export function EditProfile({
       qualification,
       language,
     });
+    // The provider holds the language the whole app renders in. Writing the
+    // profile row alone would leave every other screen in the old language
+    // until a restart.
+    if (isLanguage(language)) await applyLanguage(language);
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
-  }, [name, qualification, language, onChange]);
+  }, [name, qualification, language, onChange, applyLanguage]);
 
   const qualifications = goal?.qualification_options ?? [];
   const shownPhoto = pendingPhoto ?? profile?.photoUri;
@@ -299,8 +306,8 @@ export function EditProfile({
           ))}
         </View>
         <Txt variant="caption" color="secondary">
-          Picks your videos and notes where both exist. The app's own text is English for
-          now.
+          Changes the app's own text, and picks your videos and notes where both exist.
+          Hinglish is Hindi written in English letters.
         </Txt>
       </View>
 

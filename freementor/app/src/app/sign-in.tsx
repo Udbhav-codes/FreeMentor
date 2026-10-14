@@ -12,15 +12,18 @@ import { useRouter } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Screen, Txt } from '../components/ui.tsx';
+import { BrandText } from '../components/BrandText.tsx';
 import { useAuth } from '../auth/AuthContext.tsx';
 import { devBypassAllowed } from '../auth/devBypass.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 
 const PRIVACY_URL = 'https://freementor.app/privacy';
 const TERMS_URL = 'https://freementor.app/terms';
 
 export default function SignIn() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { signInWithGoogle, skipSignInForDev } = useAuth();
@@ -55,24 +58,18 @@ export default function SignIn() {
         }}
       >
         <View style={{ flex: 1, justifyContent: 'center', gap: theme.spacing.md }}>
-          <Txt variant="display">
-            Welcome to Free
-            <Txt variant="display" color="accent">
-              Mentor
-            </Txt>
-          </Txt>
+          <BrandText>{t('signIn.title')}</BrandText>
           <Txt variant="body" color="secondary">
-            Sign in so your roadmap, your ticks and your streak are safe — and come back
-            if you change phone.
+            {t('signIn.body')}
           </Txt>
 
           <Card style={{ marginTop: theme.spacing.lg }}>
             <Txt variant="caption" color="secondary">
-              WHAT WE TAKE FROM GOOGLE
+              {t('signIn.whatWeTake')}
             </Txt>
             <View style={{ marginTop: theme.spacing.sm, gap: 4 }}>
-              <Txt variant="small">· Your name and email</Txt>
-              <Txt variant="small">· Nothing else — no contacts, no files, no calendar</Txt>
+              <Txt variant="small">{t('signIn.takeName')}</Txt>
+              <Txt variant="small">{t('signIn.takeNothingElse')}</Txt>
             </View>
           </Card>
         </View>
@@ -80,7 +77,7 @@ export default function SignIn() {
         {error ? (
           <Card>
             <Txt variant="bodyStrong" color="danger">
-              Sign-in failed
+              {t('signIn.failed')}
             </Txt>
             <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
               {error}
@@ -120,12 +117,12 @@ export default function SignIn() {
 
         <View style={{ gap: theme.spacing.sm }}>
           <Button
-            label={busy ? 'Opening Google…' : 'Continue with Google'}
+            label={busy ? t('signIn.opening') : t('signIn.button')}
             onPress={() => void onSignIn()}
             loading={busy}
           />
           <Txt variant="caption" color="secondary" style={{ textAlign: 'center' }}>
-            By continuing you agree to our Terms and Privacy Policy.
+            {t('signIn.terms')}
           </Txt>
           <View
             style={{

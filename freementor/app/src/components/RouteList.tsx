@@ -17,6 +17,7 @@ import { Pressable, View } from 'react-native';
 import { Pill, Txt } from './ui.tsx';
 import { describeUnlock } from '../progress/weekLock.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 import type { PlannedDay } from '../scheduler/index.ts';
 import type { RouteWeek } from '../progress/routeWeeks.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
@@ -85,6 +86,7 @@ export function WeekCard({
   unlocksOn?: string | null;
 }) {
   const theme = useTheme();
+  const t = useT();
   // A locked week can never be open, whatever defaultOpen says.
   const [open, setOpen] = useState(defaultOpen && !locked);
   const [showWhy, setShowWhy] = useState(false);
@@ -155,13 +157,13 @@ export function WeekCard({
           })}
         >
           <View style={{ flex: 1 }}>
-            <Txt variant="bodyStrong">Week of {week.startDate}</Txt>
+            <Txt variant="bodyStrong">{t('route.weekOf', { date: week.startDate })}</Txt>
             <Txt variant="caption" color="secondary" numberOfLines={1}>
               {week.label}
             </Txt>
           </View>
           {locked ? null : week.containsToday ? (
-            <Pill tone="accent">Today</Pill>
+            <Pill tone="accent">{t('route.today')}</Pill>
           ) : (
             <Txt variant="caption" color={isPast ? 'success' : 'secondary'}>
               {Math.round(week.doneFraction * 100)}%
@@ -186,8 +188,8 @@ export function WeekCard({
             }}
           >
             <Txt variant="caption" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-              One week at a time, so the plan stays something you can act on rather
-              than a wall of dates. {unlocksOn ? describeUnlock(unlocksOn) : 'Opens later'}.
+              {t('route.lockedWhy')}{' '}
+              {unlocksOn ? describeUnlock(unlocksOn) : ''}
             </Txt>
           </View>
         ) : null}
@@ -226,16 +228,17 @@ function DayRow({
   onPress: () => void;
 }) {
   const theme = useTheme();
+  const t = useT();
   const done = day.items.length > 0 && day.items.every((i) => i.done);
   const title = day.isRestDay
-    ? 'Rest day'
+    ? t('route.restDay')
     : day.kind === 'mixed_practice'
-      ? 'Mixed practice + weekly test'
+      ? t('route.mixedPractice')
       : day.kind === 'light_revision'
-        ? 'Light revision'
+        ? t('route.lightRevision')
         : day.kind === 'final_revision'
-          ? 'Final revision'
-          : (day.items.find((i) => i.source === 'topic')?.subject ?? 'Study');
+          ? t('route.finalRevision')
+          : (day.items.find((i) => i.source === 'topic')?.subject ?? t('route.study'));
 
   return (
     <Pressable

@@ -25,6 +25,7 @@ import {
   SHOW_PREVIOUS_PRICES,
 } from '../billing/pricing.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 import { validateCoupon } from '../api/billing.ts';
 import { describeTrial } from '../billing/trial.ts';
 import { useEntitlement } from '../billing/useEntitlement.ts';
@@ -60,6 +61,7 @@ const PLANS = [
 
 export default function Plans() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [selected, setSelected] = useState<'basic' | 'premium'>('premium');
@@ -117,7 +119,7 @@ export default function Plans() {
         }}
       >
         <View style={{ gap: theme.spacing.xs }}>
-          <Txt variant="display">Keep your roadmap going</Txt>
+          <Txt variant="display">{t('plans.title')}</Txt>
           {/* §10.4 asks for clear disclosure of when the trial ends and what
               locks. Stating it here, where the money is, rather than only in
               Profile. */}
@@ -125,8 +127,8 @@ export default function Plans() {
             <Txt variant="small" color={trial.phase === 'expired' ? 'danger' : 'secondary'}>
               {describeTrial(trial)}
               {trial.phase === 'expired'
-                ? ' — your notes, tests and practice links are locked until you pick a plan. Your roadmap, your ticks and every YouTube lesson stay open.'
-                : '. After that, notes, tests and practice links lock until you pick a plan — your roadmap and every YouTube lesson stay open.'}
+                ? ` ${t('plans.whatLockedNow')}`
+                : `. ${t('plans.whatLocks')}`}
             </Txt>
           ) : null}
           <Txt variant="body" color="secondary">
@@ -209,7 +211,7 @@ export default function Plans() {
               ]}
             />
             <Button
-              label={checking ? 'Checking…' : 'Apply'}
+              label={checking ? t('plans.couponChecking') : t('plans.couponApply')}
               variant="secondary"
               loading={checking}
               disabled={checking || coupon.trim().length === 0}
@@ -220,7 +222,11 @@ export default function Plans() {
           {applied ? (
             <View style={{ marginTop: theme.spacing.sm }}>
               <Pill tone="success">
-                {applied.code} · {applied.discountPercent}% off {selected}
+                {t('plans.couponApplied', {
+                  code: applied.code,
+                  percent: applied.discountPercent,
+                  plan: selected,
+                })}
               </Pill>
               <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
                 Applied at checkout. Google Play shows the final price before you pay.
@@ -236,9 +242,9 @@ export default function Plans() {
         <View style={{ gap: theme.spacing.sm }}>
           {purchased ? (
             <Card>
-              <Pill tone="success">You have {purchased}</Pill>
+              <Pill tone="success">{t('plans.youHave', { plan: purchased })}</Pill>
               <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-                Lifetime access to this roadmap. Nothing further to pay.
+                {t('plans.lifetime')}
               </Txt>
             </Card>
           ) : (
@@ -259,7 +265,7 @@ export default function Plans() {
             />
           )}
           <Button
-            label="Restore purchase"
+            label={t('plans.restore')}
             variant="ghost"
             onPress={() =>
               Alert.alert(
@@ -270,7 +276,7 @@ export default function Plans() {
               )
             }
           />
-          <Button label="Not now" variant="ghost" onPress={() => router.back()} />
+          <Button label={t('common.notNow')} variant="ghost" onPress={() => router.back()} />
         </View>
 
         <Txt variant="caption" color="secondary">

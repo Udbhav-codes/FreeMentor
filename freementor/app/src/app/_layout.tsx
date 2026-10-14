@@ -17,6 +17,7 @@ import { ThemeProvider, useTheme } from '../theme/ThemeProvider.tsx';
 import { EnrollmentProvider } from '../state/EnrollmentContext.tsx';
 import { AuthProvider } from '../auth/AuthContext.tsx';
 import { SyncProvider } from '../state/SyncContext.tsx';
+import { LanguageProvider } from '../i18n/LanguageProvider.tsx';
 import { OpeningAnimation } from '../components/OpeningAnimation.tsx';
 import { getDb } from '../db/index.ts';
 import { hasOnboarded } from '../db/profile.ts';
@@ -79,6 +80,7 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
+        <LanguageProvider>
         <AuthProvider>
         <SyncProvider>
         <EnrollmentProvider>
@@ -101,6 +103,7 @@ export default function RootLayout() {
         </EnrollmentProvider>
         </SyncProvider>
         </AuthProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

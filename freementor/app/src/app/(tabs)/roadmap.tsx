@@ -35,10 +35,12 @@ import { formatMinutes } from '../../onboarding/deadline.ts';
 import { groupIntoWeeks, WeekCard } from '../../components/RouteList.tsx';
 import { weekLock } from '../../progress/weekLock.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
+import { useT } from '../../i18n/LanguageProvider.tsx';
 import { isoWeekKey, weekAndDay } from '../../scheduler/index.ts';
 
 export default function RoadmapHome() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { loading, goal, plan } = useEnrollment();
@@ -84,10 +86,10 @@ export default function RoadmapHome() {
       <Screen>
         <View style={{ flex: 1, justifyContent: 'center', padding: theme.spacing.xl }}>
           <Empty
-            title="No roadmap yet"
-            body="Pick a goal and FreeMentor will build your day-by-day plan."
+            title={t('home.noRoadmap')}
+            body={t('home.noRoadmapBody')}
           />
-          <Button label="Choose your goal" onPress={() => router.push('/choose')} />
+          <Button label={t('home.chooseGoal')} onPress={() => router.push('/choose')} />
         </View>
       </Screen>
     );
@@ -113,11 +115,11 @@ export default function RoadmapHome() {
   const nothingToday = !day || day.items.length === 0;
   const todayLabel = nothingToday
     ? day?.isRestDay
-      ? 'Rest day — enjoy it'
-      : 'Nothing scheduled today'
+      ? t('home.restDay')
+      : t('home.nothingToday')
     : toGo > 0
-      ? "Continue today's task →"
-      : 'Review today ✓';
+      ? t('home.continueToday')
+      : t('home.reviewToday');
 
   return (
     <Screen>
@@ -140,15 +142,15 @@ export default function RoadmapHome() {
               <Avatar uri={photoUri} name={name} size={44} />
               <View style={{ flex: 1 }}>
                 <Txt variant="caption" color="secondary">
-                  {greeting()}
+                  {greeting(t)}
                 </Txt>
-                <Txt variant="title">{name ?? 'there'}</Txt>
+                <Txt variant="title">{name ?? t('home.there')}</Txt>
               </View>
               {streak.current > 0 ? (
                 <View style={{ alignItems: 'flex-end', gap: 4 }}>
-                  <Pill tone="accent">{streak.current}-day streak</Pill>
+                  <Pill tone="accent">{t('home.streak', { count: streak.current })}</Pill>
                   <Txt variant="caption" color="secondary">
-                    habit {streak.habitDays}/{HABIT_TARGET_DAYS}
+                    {t('home.habit', { days: streak.habitDays, target: HABIT_TARGET_DAYS })}
                   </Txt>
                 </View>
               ) : null}
@@ -165,15 +167,18 @@ export default function RoadmapHome() {
                 <ProgressRing fraction={overallFraction} />
                 <View style={{ flex: 1, gap: 2 }}>
                   <Txt variant="caption" color="secondary">
-                    YOUR GOAL
+                    {t('home.yourGoal')}
                   </Txt>
                   <Txt variant="title">{goal.goal.name}</Txt>
                   <Txt variant="caption" color="secondary">
-                    Week {here?.week ?? 1} of {totalWeeks} ·{' '}
-                    {plan.totals.topicsCompleted}/{plan.totals.topicsTotal} topics
+                    {t('home.weekOf', { week: here?.week ?? 1, total: totalWeeks })} ·{' '}
+                    {t('home.topicsDone', {
+                      done: plan.totals.topicsCompleted,
+                      total: plan.totals.topicsTotal,
+                    })}
                   </Txt>
                   <Txt variant="caption" color="secondary">
-                    Projected finish: {plan.projectedFinish ?? '—'}
+                    {t('home.projectedFinish', { date: plan.projectedFinish ?? '—' })}
                   </Txt>
                 </View>
               </View>
@@ -200,8 +205,11 @@ export default function RoadmapHome() {
               {nothingToday ? null : (
                 <Txt variant="caption" color="secondary" style={{ textAlign: 'center' }}>
                   {toGo > 0
-                    ? `${formatMinutes(doneMinutes)} done · ${formatMinutes(toGo)} to go`
-                    : `${formatMinutes(plannedMinutes)} done — all of today's plan`}
+                    ? t('home.doneToGo', {
+                        done: formatMinutes(doneMinutes),
+                        toGo: formatMinutes(toGo),
+                      })
+                    : t('home.allDone', { done: formatMinutes(plannedMinutes) })}
                 </Txt>
               )}
             </View>
@@ -214,7 +222,7 @@ export default function RoadmapHome() {
                   <Button
                     compact
                     variant="ghost"
-                    label="Jump to this week"
+                    label={t('home.jumpToWeek')}
                     onPress={() =>
                       listRef.current?.scrollToIndex({
                         index: currentIndex,
@@ -226,7 +234,7 @@ export default function RoadmapHome() {
                 ) : undefined
               }
             >
-              Your route
+              {t('home.yourRoute')}
             </SectionTitle>
           </View>
         }
@@ -255,9 +263,9 @@ export default function RoadmapHome() {
 }
 
 
-function greeting(): string {
+function greeting(t: (key: 'home.goodMorning' | 'home.goodAfternoon' | 'home.goodEvening') => string): string {
   const hour = new Date().getHours();
-  if (hour < 12) return 'Good morning';
-  if (hour < 17) return 'Good afternoon';
-  return 'Good evening';
+  if (hour < 12) return t('home.goodMorning');
+  if (hour < 17) return t('home.goodAfternoon');
+  return t('home.goodEvening');
 }

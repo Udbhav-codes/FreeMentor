@@ -29,6 +29,7 @@ import { adPolicyFor, birthYearRange, decideAge, type AgeDecision } from '../onb
 import { saveProfile } from '../db/profile.ts';
 import { requestPermission } from '../notifications/daily.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useT } from '../i18n/LanguageProvider.tsx';
 
 type Step =
   | 'welcome'
@@ -51,6 +52,7 @@ const ORDER: Step[] = [
 
 export default function Onboarding() {
   const theme = useTheme();
+  const t = useT();
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
@@ -205,10 +207,9 @@ export default function Onboarding() {
 
         {step === 'consent' ? (
           <>
-            <Txt variant="display">A parent needs to agree</Txt>
+            <Txt variant="display">{t('onboarding.consent.title')}</Txt>
             <Txt variant="body" color="secondary">
-              We send your parent or guardian a short code. Entering it is how they
-              agree — until then we keep only your sign-in.
+              {t('onboarding.consent.body')}
             </Txt>
 
             <ParentConsent birthYear={birthYear} onResolved={setConsent} />
@@ -223,14 +224,14 @@ export default function Onboarding() {
 
         {step === 'name' ? (
           <>
-            <Txt variant="display">Tell us about you</Txt>
+            <Txt variant="display">{t('onboarding.name.title')}</Txt>
             <Txt variant="small" color="secondary">
-              Your name greets you each morning. A photo is optional.
+              {t('onboarding.name.body')}
             </Txt>
             <TextInput
               value={name}
               onChangeText={setName}
-              placeholder="Your name"
+              placeholder={t('onboarding.name.placeholder')}
               placeholderTextColor={theme.colors.muted}
               style={[
                 theme.typography.body,
@@ -263,7 +264,11 @@ export default function Onboarding() {
                 <Button
                   compact
                   label={
-                    pickingPhoto ? 'Opening…' : photoUri ? 'Change photo' : 'Add a photo'
+                    pickingPhoto
+                      ? t('common.loading')
+                      : photoUri
+                        ? t('onboarding.name.changePhoto')
+                        : t('onboarding.name.addPhoto')
                   }
                   variant="secondary"
                   onPress={() => void choosePhoto()}
@@ -272,7 +277,7 @@ export default function Onboarding() {
                 {photoUri ? (
                   <Button
                     compact
-                    label="Remove"
+                    label={t('onboarding.name.removePhoto')}
                     variant="ghost"
                     onPress={() => {
                       deletePhotoFile(photoUri);
@@ -281,7 +286,7 @@ export default function Onboarding() {
                   />
                 ) : (
                   <Txt variant="caption" color="secondary">
-                    Optional. Stays on your device.
+                    {t('onboarding.name.photoOptional')}
                   </Txt>
                 )}
               </View>
@@ -292,7 +297,7 @@ export default function Onboarding() {
 
         {step === 'language' ? (
           <>
-            <Txt variant="display">Which language suits you?</Txt>
+            <Txt variant="display">{t('onboarding.language.title')}</Txt>
             <View style={{ gap: theme.spacing.sm }}>
               {(
                 [
@@ -318,7 +323,7 @@ export default function Onboarding() {
 
         {step === 'notifications' ? (
           <>
-            <Txt variant="display">Can we nudge you?</Txt>
+            <Txt variant="display">{t('onboarding.notifications.title')}</Txt>
             <Txt variant="body" color="secondary">
               One reminder a day and your weekly report on Sunday. That's it — never
               more than two a day, and you can turn any of it off later. You pick the
@@ -337,7 +342,7 @@ export default function Onboarding() {
             </Card>
 
             <Button
-              label="Allow reminders"
+              label={t('onboarding.notifications.allow')}
               onPress={() => {
                 // The OS prompt appears here; a refusal is final and fine.
                 void requestPermission().finally(() => next('notifications'));

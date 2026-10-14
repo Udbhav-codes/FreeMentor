@@ -170,7 +170,17 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - A **downloadable export** of progress does not exist (the server has no export
   endpoint); sync itself does.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
-- Hindi UI strings are not translated; only the library's Hindi resources are used.
+- **Hindi UI strings exist but are not finished.** `src/i18n/` has all three
+  catalogues (en, Devanagari hi, Latin-script Hinglish) and `LanguageProvider`
+  re-renders the app when the language changes. Converted so far: sign-in,
+  onboarding, Roadmap/home, the route week cards and Plans. **Still English:**
+  Profile, Progress, Reports, Practice, the Day view and goal selection. A
+  learner on Hindi therefore sees a mixed app — the first run is translated,
+  the deeper tabs are not.
+- **No Devanagari font is bundled.** Inter and DM Sans have no Devanagari
+  glyphs, so Hindi falls back to Android's system Noto and renders in a
+  different typeface from the rest of the UI. It is legible, not consistent.
+  Hinglish avoids the problem entirely, which is part of why it exists.
 
 ### Roadmap tab and week locking
 The Roadmap tab is a **FlatList**, not a ScrollView: the dashboard is its
