@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     supabase_jwt_secret: str = ""
     supabase_service_key: str = ""
+    # Safe to send to a browser: it grants nothing on its own and row-level
+    # security decides what any caller may touch. Used by the public
+    # account-deletion page. The SERVICE key must never go near it.
+    supabase_publishable_key: str = ""
     supabase_storage_bucket: str = "library"
 
     # Who may use the admin panel: a comma-separated list of email addresses,

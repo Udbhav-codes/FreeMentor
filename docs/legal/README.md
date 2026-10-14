@@ -48,9 +48,21 @@ competitor pricing that supports it, or soften the claim. This is the single
 most likely thing to attract a complaint, and it is in
 `app/src/marketing/welcome.ts`.
 
-**Account deletion on the web.** Play requires a deletion route that does not
-need the app installed. The in-app path exists (`DELETE /account/me`); the web
-page does not yet. It is a launch blocker, not a nicety.
+**Account deletion on the web — now built.** Served by the API at
+`/delete-account`, so it works without the app installed. The policies are
+served too: `/privacy` (the URL the app links to), `/privacy-policy`,
+`/terms`, `/refund-policy`, `/content-policy`.
+
+**One thing you must do before it works in production:** add the deployed page
+URL to Supabase -> Authentication -> URL Configuration -> Redirect URLs, e.g.
+`https://api.freementor.app/delete-account`. Without it the Google sign-in on
+that page returns to a blank screen — the same failure as `exp://**` for the
+app. It cannot be tested locally against a deployed Supabase project until
+that entry exists.
+
+Note also that the policies are read from this `docs/legal/` directory at
+runtime. A deployment that ships only `server/` will 404 them; set
+`LEGAL_DOCS_DIR` or include this directory in the image.
 
 ## A promise the operation does not yet keep
 

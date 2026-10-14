@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delete your FreeMentor account</title>
+    <meta
+      name="description"
+      content="Delete your FreeMentor account and all the personal data held with it."
+    />
+    <!--
+      Google Play requires an account-deletion route that works WITHOUT the app
+      installed — someone who has uninstalled it must still be able to delete
+      their data. That is why this is a web page served by the API rather than
+      a screen in the app, which also has one.
+
+      Served from the API's own origin on purpose: the DELETE call is then
+      same-origin, so there is no CORS policy to get wrong and no second thing
+      to deploy.
+
+      Everything above the sign-in button is readable without signing in. Play
+      and the DPDP Act both expect a person to be able to find out what gets
+      deleted before they commit to anything.
+    -->
+    <style>
+      :root {
+        --navy: #0b2545;
+        --bg: #f6f8fb;
+        --surface: #fff;
+        --border: #e2e8f0;
+        --text: #11243c;
+        --secondary: #53657d;
+        --accent: #f2a900;
+        --accent-ink: #7a5600;
+        --accent-soft: #fff1c7;
+        --danger: #b3261e;
+        --success: #0f7b53;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      main { max-width: 620px; margin: 0 auto; padding: 32px 20px 80px; }
+      h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.3px; }
+      h1 .m { color: var(--accent-ink); }
+      h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;
+           color: var(--secondary); margin: 0 0 10px; }
+      .lede { color: var(--secondary); margin: 0 0 24px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: 12px; padding: 20px; margin-bottom: 16px;
+      }
+      ul { margin: 0; padding-left: 20px; }
+      li { margin-bottom: 6px; }
+      .kept { border-left: 4px solid var(--accent); }
+      button {
+        font: inherit; font-weight: 600; border-radius: 10px; cursor: pointer;
+        padding: 13px 18px; min-height: 48px; width: 100%; border: 1px solid var(--navy);
+        background: var(--navy); color: #fff;
+      }
+      button.danger { background: var(--danger); border-color: var(--danger); }
+      button.secondary { background: var(--surface); color: var(--navy); }
+      button:disabled { opacity: 0.55; cursor: default; }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; }
+      .row > * { flex: 1 1 180px; }
+      .muted { color: var(--secondary); font-size: 14px; }
+      .who { background: var(--accent-soft); color: var(--accent-ink);
+             border-radius: 8px; padding: 10px 12px; font-size: 14px; margin-bottom: 14px; }
+      .err { color: var(--danger); font-size: 14px; margin-top: 10px; }
+      .ok { color: var(--success); }
+      .hidden { display: none; }
+      code { background: #eef1f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+      footer { margin-top: 32px; font-size: 14px; color: var(--secondary); }
+      a { color: var(--navy); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Delete your Free<span class="m">Mentor</span> account</h1>
+      <p class="lede">
+        You can do this here without installing the app. It is permanent.
+      </p>
+
+      <div class="card">
+        <h2>What gets deleted</h2>
+        <ul>
+          <li>Your name, email and profile photo</li>
+          <li>Your birth year, qualification and language</li>
+          <li>Your chosen goal, roadmap and study schedule</li>
+          <li>Every task you ticked, your confidence ratings and test scores</li>
+          <li>Your streak and rest days</li>
+          <li>Your parent or guardian's contact details, if you gave them</li>
+        </ul>
+        <p class="muted" style="margin-bottom: 0">
+          Erased within <strong>30 days</strong> of your request.
+        </p>
+      </div>
+
+      <div class="card kept">
+        <h2>What we have to keep</h2>
+        <p style="margin-top: 0">
+          If you ever paid for a roadmap, Indian tax law requires us to keep the
+          <strong>purchase record</strong> — the amount, the date and the order
+          number — for 8 years. We strip it of everything that identifies you
+          beyond what the law needs.
+        </p>
+        <p class="muted" style="margin-bottom: 0">
+          Deleting your account does not refund a purchase. See our
+          <a href="/refund-policy">refund policy</a> for that.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Delete it</h2>
+        <p style="margin-top: 0">
+          Sign in with the same Google account you used in the app, so we know
+          it is you.
+        </p>
+
+        <div id="signed-out">
+          <button id="signin">Sign in with Google</button>
+        </div>
+
+        <div id="signed-in" class="hidden">
+          <div class="who">Signed in as <strong id="email"></strong></div>
+          <div class="row">
+            <button id="delete" class="danger">Delete my account permanently</button>
+            <button id="signout" class="secondary">Cancel</button>
+          </div>
+        </div>
+
+        <div id="confirming" class="hidden">
+          <p><strong>Are you sure?</strong> This cannot be undone.</p>
+          <div class="row">
+            <button id="confirm" class="danger">Yes, delete everything</button>
+            <button id="back" class="secondary">Keep my account</button>
+          </div>
+        </div>
+
+        <div id="done" class="hidden">
+          <p class="ok">
+            <strong>Your account is scheduled for deletion.</strong>
+          </p>
+          <p class="muted">
+            Everything listed above is erased within 30 days. You can close this
+            page. If you change your mind, write to us before then.
+          </p>
+        </div>
+
+        <p id="error" class="err hidden"></p>
+      </div>
+
+      <footer>
+        Trouble with this page? Email <a href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a>
+        from the address on your account and we will delete it for you.<br />
+        <a href="/privacy-policy">Privacy policy</a> ·
+        <a href="/terms">Terms</a>
+      </footer>
+    </main>
+
+    <script type="module">
+      import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.49.4';
+
+      // The PUBLISHABLE key, which is safe in a browser: it grants nothing on
+      // its own and row-level security decides what any caller may touch. The
+      // service key never leaves the server.
+      const SUPABASE_URL = '__SUPABASE_URL__';
+      const SUPABASE_KEY = '__SUPABASE_PUBLISHABLE_KEY__';
+
+      const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
+        auth: { persistSession: true, detectSessionInUrl: true },
+      });
+
+      const $ = (id) => document.getElementById(id);
+      const show = (id) => $(id).classList.remove('hidden');
+      const hide = (id) => $(id).classList.add('hidden');
+
+      function fail(message) {
+        $('error').textContent = message;
+        show('error');
+      }
+
+      async function render() {
+        hide('error');
+        const { data } = await supabase.auth.getSession();
+        const session = data.session;
+
+        if (!session) {
+          show('signed-out');
+          hide('signed-in');
+          hide('confirming');
+          return;
+        }
+        $('email').textContent = session.user.email ?? 'your account';
+        hide('signed-out');
+        show('signed-in');
+      }
+
+      $('signin').onclick = async () => {
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: 'google',
+          // Back to this page. The URL must be in Supabase's Redirect URLs.
+          options: { redirectTo: window.location.origin + window.location.pathname },
+        });
+        if (error) fail(error.message);
+      };
+
+      $('signout').onclick = async () => {
+        await supabase.auth.signOut();
+        await render();
+      };
+
+      $('delete').onclick = () => {
+        hide('signed-in');
+        show('confirming');
+      };
+
+      $('back').onclick = () => {
+        hide('confirming');
+        show('signed-in');
+      };
+
+      $('confirm').onclick = async () => {
+        $('confirm').disabled = true;
+        $('confirm').textContent = 'Deleting…';
+        hide('error');
+
+        const { data } = await supabase.auth.getSession();
+        const token = data.session?.access_token;
+        if (!token) {
+          fail('Your sign-in expired. Please sign in again.');
+          $('confirm').disabled = false;
+          $('confirm').textContent = 'Yes, delete everything';
+          return;
+        }
+
+        try {
+          // Same origin as this page, so no CORS is involved.
+          const response = await fetch('/account/me', {
+            method: 'DELETE',
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          if (!response.ok) {
+            let detail = `The server returned ${response.status}.`;
+            try {
+              const body = await response.json();
+              if (typeof body.detail === 'string') detail = body.detail;
+            } catch {
+              /* not JSON */
+            }
+            throw new Error(detail);
+          }
+
+          // Sign out so the browser is not left holding a session for an
+          // account that no longer exists.
+          await supabase.auth.signOut();
+          hide('confirming');
+          show('done');
+        } catch (e) {
+          fail(
+            `We could not delete your account: ${e.message} ` +
+              'Please email us and we will do it by hand.',
+          );
+          $('confirm').disabled = false;
+          $('confirm').textContent = 'Yes, delete everything';
+        }
+      };
+
+      supabase.auth.onAuthStateChange(() => void render());
+      void render();
+    </script>
+  </body>
+</html>

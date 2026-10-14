@@ -12,7 +12,7 @@ from fastapi import FastAPI
 
 from app.config import get_settings
 from app.db import create_all
-from app.routers import account, admin, billing, catalog, enrollments, media, progress
+from app.routers import account, admin, billing, catalog, enrollments, media, progress, web
 
 settings = get_settings()
 
@@ -39,6 +39,7 @@ app.include_router(catalog.router)
 app.include_router(enrollments.router)
 app.include_router(media.router)
 app.include_router(progress.router)
+app.include_router(web.router)
 
 
 @app.get("/health", tags=["meta"])
