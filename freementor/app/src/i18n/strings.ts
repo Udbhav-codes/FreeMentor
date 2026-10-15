@@ -290,6 +290,26 @@ export const en = {
   'trialOver.body':
     'One payment unlocks this roadmap — every video, note, practice and test — for life. No subscription.',
   'trialOver.cta': 'Unlock my roadmap',
+
+  // --- data export and deletion (privacy policy §9; DPDP Act §§11-12) ---
+  'export.working': 'Preparing your data…',
+  'export.readyTitle': 'Your data is ready',
+  'export.completeBody':
+    'Everything we hold about you, including your account and purchase records. Save it wherever you like.',
+  'export.deviceOnlyBody':
+    'This covers everything on this phone — your roadmap, every task you ticked, your scores and your streak. Your purchase and consent records are held on our server and are not in this file.',
+  'export.failedTitle': 'Could not export your data',
+  'export.shareUnavailable':
+    'This device has no way to share a file, so the export cannot be handed to you. Please contact support.',
+  'dialog.deleteExportFirst':
+    'Before you delete: an export is only possible while the account exists. If you want a copy of your data, cancel and tap Export my progress first.',
+  'dialog.deleteServerFailedTitle': 'Your account was not deleted',
+  'dialog.deleteServerFailedBody':
+    'We could not reach the server, so your account still exists. Erasing this phone now would leave it in place. You can try again, or delete it from our website without the app.',
+  'dialog.deleteWipeAnyway': 'Erase this phone anyway',
+  'dialog.deleteScheduledTitle': 'Your account is being deleted',
+  'dialog.deleteScheduledBody':
+    'Everything on this phone is erased, and your account is removed from our server within {days} days. Payment records are kept as tax law requires.',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -546,6 +566,25 @@ export const hi: Record<StringKey, string> = {
   'trialOver.body':
     'एक बार का भुगतान इस रोडमैप को — हर वीडियो, नोट, अभ्यास और टेस्ट — आजीवन खोल देता है। कोई सब्सक्रिप्शन नहीं।',
   'trialOver.cta': 'मेरा रोडमैप खोलें',
+
+  'export.working': 'आपका डेटा तैयार किया जा रहा है…',
+  'export.readyTitle': 'आपका डेटा तैयार है',
+  'export.completeBody':
+    'आपके बारे में हमारे पास जो कुछ है, आपके खाते और भुगतान रिकॉर्ड सहित। जहाँ चाहें सहेज लें।',
+  'export.deviceOnlyBody':
+    'इसमें इस फ़ोन का सब कुछ है — आपका रोडमैप, हर पूरा किया काम, आपके स्कोर और स्ट्रीक। आपके भुगतान और सहमति रिकॉर्ड हमारे सर्वर पर हैं और इस फ़ाइल में नहीं हैं।',
+  'export.failedTitle': 'आपका डेटा निर्यात नहीं हो सका',
+  'export.shareUnavailable':
+    'इस डिवाइस में फ़ाइल साझा करने का कोई तरीका नहीं है, इसलिए निर्यात आपको नहीं दिया जा सकता। कृपया सहायता से संपर्क करें।',
+  'dialog.deleteExportFirst':
+    'हटाने से पहले: निर्यात तभी संभव है जब खाता मौजूद हो। अपने डेटा की प्रति चाहिए तो रद्द करें और पहले “मेरी प्रगति निर्यात करें” दबाएँ।',
+  'dialog.deleteServerFailedTitle': 'आपका खाता हटाया नहीं गया',
+  'dialog.deleteServerFailedBody':
+    'हम सर्वर तक नहीं पहुँच सके, इसलिए आपका खाता अभी भी मौजूद है। अब इस फ़ोन को मिटाने से वह खाता बना रहेगा। आप फिर कोशिश कर सकते हैं, या ऐप के बिना हमारी वेबसाइट से इसे हटा सकते हैं।',
+  'dialog.deleteWipeAnyway': 'फिर भी यह फ़ोन मिटाएँ',
+  'dialog.deleteScheduledTitle': 'आपका खाता हटाया जा रहा है',
+  'dialog.deleteScheduledBody':
+    'इस फ़ोन का सब कुछ मिटा दिया गया है, और आपका खाता {days} दिनों में हमारे सर्वर से हट जाएगा। कर कानून के अनुसार भुगतान रिकॉर्ड रखे जाते हैं।',
 };
 
 /**
@@ -803,6 +842,25 @@ export const hinglish: Record<StringKey, string> = {
   'trialOver.body':
     'Ek baar ka payment is roadmap ko — har video, note, practice aur test — lifetime khol deta hai. Koi subscription nahin.',
   'trialOver.cta': 'Mera roadmap kholein',
+
+  'export.working': 'Aapka data taiyaar kiya ja raha hai…',
+  'export.readyTitle': 'Aapka data taiyaar hai',
+  'export.completeBody':
+    'Aapke baare mein hamare paas jo kuch hai, aapke account aur payment records ke saath. Jahan chahein save kar lein.',
+  'export.deviceOnlyBody':
+    'Isme is phone ka sab kuch hai — aapka roadmap, har poora kiya kaam, aapke scores aur streak. Aapke payment aur consent records hamare server par hain aur is file mein nahin hain.',
+  'export.failedTitle': 'Aapka data export nahin ho saka',
+  'export.shareUnavailable':
+    'Is device mein file share karne ka koi tareeka nahin hai, isliye export aapko nahin diya ja sakta. Kripya support se sampark karein.',
+  'dialog.deleteExportFirst':
+    'Hataane se pehle: export tabhi possible hai jab account maujood ho. Apne data ki copy chahiye to cancel karein aur pehle “Meri progress export karein” dabayein.',
+  'dialog.deleteServerFailedTitle': 'Aapka account delete nahin hua',
+  'dialog.deleteServerFailedBody':
+    'Hum server tak nahin pahunch sake, isliye aapka account abhi bhi maujood hai. Ab is phone ko mitaane se woh account bana rahega. Aap phir koshish kar sakte hain, ya app ke bina hamari website se ise delete kar sakte hain.',
+  'dialog.deleteWipeAnyway': 'Phir bhi yeh phone mitaayein',
+  'dialog.deleteScheduledTitle': 'Aapka account delete kiya ja raha hai',
+  'dialog.deleteScheduledBody':
+    'Is phone ka sab kuch mita diya gaya hai, aur aapka account {days} dinon mein hamare server se hat jaayega. Tax law ke anusaar payment records rakhe jaate hain.',
 };
 
 export const catalogues = { en, hi, 'hi-en': hinglish } as const;

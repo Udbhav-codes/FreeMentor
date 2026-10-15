@@ -58,6 +58,15 @@ competitor pricing that supports it, or soften the claim. This is the single
 most likely thing to attract a complaint, and it is in
 `app/src/marketing/welcome.ts`.
 
+**Export and in-app deletion — now built (Oct 2026).** The policy promised
+both at an exact menu path and neither worked: Export said "Not built yet",
+and Delete my account erased the phone without ever calling the server, so
+the account survived a deletion the learner believed had happened. Both are
+now real, and `GET /account/export` deliberately excludes the hashed consent
+OTP and anything belonging to another person. Note the ordering constraint:
+every authenticated route refuses an account already marked for deletion, so
+an export must be taken **before** deleting — the delete dialog now says so.
+
 **Account deletion on the web — now built.** Served by the API at
 `/delete-account`, so it works without the app installed. The policies are
 served too: `/privacy` (the URL the app links to), `/privacy-policy`,

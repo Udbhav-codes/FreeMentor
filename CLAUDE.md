@@ -181,8 +181,21 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   degrades to the declaration, which says so plainly. Nothing records consent
   locally — the server is authoritative — so clearing app data re-asks, and the
   `alreadyConsented()` check then short-circuits it.
-- A **downloadable export** of progress does not exist (the server has no export
-  endpoint); sync itself does.
+- **Data export and real account deletion are done** (Oct 2026). Both were
+  promised by name in the privacy policy and neither worked: Export said "Not
+  built yet", and Delete my account wiped the device while leaving the server
+  row untouched — `DELETE /account/me` was built, tested and never called.
+  Now: `GET /account/export` (server, scoped to the token holder, with
+  `app/export.py` pure and the exclusion rules asserted against the real
+  document), `src/export/` in the app, and `api/account.ts` for deletion.
+  The device's SQLite is the primary source for the export because the
+  shipped build has no server; the server's half is merged in when reachable
+  and the file states which parts it has. A server deletion that fails does
+  **not** silently wipe the phone — that would destroy the signed-in app that
+  could retry while the account survived. Verified against real Postgres:
+  jsonb settings round-trip, Numeric scores normalise identically to SQLite,
+  the consent OTP hash and the Supabase subject are absent, one learner
+  cannot see another's rows, and an export after deletion is 403.
 - No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
 - **Hindi and Hinglish UI are done.** `src/i18n/` holds three catalogues of
   195 keys each (en, Devanagari hi, Latin-script Hinglish). Every screen and

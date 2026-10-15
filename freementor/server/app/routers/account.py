@@ -9,11 +9,25 @@ from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import export as data_export
 from app import otp
 from app.auth import current_user
 from app.config import Settings, get_settings
 from app.db import get_session
-from app.models import ParentConsent, User
+from app.models import (
+    ConfidenceRating,
+    Enrollment,
+    Goal,
+    NotificationPrefs,
+    ParentConsent,
+    Purchase,
+    RestDay,
+    Schedule,
+    Streak,
+    TaskProgress,
+    TestScore,
+    User,
+)
 
 router = APIRouter(prefix="/account", tags=["account"])
 
@@ -223,6 +237,109 @@ async def confirm_consent(
     consent.expires_at = None
     await session.commit()
     return await _profile_out(session, user)
+
+
+@router.get("/export")
+async def export_me(
+    user: User = Depends(current_user),
+    session: AsyncSession = Depends(get_session),
+) -> dict[str, object]:
+    """Everything we hold about the caller, as JSON (DPDP Act 2023 §11).
+
+    There is no account identifier in the request. Like `DELETE /me`, this
+    endpoint serves whoever the token belongs to and cannot be pointed at
+    anybody else — which is the only property of it that really matters.
+
+    Note that `current_user` refuses an account already marked for deletion,
+    so an export has to be taken **before** deleting. The app's delete
+    confirmation says so; there is no un-delete to recover from getting that
+    order wrong.
+
+    Not paginated. The largest realistic export is one learner's ticks across
+    a 72-week roadmap — a few thousand short rows — and a partial export of
+    somebody's own data would be a strange thing to hand them.
+    """
+    consents = list(
+        (
+            await session.execute(
+                select(ParentConsent)
+                .where(ParentConsent.user_id == user.id)
+                .order_by(ParentConsent.created_at)
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    enrollment_rows = list(
+        (
+            await session.execute(
+                select(Enrollment)
+                .where(Enrollment.user_id == user.id)
+                .order_by(Enrollment.created_at)
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    async def _for(model, enrollment_id: str, order):
+        return list(
+            (
+                await session.execute(
+                    select(model).where(model.enrollment_id == enrollment_id).order_by(order)
+                )
+            )
+            .scalars()
+            .all()
+        )
+
+    roadmaps = []
+    for enrollment in enrollment_rows:
+        goal = (
+            await session.execute(select(Goal).where(Goal.id == enrollment.goal_id))
+        ).scalar_one_or_none()
+        roadmaps.append(
+            data_export.enrollment_section(
+                enrollment,
+                goal=goal,
+                schedules=await _for(Schedule, enrollment.id, Schedule.effective_from),
+                task_progress=await _for(TaskProgress, enrollment.id, TaskProgress.block_id),
+                ratings=await _for(ConfidenceRating, enrollment.id, ConfidenceRating.topic_id),
+                scores=await _for(TestScore, enrollment.id, TestScore.block_or_milestone_id),
+                rest_days=await _for(RestDay, enrollment.id, RestDay.date),
+            )
+        )
+
+    purchases = list(
+        (
+            await session.execute(
+                select(Purchase)
+                .where(Purchase.user_id == user.id)
+                .order_by(Purchase.created_at)
+            )
+        )
+        .scalars()
+        .all()
+    )
+    streak = (
+        await session.execute(select(Streak).where(Streak.user_id == user.id))
+    ).scalar_one_or_none()
+    prefs = (
+        await session.execute(
+            select(NotificationPrefs).where(NotificationPrefs.user_id == user.id)
+        )
+    ).scalar_one_or_none()
+
+    return data_export.build_export(
+        user=user,
+        consents=consents,
+        enrollments=roadmaps,
+        purchases=purchases,
+        streak=streak,
+        prefs=prefs,
+        generated_at=datetime.now(timezone.utc),
+    )
 
 
 @router.delete("/me", status_code=status.HTTP_202_ACCEPTED)

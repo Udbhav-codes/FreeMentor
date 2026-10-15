@@ -16,6 +16,8 @@ import { Button, Card, Pill, Row, Screen, Txt } from '../../components/ui.tsx';
 import { Avatar } from '../../components/Avatar.tsx';
 import { EditProfile } from '../../components/EditProfile.tsx';
 import { catalog } from '../../api/library.ts';
+import { mayWipeDevice, requestAccountDeletion } from '../../api/account.ts';
+import { exportProgress } from '../../export/exportProgress.ts';
 import { deletePhotoFile } from '../../profile/photo.ts';
 import { useAuth } from '../../auth/AuthContext.tsx';
 import { devToolsAllowed } from '../../auth/devBypass.ts';
@@ -49,6 +51,7 @@ export default function ProfileScreen() {
 
   const [profile, setProfile] = useState<Profile | null>(null);
   const catalogEntry = goal ? (catalog.goals.find((g) => g.id === goal.goal.id) ?? null) : null;
+  const [exporting, setExporting] = useState(false);
   const [dailyOn, setDailyOn] = useState(true);
   const [weeklyOn, setWeeklyOn] = useState(true);
 
@@ -83,31 +86,103 @@ export default function ProfileScreen() {
       ],
     );
 
+  /**
+   * Hands the learner a file with everything we hold about them — the
+   * privacy policy promises exactly this, at exactly this menu path.
+   *
+   * It tells them whether the file is complete before they share it: an
+   * export missing their purchase history because the phone was offline is
+   * still useful, but they should not discover that from a support reply.
+   */
+  const runExport = async () => {
+    if (exporting) return;
+    setExporting(true);
+    const result = await exportProgress();
+    setExporting(false);
+
+    if (result.error) {
+      Alert.alert(t('export.failedTitle'), result.error);
+      return;
+    }
+    if (!result.shared) return; // The learner dismissed the share sheet.
+
+    Alert.alert(
+      t('export.readyTitle'),
+      result.complete ? t('export.completeBody') : t('export.deviceOnlyBody'),
+    );
+  };
+
+  /** Erases the device. Separated so the failure path below can reuse it. */
+  const wipeDevice = async () => {
+    await resetDatabase();
+    // The photo is a file on disk, so clearing the row is not enough.
+    deletePhotoFile(profile?.photoUri);
+    await saveProfile({
+      name: null,
+      birthYear: null,
+      qualification: null,
+      onboardedAt: null,
+      studyHour: null,
+      studyPlace: null,
+      photoUri: null,
+    });
+    await cancelDailyReminder();
+    await refresh();
+    router.replace('/onboarding');
+  };
+
+  /**
+   * Deletion — DPDP Act §12 and a Play requirement.
+   *
+   * This used to wipe the device and nothing else: `DELETE /account/me` was
+   * built and verified, and the app never called it, so the server row
+   * survived a deletion the learner believed had happened.
+   *
+   * The server goes first, deliberately. If it fails, erasing the phone makes
+   * things worse — the learner thinks they are done, and the signed-in app
+   * that could have retried is gone. So a failure is reported and the choice
+   * to wipe anyway is theirs.
+   */
   const confirmDelete = () =>
     Alert.alert(
       t('dialog.deleteTitle'),
-      'Everything on this device is erased. Once the backend is connected this will also delete your account on the server within 30 days.',
+      // An export is impossible once the account is marked, because every
+      // authenticated route refuses a deleted account. Said here, where it
+      // can still be acted on.
+      `${t('dialog.deleteBody')}\n\n${t('dialog.deleteExportFirst')}`,
       [
-        { text: 'Cancel', style: 'cancel' },
+        { text: t('common.cancel'), style: 'cancel' },
         {
           text: t('dialog.deleteConfirm'),
           style: 'destructive',
           onPress: async () => {
-            await resetDatabase();
-            // The photo is a file on disk, so clearing the row is not enough.
-            deletePhotoFile(profile?.photoUri);
-            await saveProfile({
-              name: null,
-              birthYear: null,
-              qualification: null,
-              onboardedAt: null,
-              studyHour: null,
-              studyPlace: null,
-              photoUri: null,
-            });
-            await cancelDailyReminder();
-            await refresh();
-            router.replace('/onboarding');
+            const outcome = await requestAccountDeletion();
+
+            if (!mayWipeDevice(outcome)) {
+              Alert.alert(
+                t('dialog.deleteServerFailedTitle'),
+                `${t('dialog.deleteServerFailedBody')}\n\n${
+                  outcome.kind === 'failed' ? outcome.reason : ''
+                }`.trim(),
+                [
+                  { text: t('common.cancel'), style: 'cancel' },
+                  {
+                    text: t('dialog.deleteWipeAnyway'),
+                    style: 'destructive',
+                    onPress: () => void wipeDevice(),
+                  },
+                ],
+              );
+              return;
+            }
+
+            await wipeDevice();
+            if (outcome.kind === 'scheduled') {
+              Alert.alert(
+                t('dialog.deleteScheduledTitle'),
+                t('dialog.deleteScheduledBody', { days: outcome.purgeWithinDays }),
+              );
+            }
           },
         },
       ],
@@ -316,14 +391,11 @@ export default function ProfileScreen() {
             />
             <Button label={t('profile.resetRoadmap')} variant="secondary" onPress={confirmReset} />
             <Button
-              label={t('profile.exportProgress')}
+              label={exporting ? t('export.working') : t('profile.exportProgress')}
               variant="secondary"
-              onPress={() =>
-                Alert.alert(
-                  'Not built yet',
-                  'Sync is live, but a downloadable export of your progress is still to come.',
-                )
-              }
+              loading={exporting}
+              disabled={exporting}
+              onPress={() => void runExport()}
             />
             <Button label={t('profile.deleteAccount')} variant="ghost" onPress={confirmDelete} />
           </View>

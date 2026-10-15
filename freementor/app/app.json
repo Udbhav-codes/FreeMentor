@@ -39,7 +39,8 @@
         {
           "photosPermission": "FreeMentor uses your photos only to set your profile picture. It stays on your device."
         }
-      ]
+      ],
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": true
