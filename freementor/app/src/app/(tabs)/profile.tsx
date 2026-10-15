@@ -258,7 +258,7 @@ export default function ProfileScreen() {
           <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
             {trial ? describeTrial(trial) : 'No goal started yet'}
             {'. '}
-            {t('profile.youtubeFree')}
+            {t('profile.resourcesNote')}
           </Txt>
           <Txt variant="caption" color="secondary" style={{ marginTop: 4 }}>
             Current access: {entitlement}

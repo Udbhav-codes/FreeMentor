@@ -113,7 +113,8 @@ function nudgeFor(goal: CatalogGoal): string {
   if (goal.type === 'exam') {
     return (
       `Serious preparation does not have to start with a big cheque. The lessons are free ` +
-      `to open; ${basic} covers the plan that tells you which one to open today.`
+      `on YouTube and the official sites; ${basic} covers the plan that tells you which ` +
+      `one to open today.`
     );
   }
   if (goal.type === 'language') {
@@ -123,8 +124,8 @@ function nudgeFor(goal: CatalogGoal): string {
     );
   }
   return (
-    `Everything in this roadmap is public and free to open. ${basic} buys the sequence, ` +
-    `the daily plan and the tracking — once, for life.`
+    `Everything in this roadmap is public and free at its source. ${basic} buys the ` +
+    `sequence, the daily plan and the tracking — once, for life.`
   );
 }
 
@@ -152,7 +153,7 @@ function trustFor(goal: CatalogGoal): string {
       : 'official documentation, open textbooks and public lectures';
   return (
     `Every link opens the original free source — ${source}. We never copy or re-host ` +
-    `anyone's material, and the video lessons stay free to open on every plan.`
+    `anyone's material, and every video stays free on YouTube itself.`
   );
 }
 

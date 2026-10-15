@@ -99,7 +99,17 @@ publishing a weaker policy you keep to.
   behaviour. If you launch before M6, cut those paragraphs rather than
   describe something that is not happening — and note that Basic currently
   opens resources after a confirmation dialog, not an advertisement, so the
-  Terms would overstate what happens.
+  Terms would overstate what happens. **The Plans screen now says the same
+  thing** ("Each one opens after a short rewarded ad"), which is a promise
+  about a plan nobody can yet buy — the buy button still says payment is not
+  connected. Harmless while that holds; wrong the day Billing goes live
+  without AdMob.
+- **In-app copy was brought into line with the locking model (Oct 2026).**
+  Five learner-facing strings still said videos were free to open on every
+  plan, or never behind an ad — including the Plans screen's own Basic
+  feature list, on the screen that takes the money. All corrected in English,
+  Hindi and Hinglish, and `marketing/compliance.ts` now fails the build on an
+  unqualified free-access claim.
 - The documents now describe the **Oct 2026 locking model**: the trial is
   Basic free for 3 days with no ads, and afterwards everything locks including
   videos. If that changes again, clause 5 and 6.4 of the Terms, the Privacy

@@ -2,7 +2,7 @@
  * Reports tab — product plan §8.7 and screen 6 of the preview.
  *
  * Detailed analytics are a Premium feature (§10.1); the weekly report itself
- * is free on every plan, because it is the thing that actually changes
+ * is included in every plan, because it is the thing that actually changes
  * behaviour. Real purchases land at M5; the gate itself is live now, driven
  * by billing/entitlement.ts, so there is one place that decides access.
  */
@@ -28,7 +28,7 @@ export default function Reports() {
   const insets = useSafeAreaInsets();
   const { plan, progress } = useEnrollment();
   const today = todayIso();
-  // §10.1 — the weekly report is free on every plan; the per-subject
+  // §10.1 — the weekly report is included in every plan; the per-subject
   // breakdown and consistency detail are "detailed analytics" (Premium).
   const { entitlement } = useEntitlement();
   const detailed = hasDetailedAnalytics(entitlement);

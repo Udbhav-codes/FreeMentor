@@ -129,6 +129,18 @@ export const en = {
     'After that everything locks — videos, notes, practice and tests — until you pick a plan. One payment unlocks this roadmap for life.',
   'plans.whatLockedNow':
     '— everything is locked until you pick a plan. One payment unlocks this roadmap for life. Your progress is safe and waiting.',
+  // The feature lists. These must match billing/entitlement.ts — Basic
+  // reaches every resource through a rewarded ad, videos included.
+  'plans.badgeMostComplete': 'Most complete',
+  'plans.basicFeature1': 'Your full roadmap and daily plan',
+  'plans.basicFeature2': 'Every resource — videos, notes, practice and tests',
+  'plans.basicFeature3': 'Each one opens after a short rewarded ad',
+  'plans.basicFeature4': 'Progress, streak and weekly report',
+  'plans.premiumFeature1': 'Everything in Basic, plus:',
+  'plans.premiumFeature2': 'No ads anywhere',
+  'plans.premiumFeature3': 'Extra notes (OpenStax, Think Python)',
+  'plans.premiumFeature4': 'Detailed analytics and advanced reports',
+  'plans.premiumFeature5': 'Full adaptive recalculation',
   'plans.couponLabel': 'Have a coupon?',
   'plans.couponApply': 'Apply',
   'plans.couponChecking': 'Checking…',
@@ -161,7 +173,7 @@ export const en = {
   'profile.deleteAccount': 'Delete my account',
   'profile.about': 'About',
   'profile.aboutBody':
-    'FreeMentor links to free, public resources. We never copy or re-host anyone’s content, and YouTube lessons are never put behind an ad or a paywall.',
+    'FreeMentor links to free, public resources. We never copy or re-host anyone’s content — every link opens at its original source, where it stays free to find.',
 
   // --- progress ---
   'progress.title': 'Progress',
@@ -194,7 +206,7 @@ export const en = {
   'reports.tasksDone': 'Tasks done',
   'reports.detailed': 'Detailed analytics',
   'reports.detailedBody':
-    'Per-subject scores, weak-topic analysis and consistency trends. Your weekly summary above stays free on every plan.',
+    'Per-subject scores, weak-topic analysis and consistency trends. The weekly summary above is included in every plan.',
   'reports.seePlans': 'See plans',
   'reports.catchUp': 'Anything under 60% triggers a catch-up block before new content.',
   'reports.noScores': 'Enter your score after a test and it shows up here.',
@@ -230,7 +242,8 @@ export const en = {
   'profile.seePlans': 'See plans',
   'profile.remindersExpoGo':
     'Reminders don’t fire in Expo Go — they work in the installed app.',
-  'profile.youtubeFree': 'YouTube lessons stay free to open on every plan.',
+  'profile.resourcesNote':
+    'Every video we link to is free on YouTube itself. What a plan pays for is the roadmap — which one to open, and when.',
   'profile.policies':
     'Privacy policy · Terms · Refund policy · Content policy — added before the store listing.',
 
@@ -385,6 +398,16 @@ export const hi: Record<StringKey, string> = {
     'उसके बाद सब कुछ बंद हो जाएगा — वीडियो, नोट्स, अभ्यास और टेस्ट — जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है।',
   'plans.whatLockedNow':
     '— सब कुछ बंद है जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है। आपकी प्रगति सुरक्षित है।',
+  'plans.badgeMostComplete': 'सबसे पूरा',
+  'plans.basicFeature1': 'आपका पूरा रोडमैप और रोज़ की योजना',
+  'plans.basicFeature2': 'हर संसाधन — वीडियो, नोट्स, अभ्यास और टेस्ट',
+  'plans.basicFeature3': 'हर एक एक छोटे रिवॉर्डेड विज्ञापन के बाद खुलता है',
+  'plans.basicFeature4': 'प्रगति, स्ट्रीक और साप्ताहिक रिपोर्ट',
+  'plans.premiumFeature1': 'Basic का सब कुछ, और:',
+  'plans.premiumFeature2': 'कहीं भी कोई विज्ञापन नहीं',
+  'plans.premiumFeature3': 'अतिरिक्त नोट्स (OpenStax, Think Python)',
+  'plans.premiumFeature4': 'विस्तृत विश्लेषण और उन्नत रिपोर्ट',
+  'plans.premiumFeature5': 'पूरी अनुकूली पुनर्गणना',
   'plans.couponLabel': 'कोई कूपन है?',
   'plans.couponApply': 'लगाएँ',
   'plans.couponChecking': 'जाँच हो रही है…',
@@ -416,7 +439,7 @@ export const hi: Record<StringKey, string> = {
   'profile.deleteAccount': 'मेरा खाता मिटाएँ',
   'profile.about': 'के बारे में',
   'profile.aboutBody':
-    'FreeMentor मुफ़्त, सार्वजनिक संसाधनों से जोड़ता है। हम किसी की सामग्री कॉपी या री-होस्ट नहीं करते, और YouTube पाठ कभी विज्ञापन या पेवॉल के पीछे नहीं रखे जाते।',
+    'FreeMentor मुफ़्त, सार्वजनिक संसाधनों से जोड़ता है। हम किसी की सामग्री कॉपी या री-होस्ट नहीं करते — हर लिंक अपने मूल स्रोत पर खुलता है, जहाँ वह मुफ़्त मिलती रहती है।',
 
   'progress.title': 'प्रगति',
   'progress.thisWeek': 'इस हफ़्ते',
@@ -445,7 +468,7 @@ export const hi: Record<StringKey, string> = {
   'reports.tasksDone': 'पूरे किए काम',
   'reports.detailed': 'विस्तृत विश्लेषण',
   'reports.detailedBody':
-    'विषयवार स्कोर, कमज़ोर विषयों का विश्लेषण और निरंतरता के रुझान। आपकी साप्ताहिक रिपोर्ट हर प्लान पर मुफ़्त रहती है।',
+    'विषयवार स्कोर, कमज़ोर विषयों का विश्लेषण और निरंतरता के रुझान। ऊपर दी साप्ताहिक रिपोर्ट हर प्लान में शामिल है।',
   'reports.seePlans': 'प्लान देखें',
   'reports.catchUp': '60% से कम आने पर नई पढ़ाई से पहले एक कैच-अप ब्लॉक जुड़ जाता है।',
   'reports.noScores': 'टेस्ट के बाद अपना स्कोर डालिए, वह यहाँ दिखने लगेगा।',
@@ -477,7 +500,8 @@ export const hi: Record<StringKey, string> = {
   'profile.seePlans': 'प्लान देखें',
   'profile.remindersExpoGo':
     'Expo Go में रिमाइंडर नहीं आते — इंस्टॉल किए ऐप में आते हैं।',
-  'profile.youtubeFree': 'YouTube पाठ हर प्लान पर मुफ़्त खुलते रहते हैं।',
+  'profile.resourcesNote':
+    'हम जिस भी वीडियो से जोड़ते हैं वह YouTube पर मुफ़्त है। प्लान का भुगतान रोडमैप के लिए है — कौन सा खोलें, और कब।',
   'profile.policies':
     'प्राइवेसी पॉलिसी · शर्तें · रिफ़ंड पॉलिसी · कंटेंट पॉलिसी — स्टोर लिस्टिंग से पहले जोड़ी जाएँगी।',
   'dialog.resetTitle': 'यह रोडमैप रीसेट करें?',
@@ -630,6 +654,16 @@ export const hinglish: Record<StringKey, string> = {
     'Uske baad sab kuch lock ho jaayega — videos, notes, practice aur tests — jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai.',
   'plans.whatLockedNow':
     '— sab kuch lock hai jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai. Aapki progress safe hai.',
+  'plans.badgeMostComplete': 'Sabse poora',
+  'plans.basicFeature1': 'Aapka poora roadmap aur roz ka plan',
+  'plans.basicFeature2': 'Har resource — videos, notes, practice aur tests',
+  'plans.basicFeature3': 'Har ek chhote rewarded ad ke baad khulta hai',
+  'plans.basicFeature4': 'Progress, streak aur weekly report',
+  'plans.premiumFeature1': 'Basic ka sab kuch, aur:',
+  'plans.premiumFeature2': 'Kahin bhi koi ad nahin',
+  'plans.premiumFeature3': 'Extra notes (OpenStax, Think Python)',
+  'plans.premiumFeature4': 'Detailed analytics aur advanced reports',
+  'plans.premiumFeature5': 'Poori adaptive recalculation',
   'plans.couponLabel': 'Koi coupon hai?',
   'plans.couponApply': 'Apply karein',
   'plans.couponChecking': 'Check ho raha hai…',
@@ -661,7 +695,7 @@ export const hinglish: Record<StringKey, string> = {
   'profile.deleteAccount': 'Mera account delete karein',
   'profile.about': 'Ke baare mein',
   'profile.aboutBody':
-    'FreeMentor free, public resources se jodta hai. Hum kisi ka content copy ya re-host nahin karte, aur YouTube lessons kabhi ad ya paywall ke peeche nahin rakhe jaate.',
+    'FreeMentor free, public resources se jodta hai. Hum kisi ka content copy ya re-host nahin karte — har link apne mool source par khulta hai, jahan woh free milti rehti hai.',
 
   'progress.title': 'Progress',
   'progress.thisWeek': 'Is week',
@@ -690,7 +724,7 @@ export const hinglish: Record<StringKey, string> = {
   'reports.tasksDone': 'Poore kiye tasks',
   'reports.detailed': 'Detailed analytics',
   'reports.detailedBody':
-    'Subject-wise scores, weak-topic analysis aur consistency trends. Aapki weekly report har plan par free rehti hai.',
+    'Subject-wise scores, weak-topic analysis aur consistency trends. Upar di weekly report har plan mein shaamil hai.',
   'reports.seePlans': 'Plans dekhein',
   'reports.catchUp': '60% se kam aane par nayi padhai se pehle ek catch-up block jud jaata hai.',
   'reports.noScores': 'Test ke baad apna score daaliye, wo yahan dikhne lagega.',
@@ -723,7 +757,8 @@ export const hinglish: Record<StringKey, string> = {
   'profile.seePlans': 'Plans dekhein',
   'profile.remindersExpoGo':
     'Expo Go mein reminders nahin aate — install kiye app mein aate hain.',
-  'profile.youtubeFree': 'YouTube lessons har plan par free khulte rehte hain.',
+  'profile.resourcesNote':
+    'Hum jis bhi video se jodte hain woh YouTube par free hai. Plan ka payment roadmap ke liye hai — kaun sa kholein, aur kab.',
   'profile.policies':
     'Privacy policy · Terms · Refund policy · Content policy — store listing se pehle jodi jaayengi.',
   'dialog.resetTitle': 'Yeh roadmap reset karein?',

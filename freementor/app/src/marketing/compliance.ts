@@ -70,6 +70,21 @@ const RULES: Rule[] = [
     why: 'The resources are free; the roadmap is not. An unqualified "completely free" is misleading.',
   },
   {
+    name: 'unqualified-free-access',
+    // Added Oct 2026, after the locking model changed under copy that had
+    // been written for the old one. Until then the app opened every video on
+    // every plan, and four separate strings said so. Now a resource is free
+    // for three days and then it is not, so a claim of free access has to say
+    // WHERE it is free — "free on YouTube" is true, "free to open" is not.
+    //
+    // The inner lookahead is what makes "on" a qualifier only when it names a
+    // source: "free to open on YouTube" passes, "free to open on every plan"
+    // does not.
+    pattern:
+      /\bfree\s+to\s+(?:open|access|watch|use)\b(?!\s+(?:on|at|from|in)\s+(?!every\s+plan|any\s+plan|all\s+plans)\S)|\bfree\s+(?:on\s+every\s+plan|always|forever|for\s+lifetime)\b|\bnever\s+(?:be\s+)?(?:put\s+)?behind\s+(?:an?\s+)?(?:ads?\b|advert|paywall)/i,
+    why: 'Resources are free at their source, not inside the app — after the 3-day trial they lock until a plan is bought. A claim of free access must name where it is free.',
+  },
+  {
     name: 'fake-scarcity-price',
     pattern: /\b(special\s+price\s+(?:for\s+you|today)|price\s+(?:goes\s+up|increases)\s+(?:soon|tomorrow))\b/i,
     why: 'Invented price pressure is both false urgency and a misleading price claim.',

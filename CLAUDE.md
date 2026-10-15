@@ -63,6 +63,11 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   terms restrict charging for access to YouTube content — what is sold is the
   roadmap, and the videos remain free on YouTube itself — and marketing copy
   must no longer call the resources free "for lifetime" without qualification.)*
+  *(Copy brought into line Oct 2026: a claim of free access must now name
+  WHERE it is free. `marketing/compliance.ts` has an `unqualified-free-access`
+  rule — "free on YouTube" passes, "free to open" does not — and it runs over
+  every goal's copy **and the English string catalogue**, which is what the
+  reversal had missed.)*
 - **3-day free trial of Basic**, then one-time **Basic ₹599 / Premium ₹999** per roadmap, **lifetime** access. Switching goal = a new purchase.
 - **16+ only**; users under 18 need parent consent and get **non-personalised, G-rated** ads.
 - **Missed day → plan shifts forward**; recalculation starts from the next incomplete task; completed ticks are never changed.

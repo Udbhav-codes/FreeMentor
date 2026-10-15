@@ -78,8 +78,25 @@ describe('the compliance checker itself catches what it should', () => {
     ['Cheaper than Unacademy', 'disparagement'],
     ['FreeMentor is completely free', 'free-without-qualification'],
     ['Special price for you today', 'fake-scarcity-price'],
+    // The four shapes the Oct 2026 locking change left behind in real copy.
+    ['All YouTube lessons — free to open, always', 'unqualified-free-access'],
+    ['YouTube lessons stay free to open on every plan.', 'unqualified-free-access'],
+    ['YouTube lessons are never put behind an ad or a paywall.', 'unqualified-free-access'],
+    ['All study resources are free to open.', 'unqualified-free-access'],
   ])('flags %s', (text, rule) => {
     expect(checkCopy(text).map((v) => v.rule)).toContain(rule);
+  });
+
+  it('allows a free claim that names its source', () => {
+    // The distinction the rule exists to draw. These are all true.
+    for (const ok of [
+      'Every video stays free on YouTube itself.',
+      'The lessons are free on YouTube and the official sites.',
+      'Everything in this roadmap is public and free at its source.',
+      'Every resource we link to is free at its own source.',
+    ]) {
+      expect(checkCopy(ok).map((v) => v.rule), ok).not.toContain('unqualified-free-access');
+    }
   });
 
   it('passes copy that is merely confident', () => {
@@ -177,9 +194,29 @@ describe('trust and the free/paid boundary', () => {
     expect(copyFor('neet-ug').trust).toMatch(/never copy or re-host/i);
   });
 
-  it('repeats that videos stay free on every plan', () => {
+  // This test used to assert the opposite — /free to open on every plan/ —
+  // and so was actively holding a false claim in place after the Oct 2026
+  // locking change. It is inverted deliberately: in the app a resource is
+  // free for three days and then it is not, so the only true version of the
+  // claim names the source it is free AT.
+  it('says where a video is free, rather than claiming it is free in the app', () => {
     for (const id of ['jee-main', 'python', 'full-stack']) {
-      expect(copyFor(id).trust).toMatch(/free to open on every plan/i);
+      const trust = copyFor(id).trust;
+      expect(trust, id).toMatch(/free on YouTube itself/i);
+      expect(trust, id).not.toMatch(/on every plan/i);
+    }
+  });
+
+  it('claims free access nowhere without naming where it is free', () => {
+    // The rule this exercises is what would have caught the four strings the
+    // locking change left behind.
+    for (const entry of catalog.goals) {
+      for (const [field, text] of Object.entries(welcomeCopy(entry))) {
+        expect(
+          checkCopy(text).map((v) => v.rule),
+          `${entry.id}.${field}: "${text}"`,
+        ).not.toContain('unqualified-free-access');
+      }
     }
   });
 

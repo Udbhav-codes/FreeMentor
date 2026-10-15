@@ -10,6 +10,7 @@
 import { describe, expect, it } from 'vitest';
 import { catalogues, en, hi, hinglish, type StringKey } from '../strings.ts';
 import { LANGUAGES, fill, isLanguage, translate } from '../translate.ts';
+import { checkCopy } from '../../marketing/compliance.ts';
 
 const keys = Object.keys(en) as StringKey[];
 const placeholders = (s: string) => (s.match(/\{(\w+)\}/g) ?? []).sort();
@@ -166,5 +167,42 @@ describe('the brand inside a translated sentence', () => {
     for (const catalogue of [en, hi, hinglish]) {
       expect(catalogue['signIn.title']).toContain('FreeMentor');
     }
+  });
+});
+
+describe('the catalogues obey the advertising rules', () => {
+  // Added Oct 2026. The locking change was applied to the gate, the library,
+  // the validator and the marketing module — and missed two strings in here,
+  // which went on telling learners that "YouTube lessons stay free to open on
+  // every plan" after they had stopped doing so. src/marketing/ had tests
+  // over every goal's copy; the UI catalogue had none, so the claims that
+  // reach the most screens were the least checked.
+  //
+  // Only `en` can be matched by English-language regexes, which is a real
+  // limit worth stating rather than papering over: a false claim introduced
+  // only in the Hindi catalogue would not be caught here. `en` is the source
+  // of truth that the other two are translated from, so this is where such a
+  // claim would enter.
+  it('breaks no advertising rule in any English string', () => {
+    const failures: string[] = [];
+    for (const key of keys) {
+      for (const violation of checkCopy(en[key])) {
+        failures.push(`${key}: [${violation.rule}] "${violation.match}" — ${en[key]}`);
+      }
+    }
+    expect(failures, failures.join('\n')).toEqual([]);
+  });
+
+  it('describes Basic as reaching every resource through an ad', () => {
+    // The paywall's own feature list, which must agree with
+    // billing/entitlement.ts: Basic opens everything, videos included, after
+    // a rewarded ad. It advertised the opposite until this was fixed.
+    const basic = [
+      en['plans.basicFeature2'],
+      en['plans.basicFeature3'],
+    ].join(' ');
+    expect(basic).toMatch(/videos/i);
+    expect(basic).toMatch(/rewarded ad/i);
+    expect(basic).not.toMatch(/free to open|always/i);
   });
 });

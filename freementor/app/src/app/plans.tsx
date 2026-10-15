@@ -5,8 +5,12 @@
  * validation arrive at M5; the buttons say so rather than pretending.
  *
  * Two rules are visible here and are not negotiable:
- *   - YouTube lessons stay free to open on EVERY plan, and the screen says so
- *     out loud (YouTube API Services policy).
+ *   - The feature lists must match what `billing/entitlement.ts` actually
+ *     grants. This screen is where money changes hands, so a feature list
+ *     describing a different product is the single most expensive kind of
+ *     wrong copy — and it WAS wrong between Oct 2026 and this fix, still
+ *     advertising "All YouTube lessons — free to open, always" after the
+ *     owner had locked them.
  *   - The strike-through "was" prices are only shown if they were genuinely
  *     charged before (Indian consumer-protection guidance on dark patterns,
  *     §10.4). They are off by default until you confirm they were real.
@@ -30,6 +34,13 @@ import { validateCoupon } from '../api/billing.ts';
 import { describeTrial } from '../billing/trial.ts';
 import { useEntitlement } from '../billing/useEntitlement.ts';
 
+/**
+ * The feature lists are string KEYS, not sentences: this is the purchase
+ * screen, and a learner reading the app in Hindi was being sold in English.
+ * Numbered keys rather than an array in the catalogue, because the catalogues
+ * are typed `Record<StringKey, string>` — which is what makes a missing
+ * translation a compile error.
+ */
 const PLANS = [
   {
     id: 'basic',
@@ -37,10 +48,10 @@ const PLANS = [
     price: rupees(PRICES.basic),
     was: rupees(PREVIOUS_PRICES.basic),
     features: [
-      'Your full roadmap and daily plan',
-      'All YouTube lessons — free to open, always',
-      'Notes and tests after a short rewarded ad',
-      'Progress, streak and weekly report',
+      'plans.basicFeature1',
+      'plans.basicFeature2',
+      'plans.basicFeature3',
+      'plans.basicFeature4',
     ],
   },
   {
@@ -48,13 +59,13 @@ const PLANS = [
     name: 'Premium',
     price: rupees(PRICES.premium),
     was: rupees(PREVIOUS_PRICES.premium),
-    badge: 'Most complete',
+    badge: 'plans.badgeMostComplete',
     features: [
-      'Everything in Basic, plus:',
-      'No ads anywhere',
-      'Extra notes (OpenStax, Think Python)',
-      'Detailed analytics and advanced reports',
-      'Full adaptive recalculation',
+      'plans.premiumFeature1',
+      'plans.premiumFeature2',
+      'plans.premiumFeature3',
+      'plans.premiumFeature4',
+      'plans.premiumFeature5',
     ],
   },
 ] as const;
@@ -152,7 +163,7 @@ export default function Plans() {
             >
               {'badge' in option && option.badge ? (
                 <View style={{ marginBottom: theme.spacing.sm }}>
-                  <Pill tone="accent">{option.badge}</Pill>
+                  <Pill tone="accent">{t(option.badge)}</Pill>
                 </View>
               ) : null}
 
@@ -175,7 +186,7 @@ export default function Plans() {
               <View style={{ marginTop: theme.spacing.md, gap: 4 }}>
                 {option.features.map((feature) => (
                   <Txt key={feature} variant="small" color="secondary">
-                    · {feature}
+                    · {t(feature)}
                   </Txt>
                 ))}
               </View>

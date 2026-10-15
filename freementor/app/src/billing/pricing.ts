@@ -32,10 +32,15 @@ export function rupees(amount: number): string {
  * marketing (see the tagline note at the top of the plan). Not optional
  * copy — it is what keeps "free" honest, since the resources are free but the
  * roadmap is not.
+ *
+ * The first sentence used to read "All study resources are free to open",
+ * which was true of the app until Oct 2026 and is now true only of the
+ * sources. Where a resource is free has to be said explicitly, because in
+ * FreeMentor it is free for three days and then it is not.
  */
 export const FREE_DISCLOSURE =
-  `All study resources are free to open. Your personal roadmap and tracking are ` +
-  `free for 3 days, then Basic ${rupees(PRICES.basic)} or Premium ` +
+  `Every resource we link to is free at its own source. Your personal roadmap ` +
+  `and tracking are free for 3 days, then Basic ${rupees(PRICES.basic)} or Premium ` +
   `${rupees(PRICES.premium)} — a one-time payment, inclusive of taxes, with lifetime ` +
   `access to that roadmap. No subscription, no renewal.`;
 
