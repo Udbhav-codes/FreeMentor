@@ -25,6 +25,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app import billing, play
+from app import limits
 from app.auth import current_user
 from app.config import Settings, get_settings
 from app.db import get_session
@@ -49,19 +50,25 @@ class CouponOut(BaseModel):
     plan: str
 
 
-@router.post("/coupons/validate", response_model=CouponOut)
+@router.post(
+    "/coupons/validate",
+    response_model=CouponOut,
+    # A coupon is worth up to 90%% off and the code format is a known shape,
+    # so this endpoint is a guessing oracle. See app/limits.py.
+    dependencies=[Depends(limits.limit(limits.COUPON_VALIDATE))],
+)
 async def validate_coupon(
     payload: CouponIn,
     user: User = Depends(current_user),
     session: AsyncSession = Depends(get_session),
 ) -> CouponOut:
     if payload.plan not in billing.PLANS:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown plan.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Unknown plan.")
 
     code = billing.normalise_code(payload.code)
     if not billing.check_code_format(code):
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             billing.COUPON_MESSAGES[billing.CouponProblem.MALFORMED],
         )
 
@@ -121,7 +128,13 @@ class EntitlementOut(BaseModel):
     order_id: str | None = None
 
 
-@router.post("/purchases", response_model=EntitlementOut, status_code=201)
+@router.post(
+    "/purchases",
+    response_model=EntitlementOut,
+    status_code=201,
+    # Calls out to Google Play, where the quota is ours to protect.
+    dependencies=[Depends(limits.limit(limits.PURCHASE))],
+)
 async def record_purchase(
     payload: PurchaseIn,
     user: User = Depends(current_user),
@@ -131,7 +144,7 @@ async def record_purchase(
     plan = billing.plan_from_product(payload.product_id)
     if plan is None:
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             f"We do not sell '{payload.product_id}'.",
         )
 

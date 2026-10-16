@@ -18,7 +18,7 @@ import argparse
 import time
 import uuid
 
-from jose import jwt
+import jwt
 
 from app.config import get_settings
 

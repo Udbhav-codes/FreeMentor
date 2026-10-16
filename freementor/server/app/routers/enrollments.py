@@ -62,7 +62,7 @@ async def start(
     session: AsyncSession = Depends(get_session),
 ) -> EnrollmentOut:
     if any(minutes < 0 for minutes in payload.minutes_by_weekday.values()):
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Negative study minutes.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Negative study minutes.")
 
     # One goal at a time (§2). The old one is ARCHIVED, never deleted —
     # decision #6 keeps its progress viewable.

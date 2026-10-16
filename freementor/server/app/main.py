@@ -10,6 +10,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from app import security
 from app.config import get_settings
 from app.db import create_all
 from app.routers import account, admin, billing, catalog, enrollments, media, progress, web
@@ -26,11 +27,23 @@ async def lifespan(app: FastAPI):
     yield
 
 
+#: Whether the interactive schema is published. On in development because it
+#: is how the API gets explored; off in production, where it would enumerate
+#: every route and field for anybody who asked. Overridable with
+#: EXPOSE_API_DOCS for a staging box somebody needs to poke at.
+_docs = settings.expose_api_docs and not settings.is_production
+
 app = FastAPI(
     title="FreeMentor API",
     version="0.1.0",
     lifespan=lifespan,
+    docs_url="/docs" if _docs else None,
+    redoc_url="/redoc" if _docs else None,
+    openapi_url="/openapi.json" if _docs else None,
 )
+
+# CORS (an explicit allowlist, empty by default) and the response headers.
+security.install(app, settings)
 
 app.include_router(account.router)
 app.include_router(admin.router)

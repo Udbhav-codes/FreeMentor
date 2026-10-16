@@ -68,7 +68,7 @@ async def avatar_upload_url(
 ) -> UploadTicket:
     if content_type not in ALLOWED:
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             f"Photos must be {', '.join(sorted(ALLOWED))}.",
         )
 

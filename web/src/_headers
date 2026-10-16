@@ -1,7 +1,22 @@
-# Cloudflare Pages / Netlify read this. Modest hardening for pages that carry
-# a sign-in: no framing, no MIME sniffing, no referrer leakage.
+# Cloudflare Pages and Netlify read this file. Note it is NOT a substitute for
+# app/security.py — the API serves the deletion page too, for local
+# development, and gets its headers from there. Both exist; keep them aligned.
+#
+# The CSP matters most on delete-account.html, which is the only page that
+# runs script and the only one that carries a sign-in. 'unsafe-inline' is
+# deliberate rather than pending cleanup: that page is a single
+# self-contained file with an inline <script> and <style>, which is precisely
+# what lets it be dropped on any static host with no build step. Hashing the
+# inline blocks would mean a build, and the page's whole value is not needing
+# one.
+#
+# connect-src names the Supabase project so Auth and REST work, and nothing
+# else. frame-ancestors repeats X-Frame-Options for browsers that prefer CSP.
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://demkvsslqfkreicbjjmm.supabase.co; form-action 'none'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'
+  Cross-Origin-Opener-Policy: same-origin

@@ -36,6 +36,18 @@ class Settings(BaseSettings):
     # a missing setting must never mean "everyone".
     admin_emails: str = ""
 
+    # Browser origins allowed to call this API, comma-separated. Empty means
+    # none, which sends no CORS headers at all — correct for the mobile app,
+    # which is native fetch and not subject to CORS. The admin panel's origin
+    # goes here when it is deployed. See app/security.py: there is no wildcard
+    # path, deliberately.
+    cors_origins: str = ""
+
+    # Serve /docs, /redoc and /openapi.json. Off in production: the schema
+    # enumerates every route and field for anybody who asks, which is free
+    # reconnaissance for no benefit once the app is built against it.
+    expose_api_docs: bool = True
+
     youtube_api_key: str = ""
     google_play_service_account_json: str = ""
     android_package_name: str = "com.freementor.app"
@@ -95,6 +107,16 @@ class Settings(BaseSettings):
                 "OTP_ECHO is on in production. That returns the consent code "
                 "in the API response, so anyone could approve themselves. "
                 "Set OTP_ECHO=false and configure a real sender."
+            )
+        if "*" in self.cors_origins:
+            # Reachable only by someone typing it into the environment, which
+            # is exactly when it needs refusing. With allow_credentials a
+            # wildcard is rejected by browsers anyway, so the "fix" that
+            # follows is usually origin reflection — worse than the error.
+            raise RuntimeError(
+                "CORS_ORIGINS contains '*'. List the admin panel's exact "
+                "origin instead; a wildcard with credentials is both refused "
+                "by browsers and unsafe."
             )
 
 

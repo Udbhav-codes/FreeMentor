@@ -29,6 +29,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import limits
 from app.auth import current_user
 from app.db import get_session
 from app.models import (
@@ -125,7 +126,13 @@ async def _owned_enrollments(session: AsyncSession, user: User) -> set[str]:
     return {row[0] for row in rows}
 
 
-@router.post("", response_model=SyncResult)
+@router.post(
+    "",
+    response_model=SyncResult,
+    # 500 operations per request; a loop here is the cheapest way to make the
+    # database work hard.
+    dependencies=[Depends(limits.limit(limits.SYNC))],
+)
 async def sync(
     payload: SyncRequest,
     user: User = Depends(current_user),

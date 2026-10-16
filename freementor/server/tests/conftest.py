@@ -9,10 +9,11 @@ from __future__ import annotations
 
 import os
 import uuid
-from collections.abc import AsyncIterator
+from collections.abc import AsyncIterator, Iterator
 
 import pytest
 import pytest_asyncio
+from fastapi.routing import APIRoute
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
@@ -31,9 +32,57 @@ os.environ["SUPABASE_JWT_SECRET"] = ""
 os.environ["SUPABASE_SERVICE_KEY"] = ""
 os.environ["SUPABASE_URL"] = ""
 
+from app import limits  # noqa: E402
 from app.db import get_session  # noqa: E402
 from app.main import app  # noqa: E402
 from app.models import Base  # noqa: E402
+
+
+def all_api_routes() -> list[APIRoute]:
+    """Every APIRoute the app serves, including those inside included routers.
+
+    `app.routes` used to contain them flattened. FastAPI 1.x (starlette 1.x)
+    keeps an included router as a single `_IncludedRouter` wrapper instead, so
+    a plain scan of `app.routes` finds **zero** `/admin` routes — which is how
+    two "every admin endpoint is behind the check" tests came to fail on the
+    upgrade. They failed rather than passing vacuously only because each one
+    asserted a minimum count first; without that guard the upgrade would have
+    quietly disarmed the one test that proves admin routes are protected.
+
+    Keep that guard in any test built on this helper.
+    """
+    seen: dict[int, APIRoute] = {}
+
+    def walk(routes: object) -> None:
+        for route in routes or []:  # type: ignore[union-attr]
+            if isinstance(route, APIRoute):
+                seen[id(route)] = route
+            inner = getattr(route, "original_router", None)
+            if inner is not None:
+                walk(getattr(inner, "routes", []))
+
+    walk(app.routes)
+    return list(seen.values())
+
+
+@pytest.fixture(autouse=True)
+def fresh_rate_limits() -> Iterator[None]:
+    """Clears the rate-limit counters around every test.
+
+    `app.limits.window` is a process-global on purpose — that is what an
+    in-process limiter is — so without this, counts accumulate across the
+    whole session. The symptom when it was missing was eight consent tests and
+    five export tests failing with 429 instead of their expected status,
+    because EXPORT and CONSENT_REQUEST are limited per *hour* and every test
+    authenticates as the same learner.
+
+    Autouse rather than opt-in: a test that hits a limited route without
+    knowing it is limited should still pass, and there is no reason for any
+    test to inherit another's counters.
+    """
+    limits.window.forget()
+    yield
+    limits.window.forget()
 
 
 @pytest_asyncio.fixture

@@ -38,8 +38,6 @@ from app.config import Settings, get_settings
 from app.db import get_session
 from app.models import AuditLog, Coupon, Enrollment, Goal, LibraryVersion, Purchase, User
 
-router = APIRouter(prefix="/admin", tags=["admin"])
-
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 DIGITS = "0123456789"
 
@@ -48,7 +46,11 @@ async def current_admin(
     principal: Principal = Depends(current_principal),
     settings: Settings = Depends(get_settings),
 ) -> Principal:
-    """Every endpoint here depends on this. Nothing else grants admin."""
+    """Every endpoint here depends on this. Nothing else grants admin.
+
+    Defined above `router` because the router declares it as a dependency, so
+    the name has to exist by then.
+    """
     allowed = settings.admin_email_set
     if not allowed:
         raise HTTPException(
@@ -60,6 +62,28 @@ async def current_admin(
         # admin is not something to confirm to someone who is not one.
         raise HTTPException(status.HTTP_403_FORBIDDEN, "Not an admin account.")
     return principal
+
+
+#: The admin check is declared ON THE ROUTER, not only per route.
+#:
+#: All seven routes below also take `admin: Principal = Depends(current_admin)`
+#: because they use the identity for the audit log, and that is correct. But a
+#: per-route check is a convention, and the eighth route somebody adds in a
+#: hurry is the one that forgets it — a route serving every learner's email
+#: address to anybody holding a token. Declared here it is structural: a new
+#: route is covered whether or not its author thought about it.
+#:
+#: FastAPI caches a dependency per request, so appearing both here and in a
+#: signature resolves it once and costs nothing.
+#:
+#: tests/test_admin_auth.py asserts every /admin route rejects a non-admin by
+#: enumerating the live route table, rather than a hand-written list that
+#: would go stale in the same way.
+router = APIRouter(
+    prefix="/admin",
+    tags=["admin"],
+    dependencies=[Depends(current_admin)],
+)
 
 
 async def audit(
@@ -165,21 +189,21 @@ async def create_coupon(
 ) -> CouponRow:
     if payload.discount_tier not in billing.DISCOUNT_TIERS:
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             f"Tier must be one of {', '.join(str(t) for t in billing.DISCOUNT_TIERS)}. "
             "Each maps to a Play product that has to already exist.",
         )
 
     if payload.valid_from and payload.valid_to and payload.valid_to <= payload.valid_from:
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             "The end of the window must be after its start.",
         )
 
     code = billing.normalise_code(payload.code) if payload.code else generate_code()
     if not billing.check_code_format(code):
         raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
             billing.COUPON_MESSAGES[billing.CouponProblem.MALFORMED],
         )
 
@@ -227,7 +251,7 @@ async def update_coupon(
     # 'deleted' is allowed but keeps the row: usage history has to survive, and
     # the purchases that used it carry a foreign key to it.
     if payload.status not in {"active", "archived", "expired", "deleted"}:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown status.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Unknown status.")
 
     coupon = (
         await session.execute(select(Coupon).where(Coupon.id == coupon_id))

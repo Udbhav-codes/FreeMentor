@@ -10,6 +10,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app import export as data_export
+from app import limits
 from app import otp
 from app.auth import current_user
 from app.config import Settings, get_settings
@@ -115,7 +116,7 @@ async def update_me(
         user.qualification = payload.qualification
     if payload.language is not None:
         if payload.language not in {"en", "hi", "hi-en"}:
-            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown language.")
+            raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Unknown language.")
         user.language = payload.language
 
     await session.commit()
@@ -136,7 +137,14 @@ class ConsentRequestOut(BaseModel):
     demo_code: str | None = None
 
 
-@router.post("/consent/request", response_model=ConsentRequestOut, status_code=202)
+@router.post(
+    "/consent/request",
+    response_model=ConsentRequestOut,
+    status_code=202,
+    # otp.py already stops hammering ONE parent with its 60s resend cooldown.
+    # This stops cycling through contacts, i.e. using us to send mail.
+    dependencies=[Depends(limits.limit(limits.CONSENT_REQUEST))],
+)
 async def request_consent(
     payload: ConsentRequest,
     user: User = Depends(current_user),
@@ -152,13 +160,13 @@ async def request_consent(
     if not user.is_minor:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "This account does not need consent.")
     if payload.method not in {"email", "sms"}:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Unknown method.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Unknown method.")
 
     contact = payload.parent_contact.strip()
     if len(contact) < 5:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Contact looks incomplete.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Contact looks incomplete.")
     if payload.method == "email" and "@" not in contact:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "That is not an email address.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "That is not an email address.")
 
     existing = await _consent(session, user)
 
@@ -239,7 +247,12 @@ async def confirm_consent(
     return await _profile_out(session, user)
 
 
-@router.get("/export")
+@router.get(
+    "/export",
+    # A query per enrollment and everything we hold, serialised: the most
+    # expensive authenticated call in the API.
+    dependencies=[Depends(limits.limit(limits.EXPORT))],
+)
 async def export_me(
     user: User = Depends(current_user),
     session: AsyncSession = Depends(get_session),

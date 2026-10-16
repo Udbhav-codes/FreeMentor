@@ -8,21 +8,21 @@ version = "0.1.0"
 description = "FreeMentor backend — auth, library delivery, progress sync, purchases."
 requires-python = ">=3.11"
 dependencies = [
-  "fastapi==0.115.6",
+  "fastapi==0.143.2",
   "uvicorn[standard]==0.34.0",
   "pydantic==2.10.4",
   "pydantic-settings==2.7.0",
   "sqlalchemy[asyncio]==2.0.36",
   "greenlet==3.1.1",
   "asyncpg==0.30.0",
-  "python-jose[cryptography]==3.3.0",
+  "PyJWT[crypto]==2.15.1",
   "httpx==0.28.1",
 ]
 
 [project.optional-dependencies]
 dev = [
-  "pytest==8.3.4",
-  "pytest-asyncio==0.25.0",
+  "pytest==9.1.1",
+  "pytest-asyncio==1.4.0",
   "aiosqlite==0.20.0",
   "ruff==0.8.4",
 ]

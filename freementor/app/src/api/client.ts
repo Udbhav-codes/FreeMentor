@@ -14,16 +14,36 @@ export const apiBaseUrl = process.env.EXPO_PUBLIC_API_URL ?? '';
 export const apiConfigured = apiBaseUrl.length > 0;
 
 /**
+ * Whether a hardcoded fallback token may be used at all.
+ *
+ * `__DEV__` is substituted by Metro as a literal `false` in a release bundle,
+ * so the minifier drops the branch rather than shipping it — the same
+ * mechanism auth/devBypass.ts relies on, and written the same way here on
+ * purpose.
+ *
+ * This guard was missing. `EXPO_PUBLIC_*` variables are inlined into the
+ * bundle at build time, so a release built on a machine that happened to have
+ * EXPO_PUBLIC_DEV_TOKEN set would have shipped a real bearer token inside the
+ * APK and sent it on every API call — for whoever's account minted it. It was
+ * never set in any build we made, so nothing shipped; the hole was that
+ * nothing stopped it. EXPO_PUBLIC_DEV_SKIP_AUTH two files away had this
+ * covered and documented, which is why the gap is worth naming rather than
+ * quietly closing.
+ */
+const devTokenAllowed = __DEV__;
+
+/**
  * The signed-in learner's access token.
  *
- * Falls back to EXPO_PUBLIC_DEV_TOKEN so the API can be exercised against a
- * server in local mode, but a real session always wins. Null when the learner
- * is not signed in — including under the development sign-in bypass, which
- * has no token by design.
+ * Falls back to EXPO_PUBLIC_DEV_TOKEN **in development only**, so the API can
+ * be exercised against a server in local mode. A real session always wins.
+ * Null when the learner is not signed in — including under the development
+ * sign-in bypass, which has no token by design.
  */
 export async function authToken(): Promise<string | null> {
   const token = await accessToken().catch(() => null);
-  return token ?? process.env.EXPO_PUBLIC_DEV_TOKEN ?? null;
+  if (token) return token;
+  return devTokenAllowed ? (process.env.EXPO_PUBLIC_DEV_TOKEN ?? null) : null;
 }
 
 export async function api(path: string, init: RequestInit = {}): Promise<Response> {

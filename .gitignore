@@ -38,6 +38,11 @@ coverage/
 
 # python build artefacts
 *.egg-info/
+__pycache__/
+*.py[cod]
+.venv/
+# the local-mode SQLite database (rebuilt on boot; can hold real test data)
+freementor-local.db
 build/
 dist/
 

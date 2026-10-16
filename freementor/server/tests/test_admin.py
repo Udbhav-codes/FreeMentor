@@ -17,7 +17,7 @@ from sqlalchemy import select
 from app.config import Settings, get_settings
 from app.main import app
 from app.models import AuditLog, Coupon
-from tests.conftest import auth
+from tests.conftest import all_api_routes, auth
 
 ADMIN = "boss@freementor.app"
 
@@ -99,7 +99,14 @@ class TestAccess:
         self, client: AsyncClient
     ) -> None:
         # Guards against a new endpoint being added without the dependency.
-        paths = [r.path for r in app.routes if getattr(r, "path", "").startswith("/admin")]
+        #
+        # Was a direct scan of `app.routes`, which FastAPI 1.x broke: included
+        # routers are no longer flattened there, so this found zero paths. The
+        # `>= 7` assertion below is the only reason that surfaced as a failure
+        # rather than as a test that passes while checking nothing.
+        paths = [
+            r.path for r in all_api_routes() if r.path.startswith("/admin")
+        ]
         assert len(paths) >= 7
         with Override(as_admin()):
             for path in paths:

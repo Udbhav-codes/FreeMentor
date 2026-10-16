@@ -39,10 +39,28 @@ PAGES = [
 
 def inline(text: str) -> str:
     """Escapes, then applies the inline marks. Order matters: code first, so
-    a backtick span containing an asterisk is not mangled by the bold rule."""
-    out = html.escape(text, quote=False)
+    a backtick span containing an asterisk is not mangled by the bold rule.
+
+    `quote=True` is load-bearing, not tidiness. With `quote=False` a double
+    quote survived escaping and the link rule below dropped it straight into
+    an href attribute, so this markdown:
+
+        [click](https://a" onmouseover="alert(1))
+
+    produced `<a href="https://a" onmouseover="alert(1">click</a>` — a live
+    event handler on a page that carries a Supabase sign-in. The only input
+    today is `docs/legal/*.md`, which we write ourselves, so nothing was
+    exploitable; it would have become exploitable the moment any text we did
+    not author passed through here, which is a bad thing to rely on noticing.
+
+    The URL pattern already requires `https?://`, so `javascript:` was never
+    reachable. Raw HTML was already escaped. This was the one hole.
+    """
+    out = html.escape(text, quote=True)
     out = re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
-    out = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2">\1</a>', out)
+    # The URL cannot contain a quote: &quot; by now, and " is excluded anyway
+    # so a malformed link fails to match rather than half-matching.
+    out = re.sub(r"\[([^\]]+)\]\((https?://[^)\s\"']+)\)", r'<a href="\2">\1</a>', out)
     out = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", out)
     out = re.sub(r"(?<![\w*])\*([^*]+)\*(?![\w*])", r"<em>\1</em>", out)
     return out
