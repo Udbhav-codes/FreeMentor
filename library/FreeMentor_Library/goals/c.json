@@ -1,3202 +1,3203 @@
 {
-  "schema_version": "1.0",
-  "goal": {
-    "id": "c",
-    "name": "C",
-    "category": "Programming Languages",
-    "group": "Languages",
-    "type": "language",
-    "version": "2026.3",
-    "valid_for": "Standard C (C17/C23) with GCC or Clang",
-    "last_updated": "2026-10-08",
-    "official_url": "https://en.cppreference.com/w/c",
-    "languages": [
-      "en",
-      "hi"
-    ],
-    "video_language_note": "English: Bro Code's short topic videos and others. Hindi: CodeWithHarry topic videos, or the matching section of his full course.",
-    "career_outcomes": [
-      "Write, compile and debug C programs",
-      "Use pointers, dynamic memory, structs and files safely",
-      "Build linked lists, stacks and queues",
-      "Organise multi-file projects with make",
-      "Foundation for C++, DSA, embedded and systems roles"
-    ],
-    "resource_policy": "Links only to free, legal sources (official docs, open-licence books, reputable free platforms, public YouTube videos). No copyrighted material re-hosted. YouTube videos are never paywalled or ad-gated.",
-    "estimated_hours": {
-      "content": 134,
-      "mocks_and_milestones": 0,
-      "spaced_revision_allowance": 16,
-      "total": 150,
-      "note": "Beginner to job-ready planning estimate. Video minutes are estimates until the link checker fills real durations (+15% rule applied in-app)."
-    },
-    "reviewed_by": null
-  },
-  "scheduler_hints": {
-    "video_time_multiplier": 1.15,
-    "round_up_to_minutes": 5,
-    "warmup_recall_minutes": 10,
-    "focus_block_minutes": 25,
-    "break_minutes": 5,
-    "spaced_review_offsets_days": [
-      1,
-      3,
-      7,
-      21,
-      45
-    ],
-    "confidence_to_next_review_days": {
-      "need_revision": 1,
-      "little_afraid": 2,
-      "confident": 4,
-      "all_cleared": 7,
-      "mastered": 21
-    },
-    "weekly_pattern": {
-      "new_content_days": 5,
-      "mixed_practice_and_weekly_test_days": 1,
-      "light_revision_or_rest_days": 1
-    },
-    "rest_day_limits": {
-      "per_week": 1,
-      "per_month": 4
-    },
-    "interleave_by": "subject",
-    "reserve_final_fraction_for_mocks_and_revision": 0.15,
-    "mastery_gate": {
-      "weekly_test_min_score_pct": 60,
-      "remediation_block_minutes": 45
-    },
-    "missed_day_policy": "shift_forward",
-    "recalculate_from": "next_incomplete_task"
-  },
-  "phases": [
-    {
-      "id": "c-p1",
-      "order": 1,
-      "name": "C Basics",
-      "topic_ids": [
-        "c-setup",
-        "c-variables",
-        "c-io-operators",
-        "c-conditions",
-        "c-loops",
-        "proj-c-games"
-      ]
-    },
-    {
-      "id": "c-p2",
-      "order": 2,
-      "name": "Functions, Arrays & Strings",
-      "topic_ids": [
-        "c-functions",
-        "c-recursion-scope",
-        "c-arrays",
-        "c-strings",
-        "proj-c-marks"
-      ]
-    },
-    {
-      "id": "c-p3",
-      "order": 3,
-      "name": "Pointers, Memory, Structs & Files",
-      "topic_ids": [
-        "c-pointers",
-        "c-memory",
-        "c-structs",
-        "c-files",
-        "c-preprocessor-bits",
-        "c-function-pointers",
-        "proj-c-contacts"
-      ]
-    },
-    {
-      "id": "c-p4",
-      "order": 4,
-      "name": "Data Structures, Tools & Final Project",
-      "topic_ids": [
-        "c-linked-list",
-        "c-stack-queue",
-        "c-trees",
-        "c-sort-search",
-        "c-tools",
-        "proj-c-final"
-      ]
-    }
+ "schema_version": "1.0",
+ "goal": {
+  "id": "c",
+  "name": "C",
+  "category": "Programming Languages",
+  "group": "Languages",
+  "type": "language",
+  "version": "2026.4",
+  "valid_for": "Standard C (C17/C23) with GCC or Clang",
+  "last_updated": "2026-10-08",
+  "official_url": "https://en.cppreference.com/w/c",
+  "languages": [
+   "en",
+   "hi"
   ],
-  "topics": [
-    {
-      "id": "c-setup",
-      "subject": "C",
-      "title": "Setup: Compiler, VS Code & Your First C Program",
-      "phase": 1,
-      "order": 1,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 160,
-      "blocks": [
-        {
-          "id": "c-setup-learn",
-          "type": "learn",
-          "title": "Watch: Setup: Compiler, VS Code & Your First C Program",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "C tutorial for beginners ⚙️",
-              "url": "https://www.youtube.com/watch?v=nrbBmoINqtk",
-              "youtube_id": "nrbBmoINqtk",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
-              "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
-              "youtube_id": "ZSPZob_1TOk",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Hindi: watch the introduction & setup section of the full course."
-        },
-        {
-          "id": "c-setup-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide to C – Hello, World!",
-              "url": "https://beej.us/guide/bgc/html/split/hello-world.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Hello, World! (interactive)",
-              "url": "https://www.learn-c.org/en/Hello%2C_World%21",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-setup-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Hello World",
-              "url": "https://exercism.org/tracks/c/exercises/hello-world",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-setup-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Which function does every C program start from?",
-          "a": "main()"
-        },
-        {
-          "q": "What does #include <stdio.h> provide?",
-          "a": "Standard input/output functions like printf"
-        },
-        {
-          "q": "Command to compile hello.c with GCC?",
-          "a": "gcc hello.c -o hello"
-        }
-      ]
-    },
-    {
-      "id": "c-variables",
-      "subject": "C",
-      "title": "Variables, Data Types & Constants",
-      "phase": 1,
-      "order": 2,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-variables-learn",
-          "type": "learn",
-          "title": "Watch: Variables, Data Types & Constants",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Learn C programming variables easy! ❎",
-              "url": "https://www.youtube.com/watch?v=WrFEtUzVcnw",
-              "youtube_id": "WrFEtUzVcnw",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
-              "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
-              "youtube_id": "ZSPZob_1TOk",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-variables-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Variables and Statements",
-              "url": "https://beej.us/guide/bgc/html/split/variables-and-statements.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Variables and Types",
-              "url": "https://www.learn-c.org/en/Variables_and_Types",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-variables-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Difference of Squares",
-              "url": "https://exercism.org/tracks/c/exercises/difference-of-squares",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-variables-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Format specifier for an int in printf?",
-          "a": "%d"
-        },
-        {
-          "q": "Typical size of int on modern PCs?",
-          "a": "4 bytes"
-        },
-        {
-          "q": "Keyword to make a variable read-only?",
-          "a": "const"
-        }
-      ]
-    },
-    {
-      "id": "c-io-operators",
-      "subject": "C",
-      "title": "Input/Output (printf, scanf) & Operators",
-      "phase": 1,
-      "order": 3,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 155,
-      "blocks": [
-        {
-          "id": "c-io-operators-learn",
-          "type": "learn",
-          "title": "Watch: Input/Output (printf, scanf) & Operators",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Learn C arithmetic operators in 6 minutes! ➗",
-              "url": "https://www.youtube.com/watch?v=4WMRnTfhQfU",
-              "youtube_id": "4WMRnTfhQfU",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Operators In C: C Tutorial In Hindi #7",
-              "url": "https://www.youtube.com/watch?v=V4Wwuu05_t4",
-              "youtube_id": "V4Wwuu05_t4",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-io-operators-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Operators and Expressions",
-              "url": "https://beej.us/guide/bgc/html/split/variables-and-statements.html#operators-and-expressions",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "cppreference – C Operator Precedence",
-              "url": "https://en.cppreference.com/w/c/language/operator_precedence",
-              "lang": "en",
-              "provider": "en.cppreference.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "extra",
-              "title": "Bro Code – C user input ⌨️ (extra video)",
-              "url": "https://www.youtube.com/watch?v=Ws-mVAJDFAw",
-              "lang": "en",
-              "provider": "www.youtube.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-io-operators-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Grains",
-              "url": "https://exercism.org/tracks/c/exercises/grains",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-io-operators-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Why does scanf need &x?",
-          "a": "It needs the address of x to store the value"
-        },
-        {
-          "q": "Result of 7 / 2 with ints?",
-          "a": "3 (integer division)"
-        },
-        {
-          "q": "What does % give?",
-          "a": "The remainder, e.g. 7 % 2 = 1"
-        }
-      ]
-    },
-    {
-      "id": "c-conditions",
-      "subject": "C",
-      "title": "Decisions: if, else if, switch & Logical Operators",
-      "phase": 1,
-      "order": 4,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 155,
-      "blocks": [
-        {
-          "id": "c-conditions-learn",
-          "type": "learn",
-          "title": "Watch: Decisions: if, else if, switch & Logical Operators",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "If statements are easy! 🤔",
-              "url": "https://www.youtube.com/watch?v=LFE0yibJTDk",
-              "youtube_id": "LFE0yibJTDk",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Switches in C are easy! 💡",
-              "url": "https://www.youtube.com/watch?v=NtlSzRWhaOc",
-              "youtube_id": "NtlSzRWhaOc",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Watch both short videos: if statements, then switch."
-        },
-        {
-          "id": "c-conditions-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Conditions",
-              "url": "https://www.learn-c.org/en/Conditions",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "cppreference – switch statement",
-              "url": "https://en.cppreference.com/w/c/language/switch",
-              "lang": "en",
-              "provider": "en.cppreference.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-conditions-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Leap",
-              "url": "https://exercism.org/tracks/c/exercises/leap",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Raindrops",
-              "url": "https://exercism.org/tracks/c/exercises/raindrops",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-conditions-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What happens without break in a switch case?",
-          "a": "Execution falls through to the next case"
-        },
-        {
-          "q": "Which operator means logical AND?",
-          "a": "&&"
-        },
-        {
-          "q": "In C, which values count as false?",
-          "a": "0 (zero); any non-zero value is true"
-        }
-      ]
-    },
-    {
-      "id": "c-loops",
-      "subject": "C",
-      "title": "Loops: for, while, do-while, break & continue",
-      "phase": 1,
-      "order": 5,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 155,
-      "blocks": [
-        {
-          "id": "c-loops-learn",
-          "type": "learn",
-          "title": "Watch: Loops: for, while, do-while, break & continue",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Learn C for loops in 6 minutes! 🔂",
-              "url": "https://www.youtube.com/watch?v=zdAggA1q0eo",
-              "youtube_id": "zdAggA1q0eo",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Loops In C: C Tutorial In Hindi #12",
-              "url": "https://www.youtube.com/watch?v=A_IgufxmIHk",
-              "youtube_id": "A_IgufxmIHk",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-loops-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – For loops",
-              "url": "https://www.learn-c.org/en/For_loops",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – While loops",
-              "url": "https://www.learn-c.org/en/While_loops",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "extra",
-              "title": "Bro Code – While loops in C are easy! (extra video)",
-              "url": "https://www.youtube.com/watch?v=6YNYuJ_jiu0",
-              "lang": "en",
-              "provider": "www.youtube.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-loops-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Armstrong Numbers",
-              "url": "https://exercism.org/tracks/c/exercises/armstrong-numbers",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "HackerRank – C practice",
-              "url": "https://www.hackerrank.com/domains/c",
-              "lang": "en",
-              "provider": "www.hackerrank.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-loops-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Which loop always runs at least once?",
-          "a": "do-while"
-        },
-        {
-          "q": "What does continue do?",
-          "a": "Skips to the next iteration"
-        },
-        {
-          "q": "Parts of a for loop header?",
-          "a": "Initialisation; condition; update"
-        }
-      ]
-    },
-    {
-      "id": "proj-c-games",
-      "subject": "C",
-      "title": "Project 1: Menu Calculator & Number-guessing Game",
-      "phase": 1,
-      "order": 6,
-      "kind": "project",
-      "weightage": "core",
-      "est_minutes_total": 670,
-      "blocks": [
-        {
-          "id": "proj-c-games-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide (reference)",
-              "url": "https://beej.us/guide/bgc/html/split/hello-world.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "proj-c-games-build",
-          "type": "build",
-          "title": "Build a console menu with two programs: a calculator (+ − × ÷ %, handles divide-by-zero) and a guess-the-number game using rand() with attempt counting.",
-          "est_minutes": 600,
-          "done_when": [
-            "Menu loops until the user chooses Exit",
-            "Invalid input and divide-by-zero handled",
-            "Code compiles with gcc -Wall without warnings"
-          ],
-          "resources": []
-        },
-        {
-          "id": "proj-c-games-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        },
-        {
-          "id": "proj-c-games-test",
-          "type": "test",
-          "title": "Phase quiz — enter your score",
-          "est_minutes": 30,
-          "score_entry": true,
-          "resources": [
-            {
-              "type": "test",
-              "role": "main",
-              "title": "W3Schools C Quiz",
-              "url": "https://www.w3schools.com/c/c_quiz.php",
-              "lang": "en",
-              "provider": "www.w3schools.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        }
-      ],
-      "recall": [
-        {
-          "q": "Which header gives rand() and srand()?",
-          "a": "<stdlib.h>"
-        },
-        {
-          "q": "Why seed with srand(time(NULL))?",
-          "a": "To get different random numbers each run"
-        },
-        {
-          "q": "What does -Wall do?",
-          "a": "Turns on common compiler warnings"
-        }
-      ]
-    },
-    {
-      "id": "c-functions",
-      "subject": "C",
-      "title": "Functions, Parameters & Return Values",
-      "phase": 2,
-      "order": 7,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-functions-learn",
-          "type": "learn",
-          "title": "Watch: Functions, Parameters & Return Values",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Functions in C are easy! 📞",
-              "url": "https://www.youtube.com/watch?v=7Bq87y7eJEg",
-              "youtube_id": "7Bq87y7eJEg",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
-              "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
-              "youtube_id": "ZSPZob_1TOk",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-functions-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Functions",
-              "url": "https://beej.us/guide/bgc/html/split/functions.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Functions",
-              "url": "https://www.learn-c.org/en/Functions",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-functions-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Hamming",
-              "url": "https://exercism.org/tracks/c/exercises/hamming",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-functions-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What is a function prototype?",
-          "a": "A declaration of name, return type and parameters before use"
-        },
-        {
-          "q": "How are arguments passed in C by default?",
-          "a": "By value (a copy)"
-        },
-        {
-          "q": "Return type for a function that returns nothing?",
-          "a": "void"
-        }
-      ]
-    },
-    {
-      "id": "c-recursion-scope",
-      "subject": "C",
-      "title": "Recursion, Scope & Storage Classes",
-      "phase": 2,
-      "order": 8,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 160,
-      "blocks": [
-        {
-          "id": "c-recursion-scope-learn",
-          "type": "learn",
-          "title": "Watch: Recursion, Scope & Storage Classes",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Recursive Functions: Recursion In C: C Tutorial In Hindi #21",
-              "url": "https://www.youtube.com/watch?v=P5TdIWxYz4I",
-              "youtube_id": "P5TdIWxYz4I",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Storage Classes in C: Auto, Extern, Static, Register | A Guide to Storage Classes in C",
-              "url": "https://www.youtube.com/watch?v=0jOwQzyOHNY",
-              "youtube_id": "0jOwQzyOHNY",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "ScholarHat",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Main (Hindi): recursion. Second video (English): storage classes."
-        },
-        {
-          "id": "c-recursion-scope-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Recursion",
-              "url": "https://www.learn-c.org/en/Recursion",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Scope",
-              "url": "https://beej.us/guide/bgc/html/split/scope.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Static",
-              "url": "https://www.learn-c.org/en/Static",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-recursion-scope-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Recursion exercise",
-              "url": "https://www.learn-c.org/en/Recursion",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-recursion-scope-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What stops a recursive function?",
-          "a": "Its base case"
-        },
-        {
-          "q": "What does a static local variable keep?",
-          "a": "Its value between function calls"
-        },
-        {
-          "q": "What does extern declare?",
-          "a": "A variable defined in another file"
-        }
-      ]
-    },
-    {
-      "id": "c-arrays",
-      "subject": "C",
-      "title": "Arrays: 1D & 2D",
-      "phase": 2,
-      "order": 9,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-arrays-learn",
-          "type": "learn",
-          "title": "Watch: Arrays: 1D & 2D",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "C arrays 🗃️",
-              "url": "https://www.youtube.com/watch?v=eE9MnoS0lc0",
-              "youtube_id": "eE9MnoS0lc0",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Learn 2D arrays in 8 minutes! ⬜",
-              "url": "https://www.youtube.com/watch?v=vpu09OPR61M",
-              "youtube_id": "vpu09OPR61M",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Watch both: 1D arrays, then 2D arrays."
-        },
-        {
-          "id": "c-arrays-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Arrays",
-              "url": "https://beej.us/guide/bgc/html/split/arrays.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Arrays",
-              "url": "https://www.learn-c.org/en/Arrays",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Multidimensional Arrays",
-              "url": "https://www.learn-c.org/en/Multidimensional_Arrays",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-arrays-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "HackerRank – C (arrays)",
-              "url": "https://www.hackerrank.com/domains/c",
-              "lang": "en",
-              "provider": "www.hackerrank.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-arrays-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Index of the first element?",
-          "a": "0"
-        },
-        {
-          "q": "How do you get an array's length (in the same scope)?",
-          "a": "sizeof(arr) / sizeof(arr[0])"
-        },
-        {
-          "q": "What happens if you read past the end?",
-          "a": "Undefined behaviour — C does not check bounds"
-        }
-      ]
-    },
-    {
-      "id": "c-strings",
-      "subject": "C",
-      "title": "Strings & String Functions",
-      "phase": 2,
-      "order": 10,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-strings-learn",
-          "type": "learn",
-          "title": "Watch: Strings & String Functions",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "C string functions 🔠",
-              "url": "https://www.youtube.com/watch?v=5p4YpQmZdwU",
-              "youtube_id": "5p4YpQmZdwU",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
-              "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
-              "youtube_id": "ZSPZob_1TOk",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-strings-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Strings",
-              "url": "https://beej.us/guide/bgc/html/split/strings.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Strings",
-              "url": "https://www.learn-c.org/en/Strings",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-strings-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Reverse String",
-              "url": "https://exercism.org/tracks/c/exercises/reverse-string",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Isogram",
-              "url": "https://exercism.org/tracks/c/exercises/isogram",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-strings-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "How does C mark the end of a string?",
-          "a": "With the null character '\\0'"
-        },
-        {
-          "q": "Function to get string length?",
-          "a": "strlen() from <string.h>"
-        },
-        {
-          "q": "Why prefer fgets over gets?",
-          "a": "fgets limits the size, preventing buffer overflow"
-        }
-      ]
-    },
-    {
-      "id": "proj-c-marks",
-      "subject": "C",
-      "title": "Project 2: Student Marks Manager",
-      "phase": 2,
-      "order": 11,
-      "kind": "project",
-      "weightage": "core",
-      "est_minutes_total": 910,
-      "blocks": [
-        {
-          "id": "proj-c-marks-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Arrays (reference)",
-              "url": "https://beej.us/guide/bgc/html/split/arrays.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "proj-c-marks-build",
-          "type": "build",
-          "title": "Store names and marks of up to 50 students in arrays; add, list, search by name, and show average, highest and lowest using separate functions.",
-          "est_minutes": 840,
-          "done_when": [
-            "At least 5 functions with clear names",
-            "Search works case-insensitively",
-            "No buffer overflows: input lengths are checked"
-          ],
-          "resources": []
-        },
-        {
-          "id": "proj-c-marks-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        },
-        {
-          "id": "proj-c-marks-test",
-          "type": "test",
-          "title": "Phase quiz — enter your score",
-          "est_minutes": 30,
-          "score_entry": true,
-          "resources": [
-            {
-              "type": "test",
-              "role": "main",
-              "title": "W3Schools C Quiz",
-              "url": "https://www.w3schools.com/c/c_quiz.php",
-              "lang": "en",
-              "provider": "www.w3schools.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        }
-      ],
-      "recall": [
-        {
-          "q": "Which data structure stores many names?",
-          "a": "A 2D char array (or array of strings)"
-        },
-        {
-          "q": "How do you compare strings?",
-          "a": "strcmp() — not =="
-        },
-        {
-          "q": "Why split code into functions?",
-          "a": "Reuse, readability and easier testing"
-        }
-      ]
-    },
-    {
-      "id": "c-pointers",
-      "subject": "C",
-      "title": "Pointers & Pointer Arithmetic",
-      "phase": 3,
-      "order": 12,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 190,
-      "blocks": [
-        {
-          "id": "c-pointers-learn",
-          "type": "learn",
-          "title": "Watch: Pointers & Pointer Arithmetic",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Pointers are easy! 👈",
-              "url": "https://www.youtube.com/watch?v=Hi-Ul47t3nQ",
-              "youtube_id": "Hi-Ul47t3nQ",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Pointers In C: C Tutorial In Hindi #26",
-              "url": "https://www.youtube.com/watch?v=IBjGjDbwxSg",
-              "youtube_id": "IBjGjDbwxSg",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-pointers-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Pointers",
-              "url": "https://beej.us/guide/bgc/html/split/pointers.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Pointers II: Arithmetic",
-              "url": "https://beej.us/guide/bgc/html/split/pointers2.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Pointers",
-              "url": "https://www.learn-c.org/en/Pointers",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Arguments by reference",
-              "url": "https://www.learn-c.org/en/Function_arguments_by_reference",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-pointers-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Pointer Arithmetics exercise",
-              "url": "https://www.learn-c.org/en/Pointer_Arithmetics",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-pointers-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What does &x give?",
-          "a": "The address of x"
-        },
-        {
-          "q": "What does *p mean when p is a pointer?",
-          "a": "The value stored at that address (dereference)"
-        },
-        {
-          "q": "How do you let a function change a caller's variable?",
-          "a": "Pass a pointer to it"
-        }
-      ]
-    },
-    {
-      "id": "c-memory",
-      "subject": "C",
-      "title": "Dynamic Memory: malloc, calloc, realloc & free",
-      "phase": 3,
-      "order": 13,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-memory-learn",
-          "type": "learn",
-          "title": "Watch: Dynamic Memory: malloc, calloc, realloc & free",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Malloc in C is easy! 🏢",
-              "url": "https://www.youtube.com/watch?v=n_Se6bt8jM0",
-              "youtube_id": "n_Se6bt8jM0",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Dynamic Memory Allocation Malloc Calloc Realloc & Free(): C Tutorial In Hindi #47",
-              "url": "https://www.youtube.com/watch?v=q8j8EqCZcWM",
-              "youtube_id": "q8j8EqCZcWM",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-memory-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Manual Memory Allocation",
-              "url": "https://beej.us/guide/bgc/html/split/manual-memory-allocation.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Dynamic allocation",
-              "url": "https://www.learn-c.org/en/Dynamic_allocation",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-memory-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Dynamic allocation exercise",
-              "url": "https://www.learn-c.org/en/Dynamic_allocation",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-memory-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "malloc vs calloc?",
-          "a": "calloc also sets memory to zero"
-        },
-        {
-          "q": "What must follow every successful malloc?",
-          "a": "A matching free() when done"
-        },
-        {
-          "q": "What does malloc return on failure?",
-          "a": "NULL — always check it"
-        }
-      ]
-    },
-    {
-      "id": "c-structs",
-      "subject": "C",
-      "title": "Structures, typedef, Unions & Enums",
-      "phase": 3,
-      "order": 14,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 150,
-      "blocks": [
-        {
-          "id": "c-structs-learn",
-          "type": "learn",
-          "title": "Watch: Structures, typedef, Unions & Enums",
-          "est_minutes": 20,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Structs in C are easy! 📦",
-              "url": "https://www.youtube.com/watch?v=e9OXqEPF-5M",
-              "youtube_id": "e9OXqEPF-5M",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Structures In C: C Tutorial In Hindi #37",
-              "url": "https://www.youtube.com/watch?v=J464pe6ZTrE",
-              "youtube_id": "J464pe6ZTrE",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 20,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-structs-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Structs",
-              "url": "https://beej.us/guide/bgc/html/split/structs.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – typedef",
-              "url": "https://beej.us/guide/bgc/html/split/typedef-making-new-types.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – enum",
-              "url": "https://beej.us/guide/bgc/html/split/enumerated-types-enum.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Unions",
-              "url": "https://www.learn-c.org/en/Unions",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-structs-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Structures exercise",
-              "url": "https://www.learn-c.org/en/Structures",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-structs-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Operator to access a member through a pointer?",
-          "a": "-> (arrow)"
-        },
-        {
-          "q": "What does typedef do?",
-          "a": "Creates a new name for an existing type"
-        },
-        {
-          "q": "Union vs struct?",
-          "a": "A union's members share the same memory; a struct's members each have their own"
-        }
-      ]
-    },
-    {
-      "id": "c-files",
-      "subject": "C",
-      "title": "File Handling: fopen, fprintf, fgets, fclose",
-      "phase": 3,
-      "order": 15,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 145,
-      "blocks": [
-        {
-          "id": "c-files-learn",
-          "type": "learn",
-          "title": "Watch: File Handling: fopen, fprintf, fgets, fclose",
-          "est_minutes": 15,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Write files using C programming in 5 minutes! ✍️",
-              "url": "https://www.youtube.com/watch?v=d29sVpbM0kc",
-              "youtube_id": "d29sVpbM0kc",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 15,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Read files using C programming in 6 minutes! 📖",
-              "url": "https://www.youtube.com/watch?v=eIlcl-mt3tg",
-              "youtube_id": "eIlcl-mt3tg",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 15,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Watch both: writing files, then reading files."
-        },
-        {
-          "id": "c-files-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – File Input/Output",
-              "url": "https://beej.us/guide/bgc/html/split/file-inputoutput.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-files-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "HackerRank – C practice",
-              "url": "https://www.hackerrank.com/domains/c",
-              "lang": "en",
-              "provider": "www.hackerrank.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-files-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Mode to append to a file?",
-          "a": "\"a\""
-        },
-        {
-          "q": "What does fopen return if it fails?",
-          "a": "NULL"
-        },
-        {
-          "q": "Why call fclose?",
-          "a": "To flush data and release the file handle"
-        }
-      ]
-    },
-    {
-      "id": "c-preprocessor-bits",
-      "subject": "C",
-      "title": "Preprocessor, Macros, Header Guards & Bitwise Operators",
-      "phase": 3,
-      "order": 16,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 185,
-      "blocks": [
-        {
-          "id": "c-preprocessor-bits-learn",
-          "type": "learn",
-          "title": "Watch: Preprocessor, Macros, Header Guards & Bitwise Operators",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "C bitwise operators 🔥",
-              "url": "https://www.youtube.com/watch?v=BGeOwlIGRGI",
-              "youtube_id": "BGeOwlIGRGI",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Bro Code",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C_148 Macro in C | Preprocessor command #define and #undef in C | C Programming Tutorials",
-              "url": "https://www.youtube.com/watch?v=InxAy7eI_OE",
-              "youtube_id": "InxAy7eI_OE",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Jenny's Lectures CS IT",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Watch both: bitwise operators, then macros & #define."
-        },
-        {
-          "id": "c-preprocessor-bits-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – The C Preprocessor",
-              "url": "https://beej.us/guide/bgc/html/split/the-c-preprocessor.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Bitwise Operations",
-              "url": "https://beej.us/guide/bgc/html/split/bitwise-operations.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Bitmasks",
-              "url": "https://www.learn-c.org/en/Bitmasks",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-preprocessor-bits-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Bitmasks exercise",
-              "url": "https://www.learn-c.org/en/Bitmasks",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Eliud's Eggs (count set bits)",
-              "url": "https://exercism.org/tracks/c/exercises/eliuds-eggs",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-preprocessor-bits-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What does a header guard prevent?",
-          "a": "Including the same header twice"
-        },
-        {
-          "q": "x & 1 tells you what?",
-          "a": "Whether x is odd (1) or even (0)"
-        },
-        {
-          "q": "Why wrap macro parameters in brackets?",
-          "a": "To avoid operator-precedence surprises when the macro expands"
-        }
-      ]
-    },
-    {
-      "id": "c-function-pointers",
-      "subject": "C",
-      "title": "Function Pointers, Callbacks & qsort",
-      "phase": 3,
-      "order": 17,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 185,
-      "blocks": [
-        {
-          "id": "c-function-pointers-learn",
-          "type": "learn",
-          "title": "Watch: Function Pointers, Callbacks & qsort",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Function Pointers in C",
-              "url": "https://www.youtube.com/watch?v=BRsv3ZXoHto",
-              "youtube_id": "BRsv3ZXoHto",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Neso Academy",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "C Programming: Function Pointers and qsort",
-              "url": "https://www.youtube.com/watch?v=TpIuj3Lgho0",
-              "youtube_id": "TpIuj3Lgho0",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Barry Brown",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-function-pointers-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Function Pointers",
-              "url": "https://www.learn-c.org/en/Function_Pointers",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "cppreference – qsort",
-              "url": "https://en.cppreference.com/w/c/algorithm/qsort",
-              "lang": "en",
-              "provider": "en.cppreference.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-function-pointers-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "learn-c.org – Function Pointers exercise",
-              "url": "https://www.learn-c.org/en/Function_Pointers",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-function-pointers-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Declare p as pointer to a function taking int and returning int.",
-          "a": "int (*p)(int);"
-        },
-        {
-          "q": "What does qsort need from you?",
-          "a": "A comparison function returning <0, 0 or >0"
-        },
-        {
-          "q": "What is a callback?",
-          "a": "A function passed as an argument to be called later"
-        }
-      ]
-    },
-    {
-      "id": "proj-c-contacts",
-      "subject": "C",
-      "title": "Project 3: Contact Book Saved to a File",
-      "phase": 3,
-      "order": 18,
-      "kind": "project",
-      "weightage": "core",
-      "est_minutes_total": 1150,
-      "blocks": [
-        {
-          "id": "proj-c-contacts-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – File I/O (reference)",
-              "url": "https://beej.us/guide/bgc/html/split/file-inputoutput.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "proj-c-contacts-build",
-          "type": "build",
-          "title": "Contact book using an array of structs allocated with malloc/realloc: add, list, search, delete; save to and load from contacts.txt.",
-          "est_minutes": 1080,
-          "done_when": [
-            "Data survives restarting the program",
-            "Memory grows with realloc and is freed on exit",
-            "Runs cleanly with -fsanitize=address (no leaks/overflows)"
-          ],
-          "resources": []
-        },
-        {
-          "id": "proj-c-contacts-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        },
-        {
-          "id": "proj-c-contacts-test",
-          "type": "test",
-          "title": "Phase quiz — enter your score",
-          "est_minutes": 30,
-          "score_entry": true,
-          "resources": [
-            {
-              "type": "test",
-              "role": "main",
-              "title": "W3Schools C Quiz",
-              "url": "https://www.w3schools.com/c/c_quiz.php",
-              "lang": "en",
-              "provider": "www.w3schools.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        }
-      ],
-      "recall": [
-        {
-          "q": "Why use realloc here?",
-          "a": "To grow the array when more contacts are added"
-        },
-        {
-          "q": "Tool to catch memory errors?",
-          "a": "AddressSanitizer (-fsanitize=address) or Valgrind"
-        },
-        {
-          "q": "Simple text format for each contact?",
-          "a": "One line per contact with comma-separated fields"
-        }
-      ]
-    },
-    {
-      "id": "c-linked-list",
-      "subject": "C",
-      "title": "Linked Lists",
-      "phase": 4,
-      "order": 19,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 190,
-      "blocks": [
-        {
-          "id": "c-linked-list-learn",
-          "type": "learn",
-          "title": "Watch: Linked Lists",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Linked List Data Structure: Creation and Traversal in C Language",
-              "url": "https://www.youtube.com/watch?v=BHphhqL9EOE",
-              "youtube_id": "BHphhqL9EOE",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-linked-list-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Linked lists",
-              "url": "https://www.learn-c.org/en/Linked_lists",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-linked-list-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Linked List",
-              "url": "https://exercism.org/tracks/c/exercises/linked-list",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-linked-list-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What does each node store?",
-          "a": "Data and a pointer to the next node"
-        },
-        {
-          "q": "How do you know you reached the end?",
-          "a": "The next pointer is NULL"
-        },
-        {
-          "q": "Advantage over arrays?",
-          "a": "Cheap insertion/deletion without shifting elements"
-        }
-      ]
-    },
-    {
-      "id": "c-stack-queue",
-      "subject": "C",
-      "title": "Stacks & Queues",
-      "phase": 4,
-      "order": 20,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 190,
-      "blocks": [
-        {
-          "id": "c-stack-queue-learn",
-          "type": "learn",
-          "title": "Watch: Stacks & Queues",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Implementing all the Stack Operations using Linked List (With Code in C)",
-              "url": "https://www.youtube.com/watch?v=0BTDISr-8xU",
-              "youtube_id": "0BTDISr-8xU",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-stack-queue-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GeeksforGeeks – Stack Data Structure",
-              "url": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
-              "lang": "en",
-              "provider": "www.geeksforgeeks.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GeeksforGeeks – Queue Data Structure",
-              "url": "https://www.geeksforgeeks.org/dsa/queue-data-structure/",
-              "lang": "en",
-              "provider": "www.geeksforgeeks.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-stack-queue-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Matching Brackets (stack)",
-              "url": "https://exercism.org/tracks/c/exercises/matching-brackets",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Circular Buffer (queue)",
-              "url": "https://exercism.org/tracks/c/exercises/circular-buffer",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-stack-queue-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "Stack order?",
-          "a": "LIFO — last in, first out"
-        },
-        {
-          "q": "Queue order?",
-          "a": "FIFO — first in, first out"
-        },
-        {
-          "q": "Stack operations?",
-          "a": "push, pop, peek"
-        }
-      ]
-    },
-    {
-      "id": "c-trees",
-      "subject": "C",
-      "title": "Binary Trees & Binary Search Trees",
-      "phase": 4,
-      "order": 21,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 250,
-      "blocks": [
-        {
-          "id": "c-trees-learn",
-          "type": "learn",
-          "title": "Watch: Binary Trees & Binary Search Trees",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Binary search tree - Implementation in C/C++",
-              "url": "https://www.youtube.com/watch?v=COZK7NATh4k",
-              "youtube_id": "COZK7NATh4k",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "mycodeschool",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Linked List Data Structure: Creation and Traversal in C Language",
-              "url": "https://www.youtube.com/watch?v=BHphhqL9EOE",
-              "youtube_id": "BHphhqL9EOE",
-              "lang": "hi",
-              "provider": "YouTube",
-              "channel": "CodeWithHarry",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "English main: mycodeschool BST. Hindi learners: revise node/pointer basics with the linked-list video first."
-        },
-        {
-          "id": "c-trees-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "learn-c.org – Binary trees",
-              "url": "https://www.learn-c.org/en/Binary_trees",
-              "lang": "en",
-              "provider": "www.learn-c.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GeeksforGeeks – Binary Search Tree",
-              "url": "https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/",
-              "lang": "en",
-              "provider": "www.geeksforgeeks.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-trees-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 180,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Binary Search Tree",
-              "url": "https://exercism.org/tracks/c/exercises/binary-search-tree",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-trees-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "BST rule?",
-          "a": "Left subtree < node < right subtree"
-        },
-        {
-          "q": "Which traversal prints a BST in sorted order?",
-          "a": "In-order (left, node, right)"
-        },
-        {
-          "q": "Worst-case search time in an unbalanced BST?",
-          "a": "O(n)"
-        }
-      ]
-    },
-    {
-      "id": "c-sort-search",
-      "subject": "C",
-      "title": "Sorting & Searching (Bubble, Selection, Binary Search)",
-      "phase": 4,
-      "order": 22,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 185,
-      "blocks": [
-        {
-          "id": "c-sort-search-learn",
-          "type": "learn",
-          "title": "Watch: Sorting & Searching (Bubble, Selection, Binary Search)",
-          "est_minutes": 25,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Sorting C Arrays with Bubble Sort",
-              "url": "https://www.youtube.com/watch?v=NGwCEYb7cOQ",
-              "youtube_id": "NGwCEYb7cOQ",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Barry Brown",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Binary Search: Iterative and Recursive In One Video",
-              "url": "https://www.youtube.com/watch?v=Rz15vWSBuW8",
-              "youtube_id": "Rz15vWSBuW8",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Quoc Dat Phung",
-              "duration_seconds": null,
-              "est_minutes": 25,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ]
-        },
-        {
-          "id": "c-sort-search-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GeeksforGeeks – Bubble Sort",
-              "url": "https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/",
-              "lang": "en",
-              "provider": "www.geeksforgeeks.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GeeksforGeeks – Binary Search",
-              "url": "https://www.geeksforgeeks.org/dsa/binary-search/",
-              "lang": "en",
-              "provider": "www.geeksforgeeks.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-sort-search-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 120,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C – Binary Search",
-              "url": "https://exercism.org/tracks/c/exercises/binary-search",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-sort-search-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What does binary search require?",
-          "a": "A sorted array"
-        },
-        {
-          "q": "Time complexity of binary search?",
-          "a": "O(log n)"
-        },
-        {
-          "q": "Library function to sort in C?",
-          "a": "qsort() from <stdlib.h>"
-        }
-      ]
-    },
-    {
-      "id": "c-tools",
-      "subject": "C",
-      "title": "Multi-file Programs, Make & Debugging (GDB, Sanitizers)",
-      "phase": 4,
-      "order": 23,
-      "kind": "learn",
-      "weightage": "core",
-      "est_minutes_total": 160,
-      "blocks": [
-        {
-          "id": "c-tools-learn",
-          "type": "learn",
-          "title": "Watch: Multi-file Programs, Make & Debugging (GDB, Sanitizers)",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "video",
-              "role": "main",
-              "title": "Debugging With GDB",
-              "url": "https://www.youtube.com/watch?v=OpVMB7DNlmY",
-              "youtube_id": "OpVMB7DNlmY",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Robert Martin",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            },
-            {
-              "type": "video",
-              "role": "alternative",
-              "title": "Learn make in 60 seconds.",
-              "url": "https://www.youtube.com/watch?v=a8mPKBxQ9No",
-              "youtube_id": "a8mPKBxQ9No",
-              "lang": "en",
-              "provider": "YouTube",
-              "channel": "Jacob Sorber",
-              "duration_seconds": null,
-              "est_minutes": 30,
-              "duration_source": "estimate",
-              "access": "all",
-              "ad_gate_allowed": true,
-              "status": "active",
-              "last_checked": "2026-10-08",
-              "verified_via": "youtube_oembed"
-            }
-          ],
-          "note": "Watch both: GDB debugging, then make."
-        },
-        {
-          "id": "c-tools-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Multifile Projects",
-              "url": "https://beej.us/guide/bgc/html/split/multifile-projects.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GNU make manual – Introduction",
-              "url": "https://www.gnu.org/software/make/manual/html_node/Introduction.html",
-              "lang": "en",
-              "provider": "www.gnu.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            },
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "GDB manual – A sample session",
-              "url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Sample-Session.html",
-              "lang": "en",
-              "provider": "sourceware.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-tools-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 90,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "Exercism C track – solve any 3 exercises locally with make",
-              "url": "https://exercism.org/tracks/c/",
-              "lang": "en",
-              "provider": "exercism.org",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "c-tools-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        }
-      ],
-      "recall": [
-        {
-          "q": "What goes in a .h header file?",
-          "a": "Declarations: prototypes, struct definitions, macros"
-        },
-        {
-          "q": "GDB command to stop at a line?",
-          "a": "break file.c:LINE"
-        },
-        {
-          "q": "Why use make?",
-          "a": "To rebuild only what changed with one command"
-        }
-      ]
-    },
-    {
-      "id": "proj-c-final",
-      "subject": "C",
-      "title": "Final Project: Library/Inventory Management System in C",
-      "phase": 4,
-      "order": 24,
-      "kind": "project",
-      "weightage": "core",
-      "est_minutes_total": 1930,
-      "blocks": [
-        {
-          "id": "proj-c-final-read",
-          "type": "read",
-          "title": "Read the notes and try every example yourself",
-          "est_minutes": 30,
-          "resources": [
-            {
-              "type": "notes",
-              "role": "main",
-              "title": "Beej's Guide – Structs II (reference)",
-              "url": "https://beej.us/guide/bgc/html/split/structs-ii-more-fun-with-structs.html",
-              "lang": "en",
-              "provider": "beej.us",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "proj-c-final-build",
-          "type": "build",
-          "title": "Multi-file C program (src/, include/, Makefile) managing items with a linked list: add, update, delete, search, sort, save/load to file, with input validation.",
-          "est_minutes": 1800,
-          "done_when": [
-            "Split into at least 3 .c files with headers and a Makefile",
-            "Linked list + file persistence + sorting",
-            "README, sample run, and clean -Wall/-fsanitize builds; pushed to GitHub"
-          ],
-          "resources": []
-        },
-        {
-          "id": "proj-c-final-practice",
-          "type": "practice",
-          "title": "Practice exercises",
-          "est_minutes": 60,
-          "resources": [
-            {
-              "type": "practice",
-              "role": "main",
-              "title": "HackerRank – C practice (warm-up)",
-              "url": "https://www.hackerrank.com/domains/c",
-              "lang": "en",
-              "provider": "www.hackerrank.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        },
-        {
-          "id": "proj-c-final-recall",
-          "type": "recall",
-          "title": "Recall check (answer from memory, then reveal)",
-          "est_minutes": 10,
-          "resources": []
-        },
-        {
-          "id": "proj-c-final-test",
-          "type": "test",
-          "title": "Phase quiz — enter your score",
-          "est_minutes": 30,
-          "score_entry": true,
-          "resources": [
-            {
-              "type": "test",
-              "role": "main",
-              "title": "HackerRank Skills Certification (free tests)",
-              "url": "https://www.hackerrank.com/skills-verification",
-              "lang": "en",
-              "provider": "www.hackerrank.com",
-              "access": "all",
-              "status": "unverified",
-              "last_checked": null,
-              "ad_gate_allowed": true
-            }
-          ]
-        }
-      ],
-      "recall": [
-        {
-          "q": "What proves this project is professional?",
-          "a": "Clean structure, Makefile, README and no warnings or leaks"
-        },
-        {
-          "q": "Next roadmaps after C?",
-          "a": "C++, Data Structures & Algorithms, Embedded/IoT"
-        },
-        {
-          "q": "How do you show it to employers?",
-          "a": "Public GitHub repository with screenshots"
-        }
-      ]
-    }
+  "video_language_note": "English: Bro Code's short topic videos and others. Hindi: CodeWithHarry topic videos, or the matching section of his full course.",
+  "career_outcomes": [
+   "Write, compile and debug C programs",
+   "Use pointers, dynamic memory, structs and files safely",
+   "Build linked lists, stacks and queues",
+   "Organise multi-file projects with make",
+   "Foundation for C++, DSA, embedded and systems roles"
   ],
-  "milestones": []
+  "resource_policy": "Links only to free, legal sources (official docs, open-licence books, reputable free platforms, public YouTube videos). No copyrighted material re-hosted. YouTube videos are never paywalled or ad-gated.",
+  "estimated_hours": {
+   "content": 131,
+   "mocks_and_milestones": 0,
+   "spaced_revision_allowance": 16,
+   "total": 147,
+   "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
+  },
+  "reviewed_by": null,
+  "last_link_check": "2026-10-16"
+ },
+ "scheduler_hints": {
+  "video_time_multiplier": 1.15,
+  "round_up_to_minutes": 5,
+  "warmup_recall_minutes": 10,
+  "focus_block_minutes": 25,
+  "break_minutes": 5,
+  "spaced_review_offsets_days": [
+   1,
+   3,
+   7,
+   21,
+   45
+  ],
+  "confidence_to_next_review_days": {
+   "need_revision": 1,
+   "little_afraid": 2,
+   "confident": 4,
+   "all_cleared": 7,
+   "mastered": 21
+  },
+  "weekly_pattern": {
+   "new_content_days": 5,
+   "mixed_practice_and_weekly_test_days": 1,
+   "light_revision_or_rest_days": 1
+  },
+  "rest_day_limits": {
+   "per_week": 1,
+   "per_month": 4
+  },
+  "interleave_by": "subject",
+  "reserve_final_fraction_for_mocks_and_revision": 0.15,
+  "mastery_gate": {
+   "weekly_test_min_score_pct": 60,
+   "remediation_block_minutes": 45
+  },
+  "missed_day_policy": "shift_forward",
+  "recalculate_from": "next_incomplete_task"
+ },
+ "phases": [
+  {
+   "id": "c-p1",
+   "order": 1,
+   "name": "C Basics",
+   "topic_ids": [
+    "c-setup",
+    "c-variables",
+    "c-io-operators",
+    "c-conditions",
+    "c-loops",
+    "proj-c-games"
+   ]
+  },
+  {
+   "id": "c-p2",
+   "order": 2,
+   "name": "Functions, Arrays & Strings",
+   "topic_ids": [
+    "c-functions",
+    "c-recursion-scope",
+    "c-arrays",
+    "c-strings",
+    "proj-c-marks"
+   ]
+  },
+  {
+   "id": "c-p3",
+   "order": 3,
+   "name": "Pointers, Memory, Structs & Files",
+   "topic_ids": [
+    "c-pointers",
+    "c-memory",
+    "c-structs",
+    "c-files",
+    "c-preprocessor-bits",
+    "c-function-pointers",
+    "proj-c-contacts"
+   ]
+  },
+  {
+   "id": "c-p4",
+   "order": 4,
+   "name": "Data Structures, Tools & Final Project",
+   "topic_ids": [
+    "c-linked-list",
+    "c-stack-queue",
+    "c-trees",
+    "c-sort-search",
+    "c-tools",
+    "proj-c-final"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": "c-setup",
+   "subject": "C",
+   "title": "Setup: Compiler, VS Code & Your First C Program",
+   "phase": 1,
+   "order": 1,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "c-setup-learn",
+     "type": "learn",
+     "title": "Watch: Setup: Compiler, VS Code & Your First C Program",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "C tutorial for beginners ⚙️",
+       "url": "https://www.youtube.com/watch?v=nrbBmoINqtk",
+       "youtube_id": "nrbBmoINqtk",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 757,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
+       "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
+       "youtube_id": "ZSPZob_1TOk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 54804,
+       "est_minutes": 1055,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Hindi: watch the introduction & setup section of the full course."
+    },
+    {
+     "id": "c-setup-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide to C – Hello, World!",
+       "url": "https://beej.us/guide/bgc/html/split/hello-world.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Hello, World! (interactive)",
+       "url": "https://www.learn-c.org/en/Hello%2C_World%21",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-setup-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Hello World",
+       "url": "https://exercism.org/tracks/c/exercises/hello-world",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-setup-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which function does every C program start from?",
+     "a": "main()"
+    },
+    {
+     "q": "What does #include <stdio.h> provide?",
+     "a": "Standard input/output functions like printf"
+    },
+    {
+     "q": "Command to compile hello.c with GCC?",
+     "a": "gcc hello.c -o hello"
+    }
+   ]
+  },
+  {
+   "id": "c-variables",
+   "subject": "C",
+   "title": "Variables, Data Types & Constants",
+   "phase": 1,
+   "order": 2,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 155,
+   "blocks": [
+    {
+     "id": "c-variables-learn",
+     "type": "learn",
+     "title": "Watch: Variables, Data Types & Constants",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn C programming variables easy! ❎",
+       "url": "https://www.youtube.com/watch?v=WrFEtUzVcnw",
+       "youtube_id": "WrFEtUzVcnw",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 1203,
+       "est_minutes": 25,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
+       "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
+       "youtube_id": "ZSPZob_1TOk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 54804,
+       "est_minutes": 1055,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-variables-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Variables and Statements",
+       "url": "https://beej.us/guide/bgc/html/split/variables-and-statements.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Variables and Types",
+       "url": "https://www.learn-c.org/en/Variables_and_Types",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-variables-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Difference of Squares",
+       "url": "https://exercism.org/tracks/c/exercises/difference-of-squares",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-variables-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Format specifier for an int in printf?",
+     "a": "%d"
+    },
+    {
+     "q": "Typical size of int on modern PCs?",
+     "a": "4 bytes"
+    },
+    {
+     "q": "Keyword to make a variable read-only?",
+     "a": "const"
+    }
+   ]
+  },
+  {
+   "id": "c-io-operators",
+   "subject": "C",
+   "title": "Input/Output (printf, scanf) & Operators",
+   "phase": 1,
+   "order": 3,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "c-io-operators-learn",
+     "type": "learn",
+     "title": "Watch: Input/Output (printf, scanf) & Operators",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn C arithmetic operators in 6 minutes! ➗",
+       "url": "https://www.youtube.com/watch?v=4WMRnTfhQfU",
+       "youtube_id": "4WMRnTfhQfU",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 385,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Operators In C: C Tutorial In Hindi #7",
+       "url": "https://www.youtube.com/watch?v=V4Wwuu05_t4",
+       "youtube_id": "V4Wwuu05_t4",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1718,
+       "est_minutes": 35,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-io-operators-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Operators and Expressions",
+       "url": "https://beej.us/guide/bgc/html/split/variables-and-statements.html#operators-and-expressions",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "cppreference – C Operator Precedence",
+       "url": "https://en.cppreference.com/w/c/language/operator_precedence",
+       "lang": "en",
+       "provider": "en.cppreference.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Bro Code – C user input ⌨️ (extra video)",
+       "url": "https://www.youtube.com/watch?v=Ws-mVAJDFAw",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-io-operators-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Grains",
+       "url": "https://exercism.org/tracks/c/exercises/grains",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-io-operators-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why does scanf need &x?",
+     "a": "It needs the address of x to store the value"
+    },
+    {
+     "q": "Result of 7 / 2 with ints?",
+     "a": "3 (integer division)"
+    },
+    {
+     "q": "What does % give?",
+     "a": "The remainder, e.g. 7 % 2 = 1"
+    }
+   ]
+  },
+  {
+   "id": "c-conditions",
+   "subject": "C",
+   "title": "Decisions: if, else if, switch & Logical Operators",
+   "phase": 1,
+   "order": 4,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "c-conditions-learn",
+     "type": "learn",
+     "title": "Watch: Decisions: if, else if, switch & Logical Operators",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "If statements are easy! 🤔",
+       "url": "https://www.youtube.com/watch?v=LFE0yibJTDk",
+       "youtube_id": "LFE0yibJTDk",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 655,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Switches in C are easy! 💡",
+       "url": "https://www.youtube.com/watch?v=NtlSzRWhaOc",
+       "youtube_id": "NtlSzRWhaOc",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 488,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both short videos: if statements, then switch."
+    },
+    {
+     "id": "c-conditions-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Conditions",
+       "url": "https://www.learn-c.org/en/Conditions",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "cppreference – switch statement",
+       "url": "https://en.cppreference.com/w/c/language/switch",
+       "lang": "en",
+       "provider": "en.cppreference.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-conditions-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Leap",
+       "url": "https://exercism.org/tracks/c/exercises/leap",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Raindrops",
+       "url": "https://exercism.org/tracks/c/exercises/raindrops",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-conditions-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What happens without break in a switch case?",
+     "a": "Execution falls through to the next case"
+    },
+    {
+     "q": "Which operator means logical AND?",
+     "a": "&&"
+    },
+    {
+     "q": "In C, which values count as false?",
+     "a": "0 (zero); any non-zero value is true"
+    }
+   ]
+  },
+  {
+   "id": "c-loops",
+   "subject": "C",
+   "title": "Loops: for, while, do-while, break & continue",
+   "phase": 1,
+   "order": 5,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "c-loops-learn",
+     "type": "learn",
+     "title": "Watch: Loops: for, while, do-while, break & continue",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Learn C for loops in 6 minutes! 🔂",
+       "url": "https://www.youtube.com/watch?v=zdAggA1q0eo",
+       "youtube_id": "zdAggA1q0eo",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 360,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Loops In C: C Tutorial In Hindi #12",
+       "url": "https://www.youtube.com/watch?v=A_IgufxmIHk",
+       "youtube_id": "A_IgufxmIHk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 619,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-loops-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – For loops",
+       "url": "https://www.learn-c.org/en/For_loops",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – While loops",
+       "url": "https://www.learn-c.org/en/While_loops",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "extra",
+       "title": "Bro Code – While loops in C are easy! (extra video)",
+       "url": "https://www.youtube.com/watch?v=6YNYuJ_jiu0",
+       "lang": "en",
+       "provider": "www.youtube.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-loops-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Armstrong Numbers",
+       "url": "https://exercism.org/tracks/c/exercises/armstrong-numbers",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – C practice",
+       "url": "https://www.hackerrank.com/domains/c",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-loops-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which loop always runs at least once?",
+     "a": "do-while"
+    },
+    {
+     "q": "What does continue do?",
+     "a": "Skips to the next iteration"
+    },
+    {
+     "q": "Parts of a for loop header?",
+     "a": "Initialisation; condition; update"
+    }
+   ]
+  },
+  {
+   "id": "proj-c-games",
+   "subject": "C",
+   "title": "Project 1: Menu Calculator & Number-guessing Game",
+   "phase": 1,
+   "order": 6,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 670,
+   "blocks": [
+    {
+     "id": "proj-c-games-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide (reference)",
+       "url": "https://beej.us/guide/bgc/html/split/hello-world.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "proj-c-games-build",
+     "type": "build",
+     "title": "Build a console menu with two programs: a calculator (+ − × ÷ %, handles divide-by-zero) and a guess-the-number game using rand() with attempt counting.",
+     "est_minutes": 600,
+     "done_when": [
+      "Menu loops until the user chooses Exit",
+      "Invalid input and divide-by-zero handled",
+      "Code compiles with gcc -Wall without warnings"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-c-games-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-c-games-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "W3Schools C Quiz",
+       "url": "https://www.w3schools.com/c/c_quiz.php",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which header gives rand() and srand()?",
+     "a": "<stdlib.h>"
+    },
+    {
+     "q": "Why seed with srand(time(NULL))?",
+     "a": "To get different random numbers each run"
+    },
+    {
+     "q": "What does -Wall do?",
+     "a": "Turns on common compiler warnings"
+    }
+   ]
+  },
+  {
+   "id": "c-functions",
+   "subject": "C",
+   "title": "Functions, Parameters & Return Values",
+   "phase": 2,
+   "order": 7,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "c-functions-learn",
+     "type": "learn",
+     "title": "Watch: Functions, Parameters & Return Values",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Functions in C are easy! 📞",
+       "url": "https://www.youtube.com/watch?v=7Bq87y7eJEg",
+       "youtube_id": "7Bq87y7eJEg",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 597,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
+       "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
+       "youtube_id": "ZSPZob_1TOk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 54804,
+       "est_minutes": 1055,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-functions-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Functions",
+       "url": "https://beej.us/guide/bgc/html/split/functions.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Functions",
+       "url": "https://www.learn-c.org/en/Functions",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-functions-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Hamming",
+       "url": "https://exercism.org/tracks/c/exercises/hamming",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-functions-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What is a function prototype?",
+     "a": "A declaration of name, return type and parameters before use"
+    },
+    {
+     "q": "How are arguments passed in C by default?",
+     "a": "By value (a copy)"
+    },
+    {
+     "q": "Return type for a function that returns nothing?",
+     "a": "void"
+    }
+   ]
+  },
+  {
+   "id": "c-recursion-scope",
+   "subject": "C",
+   "title": "Recursion, Scope & Storage Classes",
+   "phase": 2,
+   "order": 8,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 160,
+   "blocks": [
+    {
+     "id": "c-recursion-scope-learn",
+     "type": "learn",
+     "title": "Watch: Recursion, Scope & Storage Classes",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Recursive Functions: Recursion In C: C Tutorial In Hindi #21",
+       "url": "https://www.youtube.com/watch?v=P5TdIWxYz4I",
+       "youtube_id": "P5TdIWxYz4I",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1547,
+       "est_minutes": 30,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Storage Classes in C: Auto, Extern, Static, Register | A Guide to Storage Classes in C",
+       "url": "https://www.youtube.com/watch?v=0jOwQzyOHNY",
+       "youtube_id": "0jOwQzyOHNY",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "ScholarHat",
+       "duration_seconds": 685,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Main (Hindi): recursion. Second video (English): storage classes."
+    },
+    {
+     "id": "c-recursion-scope-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Recursion",
+       "url": "https://www.learn-c.org/en/Recursion",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Scope",
+       "url": "https://beej.us/guide/bgc/html/split/scope.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Static",
+       "url": "https://www.learn-c.org/en/Static",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-recursion-scope-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Recursion exercise",
+       "url": "https://www.learn-c.org/en/Recursion",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-recursion-scope-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What stops a recursive function?",
+     "a": "Its base case"
+    },
+    {
+     "q": "What does a static local variable keep?",
+     "a": "Its value between function calls"
+    },
+    {
+     "q": "What does extern declare?",
+     "a": "A variable defined in another file"
+    }
+   ]
+  },
+  {
+   "id": "c-arrays",
+   "subject": "C",
+   "title": "Arrays: 1D & 2D",
+   "phase": 2,
+   "order": 9,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "c-arrays-learn",
+     "type": "learn",
+     "title": "Watch: Arrays: 1D & 2D",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "C arrays 🗃️",
+       "url": "https://www.youtube.com/watch?v=eE9MnoS0lc0",
+       "youtube_id": "eE9MnoS0lc0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 273,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Learn 2D arrays in 8 minutes! ⬜",
+       "url": "https://www.youtube.com/watch?v=vpu09OPR61M",
+       "youtube_id": "vpu09OPR61M",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 488,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: 1D arrays, then 2D arrays."
+    },
+    {
+     "id": "c-arrays-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Arrays",
+       "url": "https://beej.us/guide/bgc/html/split/arrays.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Arrays",
+       "url": "https://www.learn-c.org/en/Arrays",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Multidimensional Arrays",
+       "url": "https://www.learn-c.org/en/Multidimensional_Arrays",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-arrays-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – C (arrays)",
+       "url": "https://www.hackerrank.com/domains/c",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-arrays-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Index of the first element?",
+     "a": "0"
+    },
+    {
+     "q": "How do you get an array's length (in the same scope)?",
+     "a": "sizeof(arr) / sizeof(arr[0])"
+    },
+    {
+     "q": "What happens if you read past the end?",
+     "a": "Undefined behaviour — C does not check bounds"
+    }
+   ]
+  },
+  {
+   "id": "c-strings",
+   "subject": "C",
+   "title": "Strings & String Functions",
+   "phase": 2,
+   "order": 10,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "c-strings-learn",
+     "type": "learn",
+     "title": "Watch: Strings & String Functions",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "C string functions 🔠",
+       "url": "https://www.youtube.com/watch?v=5p4YpQmZdwU",
+       "youtube_id": "5p4YpQmZdwU",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 303,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C Language Tutorial For Beginners In Hindi (With Notes) 🔥",
+       "url": "https://www.youtube.com/watch?v=ZSPZob_1TOk",
+       "youtube_id": "ZSPZob_1TOk",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 54804,
+       "est_minutes": 1055,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-strings-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Strings",
+       "url": "https://beej.us/guide/bgc/html/split/strings.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Strings",
+       "url": "https://www.learn-c.org/en/Strings",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-strings-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Reverse String",
+       "url": "https://exercism.org/tracks/c/exercises/reverse-string",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Isogram",
+       "url": "https://exercism.org/tracks/c/exercises/isogram",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-strings-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "How does C mark the end of a string?",
+     "a": "With the null character '\\0'"
+    },
+    {
+     "q": "Function to get string length?",
+     "a": "strlen() from <string.h>"
+    },
+    {
+     "q": "Why prefer fgets over gets?",
+     "a": "fgets limits the size, preventing buffer overflow"
+    }
+   ]
+  },
+  {
+   "id": "proj-c-marks",
+   "subject": "C",
+   "title": "Project 2: Student Marks Manager",
+   "phase": 2,
+   "order": 11,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 910,
+   "blocks": [
+    {
+     "id": "proj-c-marks-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Arrays (reference)",
+       "url": "https://beej.us/guide/bgc/html/split/arrays.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "proj-c-marks-build",
+     "type": "build",
+     "title": "Store names and marks of up to 50 students in arrays; add, list, search by name, and show average, highest and lowest using separate functions.",
+     "est_minutes": 840,
+     "done_when": [
+      "At least 5 functions with clear names",
+      "Search works case-insensitively",
+      "No buffer overflows: input lengths are checked"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-c-marks-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-c-marks-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "W3Schools C Quiz",
+       "url": "https://www.w3schools.com/c/c_quiz.php",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Which data structure stores many names?",
+     "a": "A 2D char array (or array of strings)"
+    },
+    {
+     "q": "How do you compare strings?",
+     "a": "strcmp() — not =="
+    },
+    {
+     "q": "Why split code into functions?",
+     "a": "Reuse, readability and easier testing"
+    }
+   ]
+  },
+  {
+   "id": "c-pointers",
+   "subject": "C",
+   "title": "Pointers & Pointer Arithmetic",
+   "phase": 3,
+   "order": 12,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 170,
+   "blocks": [
+    {
+     "id": "c-pointers-learn",
+     "type": "learn",
+     "title": "Watch: Pointers & Pointer Arithmetic",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Pointers are easy! 👈",
+       "url": "https://www.youtube.com/watch?v=Hi-Ul47t3nQ",
+       "youtube_id": "Hi-Ul47t3nQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 487,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Pointers In C: C Tutorial In Hindi #26",
+       "url": "https://www.youtube.com/watch?v=IBjGjDbwxSg",
+       "youtube_id": "IBjGjDbwxSg",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1966,
+       "est_minutes": 40,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-pointers-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Pointers",
+       "url": "https://beej.us/guide/bgc/html/split/pointers.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Pointers II: Arithmetic",
+       "url": "https://beej.us/guide/bgc/html/split/pointers2.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Pointers",
+       "url": "https://www.learn-c.org/en/Pointers",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Arguments by reference",
+       "url": "https://www.learn-c.org/en/Function_arguments_by_reference",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-pointers-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Pointer Arithmetics exercise",
+       "url": "https://www.learn-c.org/en/Pointer_Arithmetics",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-pointers-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does &x give?",
+     "a": "The address of x"
+    },
+    {
+     "q": "What does *p mean when p is a pointer?",
+     "a": "The value stored at that address (dereference)"
+    },
+    {
+     "q": "How do you let a function change a caller's variable?",
+     "a": "Pass a pointer to it"
+    }
+   ]
+  },
+  {
+   "id": "c-memory",
+   "subject": "C",
+   "title": "Dynamic Memory: malloc, calloc, realloc & free",
+   "phase": 3,
+   "order": 13,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "c-memory-learn",
+     "type": "learn",
+     "title": "Watch: Dynamic Memory: malloc, calloc, realloc & free",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Malloc in C is easy! 🏢",
+       "url": "https://www.youtube.com/watch?v=n_Se6bt8jM0",
+       "youtube_id": "n_Se6bt8jM0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 572,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Dynamic Memory Allocation Malloc Calloc Realloc & Free(): C Tutorial In Hindi #47",
+       "url": "https://www.youtube.com/watch?v=q8j8EqCZcWM",
+       "youtube_id": "q8j8EqCZcWM",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1793,
+       "est_minutes": 35,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-memory-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Manual Memory Allocation",
+       "url": "https://beej.us/guide/bgc/html/split/manual-memory-allocation.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Dynamic allocation",
+       "url": "https://www.learn-c.org/en/Dynamic_allocation",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-memory-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Dynamic allocation exercise",
+       "url": "https://www.learn-c.org/en/Dynamic_allocation",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-memory-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "malloc vs calloc?",
+     "a": "calloc also sets memory to zero"
+    },
+    {
+     "q": "What must follow every successful malloc?",
+     "a": "A matching free() when done"
+    },
+    {
+     "q": "What does malloc return on failure?",
+     "a": "NULL — always check it"
+    }
+   ]
+  },
+  {
+   "id": "c-structs",
+   "subject": "C",
+   "title": "Structures, typedef, Unions & Enums",
+   "phase": 3,
+   "order": 14,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 145,
+   "blocks": [
+    {
+     "id": "c-structs-learn",
+     "type": "learn",
+     "title": "Watch: Structures, typedef, Unions & Enums",
+     "est_minutes": 15,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Structs in C are easy! 📦",
+       "url": "https://www.youtube.com/watch?v=e9OXqEPF-5M",
+       "youtube_id": "e9OXqEPF-5M",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 735,
+       "est_minutes": 15,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Structures In C: C Tutorial In Hindi #37",
+       "url": "https://www.youtube.com/watch?v=J464pe6ZTrE",
+       "youtube_id": "J464pe6ZTrE",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1578,
+       "est_minutes": 35,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-structs-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Structs",
+       "url": "https://beej.us/guide/bgc/html/split/structs.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – typedef",
+       "url": "https://beej.us/guide/bgc/html/split/typedef-making-new-types.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – enum",
+       "url": "https://beej.us/guide/bgc/html/split/enumerated-types-enum.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Unions",
+       "url": "https://www.learn-c.org/en/Unions",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-structs-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Structures exercise",
+       "url": "https://www.learn-c.org/en/Structures",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-structs-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Operator to access a member through a pointer?",
+     "a": "-> (arrow)"
+    },
+    {
+     "q": "What does typedef do?",
+     "a": "Creates a new name for an existing type"
+    },
+    {
+     "q": "Union vs struct?",
+     "a": "A union's members share the same memory; a struct's members each have their own"
+    }
+   ]
+  },
+  {
+   "id": "c-files",
+   "subject": "C",
+   "title": "File Handling: fopen, fprintf, fgets, fclose",
+   "phase": 3,
+   "order": 15,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 140,
+   "blocks": [
+    {
+     "id": "c-files-learn",
+     "type": "learn",
+     "title": "Watch: File Handling: fopen, fprintf, fgets, fclose",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Write files using C programming in 5 minutes! ✍️",
+       "url": "https://www.youtube.com/watch?v=d29sVpbM0kc",
+       "youtube_id": "d29sVpbM0kc",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 356,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Read files using C programming in 6 minutes! 📖",
+       "url": "https://www.youtube.com/watch?v=eIlcl-mt3tg",
+       "youtube_id": "eIlcl-mt3tg",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 384,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: writing files, then reading files."
+    },
+    {
+     "id": "c-files-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – File Input/Output",
+       "url": "https://beej.us/guide/bgc/html/split/file-inputoutput.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-files-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – C practice",
+       "url": "https://www.hackerrank.com/domains/c",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-files-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Mode to append to a file?",
+     "a": "\"a\""
+    },
+    {
+     "q": "What does fopen return if it fails?",
+     "a": "NULL"
+    },
+    {
+     "q": "Why call fclose?",
+     "a": "To flush data and release the file handle"
+    }
+   ]
+  },
+  {
+   "id": "c-preprocessor-bits",
+   "subject": "C",
+   "title": "Preprocessor, Macros, Header Guards & Bitwise Operators",
+   "phase": 3,
+   "order": 16,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 170,
+   "blocks": [
+    {
+     "id": "c-preprocessor-bits-learn",
+     "type": "learn",
+     "title": "Watch: Preprocessor, Macros, Header Guards & Bitwise Operators",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "C bitwise operators 🔣",
+       "url": "https://www.youtube.com/watch?v=BGeOwlIGRGI",
+       "youtube_id": "BGeOwlIGRGI",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Bro Code",
+       "duration_seconds": 407,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C_148 Macro in C | Preprocessor command #define and #undef  in C | C Programming Tutorials",
+       "url": "https://www.youtube.com/watch?v=InxAy7eI_OE",
+       "youtube_id": "InxAy7eI_OE",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Jenny's Lectures CS IT",
+       "duration_seconds": 1325,
+       "est_minutes": 30,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: bitwise operators, then macros & #define."
+    },
+    {
+     "id": "c-preprocessor-bits-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – The C Preprocessor",
+       "url": "https://beej.us/guide/bgc/html/split/the-c-preprocessor.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Bitwise Operations",
+       "url": "https://beej.us/guide/bgc/html/split/bitwise-operations.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Bitmasks",
+       "url": "https://www.learn-c.org/en/Bitmasks",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-preprocessor-bits-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Bitmasks exercise",
+       "url": "https://www.learn-c.org/en/Bitmasks",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Eliud's Eggs (count set bits)",
+       "url": "https://exercism.org/tracks/c/exercises/eliuds-eggs",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-preprocessor-bits-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does a header guard prevent?",
+     "a": "Including the same header twice"
+    },
+    {
+     "q": "x & 1 tells you what?",
+     "a": "Whether x is odd (1) or even (0)"
+    },
+    {
+     "q": "Why wrap macro parameters in brackets?",
+     "a": "To avoid operator-precedence surprises when the macro expands"
+    }
+   ]
+  },
+  {
+   "id": "c-function-pointers",
+   "subject": "C",
+   "title": "Function Pointers, Callbacks & qsort",
+   "phase": 3,
+   "order": 17,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 170,
+   "blocks": [
+    {
+     "id": "c-function-pointers-learn",
+     "type": "learn",
+     "title": "Watch: Function Pointers, Callbacks & qsort",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Function Pointers in C",
+       "url": "https://www.youtube.com/watch?v=BRsv3ZXoHto",
+       "youtube_id": "BRsv3ZXoHto",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Neso Academy",
+       "duration_seconds": 367,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "C Programming: Function Pointers and qsort",
+       "url": "https://www.youtube.com/watch?v=TpIuj3Lgho0",
+       "youtube_id": "TpIuj3Lgho0",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Barry Brown",
+       "duration_seconds": 3100,
+       "est_minutes": 60,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-function-pointers-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Function Pointers",
+       "url": "https://www.learn-c.org/en/Function_Pointers",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "cppreference – qsort",
+       "url": "https://en.cppreference.com/w/c/algorithm/qsort",
+       "lang": "en",
+       "provider": "en.cppreference.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-function-pointers-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "learn-c.org – Function Pointers exercise",
+       "url": "https://www.learn-c.org/en/Function_Pointers",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-function-pointers-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Declare p as pointer to a function taking int and returning int.",
+     "a": "int (*p)(int);"
+    },
+    {
+     "q": "What does qsort need from you?",
+     "a": "A comparison function returning <0, 0 or >0"
+    },
+    {
+     "q": "What is a callback?",
+     "a": "A function passed as an argument to be called later"
+    }
+   ]
+  },
+  {
+   "id": "proj-c-contacts",
+   "subject": "C",
+   "title": "Project 3: Contact Book Saved to a File",
+   "phase": 3,
+   "order": 18,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1150,
+   "blocks": [
+    {
+     "id": "proj-c-contacts-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – File I/O (reference)",
+       "url": "https://beej.us/guide/bgc/html/split/file-inputoutput.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "proj-c-contacts-build",
+     "type": "build",
+     "title": "Contact book using an array of structs allocated with malloc/realloc: add, list, search, delete; save to and load from contacts.txt.",
+     "est_minutes": 1080,
+     "done_when": [
+      "Data survives restarting the program",
+      "Memory grows with realloc and is freed on exit",
+      "Runs cleanly with -fsanitize=address (no leaks/overflows)"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-c-contacts-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-c-contacts-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "W3Schools C Quiz",
+       "url": "https://www.w3schools.com/c/c_quiz.php",
+       "lang": "en",
+       "provider": "www.w3schools.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "Why use realloc here?",
+     "a": "To grow the array when more contacts are added"
+    },
+    {
+     "q": "Tool to catch memory errors?",
+     "a": "AddressSanitizer (-fsanitize=address) or Valgrind"
+    },
+    {
+     "q": "Simple text format for each contact?",
+     "a": "One line per contact with comma-separated fields"
+    }
+   ]
+  },
+  {
+   "id": "c-linked-list",
+   "subject": "C",
+   "title": "Linked Lists",
+   "phase": 4,
+   "order": 19,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 190,
+   "blocks": [
+    {
+     "id": "c-linked-list-learn",
+     "type": "learn",
+     "title": "Watch: Linked Lists",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Linked List Data Structure: Creation and Traversal in C Language",
+       "url": "https://www.youtube.com/watch?v=BHphhqL9EOE",
+       "youtube_id": "BHphhqL9EOE",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1427,
+       "est_minutes": 30,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-linked-list-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Linked lists",
+       "url": "https://www.learn-c.org/en/Linked_lists",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-linked-list-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Linked List",
+       "url": "https://exercism.org/tracks/c/exercises/linked-list",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-linked-list-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does each node store?",
+     "a": "Data and a pointer to the next node"
+    },
+    {
+     "q": "How do you know you reached the end?",
+     "a": "The next pointer is NULL"
+    },
+    {
+     "q": "Advantage over arrays?",
+     "a": "Cheap insertion/deletion without shifting elements"
+    }
+   ]
+  },
+  {
+   "id": "c-stack-queue",
+   "subject": "C",
+   "title": "Stacks & Queues",
+   "phase": 4,
+   "order": 20,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 200,
+   "blocks": [
+    {
+     "id": "c-stack-queue-learn",
+     "type": "learn",
+     "title": "Watch: Stacks & Queues",
+     "est_minutes": 40,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Implementing all the Stack Operations using Linked List (With Code in C)",
+       "url": "https://www.youtube.com/watch?v=0BTDISr-8xU",
+       "youtube_id": "0BTDISr-8xU",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1842,
+       "est_minutes": 40,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-stack-queue-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GeeksforGeeks – Stack Data Structure",
+       "url": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
+       "lang": "en",
+       "provider": "www.geeksforgeeks.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GeeksforGeeks – Queue Data Structure",
+       "url": "https://www.geeksforgeeks.org/dsa/queue-data-structure/",
+       "lang": "en",
+       "provider": "www.geeksforgeeks.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-stack-queue-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Matching Brackets (stack)",
+       "url": "https://exercism.org/tracks/c/exercises/matching-brackets",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Circular Buffer (queue)",
+       "url": "https://exercism.org/tracks/c/exercises/circular-buffer",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-stack-queue-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "Stack order?",
+     "a": "LIFO — last in, first out"
+    },
+    {
+     "q": "Queue order?",
+     "a": "FIFO — first in, first out"
+    },
+    {
+     "q": "Stack operations?",
+     "a": "push, pop, peek"
+    }
+   ]
+  },
+  {
+   "id": "c-trees",
+   "subject": "C",
+   "title": "Binary Trees & Binary Search Trees",
+   "phase": 4,
+   "order": 21,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 245,
+   "blocks": [
+    {
+     "id": "c-trees-learn",
+     "type": "learn",
+     "title": "Watch: Binary Trees & Binary Search Trees",
+     "est_minutes": 25,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Binary search tree - Implementation in C/C++",
+       "url": "https://www.youtube.com/watch?v=COZK7NATh4k",
+       "youtube_id": "COZK7NATh4k",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "mycodeschool",
+       "duration_seconds": 1116,
+       "est_minutes": 25,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Linked List Data Structure: Creation and Traversal in C Language",
+       "url": "https://www.youtube.com/watch?v=BHphhqL9EOE",
+       "youtube_id": "BHphhqL9EOE",
+       "lang": "hi",
+       "provider": "YouTube",
+       "channel": "CodeWithHarry",
+       "duration_seconds": 1427,
+       "est_minutes": 30,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "English main: mycodeschool BST. Hindi learners: revise node/pointer basics with the linked-list video first."
+    },
+    {
+     "id": "c-trees-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "learn-c.org – Binary trees",
+       "url": "https://www.learn-c.org/en/Binary_trees",
+       "lang": "en",
+       "provider": "www.learn-c.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GeeksforGeeks – Binary Search Tree",
+       "url": "https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/",
+       "lang": "en",
+       "provider": "www.geeksforgeeks.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-trees-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 180,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Binary Search Tree",
+       "url": "https://exercism.org/tracks/c/exercises/binary-search-tree",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-trees-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "BST rule?",
+     "a": "Left subtree < node < right subtree"
+    },
+    {
+     "q": "Which traversal prints a BST in sorted order?",
+     "a": "In-order (left, node, right)"
+    },
+    {
+     "q": "Worst-case search time in an unbalanced BST?",
+     "a": "O(n)"
+    }
+   ]
+  },
+  {
+   "id": "c-sort-search",
+   "subject": "C",
+   "title": "Sorting & Searching (Bubble, Selection, Binary Search)",
+   "phase": 4,
+   "order": 22,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 170,
+   "blocks": [
+    {
+     "id": "c-sort-search-learn",
+     "type": "learn",
+     "title": "Watch: Sorting & Searching (Bubble, Selection, Binary Search)",
+     "est_minutes": 10,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Sorting C Arrays with Bubble Sort",
+       "url": "https://www.youtube.com/watch?v=NGwCEYb7cOQ",
+       "youtube_id": "NGwCEYb7cOQ",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Barry Brown",
+       "duration_seconds": 316,
+       "est_minutes": 10,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Binary Search: Iterative and Recursive In One Video",
+       "url": "https://www.youtube.com/watch?v=Rz15vWSBuW8",
+       "youtube_id": "Rz15vWSBuW8",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Quoc Dat Phung",
+       "duration_seconds": 828,
+       "est_minutes": 20,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ]
+    },
+    {
+     "id": "c-sort-search-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GeeksforGeeks – Bubble Sort",
+       "url": "https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/",
+       "lang": "en",
+       "provider": "www.geeksforgeeks.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GeeksforGeeks – Binary Search",
+       "url": "https://www.geeksforgeeks.org/dsa/binary-search/",
+       "lang": "en",
+       "provider": "www.geeksforgeeks.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-sort-search-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 120,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C – Binary Search",
+       "url": "https://exercism.org/tracks/c/exercises/binary-search",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-sort-search-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What does binary search require?",
+     "a": "A sorted array"
+    },
+    {
+     "q": "Time complexity of binary search?",
+     "a": "O(log n)"
+    },
+    {
+     "q": "Library function to sort in C?",
+     "a": "qsort() from <stdlib.h>"
+    }
+   ]
+  },
+  {
+   "id": "c-tools",
+   "subject": "C",
+   "title": "Multi-file Programs, Make & Debugging (GDB, Sanitizers)",
+   "phase": 4,
+   "order": 23,
+   "kind": "learn",
+   "weightage": "core",
+   "est_minutes_total": 160,
+   "blocks": [
+    {
+     "id": "c-tools-learn",
+     "type": "learn",
+     "title": "Watch: Multi-file Programs, Make & Debugging (GDB, Sanitizers)",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "video",
+       "role": "main",
+       "title": "Debugging With GDB",
+       "url": "https://www.youtube.com/watch?v=OpVMB7DNlmY",
+       "youtube_id": "OpVMB7DNlmY",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Robert Martin",
+       "duration_seconds": 1479,
+       "est_minutes": 30,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      },
+      {
+       "type": "video",
+       "role": "alternative",
+       "title": "Learn make in 60 seconds.",
+       "url": "https://www.youtube.com/watch?v=a8mPKBxQ9No",
+       "youtube_id": "a8mPKBxQ9No",
+       "lang": "en",
+       "provider": "YouTube",
+       "channel": "Jacob Sorber",
+       "duration_seconds": 128,
+       "est_minutes": 5,
+       "duration_source": "youtube_api",
+       "access": "all",
+       "ad_gate_allowed": true,
+       "status": "active",
+       "last_checked": "2026-10-16",
+       "verified_via": "youtube_oembed"
+      }
+     ],
+     "note": "Watch both: GDB debugging, then make."
+    },
+    {
+     "id": "c-tools-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Multifile Projects",
+       "url": "https://beej.us/guide/bgc/html/split/multifile-projects.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GNU make manual – Introduction",
+       "url": "https://www.gnu.org/software/make/manual/html_node/Introduction.html",
+       "lang": "en",
+       "provider": "www.gnu.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      },
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "GDB manual – A sample session",
+       "url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Sample-Session.html",
+       "lang": "en",
+       "provider": "sourceware.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-tools-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 90,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "Exercism C track – solve any 3 exercises locally with make",
+       "url": "https://exercism.org/tracks/c/",
+       "lang": "en",
+       "provider": "exercism.org",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "c-tools-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    }
+   ],
+   "recall": [
+    {
+     "q": "What goes in a .h header file?",
+     "a": "Declarations: prototypes, struct definitions, macros"
+    },
+    {
+     "q": "GDB command to stop at a line?",
+     "a": "break file.c:LINE"
+    },
+    {
+     "q": "Why use make?",
+     "a": "To rebuild only what changed with one command"
+    }
+   ]
+  },
+  {
+   "id": "proj-c-final",
+   "subject": "C",
+   "title": "Final Project: Library/Inventory Management System in C",
+   "phase": 4,
+   "order": 24,
+   "kind": "project",
+   "weightage": "core",
+   "est_minutes_total": 1930,
+   "blocks": [
+    {
+     "id": "proj-c-final-read",
+     "type": "read",
+     "title": "Read the notes and try every example yourself",
+     "est_minutes": 30,
+     "resources": [
+      {
+       "type": "notes",
+       "role": "main",
+       "title": "Beej's Guide – Structs II (reference)",
+       "url": "https://beej.us/guide/bgc/html/split/structs-ii-more-fun-with-structs.html",
+       "lang": "en",
+       "provider": "beej.us",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "proj-c-final-build",
+     "type": "build",
+     "title": "Multi-file C program (src/, include/, Makefile) managing items with a linked list: add, update, delete, search, sort, save/load to file, with input validation.",
+     "est_minutes": 1800,
+     "done_when": [
+      "Split into at least 3 .c files with headers and a Makefile",
+      "Linked list + file persistence + sorting",
+      "README, sample run, and clean -Wall/-fsanitize builds; pushed to GitHub"
+     ],
+     "resources": []
+    },
+    {
+     "id": "proj-c-final-practice",
+     "type": "practice",
+     "title": "Practice exercises",
+     "est_minutes": 60,
+     "resources": [
+      {
+       "type": "practice",
+       "role": "main",
+       "title": "HackerRank – C practice (warm-up)",
+       "url": "https://www.hackerrank.com/domains/c",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    },
+    {
+     "id": "proj-c-final-recall",
+     "type": "recall",
+     "title": "Recall check (answer from memory, then reveal)",
+     "est_minutes": 10,
+     "resources": []
+    },
+    {
+     "id": "proj-c-final-test",
+     "type": "test",
+     "title": "Phase quiz — enter your score",
+     "est_minutes": 30,
+     "score_entry": true,
+     "resources": [
+      {
+       "type": "test",
+       "role": "main",
+       "title": "HackerRank Skills Certification (free tests)",
+       "url": "https://www.hackerrank.com/skills-verification",
+       "lang": "en",
+       "provider": "www.hackerrank.com",
+       "access": "all",
+       "status": "unverified",
+       "last_checked": null,
+       "ad_gate_allowed": true
+      }
+     ]
+    }
+   ],
+   "recall": [
+    {
+     "q": "What proves this project is professional?",
+     "a": "Clean structure, Makefile, README and no warnings or leaks"
+    },
+    {
+     "q": "Next roadmaps after C?",
+     "a": "C++, Data Structures & Algorithms, Embedded/IoT"
+    },
+    {
+     "q": "How do you show it to employers?",
+     "a": "Public GitHub repository with screenshots"
+    }
+   ]
+  }
+ ],
+ "milestones": []
 }
