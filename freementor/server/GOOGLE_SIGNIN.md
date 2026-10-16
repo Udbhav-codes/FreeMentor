@@ -22,6 +22,27 @@ Values you will need, already fixed by this project:
 Current state: Google is **not enabled** (`external.google: false`); only
 email is. Sign-ups are allowed.
 
+## The same Cloud project also holds the YouTube key
+
+`FreeMentor` in Google Cloud carries two unrelated credentials, and anybody
+changing one should know the other is there:
+
+| Credential | Type | Used by |
+|---|---|---|
+| Web + Android OAuth clients | OAuth 2.0 | Google sign-in, via Supabase |
+| `YOUTUBE_API_KEY` | API key | `library/.../tools/check_links.py`, server-side only |
+
+Enabling YouTube Data API v3 does **not** affect sign-in. OAuth verification
+is driven by the *scopes* the OAuth client requests — ours are `email`,
+`profile`, `openid`, all non-sensitive — while an API key has no scopes and
+never reaches the consent screen. Enabling an API in a project changes
+neither.
+
+What does matter: **restrict the API key to YouTube Data API v3**
+(Credentials → the key → API restrictions). This project holds the sign-in
+credentials, so an unrestricted key here would also work against any API
+enabled on it later.
+
 ---
 
 ## Why there are two OAuth clients
