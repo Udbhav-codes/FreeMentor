@@ -56,14 +56,25 @@ def http_ok(url):
             if method == "GET": return False, str(e)[:60]
     return False, None
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("goal_file"); ap.add_argument("--out"); ap.add_argument("--report", default="broken_links.csv")
-    ap.add_argument("--skip-web", action="store_true", help="only check YouTube")
-    a = ap.parse_args()
-    key = os.environ.get("YOUTUBE_API_KEY")
-    doc = json.load(open(a.goal_file, encoding="utf-8"))
-    now = datetime.date.today().isoformat()
+def bump_version(version):
+    """"2027.3" -> "2027.4". Increments the trailing number, whatever precedes it.
+
+    Why this exists: `publish_library` builds versions.json from
+    goal.version, and the app re-downloads a cached goal ONLY when that
+    version differs. This script used to rewrite durations and set
+    last_link_check without touching version — so a full run, a republish and
+    a restart left every phone on the old estimates. The work happened and no
+    learner ever saw it.
+    """
+    m = re.fullmatch(r"(.*?)(\d+)", version or "")
+    if m:
+        return f"{m.group(1)}{int(m.group(2)) + 1}"
+    return f"{version}.2" if version else "1"
+
+
+def check_one(path, key, skip_web, out_path, now):
+    """Checks one goal file in place. Returns (resource_count, broken rows)."""
+    doc = json.load(open(path, encoding="utf-8"))
     resources = [r for t in doc["topics"] for b in t["blocks"] for r in b["resources"]] + \
                 [r for m in doc.get("milestones", []) for r in m["resources"]]
     broken = []
@@ -72,6 +83,9 @@ def main():
     if vids and not key:
         print("YOUTUBE_API_KEY not set - skipping YouTube checks")
     web_cache = {}
+    # Tracks whether anything a learner would actually notice changed, so the
+    # version is bumped on a real update and not on a no-op re-run.
+    before = json.dumps(doc, sort_keys=True, ensure_ascii=False)
     for t in doc["topics"]:
         for b in t["blocks"]:
             for r in b["resources"]:
@@ -84,7 +98,7 @@ def main():
                                   "channel": v["channel"], "title": v["title"]})
                         r["est_minutes"] = int(-(-v["duration_seconds"] * 1.15 // 300) * 5)  # +15%, round up to 5 min
                     r["last_checked"] = now
-                elif not r.get("youtube_id") and not a.skip_web:
+                elif not r.get("youtube_id") and not skip_web:
                     if r["url"] not in web_cache: web_cache[r["url"]] = http_ok(r["url"])
                     ok, code = web_cache[r["url"]]
                     r["status"] = "active" if ok else "broken"; r["last_checked"] = now
@@ -93,11 +107,58 @@ def main():
             if vids_in_block and vids_in_block[0].get("duration_source") == "youtube_api":
                 b["est_minutes"] = vids_in_block[0]["est_minutes"]
         t["est_minutes_total"] = sum(b["est_minutes"] for b in t["blocks"])
+
+    # last_link_check is excluded from the comparison on purpose: it changes
+    # on every run by definition, so including it would bump the version daily
+    # and make all 73 goals re-download for nothing.
     doc["goal"]["last_link_check"] = now
-    json.dump(doc, open(a.out or a.goal_file, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    after = json.dumps({**doc, "goal": {k: v for k, v in doc["goal"].items() if k != "last_link_check"}},
+                       sort_keys=True, ensure_ascii=False)
+    before_cmp = json.dumps({**json.loads(before), "goal": {k: v for k, v in json.loads(before)["goal"].items() if k != "last_link_check"}},
+                            sort_keys=True, ensure_ascii=False)
+    changed = after != before_cmp
+    old_version = doc["goal"].get("version")
+    if changed:
+        doc["goal"]["version"] = bump_version(old_version)
+
+    json.dump(doc, open(out_path or path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    note = f"{old_version} -> {doc['goal']['version']}" if changed else f"{old_version} (unchanged)"
+    print(f"  {os.path.basename(path):<24} {len(resources):>5} resources  {len(broken):>4} broken  {note}")
+    return len(resources), broken
+
+
+def main():
+    ap = argparse.ArgumentParser(
+        description="Fill real YouTube durations and flag dead links. Accepts several goal files."
+    )
+    ap.add_argument("goal_file", nargs="+", help="one or more goals/<id>.json")
+    ap.add_argument("--out", help="only valid with a single goal_file")
+    ap.add_argument("--report", default="broken_links.csv")
+    ap.add_argument("--skip-web", action="store_true",
+                    help="only check YouTube; skips ~2950 serial HTTP checks")
+    a = ap.parse_args()
+
+    if a.out and len(a.goal_file) > 1:
+        sys.exit("--out takes a single file; with several files each is updated in place.")
+
+    key = os.environ.get("YOUTUBE_API_KEY")
+    now = datetime.date.today().isoformat()
+    total_resources = 0
+    all_broken = []
+
+    for path in a.goal_file:
+        count, broken = check_one(path, key, a.skip_web, a.out, now)
+        total_resources += count
+        all_broken.extend((os.path.basename(path), *row) for row in broken)
+
     with open(a.report, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f); w.writerow(["topic", "block", "url", "problem"]); w.writerows(broken)
-    print(f"checked {len(resources)} resources, {len(broken)} broken -> {a.report}")
+        w = csv.writer(f)
+        w.writerow(["goal_file", "topic", "block", "url", "problem"])
+        w.writerows(all_broken)
+    print(f"\n{len(a.goal_file)} file(s), {total_resources} resources, {len(all_broken)} broken -> {a.report}")
+    if all_broken:
+        print("Review the CSV before republishing: a broken link is marked, not removed.")
+
 
 if __name__ == "__main__":
     main()
