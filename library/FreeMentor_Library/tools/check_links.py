@@ -44,17 +44,72 @@ def yt_lookup(ids, key):
         time.sleep(0.2)
     return out
 
-def http_ok(url):
-    for method in ("HEAD", "GET"):
-        try:
-            req = urllib.request.Request(url, method=method, headers={"User-Agent": "FreeMentor-LinkChecker/1.0"})
-            with urllib.request.urlopen(req, timeout=20) as r:
-                return 200 <= r.status < 400, r.status
-        except urllib.error.HTTPError as e:
-            if method == "GET": return False, e.code
-        except Exception as e:
-            if method == "GET": return False, str(e)[:60]
-    return False, None
+# A real browser UA. The honest "FreeMentor-LinkChecker/1.0" got us blocked by
+# Cloudflare and LeetCode, which is not information about whether the link
+# works for a learner.
+BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
+
+#: Statuses that mean "we could not tell", NOT "this is dead".
+#:
+#: A first full run marked 152 of 4,122 resources broken. Re-checking by hand
+#: showed roughly 89 of those were our own fault:
+#:   429  tryhackme.com   — we hammered it; it returns 200 when throttled
+#:   403  cloudflare.com, leetcode.com — bot protection; fine in a browser
+#:   SSL timeouts  cuet.nta.nic.in — slow, not down; returns 200 given time
+#: Publishing those as broken would have shown learners a warning on 89
+#: working resources. A checker that cries wolf gets ignored, which is worse
+#: than one that misses things.
+UNVERIFIABLE = {401, 403, 405, 429, 503}
+
+#: Politeness, and the reason the 429s happened at all.
+PER_HOST_DELAY = 0.7
+_last_hit = {}
+
+
+def http_ok(url, attempts=3):
+    """Returns (ok, detail). `ok` is None for "could not tell".
+
+    Retries on a throttle or a timeout with backoff, because those say more
+    about us than about the link.
+    """
+    host = urllib.parse.urlparse(url).netloc
+    wait = _last_hit.get(host, 0) + PER_HOST_DELAY - time.time()
+    if wait > 0:
+        time.sleep(wait)
+    _last_hit[host] = time.time()
+
+    last = None
+    for attempt in range(attempts):
+        for method in ("HEAD", "GET"):
+            try:
+                req = urllib.request.Request(
+                    url, method=method,
+                    headers={"User-Agent": BROWSER_UA, "Accept": "text/html,*/*"},
+                )
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    if 200 <= r.status < 400:
+                        return True, r.status
+                    last = r.status
+            except urllib.error.HTTPError as e:
+                last = e.code
+                if e.code in UNVERIFIABLE:
+                    break          # retrying a 403 changes nothing
+                if method == "GET":
+                    break          # a real 404 — stop asking
+            except Exception as e:
+                last = str(e)[:60]
+        if isinstance(last, int) and last in UNVERIFIABLE and last != 429:
+            return None, last      # bot protection: unverifiable, not broken
+        if attempt < attempts - 1:
+            time.sleep(2 ** attempt)   # 1s, 2s — covers a throttle or a slow TLS handshake
+    if isinstance(last, int) and last in UNVERIFIABLE:
+        return None, last
+    if not isinstance(last, int):
+        return None, last          # a timeout is not evidence of a dead link
+    return False, last
 
 def bump_version(version):
     """"2027.3" -> "2027.4". Increments the trailing number, whatever precedes it.
@@ -78,6 +133,7 @@ def check_one(path, key, skip_web, out_path, now):
     resources = [r for t in doc["topics"] for b in t["blocks"] for r in b["resources"]] + \
                 [r for m in doc.get("milestones", []) for r in m["resources"]]
     broken = []
+    unverifiable = []
     vids = sorted({r["youtube_id"] for r in resources if r.get("youtube_id")})
     info = yt_lookup(vids, key) if (key and vids) else {}
     if vids and not key:
@@ -101,8 +157,19 @@ def check_one(path, key, skip_web, out_path, now):
                 elif not r.get("youtube_id") and not skip_web:
                     if r["url"] not in web_cache: web_cache[r["url"]] = http_ok(r["url"])
                     ok, code = web_cache[r["url"]]
-                    r["status"] = "active" if ok else "broken"; r["last_checked"] = now
-                    if not ok: broken.append((t["id"], b["id"], r["url"], f"HTTP {code}"))
+                    if ok is None:
+                        # Could not tell — bot protection, a throttle or a
+                        # timeout. Leave whatever status the resource already
+                        # had rather than downgrading a working link, and
+                        # report it separately so a real outage is still
+                        # visible to a human.
+                        r["last_checked"] = now
+                        unverifiable.append((t["id"], b["id"], r["url"], f"unverifiable ({code})"))
+                    else:
+                        r["status"] = "active" if ok else "broken"
+                        r["last_checked"] = now
+                        if not ok:
+                            broken.append((t["id"], b["id"], r["url"], f"HTTP {code}"))
             vids_in_block = [r for r in b["resources"] if r.get("type") == "video" and r.get("role") == "main"]
             if vids_in_block and vids_in_block[0].get("duration_source") == "youtube_api":
                 b["est_minutes"] = vids_in_block[0]["est_minutes"]
@@ -124,7 +191,7 @@ def check_one(path, key, skip_web, out_path, now):
     json.dump(doc, open(out_path or path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     note = f"{old_version} -> {doc['goal']['version']}" if changed else f"{old_version} (unchanged)"
     print(f"  {os.path.basename(path):<24} {len(resources):>5} resources  {len(broken):>4} broken  {note}")
-    return len(resources), broken
+    return len(resources), broken, unverifiable
 
 
 def main():
@@ -145,11 +212,13 @@ def main():
     now = datetime.date.today().isoformat()
     total_resources = 0
     all_broken = []
+    all_unsure = []
 
     for path in a.goal_file:
-        count, broken = check_one(path, key, a.skip_web, a.out, now)
+        count, broken, unsure = check_one(path, key, a.skip_web, a.out, now)
         total_resources += count
         all_broken.extend((os.path.basename(path), *row) for row in broken)
+        all_unsure.extend((os.path.basename(path), *row) for row in unsure)
 
     with open(a.report, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)

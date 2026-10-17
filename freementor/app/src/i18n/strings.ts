@@ -274,6 +274,11 @@ export const en = {
   'dialog.checkScoreTitle': 'Check your score',
   'dialog.checkScoreBody': 'Enter your score and the total it was out of.',
   'dialog.adGateTitle': 'Watch a short ad to open this?',
+  'dialog.adGateNotLive':
+    'Ads are not enabled in this build yet, so this opens directly. When they arrive, a short ad will open it instead.',
+  'dialog.adGateWatch': 'Watch and open',
+  'dialog.adGateBody':
+    'A short ad opens this resource. You can close it any time — it only opens once the ad finishes.',
   'dialog.linkBrokenTitle': 'That link is reported broken',
   'dialog.linkBrokenBody': 'We are checking it. Try another resource for now.',
 
@@ -550,6 +555,11 @@ export const hi: Record<StringKey, string> = {
   'dialog.checkScoreTitle': 'अपना स्कोर जाँचें',
   'dialog.checkScoreBody': 'अपना स्कोर और कुल अंक दोनों डालें।',
   'dialog.adGateTitle': 'इसे खोलने के लिए एक छोटा विज्ञापन देखें?',
+  'dialog.adGateNotLive':
+    'इस बिल्ड में विज्ञापन अभी चालू नहीं हैं, इसलिए यह सीधे खुल जाएगा। जब वे आएंगे, तो एक छोटा विज्ञापन इसे खोलेगा।',
+  'dialog.adGateWatch': 'देखें और खोलें',
+  'dialog.adGateBody':
+    'एक छोटा विज्ञापन इस संसाधन को खोलता है। आप इसे कभी भी बंद कर सकते हैं — यह विज्ञापन पूरा होने पर ही खुलेगा।',
   'dialog.linkBrokenTitle': 'यह लिंक टूटा बताया गया है',
   'dialog.linkBrokenBody': 'हम जाँच रहे हैं। अभी कोई और संसाधन आज़माएँ।',
 
@@ -826,6 +836,11 @@ export const hinglish: Record<StringKey, string> = {
   'dialog.checkScoreTitle': 'Apna score jaanchein',
   'dialog.checkScoreBody': 'Apna score aur kul ank dono daalein.',
   'dialog.adGateTitle': 'Ise kholne ke liye ek chhota ad dekhein?',
+  'dialog.adGateNotLive':
+    'Is build mein ads abhi chalu nahin hain, isliye yeh seedha khul jaayega. Jab woh aayenge, ek chhota ad ise kholega.',
+  'dialog.adGateWatch': 'Dekhein aur kholein',
+  'dialog.adGateBody':
+    'Ek chhota ad is resource ko kholta hai. Aap ise kabhi bhi band kar sakte hain — yeh ad poora hone par hi khulega.',
   'dialog.linkBrokenTitle': 'Yeh link toota bataya gaya hai',
   'dialog.linkBrokenBody': 'Hum jaanch rahe hain. Abhi koi aur resource try karein.',
 

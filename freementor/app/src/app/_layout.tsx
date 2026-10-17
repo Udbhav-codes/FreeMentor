@@ -13,6 +13,14 @@ import { Inter_600SemiBold } from '@expo-google-fonts/inter/600SemiBold';
 import { DMSans_500Medium } from '@expo-google-fonts/dm-sans/500Medium';
 import { DMSans_700Bold } from '@expo-google-fonts/dm-sans/700Bold';
 import { DMSans_700Bold_Italic } from '@expo-google-fonts/dm-sans/700Bold_Italic';
+// Devanagari, for the Hindi UI. Inter and DM Sans carry no Devanagari
+// glyphs, so Hindi fell back to Android's system font and rendered in a
+// different typeface from the rest of the app. ~216 KB per weight; see
+// theme/devanagari.ts for why four and why Hinglish does not use them.
+import { NotoSansDevanagari_400Regular } from '@expo-google-fonts/noto-sans-devanagari/400Regular';
+import { NotoSansDevanagari_500Medium } from '@expo-google-fonts/noto-sans-devanagari/500Medium';
+import { NotoSansDevanagari_600SemiBold } from '@expo-google-fonts/noto-sans-devanagari/600SemiBold';
+import { NotoSansDevanagari_700Bold } from '@expo-google-fonts/noto-sans-devanagari/700Bold';
 import { ThemeProvider, useTheme } from '../theme/ThemeProvider.tsx';
 import { EnrollmentProvider } from '../state/EnrollmentContext.tsx';
 import { AuthProvider } from '../auth/AuthContext.tsx';
@@ -32,6 +40,10 @@ export default function RootLayout() {
     DMSans_500Medium,
     DMSans_700Bold,
     DMSans_700Bold_Italic,
+    NotoSansDevanagari_400Regular,
+    NotoSansDevanagari_500Medium,
+    NotoSansDevanagari_600SemiBold,
+    NotoSansDevanagari_700Bold,
   });
   const [dbReady, setDbReady] = useState(false);
   const [fatal, setFatal] = useState<string | null>(null);

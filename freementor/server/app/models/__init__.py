@@ -275,6 +275,28 @@ class NotificationPrefs(Base):
     quiet_to: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
 
+class DeviceToken(Base):
+    """An FCM registration token for one device.
+
+    Unique on the token, not on (user, token): the same physical device
+    signing in as somebody else must MOVE the row rather than add one, or the
+    previous learner keeps getting that device's notifications.
+    """
+
+    __tablename__ = "device_tokens"
+
+    id: Mapped[str] = mapped_column(UUIDCol, primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(
+        UUIDCol, ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    token: Mapped[str] = mapped_column(Text, unique=True)
+    platform: Mapped[str] = mapped_column(Text, default="android")
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    last_seen_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+
 class AuditLog(Base):
     __tablename__ = "audit_log"
 

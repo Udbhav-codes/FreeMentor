@@ -20,6 +20,18 @@ import { useEntitlement } from '../billing/useEntitlement.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { useT } from '../i18n/LanguageProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
+import {
+  ageFromBirthYear,
+  getRewardedAds,
+  grantsAccess,
+  requestOptionsFor,
+  type Outcome,
+} from '../ads/rewarded.ts';
+import { loadProfile } from '../db/profile.ts';
+
+// One instance for the module. The stub is stateless; the real one will hold
+// a loaded ad, which is exactly the thing worth reusing across taps.
+const ads = getRewardedAds();
 
 export async function openResource(resource: Resource): Promise<void> {
   if (resource.type === 'video') {
@@ -69,19 +81,46 @@ export function ResourceLink({ resource }: { resource: Resource }) {
       return;
     }
     if (access.kind === 'ad_gated') {
-      // M6 shows a user-initiated rewarded ad here. Never auto-playing, never
-      // during a video, a test or the checklist itself (§10.2).
+      // A user-initiated rewarded ad. Never auto-playing, never during a
+      // video, a test or the checklist itself (§10.2) — this runs before
+      // study starts, on the tap that opens a resource.
+      //
+      // `ads.available` is false until there is an AdMob account and a
+      // development build, and the dialog says so rather than implying an ad
+      // was shown. The ad path itself is live either way: the stub resolves
+      // `unavailable`, which is the same branch a real no-fill takes.
       Alert.alert(
         t('dialog.adGateTitle'),
-        'Ads arrive with the next milestone. For now this opens directly.',
+        ads.available ? t('dialog.adGateBody') : t('dialog.adGateNotLive'),
         [
           { text: t('common.cancel'), style: 'cancel' },
           {
-            text: t('day.openLink'),
-            onPress: () =>
-              void openResource(resource).catch(() =>
-                reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
-              ),
+            text: ads.available ? t('dialog.adGateWatch') : t('day.openLink'),
+            onPress: () => {
+              void (async () => {
+                // Loaded here rather than per render: ResourceLink appears
+                // once per resource, and the age is only needed on the tap
+                // that actually asks for an ad.
+                const age = ageFromBirthYear((await loadProfile())?.birthYear ?? null);
+                let outcome: Outcome;
+                try {
+                  outcome = await ads.show(requestOptionsFor(age));
+                } catch (error) {
+                  // A build that names an ad unit but cannot show one. The
+                  // learner is not held responsible for our misconfiguration.
+                  outcome = {
+                    kind: 'unavailable',
+                    reason: error instanceof Error ? error.message : 'ad failed',
+                  };
+                }
+                // A dismissed ad opens nothing; everything else does. See
+                // ads/rewarded.ts for why a failure still grants access.
+                if (!grantsAccess(outcome)) return;
+                await openResource(resource).catch(() =>
+                  reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
+                );
+              })();
+            },
           },
         ],
       );

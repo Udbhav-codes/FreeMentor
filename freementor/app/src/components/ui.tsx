@@ -22,6 +22,8 @@ import {
 } from 'react-native';
 import { BUTTON_HEIGHT, CHECKBOX_SIZE, MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
+import { useLanguage } from '../i18n/LanguageProvider.tsx';
+import { devanagariType } from '../theme/devanagari.ts';
 
 type TextVariant = keyof ReturnType<typeof useTheme>['typography'];
 
@@ -39,6 +41,7 @@ export function Txt({
   numberOfLines?: number;
 }) {
   const theme = useTheme();
+  const { language } = useLanguage();
   const colors = {
     text: theme.colors.text,
     secondary: theme.colors.textSecondary,
@@ -50,10 +53,15 @@ export function Txt({
     onPrimary: theme.colors.onPrimary,
     danger: theme.colors.danger,
   };
+  // Hindi needs Devanagari glyphs, which Inter and DM Sans do not have.
+  // Applied here rather than in the theme so the size, line height and
+  // letter spacing of each token stay in one place and keep serving both
+  // scripts. A no-op for English and Hinglish. See theme/devanagari.ts.
+  const type = devanagariType(theme.typography[variant], language);
   return (
     <Text
       numberOfLines={numberOfLines}
-      style={[theme.typography[variant], { color: colors[color ?? 'text'] }, style]}
+      style={[type, { color: colors[color ?? 'text'] }, style]}
     >
       {children}
     </Text>

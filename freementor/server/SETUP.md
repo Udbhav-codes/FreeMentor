@@ -144,3 +144,72 @@ writable by anyone holding the publishable key, which ships in the app.
 
 Worth re-running after any schema change. Last verified: all 17 tables RLS
 enabled, `coupons` and `users` both rejecting anonymous writes.
+
+---
+
+## Deploying the API
+
+`Dockerfile` builds the API. **Build from the repository root**, not from
+`server/`:
+
+```bash
+docker build -f freementor/server/Dockerfile -t freementor-api .
+```
+
+That is the one thing most likely to go wrong, and it fails loudly rather
+than quietly: the policy pages live in `docs/legal/`, outside `server/`, so a
+context of `server/` alone cannot COPY them and the build stops. An image
+without them serves 404 at `/privacy` and `/terms`, which Google Play refuses
+a listing for.
+
+### Environment the container needs
+
+| Variable | Required | Notes |
+|---|---|---|
+| `DATABASE_URL` | yes | Supavisor pooler, not `db.<ref>.supabase.co` — that host is IPv6-only |
+| `SUPABASE_URL` | yes | |
+| `SUPABASE_JWT_SECRET` | yes | Without it the server accepts stub tokens; `assert_safe()` refuses to start |
+| `SUPABASE_SERVICE_KEY` | yes | Storage uploads |
+| `SUPABASE_PUBLISHABLE_KEY` | yes | Injected into the deletion page |
+| `OTP_ECHO` | **must be `false`** | `assert_safe()` refuses production with it on |
+| `ENVIRONMENT` | `production` | Already set in the image |
+| `ADMIN_EMAILS` | no | Empty means nobody is an admin — the safe default |
+| `CORS_ORIGINS` | no | The admin panel's origin, if ever hosted. A `*` is refused |
+| `FORWARDED_ALLOW_IPS` | **yes, behind a proxy** | See below |
+| `EXPOSE_API_DOCS` | no | `/docs` is off in production regardless |
+| `FIREBASE_PROJECT_ID`, `FIREBASE_SERVICE_ACCOUNT_JSON` | no | Without them push logs to the console instead of sending |
+| `YOUTUBE_API_KEY` | no | Only the link checker uses it, and that runs separately |
+
+### `FORWARDED_ALLOW_IPS` is not optional behind a proxy
+
+`app/limits.py` keys rate limits on `request.client.host` and deliberately
+does **not** trust `X-Forwarded-For`, because any client can send that header
+and would otherwise reset its own counter at will. The consequence is that
+behind a load balancer every request appears to come from the proxy, so one
+noisy client rate-limits everybody. Set this to the proxy's address so uvicorn
+resolves the real peer.
+
+### Secrets are never in the image
+
+`.dockerignore` at the repository root excludes `.env`. It is there rather
+than beside the Dockerfile on purpose: BuildKit would read
+`Dockerfile.dockerignore`, but the classic builder would not, and a
+`.dockerignore` that is silently skipped bakes the Postgres password and the
+service key into a layer. Layers are not secret.
+
+### Before the first production boot
+
+1. Run `migrations/0001_initial.sql` through `0005_device_tokens.sql` against
+   Postgres, in order. **Never** create the schema from the models — the SQL
+   carries the RLS policies that SQLAlchemy knows nothing about.
+2. Check `/health` reports `"verifies_real_tokens": true` and
+   `"otp_echo": false`. A staging box quietly running the local stub verifier
+   is exactly the thing nobody notices until it matters.
+
+### Not yet verified
+
+The image has **not been built**: Docker is not installed on the development
+machine. Every path it references was checked to exist and `.dockerignore`
+was checked to exclude `.env`, but the first real `docker build` may still
+surface something — most likely a missing system library for `asyncpg` or
+`cryptography`, which is what the two-stage build exists to handle.

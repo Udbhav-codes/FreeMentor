@@ -13,7 +13,17 @@ from fastapi import FastAPI
 from app import security
 from app.config import get_settings
 from app.db import create_all
-from app.routers import account, admin, billing, catalog, enrollments, media, progress, web
+from app.routers import (
+    account,
+    admin,
+    billing,
+    catalog,
+    enrollments,
+    media,
+    progress,
+    push,
+    web,
+)
 
 settings = get_settings()
 
@@ -52,6 +62,7 @@ app.include_router(catalog.router)
 app.include_router(enrollments.router)
 app.include_router(media.router)
 app.include_router(progress.router)
+app.include_router(push.router)
 app.include_router(web.router)
 
 

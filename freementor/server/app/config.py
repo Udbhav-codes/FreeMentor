@@ -48,6 +48,12 @@ class Settings(BaseSettings):
     # reconnaissance for no benefit once the app is built against it.
     expose_api_docs: bool = True
 
+    # Firebase Cloud Messaging. Both must be set for real delivery; with
+    # either missing the console sender stands in and assert_safe() refuses
+    # production. See app/push.py.
+    firebase_project_id: str = ""
+    firebase_service_account_json: str = ""
+
     youtube_api_key: str = ""
     google_play_service_account_json: str = ""
     android_package_name: str = "com.freementor.app"

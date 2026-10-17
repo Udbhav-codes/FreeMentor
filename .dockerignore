@@ -1,0 +1,42 @@
+# Lives at the REPOSITORY ROOT because that is the build context, and because
+# every Docker version reads it here. BuildKit would also accept
+# freementor/server/Dockerfile.dockerignore, but the classic builder would
+# not — and a .dockerignore that is silently skipped bakes .env into a layer.
+#
+# The first entry is the one that matters: .env holds the Postgres password,
+# the Supabase service key and the YouTube key, and a COPY of the server
+# directory would otherwise bake all three into a layer. Layers are not
+# secret — anybody who can pull the image can read them.
+**/.env
+**/.env.*
+!**/.env.example
+
+# The app, admin panel and library are not part of the API image.
+freementor/app/
+freementor/admin/
+freementor/shared/
+library/
+design/
+web/
+docs/
+# ...except the policy pages the API serves.
+!docs/legal/
+
+**/node_modules/
+**/.expo/
+**/dist/
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.ruff_cache/
+**/*.egg-info/
+
+# Local-mode database; can hold real test data and is rebuilt on boot.
+**/freementor-local.db
+
+.git/
+.github/
+**/tests/
+**/*.md
+!docs/legal/*.md
