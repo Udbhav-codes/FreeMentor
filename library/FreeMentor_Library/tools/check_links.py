@@ -224,9 +224,28 @@ def main():
         w = csv.writer(f)
         w.writerow(["goal_file", "topic", "block", "url", "problem"])
         w.writerows(all_broken)
-    print(f"\n{len(a.goal_file)} file(s), {total_resources} resources, {len(all_broken)} broken -> {a.report}")
+    if all_unsure:
+        unsure_path = a.report.replace(".csv", "_unverifiable.csv")
+        with open(unsure_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["goal_file", "topic", "block", "url", "problem"])
+            w.writerows(all_unsure)
+
+    print(
+        f"\n{len(a.goal_file)} file(s), {total_resources} resources, "
+        f"{len(all_broken)} broken -> {a.report}"
+    )
     if all_broken:
         print("Review the CSV before republishing: a broken link is marked, not removed.")
+    if all_unsure:
+        # These kept whatever status they already had. Reported anyway: a site
+        # that starts 403ing every request is worth a human look even though
+        # it is not evidence of a dead link.
+        print(
+            f"{len(all_unsure)} could not be verified (bot protection, throttle or "
+            f"timeout) -> {a.report.replace('.csv', '_unverifiable.csv')}"
+        )
+        print("Those kept their existing status: an unverifiable link is not a dead one.")
 
 
 if __name__ == "__main__":

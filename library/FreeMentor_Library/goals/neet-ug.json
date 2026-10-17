@@ -6,7 +6,7 @@
   "category": "Entrance Exams",
   "group": "Medical",
   "type": "exam",
-  "version": "2027.4",
+  "version": "2027.6",
   "valid_for": "NEET UG 2027 (built on the current NMC/NTA syllabus; re-check on release)",
   "last_updated": "2026-10-06",
   "official_url": "https://neet.nta.nic.in/",
@@ -29,7 +29,7 @@
    "total": 824,
    "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
   },
-  "last_link_check": "2026-10-16"
+  "last_link_check": "2026-10-17"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -223,7 +223,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -240,7 +240,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -258,8 +258,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -270,8 +270,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -282,8 +282,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -301,8 +301,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -328,8 +328,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -379,7 +379,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -396,7 +396,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -414,8 +414,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -426,8 +426,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -438,8 +438,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -457,8 +457,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -484,8 +484,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -535,7 +535,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -552,7 +552,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vora Classes"
       }
      ]
@@ -570,8 +570,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -582,8 +582,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -594,8 +594,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -605,8 +605,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -624,8 +624,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -651,8 +651,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -702,7 +702,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -719,7 +719,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -737,8 +737,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -749,8 +749,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -761,8 +761,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -772,8 +772,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -791,8 +791,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -818,8 +818,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -869,7 +869,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -886,7 +886,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -904,8 +904,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -916,8 +916,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -928,8 +928,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -939,8 +939,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -958,8 +958,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -985,8 +985,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1036,7 +1036,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1053,7 +1053,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "physics spc sandeep sir"
       }
      ]
@@ -1071,8 +1071,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1083,8 +1083,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1095,8 +1095,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1114,8 +1114,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1141,8 +1141,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1192,7 +1192,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1209,7 +1209,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -1227,8 +1227,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1239,8 +1239,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1251,8 +1251,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -1262,8 +1262,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1281,8 +1281,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1308,8 +1308,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1359,7 +1359,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1376,7 +1376,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -1394,8 +1394,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1406,8 +1406,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1418,8 +1418,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1437,8 +1437,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1464,8 +1464,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1515,7 +1515,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1532,7 +1532,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -1550,8 +1550,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1562,8 +1562,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1574,8 +1574,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -1585,8 +1585,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1604,8 +1604,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1631,8 +1631,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1682,7 +1682,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1699,7 +1699,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -1717,8 +1717,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1729,8 +1729,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1741,8 +1741,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -1752,8 +1752,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1771,8 +1771,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1798,8 +1798,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1849,7 +1849,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -1866,7 +1866,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -1884,8 +1884,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1896,8 +1896,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1908,8 +1908,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1927,8 +1927,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1954,8 +1954,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2005,7 +2005,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2022,7 +2022,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -2040,8 +2040,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2052,8 +2052,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2064,8 +2064,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2076,8 +2076,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2088,8 +2088,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2099,8 +2099,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2118,8 +2118,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2145,8 +2145,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2196,7 +2196,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2213,7 +2213,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -2231,8 +2231,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2243,8 +2243,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2255,8 +2255,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2274,8 +2274,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2301,8 +2301,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2352,7 +2352,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2369,7 +2369,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -2387,8 +2387,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2399,8 +2399,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2411,8 +2411,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2422,8 +2422,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2441,8 +2441,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2468,8 +2468,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2519,7 +2519,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2536,7 +2536,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -2554,8 +2554,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2566,8 +2566,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2578,8 +2578,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2589,8 +2589,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2608,8 +2608,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2635,8 +2635,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2686,7 +2686,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2703,7 +2703,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -2721,8 +2721,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2733,8 +2733,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2745,8 +2745,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2756,8 +2756,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2775,8 +2775,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2802,8 +2802,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2853,7 +2853,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -2870,7 +2870,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Lakshya JEE"
       }
      ]
@@ -2888,8 +2888,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2900,8 +2900,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2912,8 +2912,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2923,8 +2923,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2942,8 +2942,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2969,8 +2969,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3020,7 +3020,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -3037,7 +3037,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Lakshya JEE"
       }
      ]
@@ -3055,8 +3055,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3067,8 +3067,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3079,8 +3079,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -3090,8 +3090,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3109,8 +3109,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3136,8 +3136,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3187,7 +3187,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       },
       {
@@ -3204,7 +3204,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Masters by Unacademy"
       }
      ]
@@ -3222,8 +3222,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3234,8 +3234,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3246,8 +3246,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3265,8 +3265,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3292,8 +3292,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3343,7 +3343,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Rakshak Sir Science"
       },
       {
@@ -3360,7 +3360,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -3378,8 +3378,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3390,8 +3390,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3402,8 +3402,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -3413,8 +3413,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3432,8 +3432,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3459,8 +3459,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3510,7 +3510,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -3527,7 +3527,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -3545,8 +3545,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3557,8 +3557,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3569,8 +3569,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3588,8 +3588,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3615,8 +3615,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3666,7 +3666,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -3683,7 +3683,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -3701,8 +3701,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3713,8 +3713,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3725,8 +3725,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3744,8 +3744,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3771,8 +3771,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3822,7 +3822,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -3839,7 +3839,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -3857,8 +3857,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3869,8 +3869,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3881,8 +3881,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -3892,8 +3892,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3911,8 +3911,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3938,8 +3938,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3989,7 +3989,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -4006,7 +4006,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -4024,8 +4024,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4036,8 +4036,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4048,8 +4048,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -4059,8 +4059,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4078,8 +4078,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4105,8 +4105,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4156,7 +4156,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -4173,7 +4173,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vedantu Telugu JEE"
       }
      ]
@@ -4191,8 +4191,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4203,8 +4203,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4215,8 +4215,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4234,8 +4234,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4261,8 +4261,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4312,7 +4312,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Rakshak Sir Science"
       },
       {
@@ -4329,7 +4329,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -4347,8 +4347,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4359,8 +4359,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4371,8 +4371,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4383,8 +4383,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4395,8 +4395,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -4406,8 +4406,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4425,8 +4425,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4452,8 +4452,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4503,7 +4503,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       },
       {
@@ -4520,7 +4520,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -4538,8 +4538,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4550,8 +4550,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4562,8 +4562,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4581,8 +4581,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4608,8 +4608,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4659,7 +4659,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Mission JEE"
       },
       {
@@ -4676,7 +4676,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vedantu JEE English"
       }
      ]
@@ -4694,8 +4694,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4706,8 +4706,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4718,8 +4718,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4737,8 +4737,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4764,8 +4764,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4815,7 +4815,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -4832,7 +4832,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -4850,8 +4850,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4862,8 +4862,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4874,8 +4874,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -4885,8 +4885,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -4904,8 +4904,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4931,8 +4931,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4982,7 +4982,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -4999,7 +4999,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -5017,8 +5017,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5029,8 +5029,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5041,8 +5041,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5060,8 +5060,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5087,8 +5087,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5138,7 +5138,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5155,7 +5155,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vedantu JEE Made Ejee"
       }
      ]
@@ -5173,8 +5173,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5185,8 +5185,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5197,8 +5197,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5216,8 +5216,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5243,8 +5243,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5294,7 +5294,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5311,7 +5311,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vora Classes"
       }
      ]
@@ -5329,8 +5329,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5341,8 +5341,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5353,8 +5353,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -5364,8 +5364,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5383,8 +5383,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5410,8 +5410,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5461,7 +5461,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5478,7 +5478,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Vora Classes"
       }
      ]
@@ -5496,8 +5496,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5508,8 +5508,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5520,8 +5520,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -5531,8 +5531,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5550,8 +5550,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5577,8 +5577,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5628,7 +5628,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5645,7 +5645,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -5663,8 +5663,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5675,8 +5675,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5687,8 +5687,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5706,8 +5706,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5733,8 +5733,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5784,7 +5784,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5801,7 +5801,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -5819,8 +5819,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5831,8 +5831,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5843,8 +5843,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -5854,8 +5854,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -5873,8 +5873,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5900,8 +5900,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -5951,7 +5951,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -5968,7 +5968,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -5986,8 +5986,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5998,8 +5998,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6010,8 +6010,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6029,8 +6029,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6056,8 +6056,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6107,7 +6107,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6124,7 +6124,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -6142,8 +6142,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6154,31 +6154,31 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 2",
-       "url": "https://openstax.org/books/organic-chemistry/pages/2-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-2",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 6",
-       "url": "https://openstax.org/books/organic-chemistry/pages/6-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-6",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6196,8 +6196,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6223,8 +6223,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6274,7 +6274,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6291,7 +6291,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -6309,8 +6309,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6321,53 +6321,53 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 3",
-       "url": "https://openstax.org/books/organic-chemistry/pages/3-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-3",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 7",
-       "url": "https://openstax.org/books/organic-chemistry/pages/7-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-7",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 9",
-       "url": "https://openstax.org/books/organic-chemistry/pages/9-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-9",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 15",
-       "url": "https://openstax.org/books/organic-chemistry/pages/15-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-15",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6385,8 +6385,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6412,8 +6412,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6463,7 +6463,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6480,7 +6480,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Simply Concise"
       }
      ]
@@ -6498,8 +6498,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6510,8 +6510,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6522,8 +6522,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6541,8 +6541,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6568,8 +6568,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6619,7 +6619,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6636,7 +6636,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "ALLEN JEE"
       }
      ]
@@ -6654,8 +6654,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6666,8 +6666,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6678,8 +6678,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6697,8 +6697,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6724,8 +6724,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6775,7 +6775,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6792,7 +6792,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -6810,8 +6810,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6822,8 +6822,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6834,8 +6834,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -6853,8 +6853,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6880,8 +6880,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -6931,7 +6931,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -6948,7 +6948,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Lakshya JEE"
       }
      ]
@@ -6966,8 +6966,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6978,8 +6978,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6990,8 +6990,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7009,8 +7009,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7036,8 +7036,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7087,7 +7087,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7104,7 +7104,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Lakshya JEE"
       }
      ]
@@ -7122,8 +7122,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7134,8 +7134,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7146,8 +7146,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7165,8 +7165,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7192,8 +7192,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7243,7 +7243,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7260,7 +7260,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -7278,8 +7278,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7290,31 +7290,31 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 10",
-       "url": "https://openstax.org/books/organic-chemistry/pages/10-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-10",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 11",
-       "url": "https://openstax.org/books/organic-chemistry/pages/11-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-11",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7332,8 +7332,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7359,8 +7359,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7410,7 +7410,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7427,7 +7427,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -7445,8 +7445,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7457,31 +7457,31 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 17",
-       "url": "https://openstax.org/books/organic-chemistry/pages/17-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-17",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 18",
-       "url": "https://openstax.org/books/organic-chemistry/pages/18-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-18",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7499,8 +7499,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7526,8 +7526,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7577,7 +7577,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7594,7 +7594,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE One"
       }
      ]
@@ -7612,8 +7612,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7624,8 +7624,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7636,8 +7636,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7655,8 +7655,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7682,8 +7682,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7733,7 +7733,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7750,7 +7750,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Wallah"
       }
      ]
@@ -7768,8 +7768,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7780,31 +7780,31 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 19",
-       "url": "https://openstax.org/books/organic-chemistry/pages/19-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-19",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 20",
-       "url": "https://openstax.org/books/organic-chemistry/pages/20-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-20",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7822,8 +7822,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7849,8 +7849,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -7900,7 +7900,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -7917,7 +7917,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "JEE Legends"
       }
      ]
@@ -7935,8 +7935,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7947,20 +7947,20 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 24",
-       "url": "https://openstax.org/books/organic-chemistry/pages/24-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-24",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -7978,8 +7978,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8005,8 +8005,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8056,7 +8056,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8073,7 +8073,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Simply Concise"
       }
      ]
@@ -8091,8 +8091,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8103,31 +8103,31 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 25",
-       "url": "https://openstax.org/books/organic-chemistry/pages/25-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-25",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 26",
-       "url": "https://openstax.org/books/organic-chemistry/pages/26-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-26",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -8145,8 +8145,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8172,8 +8172,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8223,7 +8223,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8240,7 +8240,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Govind NEET"
       }
      ]
@@ -8258,8 +8258,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8270,20 +8270,20 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "title": "OpenStax Organic Chemistry – Ch 2",
-       "url": "https://openstax.org/books/organic-chemistry/pages/2-introduction",
+       "url": "https://openstax.org/books/organic-chemistry/pages/chapter-2",
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -8301,8 +8301,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8328,8 +8328,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8379,7 +8379,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8396,7 +8396,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "VEDANTU NEET MADE EJEE"
       }
      ]
@@ -8414,8 +8414,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8426,8 +8426,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8438,8 +8438,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8449,8 +8449,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -8468,8 +8468,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8495,8 +8495,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8546,7 +8546,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8563,7 +8563,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Unacademy NEET"
       }
      ]
@@ -8581,8 +8581,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8593,8 +8593,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8605,8 +8605,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8616,8 +8616,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8627,8 +8627,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8638,8 +8638,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -8657,8 +8657,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8684,8 +8684,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8735,7 +8735,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8752,7 +8752,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -8770,8 +8770,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8782,8 +8782,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8794,8 +8794,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8805,8 +8805,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -8824,8 +8824,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8851,8 +8851,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -8902,7 +8902,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -8919,7 +8919,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -8937,8 +8937,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8949,8 +8949,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8961,8 +8961,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8972,8 +8972,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -8983,8 +8983,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9002,8 +9002,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9029,8 +9029,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9080,7 +9080,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9097,7 +9097,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Adda AYUSH Counselling"
       }
      ]
@@ -9115,8 +9115,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9127,8 +9127,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9139,8 +9139,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9158,8 +9158,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9185,8 +9185,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9236,7 +9236,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9253,7 +9253,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -9271,8 +9271,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9283,8 +9283,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9295,8 +9295,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9314,8 +9314,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9341,8 +9341,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9392,7 +9392,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9409,7 +9409,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -9427,8 +9427,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9439,8 +9439,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9451,8 +9451,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9470,8 +9470,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9497,8 +9497,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9548,7 +9548,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9565,7 +9565,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -9583,8 +9583,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9595,8 +9595,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9607,8 +9607,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -9618,8 +9618,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9637,8 +9637,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9664,8 +9664,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9715,7 +9715,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9732,7 +9732,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -9750,8 +9750,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9762,8 +9762,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9774,8 +9774,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -9785,8 +9785,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9804,8 +9804,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9831,8 +9831,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9882,7 +9882,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -9899,7 +9899,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       }
      ]
@@ -9917,8 +9917,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9929,8 +9929,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9941,8 +9941,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -9952,8 +9952,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -9971,8 +9971,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -9998,8 +9998,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10049,7 +10049,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -10066,7 +10066,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -10084,8 +10084,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10096,8 +10096,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10108,8 +10108,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10127,8 +10127,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10154,8 +10154,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10205,7 +10205,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       },
       {
@@ -10222,7 +10222,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Sri Chaitanya Academy NEET"
       }
      ]
@@ -10240,8 +10240,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10252,8 +10252,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10264,8 +10264,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10283,8 +10283,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10310,8 +10310,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10361,7 +10361,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -10378,7 +10378,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "NAC Biology"
       }
      ]
@@ -10396,8 +10396,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10408,8 +10408,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10420,8 +10420,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10439,8 +10439,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10466,8 +10466,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10517,7 +10517,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -10534,7 +10534,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Sri Chaitanya Academy NEET"
       }
      ]
@@ -10552,8 +10552,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10564,8 +10564,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10576,8 +10576,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10595,8 +10595,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10622,8 +10622,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10673,7 +10673,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -10690,7 +10690,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Sri Chaitanya Academy NEET"
       }
      ]
@@ -10708,8 +10708,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10720,8 +10720,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10732,8 +10732,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10751,8 +10751,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10778,8 +10778,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10829,7 +10829,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -10846,7 +10846,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Sri Chaitanya Academy NEET"
       }
      ]
@@ -10864,8 +10864,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10876,8 +10876,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10888,8 +10888,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -10907,8 +10907,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10934,8 +10934,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -10985,7 +10985,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Adda247 NEET"
       },
       {
@@ -11002,7 +11002,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Unacademy NEET"
       }
      ]
@@ -11020,8 +11020,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11032,8 +11032,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11044,8 +11044,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11063,8 +11063,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11090,8 +11090,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11141,7 +11141,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11158,7 +11158,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -11176,8 +11176,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11188,8 +11188,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11200,8 +11200,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -11211,8 +11211,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11230,8 +11230,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11257,8 +11257,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11308,7 +11308,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11325,7 +11325,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "PW English Medium "
       }
      ]
@@ -11343,8 +11343,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11355,8 +11355,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11367,8 +11367,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11386,8 +11386,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11413,8 +11413,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11464,7 +11464,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11481,7 +11481,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -11499,8 +11499,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11511,8 +11511,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11523,8 +11523,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11542,8 +11542,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11569,8 +11569,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11620,7 +11620,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11637,7 +11637,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -11655,8 +11655,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11667,8 +11667,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11679,8 +11679,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11698,8 +11698,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11725,8 +11725,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11776,7 +11776,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11793,7 +11793,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "NAC Biology"
       }
      ]
@@ -11811,8 +11811,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11823,8 +11823,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11835,8 +11835,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -11854,8 +11854,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11881,8 +11881,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -11932,7 +11932,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -11949,7 +11949,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -11967,8 +11967,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11979,8 +11979,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -11991,8 +11991,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -12002,8 +12002,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12021,8 +12021,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12048,8 +12048,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12099,7 +12099,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -12116,7 +12116,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Sri Chaitanya Academy NEET"
       }
      ]
@@ -12134,8 +12134,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12146,8 +12146,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12158,8 +12158,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -12169,8 +12169,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -12180,8 +12180,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12199,8 +12199,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12226,8 +12226,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12277,7 +12277,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Dr. Rakshita Singh"
       },
       {
@@ -12294,7 +12294,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "NCERT Wallah"
       }
      ]
@@ -12312,8 +12312,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12324,8 +12324,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12336,8 +12336,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -12347,8 +12347,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12366,8 +12366,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12393,8 +12393,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12444,7 +12444,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -12461,7 +12461,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -12479,8 +12479,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12491,8 +12491,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12503,8 +12503,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12522,8 +12522,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12549,8 +12549,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12600,7 +12600,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -12617,7 +12617,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "EduToos Education"
       }
      ]
@@ -12635,8 +12635,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12647,8 +12647,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12659,8 +12659,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12678,8 +12678,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12705,8 +12705,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12756,7 +12756,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -12773,7 +12773,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "ALLEN NEET"
       }
      ]
@@ -12791,8 +12791,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12803,8 +12803,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12815,8 +12815,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12834,8 +12834,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12861,8 +12861,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -12912,7 +12912,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -12929,7 +12929,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Yakeen"
       }
      ]
@@ -12947,8 +12947,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12959,8 +12959,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -12971,8 +12971,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -12990,8 +12990,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13017,8 +13017,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13068,7 +13068,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -13085,7 +13085,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Unacademy NEET"
       }
      ]
@@ -13103,8 +13103,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13115,8 +13115,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13127,8 +13127,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -13138,8 +13138,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -13157,8 +13157,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13184,8 +13184,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13235,7 +13235,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Let's Crack NEET UG"
       }
      ]
@@ -13253,8 +13253,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13265,8 +13265,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13277,8 +13277,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -13296,8 +13296,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13323,8 +13323,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13374,7 +13374,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Competition Wallah"
       },
       {
@@ -13391,7 +13391,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "NAC Biology"
       }
      ]
@@ -13409,8 +13409,8 @@
        "lang": "en",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13421,8 +13421,8 @@
        "lang": "hi",
        "provider": "NCERT (official)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13433,8 +13433,8 @@
        "lang": "en",
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -13452,8 +13452,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -13479,8 +13479,8 @@
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]

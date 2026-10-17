@@ -6,7 +6,7 @@
   "category": "Skills",
   "group": "Technology & Development",
   "type": "skill",
-  "version": "2026.4",
+  "version": "2026.6",
   "valid_for": "2026 entry-level SOC / security analyst skills (aligned to ISC2 CC and CompTIA Security+ SY0-701 topics)",
   "last_updated": "2026-10-08",
   "official_url": "https://www.nist.gov/cyberframework",
@@ -32,7 +32,7 @@
   },
   "reviewed_by": null,
   "safety_policy": "This roadmap teaches defensive and ethical security. Every hands-on activity is done only on systems you own (your own isolated home lab) or on platforms that explicitly permit practice, such as TryHackMe, PortSwigger Web Security Academy, OverTheWire and picoCTF. Scanning, accessing or attacking any system without the owner's written permission is illegal in India under the IT Act 2000 (sections 43 and 66). FreeMentor never links tools or instructions aimed at compromising real third-party systems.",
-  "last_link_check": "2026-10-16"
+  "last_link_check": "2026-10-17"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -163,7 +163,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -181,7 +181,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -200,8 +200,8 @@
        "lang": "en",
        "provider": "cs50.harvard.edu",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -213,7 +213,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -232,8 +232,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -292,7 +292,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -310,7 +310,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -330,7 +330,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -342,7 +342,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -354,7 +354,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -365,8 +365,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -385,8 +385,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -397,8 +397,8 @@
        "lang": "en",
        "provider": "www.netacad.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -457,7 +457,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -475,7 +475,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -495,8 +495,8 @@
        "lang": "en",
        "provider": "www.practicalnetworking.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -507,8 +507,8 @@
        "lang": "en",
        "provider": "www.cloudflare.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -527,8 +527,8 @@
        "lang": "en",
        "provider": "subnettingpractice.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -587,7 +587,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -605,7 +605,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -626,7 +626,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -638,7 +638,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -649,8 +649,8 @@
        "lang": "en",
        "provider": "www.cloudflare.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -669,8 +669,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -729,7 +729,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -747,7 +747,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -767,7 +767,7 @@
        "provider": "linuxjourney.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -778,8 +778,8 @@
        "lang": "en",
        "provider": "ubuntu.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -798,8 +798,8 @@
        "lang": "en",
        "provider": "overthewire.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -858,7 +858,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -876,7 +876,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -890,13 +890,13 @@
       {
        "type": "notes",
        "role": "main",
-       "title": "Microsoft Learn - Windows fundamentals",
-       "url": "https://learn.microsoft.com/en-us/training/paths/windows-fundamentals/",
+       "title": "Microsoft Learn - Manage Windows client",
+       "url": "https://learn.microsoft.com/en-us/windows/client-management/",
        "lang": "en",
        "provider": "learn.microsoft.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -907,8 +907,8 @@
        "lang": "en",
        "provider": "learn.microsoft.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -927,8 +927,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -987,7 +987,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1005,7 +1005,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1025,8 +1025,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1037,8 +1037,8 @@
        "lang": "en",
        "provider": "www.gnu.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1057,8 +1057,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1112,7 +1112,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1136,8 +1136,8 @@
        "lang": "en",
        "provider": "www.virtualbox.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1148,8 +1148,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1209,7 +1209,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1227,7 +1227,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1247,8 +1247,8 @@
        "lang": "en",
        "provider": "www.professormesser.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1259,8 +1259,8 @@
        "lang": "en",
        "provider": "csrc.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1279,8 +1279,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1339,7 +1339,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1357,7 +1357,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1377,7 +1377,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1388,8 +1388,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1400,8 +1400,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1420,8 +1420,8 @@
        "lang": "en",
        "provider": "cryptohack.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1432,8 +1432,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1492,7 +1492,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1510,7 +1510,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1530,8 +1530,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1542,8 +1542,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1562,8 +1562,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1622,7 +1622,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1640,7 +1640,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1660,7 +1660,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1672,7 +1672,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1683,8 +1683,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1703,8 +1703,8 @@
        "lang": "en",
        "provider": "phishingquiz.withgoogle.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1715,8 +1715,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1775,7 +1775,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1793,7 +1793,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1813,7 +1813,7 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1824,8 +1824,8 @@
        "lang": "en",
        "provider": "www.cloudflare.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1836,8 +1836,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1856,8 +1856,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1916,7 +1916,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1934,7 +1934,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1953,8 +1953,8 @@
        "lang": "en",
        "provider": "owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1965,8 +1965,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1985,8 +1985,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1997,8 +1997,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2051,8 +2051,8 @@
        "lang": "en",
        "provider": "www.wireshark.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2072,12 +2072,12 @@
        "type": "practice",
        "role": "main",
        "title": "Wireshark - sample capture files",
-       "url": "https://www.wireshark.org/sample-captures/",
+       "url": "https://wiki.wireshark.org/SampleCaptures",
        "lang": "en",
        "provider": "www.wireshark.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2088,8 +2088,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2149,7 +2149,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2167,7 +2167,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2187,8 +2187,8 @@
        "lang": "en",
        "provider": "docs.splunk.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2199,8 +2199,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2219,8 +2219,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2279,7 +2279,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2297,7 +2297,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2317,20 +2317,20 @@
        "lang": "en",
        "provider": "csrc.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "role": "main",
        "title": "SANS - Incident Handler's Handbook",
-       "url": "https://www.sans.org/white-papers/incident-handlers-handbook/",
+       "url": "https://www.sans.org/white-papers/33901/",
        "lang": "en",
        "provider": "www.sans.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2349,8 +2349,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2409,7 +2409,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2427,7 +2427,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2447,8 +2447,8 @@
        "lang": "en",
        "provider": "www.first.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2459,8 +2459,8 @@
        "lang": "en",
        "provider": "nvd.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2479,8 +2479,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2540,7 +2540,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2558,7 +2558,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2577,8 +2577,8 @@
        "lang": "en",
        "provider": "csrc.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2590,7 +2590,7 @@
        "provider": "www.cisa.gov",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2609,8 +2609,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2669,7 +2669,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2687,7 +2687,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2706,8 +2706,8 @@
        "lang": "en",
        "provider": "attack.mitre.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2719,7 +2719,7 @@
        "provider": "www.cisa.gov",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2738,8 +2738,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2798,7 +2798,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2816,7 +2816,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2837,19 +2837,19 @@
        "provider": "www.cloudflare.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "role": "main",
        "title": "Microsoft Learn - Cloud security concepts",
-       "url": "https://learn.microsoft.com/en-us/training/paths/describe-cloud-secure-methodologies/",
+       "url": "https://learn.microsoft.com/en-us/training/paths/describe-concepts-of-security-compliance-identity/",
        "lang": "en",
        "provider": "learn.microsoft.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2868,8 +2868,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2921,8 +2921,8 @@
        "lang": "en",
        "provider": "docs.splunk.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2946,8 +2946,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2958,8 +2958,8 @@
        "lang": "en",
        "provider": "www.letsdefend.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3019,7 +3019,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3037,7 +3037,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -3057,8 +3057,8 @@
        "lang": "en",
        "provider": "www.meity.gov.in",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3069,8 +3069,8 @@
        "lang": "en",
        "provider": "owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3089,8 +3089,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3150,7 +3150,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3168,7 +3168,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -3188,8 +3188,8 @@
        "lang": "en",
        "provider": "nmap.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3200,8 +3200,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3220,8 +3220,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3281,7 +3281,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3299,7 +3299,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3318,8 +3318,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3330,8 +3330,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3350,8 +3350,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3411,7 +3411,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3429,7 +3429,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -3449,8 +3449,8 @@
        "lang": "en",
        "provider": "docs.metasploit.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3461,8 +3461,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3481,8 +3481,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3542,7 +3542,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3560,7 +3560,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3579,8 +3579,8 @@
        "lang": "en",
        "provider": "www.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3592,7 +3592,7 @@
        "provider": "www.iso.org",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3603,8 +3603,8 @@
        "lang": "en",
        "provider": "www.meity.gov.in",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3623,8 +3623,8 @@
        "lang": "en",
        "provider": "tryhackme.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3683,7 +3683,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -3701,7 +3701,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3720,8 +3720,8 @@
        "lang": "en",
        "provider": "www.isc2.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3732,8 +3732,8 @@
        "lang": "en",
        "provider": "www.comptia.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3752,8 +3752,8 @@
        "lang": "en",
        "provider": "www.isc2.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3805,8 +3805,8 @@
        "lang": "en",
        "provider": "www.nist.gov",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3830,8 +3830,8 @@
        "lang": "en",
        "provider": "attack.mitre.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3842,8 +3842,8 @@
        "lang": "en",
        "provider": "github.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]

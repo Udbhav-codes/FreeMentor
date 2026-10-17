@@ -6,7 +6,7 @@
   "category": "Programming Languages",
   "group": "Languages",
   "type": "language",
-  "version": "2026.4",
+  "version": "2026.5",
   "valid_for": "Python 3.12+",
   "last_updated": "2026-10-06",
   "official_url": "https://docs.python.org/3/",
@@ -30,7 +30,7 @@
    "total": 126,
    "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
   },
-  "last_link_check": "2026-10-16"
+  "last_link_check": "2026-10-17"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -172,7 +172,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -189,7 +189,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ]
@@ -207,8 +207,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -219,8 +219,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -231,8 +231,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -250,8 +250,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -309,7 +309,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "freeCodeCamp.org"
       },
       {
@@ -326,7 +326,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CampusX"
       }
      ]
@@ -344,8 +344,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -356,8 +356,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -368,8 +368,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -380,8 +380,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -392,8 +392,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -411,8 +411,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -422,8 +422,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -481,7 +481,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "freeCodeCamp.org"
       },
       {
@@ -498,7 +498,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -517,8 +517,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -529,8 +529,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -541,8 +541,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -553,8 +553,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -572,8 +572,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -631,7 +631,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -648,7 +648,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ]
@@ -666,8 +666,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -678,8 +678,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -690,8 +690,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -709,8 +709,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -720,8 +720,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -779,7 +779,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -796,7 +796,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -815,8 +815,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -827,8 +827,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -839,8 +839,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -858,8 +858,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -869,8 +869,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -928,7 +928,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -945,7 +945,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ]
@@ -963,8 +963,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -975,8 +975,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -987,8 +987,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -999,8 +999,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1018,8 +1018,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1077,7 +1077,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1094,7 +1094,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1113,8 +1113,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1125,8 +1125,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1137,8 +1137,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -1148,8 +1148,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1167,8 +1167,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1226,7 +1226,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1243,7 +1243,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1262,8 +1262,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1274,8 +1274,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1286,8 +1286,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1305,8 +1305,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1316,8 +1316,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1375,7 +1375,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1392,7 +1392,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1411,8 +1411,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1423,8 +1423,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1435,8 +1435,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1447,8 +1447,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1466,8 +1466,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1477,8 +1477,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1536,7 +1536,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1553,7 +1553,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1572,8 +1572,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1584,8 +1584,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1596,8 +1596,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1615,8 +1615,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1626,8 +1626,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1653,8 +1653,8 @@
        "lang": "en",
        "provider": "W3Schools (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1698,8 +1698,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1770,7 +1770,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1787,7 +1787,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1806,8 +1806,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1818,8 +1818,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1830,8 +1830,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -1849,8 +1849,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1908,7 +1908,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -1925,7 +1925,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -1944,8 +1944,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1956,8 +1956,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1968,8 +1968,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1988,8 +1988,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2047,7 +2047,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2064,7 +2064,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -2083,8 +2083,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2095,8 +2095,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2107,8 +2107,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2127,8 +2127,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2186,7 +2186,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2203,7 +2203,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -2222,8 +2222,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2234,8 +2234,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2246,8 +2246,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2265,8 +2265,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2324,7 +2324,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2341,7 +2341,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -2360,8 +2360,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2372,8 +2372,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2392,8 +2392,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2451,7 +2451,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Programming and Math Tutorials"
       },
       {
@@ -2468,7 +2468,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -2487,8 +2487,8 @@
        "lang": "en",
        "provider": "allendowney.github.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2499,8 +2499,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2518,8 +2518,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2545,8 +2545,8 @@
        "lang": "en",
        "provider": "W3Schools (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2590,8 +2590,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2662,7 +2662,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2679,7 +2679,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ]
@@ -2697,8 +2697,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2709,8 +2709,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2721,8 +2721,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2732,8 +2732,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       },
       {
@@ -2743,8 +2743,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2762,8 +2762,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2821,7 +2821,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2838,7 +2838,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "iNeuron Tech Hindi"
       }
      ]
@@ -2856,8 +2856,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2868,8 +2868,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2880,8 +2880,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -2899,8 +2899,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2958,7 +2958,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -2975,7 +2975,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ]
@@ -2993,8 +2993,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3005,8 +3005,8 @@
        "lang": "en",
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "extra"
       }
      ]
@@ -3024,8 +3024,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3083,7 +3083,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "codebasics"
       },
       {
@@ -3100,7 +3100,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -3119,8 +3119,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3131,8 +3131,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3143,8 +3143,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3163,8 +3163,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3222,7 +3222,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -3239,7 +3239,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "CodeWithHarry"
       }
      ],
@@ -3258,8 +3258,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3278,8 +3278,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3305,8 +3305,8 @@
        "lang": "en",
        "provider": "W3Schools (free)",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3357,7 +3357,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -3375,7 +3375,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3393,8 +3393,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3453,7 +3453,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -3471,7 +3471,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3489,8 +3489,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3501,8 +3501,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3513,8 +3513,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3533,8 +3533,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3592,7 +3592,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -3610,7 +3610,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3628,8 +3628,8 @@
        "lang": "en",
        "provider": "requests.readthedocs.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3688,7 +3688,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       }
      ]
@@ -3706,8 +3706,8 @@
        "lang": "en",
        "provider": "www.crummy.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3778,7 +3778,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Keith Galli"
       },
       {
@@ -3796,7 +3796,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3814,8 +3814,8 @@
        "lang": "en",
        "provider": "numpy.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3834,8 +3834,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3893,7 +3893,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -3911,7 +3911,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -3929,8 +3929,8 @@
        "lang": "en",
        "provider": "pandas.pydata.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3949,8 +3949,8 @@
        "lang": "en",
        "provider": "www.kaggle.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4008,7 +4008,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -4026,7 +4026,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -4044,8 +4044,8 @@
        "lang": "en",
        "provider": "matplotlib.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4064,8 +4064,8 @@
        "lang": "en",
        "provider": "www.kaggle.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -4123,7 +4123,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       }
      ]
@@ -4141,8 +4141,8 @@
        "lang": "en",
        "provider": "flask.palletsprojects.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4213,7 +4213,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -4231,7 +4231,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -4249,8 +4249,8 @@
        "lang": "en",
        "provider": "git-scm.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4309,7 +4309,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "channel": "Corey Schafer"
       },
       {
@@ -4327,7 +4327,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -4345,8 +4345,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4357,8 +4357,8 @@
        "lang": "en",
        "provider": "docs.pytest.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4410,8 +4410,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4442,8 +4442,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]

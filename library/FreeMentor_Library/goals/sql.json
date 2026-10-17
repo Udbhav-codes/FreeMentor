@@ -6,7 +6,7 @@
   "category": "Programming Languages",
   "group": "Languages",
   "type": "language",
-  "version": "2026.4",
+  "version": "2026.5",
   "valid_for": "Standard SQL with PostgreSQL as the free hands-on database (concepts also apply to MySQL/SQL Server)",
   "last_updated": "2026-10-08",
   "official_url": "https://www.postgresql.org/docs/current/tutorial.html",
@@ -31,7 +31,7 @@
    "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
   },
   "reviewed_by": null,
-  "last_link_check": "2026-10-16"
+  "last_link_check": "2026-10-17"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -156,7 +156,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -174,7 +174,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -194,8 +194,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -206,8 +206,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -226,8 +226,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -286,7 +286,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -304,7 +304,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -324,8 +324,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -336,8 +336,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -356,8 +356,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -416,7 +416,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -434,7 +434,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -453,8 +453,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -465,8 +465,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -477,8 +477,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -497,8 +497,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -557,7 +557,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -575,7 +575,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -594,8 +594,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -606,8 +606,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -618,8 +618,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -630,8 +630,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -642,8 +642,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -662,8 +662,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -722,7 +722,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -740,7 +740,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -759,8 +759,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -771,8 +771,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -791,8 +791,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -851,7 +851,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -869,7 +869,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -888,8 +888,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -900,8 +900,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -920,8 +920,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -932,8 +932,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -985,8 +985,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1025,8 +1025,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1078,7 +1078,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1096,7 +1096,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1115,8 +1115,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1127,8 +1127,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1139,8 +1139,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1159,8 +1159,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1219,7 +1219,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1237,7 +1237,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1256,8 +1256,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1276,8 +1276,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1336,7 +1336,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1354,7 +1354,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1373,8 +1373,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1393,8 +1393,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1453,7 +1453,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1471,7 +1471,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1490,8 +1490,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1510,8 +1510,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1570,7 +1570,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1588,7 +1588,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1607,8 +1607,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1619,8 +1619,8 @@
        "lang": "en",
        "provider": "mode.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1640,7 +1640,7 @@
        "provider": "leetcode.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1692,8 +1692,8 @@
        "lang": "en",
        "provider": "mode.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1732,8 +1732,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1785,7 +1785,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1803,7 +1803,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1823,8 +1823,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1835,8 +1835,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1847,8 +1847,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1867,8 +1867,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1927,7 +1927,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1945,7 +1945,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1964,8 +1964,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1976,8 +1976,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1996,8 +1996,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2056,7 +2056,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2074,7 +2074,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2093,8 +2093,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2105,8 +2105,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2117,8 +2117,8 @@
        "lang": "en",
        "provider": "sqlbolt.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2137,8 +2137,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2197,7 +2197,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2215,7 +2215,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2234,8 +2234,8 @@
        "lang": "en",
        "provider": "learn.microsoft.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2254,8 +2254,8 @@
        "lang": "en",
        "provider": "dbdiagram.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2314,7 +2314,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2332,7 +2332,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2351,8 +2351,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2371,8 +2371,8 @@
        "lang": "en",
        "provider": "pgexercises.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2431,7 +2431,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2449,7 +2449,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2469,8 +2469,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2481,8 +2481,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2493,8 +2493,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2505,8 +2505,8 @@
        "lang": "en",
        "provider": "use-the-index-luke.com",
        "access": "premium",
-       "status": "unverified",
-       "last_checked": null
+       "status": "active",
+       "last_checked": "2026-10-17"
       }
      ]
     },
@@ -2525,7 +2525,7 @@
        "provider": "leetcode.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2577,8 +2577,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2617,8 +2617,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2670,7 +2670,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2688,7 +2688,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2707,8 +2707,8 @@
        "lang": "en",
        "provider": "www.postgresql.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2719,8 +2719,8 @@
        "lang": "en",
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2739,8 +2739,8 @@
        "lang": "en",
        "provider": "portswigger.net",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2800,7 +2800,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2819,8 +2819,8 @@
        "lang": "en",
        "provider": "docs.python.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2831,8 +2831,8 @@
        "lang": "en",
        "provider": "www.psycopg.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2851,8 +2851,8 @@
        "lang": "en",
        "provider": "www.kaggle.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2904,8 +2904,8 @@
        "lang": "en",
        "provider": "www.kaggle.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2937,7 +2937,7 @@
        "provider": "leetcode.com",
        "access": "all",
        "status": "unverified",
-       "last_checked": null,
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2964,8 +2964,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]

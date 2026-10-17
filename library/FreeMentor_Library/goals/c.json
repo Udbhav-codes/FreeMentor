@@ -6,7 +6,7 @@
   "category": "Programming Languages",
   "group": "Languages",
   "type": "language",
-  "version": "2026.4",
+  "version": "2026.5",
   "valid_for": "Standard C (C17/C23) with GCC or Clang",
   "last_updated": "2026-10-08",
   "official_url": "https://en.cppreference.com/w/c",
@@ -31,7 +31,7 @@
    "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
   },
   "reviewed_by": null,
-  "last_link_check": "2026-10-16"
+  "last_link_check": "2026-10-17"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -157,7 +157,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -175,7 +175,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -195,8 +195,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -207,8 +207,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -227,8 +227,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -287,7 +287,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -305,7 +305,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -324,8 +324,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -336,8 +336,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -356,8 +356,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -416,7 +416,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -434,7 +434,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -453,8 +453,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -465,8 +465,8 @@
        "lang": "en",
        "provider": "en.cppreference.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -477,8 +477,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -497,8 +497,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -557,7 +557,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -575,7 +575,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -595,8 +595,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -607,8 +607,8 @@
        "lang": "en",
        "provider": "en.cppreference.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -627,8 +627,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -639,8 +639,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -699,7 +699,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -717,7 +717,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -736,8 +736,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -748,8 +748,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -760,8 +760,8 @@
        "lang": "en",
        "provider": "www.youtube.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -780,8 +780,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -792,8 +792,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -845,8 +845,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -885,8 +885,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -938,7 +938,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -956,7 +956,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -975,8 +975,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -987,8 +987,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1007,8 +1007,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1067,7 +1067,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1085,7 +1085,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1105,8 +1105,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1117,8 +1117,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1129,8 +1129,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1149,8 +1149,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1209,7 +1209,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1227,7 +1227,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -1247,8 +1247,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1259,8 +1259,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1271,8 +1271,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1291,8 +1291,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1351,7 +1351,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1369,7 +1369,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1388,8 +1388,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1400,8 +1400,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1420,8 +1420,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1432,8 +1432,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1485,8 +1485,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1525,8 +1525,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1578,7 +1578,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1596,7 +1596,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1615,8 +1615,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1627,8 +1627,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1639,8 +1639,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1651,8 +1651,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1671,8 +1671,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1731,7 +1731,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1749,7 +1749,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1768,8 +1768,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1780,8 +1780,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1800,8 +1800,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1860,7 +1860,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -1878,7 +1878,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -1897,8 +1897,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1909,8 +1909,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1921,8 +1921,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -1933,8 +1933,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -1953,8 +1953,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2013,7 +2013,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2031,7 +2031,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2051,8 +2051,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2071,8 +2071,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2131,7 +2131,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2149,7 +2149,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2169,8 +2169,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2181,8 +2181,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2193,8 +2193,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2213,8 +2213,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2225,8 +2225,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2285,7 +2285,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2303,7 +2303,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2322,8 +2322,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2334,8 +2334,8 @@
        "lang": "en",
        "provider": "en.cppreference.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2354,8 +2354,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2407,8 +2407,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2447,8 +2447,8 @@
        "lang": "en",
        "provider": "www.w3schools.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2500,7 +2500,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2519,8 +2519,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2539,8 +2539,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2599,7 +2599,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2618,8 +2618,8 @@
        "lang": "en",
        "provider": "www.geeksforgeeks.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2630,8 +2630,8 @@
        "lang": "en",
        "provider": "www.geeksforgeeks.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2650,8 +2650,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2662,8 +2662,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2722,7 +2722,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2740,7 +2740,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -2760,8 +2760,8 @@
        "lang": "en",
        "provider": "www.learn-c.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2772,8 +2772,8 @@
        "lang": "en",
        "provider": "www.geeksforgeeks.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2792,8 +2792,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2852,7 +2852,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2870,7 +2870,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ]
@@ -2889,8 +2889,8 @@
        "lang": "en",
        "provider": "www.geeksforgeeks.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -2901,8 +2901,8 @@
        "lang": "en",
        "provider": "www.geeksforgeeks.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2921,8 +2921,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -2981,7 +2981,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       },
       {
@@ -2999,7 +2999,7 @@
        "access": "all",
        "ad_gate_allowed": true,
        "status": "active",
-       "last_checked": "2026-10-16",
+       "last_checked": "2026-10-17",
        "verified_via": "youtube_oembed"
       }
      ],
@@ -3019,8 +3019,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3031,8 +3031,8 @@
        "lang": "en",
        "provider": "www.gnu.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       },
       {
@@ -3043,8 +3043,8 @@
        "lang": "en",
        "provider": "sourceware.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3063,8 +3063,8 @@
        "lang": "en",
        "provider": "exercism.org",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3116,8 +3116,8 @@
        "lang": "en",
        "provider": "beej.us",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3148,8 +3148,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]
@@ -3176,8 +3176,8 @@
        "lang": "en",
        "provider": "www.hackerrank.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": null,
+       "status": "active",
+       "last_checked": "2026-10-17",
        "ad_gate_allowed": true
       }
      ]

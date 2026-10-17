@@ -1,0 +1,153 @@
+goal_file,topic,block,url,problem
+backend.json,be-http,be-http-read,https://www.cloudflare.com/learning/dns/what-is-dns/,HTTP 403
+backend.json,be-linux-cli,be-linux-cli-read,https://linuxjourney.com/,HTTP 403
+backend.json,be-queues-realtime,be-queues-realtime-read,https://socket.io/docs/v4/tutorial/introduction,HTTP <urlopen error [WinError 10054] An existing connection was f
+backend.json,be-queues-realtime,be-queues-realtime-practice,https://socket.io/docs/v4/tutorial/introduction,HTTP <urlopen error [WinError 10054] An existing connection was f
+cuet-ug.json,cuet-dom-jee-che-halo,jee-che-halo-read,https://openstax.org/books/organic-chemistry/pages/10-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-halo,jee-che-halo-read,https://openstax.org/books/organic-chemistry/pages/11-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-alcohols,jee-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/17-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-alcohols,jee-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/18-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-carbonyl,jee-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/19-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-carbonyl,jee-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/20-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-amines,jee-che-amines-read,https://openstax.org/books/organic-chemistry/pages/24-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-biomolecules,jee-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/25-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-biomolecules,jee-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/26-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-che-practical,jee-che-practical-read,https://openstax.org/books/organic-chemistry/pages/2-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-mat-matrices,jee-mat-matrices-read,https://openstax.org/books/precalculus-2e/pages/9-introduction,HTTP 404
+cuet-ug.json,cuet-dom-jee-mat-itf,jee-mat-itf-read,https://openstax.org/books/precalculus-2e/pages/6-introduction,HTTP 404
+cuet-ug.json,cuet-dom-acc-partnership-basics,cuet-dom-acc-partnership-basics-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-admission,cuet-dom-acc-admission-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-retirement,cuet-dom-acc-retirement-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-dissolution,cuet-dom-acc-dissolution-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-share-capital,cuet-dom-acc-share-capital-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-debentures,cuet-dom-acc-debentures-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-company-fs,cuet-dom-acc-company-fs-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-analysis-fs,cuet-dom-acc-analysis-fs-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-ratios,cuet-dom-acc-ratios-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-acc-cash-flow,cuet-dom-acc-cash-flow-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-nature-mgmt,cuet-dom-bst-nature-mgmt-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-principles,cuet-dom-bst-principles-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-business-env,cuet-dom-bst-business-env-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-planning,cuet-dom-bst-planning-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-organising,cuet-dom-bst-organising-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-staffing,cuet-dom-bst-staffing-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-directing,cuet-dom-bst-directing-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-controlling,cuet-dom-bst-controlling-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-financial-mgmt,cuet-dom-bst-financial-mgmt-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-marketing,cuet-dom-bst-marketing-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-bst-consumer-protection,cuet-dom-bst-consumer-protection-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-intro,cuet-dom-eco-macro-intro-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-national-income,cuet-dom-eco-macro-national-income-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-money-banking,cuet-dom-eco-macro-money-banking-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-income-employment,cuet-dom-eco-macro-income-employment-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-budget,cuet-dom-eco-macro-budget-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-macro-open-economy,cuet-dom-eco-macro-open-economy-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-eve-independence,cuet-dom-eco-ied-eve-independence-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-five-year-plans,cuet-dom-eco-ied-five-year-plans-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-agri-industry-trade,cuet-dom-eco-ied-agri-industry-trade-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-new-economic-policy,cuet-dom-eco-ied-new-economic-policy-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-poverty,cuet-dom-eco-ied-poverty-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-human-capital,cuet-dom-eco-ied-human-capital-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-rural-development,cuet-dom-eco-ied-rural-development-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-employment,cuet-dom-eco-ied-employment-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-infrastructure,cuet-dom-eco-ied-infrastructure-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-environment,cuet-dom-eco-ied-environment-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cuet-ug.json,cuet-dom-eco-ied-comparative,cuet-dom-eco-ied-comparative-practice,https://cuet.nta.nic.in/,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+cybersecurity.json,cy-computers-os,cy-computers-os-read,https://www.cloudflare.com/learning/cloud/what-is-a-virtual-machine/,HTTP 403
+cybersecurity.json,cy-computers-os,cy-computers-os-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-networking,cy-networking-read,https://www.cloudflare.com/learning/network-layer/what-is-the-osi-model/,HTTP 403
+cybersecurity.json,cy-networking,cy-networking-read,https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/,HTTP 403
+cybersecurity.json,cy-networking,cy-networking-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-subnetting,cy-subnetting-read,https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/,HTTP 403
+cybersecurity.json,cy-protocols,cy-protocols-read,https://www.cloudflare.com/learning/dns/what-is-dns/,HTTP 403
+cybersecurity.json,cy-protocols,cy-protocols-read,https://www.cloudflare.com/learning/ssl/what-is-https/,HTTP 403
+cybersecurity.json,cy-protocols,cy-protocols-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-linux,cy-linux-read,https://linuxjourney.com/,HTTP 403
+cybersecurity.json,cy-windows-ad,cy-windows-ad-read,https://learn.microsoft.com/en-us/training/paths/windows-fundamentals/,HTTP 404
+cybersecurity.json,cy-windows-ad,cy-windows-ad-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,proj-cy-homelab,proj-cy-homelab-read,https://www.cloudflare.com/learning/cloud/what-is-a-virtual-machine/,HTTP 403
+cybersecurity.json,cy-cia-risk,cy-cia-risk-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-crypto,cy-crypto-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-iam,cy-iam-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-threats,cy-threats-read,https://www.cloudflare.com/learning/security/threats/phishing-attack/,HTTP 403
+cybersecurity.json,cy-threats,cy-threats-read,https://www.cloudflare.com/learning/access-management/what-is-social-engineering/,HTTP 404
+cybersecurity.json,cy-threats,cy-threats-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-network-security,cy-network-security-read,https://www.cloudflare.com/learning/security/what-is-network-security/,HTTP 403
+cybersecurity.json,cy-network-security,cy-network-security-read,https://www.cloudflare.com/learning/access-management/what-is-the-network-perimeter/,HTTP 403
+cybersecurity.json,cy-network-security,cy-network-security-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,proj-cy-wireshark,proj-cy-wireshark-build,https://www.wireshark.org/sample-captures/,HTTP 404
+cybersecurity.json,cy-siem,cy-siem-read,https://docs.splunk.com/Documentation/Splunk/latest/SearchTutorial/WelcometotheSearchTutorial,HTTP 403
+cybersecurity.json,cy-siem,cy-siem-practice,https://tryhackme.com/room/splunk101,HTTP 429
+cybersecurity.json,cy-incident-response,cy-incident-response-read,https://www.sans.org/white-papers/incident-handlers-handbook/,HTTP 404
+cybersecurity.json,cy-incident-response,cy-incident-response-practice,https://tryhackme.com/room/introtoncidentresponse,HTTP 429
+cybersecurity.json,cy-vuln-mgmt,cy-vuln-mgmt-practice,https://tryhackme.com/room/nessus,HTTP 429
+cybersecurity.json,cy-forensics,cy-forensics-read,https://www.cisa.gov/sites/default/files/publications/forensics_0.pdf,HTTP 403
+cybersecurity.json,cy-forensics,cy-forensics-practice,https://tryhackme.com/room/windowsforensics1,HTTP 429
+cybersecurity.json,cy-threat-intel,cy-threat-intel-read,https://www.cisa.gov/topics/cyber-threats-and-advisories,HTTP 403
+cybersecurity.json,cy-threat-intel,cy-threat-intel-practice,https://tryhackme.com/room/mitre,HTTP 429
+cybersecurity.json,cy-cloud-security,cy-cloud-security-read,https://www.cloudflare.com/learning/cloud/what-is-the-cloud/,HTTP 403
+cybersecurity.json,cy-cloud-security,cy-cloud-security-read,https://learn.microsoft.com/en-us/training/paths/describe-cloud-secure-methodologies/,HTTP 404
+cybersecurity.json,cy-cloud-security,cy-cloud-security-practice,https://tryhackme.com/room/introtocloudsecurity,HTTP 429
+cybersecurity.json,proj-cy-soc,proj-cy-soc-read,https://docs.splunk.com/Documentation/Splunk/latest/SearchTutorial/WelcometotheSearchTutorial,HTTP 403
+cybersecurity.json,proj-cy-soc,proj-cy-soc-build,https://tryhackme.com/room/socfundamentals,HTTP 429
+cybersecurity.json,cy-ethics-law,cy-ethics-law-practice,https://tryhackme.com/hacktivities,HTTP 429
+cybersecurity.json,cy-recon-nmap,cy-recon-nmap-read,https://tryhackme.com/room/furthernmap,HTTP 429
+cybersecurity.json,cy-recon-nmap,cy-recon-nmap-practice,https://tryhackme.com/room/nmap01,HTTP 429
+cybersecurity.json,cy-exploitation-lab,cy-exploitation-lab-read,https://tryhackme.com/room/metasploitintro,HTTP 429
+cybersecurity.json,cy-exploitation-lab,cy-exploitation-lab-practice,https://tryhackme.com/room/vulnversity,HTTP 429
+cybersecurity.json,cy-grc,cy-grc-practice,https://tryhackme.com/hacktivities,HTTP 429
+frontend.json,fe-how-web-works,fe-how-web-works-practice,https://developer.chrome.com/docs/devtools/dom,HTTP <urlopen error [Errno 11001] getaddrinfo failed>
+full-stack.json,be-queues-realtime,be-queues-realtime-read,https://socket.io/docs/v4/tutorial/introduction,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+full-stack.json,be-queues-realtime,be-queues-realtime-practice,https://socket.io/docs/v4/tutorial/introduction,HTTP <urlopen error _ssl.c:1011: The handshake operation timed ou
+java.json,java-dsa-basics,java-dsa-basics-practice,https://leetcode.com/problems/fibonacci-number/,HTTP 403
+java.json,java-dsa-basics,java-dsa-basics-practice,https://leetcode.com/problems/power-of-two/,HTTP 403
+java.json,java-dsa-sort-search,java-dsa-sort-search-practice,https://leetcode.com/problems/binary-search/,HTTP 403
+jee-main.json,jee-che-goc,jee-che-goc-read,https://openstax.org/books/organic-chemistry/pages/2-introduction,HTTP 404
+jee-main.json,jee-che-goc,jee-che-goc-read,https://openstax.org/books/organic-chemistry/pages/6-introduction,HTTP 404
+jee-main.json,jee-che-hydrocarbons,jee-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/3-introduction,HTTP 404
+jee-main.json,jee-che-hydrocarbons,jee-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/7-introduction,HTTP 404
+jee-main.json,jee-che-hydrocarbons,jee-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/9-introduction,HTTP 404
+jee-main.json,jee-che-hydrocarbons,jee-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/15-introduction,HTTP 404
+jee-main.json,jee-che-halo,jee-che-halo-read,https://openstax.org/books/organic-chemistry/pages/10-introduction,HTTP 404
+jee-main.json,jee-che-halo,jee-che-halo-read,https://openstax.org/books/organic-chemistry/pages/11-introduction,HTTP 404
+jee-main.json,jee-che-alcohols,jee-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/17-introduction,HTTP 404
+jee-main.json,jee-che-alcohols,jee-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/18-introduction,HTTP 404
+jee-main.json,jee-che-carbonyl,jee-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/19-introduction,HTTP 404
+jee-main.json,jee-che-carbonyl,jee-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/20-introduction,HTTP 404
+jee-main.json,jee-che-amines,jee-che-amines-read,https://openstax.org/books/organic-chemistry/pages/24-introduction,HTTP 404
+jee-main.json,jee-che-biomolecules,jee-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/25-introduction,HTTP 404
+jee-main.json,jee-che-biomolecules,jee-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/26-introduction,HTTP 404
+jee-main.json,jee-che-practical,jee-che-practical-read,https://openstax.org/books/organic-chemistry/pages/2-introduction,HTTP 404
+jee-main.json,jee-mat-sets-functions,jee-mat-sets-functions-read,https://openstax.org/books/precalculus-2e/pages/1-introduction,HTTP 404
+jee-main.json,jee-mat-trigonometry,jee-mat-trigonometry-read,https://openstax.org/books/precalculus-2e/pages/5-introduction,HTTP 404
+jee-main.json,jee-mat-trigonometry,jee-mat-trigonometry-read,https://openstax.org/books/precalculus-2e/pages/7-introduction,HTTP 404
+jee-main.json,jee-mat-quadratic,jee-mat-quadratic-read,https://openstax.org/books/precalculus-2e/pages/3-introduction,HTTP 404
+jee-main.json,jee-mat-complex,jee-mat-complex-read,https://openstax.org/books/precalculus-2e/pages/3-introduction,HTTP 404
+jee-main.json,jee-mat-complex,jee-mat-complex-read,https://openstax.org/books/precalculus-2e/pages/8-introduction,HTTP 404
+jee-main.json,jee-mat-sequences,jee-mat-sequences-read,https://openstax.org/books/precalculus-2e/pages/11-introduction,HTTP 404
+jee-main.json,jee-mat-lines,jee-mat-lines-read,https://openstax.org/books/precalculus-2e/pages/2-introduction,HTTP 404
+jee-main.json,jee-mat-pnc,jee-mat-pnc-read,https://openstax.org/books/precalculus-2e/pages/11-introduction,HTTP 404
+jee-main.json,jee-mat-binomial,jee-mat-binomial-read,https://openstax.org/books/precalculus-2e/pages/11-introduction,HTTP 404
+jee-main.json,jee-mat-circles,jee-mat-circles-read,https://openstax.org/books/precalculus-2e/pages/10-introduction,HTTP 404
+jee-main.json,jee-mat-conics,jee-mat-conics-read,https://openstax.org/books/precalculus-2e/pages/10-introduction,HTTP 404
+jee-main.json,jee-mat-matrices,jee-mat-matrices-read,https://openstax.org/books/precalculus-2e/pages/9-introduction,HTTP 404
+jee-main.json,jee-mat-itf,jee-mat-itf-read,https://openstax.org/books/precalculus-2e/pages/6-introduction,HTTP 404
+neet-ug.json,neet-che-goc,neet-che-goc-read,https://openstax.org/books/organic-chemistry/pages/2-introduction,HTTP 404
+neet-ug.json,neet-che-goc,neet-che-goc-read,https://openstax.org/books/organic-chemistry/pages/6-introduction,HTTP 404
+neet-ug.json,neet-che-hydrocarbons,neet-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/3-introduction,HTTP 404
+neet-ug.json,neet-che-hydrocarbons,neet-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/7-introduction,HTTP 404
+neet-ug.json,neet-che-hydrocarbons,neet-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/9-introduction,HTTP 404
+neet-ug.json,neet-che-hydrocarbons,neet-che-hydrocarbons-read,https://openstax.org/books/organic-chemistry/pages/15-introduction,HTTP 404
+neet-ug.json,neet-che-halo,neet-che-halo-read,https://openstax.org/books/organic-chemistry/pages/10-introduction,HTTP 404
+neet-ug.json,neet-che-halo,neet-che-halo-read,https://openstax.org/books/organic-chemistry/pages/11-introduction,HTTP 404
+neet-ug.json,neet-che-alcohols,neet-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/17-introduction,HTTP 404
+neet-ug.json,neet-che-alcohols,neet-che-alcohols-read,https://openstax.org/books/organic-chemistry/pages/18-introduction,HTTP 404
+neet-ug.json,neet-che-carbonyl,neet-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/19-introduction,HTTP 404
+neet-ug.json,neet-che-carbonyl,neet-che-carbonyl-read,https://openstax.org/books/organic-chemistry/pages/20-introduction,HTTP 404
+neet-ug.json,neet-che-amines,neet-che-amines-read,https://openstax.org/books/organic-chemistry/pages/24-introduction,HTTP 404
+neet-ug.json,neet-che-biomolecules,neet-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/25-introduction,HTTP 404
+neet-ug.json,neet-che-biomolecules,neet-che-biomolecules-read,https://openstax.org/books/organic-chemistry/pages/26-introduction,HTTP 404
+neet-ug.json,neet-che-practical,neet-che-practical-read,https://openstax.org/books/organic-chemistry/pages/2-introduction,HTTP 404
+sql.json,sql-window,sql-window-practice,https://leetcode.com/studyplan/top-sql-50/,HTTP 403
+sql.json,sql-indexes-views,sql-indexes-views-practice,https://leetcode.com/studyplan/top-sql-50/,HTTP 403
+sql.json,proj-sql-capstone,proj-sql-capstone-practice,https://leetcode.com/studyplan/top-sql-50/,HTTP 403
