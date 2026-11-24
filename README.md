@@ -37,7 +37,7 @@ FreeMentor_App_Dev_Kit/
 ## The short version
 - **App:** React Native + TypeScript (Expo, Android first). **Backend:** FastAPI + PostgreSQL on Supabase. **Auth:** Supabase/Google. **Payments:** Play Billing. **Push:** FCM. **Ads:** AdMob (Premium = none).
 - The app ships the catalog, downloads one goal's roadmap file on demand, stores it in SQLite, and an **on-device scheduler** turns the ordered topics/blocks into a personal day-by-day plan.
-- **Golden rules:** 3 days free (videos and main notes open, no ads), then one-time per goal: **Basic ₹599** (videos, notes, practice and tests, each after a short rewarded ad) or **Premium ₹999** (no ads, extra notes, detailed analytics). With nothing bought after the trial, videos and main notes still open after an ad; practice, tests and extra notes lock. The roadmap, day plan and your ticks always stay visible. Full table: `docs/MONETIZATION_STATE.md`. 16+ with parent consent under 18; missed day shifts the plan forward; video time = duration × 1.15 rounded up to 5 min.
+- **Golden rules:** 3 days free (videos and main notes open, no ads), then one-time per goal: **Basic ₹599** (videos, notes, practice and tests, no ads) or **Premium ₹999** (adds extra notes and detailed analytics). With nothing bought after the trial, videos and main notes still open after a short ad; practice, tests and extra notes lock. The roadmap, day plan and your ticks always stay visible. Full table: `docs/MONETIZATION_STATE.md`. 16+ with parent consent under 18; missed day shifts the plan forward; video time = duration × 1.15 rounded up to 5 min.
 
 ## Current state and launch
 - `docs/MONETIZATION_STATE.md`: exactly what is locked, what shows ads, and open conflicts.

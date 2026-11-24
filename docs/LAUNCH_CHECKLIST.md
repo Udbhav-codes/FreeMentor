@@ -17,7 +17,7 @@ server host undecided. Order matters: items near the top unblock the rest.
       Check the exact current numbers in Play Console. Recruit testers early.
 - [ ] Play payments profile (India): PAN/bank details; check whether GST
       registration is needed at your revenue.
-- [ ] AdMob account linked to the Play app; create a rewarded ad unit.
+- [ ] AdMob account linked to the Play app; create a rewarded ad unit. (Only unpaid post-trial learners see ads, so this can follow the first release if you want to ship sooner.)
 - [ ] Firebase project for FCM and Crashlytics.
 - [ ] Add `exp://**` to Supabase redirect URLs (testing only; remove before launch).
 

@@ -193,16 +193,16 @@ describe('the catalogues obey the advertising rules', () => {
     expect(failures, failures.join('\n')).toEqual([]);
   });
 
-  it('describes Basic as reaching every resource through an ad', () => {
+  it('describes Basic as opening everything with no ads', () => {
     // The paywall's own feature list, which must agree with
-    // billing/entitlement.ts: Basic opens everything, videos included, after
-    // a rewarded ad. It advertised the opposite until this was fixed.
+    // billing/entitlement.ts: Basic opens videos, notes, practice and tests,
+    // and shows no ads. Only an unpaid learner after the trial sees ads.
     const basic = [
       en['plans.basicFeature2'],
       en['plans.basicFeature3'],
     ].join(' ');
     expect(basic).toMatch(/videos/i);
-    expect(basic).toMatch(/rewarded ad/i);
+    expect(basic).toMatch(/no ads/i);
     expect(basic).not.toMatch(/free to open|always/i);
   });
 });

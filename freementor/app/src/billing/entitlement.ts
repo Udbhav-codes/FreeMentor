@@ -3,35 +3,32 @@
  *
  * One place decides this, so the gating rules live in one place too.
  *
- * ## The model (owner's plan table, Nov 2026)
+ * ## The model (owner's plan table, Nov 2026, Basic revised)
  *
  *                              trial    expired (nothing bought)   basic             premium
  *   roadmap, day plan, ticks    yes      yes                        yes               yes
- *   YouTube videos              yes      after an ad                after an ad       yes
- *   main notes                  yes      after an ad                after an ad       yes
- *   practice & test links       LOCKED   LOCKED                     after an ad       yes
+ *   YouTube videos              yes      after an ad                yes               yes
+ *   main notes                  yes      after an ad                yes               yes
+ *   practice & test links       LOCKED   LOCKED                     yes               yes
  *   extra notes (premium)       LOCKED   LOCKED                     LOCKED (Premium)  yes
  *   detailed analytics          no       no                         no                yes
- *   ads                         none     yes, one per resource      yes, one per      none
- *                                                                   resource
+ *   ads                         none     yes, one per resource      none              none
  *
- * **The trial is three days, free, with no ads.** When it ends nothing is
- * bought and nothing is fully locked: videos and main notes keep opening, but
- * each one costs a rewarded ad. Practice, tests, extra notes and analytics need
- * a plan. Basic adds practice and tests (still behind an ad per resource);
- * Premium removes every ad and adds extra notes and analytics.
+ * **The trial is three days, free, with no ads.** When it ends with nothing
+ * bought, videos and main notes keep opening, but each one costs a rewarded
+ * ad; practice, tests, extra notes and analytics need a plan. Buying Basic
+ * removes the ads and opens practice and tests. Premium adds extra notes and
+ * detailed analytics. So the ad exists only for a learner who has not paid,
+ * and buying any plan ends it.
  *
  * The roadmap, the day plan and the learner's own ticks are always visible.
- * Taking away the record of work somebody already did is a different thing
- * from gating what they have not paid for.
  *
  * ## History
  *
- * Until Oct 2026 YouTube was never gated. The owner then reversed that, and
- * in Nov 2026 settled on the table above, which brings videos back to
- * "reachable, with an ad" for unpaid learners. Linking to YouTube behind an
- * ad is still a reading of the YouTube API terms the owner should confirm;
- * see docs/MONETIZATION_STATE.md.
+ * Until Oct 2026 YouTube was never gated. The owner then reversed that, and in
+ * Nov 2026 settled on the table above. Linking to YouTube behind an ad for
+ * unpaid learners is still a reading of the YouTube API terms the owner should
+ * confirm; see docs/MONETIZATION_STATE.md.
  */
 import type { Resource } from '@freementor/shared';
 import type { TrialPhase } from './trial.ts';
@@ -41,7 +38,7 @@ export type Entitlement =
   | 'trial'
   /** Trial over, nothing bought. Videos and main notes open after an ad; the rest locks. */
   | 'expired'
-  /** Paid Basic: everything but extra notes, after a user-initiated rewarded ad. */
+  /** Paid Basic: everything but extra notes, no ads. */
   | 'basic'
   /** Paid Premium: everything, no ads. */
   | 'premium';
@@ -77,31 +74,31 @@ export type Access =
  *
  * Order matters and is deliberate:
  *
- *  1. `premium` opens everything, with no ads. That is what it is for.
+ *  1. `premium` opens everything, with no ads.
  *  2. Extra notes (`access: "premium"`) are Premium-only on every other state,
  *     trial included. An ad never substitutes for the plan.
  *  3. Practice and test links need a plan: locked in the trial and after it,
- *     ad-gated on Basic.
- *  4. Videos and main notes: open in the trial, ad-gated afterwards whether or
- *     not anything is bought.
+ *     open on Basic.
+ *  4. Videos and main notes: open in the trial and on Basic, ad-gated only
+ *     once the trial has ended with nothing bought.
  */
 export function accessFor(resource: Resource, entitlement: Entitlement): Access {
   if (entitlement === 'premium') return { kind: 'open' };
   if (resource.access === 'premium') return { kind: 'premium_only' };
 
   if (resource.type === 'practice' || resource.type === 'test') {
-    return entitlement === 'basic' ? { kind: 'ad_gated' } : { kind: 'needs_plan' };
+    return entitlement === 'basic' ? { kind: 'open' } : { kind: 'needs_plan' };
   }
 
-  return entitlement === 'trial' ? { kind: 'open' } : { kind: 'ad_gated' };
+  return entitlement === 'expired' ? { kind: 'ad_gated' } : { kind: 'open' };
 }
 
 /**
- * Premium removes every ad (§10.1). The trial has none either. Basic and an
- * expired trial both meet one rewarded ad per resource opened.
+ * Only a learner whose trial has ended with nothing bought sees ads: one
+ * rewarded ad per video or note. The trial, Basic and Premium have none.
  */
 export function showsAds(entitlement: Entitlement): boolean {
-  return entitlement === 'basic' || entitlement === 'expired';
+  return entitlement === 'expired';
 }
 
 /** Whether a plan still needs buying — drives the paywall and the lock UI. */

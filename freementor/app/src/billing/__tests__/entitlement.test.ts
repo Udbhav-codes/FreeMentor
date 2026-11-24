@@ -3,7 +3,7 @@
  *
  * Trial: videos and main notes open, no ads; practice, tests and extra notes
  * locked. Expired: videos and main notes open after an ad; the rest locked.
- * Basic: everything but extra notes, each behind an ad. Premium: everything.
+ * Basic: everything but extra notes, no ads. Premium: everything.
  */
 import { describe, expect, it } from 'vitest';
 import type { Resource } from '@freementor/shared';
@@ -77,7 +77,7 @@ describe('when the trial has ended and nothing is bought', () => {
     expect(accessFor(res({ access: 'premium' }), 'expired').kind).toBe('premium_only');
   });
 
-  it('shows ads, and still routes to the plans screen', () => {
+  it('is the only state that shows ads, and still routes to the plans screen', () => {
     expect(showsAds('expired')).toBe(true);
     expect(needsPlan('expired')).toBe(true);
     expect(showsWelcomeCard('expired')).toBe(true);
@@ -85,9 +85,9 @@ describe('when the trial has ended and nothing is bought', () => {
 });
 
 describe('Basic', () => {
-  it('reaches videos, notes, practice and tests through a rewarded ad', () => {
+  it('opens videos, notes, practice and tests with no ad', () => {
     for (const type of KINDS) {
-      expect(accessFor(res({ type }), 'basic').kind, type).toBe('ad_gated');
+      expect(accessFor(res({ type }), 'basic').kind, type).toBe('open');
     }
   });
 
@@ -95,10 +95,11 @@ describe('Basic', () => {
     expect(accessFor(res({ access: 'premium' }), 'basic').kind).toBe('premium_only');
   });
 
-  it('sees ads; Premium and the trial do not', () => {
-    expect(showsAds('basic')).toBe(true);
+  it('sees no ads: buying any plan ends them', () => {
+    expect(showsAds('basic')).toBe(false);
     expect(showsAds('trial')).toBe(false);
     expect(showsAds('premium')).toBe(false);
+    expect(showsAds('expired')).toBe(true);
   });
 });
 

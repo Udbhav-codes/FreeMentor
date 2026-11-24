@@ -40,9 +40,9 @@ Version 1.0 · 6 October 2026 · Built from *PERSONALIZED ROADMAP.docx* plus the
 | 2 | Platforms | **Android first**, iOS later from the same codebase. |
 | 3 | Tech stack | As in the source document: **React Native** app, **Python + FastAPI** backend, **PostgreSQL**, **Supabase Auth & Storage**, **Firebase Cloud Messaging & Analytics** (details in §12). |
 | 4 | Sign-in | **Google sign-in at the start** (right after Welcome). |
-| 5 | Business model | **3-day free trial of Basic**, then the user must buy **Basic ₹599** or **Premium ₹999** (one-time, per roadmap). Premium = ad-free with everything unlocked. |
+| 5 | Business model | **3-day free trial**, then one-time **Basic ₹599** or **Premium ₹999** per roadmap. Basic = videos, notes, practice and tests with no ads; Premium adds extra notes and detailed analytics. Only a learner who finished the trial and bought nothing sees ads. |
 | 6 | Purchase validity | **Lifetime access** to the purchased roadmap. **Every goal switch is a new purchase**; old progress is archived, never deleted. |
-| 7 | YouTube | YouTube videos are **never paywalled or ad-gated** on any plan (YouTube API Services policy). |
+| 7 | YouTube | Videos open in the trial and on Basic and Premium. With no plan after the trial they open after a rewarded ad. **Open item:** confirm this is acceptable under the YouTube API Services terms. |
 | 8 | Coupons | **Google Play Billing + fixed discount tiers** (10/20/30/50/70/90 %). Admin still sets usage limit and validity. |
 | 9 | Age | **16+ only. Parent consent required for users under 18** (DPDP Rules, full compliance by 13 May 2027). Under-18s get non-personalised ads only. |
 | 10 | Knowledge level | Everyone starts as a **beginner** (not asked). |
@@ -360,18 +360,18 @@ Basic **₹599** · Premium **₹999** · upgrade Basic → Premium **₹400**. 
 |---|---|---|---|---|
 | Duration | 3 days | forever | lifetime | lifetime |
 | Roadmap, day plan, ticks, streak | ✅ | ✅ | ✅ | ✅ |
-| YouTube videos | ✅ | ✅ after watching an ad | ✅ after an ad | ✅ |
-| Main notes | ✅ | ✅ after watching an ad | ✅ after an ad | ✅ |
-| Practice and tests | 🔒 | 🔒 | ✅ after an ad | ✅ |
+| YouTube videos | ✅ | ✅ after watching an ad | ✅ | ✅ |
+| Main notes | ✅ | ✅ after watching an ad | ✅ | ✅ |
+| Practice and tests | 🔒 | 🔒 | ✅ | ✅ |
 | Extra notes (429 in JEE, NEET, CUET, Python, SQL) | 🔒 | 🔒 | 🔒 Premium only | ✅ |
 | Detailed analytics & advanced reports | ❌ | ❌ | ❌ | ✅ |
-| Ads | none | yes, one per resource opened | yes, one per resource opened | **none** |
+| Ads | none | yes, one per resource opened | **none** | **none** |
 
-The roadmap, day plan and the learner's own ticks stay visible in every state. Ads are never an unlock for Premium-only content. Implemented in `app/src/billing/entitlement.ts`.
+The roadmap, day plan and the learner's own ticks stay visible in every state. Buying any plan ends the ads. An ad never unlocks Premium-only content. Implemented in `app/src/billing/entitlement.ts`.
 Upgrade Basic → Premium: pay the difference (₹400) via a dedicated Play product.
 
 ### 10.2 Ad rules (AdMob)
-- Formats: **rewarded interactive (priority)** or **rewarded video**, always user-initiated ("Watch a short ad to open notes"); one native/banner ad on non-learning screens at most.
+- Shown **only** to a learner whose trial has ended with nothing bought. Formats: **rewarded interactive (priority)** or **rewarded video**, always user-initiated ("Watch a short ad to open this"). No banner or native ads.
 - Never during videos, tests, questions, the day checklist or explanations. An ad plays only when the learner taps a resource, before it opens.
 - Under-18 users: **non-personalised ads**, max ad content rating **G**, tagged for under age of consent.
 - Frequency cap: max 1 rewarded unlock per 10 min.

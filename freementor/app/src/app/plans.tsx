@@ -65,7 +65,6 @@ const PLANS = [
       'plans.premiumFeature2',
       'plans.premiumFeature3',
       'plans.premiumFeature4',
-      'plans.premiumFeature5',
     ],
   },
 ] as const;

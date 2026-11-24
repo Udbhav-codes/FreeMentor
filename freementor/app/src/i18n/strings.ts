@@ -130,17 +130,16 @@ export const en = {
   'plans.whatLockedNow':
     '— videos and notes open after a short ad; practice and tests are locked until you pick a plan. One payment unlocks this roadmap for life. Your progress is safe and waiting.',
   // The feature lists. These must match billing/entitlement.ts — Basic
-  // reaches videos, notes, practice and tests through a rewarded ad.
+  // opens videos, notes, practice and tests with no ads.
   'plans.badgeMostComplete': 'Most complete',
   'plans.basicFeature1': 'Your full roadmap and daily plan',
   'plans.basicFeature2': 'Videos, notes, practice and tests',
-  'plans.basicFeature3': 'Each one opens after a short rewarded ad',
+  'plans.basicFeature3': 'No ads, ever',
   'plans.basicFeature4': 'Progress, streak and weekly report',
   'plans.premiumFeature1': 'Everything in Basic, plus:',
-  'plans.premiumFeature2': 'No ads anywhere',
-  'plans.premiumFeature3': 'Extra notes (OpenStax, Think Python)',
-  'plans.premiumFeature4': 'Detailed analytics and advanced reports',
-  'plans.premiumFeature5': 'Full adaptive recalculation',
+  'plans.premiumFeature2': 'Extra notes (OpenStax, Think Python)',
+  'plans.premiumFeature3': 'Detailed analytics and advanced reports',
+  'plans.premiumFeature4': 'Full adaptive recalculation',
   'plans.couponLabel': 'Have a coupon?',
   'plans.couponApply': 'Apply',
   'plans.couponChecking': 'Checking…',
@@ -293,7 +292,7 @@ export const en = {
   'dialog.linkFailedBody': 'Check your connection and try again.',
   'trialOver.title': 'Your 3-day free trial is over',
   'trialOver.body':
-    'Videos and notes now open after a short ad. One payment unlocks practice and tests — and Premium removes every ad — for life. No subscription.',
+    'Videos and notes open after a short ad. One payment removes the ads and unlocks practice and tests, for life. No subscription.',
   'trialOver.cta': 'Unlock my roadmap',
 
   // --- data export and deletion (privacy policy §9; DPDP Act §§11-12) ---
@@ -426,13 +425,12 @@ export const hi: Record<StringKey, string> = {
   'plans.badgeMostComplete': 'सबसे पूरा',
   'plans.basicFeature1': 'आपका पूरा रोडमैप और रोज़ की योजना',
   'plans.basicFeature2': 'वीडियो, नोट्स, अभ्यास और टेस्ट',
-  'plans.basicFeature3': 'हर एक एक छोटे रिवॉर्डेड विज्ञापन के बाद खुलता है',
+  'plans.basicFeature3': 'कोई विज्ञापन नहीं, कभी नहीं',
   'plans.basicFeature4': 'प्रगति, स्ट्रीक और साप्ताहिक रिपोर्ट',
   'plans.premiumFeature1': 'Basic का सब कुछ, और:',
-  'plans.premiumFeature2': 'कहीं भी कोई विज्ञापन नहीं',
-  'plans.premiumFeature3': 'अतिरिक्त नोट्स (OpenStax, Think Python)',
-  'plans.premiumFeature4': 'विस्तृत विश्लेषण और उन्नत रिपोर्ट',
-  'plans.premiumFeature5': 'पूरी अनुकूली पुनर्गणना',
+  'plans.premiumFeature2': 'अतिरिक्त नोट्स (OpenStax, Think Python)',
+  'plans.premiumFeature3': 'विस्तृत विश्लेषण और उन्नत रिपोर्ट',
+  'plans.premiumFeature4': 'पूरी अनुकूली पुनर्गणना',
   'plans.couponLabel': 'कोई कूपन है?',
   'plans.couponApply': 'लगाएँ',
   'plans.couponChecking': 'जाँच हो रही है…',
@@ -574,7 +572,7 @@ export const hi: Record<StringKey, string> = {
   'dialog.linkFailedBody': 'अपना इंटरनेट जाँचकर फिर कोशिश करें।',
   'trialOver.title': 'आपका 3 दिन का मुफ़्त ट्रायल पूरा हुआ',
   'trialOver.body':
-    'वीडियो और नोट्स अब एक छोटे विज्ञापन के बाद खुलते हैं। एक बार का भुगतान अभ्यास और टेस्ट खोल देता है — और Premium हर विज्ञापन हटा देता है — आजीवन। कोई सब्सक्रिप्शन नहीं।',
+    'वीडियो और नोट्स एक छोटे विज्ञापन के बाद खुलते हैं। एक बार का भुगतान विज्ञापन हटा देता है और अभ्यास व टेस्ट खोल देता है — आजीवन। कोई सब्सक्रिप्शन नहीं।',
   'trialOver.cta': 'मेरा रोडमैप खोलें',
 
   'export.working': 'आपका डेटा तैयार किया जा रहा है…',
@@ -706,13 +704,12 @@ export const hinglish: Record<StringKey, string> = {
   'plans.badgeMostComplete': 'Sabse poora',
   'plans.basicFeature1': 'Aapka poora roadmap aur roz ka plan',
   'plans.basicFeature2': 'Videos, notes, practice aur tests',
-  'plans.basicFeature3': 'Har ek chhote rewarded ad ke baad khulta hai',
+  'plans.basicFeature3': 'Koi ad nahin, kabhi nahin',
   'plans.basicFeature4': 'Progress, streak aur weekly report',
   'plans.premiumFeature1': 'Basic ka sab kuch, aur:',
-  'plans.premiumFeature2': 'Kahin bhi koi ad nahin',
-  'plans.premiumFeature3': 'Extra notes (OpenStax, Think Python)',
-  'plans.premiumFeature4': 'Detailed analytics aur advanced reports',
-  'plans.premiumFeature5': 'Poori adaptive recalculation',
+  'plans.premiumFeature2': 'Extra notes (OpenStax, Think Python)',
+  'plans.premiumFeature3': 'Detailed analytics aur advanced reports',
+  'plans.premiumFeature4': 'Poori adaptive recalculation',
   'plans.couponLabel': 'Koi coupon hai?',
   'plans.couponApply': 'Apply karein',
   'plans.couponChecking': 'Check ho raha hai…',
@@ -855,7 +852,7 @@ export const hinglish: Record<StringKey, string> = {
   'dialog.linkFailedBody': 'Apna internet jaanchkar phir koshish karein.',
   'trialOver.title': 'Aapka 3 din ka free trial poora hua',
   'trialOver.body':
-    'Videos aur notes ab ek chhote ad ke baad khulte hain. Ek baar ka payment practice aur tests kholta hai — aur Premium har ad hata deta hai — lifetime. Koi subscription nahin.',
+    'Videos aur notes ek chhote ad ke baad khulte hain. Ek baar ka payment ads hata deta hai aur practice aur tests kholta hai — lifetime. Koi subscription nahin.',
   'trialOver.cta': 'Mera roadmap kholein',
 
   'export.working': 'Aapka data taiyaar kiya ja raha hai…',

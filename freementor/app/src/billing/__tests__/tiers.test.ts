@@ -86,9 +86,9 @@ describe('an expired trial', () => {
   });
 });
 
-describe('Basic reaches everything but extra notes through an ad', () => {
-  it('ad-gates every non-Premium resource', () => {
-    const offenders = offendersFor('basic', 'ad_gated', (r) => !isExtra(r));
+describe('Basic opens everything but extra notes, with no ad', () => {
+  it('opens every non-Premium resource', () => {
+    const offenders = offendersFor('basic', 'open', (r) => !isExtra(r));
     expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
   });
 

@@ -17,7 +17,7 @@ Full product decisions are in `docs/FreeMentor_Product_Plan.md` — it is the so
 - **Push:** Firebase Cloud Messaging (+ local scheduled notifications for daily reminders).
 - **Analytics/crashes:** Firebase Analytics + Crashlytics.
 - **Payments:** Google Play Billing (`react-native-iap`) + FastAPI verification via the Google Play Developer API.
-- **Ads:** Google AdMob (`react-native-google-mobile-ads`) with UMP consent. Premium = no ads.
+- **Ads:** Google AdMob (`react-native-google-mobile-ads`) with UMP consent. Rewarded ads only, and only for a learner who finished the trial and bought nothing.
 - **Admin panel:** React web app on the same FastAPI APIs.
 
 **Hard rule:** all secret keys (YouTube Data API, Google Play, Supabase service key) live **only on the server**, never in the app bundle.
@@ -53,14 +53,16 @@ freementor/
 Do **not** hand-edit goal JSON in the app repo. The library is authored/validated separately and published to Supabase Storage; the app only downloads and caches it.
 
 ## Non-negotiable product rules (enforce in code)
-- **Plan table (owner, Nov 2026; supersedes the Oct 2026 "everything locks" rule).**
-  Trial = 3 days free, no ads: roadmap, videos and main notes open; practice,
-  tests and extra notes locked. After the trial with nothing bought: videos and
-  main notes open after a rewarded ad (one per resource); practice, tests and
-  extra notes stay locked. **Basic** adds practice and tests (still an ad per
-  resource); extra notes stay Premium-only. **Premium** = no ads, extra notes,
-  detailed analytics. Roadmap, day plan and ticks are always visible. Logic is
-  `billing/entitlement.ts`; the full table is `docs/MONETIZATION_STATE.md`.
+- **Plan table (owner, Nov 2026, Basic revised; supersedes the Oct 2026
+  "everything locks" rule).** Trial = 3 days free, no ads: roadmap, videos and
+  main notes open; practice, tests and extra notes locked. After the trial with
+  nothing bought: videos and main notes open after a rewarded ad (one per
+  resource); practice, tests and extra notes stay locked. **Basic** = videos,
+  notes, practice and tests with **no ads**; extra notes stay Premium-only.
+  **Premium** adds extra notes and detailed analytics. Only the "trial over,
+  nothing bought" state sees ads. Roadmap, day plan and ticks are always
+  visible. Logic is `billing/entitlement.ts`; the table is
+  `docs/MONETIZATION_STATE.md`.
   *(Open: confirm YouTube links behind a rewarded ad are acceptable under the
   YouTube API Services terms — what is sold is the roadmap, the videos stay
   free on YouTube. Marketing copy must say WHERE a resource is free;
@@ -172,7 +174,7 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   build. The buy button says exactly that rather than "coming soon". The **trial clock and the lock system now work**:
   `billing/trial.ts` (pure, 16 tests, clock-rewind resistant via a persisted
   high-water mark) drives `entitlementFor()`, and after 3 days practice, tests and extra notes return
-  `needs_plan`/`premium_only` and route to Plans; videos and notes become ad-gated. Ads themselves are M6, so an
+  `needs_plan`/`premium_only` and route to Plans; videos and notes become ad-gated until a plan is bought. Ads themselves are M6, so an
   `ad_gated` resource currently opens after a confirm dialog rather than an ad.
 - Parent consent is **verified by OTP** when a server is reachable. With no
   `EXPO_PUBLIC_API_URL` or no session (including under the dev sign-in bypass) it
@@ -194,7 +196,7 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   jsonb settings round-trip, Numeric scores normalise identically to SQLite,
   the consent OTP hash and the Supabase subject are absent, one learner
   cannot see another's rows, and an export after deletion is 403.
-- No ads at all yet (M6), so the "notes after a rewarded ad" tier does nothing.
+- No ads at all yet (M6), so the "videos and notes after a rewarded ad" gate for unpaid learners opens after a confirm dialog instead.
 - **Hindi and Hinglish UI are done.** `src/i18n/` holds three catalogues of
   195 keys each (en, Devanagari hi, Latin-script Hinglish). Every screen and
   every learner-facing dialog is translated. English remains only where it
