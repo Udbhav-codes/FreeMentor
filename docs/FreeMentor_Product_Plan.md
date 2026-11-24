@@ -350,50 +350,29 @@ Run checker → human review of every video → fill channels/durations → add 
 ## 10. Monetisation, plans, ads & coupons
 
 ### 10.1 Plans (one-time payment per roadmap, lifetime access)
-| | Free trial | Basic | Premium |
-|---|---|---|---|
-| Price | 3 days free | ~~₹1,299~~ **₹599** | ~~₹3,999~~ **₹999** |
-| After trial | **Everything locks**, videos included, until a plan is bought | — | — |
 
-> **Changed Oct 2026 on the product owner's instruction.** The trial is Basic
-> made free for three days with no ads, so a learner sees the real product.
-> When it ends every resource locks — including YouTube videos, which this
-> table previously exempted. Basic then reaches everything through a rewarded
-> ad; Premium has no ads. The roadmap, the day plan and the learner's own
-> ticks stay visible either way: removing the record of work somebody already
-> did is a different thing from locking what they have not paid for.
->
-> Two consequences to track: the YouTube Data API's terms restrict charging
-> for access to YouTube content (the defence is that what is sold is the
-> roadmap, and every video stays free on YouTube), and §13's marketing copy
-> can no longer describe the resources as free "for lifetime" without
-> qualification.
+Basic **₹599** · Premium **₹999** · upgrade Basic → Premium **₹400**. One-time, per roadmap, lifetime, GST-inclusive. No subscription.
 
-> **How "everything locks" is implemented (Oct 2026).** Taken literally it
-> would paywall YouTube, which **YouTube API Services policy forbids** — that
-> is not ours to trade against a pricing table, so the video branch wins and
-> `accessFor()` checks it first. On expiry: notes, extra notes, practice and
-> test links lock; **every YouTube link stays open**, including the 21 that are
-> typed as `notes`. The roadmap, the day plan and the learner's own ticks also
-> stay visible: the table does not say which it meant, and taking away the
-> record of work somebody already did is a different thing from locking the
-> resources. Detailed analytics stay Premium throughout.
-| Roadmap, day plan, checklist, recall | ✅ | ✅ | ✅ |
-| Main & alternative YouTube videos | ✅ (never ad-gated) | ✅ (never ad-gated) | ✅ |
-| Main notes | ✅ | ✅ after rewarded ad | ✅ |
-| Extra notes (OpenStax / Think Python) | 🔒 | 🔒 | ✅ |
-| Test & mock links | ✅ | ✅ after rewarded ad | ✅ |
-| Practice links | ✅ | ✅ | ✅ |
-| Progress & basic graphs, streak | ✅ | ✅ | ✅ |
-| Detailed analytics & advanced reports | 🔒 | 🔒 | ✅ |
-| Smart recalculation / adaptive plan | basic shift | basic shift | ✅ full |
-| Ads | Yes | Yes | **No ads** |
-| AI assistant | — | — | future |
+> **Settled Nov 2026 on the product owner's table** (supersedes the Oct 2026 "everything locks" note and the original "YouTube never ad-gated" rule).
+> Open item for the owner: confirm that putting YouTube links behind a rewarded ad is acceptable under the YouTube API Services terms. What is sold is the roadmap; every video stays free on YouTube itself.
+
+| | Free trial (3 days) | Trial over, nothing bought | Basic ₹599 | Premium ₹999 |
+|---|---|---|---|---|
+| Duration | 3 days | forever | lifetime | lifetime |
+| Roadmap, day plan, ticks, streak | ✅ | ✅ | ✅ | ✅ |
+| YouTube videos | ✅ | ✅ after watching an ad | ✅ after an ad | ✅ |
+| Main notes | ✅ | ✅ after watching an ad | ✅ after an ad | ✅ |
+| Practice and tests | 🔒 | 🔒 | ✅ after an ad | ✅ |
+| Extra notes (429 in JEE, NEET, CUET, Python, SQL) | 🔒 | 🔒 | 🔒 Premium only | ✅ |
+| Detailed analytics & advanced reports | ❌ | ❌ | ❌ | ✅ |
+| Ads | none | yes, one per resource opened | yes, one per resource opened | **none** |
+
+The roadmap, day plan and the learner's own ticks stay visible in every state. Ads are never an unlock for Premium-only content. Implemented in `app/src/billing/entitlement.ts`.
 Upgrade Basic → Premium: pay the difference (₹400) via a dedicated Play product.
 
 ### 10.2 Ad rules (AdMob)
 - Formats: **rewarded interactive (priority)** or **rewarded video**, always user-initiated ("Watch a short ad to open notes"); one native/banner ad on non-learning screens at most.
-- Never during videos, tests, questions, the day checklist or explanations. Never on YouTube links.
+- Never during videos, tests, questions, the day checklist or explanations. An ad plays only when the learner taps a resource, before it opens.
 - Under-18 users: **non-personalised ads**, max ad content rating **G**, tagged for under age of consent.
 - Frequency cap: max 1 rewarded unlock per 10 min.
 

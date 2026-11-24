@@ -37,7 +37,7 @@ export type TrialPhase =
   | 'active'
   /** Running, inside the final 24h — §10.4's reminder window. */
   | 'last_day'
-  /** Over. Everything but YouTube locks until a plan is bought. */
+  /** Over. Videos and main notes open after an ad; the rest needs a plan. */
   | 'expired';
 
 export interface TrialStatus {

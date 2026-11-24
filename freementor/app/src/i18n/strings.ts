@@ -126,14 +126,14 @@ export const en = {
   'plans.trialLastDay': 'Last day of your free trial',
   'plans.trialEnded': 'Your free trial has ended',
   'plans.whatLocks':
-    'After that everything locks — videos, notes, practice and tests — until you pick a plan. One payment unlocks this roadmap for life.',
+    'After that, videos and notes open only after a short ad, and practice and tests lock until you pick a plan. One payment unlocks this roadmap for life.',
   'plans.whatLockedNow':
-    '— everything is locked until you pick a plan. One payment unlocks this roadmap for life. Your progress is safe and waiting.',
+    '— videos and notes open after a short ad; practice and tests are locked until you pick a plan. One payment unlocks this roadmap for life. Your progress is safe and waiting.',
   // The feature lists. These must match billing/entitlement.ts — Basic
-  // reaches every resource through a rewarded ad, videos included.
+  // reaches videos, notes, practice and tests through a rewarded ad.
   'plans.badgeMostComplete': 'Most complete',
   'plans.basicFeature1': 'Your full roadmap and daily plan',
-  'plans.basicFeature2': 'Every resource — videos, notes, practice and tests',
+  'plans.basicFeature2': 'Videos, notes, practice and tests',
   'plans.basicFeature3': 'Each one opens after a short rewarded ad',
   'plans.basicFeature4': 'Progress, streak and weekly report',
   'plans.premiumFeature1': 'Everything in Basic, plus:',
@@ -293,7 +293,7 @@ export const en = {
   'dialog.linkFailedBody': 'Check your connection and try again.',
   'trialOver.title': 'Your 3-day free trial is over',
   'trialOver.body':
-    'One payment unlocks this roadmap — every video, note, practice and test — for life. No subscription.',
+    'Videos and notes now open after a short ad. One payment unlocks practice and tests — and Premium removes every ad — for life. No subscription.',
   'trialOver.cta': 'Unlock my roadmap',
 
   // --- data export and deletion (privacy policy §9; DPDP Act §§11-12) ---
@@ -420,12 +420,12 @@ export const hi: Record<StringKey, string> = {
   'plans.trialLastDay': 'मुफ़्त ट्रायल का आख़िरी दिन',
   'plans.trialEnded': 'आपका मुफ़्त ट्रायल ख़त्म हो गया',
   'plans.whatLocks':
-    'उसके बाद सब कुछ बंद हो जाएगा — वीडियो, नोट्स, अभ्यास और टेस्ट — जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है।',
+    'उसके बाद वीडियो और नोट्स एक छोटे विज्ञापन के बाद ही खुलेंगे, और अभ्यास व टेस्ट तब तक बंद रहेंगे जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है।',
   'plans.whatLockedNow':
-    '— सब कुछ बंद है जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है। आपकी प्रगति सुरक्षित है।',
+    '— वीडियो और नोट्स एक छोटे विज्ञापन के बाद खुलते हैं; अभ्यास और टेस्ट तब तक बंद हैं जब तक आप कोई प्लान नहीं लेते। एक बार का भुगतान इस रोडमैप को आजीवन खोल देता है। आपकी प्रगति सुरक्षित है।',
   'plans.badgeMostComplete': 'सबसे पूरा',
   'plans.basicFeature1': 'आपका पूरा रोडमैप और रोज़ की योजना',
-  'plans.basicFeature2': 'हर संसाधन — वीडियो, नोट्स, अभ्यास और टेस्ट',
+  'plans.basicFeature2': 'वीडियो, नोट्स, अभ्यास और टेस्ट',
   'plans.basicFeature3': 'हर एक एक छोटे रिवॉर्डेड विज्ञापन के बाद खुलता है',
   'plans.basicFeature4': 'प्रगति, स्ट्रीक और साप्ताहिक रिपोर्ट',
   'plans.premiumFeature1': 'Basic का सब कुछ, और:',
@@ -574,7 +574,7 @@ export const hi: Record<StringKey, string> = {
   'dialog.linkFailedBody': 'अपना इंटरनेट जाँचकर फिर कोशिश करें।',
   'trialOver.title': 'आपका 3 दिन का मुफ़्त ट्रायल पूरा हुआ',
   'trialOver.body':
-    'एक बार का भुगतान इस रोडमैप को — हर वीडियो, नोट, अभ्यास और टेस्ट — आजीवन खोल देता है। कोई सब्सक्रिप्शन नहीं।',
+    'वीडियो और नोट्स अब एक छोटे विज्ञापन के बाद खुलते हैं। एक बार का भुगतान अभ्यास और टेस्ट खोल देता है — और Premium हर विज्ञापन हटा देता है — आजीवन। कोई सब्सक्रिप्शन नहीं।',
   'trialOver.cta': 'मेरा रोडमैप खोलें',
 
   'export.working': 'आपका डेटा तैयार किया जा रहा है…',
@@ -700,12 +700,12 @@ export const hinglish: Record<StringKey, string> = {
   'plans.trialLastDay': 'Free trial ka aakhri din',
   'plans.trialEnded': 'Aapka free trial khatam ho gaya',
   'plans.whatLocks':
-    'Uske baad sab kuch lock ho jaayega — videos, notes, practice aur tests — jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai.',
+    'Uske baad videos aur notes ek chhote ad ke baad hi khulenge, aur practice aur tests lock rahenge jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai.',
   'plans.whatLockedNow':
-    '— sab kuch lock hai jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai. Aapki progress safe hai.',
+    '— videos aur notes ek chhote ad ke baad khulte hain; practice aur tests lock hain jab tak aap koi plan nahin lete. Ek baar ka payment is roadmap ko lifetime khol deta hai. Aapki progress safe hai.',
   'plans.badgeMostComplete': 'Sabse poora',
   'plans.basicFeature1': 'Aapka poora roadmap aur roz ka plan',
-  'plans.basicFeature2': 'Har resource — videos, notes, practice aur tests',
+  'plans.basicFeature2': 'Videos, notes, practice aur tests',
   'plans.basicFeature3': 'Har ek chhote rewarded ad ke baad khulta hai',
   'plans.basicFeature4': 'Progress, streak aur weekly report',
   'plans.premiumFeature1': 'Basic ka sab kuch, aur:',
@@ -855,7 +855,7 @@ export const hinglish: Record<StringKey, string> = {
   'dialog.linkFailedBody': 'Apna internet jaanchkar phir koshish karein.',
   'trialOver.title': 'Aapka 3 din ka free trial poora hua',
   'trialOver.body':
-    'Ek baar ka payment is roadmap ko — har video, note, practice aur test — lifetime khol deta hai. Koi subscription nahin.',
+    'Videos aur notes ab ek chhote ad ke baad khulte hain. Ek baar ka payment practice aur tests kholta hai — aur Premium har ad hata deta hai — lifetime. Koi subscription nahin.',
   'trialOver.cta': 'Mera roadmap kholein',
 
   'export.working': 'Aapka data taiyaar kiya ja raha hai…',

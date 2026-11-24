@@ -53,22 +53,20 @@ freementor/
 Do **not** hand-edit goal JSON in the app repo. The library is authored/validated separately and published to Supabase Storage; the app only downloads and caches it.
 
 ## Non-negotiable product rules (enforce in code)
-- **Trial = Basic, free, 3 days, no ads.** Then EVERYTHING locks — videos
-  included — until a one-time payment unlocks that roadmap for life. Basic
-  reaches everything through a user-initiated rewarded ad; Premium has no ads
-  and adds the premium notes and detailed analytics.
-  *(Changed Oct 2026. This file previously stated "YouTube is never ad-gated or
-  paywalled" as a hard rule, enforced in the validator, the gate and ~15 tests.
-  The owner reversed it. Two things to keep in view: the YouTube Data API's
-  terms restrict charging for access to YouTube content — what is sold is the
-  roadmap, and the videos remain free on YouTube itself — and marketing copy
-  must no longer call the resources free "for lifetime" without qualification.)*
-  *(Copy brought into line Oct 2026: a claim of free access must now name
-  WHERE it is free. `marketing/compliance.ts` has an `unqualified-free-access`
-  rule — "free on YouTube" passes, "free to open" does not — and it runs over
-  every goal's copy **and the English string catalogue**, which is what the
-  reversal had missed.)*
-- **3-day free trial of Basic**, then one-time **Basic ₹599 / Premium ₹999** per roadmap, **lifetime** access. Switching goal = a new purchase.
+- **Plan table (owner, Nov 2026; supersedes the Oct 2026 "everything locks" rule).**
+  Trial = 3 days free, no ads: roadmap, videos and main notes open; practice,
+  tests and extra notes locked. After the trial with nothing bought: videos and
+  main notes open after a rewarded ad (one per resource); practice, tests and
+  extra notes stay locked. **Basic** adds practice and tests (still an ad per
+  resource); extra notes stay Premium-only. **Premium** = no ads, extra notes,
+  detailed analytics. Roadmap, day plan and ticks are always visible. Logic is
+  `billing/entitlement.ts`; the full table is `docs/MONETIZATION_STATE.md`.
+  *(Open: confirm YouTube links behind a rewarded ad are acceptable under the
+  YouTube API Services terms — what is sold is the roadmap, the videos stay
+  free on YouTube. Marketing copy must say WHERE a resource is free;
+  `marketing/compliance.ts` has an `unqualified-free-access` rule that runs
+  over every goal's copy and the English string catalogue.)*
+- **3-day free trial**, then one-time **Basic ₹599 / Premium ₹999** per roadmap, **lifetime** access. Switching goal = a new purchase.
 - **16+ only**; users under 18 need parent consent and get **non-personalised, G-rated** ads.
 - **Missed day → plan shifts forward**; recalculation starts from the next incomplete task; completed ticks are never changed.
 - **Streak** = calendar days with a 1-day grace; rest days limited to 1/week and 4/month.
@@ -173,8 +171,8 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   is Google Play Billing itself, which needs a Play Console account and a dev
   build. The buy button says exactly that rather than "coming soon". The **trial clock and the lock system now work**:
   `billing/trial.ts` (pure, 16 tests, clock-rewind resistant via a persisted
-  high-water mark) drives `entitlementFor()`, and after 3 days everything but
-  YouTube returns `needs_plan` and routes to Plans. Ads themselves are M6, so an
+  high-water mark) drives `entitlementFor()`, and after 3 days practice, tests and extra notes return
+  `needs_plan`/`premium_only` and route to Plans; videos and notes become ad-gated. Ads themselves are M6, so an
   `ad_gated` resource currently opens after a confirm dialog rather than an ad.
 - Parent consent is **verified by OTP** when a server is reachable. With no
   `EXPO_PUBLIC_API_URL` or no session (including under the dev sign-in bypass) it

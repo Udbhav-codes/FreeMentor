@@ -138,7 +138,7 @@ export function ResourceLink({ resource }: { resource: Resource }) {
         access.kind === 'premium_only'
           ? `${resource.title}. Premium only.`
           : access.kind === 'needs_plan'
-            ? `${resource.title}. Locked — your free trial has ended.`
+            ? `${resource.title}. Locked — needs a plan.`
             : `${label}: ${resource.title}`
       }
       disabled={broken}

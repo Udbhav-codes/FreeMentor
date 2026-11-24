@@ -5,9 +5,7 @@
  * all 12 full goals, so a library file that drifts from the model shows up
  * here rather than on somebody's phone.
  *
- * The model changed in Oct 2026: the trial is Basic made free for three days,
- * and when it ends everything locks — videos included. This file previously
- * asserted the opposite for YouTube.
+ * Model per the owner's Nov 2026 plan table; see billing/entitlement.ts.
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -60,34 +58,45 @@ describe('the library has resources to gate at all', () => {
   });
 });
 
-describe('the trial opens the whole library', () => {
-  it('every resource, including videos and Premium notes', () => {
-    const offenders = offendersFor('trial', 'open');
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+const isVideoOrNote = (r: Resource) => r.type === 'video' || r.type === 'notes';
+const isPlanGated = (r: Resource) => r.type === 'practice' || r.type === 'test';
+const isExtra = (r: Resource) => r.access === 'premium';
+
+describe('the trial', () => {
+  it('opens every video and main note', () => {
+    const o = offendersFor('trial', 'open', (r) => isVideoOrNote(r) && !isExtra(r));
+    expect(o, o.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it('locks every practice and test link', () => {
+    const o = offendersFor('trial', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r));
+    expect(o, o.slice(0, 5).join('\n')).toEqual([]);
   });
 });
 
-describe('an expired trial locks the whole library', () => {
-  it('every resource, videos included', () => {
-    // The change the owner asked for, asserted across all 12 goals rather
-    // than on a synthetic resource.
-    const offenders = offendersFor('expired', 'needs_plan');
-    expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
+describe('an expired trial', () => {
+  it('ad-gates every video and main note', () => {
+    const o = offendersFor('expired', 'ad_gated', (r) => isVideoOrNote(r) && !isExtra(r));
+    expect(o, o.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it('locks every practice and test link', () => {
+    const o = offendersFor('expired', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r));
+    expect(o, o.slice(0, 5).join('\n')).toEqual([]);
   });
 });
 
-describe('Basic reaches everything through an ad', () => {
+describe('Basic reaches everything but extra notes through an ad', () => {
   it('ad-gates every non-Premium resource', () => {
-    const offenders = offendersFor('basic', 'ad_gated', (r) => r.access !== 'premium');
+    const offenders = offendersFor('basic', 'ad_gated', (r) => !isExtra(r));
     expect(offenders, offenders.slice(0, 5).join('\n')).toEqual([]);
   });
 
   it('still meets the Premium lock on Premium resources', () => {
     const locked = every.filter(
-      ({ r }) => r.access === 'premium' && accessFor(r, 'basic').kind === 'premium_only',
+      ({ r }) => isExtra(r) && accessFor(r, 'basic').kind === 'premium_only',
     );
-    // The library has 429 of them; if that branch ever stops being reachable
-    // Premium has nothing left to sell.
+    // The library has 429 of them.
     expect(locked.length).toBeGreaterThan(100);
   });
 });

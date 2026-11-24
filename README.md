@@ -37,7 +37,9 @@ FreeMentor_App_Dev_Kit/
 ## The short version
 - **App:** React Native + TypeScript (Expo, Android first). **Backend:** FastAPI + PostgreSQL on Supabase. **Auth:** Supabase/Google. **Payments:** Play Billing. **Push:** FCM. **Ads:** AdMob (Premium = none).
 - The app ships the catalog, downloads one goal's roadmap file on demand, stores it in SQLite, and an **on-device scheduler** turns the ordered topics/blocks into a personal day-by-day plan.
-- **Golden rules:** YouTube is never ad-gated; 3-day trial → ₹599 Basic / ₹999 Premium one-time per goal; 16+ with parent consent under 18; missed day shifts the plan forward; video time = duration × 1.15 rounded up to 5 min.
+- **Golden rules:** 3 days free (videos and main notes open, no ads), then one-time per goal: **Basic ₹599** (videos, notes, practice and tests, each after a short rewarded ad) or **Premium ₹999** (no ads, extra notes, detailed analytics). With nothing bought after the trial, videos and main notes still open after an ad; practice, tests and extra notes lock. The roadmap, day plan and your ticks always stay visible. Full table: `docs/MONETIZATION_STATE.md`. 16+ with parent consent under 18; missed day shifts the plan forward; video time = duration × 1.15 rounded up to 5 min.
 
-## Before store launch
-Run `library/FreeMentor_Library/tools/check_links.py` with a YouTube Data API key to fill real durations and re-verify the four carried-over goals (JEE Main/Advanced, NEET, Python). The other eight goals' videos are already verified. See the library spec's status tracker and the product plan's Google Play checklist (§16).
+## Current state and launch
+- `docs/MONETIZATION_STATE.md`: exactly what is locked, what shows ads, and open conflicts.
+- `docs/LAUNCH_CHECKLIST.md`: the path to a Play Store release.
+- Before launch, re-run `library/FreeMentor_Library/tools/check_links.py` with a YouTube Data API key (durations are filled and dead links repaired as of the latest commits). See the product plan's Google Play checklist (§16).

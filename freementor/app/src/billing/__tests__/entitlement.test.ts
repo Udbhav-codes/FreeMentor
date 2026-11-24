@@ -1,11 +1,9 @@
 /**
- * The gate — product plan §10.1.
+ * The gate — product plan §10.1, owner's plan table (Nov 2026).
  *
- * The model changed in Oct 2026 on the product owner's instruction: the trial
- * is Basic made free for three days, and when it ends EVERYTHING locks,
- * videos included. Before that, YouTube was never gated on any plan. These
- * tests encode the new rule; the old ones are gone rather than loosened, so
- * nobody has to guess which was intended.
+ * Trial: videos and main notes open, no ads; practice, tests and extra notes
+ * locked. Expired: videos and main notes open after an ad; the rest locked.
+ * Basic: everything but extra notes, each behind an ad. Premium: everything.
  */
 import { describe, expect, it } from 'vitest';
 import type { Resource } from '@freementor/shared';
@@ -35,65 +33,69 @@ const res = (over: Partial<Resource> = {}): Resource =>
 
 const KINDS = ['video', 'notes', 'practice', 'test'] as const;
 
+const OPEN_TYPES = ['video', 'notes'] as const;
+const PLAN_TYPES = ['practice', 'test'] as const;
+
 describe('the three-day trial', () => {
-  it('opens everything, including videos', () => {
-    // It is Basic made free, so the learner sees the real product rather than
-    // a hobbled one. That is what makes the paywall at the end fair.
-    for (const type of KINDS) {
+  it('opens videos and main notes', () => {
+    for (const type of OPEN_TYPES) {
       expect(accessFor(res({ type }), 'trial').kind, type).toBe('open');
     }
   });
 
-  it('shows no ads', () => {
-    // Paying is what removes ads on Basic; the trial has none at all, so the
-    // three days are a clean look at the product.
-    expect(showsAds('trial')).toBe(false);
+  it('locks practice and tests', () => {
+    for (const type of PLAN_TYPES) {
+      expect(accessFor(res({ type }), 'trial').kind, type).toBe('needs_plan');
+    }
   });
 
-  it('opens even Premium-marked resources', () => {
-    expect(accessFor(res({ access: 'premium' }), 'trial').kind).toBe('open');
+  it('locks extra notes (Premium)', () => {
+    expect(accessFor(res({ access: 'premium' }), 'trial').kind).toBe('premium_only');
+  });
+
+  it('shows no ads', () => {
+    expect(showsAds('trial')).toBe(false);
   });
 });
 
 describe('when the trial has ended and nothing is bought', () => {
-  it('locks every kind of resource', () => {
-    for (const type of KINDS) {
-      expect(accessFor(res({ type }), 'expired').kind, type).toBe('needs_plan');
+  it('opens videos and main notes after an ad', () => {
+    for (const type of OPEN_TYPES) {
+      expect(accessFor(res({ type }), 'expired').kind, type).toBe('ad_gated');
     }
-  });
-
-  it('locks videos too — the rule the owner changed', () => {
-    // This file used to assert the exact opposite. Spelled out so a reader
-    // who remembers the old behaviour knows it was a decision, not a slip.
-    expect(accessFor(res({ type: 'video' }), 'expired').kind).toBe('needs_plan');
+    // A YouTube-hosted note is still a note: same rule, no special case.
     expect(
       accessFor(res({ type: 'notes', url: 'https://www.youtube.com/watch?v=x' }), 'expired')
         .kind,
-    ).toBe('needs_plan');
+    ).toBe('ad_gated');
   });
 
-  it('sends the learner somewhere they can act, not just a dead end', () => {
-    // needs_plan is what routes to the Plans screen. A lock with no route is
-    // the worst version of this screen.
+  it('locks practice, tests and extra notes', () => {
+    for (const type of PLAN_TYPES) {
+      expect(accessFor(res({ type }), 'expired').kind, type).toBe('needs_plan');
+    }
+    expect(accessFor(res({ access: 'premium' }), 'expired').kind).toBe('premium_only');
+  });
+
+  it('shows ads, and still routes to the plans screen', () => {
+    expect(showsAds('expired')).toBe(true);
     expect(needsPlan('expired')).toBe(true);
     expect(showsWelcomeCard('expired')).toBe(true);
   });
 });
 
 describe('Basic', () => {
-  it('reaches everything through a rewarded ad', () => {
+  it('reaches videos, notes, practice and tests through a rewarded ad', () => {
     for (const type of KINDS) {
       expect(accessFor(res({ type }), 'basic').kind, type).toBe('ad_gated');
     }
   });
 
   it('still cannot reach Premium-only resources', () => {
-    // An ad does not substitute for the plan, or Premium would have nothing
-    // left to sell.
     expect(accessFor(res({ access: 'premium' }), 'basic').kind).toBe('premium_only');
   });
 
-  it('is the only plan that sees ads', () => {
+  it('sees ads; Premium and the trial do not', () => {
     expect(showsAds('basic')).toBe(true);
     expect(showsAds('trial')).toBe(false);
     expect(showsAds('premium')).toBe(false);
