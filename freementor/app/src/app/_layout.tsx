@@ -28,7 +28,9 @@ import { SyncProvider } from '../state/SyncContext.tsx';
 import { LanguageProvider } from '../i18n/LanguageProvider.tsx';
 import { OpeningAnimation } from '../components/OpeningAnimation.tsx';
 import { getDb } from '../db/index.ts';
-import { hasOnboarded } from '../db/profile.ts';
+import { hasOnboarded, loadProfile } from '../db/profile.ts';
+import { ageFromBirthYear } from '../ads/rewarded.ts';
+import { configureTelemetry } from '../telemetry/index.ts';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -55,6 +57,10 @@ export default function RootLayout() {
     getDb()
       .then(async () => {
         setFirstLaunch(!(await hasOnboarded().catch(() => false)));
+        // Analytics only for a learner we know is an adult; see telemetry/index.ts.
+        configureTelemetry(
+          ageFromBirthYear((await loadProfile().catch(() => null))?.birthYear ?? null),
+        );
         setDbReady(true);
       })
       .catch((e) => setFatal(String(e)));

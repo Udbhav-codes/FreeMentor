@@ -18,11 +18,11 @@ server host undecided. Order matters: items near the top unblock the rest.
 - [ ] Play payments profile (India): PAN/bank details; check whether GST
       registration is needed at your revenue.
 - [ ] AdMob account linked to the Play app; create a rewarded ad unit. (Only unpaid post-trial learners see ads, so this can follow the first release if you want to ship sooner.)
-- [ ] Firebase project for FCM and Crashlytics.
+- [x] Firebase project `freementor-6a923` created; Android app registered. Still to do: enable Crashlytics in the console, add the SHA-1 after the first signed build, generate the server's service-account key.
 - [ ] Add `exp://**` to Supabase redirect URLs (testing only; remove before launch).
 
 ## C. Build
-- [ ] Create an EAS development build (Expo Go cannot run Play Billing or AdMob).
+- [x] EAS profiles written (`app/eas.json`); app icon, adaptive icon, splash, notification icon, version and `google-services.json` wired. Still to do: `eas login`, `eas init`, upload `GOOGLE_SERVICES_JSON` (see `app/app.config.js`), then the first dev build (Expo Go cannot run Play Billing or AdMob).
 - [ ] Verify Google sign-in on a device with the dev build; native sign-in.
 - [ ] Integrate `react-native-iap`; create products (basic, premium, upgrade,
       coupon-discount products); implement the real `GooglePlayVerifier`.
