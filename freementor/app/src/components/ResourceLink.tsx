@@ -16,6 +16,7 @@ import { useRouter } from 'expo-router';
 import type { Resource } from '@freementor/shared';
 import { Pill, Txt } from './ui.tsx';
 import { accessFor } from '../billing/entitlement.ts';
+import { noteRewarded, windowOpen } from '../ads/cap.ts';
 import { useEntitlement } from '../billing/useEntitlement.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { useT } from '../i18n/LanguageProvider.tsx';
@@ -81,6 +82,15 @@ export function ResourceLink({ resource }: { resource: Resource }) {
       return;
     }
     if (access.kind === 'ad_gated') {
+      // §10.2: at most one rewarded unlock per ten minutes. Inside the window
+      // a completed ad still covers this open, so a video and its notes cost
+      // one ad, not two.
+      if (windowOpen()) {
+        openResource(resource).catch(() =>
+          reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
+        );
+        return;
+      }
       // A user-initiated rewarded ad. Never auto-playing, never during a
       // video, a test or the checklist itself (§10.2) — this runs before
       // study starts, on the tap that opens a resource.
@@ -116,6 +126,9 @@ export function ResourceLink({ resource }: { resource: Resource }) {
                 // A dismissed ad opens nothing; everything else does. See
                 // ads/rewarded.ts for why a failure still grants access.
                 if (!grantsAccess(outcome)) return;
+                // Only a watched ad opens the window; an unavailable one
+                // showed nothing, so it must not suppress the next real ad.
+                if (outcome.kind === 'rewarded') noteRewarded();
                 await openResource(resource).catch(() =>
                   reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
                 );

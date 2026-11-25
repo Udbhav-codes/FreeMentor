@@ -166,3 +166,50 @@ class TestDemoEcho:
         # with OTP_ECHO on — see test_config.
         assert body["demo_code"] is not None
         assert body["expires_in_seconds"] == int(otp.TTL.total_seconds())
+
+
+class TestDeliveryFailure:
+    async def test_a_failed_send_is_reported_and_does_not_burn_the_resend_limit(
+        self, client: AsyncClient, monkeypatch
+    ):
+        class BrokenSender(otp.Sender):
+            name = "broken"
+
+            async def send(self, contact: str, code: str, method: str) -> None:
+                raise OSError("smtp down")
+
+        await make_minor(client)
+        monkeypatch.setattr(otp, "get_sender", lambda *a, **k: BrokenSender())
+        first = await client.post(
+            "/account/consent/request",
+            json={"parent_contact": "parent@example.com"},
+            headers=auth(),
+        )
+        assert first.status_code == 503
+
+        # The parent never got a code, so the learner may retry at once rather
+        # than waiting out the 60-second limit.
+        monkeypatch.undo()
+        again = await client.post(
+            "/account/consent/request",
+            json={"parent_contact": "parent@example.com"},
+            headers=auth(),
+        )
+        assert again.status_code == 202
+
+    async def test_sms_is_refused_when_the_sender_is_email_only(
+        self, client: AsyncClient, monkeypatch
+    ):
+        class EmailOnly(otp.ConsoleSender):
+            def supports(self, method: str) -> bool:
+                return method == "email"
+
+        await make_minor(client)
+        monkeypatch.setattr(otp, "get_sender", lambda *a, **k: EmailOnly())
+        response = await client.post(
+            "/account/consent/request",
+            json={"parent_contact": "9876543210", "method": "sms"},
+            headers=auth(),
+        )
+        assert response.status_code == 422
+        assert "email" in response.json()["detail"].lower()

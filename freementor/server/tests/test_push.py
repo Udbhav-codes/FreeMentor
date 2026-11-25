@@ -282,6 +282,9 @@ class TestProductionSafety:
             supabase_jwt_secret="s",
             supabase_url="https://x.supabase.co",
             otp_echo=False,
+            smtp_host="smtp.example.com",
+            smtp_user="user",
+            smtp_password="pw",
         )
         settings.assert_safe()
         assert settings.firebase_project_id == ""

@@ -63,6 +63,21 @@ class Settings(BaseSettings):
     # outside local/development, and assert_safe() refuses production.
     otp_echo: bool = True
 
+    # Email delivery for parental-consent codes, over plain SMTP (STARTTLS).
+    # Any free provider works: Gmail with an app password (smtp.gmail.com:587)
+    # or Brevo's free tier. Leave SMTP_HOST empty in local mode and the codes
+    # go to the server log instead. SMS is deliberately not offered: in India
+    # it needs DLT registration, which is out of scope for a free launch.
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    smtp_from: str = ""
+
+    @property
+    def smtp_configured(self) -> bool:
+        return bool(self.smtp_host and self.smtp_user and self.smtp_password)
+
     @property
     def is_production(self) -> bool:
         return self.environment.lower() == "production"
@@ -113,6 +128,12 @@ class Settings(BaseSettings):
                 "OTP_ECHO is on in production. That returns the consent code "
                 "in the API response, so anyone could approve themselves. "
                 "Set OTP_ECHO=false and configure a real sender."
+            )
+        if not self.smtp_configured:
+            raise RuntimeError(
+                "ENVIRONMENT=production but SMTP_HOST, SMTP_USER and SMTP_PASSWORD "
+                "are not all set. Without them parental-consent codes reach "
+                "nobody and no 16-17 year old can finish signing up."
             )
         if "*" in self.cors_origins:
             # Reachable only by someone typing it into the environment, which

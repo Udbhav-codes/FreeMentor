@@ -168,3 +168,52 @@ export async function cancelDailyReminder(): Promise<void> {
     // Nothing to cancel is not a failure.
   }
 }
+
+const TRIAL_END_KIND = 'trial-end';
+
+/**
+ * One notification at `at`, telling the learner the trial ends tomorrow.
+ *
+ * Unlike the daily reminder this never ASKS for permission: it runs in the
+ * background off the trial clock, and a permission prompt that appears out of
+ * nowhere on day 2 is worse than no reminder. If the learner already allowed
+ * notifications (onboarding asks), it is scheduled; if not, it is skipped.
+ */
+export async function scheduleTrialEndReminder(
+  at: Date,
+  content: { title: string; body: string },
+): Promise<string | null> {
+  const mod = await load();
+  if (!mod) return null;
+  try {
+    if (!(await mod.getPermissionsAsync()).granted) return null;
+    await ensureChannel(mod);
+    await cancelTrialEndReminder();
+    return await mod.scheduleNotificationAsync({
+      content: { ...content, data: { kind: TRIAL_END_KIND } },
+      trigger: {
+        type: mod.SchedulableTriggerInputTypes.DATE,
+        date: at,
+        channelId: CHANNEL_ID,
+      },
+    });
+  } catch (error) {
+    console.info('[notifications] Could not schedule the trial reminder:', error);
+    return null;
+  }
+}
+
+export async function cancelTrialEndReminder(): Promise<void> {
+  const mod = await load();
+  if (!mod) return;
+  try {
+    const scheduled = await mod.getAllScheduledNotificationsAsync();
+    await Promise.all(
+      scheduled
+        .filter((n) => n.content.data?.kind === TRIAL_END_KIND)
+        .map((n) => mod.cancelScheduledNotificationAsync(n.identifier)),
+    );
+  } catch {
+    // Nothing to cancel is not a failure.
+  }
+}

@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -119,6 +119,15 @@ class PurchaseIn(BaseModel):
     coupon_code: str | None = None
 
 
+class TrialOut(BaseModel):
+    """The trial on the server's clock. ISO timestamps, UTC."""
+
+    started_at: str
+    ends_at: str
+    server_time: str
+    expired: bool
+
+
 class EntitlementOut(BaseModel):
     """None means nothing is bought — the trial clock decides from here."""
 
@@ -126,6 +135,9 @@ class EntitlementOut(BaseModel):
     plan: str | None = None
     product_id: str | None = None
     order_id: str | None = None
+    # Present when an enrollment was named: the trial per the server's clock,
+    # which a device cannot wind back.
+    trial: TrialOut | None = None
 
 
 @router.post(
@@ -256,6 +268,7 @@ async def _entitlement_out(
     unlock another. A purchase with no enrollment_id is account-wide and
     counts for every goal — that is how a pre-enrollment purchase behaves.
     """
+    trial = await _trial_for(session, user, enrollment_id)
     rows = (
         (await session.execute(select(Purchase).where(Purchase.user_id == user.id)))
         .scalars()
@@ -269,7 +282,7 @@ async def _entitlement_out(
         [billing.PurchaseState(plan=r.plan, purchase_state=r.purchase_state) for r in relevant]
     )
     if entitlement is None:
-        return EntitlementOut(entitlement=None)
+        return EntitlementOut(entitlement=None, trial=trial)
 
     # The row that granted it, for the receipt line in the app.
     granting = next(
@@ -281,6 +294,37 @@ async def _entitlement_out(
         plan=entitlement,
         product_id=granting.product_id if granting else None,
         order_id=granting.play_order_id if granting else None,
+        trial=trial,
+    )
+
+
+async def _trial_for(
+    session: AsyncSession, user: User, enrollment_id: str | None
+) -> TrialOut | None:
+    """The trial window for the enrollment's goal, from the server's clock.
+
+    Measured from the earliest enrollment this account ever had for the goal,
+    so re-adding a goal or reinstalling cannot restart it. An enrollment that
+    is not the caller's yields nothing rather than a hint that it exists.
+    """
+    if not enrollment_id:
+        return None
+    enrollment = await session.get(Enrollment, enrollment_id)
+    if enrollment is None or enrollment.user_id != user.id:
+        return None
+    first = (
+        await session.execute(
+            select(func.min(Enrollment.created_at)).where(
+                Enrollment.user_id == user.id, Enrollment.goal_id == enrollment.goal_id
+            )
+        )
+    ).scalar_one()
+    window = billing.trial_window(first or enrollment.created_at)
+    return TrialOut(
+        started_at=window.started_at.isoformat(),
+        ends_at=window.ends_at.isoformat(),
+        server_time=window.server_time.isoformat(),
+        expired=window.expired,
     )
 
 

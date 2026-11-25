@@ -1,0 +1,21 @@
+# Builds the API image on Google Cloud Build.
+#
+# Run from the REPOSITORY ROOT (not from server/), for the same reason the
+# Dockerfile says so: the policy pages live in docs/legal/, outside server/.
+#
+#   gcloud builds submit --config freementor/server/cloudbuild.yaml .
+#
+# The image lands in Artifact Registry in Mumbai, next to the service.
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - freementor/server/Dockerfile
+      - -t
+      - asia-south1-docker.pkg.dev/$PROJECT_ID/freementor/api:latest
+      - .
+
+images:
+  - asia-south1-docker.pkg.dev/$PROJECT_ID/freementor/api:latest

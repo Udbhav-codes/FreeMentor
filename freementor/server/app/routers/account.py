@@ -168,6 +168,20 @@ async def request_consent(
     if payload.method == "email" and "@" not in contact:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "That is not an email address.")
 
+    smtp = otp.SmtpConfig(
+        settings.smtp_host,
+        settings.smtp_port,
+        settings.smtp_user,
+        settings.smtp_password,
+        settings.smtp_from,
+    )
+    sender = otp.get_sender(settings.environment, smtp)
+    if not sender.supports(payload.method):
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
+            "Codes are sent by email only. Please use a parent's email address.",
+        )
+
     existing = await _consent(session, user)
 
     # Rate limit so a parent cannot be spammed with codes through us.
@@ -198,7 +212,18 @@ async def request_consent(
     consent.last_sent_at = now
     await session.commit()
 
-    await otp.get_sender(settings.environment).send(contact, code, payload.method)
+    try:
+        await sender.send(contact, code, payload.method)
+    except Exception:
+        # Never tell a parent a code is on its way when it is not. Clearing
+        # last_sent_at lets the learner retry at once instead of waiting out
+        # the resend limit for an email that never left.
+        consent.last_sent_at = None
+        await session.commit()
+        raise HTTPException(
+            status.HTTP_503_SERVICE_UNAVAILABLE,
+            "We could not send the code just now. Please try again in a minute.",
+        ) from None
 
     echo = settings.otp_echo and not settings.is_production
     return ConsentRequestOut(

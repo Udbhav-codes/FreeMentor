@@ -22,11 +22,15 @@ docs/FreeMentor_Product_Plan.md §19.
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import hmac
 import secrets
+import smtplib
+import ssl
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
+from email.message import EmailMessage
 
 CODE_LENGTH = 6
 TTL = timedelta(minutes=10)
@@ -119,6 +123,10 @@ class Sender:
 
     name = "base"
 
+    def supports(self, method: str) -> bool:
+        """Whether this sender can deliver by `method` ("email" or "sms")."""
+        return True
+
     async def send(self, contact: str, code: str, method: str) -> None:
         raise NotImplementedError
 
@@ -136,7 +144,65 @@ class ConsoleSender(Sender):
         print(f"[otp] would send {code} to {contact} by {method}")
 
 
-def get_sender(environment: str) -> Sender:
-    # When an email/SMS subscription exists, select it here on the
-    # environment or a provider setting. Nothing else has to change.
+@dataclass(frozen=True)
+class SmtpConfig:
+    host: str
+    port: int
+    user: str
+    password: str
+    from_addr: str = ""
+
+
+class EmailSender(Sender):
+    """Real delivery over SMTP with STARTTLS. Email only — no SMS.
+
+    Uses the standard library, so there is no extra dependency, and runs the
+    blocking SMTP conversation in a worker thread so it cannot stall the event
+    loop. A failure raises: the caller must not tell a parent a code is on its
+    way when it is not.
+    """
+
+    name = "email"
+
+    def __init__(self, config: SmtpConfig) -> None:
+        self._config = config
+
+    def supports(self, method: str) -> bool:
+        return method == "email"
+
+    def build_message(self, contact: str, code: str) -> EmailMessage:
+        message = EmailMessage()
+        message["Subject"] = "Your FreeMentor parental-consent code"
+        message["From"] = self._config.from_addr or self._config.user
+        message["To"] = contact
+        message.set_content(
+            f"Your FreeMentor consent code is {code}.\n\n"
+            f"A young person asked for your consent to use FreeMentor, a study-roadmap app. "
+            f"Enter this code in the app to approve. It expires in "
+            f"{int(TTL.total_seconds() // 60)} minutes.\n\n"
+            "If you did not expect this, ignore this email and nothing will happen."
+        )
+        return message
+
+    def _deliver(self, message: EmailMessage) -> None:
+        cfg = self._config
+        with smtplib.SMTP(cfg.host, cfg.port, timeout=15) as smtp:
+            smtp.starttls(context=ssl.create_default_context())
+            smtp.login(cfg.user, cfg.password)
+            smtp.send_message(message)
+
+    async def send(self, contact: str, code: str, method: str) -> None:
+        if not self.supports(method):
+            raise ValueError("This sender only delivers by email.")
+        await asyncio.to_thread(self._deliver, self.build_message(contact, code))
+
+
+def get_sender(environment: str, smtp: SmtpConfig | None = None) -> Sender:
+    """Email when SMTP is configured, otherwise the console stand-in.
+
+    config.assert_safe() refuses a production server with no SMTP, so the
+    console sender can only ever be what a local or test run uses.
+    """
+    if smtp is not None and smtp.host and smtp.user and smtp.password:
+        return EmailSender(smtp)
     return ConsoleSender()

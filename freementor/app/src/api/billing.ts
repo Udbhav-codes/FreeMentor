@@ -64,11 +64,21 @@ export async function validateCoupon(code: string, plan: Plan): Promise<CouponRe
   }
 }
 
+/** The trial on the server's clock, which a device cannot wind back. */
+export interface ServerTrial {
+  startedAt: string;
+  endsAt: string;
+  serverTime: string;
+  expired: boolean;
+}
+
 export interface ServerEntitlement {
   /** null when nothing is bought — the local trial clock decides from there. */
   plan: Plan | null;
   productId: string | null;
   orderId: string | null;
+  /** Present when an enrollment was named and the server knows its trial. */
+  trial?: ServerTrial;
 }
 
 /**
@@ -91,11 +101,32 @@ export async function fetchEntitlement(
       entitlement?: string | null;
       product_id?: string | null;
       order_id?: string | null;
+      trial?: {
+        started_at?: string;
+        ends_at?: string;
+        server_time?: string;
+        expired?: boolean;
+      } | null;
     };
+    const t = body.trial;
+    const trial: ServerTrial | undefined =
+      t && t.started_at && t.ends_at && t.server_time
+        ? {
+            startedAt: t.started_at,
+            endsAt: t.ends_at,
+            serverTime: t.server_time,
+            expired: t.expired === true,
+          }
+        : undefined;
     const plan = body.entitlement === 'basic' || body.entitlement === 'premium'
       ? body.entitlement
       : null;
-    return { plan, productId: body.product_id ?? null, orderId: body.order_id ?? null };
+    return {
+      plan,
+      productId: body.product_id ?? null,
+      orderId: body.order_id ?? null,
+      ...(trial ? { trial } : {}),
+    };
   } catch {
     return null;
   }

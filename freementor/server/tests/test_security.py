@@ -149,6 +149,9 @@ class TestCors:
                 supabase_jwt_secret="s",
                 supabase_url="https://x.supabase.co",
                 otp_echo=False,
+                smtp_host="smtp.example.com",
+                smtp_user="user",
+                smtp_password="pw",
                 cors_origins="*",
             ).assert_safe()
 
@@ -230,6 +233,9 @@ class TestApiDocs:
             supabase_jwt_secret="s",
             supabase_url="https://x.supabase.co",
             otp_echo=False,
+            smtp_host="smtp.example.com",
+            smtp_user="user",
+            smtp_password="pw",
         )
         assert production.is_production is True
         assert (production.expose_api_docs and not production.is_production) is False

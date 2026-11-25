@@ -392,6 +392,9 @@ class TestProductionGuard:
             database_url="postgresql://user:pw@host/db",
             supabase_url="https://x.supabase.co",
             otp_echo=False,
+            smtp_host="smtp.example.com",
+            smtp_user="user",
+            smtp_password="pw",
         )
         app.dependency_overrides[get_settings] = lambda: production
         try:
@@ -416,4 +419,68 @@ class TestProductionGuard:
             supabase_url="https://x.supabase.co",
             supabase_jwt_secret="secret",
             otp_echo=False,
+            smtp_host="smtp.example.com",
+            smtp_user="user",
+            smtp_password="pw",
         ).assert_safe()
+
+
+class TestServerTrial:
+    """The trial on the server's clock, which a device cannot wind back."""
+
+    @pytest.mark.asyncio
+    async def test_an_enrollment_gets_a_trial_window(
+        self, client: AsyncClient, enrollment: str
+    ) -> None:
+        body = (
+            await client.get(f"/billing/entitlement?enrollment_id={enrollment}", headers=auth())
+        ).json()
+        assert body["entitlement"] is None
+        trial = body["trial"]
+        assert trial["expired"] is False
+        started = datetime.fromisoformat(trial["started_at"])
+        ends = datetime.fromisoformat(trial["ends_at"])
+        assert ends - started == timedelta(days=3)
+
+    @pytest.mark.asyncio
+    async def test_no_enrollment_means_no_trial_to_report(self, client: AsyncClient) -> None:
+        body = (await client.get("/billing/entitlement", headers=auth())).json()
+        assert body["trial"] is None
+
+    @pytest.mark.asyncio
+    async def test_the_window_runs_from_the_FIRST_enrollment_for_the_goal(
+        self, client: AsyncClient, enrollment: str, session_factory
+    ) -> None:
+        # Re-adding a goal, or reinstalling, must not restart the clock.
+        from app.models import Enrollment
+
+        long_ago = datetime.now(timezone.utc) - timedelta(days=10)
+        async with session_factory() as session:
+            row = await session.get(Enrollment, enrollment)
+            row.created_at = long_ago
+            await session.commit()
+        again = await client.post(
+            "/enrollments",
+            json={
+                "goal_id": "python",
+                "start_date": "2026-11-20",
+                "minutes_by_weekday": {"mon": 60},
+            },
+            headers=auth(),
+        )
+        assert again.status_code == 201
+        new_id = again.json()["id"]
+        trial = (
+            await client.get(f"/billing/entitlement?enrollment_id={new_id}", headers=auth())
+        ).json()["trial"]
+        assert trial["expired"] is True
+
+    @pytest.mark.asyncio
+    async def test_another_learners_enrollment_reveals_nothing(
+        self, client: AsyncClient, enrollment: str
+    ) -> None:
+        other = auth("learner-2", "other@example.com")
+        body = (
+            await client.get(f"/billing/entitlement?enrollment_id={enrollment}", headers=other)
+        ).json()
+        assert body["trial"] is None

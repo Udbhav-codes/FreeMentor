@@ -123,3 +123,72 @@ class TestExpiryWindow:
 class TestSender:
     def test_the_demo_sender_is_clearly_a_demo(self):
         assert otp.get_sender("local").name == "console"
+
+
+class TestEmailSender:
+    CONFIG = otp.SmtpConfig("smtp.example.com", 587, "me@example.com", "secret", "FreeMentor <me@example.com>")
+
+    def test_it_is_chosen_only_when_smtp_is_configured(self):
+        assert otp.get_sender("production", self.CONFIG).name == "email"
+        assert otp.get_sender("local", None).name == "console"
+        assert otp.get_sender("local", otp.SmtpConfig("", 587, "", "")).name == "console"
+
+    def test_it_delivers_email_only(self):
+        sender = otp.EmailSender(self.CONFIG)
+        assert sender.supports("email") is True
+        assert sender.supports("sms") is False
+
+    def test_the_message_carries_the_code_and_no_learner_details(self):
+        message = otp.EmailSender(self.CONFIG).build_message("parent@example.com", "123456")
+        body = message.get_content()
+        assert "123456" in body
+        assert message["To"] == "parent@example.com"
+        assert message["From"] == "FreeMentor <me@example.com>"
+        assert "10 minutes" in body
+
+    async def test_it_speaks_smtp_over_starttls(self, monkeypatch):
+        calls = []
+
+        class FakeSMTP:
+            def __init__(self, host, port, timeout=None):
+                calls.append(("connect", host, port))
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *exc):
+                return False
+
+            def starttls(self, context=None):
+                calls.append(("starttls",))
+
+            def login(self, user, password):
+                calls.append(("login", user))
+
+            def send_message(self, message):
+                calls.append(("send", message["To"]))
+
+        monkeypatch.setattr(otp.smtplib, "SMTP", FakeSMTP)
+        await otp.EmailSender(self.CONFIG).send("parent@example.com", "654321", "email")
+        assert calls == [
+            ("connect", "smtp.example.com", 587),
+            ("starttls",),
+            ("login", "me@example.com"),
+            ("send", "parent@example.com"),
+        ]
+
+    async def test_a_smtp_failure_raises_rather_than_pretending(self, monkeypatch):
+        import pytest
+
+        def boom(*args, **kwargs):
+            raise OSError("connection refused")
+
+        monkeypatch.setattr(otp.smtplib, "SMTP", boom)
+        with pytest.raises(OSError):
+            await otp.EmailSender(self.CONFIG).send("parent@example.com", "111111", "email")
+
+    async def test_sms_is_refused_by_the_email_sender(self):
+        import pytest
+
+        with pytest.raises(ValueError):
+            await otp.EmailSender(self.CONFIG).send("9876543210", "111111", "sms")

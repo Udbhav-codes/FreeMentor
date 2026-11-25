@@ -75,8 +75,8 @@ Bottom nav: **Roadmap · Progress · Reports · Practice · Profile**.
 - **Profile/Settings:** appearance (Light/Dark/System), language, notifications + quiet hours, account (edit, change goal → purchase, restore purchases, delete account), legal.
 
 ## 6. Monetisation & gating (product plan §10)
-- Trial (3 days, full Basic) → locks until purchase. Basic ₹599 / Premium ₹999, one-time, lifetime, per roadmap. Upgrade Basic→Premium = ₹400 Play product.
-- Gating: videos & practice always free/ungated; Basic unlocks notes/tests **after a rewarded ad**; Premium removes ads, unlocks extra notes + detailed analytics + full adaptive recalculation.
+- Trial (3 days, free, no ads): videos and main notes open; practice, tests and extra notes locked. Then Basic ₹599 / Premium ₹999, one-time, lifetime, per roadmap. Upgrade Basic→Premium = ₹400 Play product. With nothing bought after the trial: videos and main notes open after a rewarded ad; the rest stays locked. Full table: `docs/MONETIZATION_STATE.md`; logic: `app/src/billing/entitlement.ts`.
+- Gating: **Basic** opens videos, main notes, practice and tests with **no ads**; extra notes stay Premium-only. **Premium** adds extra notes, detailed analytics and full adaptive recalculation. Only a learner whose trial ended with nothing bought sees ads (one rewarded ad per video or main note).
 - Ads (AdMob): user-initiated rewarded only, never during learning/tests/videos; under-18 → non-personalised, G-rated; cap 1 unlock/10 min.
 - Play Billing: verify server-side via Google Play Developer API, acknowledge within 3 days, restore on new device. Strike-through prices must be real previous prices.
 
@@ -84,4 +84,4 @@ Bottom nav: **Roadmap · Progress · Reports · Practice · Profile**.
 `/auth/*` (Supabase session exchange) · `/catalog` · `/goals/{id}/download` (signed Storage URL + version) · `/enrollments` · `/progress` (batch sync from `sync_queue`) · `/purchases/verify` · `/coupons/validate` · `/reports/weekly`. Admin: `/admin/coupons`, `/admin/library/publish` (validate against schema, bump version, upload to Storage), `/admin/users`.
 
 ## 8. Definition of done (MVP)
-Google sign-in → pick a goal → download → scheduler builds a correct daily plan → complete tasks with confidence ratings → progress + streak update → trial → purchase (verified) unlocks → works offline → no YouTube link is ad-gated. Scheduler and billing have passing unit tests; every library file validates against the schema in CI.
+Google sign-in → pick a goal → download → scheduler builds a correct daily plan → complete tasks with confidence ratings → progress + streak update → trial → purchase (verified) unlocks → works offline → no learner who has bought a plan ever meets an ad. Scheduler and billing have passing unit tests; every library file validates against the schema in CI.

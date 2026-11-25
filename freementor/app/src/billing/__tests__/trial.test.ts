@@ -7,6 +7,7 @@ import {
   TRIAL_DAYS,
   describeTrial,
   effectiveNow,
+  reconcileWithServer,
   trialStatus,
 } from '../trial.ts';
 
@@ -130,5 +131,72 @@ describe('what the learner is told', () => {
     const text = describeTrial(trialStatus({ startedAt: START, now: at('2026-11-01T00:00:00.000Z') }));
     expect(text).toBe('Your free trial has ended');
     expect(text).not.toMatch(/\d/);
+  });
+});
+
+describe('reconciling with the server', () => {
+  const T0 = '2026-10-11T09:00:00.000Z';
+  const received = new Date('2026-10-20T12:00:00.000Z');
+
+  it('does nothing when there is no server answer', () => {
+    const input = { startedAt: T0, now: at('2026-10-12T09:00:00.000Z') };
+    expect(reconcileWithServer(input, null)).toBe(input);
+  });
+
+  it('takes the EARLIER start, so a reinstall cannot restart the clock', () => {
+    const input = { startedAt: '2026-10-19T09:00:00.000Z', now: received };
+    const out = reconcileWithServer(input, {
+      startedAt: T0,
+      serverTime: received.toISOString(),
+      receivedAt: received,
+    });
+    expect(out.startedAt).toBe(T0);
+    expect(trialStatus(out).phase).toBe('expired');
+  });
+
+  it('never moves the start later than the device already has it', () => {
+    const input = { startedAt: T0, now: at('2026-10-12T09:00:00.000Z') };
+    const out = reconcileWithServer(input, {
+      startedAt: '2026-10-15T09:00:00.000Z',
+      serverTime: '2026-10-12T09:00:00.000Z',
+      receivedAt: at('2026-10-12T09:00:00.000Z'),
+    });
+    expect(out.startedAt).toBe(T0);
+  });
+
+  it('reads a clock wound back a week as the real time', () => {
+    // The device says 12 Oct; the server, at the same instant, says 19 Oct.
+    // Without the correction the trial would look nearly new.
+    const deviceNow = at('2026-10-12T09:00:00.000Z');
+    const out = reconcileWithServer(
+      { startedAt: T0, now: deviceNow },
+      {
+        startedAt: T0,
+        serverTime: '2026-10-19T09:00:00.000Z',
+        receivedAt: deviceNow,
+      },
+    );
+    expect(trialStatus(out).phase).toBe('expired');
+  });
+
+  it('keeps the correction as time passes after the answer arrived', () => {
+    const arrival = at('2026-10-12T09:00:00.000Z');
+    const later = at('2026-10-12T21:00:00.000Z'); // 12 h on the device
+    const out = reconcileWithServer(
+      { startedAt: T0, now: later },
+      { startedAt: T0, serverTime: '2026-10-13T09:00:00.000Z', receivedAt: arrival },
+    );
+    // Server said 13 Oct 09:00 at arrival; 12 h later it is 13 Oct 21:00.
+    expect(out.now.toISOString()).toBe('2026-10-13T21:00:00.000Z');
+  });
+
+  it('ignores an unparseable server answer rather than trusting it', () => {
+    const input = { startedAt: T0, now: at('2026-10-12T09:00:00.000Z') };
+    const out = reconcileWithServer(input, {
+      startedAt: 'garbage',
+      serverTime: 'nonsense',
+      receivedAt: received,
+    });
+    expect(out).toBe(input);
   });
 });

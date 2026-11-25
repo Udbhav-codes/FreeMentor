@@ -45,7 +45,7 @@ FreeMentor_Library/
 ## 4. Content rules
 
 - **Free & legal only.** Official docs, open-licence books/courses, reputable free practice platforms, and public YouTube videos. No re-hosted copyrighted material.
-- **YouTube is never ad-gated or paywalled** (`ad_gate_allowed: false`, `access: "all"`). Premium = ad-free interface + premium *notes*, never blocking a video.
+- **Library files never mark a video as restricted** (`ad_gate_allowed: false`, `access: "all"`); gating is decided by the app's plan rules (`app/src/billing/entitlement.ts`, `docs/MONETIZATION_STATE.md`), not by the library data. Premium-only content is *notes* (`access: "premium"`).
 - **Every URL is `https://`.** No `http://`, no login-walled or region-locked pages where avoidable.
 - **Verify every video.** Confirm the ID via `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<ID>&format=json`; use the returned title and channel; set `status: "active"`, `verified_via: "youtube_oembed"`, `last_checked`. Drop anything that fails.
 - **Language.** Provide a main video (English or Hindi) and one alternative, ideally in the other language, so Hindi-first learners are served.

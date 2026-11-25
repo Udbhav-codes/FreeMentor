@@ -18,7 +18,7 @@ Two things live here that are easy to get wrong elsewhere:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 import re
 
@@ -32,6 +32,45 @@ PLANS = ("basic", "premium")
 
 # §10.1: Basic -> Premium is its own product, priced at the difference.
 UPGRADE_PRODUCT = "upgrade_basic_to_premium"
+
+
+# §10.1: the free trial is three days.
+TRIAL_DAYS = 3
+
+
+@dataclass(frozen=True)
+class TrialWindow:
+    """The trial as the SERVER sees it, on the server's clock.
+
+    The app keeps its own clock for offline use, but a device can lie about the
+    time. This is the answer that cannot be rewound: the app reconciles to it
+    whenever it can reach us.
+    """
+
+    started_at: datetime
+    ends_at: datetime
+    server_time: datetime
+
+    @property
+    def expired(self) -> bool:
+        return self.server_time >= self.ends_at
+
+
+def trial_window(started_at: datetime, now: datetime | None = None) -> TrialWindow:
+    """The trial window for a goal first started at `started_at`.
+
+    `started_at` is the EARLIEST enrollment the account has ever had for the
+    goal, not the latest, so deleting and re-adding a goal, or reinstalling,
+    cannot restart the clock.
+    """
+    if started_at.tzinfo is None:
+        started_at = started_at.replace(tzinfo=timezone.utc)
+    current = now or datetime.now(timezone.utc)
+    return TrialWindow(
+        started_at=started_at,
+        ends_at=started_at + timedelta(days=TRIAL_DAYS),
+        server_time=current,
+    )
 
 
 def normalise_code(raw: str) -> str:

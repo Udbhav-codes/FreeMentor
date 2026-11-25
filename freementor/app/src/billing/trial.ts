@@ -70,6 +70,46 @@ export function effectiveNow(now: Date, highWaterMark?: string | null): Date {
   return seen.getTime() > now.getTime() ? seen : now;
 }
 
+/** What the server said about this trial, and when this device heard it. */
+export interface ServerTrialView {
+  startedAt: string;
+  serverTime: string;
+  /** The device clock at the moment the answer arrived. */
+  receivedAt: Date;
+}
+
+/**
+ * Brings the device's trial inputs into line with the server.
+ *
+ * Two corrections, both only possible while online:
+ *
+ *  - The start becomes the EARLIER of the device's and the server's, so a
+ *    reinstall or a re-added goal cannot restart the clock.
+ *  - `now` is shifted by how far the device clock was from the server's when
+ *    the answer arrived, so a clock wound back to stretch the trial is read
+ *    as the real time. Offline the shift is remembered as a constant, which
+ *    is why callers also persist the server time into the high-water mark.
+ *
+ * Pure: the same inputs always give the same answer.
+ */
+export function reconcileWithServer(
+  input: TrialInput,
+  server: ServerTrialView | null | undefined,
+): TrialInput {
+  if (!server) return input;
+  const serverStart = new Date(server.startedAt).getTime();
+  const serverNow = new Date(server.serverTime).getTime();
+  if (Number.isNaN(serverStart) || Number.isNaN(serverNow)) return input;
+
+  const localStart = new Date(input.startedAt).getTime();
+  const startedAt =
+    Number.isNaN(localStart) || serverStart < localStart
+      ? new Date(serverStart).toISOString()
+      : input.startedAt;
+  const skewMs = serverNow - server.receivedAt.getTime();
+  return { ...input, startedAt, now: new Date(input.now.getTime() + skewMs) };
+}
+
 export function trialStatus({ startedAt, now, highWaterMark }: TrialInput): TrialStatus {
   const started = new Date(startedAt);
   const current = effectiveNow(now, highWaterMark);

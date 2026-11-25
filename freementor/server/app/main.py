@@ -8,11 +8,13 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy import text
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app import security
 from app.config import get_settings
-from app.db import create_all
+from app.db import create_all, get_session
 from app.routers import (
     account,
     admin,
@@ -64,6 +66,23 @@ app.include_router(media.router)
 app.include_router(progress.router)
 app.include_router(push.router)
 app.include_router(web.router)
+
+
+@app.get("/health/db", tags=["meta"])
+async def health_db(session: AsyncSession = Depends(get_session)) -> dict[str, str]:
+    """Touches the database, which /health does not.
+
+    That is the point. Supabase's free tier pauses a project after about a week
+    with no database activity, and a keep-alive that only hits /health would
+    keep the API warm while the database slept. The scheduled ping calls this
+    one. It returns 503 when the database cannot be reached, so the same URL
+    doubles as an uptime check.
+    """
+    try:
+        await session.execute(text("select 1"))
+    except Exception:
+        raise HTTPException(503, "Database unreachable.") from None
+    return {"status": "ok"}
 
 
 @app.get("/health", tags=["meta"])

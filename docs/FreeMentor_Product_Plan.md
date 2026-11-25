@@ -552,7 +552,7 @@ Recall questions and block definitions live inside the versioned library files (
 
 **Legal documents needed:** Privacy Policy, Terms of Service, Refund policy, Content/copyright policy ("we link, we don't host" + takedown contact), Grievance officer contact (India).
 
-**Content compliance:** links only; YouTube videos never gated; rewards for completing tasks, not for watching videos; durations refreshed ≤ 30 days.
+**Content compliance:** links only; videos open on every plan and in the trial, and only an unpaid learner after the trial meets a rewarded ad first (open item: confirm under YouTube API Services terms); rewards for completing tasks, not for watching videos; durations refreshed ≤ 30 days.
 
 ---
 

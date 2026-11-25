@@ -62,6 +62,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "29fd520e-84e5-46db-854b-4958d1e3d019"
+      }
+    },
+    "owner": "free_mento_expo"
   }
 }

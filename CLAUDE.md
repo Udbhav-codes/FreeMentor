@@ -153,7 +153,14 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       overwrites a photo already on screen. Verified against real Storage:
       ticket, PUT with `?token=`, 403 on another user's path, signed URL serving
       the bytes back, replacement deleting the old object, 204 on delete.
-      **Still to do in M4:** FCM.
+      **Phase 1 (Nov 2026):** parental-consent codes go by **email over SMTP** (free;
+      SMS dropped, production refuses to boot without SMTP); the **trial is
+      server-verified** (`/billing/entitlement` returns the trial on the server's
+      clock, measured from the FIRST enrollment per goal, and the app reconciles to
+      it); a local **24 h trial-ending reminder**; the **10-minute rewarded-ad
+      window** (`ads/cap.ts`); `/health/db`, a GitHub keep-alive and a JSON
+      backup script for the free Supabase tier; deploy steps in `server/DEPLOY.md`.
+      **Still to do in M4:** FCM (real delivery needs the dev build).
 - [~] **M5 in progress** — everything except Google Play itself. Server:
       `/billing/coupons/validate`, `/billing/purchases` (verified, idempotent on
       the Play order id), `/billing/entitlement` (scoped per enrollment).

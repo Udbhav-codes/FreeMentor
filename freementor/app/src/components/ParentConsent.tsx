@@ -15,7 +15,7 @@
  * attempts.
  */
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { TextInput, View } from 'react-native';
+import { TextInput } from 'react-native';
 import { Button, Card, Pill, Txt } from './ui.tsx';
 import {
   CODE_LENGTH,
@@ -51,7 +51,9 @@ export function ParentConsent({
   const [unreachable, setUnreachable] = useState<'not_configured' | 'no_session' | null>(null);
 
   const [contact, setContact] = useState('');
-  const [method, setMethod] = useState<ConsentMethod>('email');
+  // Codes go by email only: SMS needs India's DLT registration, which a free
+  // launch does not have. The server refuses SMS the same way.
+  const method: ConsentMethod = 'email';
   const [code, setCode] = useState('');
   const [demoCode, setDemoCode] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -205,29 +207,15 @@ export function ParentConsent({
     return (
       <Card>
         <Txt variant="caption" color="secondary">
-          HOW SHOULD WE REACH THEM?
+          WHAT IS THEIR EMAIL ADDRESS?
         </Txt>
-        <View
-          style={{ flexDirection: 'row', gap: theme.spacing.sm, marginTop: theme.spacing.sm }}
-        >
-          {(['email', 'sms'] as const).map((m) => (
-            <Button
-              key={m}
-              compact
-              label={m === 'email' ? 'Email' : 'SMS'}
-              variant={method === m ? 'primary' : 'secondary'}
-              onPress={() => setMethod(m)}
-              style={{ flex: 1 }}
-            />
-          ))}
-        </View>
 
         <TextInput
           value={contact}
           onChangeText={setContact}
           autoCapitalize="none"
-          keyboardType={method === 'email' ? 'email-address' : 'phone-pad'}
-          placeholder={method === 'email' ? 'parent@example.com' : '+91 98765 43210'}
+          keyboardType="email-address"
+          placeholder="parent@example.com"
           placeholderTextColor={theme.colors.muted}
           style={field}
         />

@@ -78,3 +78,22 @@ missing `exp://**` for the app.
 the server is testable on its own. Production should use this static site: it
 is free, it has no cold start, and a learner deleting their account should not
 depend on the API being up.
+
+## No domain? Use the free address
+
+You do not need to buy a domain to launch. Cloudflare Pages gives every site a
+free `https://<project>.pages.dev` address with HTTPS. Use it everywhere
+`freementor.app` appears:
+
+1. Deploy `web/dist` to Cloudflare Pages (build command `python web/build.py`,
+   output directory `web/dist`) and note the `pages.dev` address.
+2. Set it for the app builds (this also feeds the sign-in screen's Privacy and
+   Terms links):
+   `npx.cmd eas-cli env:create --name EXPO_PUBLIC_WEB_URL --value https://<project>.pages.dev --visibility plaintext --environment production --environment preview --environment development`
+3. Put `https://<project>.pages.dev/privacy` in the Play Console listing and
+   add `https://<project>.pages.dev/delete-account.html` to Supabase's Redirect
+   URLs.
+4. Fill the `[WEBSITE]` placeholder in `docs/legal/` with the same address.
+
+You can move to a custom domain later; installed apps keep working because the
+`/privacy` alias is part of the build.

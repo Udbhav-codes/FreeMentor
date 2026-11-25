@@ -15,9 +15,20 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { entitlementFor, type Entitlement } from './entitlement.ts';
-import { trialStatus, type TrialStatus } from './trial.ts';
+import {
+  reconcileWithServer,
+  trialStatus,
+  type ServerTrialView,
+  type TrialStatus,
+} from './trial.ts';
 import { trialStartFor } from './trialStart.ts';
 import { fetchEntitlement } from '../api/billing.ts';
+import { loadProfile } from '../db/profile.ts';
+import {
+  cancelTrialEndReminder,
+  scheduleTrialEndReminder,
+} from '../notifications/daily.ts';
+import { planTrialReminder, trialReminderCopy } from '../notifications/trialReminder.ts';
 import { useEnrollment } from '../state/EnrollmentContext.tsx';
 
 const HWM_KEY = 'freementor.trialHighWater';
@@ -47,6 +58,31 @@ async function noteNow(now: Date): Promise<void> {
   }
 }
 
+// The reminder is rescheduled only when its plan actually changes, because
+// this hook runs on every screen that gates and each would otherwise
+// cancel and re-create it.
+let lastReminderKey: string | null = null;
+
+async function syncTrialReminder(
+  endsAt: string | null,
+  purchased: 'basic' | 'premium' | null,
+): Promise<void> {
+  const plan = planTrialReminder({ endsAt, now: new Date(), purchased });
+  const key = plan.kind === 'schedule' ? plan.at.toISOString() : 'cancel';
+  if (key === lastReminderKey) return;
+  lastReminderKey = key;
+  try {
+    if (plan.kind === 'cancel') {
+      await cancelTrialEndReminder();
+      return;
+    }
+    const language = (await loadProfile())?.language ?? 'en';
+    await scheduleTrialEndReminder(plan.at, trialReminderCopy(language));
+  } catch {
+    // A reminder is a convenience; it must never break the screen.
+  }
+}
+
 export interface EntitlementState {
   entitlement: Entitlement;
   /** null when no goal is enrolled yet, so there is no trial running. */
@@ -62,6 +98,9 @@ export function useEntitlement(): EntitlementState {
   const [highWater, setHighWater] = useState<string | null>(cachedHighWater);
   const [startedAt, setStartedAt] = useState<string | null>(null);
   const [purchased, setPurchased] = useState<'basic' | 'premium' | null>(null);
+  // What the server last said about this trial. Null offline or signed out, in
+  // which case the device clock and its high-water mark decide, as before.
+  const [serverTrial, setServerTrial] = useState<ServerTrialView | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -100,14 +139,29 @@ export function useEntitlement(): EntitlementState {
   // unreachable server never revokes a plan somebody paid for.
   const loadPurchase = useCallback(async () => {
     const result = await fetchEntitlement(enrollment?.id ?? null).catch(() => null);
-    if (result) setPurchased(result.plan);
+    if (!result) return;
+    setPurchased(result.plan);
+    if (result.trial) {
+      setServerTrial({
+        startedAt: result.trial.startedAt,
+        serverTime: result.trial.serverTime,
+        receivedAt: new Date(),
+      });
+      // The server's time becomes the floor, so winding the device clock back
+      // later cannot go below what we were just told.
+      const serverNow = new Date(result.trial.serverTime);
+      if (!Number.isNaN(serverNow.getTime())) {
+        await noteNow(serverNow);
+        setHighWater(cachedHighWater);
+      }
+    }
   }, [enrollment?.id]);
 
   useEffect(() => {
     void loadPurchase();
   }, [loadPurchase]);
 
-  return useMemo<EntitlementState>(() => {
+  const state = useMemo<EntitlementState>(() => {
     if (!enrollment) {
       // No goal yet: nothing to gate, and no trial has started. A purchase
       // made before picking a goal still counts.
@@ -118,19 +172,32 @@ export function useEntitlement(): EntitlementState {
         refresh: loadPurchase,
       };
     }
-    const trial = trialStatus({
-      // Until the remembered start has loaded, use the enrollment's own date:
-      // it is never LATER than the remembered one, so the worst case is a
-      // brief over-estimate of time left rather than a wrongly locked app.
-      startedAt: startedAt ?? enrollment.created_at,
-      now: new Date(),
-      highWaterMark: highWater,
-    });
+    const trial = trialStatus(
+      reconcileWithServer(
+        {
+          // Until the remembered start has loaded, use the enrollment's own
+          // date: it is never LATER than the remembered one, so the worst case
+          // is a brief over-estimate of time left rather than a wrongly locked
+          // app.
+          startedAt: startedAt ?? enrollment.created_at,
+          now: new Date(),
+          highWaterMark: highWater,
+        },
+        serverTrial,
+      ),
+    );
     return {
       entitlement: entitlementFor({ trialPhase: trial.phase, purchase: purchased }),
       trial,
       purchased,
       refresh: loadPurchase,
     };
-  }, [enrollment, highWater, startedAt, purchased, loadPurchase]);
+  }, [enrollment, highWater, startedAt, purchased, serverTrial, loadPurchase]);
+
+  const endsAt = state.trial?.endsAt ?? null;
+  useEffect(() => {
+    void syncTrialReminder(endsAt, state.purchased);
+  }, [endsAt, state.purchased]);
+
+  return state;
 }

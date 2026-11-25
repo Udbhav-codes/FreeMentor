@@ -260,3 +260,25 @@ class TestLocalVerifier:
         verifier = play.GooglePlayVerifier('{"type":"service_account"}', "com.freementor.app")
         with pytest.raises(NotImplementedError):
             await verifier.verify(purchase_token="GPA.1", product_id="basic")
+
+
+class TestTrialWindow:
+    """The server's own clock for the 3-day trial (§10.1)."""
+
+    START = datetime(2026, 11, 1, 9, 0, tzinfo=timezone.utc)
+
+    def test_it_runs_three_days_from_the_start(self):
+        window = billing.trial_window(self.START, now=self.START)
+        assert window.ends_at == self.START + timedelta(days=3)
+        assert window.expired is False
+
+    def test_it_expires_exactly_at_the_end_and_not_a_moment_before(self):
+        end = self.START + timedelta(days=3)
+        assert billing.trial_window(self.START, now=end - timedelta(seconds=1)).expired is False
+        assert billing.trial_window(self.START, now=end).expired is True
+
+    def test_a_naive_start_from_sqlite_is_read_as_utc(self):
+        naive = datetime(2026, 11, 1, 9, 0)
+        window = billing.trial_window(naive, now=self.START)
+        assert window.started_at.tzinfo is not None
+        assert window.ends_at == self.START + timedelta(days=3)

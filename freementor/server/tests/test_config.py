@@ -63,6 +63,9 @@ def test_production_with_everything_set_is_fine():
         supabase_url="https://x.supabase.co",
         supabase_jwt_secret="secret",
         otp_echo=False,
+        smtp_host="smtp.example.com",
+        smtp_user="user",
+        smtp_password="pw",
     )
     settings.assert_safe()
     assert not settings.uses_sqlite
@@ -72,3 +75,17 @@ def test_production_with_everything_set_is_fine():
 def test_the_async_driver_is_substituted_for_postgres():
     settings = Settings(database_url="postgresql://user:pw@host/db")
     assert settings.sqlalchemy_url.startswith("postgresql+asyncpg://")
+
+
+def test_production_refuses_to_start_with_no_way_to_deliver_codes():
+    # Without SMTP a parental-consent code reaches nobody, so no 16-17 year
+    # old could ever finish signing up. Better to fail at boot than at launch.
+    settings = Settings(
+        environment="production",
+        database_url="postgresql://user:pw@host/db",
+        supabase_url="https://x.supabase.co",
+        supabase_jwt_secret="secret",
+        otp_echo=False,
+    )
+    with pytest.raises(RuntimeError, match="SMTP"):
+        settings.assert_safe()

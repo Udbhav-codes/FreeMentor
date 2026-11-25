@@ -18,8 +18,11 @@ import { devBypassAllowed } from '../auth/devBypass.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { useT } from '../i18n/LanguageProvider.tsx';
 
-const PRIVACY_URL = 'https://freementor.app/privacy';
-const TERMS_URL = 'https://freementor.app/terms';
+// Where the built legal pages (web/dist) are hosted. Until a domain is bought
+// this is the free Cloudflare Pages address, set in EXPO_PUBLIC_WEB_URL.
+const WEB_URL = (process.env.EXPO_PUBLIC_WEB_URL ?? 'https://freementor.app').replace(/\/$/, '');
+const PRIVACY_URL = `${WEB_URL}/privacy`;
+const TERMS_URL = `${WEB_URL}/terms`;
 
 export default function SignIn() {
   const theme = useTheme();
