@@ -29,10 +29,11 @@ import {
   type Outcome,
 } from '../ads/rewarded.ts';
 import { loadProfile } from '../db/profile.ts';
+import { isExpoGo } from '../notifications/daily.ts';
 
 // One instance for the module. The stub is stateless; the real one will hold
 // a loaded ad, which is exactly the thing worth reusing across taps.
-const ads = getRewardedAds();
+const ads = getRewardedAds(isExpoGo);
 
 export async function openResource(resource: Resource): Promise<void> {
   if (resource.type === 'video') {

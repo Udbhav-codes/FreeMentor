@@ -115,57 +115,147 @@ export class StubRewardedAds implements RewardedAds {
   }
 }
 
+type AdsModule = typeof import('react-native-google-mobile-ads');
+
+/** How long to wait for an ad to load before giving the learner the resource. */
+export const LOAD_TIMEOUT_MS = 12_000;
+
 /**
- * The real implementation.
+ * The real implementation, on react-native-google-mobile-ads.
  *
- * Deliberately not written against a guess at the SDK's API. Wiring it needs:
- *   - an AdMob account, an app id and a rewarded ad unit id
- *   - `react-native-google-mobile-ads` plus `expo-tracking-transparency`
- *   - a development build; it will not run in Expo Go
- *   - the UMP consent flow before the first request, which is a legal
- *     requirement for EU users and good practice everywhere
- * Until all of that exists, constructing this throws rather than silently
- * behaving like the stub — a wrong `adUnitId` in production must be loud.
+ * Before the first request, once per app run:
+ *   - the UMP consent flow (`AdsConsent.gatherConsent`), which shows Google's
+ *     consent form only where the law requires it (EEA/UK) and is a no-op in
+ *     India. If it says ads cannot be requested, the result is 'unavailable'
+ *     and the resource opens, per the rule at the top of this file.
+ *   - the SDK is initialised.
+ *
+ * Per request, the under-18 settings from `requestOptionsFor` are applied both
+ * as the global request configuration (content rating, child-directed and
+ * under-age-of-consent tags) and on the request itself (non-personalised).
+ *
+ * The SDK is loaded lazily: it does not exist in Expo Go or under tests, and a
+ * missing module must mean "no ad", never a crash.
  */
 export class AdMobRewardedAds implements RewardedAds {
   readonly available = true;
+  private ready: Promise<AdsModule | null> | null = null;
 
-  // Not stored yet: the constructor throws before it could be used, and an
-  // unread private field is a type error. It becomes a field when show() is
-  // implemented against the SDK.
-  constructor(adUnitId: string) {
+  constructor(private readonly adUnitId: string) {
     if (!adUnitId) throw new Error('AdMobRewardedAds needs a rewarded ad unit id.');
-    throw new Error(
-      'AdMob is not wired up yet: it needs an AdMob account, ' +
-        'react-native-google-mobile-ads and a development build. ' +
-        'See src/ads/rewarded.ts.',
-    );
   }
 
-  async show(): Promise<Outcome> {
-    throw new Error('unreachable');
+  private prepare(): Promise<AdsModule | null> {
+    if (!this.ready) {
+      this.ready = (async () => {
+        try {
+          const mod = await import('react-native-google-mobile-ads');
+          const consent = await mod.AdsConsent.gatherConsent().catch(() => null);
+          if (consent && consent.canRequestAds === false) return null;
+          await mod.default().initialize();
+          return mod;
+        } catch {
+          return null;
+        }
+      })();
+    }
+    return this.ready;
+  }
+
+  async show(options: RequestOptions): Promise<Outcome> {
+    const mod = await this.prepare();
+    if (!mod) {
+      // Let a later tap try again (network back, consent changed).
+      this.ready = null;
+      return { kind: 'unavailable', reason: 'Ads could not be set up on this device.' };
+    }
+
+    try {
+      await mod.default().setRequestConfiguration({
+        maxAdContentRating:
+          options.maxAdContentRating === 'G'
+            ? mod.MaxAdContentRating.G
+            : options.maxAdContentRating === 'PG'
+              ? mod.MaxAdContentRating.PG
+              : options.maxAdContentRating === 'T'
+                ? mod.MaxAdContentRating.T
+                : mod.MaxAdContentRating.MA,
+        tagForChildDirectedTreatment: options.tagForChildDirectedTreatment,
+        tagForUnderAgeOfConsent: options.nonPersonalized,
+      });
+    } catch {
+      // A failed configuration must not leave a minor on default settings.
+      if (options.nonPersonalized) {
+        return { kind: 'unavailable', reason: 'Ad settings could not be applied.' };
+      }
+    }
+
+    const ad = mod.RewardedAd.createForAdRequest(this.adUnitId, {
+      requestNonPersonalizedAdsOnly: options.nonPersonalized,
+    });
+
+    return new Promise<Outcome>((resolve) => {
+      let earned = false;
+      let settled = false;
+      const unsubscribers: Array<() => void> = [];
+      const finish = (outcome: Outcome) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        unsubscribers.forEach((off) => off());
+        resolve(outcome);
+      };
+      const timer = setTimeout(
+        () => finish({ kind: 'unavailable', reason: 'The ad took too long to load.' }),
+        LOAD_TIMEOUT_MS,
+      );
+
+      unsubscribers.push(
+        ad.addAdEventListener(mod.RewardedAdEventType.LOADED, () => {
+          clearTimeout(timer);
+          ad.show().catch(() =>
+            finish({ kind: 'unavailable', reason: 'The ad could not be shown.' }),
+          );
+        }),
+        ad.addAdEventListener(mod.RewardedAdEventType.EARNED_REWARD, () => {
+          earned = true;
+        }),
+        ad.addAdEventListener(mod.AdEventType.CLOSED, () => {
+          finish(earned ? { kind: 'rewarded' } : { kind: 'dismissed' });
+        }),
+        ad.addAdEventListener(mod.AdEventType.ERROR, () => {
+          finish({ kind: 'unavailable', reason: 'No ad was available right now.' });
+        }),
+      );
+      ad.load();
+    });
   }
 }
+
+/** Google's public test rewarded unit. Safe to load; never pays out. */
+export const TEST_REWARDED_UNIT = 'ca-app-pub-3940256099942544/5224354917';
 
 /**
  * The implementation this build should use.
  *
  * `EXPO_PUBLIC_ADMOB_REWARDED_ID` is a public identifier, not a secret — ad
- * unit ids are visible in any app bundle by design.
+ * unit ids are visible in any app bundle by design. A development build with
+ * no id uses Google's test unit, so the flow can be exercised before the real
+ * AdMob account exists. A release build with no id uses the stub: no ads, and
+ * the resource opens.
  */
-export function getRewardedAds(): RewardedAds {
-  const unitId = process.env.EXPO_PUBLIC_ADMOB_REWARDED_ID;
+export function getRewardedAds(expoGo = false): RewardedAds {
+  // Expo Go has no native ads module. The caller says so (notifications/daily
+  // already knows), which keeps expo-constants out of this testable module.
+  if (expoGo) return new StubRewardedAds();
+  const unitId =
+    process.env.EXPO_PUBLIC_ADMOB_REWARDED_ID || (__DEV__ ? TEST_REWARDED_UNIT : '');
   if (!unitId) return new StubRewardedAds();
   try {
     return new AdMobRewardedAds(unitId);
   } catch (error) {
     // Never throw out of here. This is called at module scope, and a throw
-    // would take the whole bundle down at import — turning "ads are
-    // misconfigured" into "the app does not start", which is a far worse
-    // failure for a learner who only wanted to open a note.
-    //
-    // Still loud: the reason travels in every Outcome, so it reaches the
-    // dialog and the logs rather than passing as a silent free unlock.
+    // would take the whole bundle down at import.
     return new BrokenRewardedAds(
       error instanceof Error ? error.message : 'ad setup failed',
     );

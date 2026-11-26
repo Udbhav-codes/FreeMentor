@@ -46,3 +46,10 @@ export function allPlayProductIds(): string[] {
 export function isDiscountTier(value: number): value is DiscountTier {
   return (DISCOUNT_TIERS as readonly number[]).includes(value);
 }
+
+/**
+ * Coupons are built (validation, server spend, product mapping) but OFF for the
+ * first release: each discount tier needs its own Play product, which is v1.1
+ * work (docs/MASTER_PLAN.md). Flip to true once those products exist.
+ */
+export const COUPONS_ENABLED = false;

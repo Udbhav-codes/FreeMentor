@@ -10,10 +10,27 @@
  *     --value ./google-services.json --visibility sensitive \
  *     --environment production --environment preview --environment development
  */
+// Google's public sample AdMob App ID. The SDK crashes the app at launch if no
+// App ID is set, so a build without the real one still needs this. Replace it
+// by setting EXPO_PUBLIC_ADMOB_APP_ID in EAS once the AdMob account exists.
+const TEST_ADMOB_APP_ID = 'ca-app-pub-3940256099942544~3347511713';
+
 module.exports = ({ config }) => ({
   ...config,
   android: {
     ...config.android,
     googleServicesFile: process.env.GOOGLE_SERVICES_JSON ?? './google-services.json',
   },
+  plugins: [
+    ...(config.plugins ?? []),
+    [
+      'react-native-google-mobile-ads',
+      {
+        androidAppId: process.env.EXPO_PUBLIC_ADMOB_APP_ID || TEST_ADMOB_APP_ID,
+        // Consent (UMP) runs before the first ad request; measurement waits
+        // for it rather than starting at launch.
+        delayAppMeasurementInit: true,
+      },
+    ],
+  ],
 });

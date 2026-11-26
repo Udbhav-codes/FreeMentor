@@ -1,8 +1,9 @@
 /**
  * Plans — product plan §10.1 and screen 7 of the preview.
  *
- * UI ONLY. Google Play Billing, server-side verification and real coupon
- * validation arrive at M5; the buttons say so rather than pretending.
+ * Buying goes through Google Play Billing (billing/playBilling.ts) and is
+ * verified by our server before anything unlocks. Coupons are built but
+ * switched off for v1 (COUPONS_ENABLED).
  *
  * Two rules are visible here and are not negotiable:
  *   - The feature lists must match what `billing/entitlement.ts` actually
@@ -15,12 +16,18 @@
  *     charged before (Indian consumer-protection guidance on dark patterns,
  *     §10.4). They are off by default until you confirm they were real.
  */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Alert, ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, Screen, Txt } from '../components/ui.tsx';
-import { isValidCouponCode, normaliseCouponCode } from '../billing/coupons.ts';
+import {
+  COUPONS_ENABLED,
+  isValidCouponCode,
+  normaliseCouponCode,
+} from '../billing/coupons.ts';
+import { buy, productFor, restorePurchases, type Plan } from '../billing/playBilling.ts';
+import { useEnrollment } from '../state/EnrollmentContext.tsx';
 import {
   FREE_DISCLOSURE,
   PREVIOUS_PRICES,
@@ -85,7 +92,52 @@ export default function Plans() {
   } | null>(null);
   const [couponError, setCouponError] = useState<string | null>(null);
 
-  const { trial, purchased } = useEntitlement();
+  const { trial, purchased, refresh } = useEntitlement();
+  const { enrollment } = useEnrollment();
+  const [busy, setBusy] = useState(false);
+
+  // A purchase whose server call failed last time (no signal, app closed)
+  // is still held by Play. Re-send it quietly whenever Plans opens, so it
+  // is recorded and acknowledged well inside Play's 3-day refund window.
+  useEffect(() => {
+    void restorePurchases(enrollment?.id ?? null).then((plan) => {
+      if (plan) void refresh();
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enrollment?.id]);
+
+  const purchase = async (wanted: Plan) => {
+    const product = productFor(wanted, purchased);
+    if (!product) return;
+    setBusy(true);
+    const result = await buy(product, enrollment?.id ?? null);
+    setBusy(false);
+    if (result.kind === 'bought') {
+      await refresh();
+      Alert.alert('Unlocked', 'Your plan is active for this roadmap, for life.');
+    } else if (result.kind === 'pending') {
+      Alert.alert(
+        'Payment pending',
+        'Google is still confirming your payment. Your plan unlocks as soon as it clears; you do not need to pay again.',
+      );
+    } else if (result.kind === 'failed') {
+      Alert.alert('Purchase not completed', result.message);
+    }
+  };
+
+  const restore = async () => {
+    setBusy(true);
+    const plan = await restorePurchases(enrollment?.id ?? null);
+    if (plan) await refresh();
+    setBusy(false);
+    const holding = plan ?? purchased;
+    Alert.alert(
+      holding ? 'Restored' : 'Nothing to restore',
+      holding
+        ? `Your ${holding} plan is active on this account.`
+        : 'We found no purchase for this Google account. If you paid on another phone, sign in to Play with the same account.',
+    );
+  };
 
   const applyCoupon = async () => {
     const code = normaliseCouponCode(coupon);
@@ -193,6 +245,7 @@ export default function Plans() {
           );
         })}
 
+        {COUPONS_ENABLED ? (
         <Card>
           <Txt variant="caption" color="secondary">
             COUPON CODE
@@ -248,6 +301,7 @@ export default function Plans() {
             </Txt>
           ) : null}
         </Card>
+        ) : null}
 
         <View style={{ gap: theme.spacing.sm }}>
           {purchased ? (
@@ -257,34 +311,24 @@ export default function Plans() {
                 {t('plans.lifetime')}
               </Txt>
             </Card>
-          ) : (
+          ) : null}
+          {productFor(selected, purchased) ? (
             <Button
-              label={`Get ${plan.name} · ${plan.price}`}
-              onPress={() =>
-                Alert.alert(
-                  'Payment is not connected yet',
-                  // Specific about what is missing, rather than "coming
-                  // soon": the server side is done and verified, and it is
-                  // Google Play Billing that needs a Play Console account and
-                  // a development build.
-                  applied
-                    ? `Everything is ready except Google Play itself. Your code ${applied.code} would launch the ${applied.productId} product. Nothing is charged.`
-                    : 'Everything is ready except Google Play itself, which needs a Play Console account. Nothing is charged.',
-                )
+              label={
+                purchased === 'basic' && selected === 'premium'
+                  ? `Upgrade to Premium · ${rupees(PRICES.upgrade)}`
+                  : `Get ${plan.name} · ${plan.price}`
               }
+              loading={busy}
+              disabled={busy}
+              onPress={() => void purchase(selected)}
             />
-          )}
+          ) : null}
           <Button
             label={t('plans.restore')}
             variant="ghost"
-            onPress={() =>
-              Alert.alert(
-                purchased ? 'Already restored' : 'Nothing to restore',
-                purchased
-                  ? `Your ${purchased} plan is active on this account.`
-                  : 'We found no purchase on this account. If you paid on another phone, sign in with the same Google account.',
-              )
-            }
+            disabled={busy}
+            onPress={() => void restore()}
           />
           <Button label={t('common.notNow')} variant="ghost" onPress={() => router.back()} />
         </View>
