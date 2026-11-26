@@ -124,9 +124,9 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       `python -m app.jobs.seed_catalog` · `python -m app.jobs.publish_library`.
       **Parental-consent OTP** (hashed, 10-min expiry, 5-attempt cap, resend limit) and
       **profile photos** (signed upload straight to a private `avatars` bucket) are live
-      and verified against Supabase. Delivery is a console sender until there is an
-      email/SMS subscription; `OTP_ECHO` returns the code for testing and **production
-      refuses to start with it on**.
+      and verified against Supabase. Delivery is **email over SMTP** (Gmail app password;
+      the console sender is local-only); `OTP_ECHO` returns the code for testing and
+      **production refuses to start with it on, or without SMTP**.
       **Google sign-in** is wired (web OAuth flow, works in Expo Go): sign-in screen
       before the age gate, real session token on sync, sign-out in Profile. Needs
       `exp://**` in Supabase Redirect URLs to complete in Expo Go, and still needs
@@ -210,10 +210,10 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   must: the `__DEV__` cards (sign-in bypass, trial-clock reset) and the fatal
   "could not start" screen, which renders before `LanguageProvider` mounts and
   so cannot use the hook.
-- **No Devanagari font is bundled.** Inter and DM Sans have no Devanagari
-  glyphs, so Hindi falls back to Android's system Noto and renders in a
-  different typeface from the rest of the UI. It is legible, not consistent.
-  Hinglish avoids the problem entirely, which is part of why it exists.
+- **Devanagari fonts are bundled** (Noto Sans Devanagari, 4 weights; see
+  `theme/devanagari.ts`). `Txt` reads the language through
+  `useLanguageOrDefault()`, so it is safe on screens drawn before
+  `LanguageProvider` mounts (the opening animation, the fatal screen).
 
 ### Public web pages (no server needed)
 `web/` builds a **static site** from `docs/legal/*.md` — the four policies plus
@@ -318,6 +318,8 @@ Profile says so. Remove `exp://**` before the production launch.
   shipped as bugs. `tests/test_schema_matches_migration.py` now compares the models'
   compiled Postgres DDL against the migration SQL by type family, with no database
   needed — add a model column and it is checked automatically.
-- Every video in the library still has `duration_seconds: null`, so the scheduler uses
-  `est_minutes`. `tools/check_links.py` must run before store launch or every shown
-  video time is a planning estimate rather than the +15% rule.
+- All 1,172 videos have real `duration_seconds` (filled by `tools/check_links.py`),
+  so shown video times follow the +15% rule. Re-run the checker monthly.
+- **The plan to launch is `docs/MASTER_PLAN.md`** (Nov 2026); it supersedes
+  `LAUNCH_CHECKLIST.md`. CI runs app tests, the library validator and server
+  tests on every push (`.github/workflows/ci.yml`).

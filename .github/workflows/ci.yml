@@ -1,0 +1,50 @@
+name: CI
+
+# Runs on every push and pull request: the app's type check and tests, the
+# library validator, and the server tests. Free on GitHub for this size of
+# project. A red run means something broke; do not ship a build from it.
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: freementor
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: freementor/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: Validate the library (schema, catalog, block ids)
+        run: npm run validate:library
+      - name: Type check
+        run: npm run typecheck -w app
+      - name: Tests
+        run: npm test -w app
+
+  server:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: freementor/server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: freementor/server/pyproject.toml
+      - run: pip install -e ".[dev]"
+      - name: Tests
+        run: python -m pytest -q
