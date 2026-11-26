@@ -26,7 +26,7 @@ Never in the image, never in git. Create each from a prompt so the value does
 not land in your shell history:
 
 ```powershell
-$secrets = "DATABASE_URL","SUPABASE_JWT_SECRET","SUPABASE_SERVICE_KEY","SMTP_PASSWORD","FIREBASE_SERVICE_ACCOUNT_JSON"
+$secrets = "DATABASE_URL","SUPABASE_JWT_SECRET","SUPABASE_SERVICE_KEY","SMTP_PASSWORD","FIREBASE_SERVICE_ACCOUNT_JSON","GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
 foreach ($s in $secrets) {
   $v = Read-Host -Prompt "Value for $s" -AsSecureString
   $plain = [System.Net.NetworkCredential]::new("", $v).Password
@@ -41,6 +41,7 @@ foreach ($s in $secrets) {
 | `SUPABASE_SERVICE_KEY` | Supabase -> Project settings -> API -> service_role key |
 | `SMTP_PASSWORD` | A Gmail **app password** (Google account -> Security -> 2-Step Verification -> App passwords) or your Brevo SMTP key |
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Firebase -> Project settings -> Service accounts -> Generate new private key; paste the whole JSON |
+| `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | The key of the service account you invite in Play Console -> Users and permissions (with "View financial data" and "Manage orders"). Until it exists, purchases return 503 and everything else works. |
 
 Let Cloud Run read them:
 
@@ -89,7 +90,7 @@ gcloud run deploy freementor-api `
   --min-instances 0 --max-instances 2 `
   --memory 512Mi --cpu 1 `
   --env-vars-file freementor/server/cloudrun.env.yaml `
-  --set-secrets "DATABASE_URL=DATABASE_URL:latest,SUPABASE_JWT_SECRET=SUPABASE_JWT_SECRET:latest,SUPABASE_SERVICE_KEY=SUPABASE_SERVICE_KEY:latest,SMTP_PASSWORD=SMTP_PASSWORD:latest,FIREBASE_SERVICE_ACCOUNT_JSON=FIREBASE_SERVICE_ACCOUNT_JSON:latest"
+  --set-secrets "DATABASE_URL=DATABASE_URL:latest,SUPABASE_JWT_SECRET=SUPABASE_JWT_SECRET:latest,SUPABASE_SERVICE_KEY=SUPABASE_SERVICE_KEY:latest,SMTP_PASSWORD=SMTP_PASSWORD:latest,FIREBASE_SERVICE_ACCOUNT_JSON=FIREBASE_SERVICE_ACCOUNT_JSON:latest,GOOGLE_PLAY_SERVICE_ACCOUNT_JSON=GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:latest"
 ```
 
 The server **refuses to start** in production if a required secret or SMTP

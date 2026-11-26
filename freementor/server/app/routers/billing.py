@@ -16,6 +16,8 @@ product the server named.
 
 from __future__ import annotations
 
+import logging
+
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -30,6 +32,8 @@ from app.auth import current_user
 from app.config import Settings, get_settings
 from app.db import get_session
 from app.models import Coupon, Enrollment, Purchase, User
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/billing", tags=["billing"])
 
@@ -242,9 +246,14 @@ async def record_purchase(
 
     # §10.4: acknowledge within 3 days or Play refunds it. Done after the row
     # is committed, so a crash here leaves a purchase we know about.
-    await verifier.acknowledge(
-        purchase_token=payload.purchase_token, product_id=payload.product_id
-    )
+    # A failure here must not undo a purchase that is already recorded: the
+    # app acknowledges on the device as well, so one of the two will land.
+    try:
+        await verifier.acknowledge(
+            purchase_token=payload.purchase_token, product_id=payload.product_id
+        )
+    except Exception:
+        logger.warning("Play acknowledge failed; the app's own acknowledgement covers it")
 
     return await _entitlement_out(session, user, enrollment_id)
 

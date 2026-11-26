@@ -255,11 +255,12 @@ class TestLocalVerifier:
         assert isinstance(play.get_verifier(WithCreds()), play.GooglePlayVerifier)
 
     @pytest.mark.asyncio
-    async def test_the_real_verifier_refuses_to_pretend(self) -> None:
-        # A stub that returned ok=True would be the worst bug in this file.
+    async def test_a_broken_key_refuses_rather_than_pretends(self) -> None:
+        # A verifier that returned ok=True on bad credentials would be the
+        # worst bug in this file.
         verifier = play.GooglePlayVerifier('{"type":"service_account"}', "com.freementor.app")
-        with pytest.raises(NotImplementedError):
-            await verifier.verify(purchase_token="GPA.1", product_id="basic")
+        result = await verifier.verify(purchase_token="GPA.1", product_id="basic")
+        assert not result.ok
 
 
 class TestTrialWindow:
