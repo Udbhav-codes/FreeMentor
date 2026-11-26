@@ -89,7 +89,11 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <ThemeProvider>
           <StatusBar style="light" />
-          <OpeningAnimation firstLaunch={firstLaunch} onDone={() => setIntroDone(true)} />
+          {/* The intro draws Txt, which reads the language; without the provider
+              it throws "useLanguage must be used inside <LanguageProvider>". */}
+          <LanguageProvider>
+            <OpeningAnimation firstLaunch={firstLaunch} onDone={() => setIntroDone(true)} />
+          </LanguageProvider>
         </ThemeProvider>
       </SafeAreaProvider>
     );

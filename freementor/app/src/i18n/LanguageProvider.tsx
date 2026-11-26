@@ -72,6 +72,19 @@ export function useLanguage(): LanguageState {
   return ctx;
 }
 
+/**
+ * The language, or English when no provider is mounted.
+ *
+ * For shared building blocks like `Txt` that can appear on screens drawn
+ * before the provider exists (the opening animation, the fatal screen). Those
+ * screens must not crash over a font choice; English is a safe default there.
+ * Screens that translate text keep using `useT()`, which still insists on the
+ * provider so a missing one is caught rather than silently untranslated.
+ */
+export function useLanguageOrDefault(): Language {
+  return useContext(Ctx)?.language ?? 'en';
+}
+
 /** The common case: `const t = useT()`. */
 export function useT(): (key: StringKey, params?: Params) => string {
   return useLanguage().t;

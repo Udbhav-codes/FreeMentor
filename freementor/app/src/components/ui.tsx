@@ -22,7 +22,7 @@ import {
 } from 'react-native';
 import { BUTTON_HEIGHT, CHECKBOX_SIZE, MIN_TOUCH_TARGET } from '../theme/tokens.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
-import { useLanguage } from '../i18n/LanguageProvider.tsx';
+import { useLanguageOrDefault } from '../i18n/LanguageProvider.tsx';
 import { devanagariType } from '../theme/devanagari.ts';
 
 type TextVariant = keyof ReturnType<typeof useTheme>['typography'];
@@ -41,7 +41,7 @@ export function Txt({
   numberOfLines?: number;
 }) {
   const theme = useTheme();
-  const { language } = useLanguage();
+  const language = useLanguageOrDefault();
   const colors = {
     text: theme.colors.text,
     secondary: theme.colors.textSecondary,

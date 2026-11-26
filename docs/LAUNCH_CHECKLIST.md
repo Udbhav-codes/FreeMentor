@@ -1,3 +1,5 @@
+> **Superseded by `docs/MASTER_PLAN.md` (25 Nov 2026).** Kept for history.
+
 # Launch checklist: first Play Store release
 
 Decisions so far: launch ASAP, India first, all 12 full goals (the other 61 show

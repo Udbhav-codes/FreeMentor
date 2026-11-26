@@ -188,7 +188,7 @@ Under the DPDP Act you may:
 - **Complain** — to us first, then to the Data Protection Board of India
 
 **To delete your account:** Profile → Account → Delete my account, or visit
-**[WEBSITE]/delete-account** if you no longer have the app installed. You do
+**https://freementor.freementorteam.workers.dev/delete-account** if you no longer have the app installed. You do
 not need the app to delete your data.
 
 **To export your data:** Profile → Account → Export my progress.

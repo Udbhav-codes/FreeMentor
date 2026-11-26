@@ -226,10 +226,10 @@ rights holder may request removal.
 ## 10. Privacy
 
 Your personal data is handled in accordance with our **Privacy Policy**, which
-forms part of these Terms and is published at **[WEBSITE]/privacy-policy**. By
+forms part of these Terms and is published at **https://freementor.freementorteam.workers.dev/privacy-policy**. By
 using the Service you consent to that processing. You may withdraw consent and
 delete your account at any time, in the app or at
-**[WEBSITE]/delete-account.html**.
+**https://freementor.freementorteam.workers.dev/delete-account.html**.
 
 ---
 
@@ -298,7 +298,7 @@ your misuse of the Service, or your violation of any law or third-party right.
 ## 15. Termination
 
 15.1 You may stop using the Service at any time and delete your account from
-the app or at **[WEBSITE]/delete-account.html**.
+the app or at **https://freementor.freementorteam.workers.dev/delete-account.html**.
 
 15.2 We may suspend or terminate your access with notice where you breach
 these Terms, and without notice where required by law or where your use poses
