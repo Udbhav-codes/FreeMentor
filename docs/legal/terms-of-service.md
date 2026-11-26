@@ -335,7 +335,7 @@ appropriate Consumer Disputes Redressal Commission.
 17.1 These Terms are governed by and construed in accordance with the laws of
 India.
 
-17.2 Subject to clause 17.3, the courts at **[CITY], India** have exclusive
+17.2 Subject to clause 17.3, the courts at **Pratapgarh, Uttar Pradesh, India** have exclusive
 jurisdiction. Nothing in this clause removes your statutory right as a
 consumer to bring proceedings where you reside or work.
 
@@ -343,7 +343,7 @@ consumer to bring proceedings where you reside or work.
 attempt in good faith to resolve any dispute through our Grievance Officer for
 thirty (30) days. Any dispute not so resolved may be referred to arbitration
 by a sole arbitrator under the Arbitration and Conciliation Act, 1996, seated
-at [CITY], conducted in English. This clause does not prevent either party
+at Pratapgarh, Uttar Pradesh, conducted in English. This clause does not prevent either party
 from seeking urgent interim relief from a court, and does not apply to a
 consumer complaint you choose to bring under clause 16.3.
 
