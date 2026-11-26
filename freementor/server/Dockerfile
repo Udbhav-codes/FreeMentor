@@ -70,4 +70,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
 # proxy's address and one noisy client would rate-limit everybody. Set it to
 # the proxy's address; "*" is only safe when nothing but the proxy can reach
 # this container.
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --forwarded-allow-ips ${FORWARDED_ALLOW_IPS:-127.0.0.1}"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --forwarded-allow-ips \"${FORWARDED_ALLOW_IPS:-127.0.0.1}\""]

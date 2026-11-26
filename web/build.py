@@ -199,7 +199,7 @@ def main() -> None:
     shutil.copy(DIST / "privacy-policy.html", DIST / "privacy.html")
     print("  privacy.html             -> alias for the app's link")
 
-    for name in ("delete-account.html", "index.html", "style.css", "_headers"):
+    for name in ("delete-account.html", "index.html", "style.css", "_headers", "app-ads.txt"):
         source = ROOT / "src" / name
         if source.is_file():
             shutil.copy(source, DIST / name)

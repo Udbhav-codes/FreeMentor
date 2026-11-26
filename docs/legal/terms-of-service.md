@@ -1,11 +1,10 @@
 # FreeMentor — Terms and Conditions
 
-**Effective date:** [EFFECTIVE DATE]
-**Last updated:** [EFFECTIVE DATE]
+**Effective date:** 26 November 2026
+**Last updated:** 26 November 2026
 
 These Terms and Conditions ("Terms") form a legally binding agreement between
-you and **[LEGAL ENTITY NAME]**, a [sole proprietorship / private limited
-company] registered in India at [REGISTERED ADDRESS] ("FreeMentor", "we",
+you and **Udbhav Singh**, an individual based in India ("FreeMentor", "we",
 "us", "our").
 
 By downloading, installing, accessing or using the FreeMentor mobile
@@ -92,7 +91,7 @@ security of that account.
 4.2 One account is for one person. You may not share, transfer, sell or
 sublicense your account or your access.
 
-4.3 Notify us at **[SUPPORT EMAIL]** immediately if you suspect unauthorised
+4.3 Notify us at **freementorteam@gmail.com** immediately if you suspect unauthorised
 use. We are not liable for loss arising before you tell us.
 
 ---
@@ -208,7 +207,7 @@ breach is fraudulent or unlawful, no refund is due.
 ## 9. Intellectual property
 
 9.1 The Service, the Roadmaps, the scheduling logic, the software, the design
-and all related intellectual property are owned by **[LEGAL ENTITY NAME]** and
+and all related intellectual property are owned by **Udbhav Singh** and
 protected by the Copyright Act, 1957 and the Trade Marks Act, 1999.
 
 9.2 We grant you a **limited, personal, non-exclusive, non-transferable,
@@ -288,8 +287,7 @@ were advised of the possibility of such loss.
 
 ## 14. Indemnity
 
-You agree to indemnify and hold harmless [LEGAL ENTITY NAME], its directors,
-employees and agents against any claim, demand, loss, liability or expense
+You agree to indemnify and hold harmless Udbhav Singh and their agents against any claim, demand, loss, liability or expense
 (including reasonable legal fees) arising from your breach of these Terms,
 your misuse of the Service, or your violation of any law or third-party right.
 
@@ -318,10 +316,10 @@ Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules,
 2021, and the Consumer Protection (E-Commerce) Rules, 2020, our Grievance
 Officer is:
 
-> **[GRIEVANCE OFFICER NAME]**
-> Grievance Officer, [LEGAL ENTITY NAME]
-> [REGISTERED ADDRESS]
-> Email: **[GRIEVANCE EMAIL]**
+> **Udbhav Singh**
+> Grievance Officer, Udbhav Singh
+> India
+> Email: **freementorteam@gmail.com**
 
 16.2 We will **acknowledge** any complaint within **twenty-four (24) hours**
 and **resolve** it within **fifteen (15) days** of receipt.
@@ -381,9 +379,9 @@ convenience; the English version governs.
 
 ## 19. Contact
 
-**[LEGAL ENTITY NAME]**
-[REGISTERED ADDRESS]
-Support: **[SUPPORT EMAIL]** · Grievances: **[GRIEVANCE EMAIL]**
+**Udbhav Singh**
+India
+Support: **freementorteam@gmail.com** · Grievances: **freementorteam@gmail.com**
 
 ---
 

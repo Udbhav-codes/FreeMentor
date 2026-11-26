@@ -1,6 +1,6 @@
 # FreeMentor — Refund Policy
 
-**Effective date:** [EFFECTIVE DATE]
+**Effective date:** 26 November 2026
 
 How refunds work, in plain terms. This policy sits alongside Google Play's own
 refund rules and your rights under the **Consumer Protection Act, 2019** —
@@ -36,7 +36,7 @@ Or use **[play.google.com/store/account/orderhistory](https://play.google.com/st
 
 ### After 48 hours
 
-Google's automatic window has closed, but write to us at **[SUPPORT EMAIL]**
+Google's automatic window has closed, but write to us at **freementorteam@gmail.com**
 with your order ID and what went wrong. We can ask Google to refund you and we
 will where section 3 applies.
 
@@ -107,9 +107,9 @@ depending on its terms.
 
 Contact our Grievance Officer:
 
-**[GRIEVANCE OFFICER NAME]**
-**[GRIEVANCE EMAIL]**
-[REGISTERED ADDRESS]
+**Udbhav Singh**
+**freementorteam@gmail.com**
+India
 
 You may also contact the **National Consumer Helpline on 1915**, use the
 **[consumerhelpline.gov.in](https://consumerhelpline.gov.in)** portal, or
@@ -119,6 +119,6 @@ approach a consumer forum. We will cooperate with any such process.
 
 ## 9. Contact
 
-**[LEGAL ENTITY NAME]**
-Refunds and billing: **[SUPPORT EMAIL]**
-Grievances: **[GRIEVANCE EMAIL]**
+**Udbhav Singh**
+Refunds and billing: **freementorteam@gmail.com**
+Grievances: **freementorteam@gmail.com**

@@ -1,13 +1,13 @@
 # FreeMentor — Privacy Policy
 
-**Effective date:** [EFFECTIVE DATE]
-**Last updated:** [EFFECTIVE DATE]
+**Effective date:** 26 November 2026
+**Last updated:** 26 November 2026
 
 This policy explains what FreeMentor collects, why, how long we keep it and
 what you can do about it. It is written to meet the **Digital Personal Data
 Protection Act, 2023 (DPDP Act)** and the Information Technology Act, 2000.
 
-FreeMentor is operated by **[LEGAL ENTITY NAME]**, [REGISTERED ADDRESS]
+FreeMentor is operated by **Udbhav Singh**, India
 ("we", "us"). Under the DPDP Act we are the **Data Fiduciary** for your
 personal data and you are the **Data Principal**.
 
@@ -199,9 +199,9 @@ We answer requests within **30 days**.
 
 As Indian law requires, you can reach our Grievance Officer at:
 
-**[GRIEVANCE OFFICER NAME]**
-Email: **[GRIEVANCE EMAIL]**
-Address: [REGISTERED ADDRESS]
+**Udbhav Singh**
+Email: **freementorteam@gmail.com**
+Address: India
 
 We acknowledge complaints within **24 hours** and resolve them within
 **15 days**.
@@ -229,7 +229,7 @@ you and the Data Protection Board as the DPDP Act requires.
 
 FreeMentor is not for anyone under 16 and we do not knowingly collect their
 data. If you believe a child under 16 has given us data, write to
-**[GRIEVANCE EMAIL]** and we will delete it.
+**freementorteam@gmail.com** and we will delete it.
 
 ---
 
@@ -242,6 +242,6 @@ significant, tell you in the app before it takes effect.
 
 ## 13. Contact
 
-**[LEGAL ENTITY NAME]**
-[REGISTERED ADDRESS]
-General: **[SUPPORT EMAIL]** · Privacy and grievances: **[GRIEVANCE EMAIL]**
+**Udbhav Singh**
+India
+General: **freementorteam@gmail.com** · Privacy and grievances: **freementorteam@gmail.com**

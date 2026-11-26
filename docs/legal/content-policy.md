@@ -1,6 +1,6 @@
 # FreeMentor — Content & Copyright Policy
 
-**Effective date:** [EFFECTIVE DATE]
+**Effective date:** 26 November 2026
 
 How we choose what to link to, what we do and do not do with other people's
 work, and how to ask us to remove something.
@@ -79,7 +79,7 @@ YouTube directly — nothing we do removes or restricts that.
 If you own content we link to and want the link gone, we will remove it. You
 do not need to send a formal legal notice — an email is enough.
 
-**Email [GRIEVANCE EMAIL] with:**
+**Email freementorteam@gmail.com with:**
 
 - the URL we link to
 - your name and your relationship to the content
@@ -93,9 +93,9 @@ argue with you about it — it is your work.
 If you prefer a formal takedown under the Information Technology Act, 2000 and
 the IT Rules, 2021, send it to our Grievance Officer:
 
-**[GRIEVANCE OFFICER NAME]**
-**[GRIEVANCE EMAIL]**
-[REGISTERED ADDRESS]
+**Udbhav Singh**
+**freementorteam@gmail.com**
+India
 
 We acknowledge within **24 hours** and act within **15 days**, as the Rules
 require. Please include the information above plus a statement that you
@@ -114,7 +114,7 @@ NTA, CBSE, any university, any examination authority, or any company whose
 technology we link to. All trademarks belong to their owners.
 
 If you represent such a body and object to how we use your name, write to
-**[GRIEVANCE EMAIL]** and we will change it.
+**freementorteam@gmail.com** and we will change it.
 
 ---
 
@@ -135,21 +135,21 @@ body**. If you spot something out of date, tell us.
 In the app, any resource can be reported as broken or wrong. We check reports
 and either replace the link or remove it.
 
-You can also email **[SUPPORT EMAIL]**.
+You can also email **freementorteam@gmail.com**.
 
 ---
 
 ## 9. Our own content
 
 The roadmaps, the sequencing, the scheduling logic, the app and its design are
-**© [LEGAL ENTITY NAME]**. You may use them for your own learning. You may not
+**© Udbhav Singh**. You may use them for your own learning. You may not
 copy, redistribute, resell or bulk-extract them.
 
 ---
 
 ## 10. Contact
 
-**[LEGAL ENTITY NAME]**
-[REGISTERED ADDRESS]
-Content and takedowns: **[GRIEVANCE EMAIL]**
-General: **[SUPPORT EMAIL]**
+**Udbhav Singh**
+India
+Content and takedowns: **freementorteam@gmail.com**
+General: **freementorteam@gmail.com**
