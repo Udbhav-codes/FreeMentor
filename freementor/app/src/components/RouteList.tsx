@@ -21,6 +21,7 @@ import { useT } from '../i18n/LanguageProvider.tsx';
 import type { PlannedDay } from '../scheduler/index.ts';
 import type { RouteWeek } from '../progress/routeWeeks.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
+import { shortDate } from '../scheduler/dates.ts';
 
 export { groupIntoWeeks, type RouteWeek } from '../progress/routeWeeks.ts';
 
@@ -157,7 +158,7 @@ export function WeekCard({
           })}
         >
           <View style={{ flex: 1 }}>
-            <Txt variant="bodyStrong">{t('route.weekOf', { date: week.startDate })}</Txt>
+            <Txt variant="bodyStrong">{t('route.weekOf', { date: shortDate(week.startDate) })}</Txt>
             <Txt variant="caption" color="secondary" numberOfLines={1}>
               {week.label}
             </Txt>
@@ -243,7 +244,7 @@ function DayRow({
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={`${day.date}, ${title}`}
+      accessibilityLabel={`${shortDate(day.date)}, ${title}`}
       onPress={onPress}
       style={({ pressed }) => ({
         minHeight: MIN_TOUCH_TARGET,
@@ -269,7 +270,7 @@ function DayRow({
         numberOfLines={1}
         style={{ flex: 1 }}
       >
-        {day.date.slice(5)} · {title}
+        {shortDate(day.date)} · {title}
       </Txt>
       <Txt variant="caption" color="secondary">
         {day.plannedMinutes} m

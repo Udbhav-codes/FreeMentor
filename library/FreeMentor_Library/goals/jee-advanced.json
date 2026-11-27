@@ -6,7 +6,7 @@
   "category": "Entrance Exams",
   "group": "Engineering",
   "type": "exam",
-  "version": "2027.5",
+  "version": "2027.6",
   "valid_for": "JEE Advanced preparation for 2027 using the official 2026 syllabus as the confirmed baseline; recheck when the 2027 syllabus is published.",
   "last_updated": "2026-10-07",
   "official_url": "https://jeeadv.ac.in/",
@@ -36,7 +36,7 @@
   "verification_note": "Schema and structural checks performed locally. Browser research confirmed syllabus, archive and chapter-bank pages. A complete live check, YouTube API metadata and human subject review remain pending; unverified does not mean broken.",
   "prerequisite_note": "Shared foundations are embedded from the existing JEE Main file for standalone use. Existing courses are unchanged. The full Main course is not an extra mandatory dependency.",
   "exam_note": "Both papers are mandatory under the 2026 baseline. Do not hardcode a universal question count or marking scheme. AAT is a separate exam and is outside this goal.",
-  "last_link_check": "2026-10-17"
+  "last_link_check": "2026-11-27"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -273,7 +273,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -286,7 +286,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -299,7 +299,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -319,7 +319,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -347,7 +347,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -438,7 +438,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -451,7 +451,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -464,7 +464,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -484,7 +484,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -512,7 +512,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -603,7 +603,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -616,7 +616,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -629,7 +629,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -641,7 +641,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -656,12 +656,12 @@
       {
        "type": "practice",
        "title": "JEE Advanced PYQs: Motion In A Plane",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion-in-a-plane",
+       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -684,12 +684,12 @@
       {
        "type": "test",
        "title": "JEE Advanced PYQs: Motion In A Plane",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion-in-a-plane",
+       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -780,7 +780,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -793,7 +793,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -806,7 +806,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -818,7 +818,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -838,7 +838,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -866,7 +866,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -957,7 +957,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -970,7 +970,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -983,7 +983,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -995,7 +995,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -1015,7 +1015,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1043,7 +1043,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1134,7 +1134,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1147,7 +1147,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1160,7 +1160,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -1172,7 +1172,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -1192,7 +1192,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1220,7 +1220,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1311,7 +1311,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1324,7 +1324,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1337,7 +1337,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -1357,7 +1357,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1385,7 +1385,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1476,7 +1476,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1489,7 +1489,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1502,7 +1502,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -1522,7 +1522,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1550,7 +1550,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1641,7 +1641,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1654,7 +1654,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1667,7 +1667,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -1679,7 +1679,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -1699,7 +1699,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1727,7 +1727,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1818,7 +1818,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1831,7 +1831,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1844,7 +1844,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1857,7 +1857,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1870,7 +1870,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1883,7 +1883,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -1896,7 +1896,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research."
       }
@@ -1916,7 +1916,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1944,7 +1944,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2035,7 +2035,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2048,7 +2048,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2061,7 +2061,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       },
@@ -2073,7 +2073,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -2093,7 +2093,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2121,7 +2121,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2212,7 +2212,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2225,7 +2225,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2238,7 +2238,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -2258,7 +2258,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2286,7 +2286,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2377,7 +2377,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2390,7 +2390,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2403,7 +2403,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       },
@@ -2415,7 +2415,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -2435,7 +2435,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2463,7 +2463,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2554,7 +2554,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2567,7 +2567,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2580,7 +2580,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -2600,7 +2600,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2628,7 +2628,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2719,7 +2719,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2732,7 +2732,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2745,7 +2745,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -2765,7 +2765,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2793,7 +2793,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2884,7 +2884,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2897,7 +2897,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2910,7 +2910,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2923,7 +2923,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -2936,7 +2936,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -2951,12 +2951,12 @@
       {
        "type": "practice",
        "title": "JEE Advanced PYQs: Motion In A Plane",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion-in-a-plane",
+       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2979,12 +2979,12 @@
       {
        "type": "test",
        "title": "JEE Advanced PYQs: Motion In A Plane",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion-in-a-plane",
+       "url": "https://questions.examside.com/past-years/jee/jee-advanced/physics/motion",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3075,7 +3075,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3088,7 +3088,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3101,7 +3101,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -3121,7 +3121,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3149,7 +3149,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3240,7 +3240,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3253,7 +3253,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3266,7 +3266,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -3278,7 +3278,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -3298,7 +3298,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3326,7 +3326,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3417,7 +3417,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3430,7 +3430,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3443,7 +3443,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -3463,7 +3463,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3491,7 +3491,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3582,7 +3582,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3595,7 +3595,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3608,7 +3608,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3621,7 +3621,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3634,7 +3634,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -3646,7 +3646,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -3666,7 +3666,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3694,7 +3694,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3785,7 +3785,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3798,7 +3798,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3811,7 +3811,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -3831,7 +3831,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3859,7 +3859,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3950,7 +3950,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3963,7 +3963,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -3976,7 +3976,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -3988,7 +3988,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4008,7 +4008,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4036,7 +4036,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4127,7 +4127,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4140,7 +4140,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4153,7 +4153,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4173,7 +4173,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4201,7 +4201,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4292,7 +4292,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4305,7 +4305,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4318,7 +4318,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4338,7 +4338,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4366,7 +4366,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4457,7 +4457,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4470,7 +4470,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4483,7 +4483,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -4495,7 +4495,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4515,7 +4515,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4543,7 +4543,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4634,7 +4634,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4647,7 +4647,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4660,7 +4660,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -4672,7 +4672,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4692,7 +4692,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4720,7 +4720,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4811,7 +4811,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4824,7 +4824,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4837,7 +4837,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -4857,7 +4857,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4885,7 +4885,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4976,7 +4976,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -4989,7 +4989,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5002,7 +5002,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -5014,7 +5014,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -5034,7 +5034,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5062,7 +5062,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5153,7 +5153,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5166,7 +5166,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5179,7 +5179,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -5199,7 +5199,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5227,7 +5227,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5318,7 +5318,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5331,7 +5331,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5344,7 +5344,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -5356,7 +5356,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -5376,7 +5376,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5404,7 +5404,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5495,7 +5495,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5508,7 +5508,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5521,7 +5521,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -5533,7 +5533,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -5545,7 +5545,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -5557,7 +5557,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -5577,7 +5577,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5605,7 +5605,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5696,7 +5696,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5709,7 +5709,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5722,7 +5722,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -5742,7 +5742,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5770,7 +5770,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5861,7 +5861,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5874,7 +5874,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -5887,7 +5887,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -5907,7 +5907,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -5935,7 +5935,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6026,7 +6026,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6039,7 +6039,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6052,7 +6052,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -6072,7 +6072,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6100,7 +6100,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6191,7 +6191,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6204,7 +6204,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6217,7 +6217,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -6237,7 +6237,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6249,7 +6249,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6261,7 +6261,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6289,7 +6289,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6301,7 +6301,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6313,7 +6313,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6404,7 +6404,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6417,7 +6417,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6430,7 +6430,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -6450,7 +6450,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6478,7 +6478,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6569,7 +6569,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6582,7 +6582,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6595,7 +6595,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6608,7 +6608,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6621,7 +6621,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -6633,7 +6633,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -6653,7 +6653,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6665,7 +6665,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6693,7 +6693,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6705,7 +6705,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6796,7 +6796,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6809,7 +6809,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6822,7 +6822,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -6834,7 +6834,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -6854,7 +6854,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6882,7 +6882,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -6973,7 +6973,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6986,7 +6986,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -6999,7 +6999,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -7011,7 +7011,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7031,7 +7031,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7059,7 +7059,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7150,7 +7150,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7163,7 +7163,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7176,7 +7176,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -7188,7 +7188,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7208,7 +7208,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7236,7 +7236,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7327,7 +7327,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7340,7 +7340,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7353,7 +7353,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -7365,7 +7365,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7385,7 +7385,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7413,7 +7413,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7504,7 +7504,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7517,7 +7517,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7530,7 +7530,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -7542,7 +7542,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7562,7 +7562,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7590,7 +7590,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7681,7 +7681,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7694,7 +7694,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7707,7 +7707,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7727,7 +7727,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7755,7 +7755,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7846,7 +7846,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7859,7 +7859,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -7872,7 +7872,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -7892,7 +7892,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -7920,7 +7920,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8011,7 +8011,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8024,7 +8024,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8037,7 +8037,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -8057,7 +8057,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8085,7 +8085,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8176,7 +8176,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8189,7 +8189,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8202,7 +8202,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -8222,7 +8222,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8250,7 +8250,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8341,7 +8341,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8354,7 +8354,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8367,7 +8367,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -8387,7 +8387,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8415,7 +8415,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8506,7 +8506,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8519,7 +8519,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8532,7 +8532,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -8552,7 +8552,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8580,7 +8580,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8671,7 +8671,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8684,7 +8684,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8697,7 +8697,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -8717,7 +8717,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8745,7 +8745,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8836,7 +8836,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8849,7 +8849,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -8862,7 +8862,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -8874,7 +8874,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -8894,7 +8894,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -8922,7 +8922,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9013,7 +9013,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9026,7 +9026,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9039,7 +9039,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -9051,7 +9051,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -9071,7 +9071,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9099,7 +9099,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9190,7 +9190,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9203,7 +9203,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9216,7 +9216,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9229,7 +9229,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9242,7 +9242,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -9262,7 +9262,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9290,7 +9290,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9381,7 +9381,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9394,7 +9394,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9407,7 +9407,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 research."
       }
@@ -9427,7 +9427,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9455,7 +9455,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9546,7 +9546,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9559,7 +9559,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9572,7 +9572,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -9592,7 +9592,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9620,7 +9620,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9711,7 +9711,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9724,7 +9724,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9737,7 +9737,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -9749,7 +9749,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -9769,7 +9769,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9797,7 +9797,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -9888,7 +9888,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9901,7 +9901,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9914,7 +9914,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9927,7 +9927,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -9940,7 +9940,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -9952,7 +9952,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -9972,7 +9972,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9984,7 +9984,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10012,7 +10012,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10024,7 +10024,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10115,7 +10115,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10128,7 +10128,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10141,7 +10141,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -10161,7 +10161,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10189,7 +10189,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10280,7 +10280,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10293,7 +10293,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10306,7 +10306,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -10318,7 +10318,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -10338,7 +10338,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10366,7 +10366,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10457,7 +10457,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10470,7 +10470,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10483,7 +10483,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -10495,7 +10495,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -10515,7 +10515,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10543,7 +10543,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10634,7 +10634,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10647,7 +10647,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10660,7 +10660,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -10680,7 +10680,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10708,7 +10708,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10799,7 +10799,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10812,7 +10812,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10825,7 +10825,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10838,7 +10838,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -10851,7 +10851,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -10863,7 +10863,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -10875,7 +10875,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10895,7 +10895,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -10923,7 +10923,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11014,7 +11014,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11027,7 +11027,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11040,7 +11040,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -11060,7 +11060,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11088,7 +11088,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11179,7 +11179,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11192,7 +11192,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11205,7 +11205,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -11217,7 +11217,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -11237,7 +11237,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11265,7 +11265,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11356,7 +11356,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11369,7 +11369,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11382,7 +11382,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -11402,7 +11402,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11430,7 +11430,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11521,7 +11521,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11534,7 +11534,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11547,7 +11547,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       },
@@ -11559,7 +11559,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -11579,7 +11579,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11607,7 +11607,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11698,7 +11698,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11711,7 +11711,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11724,7 +11724,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Corrected inherited chapter URL; replacement opened during 2026-10-07 browser research. Read the relevant chapter sections from this landing page."
       }
@@ -11744,7 +11744,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11772,7 +11772,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11863,7 +11863,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11876,7 +11876,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -11889,7 +11889,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -11909,7 +11909,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -11937,7 +11937,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12028,7 +12028,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12041,7 +12041,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12054,7 +12054,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12067,7 +12067,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12080,7 +12080,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -12100,7 +12100,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12128,7 +12128,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12219,7 +12219,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12232,7 +12232,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12245,7 +12245,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12258,7 +12258,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -12271,7 +12271,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -12291,7 +12291,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12319,7 +12319,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12408,7 +12408,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12428,7 +12428,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12455,7 +12455,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12544,7 +12544,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12564,7 +12564,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12591,7 +12591,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12680,7 +12680,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12700,7 +12700,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12727,7 +12727,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12816,7 +12816,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12836,7 +12836,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12863,7 +12863,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12952,7 +12952,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12972,7 +12972,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -12999,7 +12999,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13088,7 +13088,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13108,7 +13108,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13135,7 +13135,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13224,7 +13224,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13244,7 +13244,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13271,7 +13271,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13360,7 +13360,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13380,7 +13380,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13407,7 +13407,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13496,7 +13496,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13516,7 +13516,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13543,7 +13543,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13632,7 +13632,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13652,7 +13652,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13679,7 +13679,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13768,7 +13768,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -13780,7 +13780,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13800,7 +13800,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13827,7 +13827,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13916,7 +13916,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13936,7 +13936,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -13963,7 +13963,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14052,7 +14052,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14066,13 +14066,13 @@
      "resources": [
       {
        "type": "practice",
-       "title": "JEE Advanced PYQs: Chemistry In Everyday Life",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/chemistry/chemistry-in-everyday-life",
+       "title": "JEE Main PYQs: Chemistry In Everyday Life",
+       "url": "https://questions.examside.com/past-years/jee/jee-main/chemistry/chemistry-in-everyday-life",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14093,13 +14093,13 @@
      "resources": [
       {
        "type": "test",
-       "title": "JEE Advanced PYQs: Chemistry In Everyday Life",
-       "url": "https://questions.examside.com/past-years/jee/jee-advanced/chemistry/chemistry-in-everyday-life",
+       "title": "JEE Main PYQs: Chemistry In Everyday Life",
+       "url": "https://questions.examside.com/past-years/jee/jee-main/chemistry/chemistry-in-everyday-life",
        "lang": "en",
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14188,7 +14188,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14200,7 +14200,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14212,7 +14212,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14232,7 +14232,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14259,7 +14259,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14348,7 +14348,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14360,7 +14360,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14372,7 +14372,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14392,7 +14392,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14404,7 +14404,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14416,7 +14416,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14443,7 +14443,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14455,7 +14455,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14467,7 +14467,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14556,7 +14556,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14568,7 +14568,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14588,7 +14588,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14615,7 +14615,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14704,7 +14704,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14724,7 +14724,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14751,7 +14751,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14840,7 +14840,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14860,7 +14860,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14887,7 +14887,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -14976,7 +14976,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -14988,7 +14988,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15008,7 +15008,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15020,7 +15020,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15047,7 +15047,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15059,7 +15059,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15148,7 +15148,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15168,7 +15168,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15195,7 +15195,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15284,7 +15284,7 @@
        "provider": "SATHEE (IIT Kanpur / Ministry of Education)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15304,7 +15304,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15331,7 +15331,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15422,7 +15422,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15435,7 +15435,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15448,7 +15448,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -15460,7 +15460,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -15480,7 +15480,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15492,7 +15492,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15504,7 +15504,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15516,7 +15516,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15544,7 +15544,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15556,7 +15556,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15568,7 +15568,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15580,7 +15580,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15671,7 +15671,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15684,7 +15684,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15697,7 +15697,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -15709,7 +15709,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -15729,7 +15729,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15741,7 +15741,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15753,7 +15753,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15765,7 +15765,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15793,7 +15793,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15805,7 +15805,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15817,7 +15817,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -15829,7 +15829,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -15920,7 +15920,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15933,7 +15933,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15946,7 +15946,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15959,7 +15959,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition.",
        "ad_gate_allowed": true
@@ -15972,7 +15972,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       },
@@ -15984,7 +15984,7 @@
        "provider": "OpenStax (free web textbook; links only)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra",
        "source_note": "Inherited from supplied goals/jee-main.json; not independently live-verified in this addition."
       }
@@ -16004,7 +16004,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16016,7 +16016,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16028,7 +16028,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16040,7 +16040,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16052,7 +16052,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16064,7 +16064,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -16092,7 +16092,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16104,7 +16104,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16116,7 +16116,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16128,7 +16128,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16140,7 +16140,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -16152,7 +16152,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }

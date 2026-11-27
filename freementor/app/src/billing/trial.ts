@@ -27,6 +27,18 @@
 /** §10.1: three days. */
 export const TRIAL_DAYS = 3;
 
+/**
+ * The trial is switched OFF for the testing builds (owner, 27 Nov 2026): a new
+ * learner starts straight in the "nothing bought" state, so ads and locks can
+ * be tried without waiting three days.
+ *
+ * >>> TURN THIS BACK ON BEFORE THE PRODUCTION BUILD. <<<
+ * The store listing, the Plans screen and the Terms all promise a 3-day free
+ * trial; shipping without it would be a misleading claim. app.config.js
+ * refuses an EAS `production` build while this says false.
+ */
+export const TRIAL_ENABLED = false;
+
 /** §10.4: tell them a day before it ends. */
 export const REMIND_BEFORE_MS = 24 * 60 * 60 * 1000;
 

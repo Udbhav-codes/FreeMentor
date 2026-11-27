@@ -187,6 +187,8 @@ export function Checkbox({
   sublabel,
   minutes,
   disabled,
+  onPressLabel,
+  trailing,
 }: {
   checked: boolean;
   onToggle: () => void;
@@ -194,24 +196,25 @@ export function Checkbox({
   sublabel?: string;
   minutes?: number;
   disabled?: boolean;
+  /**
+   * When set, only the box ticks the task; tapping the title, the minutes or
+   * `trailing` calls this instead (the Day view opens the task's details).
+   * When unset, the whole row is one checkbox, as before.
+   */
+  onPressLabel?: () => void;
+  trailing?: ReactNode;
 }) {
   const theme = useTheme();
-  return (
-    <Pressable
-      accessibilityRole="checkbox"
-      accessibilityState={{ checked, disabled }}
-      accessibilityLabel={label}
-      disabled={disabled}
-      onPress={onToggle}
-      style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        minHeight: MIN_TOUCH_TARGET,
-        paddingVertical: theme.spacing.sm,
-        gap: theme.spacing.md,
-        opacity: disabled ? 0.5 : 1,
-      }}
-    >
+  const rowStyle = {
+    flexDirection: 'row' as const,
+    alignItems: 'center' as const,
+    minHeight: MIN_TOUCH_TARGET,
+    paddingVertical: theme.spacing.sm,
+    gap: theme.spacing.md,
+    opacity: disabled ? 0.5 : 1,
+  };
+
+  const box = (
       <View
         style={{
           width: CHECKBOX_SIZE,
@@ -229,7 +232,10 @@ export function Checkbox({
           <Text style={{ color: theme.colors.onPrimary, fontSize: 13, lineHeight: 16 }}>✓</Text>
         ) : null}
       </View>
+  );
 
+  const text = (
+    <>
       <View style={{ flex: 1 }}>
         <Txt
           variant="body"
@@ -249,6 +255,46 @@ export function Checkbox({
           {minutes} m
         </Txt>
       ) : null}
+      {trailing}
+    </>
+  );
+
+  if (onPressLabel) {
+    return (
+      <View style={rowStyle}>
+        <Pressable
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked, disabled }}
+          accessibilityLabel={label}
+          disabled={disabled}
+          onPress={onToggle}
+          hitSlop={12}
+        >
+          {box}
+        </Pressable>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityHint="Shows the links and details for this task"
+          onPress={onPressLabel}
+          style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: theme.spacing.md }}
+        >
+          {text}
+        </Pressable>
+      </View>
+    );
+  }
+
+  return (
+    <Pressable
+      accessibilityRole="checkbox"
+      accessibilityState={{ checked, disabled }}
+      accessibilityLabel={label}
+      disabled={disabled}
+      onPress={onToggle}
+      style={rowStyle}
+    >
+      {box}
+      {text}
     </Pressable>
   );
 }

@@ -6,7 +6,7 @@
   "category": "Programming Languages",
   "group": "Languages",
   "type": "language",
-  "version": "2026.5",
+  "version": "2026.6",
   "valid_for": "Python 3.12+",
   "last_updated": "2026-10-06",
   "official_url": "https://docs.python.org/3/",
@@ -30,7 +30,7 @@
    "total": 126,
    "note": "Video minutes are real YouTube durations with the +15% rule applied (see goal.last_link_check). Mocks and the revision allowance remain planning figures."
   },
-  "last_link_check": "2026-10-17"
+  "last_link_check": "2026-11-27"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -208,7 +208,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -220,7 +220,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -232,7 +232,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -251,7 +251,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -345,7 +345,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -357,7 +357,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -369,7 +369,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -381,7 +381,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -393,7 +393,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -412,7 +412,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -423,7 +423,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -518,7 +518,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -530,7 +530,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -542,7 +542,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -554,7 +554,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -573,7 +573,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -667,7 +667,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -679,7 +679,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -691,7 +691,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -710,7 +710,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -721,7 +721,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -816,7 +816,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -828,7 +828,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -840,7 +840,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -859,7 +859,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -870,7 +870,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -964,7 +964,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -976,7 +976,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -988,7 +988,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1000,7 +1000,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1019,7 +1019,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1114,7 +1114,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1126,7 +1126,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1138,7 +1138,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -1149,7 +1149,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1168,7 +1168,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1263,7 +1263,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1275,7 +1275,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1287,7 +1287,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1306,7 +1306,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1317,7 +1317,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1412,7 +1412,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1424,7 +1424,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1436,7 +1436,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1448,7 +1448,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1467,7 +1467,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1478,7 +1478,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1573,7 +1573,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1585,7 +1585,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1597,7 +1597,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1616,7 +1616,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1627,7 +1627,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1654,7 +1654,7 @@
        "provider": "W3Schools (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1699,7 +1699,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1807,7 +1807,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1819,7 +1819,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1831,7 +1831,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -1850,7 +1850,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1945,7 +1945,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1957,7 +1957,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -1969,7 +1969,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -1989,7 +1989,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2084,7 +2084,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2096,7 +2096,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2108,7 +2108,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2128,7 +2128,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2223,7 +2223,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2235,7 +2235,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2247,7 +2247,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2266,7 +2266,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2361,7 +2361,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2373,7 +2373,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2393,7 +2393,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2488,7 +2488,7 @@
        "provider": "allendowney.github.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2500,7 +2500,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2519,7 +2519,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2546,7 +2546,7 @@
        "provider": "W3Schools (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2591,7 +2591,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -2698,7 +2698,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2710,7 +2710,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2722,7 +2722,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2733,7 +2733,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2744,7 +2744,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2763,7 +2763,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2857,7 +2857,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2869,7 +2869,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2881,7 +2881,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2900,7 +2900,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2994,7 +2994,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3006,7 +3006,7 @@
        "provider": "Think Python 3e (CC BY-NC)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3025,7 +3025,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3120,7 +3120,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3132,7 +3132,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3144,7 +3144,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3164,7 +3164,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3259,7 +3259,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3279,7 +3279,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3306,7 +3306,7 @@
        "provider": "W3Schools (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3394,7 +3394,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3490,7 +3490,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3502,7 +3502,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3514,7 +3514,7 @@
        "provider": "www.w3schools.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3534,7 +3534,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3629,7 +3629,7 @@
        "provider": "requests.readthedocs.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3707,7 +3707,7 @@
        "provider": "www.crummy.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3815,7 +3815,7 @@
        "provider": "numpy.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3835,7 +3835,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3930,7 +3930,7 @@
        "provider": "pandas.pydata.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -3950,7 +3950,7 @@
        "provider": "www.kaggle.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4045,7 +4045,7 @@
        "provider": "matplotlib.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4065,7 +4065,7 @@
        "provider": "www.kaggle.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4142,7 +4142,7 @@
        "provider": "flask.palletsprojects.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4250,7 +4250,7 @@
        "provider": "git-scm.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4346,7 +4346,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4358,7 +4358,7 @@
        "provider": "docs.pytest.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4411,7 +4411,7 @@
        "provider": "docs.python.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       }
@@ -4443,7 +4443,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]

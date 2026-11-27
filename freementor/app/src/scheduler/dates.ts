@@ -74,3 +74,12 @@ export function eachDay(from: IsoDate, to: IsoDate): IsoDate[] {
   for (let d = from; d <= to; d = addDays(d, 1)) out.push(d);
   return out;
 }
+
+const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/** '2026-11-25' -> '25 Nov'. How dates are shown to the learner (DD MMM). */
+export function shortDate(d: IsoDate): string {
+  const [, month, day] = d.split('-');
+  const name = SHORT_MONTHS[Number(month) - 1];
+  return name && day ? `${day.padStart(2, '0')} ${name}` : d;
+}

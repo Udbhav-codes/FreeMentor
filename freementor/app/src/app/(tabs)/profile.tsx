@@ -8,21 +8,20 @@
  * Account deletion is in-app AND must also exist on the web before the Play
  * listing goes live (§16) — it is a Play requirement, not a nicety.
  */
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Alert, ScrollView, Switch, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, Pill, Row, Screen, Txt } from '../../components/ui.tsx';
 import { Avatar } from '../../components/Avatar.tsx';
-import { EditProfile } from '../../components/EditProfile.tsx';
-import { catalog } from '../../api/library.ts';
+import { ConfirmCard } from '../../components/ConfirmCard.tsx';
 import { mayWipeDevice, requestAccountDeletion } from '../../api/account.ts';
 import { exportProgress } from '../../export/exportProgress.ts';
 import { deletePhotoFile } from '../../profile/photo.ts';
 import { useAuth } from '../../auth/AuthContext.tsx';
 import { devToolsAllowed } from '../../auth/devBypass.ts';
 import { clearTrialStarts } from '../../billing/trialStart.ts';
-import { describeTrial } from '../../billing/trial.ts';
+import { describeTrial, TRIAL_ENABLED } from '../../billing/trial.ts';
 import { useEntitlement } from '../../billing/useEntitlement.ts';
 import { loadProfile, saveProfile, type Profile } from '../../db/profile.ts';
 import { resetDatabase } from '../../db/index.ts';
@@ -33,6 +32,9 @@ import { describeSync, useSync } from '../../state/SyncContext.tsx';
 import { useStreak } from '../../state/useStreak.ts';
 import { useAppearance, useTheme } from '../../theme/ThemeProvider.tsx';
 import { useT } from '../../i18n/LanguageProvider.tsx';
+
+/** Typed to confirm deletion. The same in every language, so support can say it. */
+const DELETE_PHRASE = 'delete my account';
 
 /** Common study times — one tap rather than a clock dial. */
 const REMINDER_HOURS = [6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22];
@@ -50,16 +52,22 @@ export default function ProfileScreen() {
   const streak = useStreak();
 
   const [profile, setProfile] = useState<Profile | null>(null);
-  const catalogEntry = goal ? (catalog.goals.find((g) => g.id === goal.goal.id) ?? null) : null;
   const [exporting, setExporting] = useState(false);
   const [dailyOn, setDailyOn] = useState(true);
   const [weeklyOn, setWeeklyOn] = useState(true);
 
-  useEffect(() => {
-    loadProfile()
-      .then(setProfile)
-      .catch(() => setProfile(null));
-  }, []);
+  // On focus, not once: coming back from the edit screen must show the new
+  // name and photo without a restart.
+  useFocusEffect(
+    useCallback(() => {
+      loadProfile()
+        .then(setProfile)
+        .catch(() => setProfile(null));
+    }, []),
+  );
+
+  const [confirming, setConfirming] = useState<'signOut' | 'reset' | 'delete' | null>(null);
+  const [confirmBusy, setConfirmBusy] = useState(false);
 
   const update = useCallback(async (patch: Partial<Profile>) => {
     await saveProfile(patch);
@@ -68,23 +76,30 @@ export default function ProfileScreen() {
 
   const hoursStudied = plan ? Math.round((plan.totals.completedMinutes / 60) * 10) / 10 : 0;
 
-  const confirmReset = () =>
-    Alert.alert(
-      t('dialog.resetTitle'),
-      t('dialog.resetBody'),
-      [
-        { text: t('common.cancel'), style: 'cancel' },
-        {
-          text: t('dialog.reset'),
-          style: 'destructive',
-          onPress: async () => {
-            await resetDatabase();
-            await refresh();
-            router.replace('/choose');
-          },
-        },
-      ],
-    );
+  const doReset = async () => {
+    await resetDatabase();
+    await refresh();
+    router.replace('/choose');
+  };
+
+  const doSignOut = async () => {
+    await signOut();
+    router.replace('/sign-in');
+  };
+
+  /** Runs the confirmed action, keeping the card up (busy) until it is done. */
+  const runConfirmed = async () => {
+    const action = confirming;
+    setConfirmBusy(true);
+    try {
+      if (action === 'signOut') await doSignOut();
+      else if (action === 'reset') await doReset();
+      else if (action === 'delete') await doDelete();
+    } finally {
+      setConfirmBusy(false);
+      setConfirming(null);
+    }
+  };
 
   /**
    * Hands the learner a file with everything we hold about them — the
@@ -143,50 +158,35 @@ export default function ProfileScreen() {
    * that could have retried is gone. So a failure is reported and the choice
    * to wipe anyway is theirs.
    */
-  const confirmDelete = () =>
-    Alert.alert(
-      t('dialog.deleteTitle'),
-      // An export is impossible once the account is marked, because every
-      // authenticated route refuses a deleted account. Said here, where it
-      // can still be acted on.
-      `${t('dialog.deleteBody')}\n\n${t('dialog.deleteExportFirst')}`,
-      [
-        { text: t('common.cancel'), style: 'cancel' },
-        {
-          text: t('dialog.deleteConfirm'),
-          style: 'destructive',
-          onPress: async () => {
-            const outcome = await requestAccountDeletion();
+  const doDelete = async () => {
+    const outcome = await requestAccountDeletion();
 
-            if (!mayWipeDevice(outcome)) {
-              Alert.alert(
-                t('dialog.deleteServerFailedTitle'),
-                `${t('dialog.deleteServerFailedBody')}\n\n${
-                  outcome.kind === 'failed' ? outcome.reason : ''
-                }`.trim(),
-                [
-                  { text: t('common.cancel'), style: 'cancel' },
-                  {
-                    text: t('dialog.deleteWipeAnyway'),
-                    style: 'destructive',
-                    onPress: () => void wipeDevice(),
-                  },
-                ],
-              );
-              return;
-            }
-
-            await wipeDevice();
-            if (outcome.kind === 'scheduled') {
-              Alert.alert(
-                t('dialog.deleteScheduledTitle'),
-                t('dialog.deleteScheduledBody', { days: outcome.purgeWithinDays }),
-              );
-            }
+    if (!mayWipeDevice(outcome)) {
+      Alert.alert(
+        t('dialog.deleteServerFailedTitle'),
+        `${t('dialog.deleteServerFailedBody')}\n\n${
+          outcome.kind === 'failed' ? outcome.reason : ''
+        }`.trim(),
+        [
+          { text: t('common.cancel'), style: 'cancel' },
+          {
+            text: t('dialog.deleteWipeAnyway'),
+            style: 'destructive',
+            onPress: () => void wipeDevice(),
           },
-        },
-      ],
-    );
+        ],
+      );
+      return;
+    }
+
+    await wipeDevice();
+    if (outcome.kind === 'scheduled') {
+      Alert.alert(
+        t('dialog.deleteScheduledTitle'),
+        t('dialog.deleteScheduledBody', { days: outcome.purgeWithinDays }),
+      );
+    }
+  };
 
   return (
     <Screen>
@@ -198,19 +198,36 @@ export default function ProfileScreen() {
           gap: theme.spacing.lg,
         }}
       >
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.spacing.lg }}>
-          <Avatar uri={profile?.photoUri} name={profile?.name} size={56} />
-          <View style={{ flex: 1 }}>
-            <Txt variant="display">{profile?.name ?? 'Profile'}</Txt>
-            {goal ? (
-              <Txt variant="caption" color="secondary">
-                {goal.goal.name}
-              </Txt>
-            ) : null}
+        <Card>
+          <Txt variant="caption" color="secondary">
+            {t('profile.yourDetails').toUpperCase()}
+          </Txt>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: theme.spacing.lg,
+              marginTop: theme.spacing.md,
+            }}
+          >
+            <Avatar uri={profile?.photoUri} name={profile?.name} size={64} />
+            <View style={{ flex: 1, alignItems: 'flex-start' }}>
+              <Txt variant="title">{profile?.name ?? 'Your name'}</Txt>
+              {goal ? (
+                <Txt variant="caption" color="secondary">
+                  {[goal.goal.name, profile?.qualification].filter(Boolean).join(' · ')}
+                </Txt>
+              ) : null}
+              <Button
+                compact
+                label={`✎ ${t('profile.edit')}`}
+                variant="ghost"
+                onPress={() => router.push('/edit-profile')}
+                style={{ paddingHorizontal: 0, marginTop: 2 }}
+              />
+            </View>
           </View>
-        </View>
-
-        <EditProfile profile={profile} goal={catalogEntry} onChange={update} />
+        </Card>
 
         <Card>
           <Txt variant="heading">Your numbers</Txt>
@@ -331,7 +348,7 @@ export default function ProfileScreen() {
         <Card>
           <Txt variant="heading">Your plan</Txt>
           <Txt variant="small" color="secondary" style={{ marginTop: theme.spacing.sm }}>
-            {trial ? describeTrial(trial) : 'No goal started yet'}
+            {trial ? describeTrial(trial) : TRIAL_ENABLED ? 'No goal started yet' : 'No free trial in this test build'}
             {'. '}
             {t('profile.resourcesNote')}
           </Txt>
@@ -372,24 +389,13 @@ export default function ProfileScreen() {
             <Button
               label={t('profile.signOut')}
               variant="secondary"
-              onPress={() =>
-                Alert.alert(
-                  t('dialog.signOutTitle'),
-                  t('dialog.signOutBody'),
-                  [
-                    { text: 'Cancel', style: 'cancel' },
-                    {
-                      text: t('profile.signOut'),
-                      onPress: async () => {
-                        await signOut();
-                        router.replace('/sign-in');
-                      },
-                    },
-                  ],
-                )
-              }
+              onPress={() => setConfirming('signOut')}
             />
-            <Button label={t('profile.resetRoadmap')} variant="secondary" onPress={confirmReset} />
+            <Button
+              label={t('profile.resetRoadmap')}
+              variant="secondary"
+              onPress={() => setConfirming('reset')}
+            />
             <Button
               label={exporting ? t('export.working') : t('profile.exportProgress')}
               variant="secondary"
@@ -397,9 +403,47 @@ export default function ProfileScreen() {
               disabled={exporting}
               onPress={() => void runExport()}
             />
-            <Button label={t('profile.deleteAccount')} variant="ghost" onPress={confirmDelete} />
+            <Button
+              label={t('profile.deleteAccount')}
+              variant="ghost"
+              onPress={() => setConfirming('delete')}
+            />
           </View>
         </Card>
+
+        <ConfirmCard
+          visible={confirming === 'signOut'}
+          title={t('dialog.signOutTitle')}
+          body={t('dialog.signOutBody')}
+          confirmLabel={t('profile.signOut')}
+          busy={confirmBusy}
+          onConfirm={() => void runConfirmed()}
+          onCancel={() => setConfirming(null)}
+        />
+        <ConfirmCard
+          visible={confirming === 'reset'}
+          title={t('dialog.resetTitle')}
+          body={t('dialog.resetBody')}
+          confirmLabel={t('dialog.reset')}
+          destructive
+          busy={confirmBusy}
+          onConfirm={() => void runConfirmed()}
+          onCancel={() => setConfirming(null)}
+        />
+        <ConfirmCard
+          visible={confirming === 'delete'}
+          title={t('dialog.deleteTitle')}
+          // An export is impossible once the account is marked, because every
+          // authenticated route refuses a deleted account. Said here, where it
+          // can still be acted on.
+          body={`${t('dialog.deleteBody')}\n\n${t('dialog.deleteExportFirst')}`}
+          confirmLabel={t('dialog.deleteConfirm')}
+          destructive
+          typeToConfirm={DELETE_PHRASE}
+          busy={confirmBusy}
+          onConfirm={() => void runConfirmed()}
+          onCancel={() => setConfirming(null)}
+        />
 
         <Card>
           <Txt variant="heading">About</Txt>

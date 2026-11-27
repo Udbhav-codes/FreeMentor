@@ -215,9 +215,12 @@ Crashlytics; no open blocker.
    is the only recurring cost in the plan, and it's optional until then.
 
 **Claude**
-1. Make the release build, and watch Crashlytics and the server logs during the
+1. **Turn the 3-day free trial back on** (`app/src/billing/trial.ts`,
+   `TRIAL_ENABLED = true`). It was switched off on 27 Nov 2026 for testing.
+   The production build refuses to start until this is done.
+2. Make the release build, and watch Crashlytics and the server logs during the
    rollout.
-2. Run the first monthly database backup.
+3. Run the first monthly database backup.
 
 **Check:** FreeMentor is live on Google Play.
 

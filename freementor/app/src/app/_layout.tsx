@@ -121,6 +121,7 @@ export default function RootLayout() {
             <Stack.Screen name="day/[date]" />
             <Stack.Screen name="plans" options={{ presentation: 'modal' }} />
             <Stack.Screen name="goal/[id]" />
+            <Stack.Screen name="edit-profile" />
           </Stack>
         </EnrollmentProvider>
         </SyncProvider>

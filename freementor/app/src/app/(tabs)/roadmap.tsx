@@ -37,6 +37,7 @@ import { weekLock } from '../../progress/weekLock.ts';
 import { useTheme } from '../../theme/ThemeProvider.tsx';
 import { useT } from '../../i18n/LanguageProvider.tsx';
 import { isoWeekKey, weekAndDay } from '../../scheduler/index.ts';
+import { TRIAL_ENABLED } from '../../billing/trial.ts';
 
 export default function RoadmapHome() {
   const theme = useTheme();
@@ -50,7 +51,7 @@ export default function RoadmapHome() {
   // Shown on every open and reload until a plan is bought. The ✕ hides it for
   // this session only — nothing is persisted, so it comes back next time.
   const [hiddenThisSession, setHiddenThisSession] = useState(false);
-  const { entitlement } = useEntitlement();
+  const { entitlement, trial } = useEntitlement();
   const showWelcome = showsWelcomeCard(entitlement) && !hiddenThisSession;
 
   // Reloaded on focus, not just on mount: the tab stays mounted while the
@@ -161,14 +162,38 @@ export default function RoadmapHome() {
                 act on is the worst version of this. */}
             {entitlement === 'expired' ? (
               <Card style={{ borderLeftWidth: 4, borderLeftColor: theme.colors.accent }}>
-                <Txt variant="bodyStrong">{t('trialOver.title')}</Txt>
+                <Txt variant="bodyStrong">{t(TRIAL_ENABLED ? 'trialOver.title' : 'noTrial.title')}</Txt>
                 <Txt variant="small" color="secondary" style={{ marginTop: 4 }}>
-                  {t('trialOver.body')}
+                  {t(TRIAL_ENABLED ? 'trialOver.body' : 'noTrial.body')}
                 </Txt>
                 <Button
                   label={t('trialOver.cta')}
                   onPress={() => router.push('/plans')}
                   style={{ marginTop: theme.spacing.md }}
+                />
+              </Card>
+            ) : null}
+
+            {/* During the trial, how long is left — always visible on Home,
+                so the end of the trial is never a surprise (§10.4). */}
+            {entitlement === 'trial' && trial && trial.phase !== 'expired' ? (
+              <Card
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: theme.spacing.md,
+                }}
+              >
+                <Txt variant="bodyStrong" style={{ flex: 1 }}>
+                  {trial.phase === 'last_day'
+                    ? t('home.trialLastDay')
+                    : t('home.trialDays', { count: trial.daysRemaining })}
+                </Txt>
+                <Button
+                  label={t('home.trialSeePlans')}
+                  variant="ghost"
+                  onPress={() => router.push('/plans')}
                 />
               </Card>
             ) : null}

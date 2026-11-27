@@ -25,6 +25,8 @@ import { useT } from '../i18n/LanguageProvider.tsx';
 import { useLanguage } from '../i18n/LanguageProvider.tsx';
 import { isLanguage } from '../i18n/translate.ts';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
+import { decideAge } from '../onboarding/age.ts';
+import { ParentConsent } from './ParentConsent.tsx';
 
 const LANGUAGES = [
   ['en', 'English'],
@@ -75,6 +77,8 @@ export function EditProfile({
     profile?.qualification ?? null,
   );
   const [language, setLanguage] = useState<Language>((profile?.language as Language) ?? 'en');
+  const [yearText, setYearText] = useState(profile?.birthYear ? String(profile.birthYear) : '');
+  const [consent, setConsent] = useState<'verified' | 'declared' | null>(null);
   const [saved, setSaved] = useState(false);
 
   // Re-sync when the stored profile changes underneath us (first load, reset).
@@ -82,12 +86,28 @@ export function EditProfile({
     setName(profile?.name ?? '');
     setQualification(profile?.qualification ?? null);
     setLanguage((profile?.language as Language) ?? 'en');
-  }, [profile?.name, profile?.qualification, profile?.language]);
+    setYearText(profile?.birthYear ? String(profile.birthYear) : '');
+  }, [profile?.name, profile?.qualification, profile?.language, profile?.birthYear]);
+
+  // The age gate applies to an edit exactly as it does to onboarding: a year
+  // under 16 cannot be saved, and moving from adult to under-18 needs a
+  // parent's consent first — otherwise editing would be a way around both.
+  const birthYear = yearText.length === 4 ? Number(yearText) : null;
+  const yearChanged = birthYear !== (profile?.birthYear ?? null);
+  const ageDecision = birthYear != null && yearChanged ? decideAge(birthYear) : null;
+  const wasMinor =
+    profile?.birthYear != null && decideAge(profile.birthYear).outcome !== 'allowed';
+  const needsConsent =
+    ageDecision?.outcome === 'needs_parent_consent' && !wasMinor && consent === null;
+  const yearBlocked =
+    yearChanged && (birthYear == null || ageDecision?.outcome === 'blocked');
 
   const detailsDirty =
     (name.trim() || null) !== (profile?.name ?? null) ||
     qualification !== (profile?.qualification ?? null) ||
-    language !== ((profile?.language as Language) ?? 'en');
+    language !== ((profile?.language as Language) ?? 'en') ||
+    yearChanged;
+  const canSave = detailsDirty && !yearBlocked && !needsConsent;
 
   const pickPhoto = useCallback(async () => {
     setBusy(true);
@@ -170,33 +190,33 @@ export function EditProfile({
   }, [profile?.photoUri, onChange]);
 
   const saveDetails = useCallback(async () => {
+    if (!canSave) return;
     await onChange({
       name: name.trim() || null,
       qualification,
       language,
+      ...(yearChanged && birthYear != null ? { birthYear } : {}),
     });
+    setConsent(null);
     // The provider holds the language the whole app renders in. Writing the
     // profile row alone would leave every other screen in the old language
     // until a restart.
     if (isLanguage(language)) await applyLanguage(language);
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
-  }, [name, qualification, language, onChange, applyLanguage]);
+  }, [name, qualification, language, yearChanged, birthYear, canSave, onChange, applyLanguage]);
 
   const qualifications = goal?.qualification_options ?? [];
   const shownPhoto = pendingPhoto ?? profile?.photoUri;
 
   return (
     <Card>
-      <Txt variant="heading">Your details</Txt>
-
       {/* --- photo --- */}
       <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
           gap: theme.spacing.lg,
-          marginTop: theme.spacing.lg,
         }}
       >
         <Avatar
@@ -273,6 +293,50 @@ export function EditProfile({
         />
       </View>
 
+      {/* --- year of birth --- */}
+      <View style={{ marginTop: theme.spacing.xl, gap: theme.spacing.sm }}>
+        <Txt variant="caption" color="secondary">
+          {t('editProfile.birthYear')}
+        </Txt>
+        <TextInput
+          value={yearText}
+          onChangeText={(text) => {
+            setYearText(text.replace(/[^0-9]/g, '').slice(0, 4));
+            setConsent(null);
+          }}
+          placeholder="e.g. 2007"
+          placeholderTextColor={theme.colors.muted}
+          keyboardType="number-pad"
+          maxLength={4}
+          accessibilityLabel={t('editProfile.birthYear')}
+          style={[
+            theme.typography.body,
+            {
+              minHeight: MIN_TOUCH_TARGET,
+              paddingHorizontal: theme.spacing.md,
+              borderRadius: theme.radius.md,
+              borderWidth: 1,
+              borderColor: theme.colors.border,
+              backgroundColor: theme.colors.surface,
+              color: theme.colors.text,
+            },
+          ]}
+        />
+        <Txt variant="caption" color={ageDecision?.outcome === 'blocked' ? 'danger' : 'secondary'}>
+          {ageDecision?.outcome === 'blocked'
+            ? ageDecision.reason
+            : t('editProfile.birthYearHint')}
+        </Txt>
+        {ageDecision?.outcome === 'needs_parent_consent' && !wasMinor ? (
+          <>
+            <Txt variant="small" color="secondary">
+              {t('editProfile.needsConsent')}
+            </Txt>
+            <ParentConsent birthYear={birthYear} onResolved={setConsent} />
+          </>
+        ) : null}
+      </View>
+
       {/* --- currently --- */}
       {qualifications.length > 0 ? (
         <View style={{ marginTop: theme.spacing.xl, gap: theme.spacing.sm }}>
@@ -318,7 +382,7 @@ export function EditProfile({
         <Button
           label={saved && !detailsDirty ? 'Saved ✓' : 'Save changes'}
           onPress={() => void saveDetails()}
-          disabled={!detailsDirty}
+          disabled={!canSave}
         />
         {detailsDirty ? (
           <Txt variant="caption" color="secondary" style={{ textAlign: 'center' }}>

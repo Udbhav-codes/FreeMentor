@@ -16,6 +16,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { entitlementFor, type Entitlement } from './entitlement.ts';
 import {
+  TRIAL_ENABLED,
   reconcileWithServer,
   trialStatus,
   type ServerTrialView,
@@ -166,7 +167,16 @@ export function useEntitlement(): EntitlementState {
       // No goal yet: nothing to gate, and no trial has started. A purchase
       // made before picking a goal still counts.
       return {
-        entitlement: purchased ?? 'trial',
+        entitlement: purchased ?? (TRIAL_ENABLED ? 'trial' : 'expired'),
+        trial: null,
+        purchased,
+        refresh: loadPurchase,
+      };
+    }
+    if (!TRIAL_ENABLED) {
+      // No trial in this build (see trial.ts): straight to "nothing bought".
+      return {
+        entitlement: entitlementFor({ trialPhase: 'expired', purchase: purchased }),
         trial: null,
         purchased,
         refresh: loadPurchase,

@@ -2,12 +2,16 @@
  * Opening a resource.
  *
  * Product rules this enforces, from CLAUDE.md and the product plan §9.1:
- *   - Videos open in the YouTube app (web as a fallback). We link, never
- *     embed, never re-host, never scrape.
+ *   - Videos play in YouTube's own embedded player on the Day view
+ *     (components/YouTubeEmbed.tsx); this link is the fallback, opening the
+ *     YouTube app. Never re-hosted, never scraped.
  *   - Notes and practice open in a Chrome Custom Tab (expo-web-browser).
- *   - Gating is decided ONLY by billing/entitlement.ts, which guarantees a
- *     video is never behind an ad or a paywall on any plan. That is a YouTube
- *     API Services policy requirement.
+ *   - Gating is decided ONLY by billing/entitlement.ts, which guarantees
+ *     YouTube content is never behind an ad or a paywall on any plan (YouTube
+ *     API Services Developer Policies III.F.3.2).
+ *   - On the Day view, a task's dropdown is unlocked as a whole by one ad
+ *     (ads/dropdownUnlock.ts) and passes `unlocked`. Elsewhere (the Practice
+ *     tab) an ad-gated link asks for its own ad.
  */
 import { useCallback } from 'react';
 import { Alert, Linking, Pressable, View } from 'react-native';
@@ -17,23 +21,11 @@ import type { Resource } from '@freementor/shared';
 import { Pill, Txt } from './ui.tsx';
 import { accessFor } from '../billing/entitlement.ts';
 import { noteRewarded, windowOpen } from '../ads/cap.ts';
+import { askForAd } from '../ads/askForAd.ts';
 import { useEntitlement } from '../billing/useEntitlement.ts';
 import { useTheme } from '../theme/ThemeProvider.tsx';
 import { useT } from '../i18n/LanguageProvider.tsx';
 import { MIN_TOUCH_TARGET } from '../theme/tokens.ts';
-import {
-  ageFromBirthYear,
-  getRewardedAds,
-  grantsAccess,
-  requestOptionsFor,
-  type Outcome,
-} from '../ads/rewarded.ts';
-import { loadProfile } from '../db/profile.ts';
-import { isExpoGo } from '../notifications/daily.ts';
-
-// One instance for the module. The stub is stateless; the real one will hold
-// a loaded ad, which is exactly the thing worth reusing across taps.
-const ads = getRewardedAds(isExpoGo);
 
 export async function openResource(resource: Resource): Promise<void> {
   if (resource.type === 'video') {
@@ -63,7 +55,14 @@ const LABELS: Record<Resource['type'], string> = {
   test: 'Open test',
 };
 
-export function ResourceLink({ resource }: { resource: Resource }) {
+export function ResourceLink({
+  resource,
+  unlocked = false,
+}: {
+  resource: Resource;
+  /** The task dropdown holding this link was unlocked by a watched ad. */
+  unlocked?: boolean;
+}) {
   const theme = useTheme();
   const t = useT();
   const router = useRouter();
@@ -71,7 +70,8 @@ export function ResourceLink({ resource }: { resource: Resource }) {
   // with an odd label is far better than a crashed screen.
   const label = LABELS[resource.type] ?? 'Open link';
   const { entitlement } = useEntitlement();
-  const access = accessFor(resource, entitlement);
+  const decided = accessFor(resource, entitlement);
+  const access = unlocked && decided.kind === 'ad_gated' ? { kind: 'open' as const } : decided;
   const broken = resource.status === 'broken';
 
   // Both of these are "you cannot open this yet, here is where to fix that".
@@ -92,52 +92,25 @@ export function ResourceLink({ resource }: { resource: Resource }) {
         );
         return;
       }
-      // A user-initiated rewarded ad. Never auto-playing, never during a
-      // video, a test or the checklist itself (§10.2) — this runs before
-      // study starts, on the tap that opens a resource.
-      //
-      // `ads.available` is false until there is an AdMob account and a
-      // development build, and the dialog says so rather than implying an ad
-      // was shown. The ad path itself is live either way: the stub resolves
-      // `unavailable`, which is the same branch a real no-fill takes.
-      Alert.alert(
-        t('dialog.adGateTitle'),
-        ads.available ? t('dialog.adGateBody') : t('dialog.adGateNotLive'),
-        [
-          { text: t('common.cancel'), style: 'cancel' },
-          {
-            text: ads.available ? t('dialog.adGateWatch') : t('day.openLink'),
-            onPress: () => {
-              void (async () => {
-                // Loaded here rather than per render: ResourceLink appears
-                // once per resource, and the age is only needed on the tap
-                // that actually asks for an ad.
-                const age = ageFromBirthYear((await loadProfile())?.birthYear ?? null);
-                let outcome: Outcome;
-                try {
-                  outcome = await ads.show(requestOptionsFor(age));
-                } catch (error) {
-                  // A build that names an ad unit but cannot show one. The
-                  // learner is not held responsible for our misconfiguration.
-                  outcome = {
-                    kind: 'unavailable',
-                    reason: error instanceof Error ? error.message : 'ad failed',
-                  };
-                }
-                // A dismissed ad opens nothing; everything else does. See
-                // ads/rewarded.ts for why a failure still grants access.
-                if (!grantsAccess(outcome)) return;
-                // Only a watched ad opens the window; an unavailable one
-                // showed nothing, so it must not suppress the next real ad.
-                if (outcome.kind === 'rewarded') noteRewarded();
-                await openResource(resource).catch(() =>
-                  reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
-                );
-              })();
-            },
-          },
-        ],
-      );
+      // A user-initiated rewarded ad (ads/askForAd.ts), on the tap that
+      // opens a resource — never auto-playing, never during study.
+      void (async () => {
+        const result = await askForAd({
+          title: t('dialog.adGateTitle'),
+          body: t('dialog.adGateBody'),
+          notLiveBody: t('dialog.adGateNotLive'),
+          watch: t('dialog.adGateWatch'),
+          openWithoutAd: t('day.openLink'),
+          cancel: t('common.cancel'),
+        });
+        if (result === 'declined') return;
+        // Only a watched ad opens the window; an unavailable one showed
+        // nothing, so it must not suppress the next real ad.
+        if (result === 'rewarded') noteRewarded();
+        await openResource(resource).catch(() =>
+          reportFailure(t('dialog.linkFailedTitle'), t('dialog.linkFailedBody')),
+        );
+      })();
       return;
     }
     openResource(resource).catch(() =>

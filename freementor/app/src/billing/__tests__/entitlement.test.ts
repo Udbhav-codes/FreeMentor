@@ -59,15 +59,19 @@ describe('the three-day trial', () => {
 });
 
 describe('when the trial has ended and nothing is bought', () => {
-  it('opens videos and main notes after an ad', () => {
-    for (const type of OPEN_TYPES) {
-      expect(accessFor(res({ type }), 'expired').kind, type).toBe('ad_gated');
+  it('opens main notes after an ad', () => {
+    expect(accessFor(res({ type: 'notes' }), 'expired').kind).toBe('ad_gated');
+  });
+
+  it('never puts anything on YouTube behind an ad (policy III.F.3.2)', () => {
+    expect(accessFor(res({ type: 'video' }), 'expired').kind).toBe('open');
+    for (const url of [
+      'https://www.youtube.com/watch?v=x',
+      'https://youtu.be/x',
+      'https://m.youtube.com/watch?v=x',
+    ]) {
+      expect(accessFor(res({ type: 'notes', url }), 'expired').kind, url).toBe('open');
     }
-    // A YouTube-hosted note is still a note: same rule, no special case.
-    expect(
-      accessFor(res({ type: 'notes', url: 'https://www.youtube.com/watch?v=x' }), 'expired')
-        .kind,
-    ).toBe('ad_gated');
   });
 
   it('locks practice, tests and extra notes', () => {

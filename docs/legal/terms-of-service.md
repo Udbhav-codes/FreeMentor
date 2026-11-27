@@ -81,6 +81,14 @@ any time. We check links regularly and replace broken ones, but we do not
 control them and are not responsible for their content, accuracy or
 availability.
 
+3.6 **YouTube.** Videos play inside the app in YouTube's embedded player,
+using YouTube API Services. **By using FreeMentor you agree to be bound by the
+YouTube Terms of Service** (https://www.youtube.com/t/terms). YouTube's
+handling of your information is described in the Google Privacy Policy
+(http://www.google.com/policies/privacy). Videos are never behind a price or
+an advertisement of ours; where a creator does not allow their video to be
+played inside other apps, we link to it on YouTube instead.
+
 ---
 
 ## 4. Your account
@@ -161,10 +169,11 @@ a Roadmap you have already bought.**
 
 ## 7. Advertisements
 
-7.1 On the Basic Plan, certain resources open after a **rewarded
-advertisement that you choose to start**. Advertisements are never forced,
-never interrupt a video, a test or your daily checklist, and are never shown
-during the Trial or on Premium.
+7.1 After the Trial, if you have not bought a Plan, a task's notes open
+after a **rewarded advertisement that you choose to start**; one advertisement
+unlocks that task for 30 minutes. Advertisements are never forced, never put
+in front of a video, never interrupt a video, a test or your daily checklist,
+and are never shown during the Trial or on the Basic or Premium Plans.
 
 7.2 If you are below 18, you will be shown only **non-personalised
 advertisements** with a maximum content rating of **G**, and you will be

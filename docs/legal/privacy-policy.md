@@ -81,8 +81,9 @@ anything else. We never see your Google password.
 | Study streak | To show it |
 
 We do **not** track which videos you watch, how long you watch them, or what
-you do on YouTube or any other site. When you open a resource we hand you over
-to that site and stop seeing what happens.
+you do on YouTube or any other site. Videos play inside the app in YouTube's
+own embedded player (see "YouTube" in section 6); notes and practice sites open
+in your browser, and we stop seeing what happens there.
 
 ### 3.4 When you buy a plan
 
@@ -134,10 +135,30 @@ We share personal data only with the processors needed to run the service.
 | **Google (Sign-In)** | Your sign-in | To authenticate you |
 | **Google Play Billing** | Your purchase | To take payment and verify it |
 | **Supabase** | Your account, plan and progress | Hosting and database |
-| **Google AdMob** | Ad request and consent status | To show ads *(free and Basic plans only)* |
+| **Google AdMob** | Ad request and consent status | To show ads *(only after the free trial, if no plan is bought)* |
 | **Firebase** | Crash and usage data | To fix crashes |
+| **YouTube** | What YouTube's embedded player collects when you play a video | To play the videos in your roadmap |
 
 Each is bound by its own terms to process data only on our instructions.
+
+### YouTube
+
+FreeMentor uses **YouTube API Services** to play videos inside the app.
+When you play a video, YouTube's embedded player is loaded from YouTube in
+privacy-enhanced mode (youtube-nocookie.com), and YouTube may collect
+information about that playback, use cookies or similar technology on your
+device, and show its own advertisements in the video, under its own terms.
+We do not receive any of that information. By playing a video you are also
+using YouTube and agree to the **YouTube Terms of Service**
+(https://www.youtube.com/t/terms). YouTube's use of your information is
+covered by the **Google Privacy Policy**
+(http://www.google.com/policies/privacy).
+
+FreeMentor does not ask for access to your YouTube or Google account data
+beyond signing in. If you want to remove any permission you granted to
+FreeMentor, you can do so at
+https://security.google.com/settings/security/permissions, and you can ask us
+to delete your data at any time (section 9); we delete it within 7 days.
 
 We will also disclose data where we are legally required to — a court order,
 or a lawful request from an authority — and to protect our rights or someone's
@@ -150,9 +171,13 @@ safety.
 Where ads appear:
 
 - **Free trial:** none at all. The three days are a clean look at the product.
-- **Basic:** a short rewarded advertisement, which you choose to start, opens
-  a resource. It never interrupts a video, a test or your daily checklist.
-- **Premium:** no ads at all.
+- **After the trial, if you have not bought a plan:** a task's notes open
+  after a short rewarded advertisement that you choose to start. One ad
+  unlocks that task for 30 minutes. Videos are **never** behind an ad, and an
+  ad never interrupts a video, a test or your daily checklist.
+- **Basic and Premium:** no ads from us at all.
+- YouTube may show its own ads inside its videos; those are YouTube's, not
+  ours, and we do not control or remove them.
 - **Under 18:** non-personalised ads only, maximum content rating **G**,
   tagged for users under the age of consent.
 

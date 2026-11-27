@@ -6,7 +6,7 @@
   "category": "Entrance Exams",
   "group": "University Admission",
   "type": "exam",
-  "version": "2027.6",
+  "version": "2027.7",
   "valid_for": "CUET UG 2027 preparation using the official 2026 syllabus and pattern as the latest confirmed baseline; recheck when NTA publishes the 2027 bulletin and syllabus.",
   "last_updated": "2026-10-08",
   "official_url": "https://cuet.nta.nic.in/",
@@ -271,7 +271,7 @@
    "Economics"
   ],
   "domain_note": "Pick your CUET domain subjects when you start. Each domain subject is a full NCERT chapter-wise roadmap, gated by track so the app downloads only the subjects you choose. Physics, Chemistry, Maths and Biology reuse the FreeMentor JEE/NEET Class 12 roadmaps; Accountancy, Business Studies and Economics are new chapter roadmaps. English is covered by the Language Test topics. Subjects without a full roadmap keep a study-plan topic you can follow with NCERT.",
-  "last_link_check": "2026-10-17"
+  "last_link_check": "2026-11-27"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -525,7 +525,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -537,7 +537,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -557,7 +557,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -585,7 +585,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -675,7 +675,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -687,7 +687,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -707,7 +707,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -735,7 +735,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -825,7 +825,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -837,7 +837,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -857,7 +857,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -885,7 +885,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -975,7 +975,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -987,7 +987,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1007,7 +1007,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1035,7 +1035,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -1125,7 +1125,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1137,7 +1137,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1157,7 +1157,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1185,7 +1185,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -1275,7 +1275,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1287,7 +1287,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1307,7 +1307,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1335,7 +1335,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -1425,7 +1425,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1437,7 +1437,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1457,7 +1457,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1485,7 +1485,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -1576,7 +1576,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1588,7 +1588,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1600,7 +1600,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1612,7 +1612,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1624,7 +1624,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1636,7 +1636,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1648,7 +1648,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1668,7 +1668,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1696,7 +1696,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -1798,7 +1798,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1810,7 +1810,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1822,7 +1822,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1834,7 +1834,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1846,7 +1846,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1858,7 +1858,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1870,7 +1870,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1882,7 +1882,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1894,7 +1894,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1914,7 +1914,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1942,7 +1942,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -2043,7 +2043,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2055,7 +2055,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2067,7 +2067,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2078,7 +2078,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2097,7 +2097,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2124,7 +2124,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2214,7 +2214,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2226,7 +2226,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2238,7 +2238,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2249,7 +2249,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2268,7 +2268,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2279,7 +2279,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2306,7 +2306,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2396,7 +2396,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2408,7 +2408,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2420,7 +2420,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2431,7 +2431,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2450,7 +2450,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2477,7 +2477,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2567,7 +2567,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2579,7 +2579,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2591,7 +2591,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2602,7 +2602,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2621,7 +2621,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2648,7 +2648,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2738,7 +2738,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2750,7 +2750,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2762,7 +2762,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2781,7 +2781,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2808,7 +2808,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2898,7 +2898,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2910,7 +2910,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -2922,7 +2922,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -2933,7 +2933,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -2952,7 +2952,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2979,7 +2979,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3069,7 +3069,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3081,7 +3081,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3093,7 +3093,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3112,7 +3112,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3139,7 +3139,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3229,7 +3229,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3241,7 +3241,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3253,7 +3253,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3272,7 +3272,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3299,7 +3299,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3389,7 +3389,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3401,7 +3401,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3413,7 +3413,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -3424,7 +3424,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3443,7 +3443,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3470,7 +3470,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3560,7 +3560,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3572,7 +3572,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3584,7 +3584,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -3595,7 +3595,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3614,7 +3614,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3641,7 +3641,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3731,7 +3731,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3743,7 +3743,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3755,7 +3755,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3774,7 +3774,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3801,7 +3801,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3891,7 +3891,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3903,7 +3903,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3915,7 +3915,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3927,7 +3927,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -3939,7 +3939,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -3950,7 +3950,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -3969,7 +3969,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3996,7 +3996,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4086,7 +4086,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4098,7 +4098,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4110,7 +4110,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4129,7 +4129,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4156,7 +4156,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4246,7 +4246,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4258,7 +4258,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4270,7 +4270,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4289,7 +4289,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4316,7 +4316,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4406,7 +4406,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4418,7 +4418,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4430,7 +4430,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4449,7 +4449,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4476,7 +4476,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4566,7 +4566,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4578,7 +4578,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4590,7 +4590,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4609,7 +4609,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4636,7 +4636,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4726,7 +4726,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4738,7 +4738,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4750,7 +4750,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4769,7 +4769,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4796,7 +4796,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4886,7 +4886,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4898,7 +4898,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -4910,7 +4910,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -4929,7 +4929,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4956,7 +4956,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5046,7 +5046,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5058,7 +5058,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5070,7 +5070,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5089,7 +5089,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5116,7 +5116,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5206,7 +5206,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5218,7 +5218,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5230,7 +5230,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5249,7 +5249,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5276,7 +5276,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5366,7 +5366,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5378,7 +5378,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5390,7 +5390,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -5401,7 +5401,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5420,7 +5420,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5447,7 +5447,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5537,7 +5537,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5549,7 +5549,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5561,7 +5561,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -5572,7 +5572,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5591,7 +5591,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5618,7 +5618,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5708,7 +5708,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5720,7 +5720,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5732,7 +5732,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -5743,7 +5743,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5762,7 +5762,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5789,7 +5789,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5879,7 +5879,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5891,7 +5891,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -5903,7 +5903,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -5922,7 +5922,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -5949,7 +5949,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6039,7 +6039,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6051,7 +6051,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6063,7 +6063,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -6074,7 +6074,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6093,7 +6093,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6120,7 +6120,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6210,7 +6210,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6222,7 +6222,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6234,7 +6234,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6253,7 +6253,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -6264,7 +6264,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6291,7 +6291,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6381,7 +6381,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6393,7 +6393,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6405,7 +6405,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6417,7 +6417,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6429,7 +6429,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6448,7 +6448,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6475,7 +6475,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6565,7 +6565,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6577,7 +6577,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6589,7 +6589,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6608,7 +6608,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6635,7 +6635,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6725,7 +6725,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6737,7 +6737,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6749,7 +6749,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6768,7 +6768,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6795,7 +6795,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6885,7 +6885,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6897,7 +6897,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -6909,7 +6909,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -6920,7 +6920,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -6939,7 +6939,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -6966,7 +6966,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7056,7 +7056,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7068,7 +7068,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7080,7 +7080,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7092,7 +7092,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7104,7 +7104,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -7115,7 +7115,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7134,7 +7134,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -7145,7 +7145,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7172,7 +7172,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7262,7 +7262,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7274,7 +7274,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7286,7 +7286,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7305,7 +7305,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7332,7 +7332,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7422,7 +7422,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7434,7 +7434,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7446,7 +7446,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7465,7 +7465,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7492,7 +7492,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7582,7 +7582,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7594,7 +7594,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7606,7 +7606,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7618,7 +7618,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7630,7 +7630,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7649,7 +7649,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7676,7 +7676,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7766,7 +7766,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7778,7 +7778,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7790,7 +7790,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7802,7 +7802,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7814,7 +7814,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7833,7 +7833,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7860,7 +7860,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -7950,7 +7950,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7962,7 +7962,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -7974,7 +7974,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -7993,7 +7993,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8020,7 +8020,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8110,7 +8110,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8122,7 +8122,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8134,7 +8134,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8153,7 +8153,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8180,7 +8180,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8270,7 +8270,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8282,7 +8282,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8294,7 +8294,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -8305,7 +8305,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8324,7 +8324,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8351,7 +8351,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8441,7 +8441,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8453,7 +8453,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8465,7 +8465,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8484,7 +8484,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8511,7 +8511,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8601,7 +8601,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8613,7 +8613,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8625,7 +8625,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8644,7 +8644,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8671,7 +8671,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8761,7 +8761,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8773,7 +8773,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8785,7 +8785,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8804,7 +8804,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8831,7 +8831,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8921,7 +8921,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8933,7 +8933,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -8945,7 +8945,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -8964,7 +8964,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -8991,7 +8991,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9081,7 +9081,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9093,7 +9093,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9105,7 +9105,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -9116,7 +9116,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9135,7 +9135,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9162,7 +9162,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9252,7 +9252,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9264,7 +9264,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9276,7 +9276,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -9287,7 +9287,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -9298,7 +9298,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9317,7 +9317,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9344,7 +9344,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9434,7 +9434,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9446,7 +9446,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9458,7 +9458,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -9469,7 +9469,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9488,7 +9488,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9515,7 +9515,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9605,7 +9605,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9617,7 +9617,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9629,7 +9629,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9648,7 +9648,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9675,7 +9675,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9765,7 +9765,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9777,7 +9777,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9789,7 +9789,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9808,7 +9808,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9835,7 +9835,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9925,7 +9925,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9937,7 +9937,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -9949,7 +9949,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -9968,7 +9968,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -9995,7 +9995,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10085,7 +10085,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10097,7 +10097,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10109,7 +10109,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -10128,7 +10128,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10155,7 +10155,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10245,7 +10245,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10257,7 +10257,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10269,7 +10269,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       },
       {
@@ -10280,7 +10280,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -10299,7 +10299,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10326,7 +10326,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10399,7 +10399,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10411,7 +10411,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10423,7 +10423,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -10442,7 +10442,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10469,7 +10469,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10559,7 +10559,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10571,7 +10571,7 @@
        "provider": "NCERT (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "main",
        "ad_gate_allowed": true
       },
@@ -10583,7 +10583,7 @@
        "provider": "OpenStax (CC BY 4.0)",
        "access": "premium",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "role": "extra"
       }
      ]
@@ -10602,7 +10602,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10629,7 +10629,7 @@
        "provider": "ExamSIDE (free)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10725,7 +10725,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10745,7 +10745,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10844,7 +10844,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10864,7 +10864,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10946,7 +10946,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -10966,7 +10966,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11048,7 +11048,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11068,7 +11068,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11167,7 +11167,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11187,7 +11187,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11287,7 +11287,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11307,7 +11307,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11406,7 +11406,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11426,7 +11426,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11526,7 +11526,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11546,7 +11546,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11645,7 +11645,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11665,7 +11665,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11764,7 +11764,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11784,7 +11784,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11883,7 +11883,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -11903,7 +11903,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12003,7 +12003,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12023,7 +12023,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12123,7 +12123,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12143,7 +12143,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12243,7 +12243,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12263,7 +12263,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12363,7 +12363,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12383,7 +12383,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12483,7 +12483,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12503,7 +12503,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12603,7 +12603,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12623,7 +12623,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12723,7 +12723,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12743,7 +12743,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12843,7 +12843,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12863,7 +12863,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12962,7 +12962,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -12982,7 +12982,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13082,7 +13082,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13102,7 +13102,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13184,7 +13184,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13204,7 +13204,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13286,7 +13286,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13306,7 +13306,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13388,7 +13388,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13408,7 +13408,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13490,7 +13490,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13510,7 +13510,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13592,7 +13592,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13612,7 +13612,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13694,7 +13694,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13714,7 +13714,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13814,7 +13814,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13834,7 +13834,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13934,7 +13934,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -13954,7 +13954,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14054,7 +14054,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14074,7 +14074,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14174,7 +14174,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14194,7 +14194,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14294,7 +14294,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14314,7 +14314,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14414,7 +14414,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14434,7 +14434,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14534,7 +14534,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14554,7 +14554,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14654,7 +14654,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14674,7 +14674,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14774,7 +14774,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14794,7 +14794,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14894,7 +14894,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -14914,7 +14914,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15014,7 +15014,7 @@
        "provider": "ncert.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15034,7 +15034,7 @@
        "provider": "cuet.nta.nic.in",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15130,7 +15130,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15142,7 +15142,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15154,7 +15154,7 @@
        "provider": "Government of India / PIB",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15166,7 +15166,7 @@
        "provider": "Prasar Bharati / News on AIR",
        "access": "all",
        "status": "unverified",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15186,7 +15186,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15214,7 +15214,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -15305,7 +15305,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15317,7 +15317,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15337,7 +15337,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15365,7 +15365,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -15455,7 +15455,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15467,7 +15467,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15487,7 +15487,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15515,7 +15515,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -15605,7 +15605,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15617,7 +15617,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15637,7 +15637,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15665,7 +15665,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -15755,7 +15755,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15767,7 +15767,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15787,7 +15787,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15815,7 +15815,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -15905,7 +15905,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -15917,7 +15917,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15937,7 +15937,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -15965,7 +15965,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16055,7 +16055,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16067,7 +16067,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16087,7 +16087,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16115,7 +16115,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16205,7 +16205,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16217,7 +16217,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16237,7 +16237,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16265,7 +16265,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16355,7 +16355,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16367,7 +16367,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16387,7 +16387,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16415,7 +16415,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16505,7 +16505,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16517,7 +16517,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16537,7 +16537,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16565,7 +16565,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16655,7 +16655,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16667,7 +16667,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16687,7 +16687,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16715,7 +16715,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16805,7 +16805,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16817,7 +16817,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16837,7 +16837,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16865,7 +16865,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -16955,7 +16955,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -16967,7 +16967,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -16987,7 +16987,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17015,7 +17015,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -17105,7 +17105,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -17117,7 +17117,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17137,7 +17137,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17165,7 +17165,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -17255,7 +17255,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -17267,7 +17267,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17287,7 +17287,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17315,7 +17315,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -17405,7 +17405,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -17417,7 +17417,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17437,7 +17437,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17465,7 +17465,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],
@@ -17555,7 +17555,7 @@
        "provider": "NTA CUET UG (official)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -17567,7 +17567,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17587,7 +17587,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -17615,7 +17615,7 @@
        "provider": "SATHEE (MoE / IIT Kanpur)",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ],

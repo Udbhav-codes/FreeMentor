@@ -7,16 +7,19 @@
  *
  *                              trial    expired (nothing bought)   basic             premium
  *   roadmap, day plan, ticks    yes      yes                        yes               yes
- *   YouTube videos              yes      after an ad                yes               yes
+ *   YouTube videos              yes      yes (never an ad)          yes               yes
  *   main notes                  yes      after an ad                yes               yes
  *   practice & test links       LOCKED   LOCKED                     yes               yes
  *   extra notes (premium)       LOCKED   LOCKED                     LOCKED (Premium)  yes
  *   detailed analytics          no       no                         no                yes
- *   ads                         none     yes, one per resource      none              none
+ *   ads                         none     one per task dropdown,     none              none
+ *                                        unlocks it for 30 min
  *
  * **The trial is three days, free, with no ads.** When it ends with nothing
- * bought, videos and main notes keep opening, but each one costs a rewarded
- * ad; practice, tests, extra notes and analytics need a plan. Buying Basic
+ * bought, videos keep playing with no ad at all, and main notes open after a
+ * rewarded ad (one per task dropdown, which then stays unlocked for 30
+ * minutes; see ads/dropdownUnlock.ts). Practice, tests, extra notes and
+ * analytics need a plan. Buying Basic
  * removes the ads and opens practice and tests. Premium adds extra notes and
  * detailed analytics. So the ad exists only for a learner who has not paid,
  * and buying any plan ends it.
@@ -26,9 +29,10 @@
  * ## History
  *
  * Until Oct 2026 YouTube was never gated. The owner then reversed that, and in
- * Nov 2026 settled on the table above. Linking to YouTube behind an ad for
- * unpaid learners is still a reading of the YouTube API terms the owner should
- * confirm; see docs/MONETIZATION_STATE.md.
+ * late Nov 2026 reversed it back when videos moved into an embedded player:
+ * the YouTube API Services Developer Policies (III.F.3.2) forbid gating a
+ * video behind any action other than pressing play. So anything on YouTube,
+ * a video or a "note" hosted there, is never behind an ad or a paywall.
  */
 import type { Resource } from '@freementor/shared';
 import type { TrialPhase } from './trial.ts';
@@ -74,28 +78,44 @@ export type Access =
  *
  * Order matters and is deliberate:
  *
- *  1. `premium` opens everything, with no ads.
+ *  1. `premium` opens everything, with no ads. So does anything on YouTube,
+ *     on every plan (YouTube API policy III.F.3.1-2).
  *  2. Extra notes (`access: "premium"`) are Premium-only on every other state,
  *     trial included. An ad never substitutes for the plan.
  *  3. Practice and test links need a plan: locked in the trial and after it,
  *     open on Basic.
- *  4. Videos and main notes: open in the trial and on Basic, ad-gated only
- *     once the trial has ended with nothing bought.
+ *  4. Main notes: open in the trial and on Basic, ad-gated only once the
+ *     trial has ended with nothing bought.
  */
 export function accessFor(resource: Resource, entitlement: Entitlement): Access {
   if (entitlement === 'premium') return { kind: 'open' };
+  // YouTube content is never gated, on any plan, by an ad or a price: a video,
+  // a practice video, a Premium "extra" — anything hosted there (III.F.3.1-2).
+  if (isYouTube(resource)) return { kind: 'open' };
   if (resource.access === 'premium') return { kind: 'premium_only' };
 
   if (resource.type === 'practice' || resource.type === 'test') {
     return entitlement === 'basic' ? { kind: 'open' } : { kind: 'needs_plan' };
   }
 
+
   return entitlement === 'expired' ? { kind: 'ad_gated' } : { kind: 'open' };
 }
 
+/** A video, or any link that points at YouTube. */
+export function isYouTube(resource: Resource): boolean {
+  if (resource.type === 'video') return true;
+  try {
+    const host = new URL(resource.url).hostname.toLowerCase();
+    return host === 'youtu.be' || host === 'youtube.com' || host.endsWith('.youtube.com');
+  } catch {
+    return false;
+  }
+}
+
 /**
- * Only a learner whose trial has ended with nothing bought sees ads: one
- * rewarded ad per video or note. The trial, Basic and Premium have none.
+ * Only a learner whose trial has ended with nothing bought sees ads: a
+ * rewarded ad to open a task's notes. The trial, Basic and Premium have none.
  */
 export function showsAds(entitlement: Entitlement): boolean {
   return entitlement === 'expired';

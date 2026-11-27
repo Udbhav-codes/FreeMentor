@@ -2,8 +2,17 @@
  * Day view — product plan §8.4 and screen 5 of the preview.
  *
  * The mockup's shape, which this follows exactly:
- *   breadcrumb → title → pills → ONE lesson card → ONE checklist card
+ *   breadcrumb → title → pills → ONE checklist card
  *   → ONE confidence section → "Mark day complete"
+ *
+ * There is no separate video card above the list (owner, Nov 2026): it showed
+ * the same videos as the list's first task, and the duplicate confused people.
+ * Only the box ticks a task; tapping the title opens its links and details.
+ *
+ * Videos play inside the dropdown in YouTube's embedded player
+ * (components/YouTubeEmbed.tsx), never behind an ad. After the trial, with
+ * nothing bought, a task's notes need one rewarded ad per dropdown, which
+ * keeps that dropdown unlocked for 30 minutes (ads/dropdownUnlock.ts).
  *
  * The checklist is a single card, not a card per task. Stacking a raised card
  * around every row buries the list in shadows and makes a five-task day look
@@ -18,8 +27,18 @@ import type { ConfidenceLevel } from '@freementor/shared';
 import { Button, Card, Checkbox, Empty, Pill, Screen, Txt } from '../../components/ui.tsx';
 import { ConfidenceSheet } from '../../components/ConfidenceSheet.tsx';
 import { ResourceLink } from '../../components/ResourceLink.tsx';
-import { VideoCard } from '../../components/VideoCard.tsx';
-import { focusSegments, indexGoal, resolveItem, weekAndDay } from '../../scheduler/index.ts';
+import { YouTubeEmbed } from '../../components/YouTubeEmbed.tsx';
+import { accessFor, type Entitlement } from '../../billing/entitlement.ts';
+import { useEntitlement } from '../../billing/useEntitlement.ts';
+import { askForAd } from '../../ads/askForAd.ts';
+import { isDropdownUnlocked, unlockDropdown } from '../../ads/dropdownUnlock.ts';
+import {
+  focusSegments,
+  indexGoal,
+  resolveItem,
+  shortDate,
+  weekAndDay,
+} from '../../scheduler/index.ts';
 import { formatMinutes } from '../../onboarding/deadline.ts';
 import { restDayBlockedReason } from '../../progress/streak.ts';
 import { useEnrollment } from '../../state/EnrollmentContext.tsx';
@@ -38,6 +57,7 @@ export default function DayView() {
     useEnrollment();
 
   const [expanded, setExpanded] = useState<string | null>(null);
+  const { entitlement } = useEntitlement();
 
   const day = plan?.days.find((d) => d.date === date) ?? null;
   const index = useMemo(() => (goal ? indexGoal(goal) : null), [goal]);
@@ -61,9 +81,6 @@ export default function DayView() {
     return [...seen].map(([id, title]) => ({ id, title }));
   }, [resolved]);
 
-  const heroVideo = resolved.find(
-    (r) => r.block?.type === 'learn' && r.resources.some((x) => x.type === 'video'),
-  );
   const mainSubject = resolved.find((r) => r.item.source === 'topic')?.topic?.subject;
   const hasHighWeightage = resolved.some((r) => r.topic?.weightage === 'H');
   const allDone = day != null && day.items.length > 0 && day.items.every((i) => i.done);
@@ -135,7 +152,9 @@ export default function DayView() {
             style={{ alignSelf: 'flex-start', paddingHorizontal: 0, minHeight: 40 }}
           />
           <Txt variant="caption" color="secondary">
-            {breadcrumb ? `Week ${breadcrumb.week} · Day ${breadcrumb.day}` : day.date}
+            {breadcrumb
+              ? `${shortDate(day.date)} · Week ${breadcrumb.week} · Day ${breadcrumb.day}`
+              : shortDate(day.date)}
             {' · '}
             {dayKindLabel(day.kind)}
           </Txt>
@@ -157,9 +176,7 @@ export default function DayView() {
           </View>
         </View>
 
-        {heroVideo ? <VideoCard resolved={heroVideo} /> : null}
-
-        {/* One card, one list. Tap a row's chevron for its links and details. */}
+        {/* One card, one list. Tap a task's title for its links and details. */}
         <Card variant="surface" style={{ paddingVertical: theme.spacing.sm }}>
           {resolved.map((r, i) => (
             <TaskRow
@@ -167,6 +184,8 @@ export default function DayView() {
               resolved={r}
               hints={goal.scheduler_hints}
               last={i === resolved.length - 1}
+              entitlement={entitlement}
+              unlockKey={`${day.date}:${r.item.key}`}
               expanded={expanded === r.item.key}
               onExpand={() => setExpanded(expanded === r.item.key ? null : r.item.key)}
               onToggle={() =>
@@ -201,6 +220,8 @@ function TaskRow({
   resolved: r,
   hints,
   last,
+  entitlement,
+  unlockKey,
   expanded,
   onExpand,
   onToggle,
@@ -209,12 +230,62 @@ function TaskRow({
   resolved: Resolved;
   hints: import('@freementor/shared').SchedulerHints;
   last: boolean;
+  entitlement: Entitlement;
+  /** One task on one day: each dropdown is unlocked on its own. */
+  unlockKey: string;
   expanded: boolean;
   onExpand: () => void;
   onToggle: () => void;
   onScore: (score: number, max: number) => void;
 }) {
   const theme = useTheme();
+  const t = useT();
+  /** This dropdown's ad-gated links are open for as long as it stays open. */
+  const [openUnlocked, setOpenUnlocked] = useState(false);
+  const gated = r.resources.some(
+    (resource) => accessFor(resource, entitlement).kind === 'ad_gated',
+  );
+  const hasVideo = r.resources.some((resource) => resource.type === 'video');
+
+  // The time is checked only here, on opening. An open dropdown is never
+  // interrupted, however long it stays open.
+  const toggleOpen = async () => {
+    if (expanded) {
+      setOpenUnlocked(false);
+      onExpand();
+      return;
+    }
+    if (!gated || isDropdownUnlocked(unlockKey)) {
+      setOpenUnlocked(gated);
+      onExpand();
+      return;
+    }
+    // A video must never wait behind an ad (YouTube policy III.F.3.2), so a
+    // dropdown with one opens freely and asks for the ad at its notes.
+    if (hasVideo) {
+      setOpenUnlocked(false);
+      onExpand();
+      return;
+    }
+    if (await watchForDropdown()) onExpand();
+  };
+
+  const watchForDropdown = async (): Promise<boolean> => {
+    const result = await askForAd({
+      title: t('dialog.adGateTitle'),
+      body: t('dialog.adGateBody'),
+      notLiveBody: t('dialog.adGateNotLive'),
+      watch: t('dialog.adGateWatch'),
+      openWithoutAd: t('day.openLink'),
+      cancel: t('common.cancel'),
+    });
+    if (result === 'declined') return false;
+    // An unavailable ad opens it this time but is not remembered: it showed
+    // nothing, so it must not stand in for 30 minutes of a real one.
+    if (result === 'rewarded') unlockDropdown(unlockKey);
+    setOpenUnlocked(true);
+    return true;
+  };
   const focus = focusSegments(r.item.minutes, hints);
   const hasDetail =
     r.resources.length > 0 ||
@@ -231,25 +302,25 @@ function TaskRow({
         borderBottomColor: theme.colors.border,
       }}
     >
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <View style={{ flex: 1 }}>
-          <Checkbox
-            checked={r.item.done}
-            onToggle={onToggle}
-            label={r.item.title}
-            sublabel={subtitle(r)}
-            minutes={r.item.minutes}
-          />
-        </View>
-        {hasDetail ? (
-          <Button
-            label={expanded ? '▴' : '▾'}
-            variant="ghost"
-            onPress={onExpand}
-            style={{ paddingHorizontal: theme.spacing.sm, minHeight: 44 }}
-          />
-        ) : null}
-      </View>
+      <Checkbox
+        checked={r.item.done}
+        onToggle={onToggle}
+        label={r.item.title}
+        sublabel={
+          gated && !hasVideo && !expanded && !isDropdownUnlocked(unlockKey)
+            ? [subtitle(r), t('day.adToOpen')].filter(Boolean).join(' · ')
+            : subtitle(r)
+        }
+        minutes={r.item.minutes}
+        onPressLabel={hasDetail ? () => void toggleOpen() : () => undefined}
+        trailing={
+          hasDetail ? (
+            <Txt variant="body" color="secondary" style={{ width: 20, textAlign: 'center' }}>
+              {expanded ? '▴' : '▾'}
+            </Txt>
+          ) : null
+        }
+      />
 
       {expanded && hasDetail ? (
         <View style={{ paddingBottom: theme.spacing.md, gap: theme.spacing.sm }}>
@@ -297,9 +368,33 @@ function TaskRow({
             </View>
           ) : null}
 
-          {r.resources.map((resource) => (
-            <ResourceLink key={`${r.item.key}-${resource.url}`} resource={resource} />
-          ))}
+          {r.resources
+            .filter((resource) => resource.type === 'video')
+            .map((resource) => (
+              <YouTubeEmbed key={`${r.item.key}-${resource.url}`} resource={resource} />
+            ))}
+
+          {r.resources
+            .filter(
+              (resource) =>
+                resource.type !== 'video' &&
+                (openUnlocked || accessFor(resource, entitlement).kind !== 'ad_gated'),
+            )
+            .map((resource) => (
+              <ResourceLink
+                key={`${r.item.key}-${resource.url}`}
+                resource={resource}
+                unlocked={openUnlocked}
+              />
+            ))}
+
+          {gated && !openUnlocked ? (
+            <Button
+              label={t('day.unlockNotes')}
+              variant="secondary"
+              onPress={() => void watchForDropdown()}
+            />
+          ) : null}
 
           {r.block?.type === 'recall' ? <RecallBlock questions={r.topic?.recall ?? []} /> : null}
 

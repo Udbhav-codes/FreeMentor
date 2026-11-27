@@ -11,7 +11,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import type { GoalFile, Resource } from '@freementor/shared';
-import { accessFor, type Entitlement } from '../entitlement.ts';
+import { accessFor, isYouTube, type Entitlement } from '../entitlement.ts';
 
 const LIB = resolve(__dirname, '../../../../../library/FreeMentor_Library');
 const CATALOG = JSON.parse(readFileSync(resolve(LIB, 'catalog.json'), 'utf8')) as {
@@ -69,19 +69,28 @@ describe('the trial', () => {
   });
 
   it('locks every practice and test link', () => {
-    const o = offendersFor('trial', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r));
+    const o = offendersFor('trial', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r) && !isYouTube(r));
     expect(o, o.slice(0, 5).join('\n')).toEqual([]);
   });
 });
 
 describe('an expired trial', () => {
-  it('ad-gates every video and main note', () => {
-    const o = offendersFor('expired', 'ad_gated', (r) => isVideoOrNote(r) && !isExtra(r));
+  it('never puts a video, or anything else on YouTube, behind an ad', () => {
+    const o = offendersFor('expired', 'open', (r) => isYouTube(r) && !isExtra(r));
+    expect(o, o.slice(0, 5).join('\n')).toEqual([]);
+  });
+
+  it('ad-gates every main note that is not on YouTube', () => {
+    const o = offendersFor(
+      'expired',
+      'ad_gated',
+      (r) => isVideoOrNote(r) && !isExtra(r) && !isYouTube(r),
+    );
     expect(o, o.slice(0, 5).join('\n')).toEqual([]);
   });
 
   it('locks every practice and test link', () => {
-    const o = offendersFor('expired', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r));
+    const o = offendersFor('expired', 'needs_plan', (r) => isPlanGated(r) && !isExtra(r) && !isYouTube(r));
     expect(o, o.slice(0, 5).join('\n')).toEqual([]);
   });
 });

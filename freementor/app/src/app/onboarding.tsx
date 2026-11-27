@@ -58,6 +58,7 @@ export default function Onboarding() {
 
   const [step, setStep] = useState<Step>('welcome');
   const [birthYear, setBirthYear] = useState<number | null>(null);
+  const [yearText, setYearText] = useState('');
   const [decision, setDecision] = useState<AgeDecision | null>(null);
   // null until resolved. 'verified' = the parent entered the code we sent;
   // 'declared' = the fallback on a build with no server to send it through.
@@ -159,16 +160,18 @@ export default function Onboarding() {
           <>
             <Txt variant="display">Which year were you born?</Txt>
             <Txt variant="small" color="secondary">
-              Just the year. FreeMentor is for ages 16 and over.
+              Just the year. FreeMentor is for ages 16 and over. Tap your year, or
+              type it below.
             </Txt>
 
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: theme.spacing.sm }}>
-              {birthYearRange().slice(0, 24).map((year) => (
+              {birthYearRange().slice(0, 12).map((year) => (
                 <Button
                   key={year}
                   label={String(year)}
                   variant={birthYear === year ? 'primary' : 'secondary'}
                   onPress={() => {
+                    setYearText(String(year));
                     setBirthYear(year);
                     setDecision(decideAge(year));
                   }}
@@ -176,6 +179,41 @@ export default function Onboarding() {
                 />
               ))}
             </View>
+
+            {/* Any year, not only the chips: the chips cover the last 12 years
+                of eligible learners, and an older learner must not be stuck. */}
+            <TextInput
+              value={yearText}
+              onChangeText={(text) => {
+                const digits = text.replace(/[^0-9]/g, '').slice(0, 4);
+                setYearText(digits);
+                if (digits.length === 4) {
+                  const year = Number(digits);
+                  setBirthYear(year);
+                  setDecision(decideAge(year));
+                } else {
+                  setBirthYear(null);
+                  setDecision(null);
+                }
+              }}
+              placeholder="Type your birth year, e.g. 1995"
+              placeholderTextColor={theme.colors.muted}
+              keyboardType="number-pad"
+              maxLength={4}
+              accessibilityLabel="Birth year"
+              style={[
+                theme.typography.body,
+                {
+                  minHeight: 48,
+                  paddingHorizontal: theme.spacing.md,
+                  borderRadius: theme.radius.md,
+                  borderWidth: 1,
+                  borderColor: theme.colors.border,
+                  backgroundColor: theme.colors.surface,
+                  color: theme.colors.text,
+                },
+              ]}
+            />
 
             {decision?.outcome === 'blocked' ? (
               <Card style={{ borderLeftWidth: 4, borderLeftColor: theme.colors.accent }}>

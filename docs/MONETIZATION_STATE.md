@@ -21,12 +21,12 @@ products do not exist yet.
 | | Free trial (3 days) | Trial over, nothing bought | Basic ₹599 | Premium ₹999 |
 |---|---|---|---|---|
 | Roadmap, day plan, ticks, streak | ✅ | ✅ | ✅ | ✅ |
-| YouTube videos | ✅ | ✅ after an ad | ✅ | ✅ |
-| Main notes | ✅ | ✅ after an ad | ✅ | ✅ |
+| YouTube videos | ✅ | ✅ never an ad | ✅ | ✅ |
+| Main notes | ✅ | ✅ after an ad (per task, 30 min) | ✅ | ✅ |
 | Practice and tests | 🔒 | 🔒 | ✅ | ✅ |
 | Extra notes (429) | 🔒 | 🔒 | 🔒 Premium only | ✅ |
 | Detailed analytics | ❌ | ❌ | ❌ | ✅ |
-| Ads | none | one per resource opened | none | none |
+| Ads | none | one per task dropdown, unlocks it 30 min | none | none |
 
 🔒 sends the learner to the Plans screen.
 

@@ -90,7 +90,13 @@ export function SyncProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const run = useCallback(async (force: boolean): Promise<SyncOutcome> => {
-    if (!apiBaseUrl) return { status: 'not_configured' };
+    if (!apiBaseUrl) {
+      // Say so on screen. Returning silently made "Sync now" look broken.
+      const outcome: SyncOutcome = { status: 'not_configured' };
+      setLast(outcome);
+      setLastAt(new Date());
+      return outcome;
+    }
     if (inFlight.current) return { status: 'nothing_to_do' };
     if (!force && Date.now() - lastRunAt.current < MIN_GAP_MS) {
       return { status: 'nothing_to_do' };

@@ -6,7 +6,7 @@
   "category": "Skills",
   "group": "Technology & Development",
   "type": "skill",
-  "version": "2026.5",
+  "version": "2026.6",
   "valid_for": "Node.js 24 LTS, Express 5, PostgreSQL 17/18, TypeScript 5",
   "last_updated": "2026-10-08",
   "official_url": "https://nodejs.org/en/learn",
@@ -32,7 +32,7 @@
   },
   "reviewed_by": null,
   "prerequisite_note": "Basic JavaScript helps (FreeMentor Frontend roadmap, Phase 3). The FreeMentor SQL roadmap goes deeper on databases.",
-  "last_link_check": "2026-10-17"
+  "last_link_check": "2026-11-27"
  },
  "scheduler_hints": {
   "video_time_multiplier": 1.15,
@@ -211,7 +211,7 @@
        "provider": "developer.mozilla.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -223,7 +223,7 @@
        "provider": "developer.mozilla.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -234,8 +234,8 @@
        "lang": "en",
        "provider": "www.cloudflare.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": "2026-10-17",
+       "status": "active",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -255,7 +255,7 @@
        "provider": "developer.chrome.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -333,8 +333,8 @@
        "lang": "en",
        "provider": "linuxjourney.com",
        "access": "all",
-       "status": "unverified",
-       "last_checked": "2026-10-17",
+       "status": "active",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -346,7 +346,7 @@
        "provider": "ubuntu.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -366,7 +366,7 @@
        "provider": "overthewire.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -445,7 +445,7 @@
        "provider": "git-scm.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -457,7 +457,7 @@
        "provider": "docs.github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -477,7 +477,7 @@
        "provider": "skills.github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -574,7 +574,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -586,7 +586,7 @@
        "provider": "javascript.info",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -598,7 +598,7 @@
        "provider": "javascript.info",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -618,7 +618,7 @@
        "provider": "javascript.info",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -630,7 +630,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -728,7 +728,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -740,7 +740,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -752,7 +752,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -764,7 +764,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -776,7 +776,7 @@
        "provider": "www.youtube.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -796,7 +796,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -894,7 +894,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -906,7 +906,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -918,7 +918,7 @@
        "provider": "docs.npmjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -938,7 +938,7 @@
        "provider": "docs.npmjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -991,7 +991,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1101,7 +1101,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1113,7 +1113,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1125,7 +1125,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1145,7 +1145,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1243,7 +1243,7 @@
        "provider": "developer.mozilla.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1255,7 +1255,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1267,7 +1267,7 @@
        "provider": "learn.microsoft.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1287,7 +1287,7 @@
        "provider": "www.postman.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1384,7 +1384,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1396,7 +1396,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1408,7 +1408,7 @@
        "provider": "zod.dev",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1428,7 +1428,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1526,7 +1526,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1538,7 +1538,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1550,7 +1550,7 @@
        "provider": "getpino.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1570,7 +1570,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1668,7 +1668,7 @@
        "provider": "nodejs.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1680,7 +1680,7 @@
        "provider": "www.typescriptlang.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1700,7 +1700,7 @@
        "provider": "exercism.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1712,7 +1712,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1765,7 +1765,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1805,7 +1805,7 @@
        "provider": "www.freecodecamp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1896,7 +1896,7 @@
        "provider": "www.postgresql.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -1908,7 +1908,7 @@
        "provider": "sqlbolt.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -1928,7 +1928,7 @@
        "provider": "pgexercises.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2025,7 +2025,7 @@
        "provider": "www.postgresql.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2037,7 +2037,7 @@
        "provider": "www.prisma.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2057,7 +2057,7 @@
        "provider": "dbdiagram.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2154,7 +2154,7 @@
        "provider": "node-postgres.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2166,7 +2166,7 @@
        "provider": "www.prisma.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2178,7 +2178,7 @@
        "provider": "www.youtube.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2198,7 +2198,7 @@
        "provider": "www.prisma.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2296,7 +2296,7 @@
        "provider": "www.mongodb.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2308,7 +2308,7 @@
        "provider": "mongoosejs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2320,7 +2320,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2340,7 +2340,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2438,7 +2438,7 @@
        "provider": "redis.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2450,7 +2450,7 @@
        "provider": "redis.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2470,7 +2470,7 @@
        "provider": "redis.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2523,7 +2523,7 @@
        "provider": "www.prisma.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2563,7 +2563,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2654,7 +2654,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2666,7 +2666,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2678,7 +2678,7 @@
        "provider": "jwt.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2690,7 +2690,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2702,7 +2702,7 @@
        "provider": "www.youtube.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2722,7 +2722,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2819,7 +2819,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2831,7 +2831,7 @@
        "provider": "oauth.net",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2851,7 +2851,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -2949,7 +2949,7 @@
        "provider": "owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2961,7 +2961,7 @@
        "provider": "owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2973,7 +2973,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -2985,7 +2985,7 @@
        "provider": "expressjs.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3005,7 +3005,7 @@
        "provider": "portswigger.net",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3103,7 +3103,7 @@
        "provider": "vitest.dev",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3115,7 +3115,7 @@
        "provider": "jestjs.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3127,7 +3127,7 @@
        "provider": "github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3139,7 +3139,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3159,7 +3159,7 @@
        "provider": "fullstackopen.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3212,7 +3212,7 @@
        "provider": "cheatsheetseries.owasp.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3252,7 +3252,7 @@
        "provider": "portswigger.net",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3342,19 +3342,19 @@
        "provider": "docs.docker.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
        "type": "notes",
        "role": "main",
-       "title": "Docker – Node.js language guide",
-       "url": "https://docs.docker.com/guides/nodejs/",
+       "title": "Docker – write your first Dockerfile",
+       "url": "https://docs.docker.com/learn/content/write-your-first-dockerfile/",
        "lang": "en",
        "provider": "docs.docker.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3366,7 +3366,7 @@
        "provider": "docs.docker.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3381,12 +3381,12 @@
        "type": "practice",
        "role": "main",
        "title": "Containerise your API + PostgreSQL + Redis with docker compose",
-       "url": "https://docs.docker.com/guides/nodejs/",
+       "url": "https://docs.docker.com/compose/gettingstarted/",
        "lang": "en",
        "provider": "docs.docker.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3483,7 +3483,7 @@
        "provider": "docs.github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3495,7 +3495,7 @@
        "provider": "docs.github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3515,7 +3515,7 @@
        "provider": "skills.github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3612,7 +3612,7 @@
        "provider": "render.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3624,7 +3624,7 @@
        "provider": "12factor.net",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3644,7 +3644,7 @@
        "provider": "render.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3742,7 +3742,7 @@
        "provider": "docs.bullmq.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3754,7 +3754,7 @@
        "provider": "www.rabbitmq.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3765,8 +3765,8 @@
        "lang": "en",
        "provider": "socket.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": "2026-10-17",
+       "status": "active",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3778,7 +3778,7 @@
        "provider": "www.youtube.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3797,8 +3797,8 @@
        "lang": "en",
        "provider": "socket.io",
        "access": "all",
-       "status": "unverified",
-       "last_checked": "2026-10-17",
+       "status": "active",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3810,7 +3810,7 @@
        "provider": "docs.bullmq.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3908,7 +3908,7 @@
        "provider": "learn.openapis.org",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -3920,7 +3920,7 @@
        "provider": "swagger.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -3940,7 +3940,7 @@
        "provider": "editor.swagger.io",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4037,7 +4037,7 @@
        "provider": "github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -4049,7 +4049,7 @@
        "provider": "roadmap.sh",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       },
       {
@@ -4061,7 +4061,7 @@
        "provider": "www.youtube.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4081,7 +4081,7 @@
        "provider": "github.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4134,7 +4134,7 @@
        "provider": "12factor.net",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4166,7 +4166,7 @@
        "provider": "roadmap.sh",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]
@@ -4194,7 +4194,7 @@
        "provider": "www.hackerrank.com",
        "access": "all",
        "status": "active",
-       "last_checked": "2026-10-17",
+       "last_checked": "2026-11-27",
        "ad_gate_allowed": true
       }
      ]

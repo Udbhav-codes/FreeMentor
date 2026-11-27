@@ -56,24 +56,30 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
 - **Plan table (owner, Nov 2026, Basic revised; supersedes the Oct 2026
   "everything locks" rule).** Trial = 3 days free, no ads: roadmap, videos and
   main notes open; practice, tests and extra notes locked. After the trial with
-  nothing bought: videos and main notes open after a rewarded ad (one per
-  resource); practice, tests and extra notes stay locked. **Basic** = videos,
+  nothing bought: videos stay open with no ad; a task's main notes open after
+  a rewarded ad, one ad per task dropdown, which then stays unlocked for 30
+  minutes (`ads/dropdownUnlock.ts`; an open dropdown is never interrupted);
+  practice, tests and extra notes stay locked. **Anything on YouTube is never
+  gated on any plan** — YouTube API policy III.F.3.1-2 forbids putting a video
+  behind an ad, a price or any action but play. **Basic** = videos,
   notes, practice and tests with **no ads**; extra notes stay Premium-only.
   **Premium** adds extra notes and detailed analytics. Only the "trial over,
   nothing bought" state sees ads. Roadmap, day plan and ticks are always
   visible. Logic is `billing/entitlement.ts`; the table is
   `docs/MONETIZATION_STATE.md`.
-  *(Open: confirm YouTube links behind a rewarded ad are acceptable under the
-  YouTube API Services terms — what is sold is the roadmap, the videos stay
-  free on YouTube. Marketing copy must say WHERE a resource is free;
+  *(Marketing copy must say WHERE a resource is free;
   `marketing/compliance.ts` has an `unqualified-free-access` rule that runs
   over every goal's copy and the English string catalogue.)*
+- **TRIAL IS OFF FOR TESTING (27 Nov 2026):** `billing/trial.ts` `TRIAL_ENABLED = false`,
+  so every learner starts in "trial over, nothing bought". Remind the owner and
+  turn it back on before the production build; `app.config.js` blocks an EAS
+  production build until then.
 - **3-day free trial**, then one-time **Basic ₹599 / Premium ₹999** per roadmap, **lifetime** access. Switching goal = a new purchase.
 - **16+ only**; users under 18 need parent consent and get **non-personalised, G-rated** ads.
 - **Missed day → plan shifts forward**; recalculation starts from the next incomplete task; completed ticks are never changed.
 - **Streak** = calendar days with a 1-day grace; rest days limited to 1/week and 4/month.
 - **Video time shown = real duration × 1.15, rounded up to 5 min.** Until the checker fills durations, use `est_minutes`.
-- Links open in the **YouTube app** (videos) or **Chrome Custom Tabs** (notes/practice) — never scrape or re-host content.
+- Videos play in YouTube's **embedded player** (`components/YouTubeEmbed.tsx`: no autoplay, no background play, privacy-enhanced host); if a creator blocks embedding it falls back to a link that opens the **YouTube app**. Notes/practice open in **Chrome Custom Tabs**. Never scrape or re-host content.
 - Coupons: `^[A-Z]{6}[0-9]{3}$`, tiers 10/20/30/50/70/90% mapped to pre-made discounted Play products.
 
 ## Build order (MVP first — see product plan §17)
