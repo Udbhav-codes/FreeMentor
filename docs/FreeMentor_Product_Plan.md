@@ -36,7 +36,7 @@ Version 1.0 · 6 October 2026 · Built from *PERSONALIZED ROADMAP.docx* plus the
 
 | # | Topic | Decision |
 |---|---|---|
-| 1 | App name | **FreeMentor** (one word). Play title: *"FreeMentor: Study Roadmap"* (≤ 30 chars). Backup name if Play rejects "Free" in the title: **PadhaiGPS**. |
+| 1 | App name | **FreeMentor** (one word). Play title: *"FreeMentor: Learn & Prep"* (≤ 30 chars). Backup name if Play rejects "Free" in the title: **PadhaiGPS**. |
 | 2 | Platforms | **Android first**, iOS later from the same codebase. |
 | 3 | Tech stack | As in the source document: **React Native** app, **Python + FastAPI** backend, **PostgreSQL**, **Supabase Auth & Storage**, **Firebase Cloud Messaging & Analytics** (details in §12). |
 | 4 | Sign-in | **Google sign-in at the start** (right after Welcome). |
@@ -561,7 +561,7 @@ Recall questions and block definitions live inside the versioned library files (
 - [ ] Play Console account (personal accounts: **closed test with 12 testers for 14 continuous days** before production)
 - [ ] Target **API 36 (Android 16)**; Android App Bundle; Play App Signing
 - [ ] Package name (e.g. `com.freementor.app`)
-- [ ] Store listing: title "FreeMentor: Study Roadmap" (≤ 30 chars, no "#1/best/no ads"), short & full description with honest trial/pricing, icon, feature graphic, screenshots (from the preview)
+- [ ] Store listing: title "FreeMentor: Learn & Prep" (≤ 30 chars, no "#1/best/no ads"), short & full description with honest trial/pricing, icon, feature graphic, screenshots (from the preview)
 - [ ] Privacy policy URL · **Data safety form** (incl. AdMob & Firebase SDK data) · Ads declaration ("contains ads")
 - [ ] Target audience: **16+** (not designed for children; Families policy not applicable) · content rating questionnaire
 - [ ] In-app products: basic, premium, upgrade, coupon tier products

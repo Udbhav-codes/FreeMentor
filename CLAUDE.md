@@ -116,8 +116,8 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       **112 tests.**
 - [x] **UI build-out** — all eight screens of `design/FreeMentor_App_Preview.png` exist:
       opening animation, weekly-time picker + deadline calculator, Home with the progress
-      ring, GPS route, Day view with the video hero card, weekly report, Plans. **149 tests.**
-- [~] **M4 in progress** — `server/` FastAPI: Postgres schema with row-level security,
+      ring, GPS route, Day view, weekly report, Plans. **149 tests.**
+- [x] **M4** — `server/` FastAPI: Postgres schema with row-level security,
       auth, account + 16/18 age gate, parent-consent request/confirm, enrollments,
       **idempotent progress sync**, catalog/download. **88 server tests.** Runs in a
       *local mode* (SQLite + stub tokens) so the whole API works before any cloud
@@ -134,14 +134,15 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       the console sender is local-only); `OTP_ECHO` returns the code for testing and
       **production refuses to start with it on, or without SMTP**.
       **Google sign-in** is wired (web OAuth flow, works in Expo Go): sign-in screen
-      before the age gate, real session token on sync, sign-out in Profile. Needs
-      `exp://**` in Supabase Redirect URLs to complete in Expo Go, and still needs
-      verifying on a device. Native one-tap waits for a dev build. See
+      before the age gate, real session token on sync, sign-out in Profile. **Verified on a phone
+      with the EAS dev build** (Nov 2026). See
       `server/GOOGLE_SIGNIN.md`.
       **Sync is wired** (`SyncProvider`): the queue drains on sign-in and on
       app foreground, with a 30s floor and no overlapping runs. Profile shows the
-      last outcome and a Sync now button. Inert until `EXPO_PUBLIC_API_URL` is
-      set — there is no deployed server yet.
+      last outcome and a Sync now button (it reports "not configured" when
+      `EXPO_PUBLIC_API_URL` is missing). The server is **deployed on Cloud Run**
+      (`freementor-api`, asia-south1; secrets in Secret Manager, see
+      `server/DEPLOY.md` and `scripts/set_secrets.ps1`).
       **Parent-consent OTP is wired** (`api/consent.ts` + `components/ParentConsent.tsx`):
       birth year -> code to the parent -> confirm, with a 60s resend cooldown
       mirroring the server, an already-consented check so a reinstall does not
@@ -166,29 +167,27 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
       it); a local **24 h trial-ending reminder**; the **10-minute rewarded-ad
       window** (`ads/cap.ts`); `/health/db`, a GitHub keep-alive and a JSON
       backup script for the free Supabase tier; deploy steps in `server/DEPLOY.md`.
-      **Still to do in M4:** FCM (real delivery needs the dev build).
-- [~] **M5 in progress** — everything except Google Play itself. Server:
-      `/billing/coupons/validate`, `/billing/purchases` (verified, idempotent on
-      the Play order id), `/billing/entitlement` (scoped per enrollment).
-      Rules are pure in `app/billing.py`; the Play verifier is pluggable
-      (`app/play.py`) with `GooglePlayVerifier` deliberately raising rather than
-      pretending, and `LocalVerifier` accepting only a `test:` token. A
-      production server with no Play credentials returns 503 for a purchase but
-      still boots. App: `api/billing.ts`, real coupon validation on Plans,
-      trial disclosure per §10.4, and `useEntitlement` now reads the verified
-      plan from the server. **Blocked on a Play Console account** for
-      `react-native-iap` and the real verifier — that is the remaining work.
-- [ ] M6 Ads/Admin.
+- [x] **M5** — Play Billing in the app (`billing/playBilling.ts`, `react-native-iap`:
+      purchase, acknowledge, restore, error states) and the real
+      `GooglePlayVerifier` on the server (Android Publisher API, signed-JWT
+      service account, no Google SDK). `/billing/coupons/validate`,
+      `/billing/purchases` (idempotent on the Play order id) and
+      `/billing/entitlement` (per enrollment). **Not live until:** the three
+      products exist in Play Console and `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` is
+      set on Cloud Run — until then a purchase returns 503, by design.
+- [~] **M6** — AdMob rewarded ads with UMP consent and the under-18 request
+      settings are built (`ads/rewarded.ts`, `ads/askForAd.ts`), with the real
+      App ID and rewarded unit set in EAS production env. Ads gate only a task's
+      notes, per dropdown, for 30 minutes (`ads/dropdownUnlock.ts`); nothing on
+      YouTube is ever behind an ad. The admin panel (`admin/`) is local-only.
+      Still to do: FCM push (local reminders already work).
 
 ### Not yet built (known gaps)
-- **Plans cannot take money yet.** Coupon validation, purchase recording and
-  entitlement are built, tested and verified against Postgres; what is missing
-  is Google Play Billing itself, which needs a Play Console account and a dev
-  build. The buy button says exactly that rather than "coming soon". The **trial clock and the lock system now work**:
+- **Plans cannot take money until the Play products and the Play service
+  account exist** (see M5). The **trial clock and the lock system work**:
   `billing/trial.ts` (pure, 16 tests, clock-rewind resistant via a persisted
   high-water mark) drives `entitlementFor()`, and after 3 days practice, tests and extra notes return
-  `needs_plan`/`premium_only` and route to Plans; videos and notes become ad-gated until a plan is bought. Ads themselves are M6, so an
-  `ad_gated` resource currently opens after a confirm dialog rather than an ad.
+  `needs_plan`/`premium_only` and route to Plans; a task's notes become ad-gated until a plan is bought (videos never are).
 - Parent consent is **verified by OTP** when a server is reachable. With no
   `EXPO_PUBLIC_API_URL` or no session (including under the dev sign-in bypass) it
   degrades to the declaration, which says so plainly. Nothing records consent
@@ -209,7 +208,8 @@ Do **not** hand-edit goal JSON in the app repo. The library is authored/validate
   jsonb settings round-trip, Numeric scores normalise identically to SQLite,
   the consent OTP hash and the Supabase subject are absent, one learner
   cannot see another's rows, and an export after deletion is 403.
-- No ads at all yet (M6), so the "videos and notes after a rewarded ad" gate for unpaid learners opens after a confirm dialog instead.
+- **Ads in Expo Go / builds without an ad unit:** `askForAd` says ads are not
+  live and opens the notes without one. Real ads need the EAS build.
 - **Hindi and Hinglish UI are done.** `src/i18n/` holds three catalogues of
   195 keys each (en, Devanagari hi, Latin-script Hinglish). Every screen and
   every learner-facing dialog is translated. English remains only where it
@@ -284,7 +284,8 @@ A "Skip sign-in and continue" card then appears on the sign-in screen.
 It is gated on `__DEV__` **and** that flag, re-checked whenever the stored
 value is read, so a phone that enabled it in development cannot carry it into
 a release build. Nothing syncs while it is active (there is no token) and
-Profile says so. Remove `exp://**` before the production launch.
+Profile says so. Remove `exp://**` from Supabase Redirect URLs before the
+production launch.
 
 ### Working notes
 - Run from `freementor/`: `npm test -w app` · `npm run validate:library` · `npm run types`.

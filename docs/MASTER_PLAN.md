@@ -117,7 +117,7 @@ the check passes.
 5. Add the GitHub variable `API_URL` = the Cloud Run address (repo → Settings
    → Secrets and variables → Actions → Variables).
 6. In Play Console:
-   - Create the app: FreeMentor: Study Roadmap, App, Free.
+   - Create the app: FreeMentor: Learn & Prep, App, Free.
    - Start the store listing.
    - Answer the content rating questionnaire.
    - Set the target audience to 16+.
